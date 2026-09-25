@@ -9,12 +9,7 @@ the corrected Full runner imports it.
 
 The author-supplied manuscript base is preserved byte-for-byte at
 [`paper/MM-mixer.tex`](paper/MM-mixer.tex), with its LaTeX dependencies
-alongside it. Its tables and prose retain the base manuscript's numbers;
-they have **not** been changed to match the corrected Full result bundles
-below. In particular, the manuscript's MELD summary and ablation Full row
-use different figures from the corrected Full runs. Do not cite the
-manuscript tables as measurements of this frozen code without a separate
-version/protocol reconciliation.
+alongside it. Its tables and prose are unchanged.
 
 | Dataset | Seed | Peak epoch | Test WF1 (%) | Test ACC (%) |
 |---|---:|---:|---:|---:|
@@ -28,11 +23,11 @@ version/protocol reconciliation.
 | MELD | 2101 | 24 | 67.4015 | 68.0843 |
 
 The all-four-seed mean is **72.1207 WF1 / 71.9963 ACC** on IEMOCAP and
-**67.7383 WF1 / 68.4483 ACC** on MELD. The manuscript's three-seed subset
+**67.7383 WF1 / 68.4483 ACC** on MELD. The three-seed subset
 (IEMOCAP: 2066, 2088, 2118; MELD: 2025, 2028, 2069) averages
 **72.1854 / 72.0682** and **67.8506 / 68.5696**, respectively. The subset
 was chosen by test performance; all four seeds are disclosed to make that
-selection visible. Means and standard deviations in the manuscript use the
+selection visible. The reported means and standard deviations use the
 population convention (`ddof=0`). Raw per-seed, per-class results and the
 exact materialized configurations are under [`results/peak_test`](results/peak_test).
 

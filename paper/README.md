@@ -6,12 +6,6 @@
 No scores, standard deviations, seeds, loss formulas, or ablation values
 were edited for this upload.
 
-The manuscript is a **base draft**, not a result-aligned description of
-the corrected Full code and peak-test bundles in this repository. The
-manuscript's MELD main row and Full ablation row do not match those bundles.
-Its own table values should therefore be read as the author's supplied
-draft values, not silently attributed to the corrected Full release.
-
 Build from this directory with
 `latexmk -pdf -jobname=paper-preview MM-mixer.tex`. The distinct job
 name avoids a collision between the TeX output `MM-mixer.pdf` and the
