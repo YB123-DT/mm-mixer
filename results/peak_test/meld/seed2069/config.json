@@ -1,0 +1,137 @@
+{
+  "batch_size": 32,
+  "classes": {
+    "meld": [
+      "neutral",
+      "surprise",
+      "fear",
+      "sadness",
+      "joy",
+      "disgust",
+      "anger"
+    ]
+  },
+  "embed_dims_full": {
+    "a": 1024,
+    "t": 1024,
+    "v": 342
+  },
+  "feature_paths": {
+    "meld": {
+      "dev": {
+        "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+        "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+      },
+      "test": {
+        "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+        "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+      },
+      "train": {
+        "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+        "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+      }
+    }
+  },
+  "fixed_params": {
+    "aux_from_raw_projected": true,
+    "aux_loss_weights": {
+      "a": 1.0,
+      "t": 1.0,
+      "v": 1.0
+    },
+    "capacity_variant": "M4_PAIR",
+    "checkpoint_prefix": "/data2/yb/multimodalERC/MM_Mixer_final_20260726/outputs/formal_full_cssv_corrected_20260726/meld/full/seed2069/checkpoints/full_",
+    "distill_alpha": 0.5772777397767895,
+    "distill_temp": 1.8246074213744867,
+    "dropout_rate": 0.1113389962276903,
+    "early_stopping_patience": 12,
+    "focal_reweight_gamma": 2.5,
+    "fusion_dim": 256,
+    "fusion_dropout": 0.2,
+    "fusion_type": "hierarchical",
+    "gradient_clip_norm": 1.0,
+    "graph_k_audio": 6,
+    "graph_k_text": 12,
+    "graph_k_visual": 7,
+    "information_gate": "off",
+    "information_gate_enabled": false,
+    "label_smoothing": 0.0,
+    "layerwise_alpha": 0.3,
+    "layerwise_gamma": 0.1,
+    "layerwise_margin": 0.0,
+    "layerwise_tau": 0.1,
+    "layerwise_variant": "a0",
+    "loss_type": "poly",
+    "lr_audio": 4.003056259961667e-06,
+    "lr_fusion": 2.0832826726482106e-05,
+    "lr_reduce_factor": 0.5,
+    "lr_reduce_patience": 3,
+    "lr_text": 2.4163243028131906e-05,
+    "lr_visual": 2.2406991940069396e-05,
+    "main_loss_weight": 1.0,
+    "no_alignment": true,
+    "no_channel_attention": false,
+    "no_distill": false,
+    "no_gates": false,
+    "normalize_aux_loss_weights": false,
+    "num_heads_fusion": 8,
+    "num_layers_fusion": 2,
+    "poly_alpha": 1.9508055462649292,
+    "poly_gamma": 1.402459950741192,
+    "seed": 2069,
+    "selection_mode": "test",
+    "skip_pretrain": true,
+    "strict_clean_protocol": true,
+    "subspace_tokens": 6,
+    "temporal_weight_audio": 0.534697670184466,
+    "temporal_weight_text": 1.653647526520393,
+    "temporal_weight_visual": 1.0014116523635417,
+    "transformer_dim": 256,
+    "transformer_ffn": 1536,
+    "transformer_layers": 2,
+    "use_contrastive": false,
+    "use_moe": false,
+    "wd_audio": 1.1630145789712038e-05,
+    "wd_fusion": 9.97646370349997e-05,
+    "wd_text": 0.0004004846462605576,
+    "wd_visual": 9.208015059525338e-05
+  },
+  "num_epochs": 50,
+  "runtime_audit": {
+    "architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "tokens": 6
+    },
+    "input_dims": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "learning_rates": {
+      "classifier": 4.166565345296421e-05,
+      "mixer": 2.0832826726482106e-05,
+      "projection": 1.0416413363241053e-05,
+      "remaining": 2.0832826726482106e-05
+    },
+    "loss": {
+      "aux_class_weight": true,
+      "fixed_task_weights": {
+        "a": 1.0,
+        "main": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "focal_gamma": 2.5,
+      "focal_probability_detached": false,
+      "kind": "meld_per_sample_focal_no_detach",
+      "main_class_weight": false,
+      "task_weighting": "fixed_unit"
+    },
+    "selection": "strict_peak_test_wf1"
+  }
+}

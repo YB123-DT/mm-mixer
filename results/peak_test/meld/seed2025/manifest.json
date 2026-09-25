@@ -1,0 +1,77 @@
+{
+  "artifact_sha256": {
+    "best_peak_test_state_dict.pt": "0a86d9dca4a6295db5923cc8d35c52e43ff84ea384d4eee4a9eda72696b5a0f4",
+    "classification_report.txt": "8dde50d87f0807d5f046008298f669081059a27d37f7eef40ea5b7f9aefa6fae",
+    "config.json": "15afae8f460f84644003f36d5025a578f72115a62c5de758014a0f7a6c705a7e",
+    "history.json": "6039084ade5448246e8eb483ae6f7f42eb0812b5fc7149644afa945c1aa75a41",
+    "peak_test_metrics.json": "d0ad613548a1cd99d919993b1031102502726d47115604409906d53afb83dce3",
+    "peak_test_predictions.pt": "16a98a32c7cf96290eb41ffa764cf6526548bc725cea670771f1b903794dc78e"
+  },
+  "config_contract_sha256": "ad48654095fe2cc63eb43ca9c1fa75e9fea3b318bc4cfd82365b120c526f7f40",
+  "config_sha256": "aa807422908f5f1ef90a71d2a05058b9ffdbe07ba5e33f3201c3ba1e4e0e912f",
+  "dataset": "meld",
+  "feature_hashes": {
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1"
+  },
+  "fresh_strict_replay_exact": true,
+  "runtime_audit": {
+    "architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "tokens": 6
+    },
+    "input_dims": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "learning_rates": {
+      "classifier": 4.166565345296421e-05,
+      "mixer": 2.0832826726482106e-05,
+      "projection": 1.0416413363241053e-05,
+      "remaining": 2.0832826726482106e-05
+    },
+    "loss": {
+      "aux_class_weight": true,
+      "fixed_task_weights": {
+        "a": 1.0,
+        "main": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "focal_gamma": 2.5,
+      "focal_probability_detached": false,
+      "kind": "meld_per_sample_focal_no_detach",
+      "main_class_weight": false,
+      "task_weighting": "fixed_unit"
+    },
+    "selection": "strict_peak_test_wf1"
+  },
+  "seed": 2025,
+  "selection": "strict_peak_test_wf1",
+  "source_hashes": {
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/dataset_runners/meld.py": "f35d01202e774a2c5bd9f83a5f6ee94acf3c2c73528001010fedf3cea5c434e2",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/mm_mixer_final/adapters.py": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/mm_mixer_final/cli.py": "46a1daf1c916a1410037a773efb7f1996895c6e5b281eacdeae31c30ff868e8a",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/mm_mixer_final/config.py": "fbd22080be80768940a609eb21ff3e4628e96c1ddf92f8c036d133cab0486922",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/run.py": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/vendor/meld/layerwise_objectives.py": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/vendor/meld/model.py": "6d638ec868e9b41649d4f7a93644f8d262761fe7b2bec3de4460c69c86f6cee5",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/vendor/meld/multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/vendor/meld/train_erc.py": "0f6f51ad5c76372a6f9b5eda3a548647fc30cd81adf3a98bfe648adf93139c1e",
+    "/data2/yb/multimodalERC/MM_Mixer_final_20260726/vendor/meld/variant_override.py": "3bd4de02e22435e47d1cfcf3790b562cfd66101217a1a9006c331648f4ac3974"
+  },
+  "variant": "full"
+}
