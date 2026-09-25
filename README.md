@@ -2,8 +2,9 @@
 
 This repository freezes the **corrected Full** MM-Mixer implementation for
 IEMOCAP and MELD. The released scores are from `strict_peak_test_wf1` runs
-only. No earlier MELD model, best-validation scores, ablation scores, features,
-or model checkpoints are published here.
+only. No earlier MELD-model scores, best-validation scores, ablation scores,
+features, or model checkpoints are published here. Legacy base-model source
+remains vendored because the corrected Full runner imports it.
 
 | Dataset | Seed | Peak epoch | Test WF1 (%) | Test ACC (%) |
 |---|---:|---:|---:|---:|
