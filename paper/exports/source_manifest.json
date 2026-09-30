@@ -1,0 +1,25 @@
+{
+  "base_source": "MM-mixer-revised.tex",
+  "base_sha256": "e0c524fca594b57e0bcadcd39e124858a78aa098872454a4556ed217625756ef",
+  "preview_source": "MM-mixer-with-figures.tex",
+  "preview_sha256": "ae97d26be228a0ef983f7b44b3fa32ff7fe48eafcfc260376ac7a3f342a23e78",
+  "content_changes": "Only two figure blocks, captions and two factual cross-reference paragraphs were added; existing abstract, results and prose are preserved.",
+  "new_figures": {
+    "01_same_words_scenes.pdf": "95e79f2369986f5d1335c53a5845a382dc4e9bab29ae46770dba23064aa2fc23",
+    "02_amm_projection_axes.pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb"
+  },
+  "output": {
+    "file": "MM-Mixer-v003-with-figures.pdf",
+    "pages": 9,
+    "sha256": "d27098ec9231ca067abf4894f051deb2bf903cbdff2330894e6079aeced3e5a8",
+    "new_figure_pages": [
+      2,
+      5
+    ],
+    "all_main_sections_and_references_present": true,
+    "unresolved_citations_or_references": false,
+    "overfull_boxes": false,
+    "visual_review": "All pages reviewed; new figures legible and uncropped."
+  },
+  "completed_at": "2026-09-30T10:31:25.520859+00:00"
+}

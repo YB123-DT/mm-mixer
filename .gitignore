@@ -10,3 +10,5 @@ outputs/
 *.jsonl
 *.log
 .DS_Store
+.omx/
+paper/build/

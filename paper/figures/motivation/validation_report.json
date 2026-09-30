@@ -1,0 +1,75 @@
+{
+  "case_checks": [
+    {
+      "sample": "train/dia645_utt13",
+      "emotion": "joy",
+      "frame_time_seconds": 0.9592916666666668,
+      "source_hashes_match": true,
+      "frame_pixels_unchanged": true
+    },
+    {
+      "sample": "test/dia163_utt2",
+      "emotion": "sadness",
+      "frame_time_seconds": 1.0844166666666666,
+      "source_hashes_match": true,
+      "frame_pixels_unchanged": true
+    },
+    {
+      "sample": "train/dia700_utt0",
+      "emotion": "neutral",
+      "frame_time_seconds": 0.2919581066577847,
+      "source_hashes_match": true,
+      "frame_pixels_unchanged": true
+    }
+  ],
+  "export_checks": [
+    {
+      "name": "01_same_words_scenes",
+      "width_mm": 179.99999983333333,
+      "height_mm": 100.00000002499999,
+      "editable_svg_text_nodes": 29,
+      "preview_pixels": [
+        3188,
+        1771
+      ],
+      "export_sha256": {
+        "svg": "a27edbab071102a108155c417d102c20aa9194f668a1a06db92bd4db02d2e8a8",
+        "pdf": "95e79f2369986f5d1335c53a5845a382dc4e9bab29ae46770dba23064aa2fc23",
+        "png": "e35484a881e0eaeed5dda327a86946f3af4323876ebc79fbcb870dcffa8a6111"
+      }
+    },
+    {
+      "name": "02_amm_projection_axes",
+      "width_mm": 179.99999983333333,
+      "height_mm": 119.99999988888888,
+      "editable_svg_text_nodes": 55,
+      "preview_pixels": [
+        3188,
+        2125
+      ],
+      "export_sha256": {
+        "svg": "4f688aa35999eb8aaff588aa8750a5c4a3648cf544367a28c1b1e5f235d70ac3",
+        "pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb",
+        "png": "95c446507ca79d4b95fa18054d28926470093bd8f9a8ad2e8c75f46099572a42"
+      }
+    }
+  ],
+  "exact_test_phrase_counts": {
+    "joy": 15,
+    "neutral": 5,
+    "surprise": 3,
+    "anger": 2,
+    "sadness": 1
+  },
+  "model_predictions_used": false,
+  "training_started": false,
+  "script_sha256": "bbab06a74a0ea39298564f23f06afcda2b968b4a9f45bf5eaf566534adf1a0ad",
+  "grounding_source_hashes": {
+    "vendor/meld/model.py": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+    "vendor/iemocap/factorized_mixer/model.py": "dc61ad68ae7ac70a40b9749c1a0728d4566a5c9a30ed6288c8068a7e2de14be5"
+  },
+  "caption_checks": {
+    "current_words_vs_history_aware_text_caveat_in_image": true,
+    "same_caveat_in_standalone_caption": true
+  }
+}

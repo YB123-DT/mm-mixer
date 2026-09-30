@@ -1,0 +1,35 @@
+{
+  "versions": [
+    {
+      "version": "v001",
+      "description": "作者原稿",
+      "source": "MM-mixer.tex",
+      "source_sha256": "7e9d5470c30331704a1baadfa9031906cbda5c0f322bb4fbefe3f6646f447064",
+      "pdf": "MM-Mixer-v001-original.pdf",
+      "pdf_sha256": "c88cadc10a372886b691a7022da1b5246f595977adf2a5f8390f5e23274d91ec",
+      "git_tag": "paper-v003",
+      "pages": 8
+    },
+    {
+      "version": "v002",
+      "description": "已有修订稿",
+      "source": "MM-mixer-revised.tex",
+      "source_sha256": "e0c524fca594b57e0bcadcd39e124858a78aa098872454a4556ed217625756ef",
+      "pdf": "MM-Mixer-v002-revised.pdf",
+      "pdf_sha256": "44f16758cb71b3dbc57b43cf2c11252e5e0d732a5a87f16cbab19573ce405fc8",
+      "git_tag": "paper-v003",
+      "pages": 8
+    },
+    {
+      "version": "v003",
+      "description": "修订稿与宽幅场景、AMM图",
+      "source": "MM-mixer-with-figures.tex",
+      "source_sha256": "ae97d26be228a0ef983f7b44b3fa32ff7fe48eafcfc260376ac7a3f342a23e78",
+      "pdf": "MM-Mixer-v003-with-figures.pdf",
+      "pdf_sha256": "d27098ec9231ca067abf4894f051deb2bf903cbdff2330894e6079aeced3e5a8",
+      "git_tag": "paper-v003",
+      "pages": 9
+    }
+  ],
+  "latest": "v003"
+}
