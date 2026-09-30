@@ -191,6 +191,38 @@ def scene_figure(images, waveforms, records, out: Path):
     export(fig, out, "01_same_words_scenes")
 
 
+def single_column_scene_figure(images, waveforms, records, out: Path):
+    fig = plt.figure(figsize=(84 / 25.4, 72 / 25.4))
+    fig.text(.5, .958, '"Hey!" with different emotion labels', ha="center",
+             fontsize=8.2, fontweight="bold", color=INK)
+    fig.text(.5, .909, "MELD / Friends   |   Same speaker: Ross",
+             ha="center", fontsize=6.8, color=INK)
+    duration = max(len(audio) / rate for rate, audio in waveforms)
+    for i, (bottom, rgb, (rate, audio), row) in enumerate(
+            zip((.604, .332, .060), images, waveforms, records)):
+        image_ax = fig.add_axes([.035, bottom, .40, .255])
+        image_ax.imshow(rgb)
+        image_ax.set_axis_off()
+        fig.text(.50, bottom + .222,
+                 f"{chr(97 + i)}   {row['dataset_emotion'].capitalize()}",
+                 fontsize=7.5, fontweight="bold", color=INK)
+        fig.text(.50, bottom + .174, f"{row['split']} / {row['sample_id']}",
+                 fontsize=6, color=INK)
+        audio_ax = fig.add_axes([.525, bottom + .032, .435, .088])
+        starts = np.arange(0, len(audio), 64)
+        lower = np.minimum.reduceat(audio, starts)
+        upper = np.maximum.reduceat(audio, starts)
+        audio_ax.fill_between(starts / rate, lower, upper, color=BLUE, linewidth=.25)
+        audio_ax.set(xlim=(0, duration), ylim=(-1, 1),
+                     xticks=[0, 1, 2], xticklabels=["0 s", "1 s", "2 s"],
+                     yticks=[-1, 0, 1])
+        audio_ax.set_title("Clip audio envelope", fontsize=6, pad=2)
+        audio_ax.tick_params(length=1.5, width=.5, pad=1, labelsize=5)
+    fig.text(.5, .016, "Current words match; history-aware text features may differ.",
+             ha="center", fontsize=5.5, color=INK)
+    export(fig, out, "01_same_words_scenes_single_column")
+
+
 def box(ax, x, y, width, height, text, color=INK, fill="#F6F7F8", size=8):
     patch = FancyBboxPatch((x, y), width, height,
                           boxstyle="round,pad=0.03,rounding_size=0.10",
@@ -274,14 +306,25 @@ def main():
     parser.add_argument("--audio-root", type=Path,
                         default=Path("/data2/yb/multimodalERC/MELD/Dataset/Data/local_meld"))
     parser.add_argument("--out", type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument("--scene-layout", choices=("single-column", "wide"),
+                        default="single-column")
+    parser.add_argument("--scene-only", action="store_true",
+                        help="Keep the existing AMM diagram unchanged")
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     images, waveforms, records = load_cases(args.raw_root, args.audio_root, args.out)
     pd.DataFrame(records).to_csv(args.out / "source_data.csv", index=False)
-    scene_figure(images, waveforms, records, args.out)
-    amm_figure(args.out)
+    if args.scene_layout == "single-column":
+        single_column_scene_figure(images, waveforms, records, args.out)
+        figure_names = ["01_same_words_scenes_single_column"]
+    else:
+        scene_figure(images, waveforms, records, args.out)
+        figure_names = ["01_same_words_scenes"]
+    if not args.scene_only:
+        amm_figure(args.out)
+        figure_names.append("02_amm_projection_axes")
     print(json.dumps({"output": str(args.out), "verified_cases": len(records),
-                      "figures": ["01_same_words_scenes", "02_amm_projection_axes"]}))
+                      "pdf_directory": str(PDF_DIRECTORY), "figures": figure_names}))
 
 
 if __name__ == "__main__":

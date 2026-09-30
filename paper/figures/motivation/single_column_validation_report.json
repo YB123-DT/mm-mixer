@@ -1,0 +1,54 @@
+{
+  "case_checks": [
+    {
+      "sample": "train/dia645_utt13",
+      "current_utterance": "Hey!",
+      "speaker": "Ross",
+      "emotion": "joy",
+      "source_hashes_match": true,
+      "frame_pixels_unchanged": true
+    },
+    {
+      "sample": "test/dia163_utt2",
+      "current_utterance": "Hey!",
+      "speaker": "Ross",
+      "emotion": "sadness",
+      "source_hashes_match": true,
+      "frame_pixels_unchanged": true
+    },
+    {
+      "sample": "train/dia700_utt0",
+      "current_utterance": "Hey!",
+      "speaker": "Ross",
+      "emotion": "neutral",
+      "source_hashes_match": true,
+      "frame_pixels_unchanged": true
+    }
+  ],
+  "completed_at": "2026-09-30T11:31:30.796820+00:00",
+  "figure": "01_same_words_scenes_single_column",
+  "width_mm": 83.99999762641058,
+  "height_mm": 71.99999796549479,
+  "editable_svg_text_nodes": 30,
+  "preview_pixels": [
+    1488,
+    1275
+  ],
+  "export_sha256": {
+    "pdf": "4c0a641f993616525547073e4a93f8b09d810aaa811319b79d1594cb5ea05f6b",
+    "png": "e36e5a6b4180c1d95fc1d1945eef382ce9e3284e7d48f9c3057229a25ed86450",
+    "svg": "137af638d136a57378ef6622b28d31d1b41c99e8e71bc036309b0724c815f76e"
+  },
+  "script_sha256": "2e885fcc04c517ba65519a89cb5ec87d03b67cebc1e60016ae39282ad7a61097",
+  "model_predictions_used": false,
+  "training_started": false,
+  "text_extents_within_canvas": true,
+  "visual_review": {
+    "score": 95,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [],
+    "suggestions": [],
+    "reasoning": "Three vertically stacked samples fit native one-column dimensions. Labels, shared audio axes, and the current-words/history-aware feature caveat remain legible."
+  }
+}

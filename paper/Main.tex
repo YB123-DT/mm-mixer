@@ -184,6 +184,15 @@ To address this issue, we propose a simple yet strong MERC framework named \text
 
 Multimodal Emotion Recognition in Conversation (MERC) aims to identify the emotion expressed by each utterance in a dialogue by integrating textual, acoustic, and visual signals. Early ERC studies mainly focused on text-based conversational context and speaker dependencies through recurrent state tracking and graph-based reasoning~\cite{dialoguernn,dialoguegcn}. With the increasing availability of multimodal conversational data, subsequent MERC methods have incorporated acoustic and visual signals through multimodal graph learning~\cite{mmgcn}, cross-modal attention~\cite{dialoguetrm}, and more expressive fusion mechanisms~\cite{sdt,css}. These approaches have substantially advanced multimodal representation learning for MERC by enabling information exchange among heterogeneous modality streams.
 
+Figure~\ref{fig:motivation_scenes} shows three MELD~\cite{meld} clips in which the same speaker, Ross, uses the current utterance ``Hey!'' with different emotion labels. These examples illustrate the task setting; matching current words does not imply matching the history-aware text features used by the model.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{01_same_words_scenes_single_column.pdf}
+\caption{Ross's current utterance ``Hey!'' in three MELD clips annotated as joy, sadness, and neutral. Original video frames and clip-audio envelopes use common time and PCM amplitude scales. Labels come from the dataset; these are illustrative examples. Matching current words does not imply matching history-aware text features.}
+\label{fig:motivation_scenes}
+\end{figure}
+
 Despite this progress, many existing MERC frameworks still treat each utterance-level modality-specific representation as a holistic interaction unit during multimodal fusion. Although such representations may contain rich affective information, interacting only at this granularity provides limited ability to mine the emotion cues distributed within them. Subtle but valuable cues may be obscured by dominant features, while complementary evidence distributed across textual, acoustic, and visual signals may be diluted by unified fusion operators. Consequently, the resulting multimodal representation may be insufficiently sensitive to subtle emotional expressions.
 
 To address this limitation, we propose MM-Mixer, a simple yet strong framework for multimodal interaction. MM-Mixer first applies an Adaptive Gating module to filter modality-specific cues and construct a shared context for modality-centric cross-modal alignment. After the modality-centric cross-modal alignment, the core Axis-wise Multimodal Mixer is deployed to transform each utterance-level modality-specific representation into a fixed-length latent sequence and separately processes it along with the latent sequence, modality, and hidden-feature dimensions.
@@ -380,6 +389,15 @@ modality $m$. %the three outputs retain the fixed order $V,A,T$.
 
 \subsection{Axis-wise Multimodal Mixer}
 AMM aims to mine the sentiment cues along different dimensions from the cross-modal aligned feature $\mathbf{h}^{m}$, since the three axes of a multimodal representation have different meanings: learned elements within a modality, modality identity, and hidden feature channels. AMM processes these axes separately so that each operation has a defined input dimension and interaction scope.
+
+Figure~\ref{fig:amm_projection_axes} illustrates the learned projection views and their interaction scopes. The projection axis indexes different learned transformations of each aligned branch representation, rather than observed temporal frames or predefined semantic roles.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.99\textwidth]{02_amm_projection_axes.pdf}
+\caption{Learned projection views and axis-wise interaction in AMM. Each 256-dimensional branch representation after MCA is expanded into six learned projections shared across branches. Two blocks use projection--modality--channel and modality--projection--channel update orders, followed by averaging over the projection axis. Modality mixing uses one learned $3\times3$ routing matrix shared across projection/channel positions. Layer normalization and residual additions are omitted for clarity; individual projections have no predefined semantic roles.}
+\label{fig:amm_projection_axes}
+\end{figure*}
 
 %The three axes of a multimodal representation have different meanings: learned elements within a modality, modality identity, and hidden feature channels. 
 %We process these axes separately so that each operation has a defined input dimension and interaction scope.
@@ -1023,6 +1041,12 @@ Future work will address minority emotions and longer contexts.
 
 
 
+
+% Supplement shares this preamble and the single bibliography below.
+\FloatBarrier
+\appendix
+\section*{Supplementary Material}
+\input{Supplement}
 
 \bibliography{aaai2027}
 \end{document}

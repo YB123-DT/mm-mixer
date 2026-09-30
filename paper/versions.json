@@ -29,7 +29,20 @@
       "pdf_sha256": "d27098ec9231ca067abf4894f051deb2bf903cbdff2330894e6079aeced3e5a8",
       "git_tag": "paper-v003",
       "pages": 9
+    },
+    {
+      "version": "v004",
+      "description": "Main主稿、单栏场景、AMM图及补充材料",
+      "source": "Main.tex",
+      "source_sha256": "2eb5f5baa9fb5ea182079142ccd2682113961f0939f1aaf0ae16c40acaf1f3a5",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "pdf": "MM-Mixer-v004-main-with-supplement.pdf",
+      "pdf_sha256": "50935ea062996d5b73e4640e1a50d027795b55224be6e245c1919ddcbda4137c",
+      "pages": 12,
+      "git_tag": "paper-v004"
     }
   ],
-  "latest": "v003"
+  "latest": "v004",
+  "current_pdf": "Main.pdf"
 }

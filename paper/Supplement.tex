@@ -1,77 +1,4 @@
-\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
-\usepackage[submission]{aaai2027}  % DO NOT CHANGE THIS
-% The serif, sans-serif, and monospaced fonts are loaded automatically by
-% aaai2027.sty (newtxtext, helvet, courier). DO NOT add \usepackage{times},
-% \usepackage{helvet}, \usepackage{courier}, or any other font package.
-\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
-\usepackage{graphicx} % DO NOT CHANGE THIS
-\urlstyle{rm} % DO NOT CHANGE THIS
-\def\UrlFont{\rm}  % DO NOT CHANGE THIS
-\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
-\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
-\frenchspacing  % DO NOT CHANGE THIS
-
-%
-% Keep the \pdfinfo as shown here. There's no need
-% for you to add the /Title and /Author tags.
-\pdfinfo{
-/TemplateVersion (2027.1)
-}
-
-
-% DISALLOWED PACKAGES
-% \usepackage{authblk} -- This package is specifically forbidden
-% \usepackage{balance} -- This package is specifically forbidden
-% \usepackage{CJK} -- This package is specifically forbidden
-% \usepackage{float} -- This package is specifically forbidden
-% \usepackage{flushend} -- This package is specifically forbidden
-% \usepackage{fullpage} -- This package is specifically forbidden
-% \usepackage{geometry} -- This package is specifically forbidden
-% \usepackage{hyperref} -- This package is specifically forbidden
-% \usepackage{navigator} -- This package is specifically forbidden
-% (or any other package that embeds links such as navigator or hyperref)
-% \usepackage{indentfirst} -- This package is specifically forbidden
-% \usepackage{layout} -- This package is specifically forbidden
-% \usepackage{multicol} -- This package is specifically forbidden
-% \usepackage{nameref} -- This package is specifically forbidden
-% \usepackage{savetrees} -- This package is specifically forbidden
-% \usepackage{setspace} -- This package is specifically forbidden
-% \usepackage{stfloats} -- This package is specifically forbidden
-% \usepackage{tabu} -- This package is specifically forbidden
-% \usepackage{titlesec} -- This package is specifically forbidden
-% \usepackage{tocbibind} -- This package is specifically forbidden
-% \usepackage{ulem} -- This package is specifically forbidden
-% \usepackage{wrapfig} -- This package is specifically forbidden
-% DISALLOWED COMMANDS
-% \nocopyright -- Your paper will not be published if you use this command
-% \addtolength -- This command may not be used
-% \balance -- This command may not be used
-% \baselinestretch -- Your paper will not be published if you use this command
-% \clearpage -- No page breaks of any kind may be used for the final version of your paper
-% \columnsep -- This command may not be used
-% \newpage -- No page breaks of any kind may be used for the final version of your paper
-% \pagebreak -- No page breaks of any kind may be used for the final version of your paper
-% \pagestyle -- This command may not be used
-% \tiny -- This is not an acceptable font size.
-% \vspace{- -- No negative value may be used in proximity of a caption, figure, table, section, subsection, subsubsection, or reference
-% \vskip{- -- No negative value may be used to alter spacing above or below a caption, figure, table, section, subsection, subsubsection, or reference
-
-
-\setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
-\title{Supplementary Material for ``MM-Mixer: A Simple Yet Strong
-Baseline for Multimodal Emotion Recognition in Conversations''}
-
-\author{
-    xxx
-}
-
-\affiliations{
-    xxx
-}
-
-\begin{document}
-
-\maketitle
+% Supplementary body; compile Main.tex, which supplies the preamble and bibliography.
 
 \section{A1. Brief Introduction to Baselines}
 
@@ -160,7 +87,7 @@ PolyLoss on both datasets.
 
 \subsection{Component Ablations}
 Figure~\ref{fig:supp_iemocap_ablation_tsne}
-and Figure~~\ref{fig:supp_meld_ablation_tsne} compare Full MM-Mixer with the
+and Figure~\ref{fig:supp_meld_ablation_tsne} compare Full MM-Mixer with the
 component-ablation variants using the same test utterances and t-SNE
 settings. On IEMOCAP, the full model forms relatively compact regions
 for sadness and anger. On MELD, joy and surprise also form recognizable
@@ -179,7 +106,7 @@ MELD, joy and surprise show identifiable class-specific structures.
 These qualitative patterns are consistent with the ACC and WF1
 comparisons reported in the main paper.
 
-\begin{figure*}[t]
+\begin{figure*}[tp]
 \centering
 \includegraphics[width=\textwidth]
 {iemocap-component-ablation-tsne-11panel.pdf}
@@ -187,12 +114,14 @@ comparisons reported in the main paper.
 denotes ``without.'' AG, MCA, AMM, and EPIRC denote Adaptive Gating,
 Modality-centric Cross-modal Alignment, Axis-wise Multimodal Mixer,
 and Explicit Pairwise Interaction Residual Correction, respectively.
-Colors denote ground-truth emotions.}
+``Sequence Mixing'' in the panels refers to mixing along the learned
+projection axis, not observed temporal frames. Colors denote ground-truth
+emotions.}
 \label{fig:supp_iemocap_ablation_tsne}
 \end{figure*}
 
 
-\begin{figure*}[t]
+\begin{figure*}[tp]
 \centering
 \includegraphics[width=\textwidth]
 {meld-component-ablation-tsne-11panel.pdf}
@@ -203,23 +132,14 @@ Figure~\ref{fig:supp_iemocap_ablation_tsne}.}
 \end{figure*}
 
 %\FloatBarrier
-\begin{figure*}[t]
+\begin{figure*}[tp]
 \centering
 \includegraphics[width=\textwidth]
 {model-comparison-tsne-16panel.pdf}
 \caption{t-SNE visualization of the final fused representations
 learned by eight models on IEMOCAP and MELD. For each model--dataset
-pair, the same class-stratified test samples and visualization settings
-are used. Colors denote ground-truth emotion labels.}
+pair, class-stratified test samples with the same per-class cap and
+visualization settings are used. Colors denote ground-truth emotion labels.}
 \label{fig:supp_model_tsne}
 \end{figure*}
 \FloatBarrier
-
-
-
-
-
-
-\bibliography{aaai2027}
-
-\end{document}
