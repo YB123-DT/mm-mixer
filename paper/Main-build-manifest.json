@@ -1,7 +1,7 @@
 {
-  "version": "v004",
-  "git_tag": "paper-v004",
-  "completed_at": "2026-09-30T11:40:05.745910+00:00",
+  "version": "v005",
+  "git_tag": "paper-v005",
+  "completed_at": "2026-09-30T13:32:13.833816+00:00",
   "entry": "Main.tex",
   "supplement": "Supplement.tex",
   "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/main -jobname=Main Main.tex",
@@ -11,7 +11,7 @@
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
     "aaai2027.bib": "c479c14bc1abeb6eca5935984a5ccb174b2d4d66e70b09f5cadde80bff69d022",
-    "01_same_words_scenes_single_column.pdf": "4c0a641f993616525547073e4a93f8b09d810aaa811319b79d1594cb5ea05f6b",
+    "01_same_words_scenes_single_column.pdf": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
     "MM-Mixer.pdf": "0e7fb745d20bf0d456d764fa1107ecaf9cc9947bf7551762fe91a56a24b90b35",
     "02_amm_projection_axes.pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb",
     "iemocap-component-ablation-tsne-11panel.pdf": "63c156d5a18b07c8e44a43a9a9e5e09042c2580dff6d5b62a63a23e7e123de2f",
@@ -21,11 +21,11 @@
   "outputs": {
     "Main.pdf": {
       "pages": 12,
-      "sha256": "50935ea062996d5b73e4640e1a50d027795b55224be6e245c1919ddcbda4137c"
+      "sha256": "1f521b29d16f570004d405e116f76e3439cc2678cf8adeb5700380ca7a00e0f4"
     },
-    "MM-Mixer-v004-main-with-supplement.pdf": {
+    "MM-Mixer-v005-scene-clean.pdf": {
       "pages": 12,
-      "sha256": "50935ea062996d5b73e4640e1a50d027795b55224be6e245c1919ddcbda4137c"
+      "sha256": "1f521b29d16f570004d405e116f76e3439cc2678cf8adeb5700380ca7a00e0f4"
     }
   },
   "checks": {
@@ -40,7 +40,11 @@
     "underfull_messages": 7,
     "original_source_byte_identical": true,
     "source_newlines": "CRLF",
-    "original_main_body_byte_identical_after_removing_insertions": true
+    "original_main_body_byte_identical_after_removing_insertions": true,
+    "manuscript_tex_unchanged_from_v004": true,
+    "source_data_and_frames_unchanged_from_v004": true,
+    "removed_audio_and_sample_labels_absent": true,
+    "pages_2_to_12_pixel_identical_to_v004": true
   },
   "section_and_figure_pages": {
     "Hey!": [
@@ -69,8 +73,12 @@
     "score": 95,
     "verdict": "pass",
     "category_match": true,
+    "reviewed_pages": [
+      1
+    ],
+    "other_pages_verified": "Pages 2–12 render pixel-identically to v004.",
     "differences": [],
     "suggestions": [],
-    "reasoning": "All 12 pages reviewed. The scene fits one column with legible labels; AMM and supplementary plots are complete; the shared references have normal spacing."
+    "reasoning": "The single-column scene and manuscript first page are legible and unclipped. Removed audio subtitles and sample identifiers are absent; emotion labels, original frames, common audio axes, and the history-aware text caveat remain."
   }
 }

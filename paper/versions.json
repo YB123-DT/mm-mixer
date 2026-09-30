@@ -41,8 +41,22 @@
       "pdf_sha256": "50935ea062996d5b73e4640e1a50d027795b55224be6e245c1919ddcbda4137c",
       "pages": 12,
       "git_tag": "paper-v004"
+    },
+    {
+      "version": "v005",
+      "description": "单栏场景图删除音频副标题和样本编号",
+      "source": "Main.tex",
+      "source_sha256": "2eb5f5baa9fb5ea182079142ccd2682113961f0939f1aaf0ae16c40acaf1f3a5",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "01_same_words_scenes_single_column.pdf",
+      "figure_sha256": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
+      "pdf": "MM-Mixer-v005-scene-clean.pdf",
+      "pdf_sha256": "1f521b29d16f570004d405e116f76e3439cc2678cf8adeb5700380ca7a00e0f4",
+      "pages": 12,
+      "git_tag": "paper-v005"
     }
   ],
-  "latest": "v004",
+  "latest": "v005",
   "current_pdf": "Main.pdf"
 }

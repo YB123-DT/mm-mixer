@@ -206,9 +206,7 @@ def single_column_scene_figure(images, waveforms, records, out: Path):
         fig.text(.50, bottom + .222,
                  f"{chr(97 + i)}   {row['dataset_emotion'].capitalize()}",
                  fontsize=7.5, fontweight="bold", color=INK)
-        fig.text(.50, bottom + .174, f"{row['split']} / {row['sample_id']}",
-                 fontsize=6, color=INK)
-        audio_ax = fig.add_axes([.525, bottom + .032, .435, .088])
+        audio_ax = fig.add_axes([.525, bottom + .060, .435, .125])
         starts = np.arange(0, len(audio), 64)
         lower = np.minimum.reduceat(audio, starts)
         upper = np.maximum.reduceat(audio, starts)
@@ -216,7 +214,6 @@ def single_column_scene_figure(images, waveforms, records, out: Path):
         audio_ax.set(xlim=(0, duration), ylim=(-1, 1),
                      xticks=[0, 1, 2], xticklabels=["0 s", "1 s", "2 s"],
                      yticks=[-1, 0, 1])
-        audio_ax.set_title("Clip audio envelope", fontsize=6, pad=2)
         audio_ax.tick_params(length=1.5, width=.5, pad=1, labelsize=5)
     fig.text(.5, .016, "Current words match; history-aware text features may differ.",
              ha="center", fontsize=5.5, color=INK)

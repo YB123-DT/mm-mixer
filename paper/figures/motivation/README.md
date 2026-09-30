@@ -58,6 +58,8 @@
 
 制图没有启动训练，没有把删 CA 的对照当成多视角价值的证据。v004 将图和事实说明接入 `Main.tex`，没有修改原有摘要、公式和实验表；TeX 操作见 `../../TEX_CHANGELOG.md`。
 
+v005 按用户要求删除单栏场景图中的 “Clip audio envelope” 副标题和 train/test 样本编号。样本对应关系仍记录在 `source_data.csv` 与 `captions.md`；画面、音频和标签不变。更新图资产后重新编译完整 PDF，未修改 Main 或 Supplement 的 TeX 正文。
+
 ## 文件与复跑
 
 - `../../01_same_words_scenes_single_column.pdf`：当前单栏场景图；PNG/SVG 在本目录。

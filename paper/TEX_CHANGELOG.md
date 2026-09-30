@@ -26,3 +26,12 @@
 编译和验证结果：`latexmk` 成功生成 12 页完整稿，逐页视觉核查通过。场景图在第 1 页，AMM 图在第 5 页，补充材料正文从第 9 页开始，三张 t-SNE 图在第 10–11 页，唯一参考文献在第 12 页。33 个标签无重复，引用目标完整，25 个引用键均存在，六份图文件全部接入；没有未定义引用或超宽盒。编译仍有常规 underfull 排版提示，逐页检查没有裁切或异常间距。
 
 移除三处新增块后，Main 与 `paper-v003` 保存的用户原稿逐字节一致。Main、Supplement、样式、参考文献及六张图的 SHA256 见 [`Main-build-manifest.json`](Main-build-manifest.json)。输出为 [`Main.pdf`](Main.pdf) 和 [`MM-Mixer-v004-main-with-supplement.pdf`](MM-Mixer-v004-main-with-supplement.pdf)，两份 PDF 字节一致。版本标签：`paper-v004`；后续完成的 Main 修改沿用“记录—编译—核查—提交—推送”流程。
+
+## 2026-09-30 · v005：场景图简化标注并重新导出全文
+
+1. 按用户要求，从当前单栏场景图删除三处 “Clip audio envelope” 副标题和三处 train/test 样本编号；波形区域略微上移并增高，利用删除文字后留下的空间。原生尺寸仍为 84 × 72 mm，保留情绪标签、共同坐标轴和历史文本说明。
+2. 修改图的生成脚本 `figures/motivation/build_figures.py`，重新导出根目录 `01_same_words_scenes_single_column.pdf` 及图稿目录的 PNG/SVG。样本编号与来源仍保存在 `source_data.csv` 和完整图注记录中；CSV、三个原始帧及历史宽幅图均不变。
+3. 本版没有修改 `Main.tex` 或 `Supplement.tex`。替换 Main 引用的图资产后，沿用既有 `latexmk` 命令重新编译，更新 `Main.pdf` 并保存 `MM-Mixer-v005-scene-clean.pdf`。两份输出字节一致，均为 12 页。
+4. 验证删除的文字未出现在当前单栏图或全文第一页；核对原生尺寸、数据来源和图像导出。人工核查单栏图及全文第一页通过，第 2–12 页渲染像素与 v004 一致。最终编译无未定义引用、超宽盒或 LaTeX 错误，仍有 7 条常规 underfull 提示。
+
+本版图稿校验见 [`single_column_validation_report.json`](figures/motivation/single_column_validation_report.json)，编译依赖和输出哈希见 [`Main-build-manifest.json`](Main-build-manifest.json)。版本标签：`paper-v005`。
