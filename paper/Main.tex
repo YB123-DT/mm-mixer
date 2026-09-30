@@ -184,12 +184,12 @@ To address this issue, we propose a simple yet strong MERC framework named \text
 
 Multimodal Emotion Recognition in Conversation (MERC) aims to identify the emotion expressed by each utterance in a dialogue by integrating textual, acoustic, and visual signals. Early ERC studies mainly focused on text-based conversational context and speaker dependencies through recurrent state tracking and graph-based reasoning~\cite{dialoguernn,dialoguegcn}. With the increasing availability of multimodal conversational data, subsequent MERC methods have incorporated acoustic and visual signals through multimodal graph learning~\cite{mmgcn}, cross-modal attention~\cite{dialoguetrm}, and more expressive fusion mechanisms~\cite{sdt,css}. These approaches have substantially advanced multimodal representation learning for MERC by enabling information exchange among heterogeneous modality streams.
 
-Figure~\ref{fig:motivation_scenes} shows three MELD~\cite{meld} clips in which the same speaker, Ross, uses the current utterance ``Hey!'' with different emotion labels. These examples illustrate the task setting; matching current words does not imply matching the history-aware text features used by the model.
+Even a one-word greeting can convey different emotions in conversation. Figure~\ref{fig:motivation_scenes} shows three distinct MELD~\cite{meld} utterance samples from the same speaker, Ross. Each current utterance is transcribed as ``Hey!'', while the emotion annotations are joy, sadness, and neutral. These examples motivate considering conversational context together with vocal delivery and facial expression when interpreting short utterances.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{01_same_words_scenes_single_column.pdf}
-\caption{Ross's current utterance ``Hey!'' in three MELD clips annotated as joy, sadness, and neutral. Original video frames and clip-audio envelopes use common time and PCM amplitude scales. Labels come from the dataset; these are illustrative examples. Matching current words does not imply matching history-aware text features.}
+\caption{Three MELD utterance samples from Ross, each transcribed as ``Hey!'', with dataset emotion labels of joy, sadness, and neutral. Each row shows an original video frame and the corresponding audio waveform, with shared time and amplitude scales across the audio panels. The model also uses dialogue history, so matching current words does not imply matching text features.}
 \label{fig:motivation_scenes}
 \end{figure}
 

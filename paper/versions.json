@@ -55,8 +55,22 @@
       "pdf_sha256": "1f521b29d16f570004d405e116f76e3439cc2678cf8adeb5700380ca7a00e0f4",
       "pages": 12,
       "git_tag": "paper-v005"
+    },
+    {
+      "version": "v006",
+      "description": "Main场景正文和图注明确三个仅含Hey!的样本",
+      "source": "Main.tex",
+      "source_sha256": "f0ab3cc092a38b33fd5db3691a40c88b10ced7f1d9412fe1b73d9ac4f0cfcf5b",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "01_same_words_scenes_single_column.pdf",
+      "figure_sha256": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
+      "pdf": "MM-Mixer-v006-scene-text.pdf",
+      "pdf_sha256": "3c3b48af3a067987ec92af999a34c12016ca4734812adf02913660c400e62f11",
+      "pages": 12,
+      "git_tag": "paper-v006"
     }
   ],
-  "latest": "v005",
+  "latest": "v006",
   "current_pdf": "Main.pdf"
 }

@@ -35,3 +35,12 @@
 4. 验证删除的文字未出现在当前单栏图或全文第一页；核对原生尺寸、数据来源和图像导出。人工核查单栏图及全文第一页通过，第 2–12 页渲染像素与 v004 一致。最终编译无未定义引用、超宽盒或 LaTeX 错误，仍有 7 条常规 underfull 提示。
 
 本版图稿校验见 [`single_column_validation_report.json`](figures/motivation/single_column_validation_report.json)，编译依赖和输出哈希见 [`Main-build-manifest.json`](Main-build-manifest.json)。版本标签：`paper-v005`。
+
+## 2026-09-30 · v006：同步 Main 的场景正文和图注
+
+1. `Main.tex:187`：重写 Introduction 中的场景段落，明确这是同一说话人 Ross 的三个独立话语样本，每个样本的当前台词都仅标注为 “Hey!”，对应 joy、sadness、neutral。以简短问候的情绪解读引出对历史上下文、声音表达和面部表情的联合考虑，不声称 AMM 已正确识别这些样例。
+2. `Main.tex:192`：同步 `fig:motivation_scenes` 的图注，将 `clip-audio envelopes` 改为 `audio waveform`，删除 PCM 术语及重复的示例说明；明确每行是原始视频帧与对应音频波形，共同时间与幅度标尺仅指音频面板。历史对话说明只在图注中保留一次，正文不再重复。
+3. 本版只替换以上两处文字。反向还原这两段后，Main 与 v005 逐字节一致；CRLF 换行不变。`Supplement.tex`、原始稿、六张图以及实验表和数值均保持原样。
+4. 重新编译并核查 12 页全文。33 个标签无重复，12 个引用目标与 25 个引用键均完整，六张图文件均存在；最终编译没有未定义引用、超宽盒或 LaTeX 错误，保留 5 条常规 underfull 提示。文字变化导致第 1–9 页重新排版，逐页视觉检查通过，第 10–12 页与 v005 渲染像素一致。
+
+输出为 [`Main.pdf`](Main.pdf) 与 [`MM-Mixer-v006-scene-text.pdf`](MM-Mixer-v006-scene-text.pdf)，两者字节一致。源文件和输出哈希见 [`Main-build-manifest.json`](Main-build-manifest.json)，版本标签：`paper-v006`。

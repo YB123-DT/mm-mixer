@@ -1,12 +1,12 @@
 {
-  "version": "v005",
-  "git_tag": "paper-v005",
-  "completed_at": "2026-09-30T13:32:13.833816+00:00",
+  "version": "v006",
+  "git_tag": "paper-v006",
+  "completed_at": "2026-09-30T13:53:29.066328+00:00",
   "entry": "Main.tex",
   "supplement": "Supplement.tex",
   "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/main -jobname=Main Main.tex",
   "sources_sha256": {
-    "Main.tex": "2eb5f5baa9fb5ea182079142ccd2682113961f0939f1aaf0ae16c40acaf1f3a5",
+    "Main.tex": "f0ab3cc092a38b33fd5db3691a40c88b10ced7f1d9412fe1b73d9ac4f0cfcf5b",
     "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -21,11 +21,11 @@
   "outputs": {
     "Main.pdf": {
       "pages": 12,
-      "sha256": "1f521b29d16f570004d405e116f76e3439cc2678cf8adeb5700380ca7a00e0f4"
+      "sha256": "3c3b48af3a067987ec92af999a34c12016ca4734812adf02913660c400e62f11"
     },
-    "MM-Mixer-v005-scene-clean.pdf": {
+    "MM-Mixer-v006-scene-text.pdf": {
       "pages": 12,
-      "sha256": "1f521b29d16f570004d405e116f76e3439cc2678cf8adeb5700380ca7a00e0f4"
+      "sha256": "3c3b48af3a067987ec92af999a34c12016ca4734812adf02913660c400e62f11"
     }
   },
   "checks": {
@@ -37,14 +37,29 @@
     "single_column_scene": true,
     "undefined_references_or_citations": false,
     "overfull_boxes": false,
-    "underfull_messages": 7,
+    "underfull_messages": 5,
+    "only_scene_paragraph_and_caption_changed": true,
+    "supplement_unchanged_from_v005": true,
     "original_source_byte_identical": true,
     "source_newlines": "CRLF",
-    "original_main_body_byte_identical_after_removing_insertions": true,
-    "manuscript_tex_unchanged_from_v004": true,
-    "source_data_and_frames_unchanged_from_v004": true,
     "removed_audio_and_sample_labels_absent": true,
-    "pages_2_to_12_pixel_identical_to_v004": true
+    "changed_pages_from_v005": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "pixel_identical_pages_from_v005": [
+      10,
+      11,
+      12
+    ],
+    "figure_assets_unchanged_from_v005": true
   },
   "section_and_figure_pages": {
     "Hey!": [
@@ -73,12 +88,19 @@
     "score": 95,
     "verdict": "pass",
     "category_match": true,
-    "reviewed_pages": [
-      1
-    ],
-    "other_pages_verified": "Pages 2–12 render pixel-identically to v004.",
     "differences": [],
     "suggestions": [],
-    "reasoning": "The single-column scene and manuscript first page are legible and unclipped. Removed audio subtitles and sample identifiers are absent; emotion labels, original frames, common audio axes, and the history-aware text caveat remain."
-  }
+    "reasoning": "The revised scene caption and paragraph fit the single-column AAAI layout. Pages 1–9 were visually checked for clipping, overlap, and float spacing; pages 10–12 render pixel-identically to v005."
+  },
+  "visual_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
 }
