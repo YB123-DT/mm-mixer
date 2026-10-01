@@ -101,20 +101,35 @@
     {
       "version": "v008",
       "description": "整理目录：顶层仅当前稿，旧版本分别归档",
-      "source": "Main.tex",
+      "source": "archive/v008/Main.tex",
       "source_sha256": "874e2abe5c64073bf7f6180b0d614987f59d4dbeefd46496877bf5b72a01a1ee",
+      "included_source": "archive/v008/Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "archive/v008/01_same_words_scenes_single_column.pdf",
+      "figure_sha256": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
+      "pdf": "archive/v008/Main.pdf",
+      "pdf_sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0",
+      "pages": 12,
+      "git_tag": "paper-v008",
+      "pdf_content_unchanged_from": "v007",
+      "archive_directory": "archive/v008"
+    },
+    {
+      "version": "v009",
+      "description": "引言衔接与多投影视角主线，保留贡献列表",
+      "source": "Main.tex",
+      "source_sha256": "eb1226e3f957295ad4fea45c4e6c2930484e6ea2defc5c65d148bea994238c83",
       "included_source": "Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
       "figure": "01_same_words_scenes_single_column.pdf",
       "figure_sha256": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
       "pdf": "Main.pdf",
-      "pdf_sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0",
-      "pages": 12,
-      "git_tag": "paper-v008",
-      "pdf_content_unchanged_from": "v007"
+      "pdf_sha256": "72179770eed88dfdc32af69e6b3ac0734b69d53e90362306ee772b585444c2ce",
+      "pages": 13,
+      "git_tag": "paper-v009"
     }
   ],
-  "latest": "v008",
+  "latest": "v009",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

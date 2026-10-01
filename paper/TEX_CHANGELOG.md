@@ -62,3 +62,19 @@
 5. 核对七份归档的源码、PDF 和依赖哈希，所有引用的图文件与补充材料均存在。将当前 Main 编译到临时目录验证，仍为 12 页，所有页面与保留的当前 PDF 渲染像素一致，无未定义引用、超宽盒或 LaTeX 错误；有 7 条既有 underfull 提示。
 
 当前稿见 [Main.pdf](Main.pdf)，旧稿见 [archive/](archive/README.md)。本版清单见 [Main-build-manifest.json](Main-build-manifest.json)，版本标签为 `paper-v008`。当前完整 PDF 只保留 `Main.pdf`，不另存一个带版号的顶层副本。
+
+## 2026-10-01 · v009：引言的场景衔接与多投影视角主线
+
+1. 修改前将 v008 的 `Main.tex`、`Supplement.tex`、`Main.pdf`、参考文献、样式、图文件及图稿来源复制到 `archive/v008/`，共 26 个原文件；逐文件与 `paper-v008` 核对字节并生成归档哈希清单。
+2. `Main.tex:187`：保留三个 Hey! 样本及其说明，段末增加一句桥接，将场景引向编码后的模态表示如何交互这一一般问题。模型任务仍是话语级 MERC，不限定为短话语。
+3. `Main.tex:196`：将“许多现有方法”泛化批评缩窄为以整体向量为交互单位的融合设计；删除 obscured、diluted、insufficiently sensitive 等缺少直接证据的解释，明确问题是如何组织多个学习视角、区分模态内处理与跨模态交换。
+4. `Main.tex:198`：AG 使用共享多模态参考校准已有特征，MCA 准备模态分支表示；为后续多视角交互建立联系。
+5. `Main.tex:200`：补入多头注意力的多投影设计启发，将 latent sequence 解释为 learned projection views；分别说明投影轴内分支视角混合、模态轴跨分支交换、隐藏特征轴通道变换。保留“不是有时间顺序的话语序列”的说明，不声称恢复时间信息或赋予视角固定语义。
+6. `Main.tex:202`：将重复的 simple fusion / dual path 描述压缩为两句，明确查询聚合形成主融合表示，EPIRC 以低秩成对乘性交互提供残差补充。
+7. `aaai2027.bib`：新增 `vaswani2017attention`。作者、题名、会议、卷号和年份来自 NeurIPS 官方 BibTeX，并对照原论文第 3.2.2 节确认多投影设计。与当前文献表的字段风格一致，省略可选的编者和出版社信息；原有条目不变。来源见 `Main-build-manifest.json` 的 citation_provenance。
+8. 范围核验：引言第一段、Figure 1 图注与图文件、摘要、实验总结、贡献列表、Related Work 及其后所有 TeX、Supplement 全部保持原字节。主稿继续使用 CRLF。此次不修改或启动实验；表格口径仍由作者后续处理。
+9. 更新版本索引、README 和逐句清单中的进度；清单的原句定位继续固定到 v008，未把文字调整标记为实验问题已解决。
+
+编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/intro-v009 -jobname=Main Main.tex` 成功。完整稿为 **13 页**：新增文献后最后一个参考条目自然续排到第 13 页，没有修改模板字号、页边距或强制压缩间距。33 个标签无重复，12 个交叉引用目标和 26 个文献键均解析，六份图文件全部存在；无未定义引用或超宽盒，有 5 条 underfull 提示。检查全稿缩略图并详细检查引言、正文衔接、补充材料衔接和参考文献页，没有裁切或重叠；第 10–11 页与 v008 像素一致。独立文字复核通过，八份归档清单哈希通过。
+
+当前文件为 [Main.tex](Main.tex) 和 [Main.pdf](Main.pdf)；旧稿为 [archive/v008/](archive/v008/Main.tex)。版本标签为 `paper-v009`，编译与范围检查记录见 [Main-build-manifest.json](Main-build-manifest.json)。
