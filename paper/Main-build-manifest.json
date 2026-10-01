@@ -1,12 +1,12 @@
 {
-  "version": "v006",
-  "git_tag": "paper-v006",
-  "completed_at": "2026-09-30T13:53:29.066328+00:00",
+  "version": "v007",
+  "git_tag": "paper-v007",
+  "completed_at": "2026-10-01T01:47:00.074607+00:00",
   "entry": "Main.tex",
   "supplement": "Supplement.tex",
   "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/main -jobname=Main Main.tex",
   "sources_sha256": {
-    "Main.tex": "f0ab3cc092a38b33fd5db3691a40c88b10ced7f1d9412fe1b73d9ac4f0cfcf5b",
+    "Main.tex": "874e2abe5c64073bf7f6180b0d614987f59d4dbeefd46496877bf5b72a01a1ee",
     "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -21,11 +21,11 @@
   "outputs": {
     "Main.pdf": {
       "pages": 12,
-      "sha256": "3c3b48af3a067987ec92af999a34c12016ca4734812adf02913660c400e62f11"
+      "sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0"
     },
-    "MM-Mixer-v006-scene-text.pdf": {
+    "MM-Mixer-v007-caption-short.pdf": {
       "pages": 12,
-      "sha256": "3c3b48af3a067987ec92af999a34c12016ca4734812adf02913660c400e62f11"
+      "sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0"
     }
   },
   "checks": {
@@ -37,13 +37,12 @@
     "single_column_scene": true,
     "undefined_references_or_citations": false,
     "overfull_boxes": false,
-    "underfull_messages": 5,
-    "only_scene_paragraph_and_caption_changed": true,
-    "supplement_unchanged_from_v005": true,
-    "original_source_byte_identical": true,
+    "underfull_messages": 7,
+    "only_audio_description_sentence_removed": true,
     "source_newlines": "CRLF",
-    "removed_audio_and_sample_labels_absent": true,
-    "changed_pages_from_v005": [
+    "other_build_inputs_unchanged_from_v006": true,
+    "audio_description_absent_from_caption": true,
+    "changed_pages_from_v006": [
       1,
       2,
       3,
@@ -54,12 +53,11 @@
       8,
       9
     ],
-    "pixel_identical_pages_from_v005": [
+    "pixel_identical_pages_from_v006": [
       10,
       11,
       12
-    ],
-    "figure_assets_unchanged_from_v005": true
+    ]
   },
   "section_and_figure_pages": {
     "Hey!": [
@@ -90,7 +88,7 @@
     "category_match": true,
     "differences": [],
     "suggestions": [],
-    "reasoning": "The revised scene caption and paragraph fit the single-column AAAI layout. Pages 1–9 were visually checked for clipping, overlap, and float spacing; pages 10–12 render pixel-identically to v005."
+    "reasoning": "The shortened Figure 1 caption remains readable and preserves the single-column layout. Reflowed pages 1–9 have no clipping or overlap; pages 10–12 are pixel-identical to v006."
   },
   "visual_reviewed_pages": [
     1,

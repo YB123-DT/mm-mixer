@@ -69,8 +69,22 @@
       "pdf_sha256": "3c3b48af3a067987ec92af999a34c12016ca4734812adf02913660c400e62f11",
       "pages": 12,
       "git_tag": "paper-v006"
+    },
+    {
+      "version": "v007",
+      "description": "删除场景图注中的音频与坐标尺度说明",
+      "source": "Main.tex",
+      "source_sha256": "874e2abe5c64073bf7f6180b0d614987f59d4dbeefd46496877bf5b72a01a1ee",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "01_same_words_scenes_single_column.pdf",
+      "figure_sha256": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
+      "pdf": "MM-Mixer-v007-caption-short.pdf",
+      "pdf_sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0",
+      "pages": 12,
+      "git_tag": "paper-v007"
     }
   ],
-  "latest": "v006",
+  "latest": "v007",
   "current_pdf": "Main.pdf"
 }

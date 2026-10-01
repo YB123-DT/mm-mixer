@@ -8,5 +8,6 @@
 | v004 | Main 主稿、单栏场景、AMM 图及补充材料 | [Main](Main.tex) 与 [Supplement](Supplement.tex) | [完整 PDF](MM-Mixer-v004-main-with-supplement.pdf) | paper-v004 |
 | v005 | 单栏场景图删除音频副标题和样本编号 | [Main](Main.tex) 与 [Supplement](Supplement.tex) | [完整 PDF](MM-Mixer-v005-scene-clean.pdf) | paper-v005 |
 | v006 | Main 场景正文和图注明确三个仅含 Hey! 的样本 | [Main](Main.tex) 与 [Supplement](Supplement.tex) | [完整 PDF](MM-Mixer-v006-scene-text.pdf) | paper-v006 |
+| v007 | 删除场景图注中的音频与坐标尺度说明 | [Main](Main.tex) 与 [Supplement](Supplement.tex) | [完整 PDF](MM-Mixer-v007-caption-short.pdf) | paper-v007 |
 
 当前完整稿为 [Main.pdf](Main.pdf)，以 `Main.tex` 为主稿。版本文件和哈希见 `versions.json`，TeX 操作见 `TEX_CHANGELOG.md`。编号 PDF 和 Git 标签保留历史；Main 和 Supplement 的具体历史内容以对应标签为准。

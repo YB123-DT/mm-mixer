@@ -44,3 +44,11 @@
 4. 重新编译并核查 12 页全文。33 个标签无重复，12 个引用目标与 25 个引用键均完整，六张图文件均存在；最终编译没有未定义引用、超宽盒或 LaTeX 错误，保留 5 条常规 underfull 提示。文字变化导致第 1–9 页重新排版，逐页视觉检查通过，第 10–12 页与 v005 渲染像素一致。
 
 输出为 [`Main.pdf`](Main.pdf) 与 [`MM-Mixer-v006-scene-text.pdf`](MM-Mixer-v006-scene-text.pdf)，两者字节一致。源文件和输出哈希见 [`Main-build-manifest.json`](Main-build-manifest.json)，版本标签：`paper-v006`。
+
+## 2026-10-01 · v007：删除场景图注中的音频说明
+
+1. `Main.tex:192`：按用户要求，整句删除 “Each row shows an original video frame and the corresponding audio waveform, with shared time and amplitude scales across the audio panels.”，不再将 `clip-audio envelopes` 换成另一个音频术语写在图注中。
+2. 图注保留三个 Ross 样本、当前台词 “Hey!”、数据集情绪标签和历史上下文说明。本次只删除这一句；反向还原后 Main 与 v006 逐字节一致，CRLF 换行及其余编译输入均不变。
+3. `latexmk` 成功生成 12 页全文；33 个标签无重复，12 个引用目标、25 个引用键和六张图均完整。最终编译没有未定义引用、超宽盒或 LaTeX 错误，保留 7 条常规 underfull 提示。逐页检查重新排版的第 1–9 页，第 10–12 页与 v006 渲染像素一致。
+
+输出为 [`Main.pdf`](Main.pdf) 与 [`MM-Mixer-v007-caption-short.pdf`](MM-Mixer-v007-caption-short.pdf)，两者字节一致。哈希与核查记录见 [`Main-build-manifest.json`](Main-build-manifest.json)，版本标签：`paper-v007`。
