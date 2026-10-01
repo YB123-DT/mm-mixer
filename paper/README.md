@@ -1,17 +1,21 @@
-# Manuscript sources and PDFs
+# 当前论文文件
 
-[`Main.tex`](Main.tex) is the primary editable and compilable source.
-It includes [`Supplement.tex`](Supplement.tex) as a body-only fragment
-with one shared bibliography. The scene illustration uses one column;
-the AMM diagram and the three supplementary t-SNE plots are included in
-the same complete document.
+当前修改与编译入口是 [Main.tex](Main.tex)，它调用 [Supplement.tex](Supplement.tex)，完整 PDF 是 [Main.pdf](Main.pdf)。
 
-The current complete PDF is [`Main.pdf`](Main.pdf). Final `.tex` and
-`.pdf` files are kept directly in this directory. Editable SVG/PNG figure
-assets and provenance are under `figures/motivation/`; temporary build
-files are under the ignored `build/` directory.
+`paper/` 顶层只保留当前版本及其依赖：主稿、补充材料、完整 PDF、当前图文件、AAAI 样式与参考文献、版本索引和操作日志。`MM-Mixer.pdf` 是当前稿引用的架构图，完整论文请打开 `Main.pdf`。
 
-Build from this directory:
+旧版本按版号分开保存在 [archive/](archive/README.md)：每个目录都有对应的源码、PDF、图文件和编译依赖。当前图稿的 SVG/PNG 与来源记录在 `figures/motivation/`；中间构建文件在不上传的 `build/`。
+
+```text
+paper/
+  Main.tex / Supplement.tex / Main.pdf    当前稿
+  当前图文件、样式、参考文献和索引
+  figures/motivation/                     当前图稿与来源
+  archive/v001/ ... archive/v007/         历史版本
+  build/                                 临时编译与验证
+```
+
+从本目录编译当前稿：
 
 ```bash
 mkdir -p build/main
@@ -20,23 +24,6 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error \
 cp build/main/Main.pdf Main.pdf
 ```
 
-Completed revisions are compiled, recorded in
-[`TEX_CHANGELOG.md`](TEX_CHANGELOG.md), and committed and pushed to
-GitHub. Numbered PDFs and Git tags are listed in
-[`VERSIONS.md`](VERSIONS.md); file hashes are in `versions.json` and
-`Main-build-manifest.json`. Edit Main for subsequent revisions.
+以后修改前先将上一版的源码、PDF 和对应依赖存入 `archive/vNNN/`，再更新顶层当前文件。不要在顶层额外生成带版号的完整 PDF。完成后更新 [TeX 操作日志](TEX_CHANGELOG.md)、[版本索引](VERSIONS.md) 和 `versions.json`，编译验证后提交并推送。
 
-## Preserved author original
-
-`MM-mixer.tex` is an exact, byte-for-byte copy of the author-supplied
-`/data2/yb/MM-mixer/MM-mixer.tex` (SHA256
-`7e9d5470c30331704a1baadfa9031906cbda5c0f322bb4fbefe3f6646f447064`).
-No scores, standard deviations, seeds, loss formulas, or ablation values
-were edited for this upload.
-
-The supplied `MM-Mixer.pdf` is an architecture figure, so keep the Main
-job name when compiling. To compile the original separately, use
-`latexmk -pdf -outdir=build/original -jobname=paper-original MM-mixer.tex`.
-The AAAI style, bibliography, bibliography style, and architecture
-figure are included here. The original standalone Supplement source
-can be recovered from the `paper-v003` tag.
+作者原稿在 [archive/v001/MM-mixer.tex](archive/v001/MM-mixer.tex) 中逐字节保留，SHA256 为 `7e9d5470c30331704a1baadfa9031906cbda5c0f322bb4fbefe3f6646f447064`。原独立 Supplement 在 [archive/v003/Supplement.tex](archive/v003/Supplement.tex)。归档目录保留历史内容；历史复跑的输出写入 `paper/build/`，避免覆盖归档 PDF。

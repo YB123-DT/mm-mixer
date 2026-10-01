@@ -1,6 +1,6 @@
 # TeX 操作日志
 
-本文件追加记录所有 TeX 修改；`Main.tex` 是后续主稿。最终 TeX/PDF 保存在本目录，每个完成版本编译后提交并推送到 GitHub。
+本文件追加记录 TeX 修改与归档操作；`Main.tex` 是主稿。`paper/` 顶层仅保留当前版本，旧版按 `archive/vNNN/` 保存，每个完成版本验证后提交并推送到 GitHub。
 
 ## 2026-09-30 · v003：保存已完成的图稿预览版本
 
@@ -25,7 +25,7 @@
 
 编译和验证结果：`latexmk` 成功生成 12 页完整稿，逐页视觉核查通过。场景图在第 1 页，AMM 图在第 5 页，补充材料正文从第 9 页开始，三张 t-SNE 图在第 10–11 页，唯一参考文献在第 12 页。33 个标签无重复，引用目标完整，25 个引用键均存在，六份图文件全部接入；没有未定义引用或超宽盒。编译仍有常规 underfull 排版提示，逐页检查没有裁切或异常间距。
 
-移除三处新增块后，Main 与 `paper-v003` 保存的用户原稿逐字节一致。Main、Supplement、样式、参考文献及六张图的 SHA256 见 [`Main-build-manifest.json`](Main-build-manifest.json)。输出为 [`Main.pdf`](Main.pdf) 和 [`MM-Mixer-v004-main-with-supplement.pdf`](MM-Mixer-v004-main-with-supplement.pdf)，两份 PDF 字节一致。版本标签：`paper-v004`；后续完成的 Main 修改沿用“记录—编译—核查—提交—推送”流程。
+移除三处新增块后，Main 与 `paper-v003` 保存的用户原稿逐字节一致。Main、Supplement、样式、参考文献及六张图的 SHA256 见 [`Main-build-manifest.json`](archive/v004/Main-build-manifest.json)。输出为 [`Main.pdf`](archive/v004/Main.pdf) 和 [`MM-Mixer-v004-main-with-supplement.pdf`](archive/v004/Main.pdf)，两份 PDF 字节一致。版本标签：`paper-v004`；后续完成的 Main 修改沿用“记录—编译—核查—提交—推送”流程。
 
 ## 2026-09-30 · v005：场景图简化标注并重新导出全文
 
@@ -34,7 +34,7 @@
 3. 本版没有修改 `Main.tex` 或 `Supplement.tex`。替换 Main 引用的图资产后，沿用既有 `latexmk` 命令重新编译，更新 `Main.pdf` 并保存 `MM-Mixer-v005-scene-clean.pdf`。两份输出字节一致，均为 12 页。
 4. 验证删除的文字未出现在当前单栏图或全文第一页；核对原生尺寸、数据来源和图像导出。人工核查单栏图及全文第一页通过，第 2–12 页渲染像素与 v004 一致。最终编译无未定义引用、超宽盒或 LaTeX 错误，仍有 7 条常规 underfull 提示。
 
-本版图稿校验见 [`single_column_validation_report.json`](figures/motivation/single_column_validation_report.json)，编译依赖和输出哈希见 [`Main-build-manifest.json`](Main-build-manifest.json)。版本标签：`paper-v005`。
+本版图稿校验见 [`single_column_validation_report.json`](archive/v005/figures/motivation/single_column_validation_report.json)，编译依赖和输出哈希见 [`Main-build-manifest.json`](archive/v005/Main-build-manifest.json)。版本标签：`paper-v005`。
 
 ## 2026-09-30 · v006：同步 Main 的场景正文和图注
 
@@ -43,7 +43,7 @@
 3. 本版只替换以上两处文字。反向还原这两段后，Main 与 v005 逐字节一致；CRLF 换行不变。`Supplement.tex`、原始稿、六张图以及实验表和数值均保持原样。
 4. 重新编译并核查 12 页全文。33 个标签无重复，12 个引用目标与 25 个引用键均完整，六张图文件均存在；最终编译没有未定义引用、超宽盒或 LaTeX 错误，保留 5 条常规 underfull 提示。文字变化导致第 1–9 页重新排版，逐页视觉检查通过，第 10–12 页与 v005 渲染像素一致。
 
-输出为 [`Main.pdf`](Main.pdf) 与 [`MM-Mixer-v006-scene-text.pdf`](MM-Mixer-v006-scene-text.pdf)，两者字节一致。源文件和输出哈希见 [`Main-build-manifest.json`](Main-build-manifest.json)，版本标签：`paper-v006`。
+输出为 [`Main.pdf`](archive/v006/Main.pdf) 与 [`MM-Mixer-v006-scene-text.pdf`](archive/v006/Main.pdf)，两者字节一致。源文件和输出哈希见 [`Main-build-manifest.json`](archive/v006/Main-build-manifest.json)，版本标签：`paper-v006`。
 
 ## 2026-10-01 · v007：删除场景图注中的音频说明
 
@@ -51,4 +51,14 @@
 2. 图注保留三个 Ross 样本、当前台词 “Hey!”、数据集情绪标签和历史上下文说明。本次只删除这一句；反向还原后 Main 与 v006 逐字节一致，CRLF 换行及其余编译输入均不变。
 3. `latexmk` 成功生成 12 页全文；33 个标签无重复，12 个引用目标、25 个引用键和六张图均完整。最终编译没有未定义引用、超宽盒或 LaTeX 错误，保留 7 条常规 underfull 提示。逐页检查重新排版的第 1–9 页，第 10–12 页与 v006 渲染像素一致。
 
-输出为 [`Main.pdf`](Main.pdf) 与 [`MM-Mixer-v007-caption-short.pdf`](MM-Mixer-v007-caption-short.pdf)，两者字节一致。哈希与核查记录见 [`Main-build-manifest.json`](Main-build-manifest.json)，版本标签：`paper-v007`。
+输出为 [`Main.pdf`](archive/v007/Main.pdf) 与 [`MM-Mixer-v007-caption-short.pdf`](archive/v007/Main.pdf)，两者字节一致。哈希与核查记录见 [`Main-build-manifest.json`](archive/v007/Main-build-manifest.json)，版本标签：`paper-v007`。
+
+## 2026-10-01 · v008：顶层只保留当前版本，历史稿分别归档
+
+1. 按用户最新要求整理目录。`paper/` 顶层仅保留 Main、Supplement、当前完整 PDF、当前图文件、编译依赖与索引；不再保留多个带版号的完整 PDF 或旧稿 TeX。
+2. 将 v001–v007 分别存放于 `archive/v001/` 到 `archive/v007/`。归档完整 PDF 统一命名为 `Main.pdf`；每版对应的源文件、图文件、样式和参考文献取自相应 Git 标签，并核对原有 SHA256。作者原稿移动到 `archive/v001/MM-mixer.tex`，字节不变。
+3. v003 的宽幅场景图、旧 PNG/SVG、原始图稿核查记录及 `exports/` 元数据移入相应归档目录。更新当前 README、版本索引、历史链接和工作约定，明确以后先归档上一版，再更新顶层当前稿。
+4. 本次没有修改 Main 或 Supplement 的 TeX 内容、当前图文件、正文数字及当前完整 PDF。只整理文件位置和文档；当前 PDF 与 v007 字节一致。
+5. 核对七份归档的源码、PDF 和依赖哈希，所有引用的图文件与补充材料均存在。将当前 Main 编译到临时目录验证，仍为 12 页，所有页面与保留的当前 PDF 渲染像素一致，无未定义引用、超宽盒或 LaTeX 错误；有 7 条既有 underfull 提示。
+
+当前稿见 [Main.pdf](Main.pdf)，旧稿见 [archive/](archive/README.md)。本版清单见 [Main-build-manifest.json](Main-build-manifest.json)，版本标签为 `paper-v008`。当前完整 PDF 只保留 `Main.pdf`，不另存一个带版号的顶层副本。

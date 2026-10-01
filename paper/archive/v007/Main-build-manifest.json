@@ -1,0 +1,105 @@
+{
+  "version": "v007",
+  "git_tag": "paper-v007",
+  "completed_at": "2026-10-01T01:47:00.074607+00:00",
+  "entry": "Main.tex",
+  "supplement": "Supplement.tex",
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/main -jobname=Main Main.tex",
+  "sources_sha256": {
+    "Main.tex": "874e2abe5c64073bf7f6180b0d614987f59d4dbeefd46496877bf5b72a01a1ee",
+    "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+    "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
+    "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
+    "aaai2027.bib": "c479c14bc1abeb6eca5935984a5ccb174b2d4d66e70b09f5cadde80bff69d022",
+    "01_same_words_scenes_single_column.pdf": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
+    "MM-Mixer.pdf": "0e7fb745d20bf0d456d764fa1107ecaf9cc9947bf7551762fe91a56a24b90b35",
+    "02_amm_projection_axes.pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb",
+    "iemocap-component-ablation-tsne-11panel.pdf": "63c156d5a18b07c8e44a43a9a9e5e09042c2580dff6d5b62a63a23e7e123de2f",
+    "meld-component-ablation-tsne-11panel.pdf": "f00e998a53f4c6a822c1b2bf7dd2f7e34f06a866be788af63072f13a98fa758f",
+    "model-comparison-tsne-16panel.pdf": "f6e726e2ec5ec873d3f738a556f2b3fee180ea5a207eaccc25c13ea4241407c5"
+  },
+  "outputs": {
+    "Main.pdf": {
+      "pages": 12,
+      "sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0"
+    }
+  },
+  "checks": {
+    "unique_labels": 33,
+    "resolved_reference_targets": 12,
+    "available_citation_keys": 25,
+    "included_graphics": 6,
+    "one_shared_bibliography": true,
+    "single_column_scene": true,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "underfull_messages": 7,
+    "only_audio_description_sentence_removed": true,
+    "source_newlines": "CRLF",
+    "other_build_inputs_unchanged_from_v006": true,
+    "audio_description_absent_from_caption": true,
+    "changed_pages_from_v006": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "pixel_identical_pages_from_v006": [
+      10,
+      11,
+      12
+    ]
+  },
+  "section_and_figure_pages": {
+    "Hey!": [
+      1
+    ],
+    "AMM: learned projection": [
+      5
+    ],
+    "Supplementary Material": [
+      9
+    ],
+    "Component-ablation t-SNE visualization on IEMOCAP": [
+      10
+    ],
+    "Component-ablation t-SNE visualization on MELD": [
+      10
+    ],
+    "learned by eight models": [
+      11
+    ],
+    "References": [
+      12
+    ]
+  },
+  "visual_review": {
+    "score": 95,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [],
+    "suggestions": [],
+    "reasoning": "The shortened Figure 1 caption remains readable and preserves the single-column layout. Reflowed pages 1–9 have no clipping or overlap; pages 10–12 are pixel-identical to v006."
+  },
+  "visual_reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "archive": {
+    "source_git_tag": "paper-v007",
+    "original_pdf_filename": "MM-Mixer-v007-caption-short.pdf",
+    "paths_relative_to": "this archive directory"
+  }
+}

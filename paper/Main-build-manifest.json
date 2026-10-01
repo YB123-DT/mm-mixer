@@ -1,7 +1,7 @@
 {
-  "version": "v007",
-  "git_tag": "paper-v007",
-  "completed_at": "2026-10-01T01:47:00.074607+00:00",
+  "version": "v008",
+  "git_tag": "paper-v008",
+  "completed_at": "2026-10-01T02:12:19.257757+00:00",
   "entry": "Main.tex",
   "supplement": "Supplement.tex",
   "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/main -jobname=Main Main.tex",
@@ -22,10 +22,6 @@
     "Main.pdf": {
       "pages": 12,
       "sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0"
-    },
-    "MM-Mixer-v007-caption-short.pdf": {
-      "pages": 12,
-      "sha256": "6d30e16313d2bff49d6176ec41d8bfb0189cb5ffe66043d374883b9233800bb0"
     }
   },
   "checks": {
@@ -38,26 +34,14 @@
     "undefined_references_or_citations": false,
     "overfull_boxes": false,
     "underfull_messages": 7,
-    "only_audio_description_sentence_removed": true,
-    "source_newlines": "CRLF",
-    "other_build_inputs_unchanged_from_v006": true,
-    "audio_description_absent_from_caption": true,
-    "changed_pages_from_v006": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9
-    ],
-    "pixel_identical_pages_from_v006": [
-      10,
-      11,
-      12
-    ]
+    "current_main_and_supplement_unchanged_from_v007": true,
+    "current_figure_assets_unchanged_from_v007": true,
+    "current_pdf_byte_identical_to_v007": true,
+    "all_12_validation_pages_pixel_identical": true,
+    "archive_versions_verified": 7,
+    "archive_sources_and_dependencies_resolved": true,
+    "top_level_contains_only_current_files": true,
+    "source_newlines": "CRLF"
   },
   "section_and_figure_pages": {
     "Hey!": [
@@ -100,5 +84,8 @@
     7,
     8,
     9
-  ]
+  ],
+  "validation_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/organize-main -jobname=Main Main.tex",
+  "pdf_provenance": "v007 Main.pdf preserved byte for byte; all 12 pages of the validation build render identically.",
+  "visual_review_provenance": "Carried forward from v007: current PDF unchanged and every validation-build page renders identically."
 }

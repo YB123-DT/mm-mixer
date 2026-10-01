@@ -63,14 +63,14 @@ v005 按用户要求删除单栏场景图中的 “Clip audio envelope” 副标
 ## 文件与复跑
 
 - `../../01_same_words_scenes_single_column.pdf`：当前单栏场景图；PNG/SVG 在本目录。
-- `../../01_same_words_scenes.pdf`：v003 的宽幅场景图；PNG/SVG 在本目录，保留作历史资产。
+- `../../archive/v003/01_same_words_scenes.pdf`：v003 的宽幅场景图；该版 PNG/SVG 和生成脚本在对应归档目录的 `figures/motivation/` 中。
 - `../../02_amm_projection_axes.pdf`：AMM 示意图；PNG/SVG 在本目录。
 - `source_frames/`：按记录帧号导出的完整原始帧。
 - `source_data.csv`：三个样例的标注、上下文、源文件哈希、帧号与时间、音频信息。
 - `build_figures.py`：读取原始数据、校验标注并导出两张图；支持 `--raw-root`、`--audio-root`、`--out`、`--scene-layout single-column|wide`、`--scene-only`。默认生成单栏场景图；PDF 写入 `paper/` 根目录。
 - `figure_contract.md`：结论、选择规则和图的证据边界。
 - `captions.md`：两张图的英文图注及中文说明。
-- `validation_report.json`：原始宽幅图和 AMM 图的核对记录。
+- `../../archive/v003/figures/motivation/validation_report.json`：原始宽幅图和 AMM 图的核对记录。
 - `single_column_validation_report.json`：当前单栏图的来源、尺寸、导出和视觉核对记录。
 
 从仓库根目录使用项目现有 Python 环境运行：
@@ -80,3 +80,5 @@ v005 按用户要求删除单栏场景图中的 “Clip audio envelope” 副标
 ```
 
 单栏场景图为 84 × 72 mm，AMM 图为 180 × 120 mm；v003 的宽幅场景图为 180 × 100 mm。PNG 为 450 dpi 预览，PDF/SVG 用于排版，SVG 文字可编辑。保存前检查文字是否越出整张图的边界，导出后人工核对画面人物、布局和实现事实。
+
+当前稿和图文件保留在 `paper/` 顶层及本目录；历史版本按 `paper/archive/vNNN/` 分开保存。旧宽幅图从 v003 归档中查看或复跑，不再把历史布局输出到 `paper/` 顶层。

@@ -8,14 +8,15 @@ checkpoints are included. Legacy base-model source remains vendored because
 the corrected Full runner imports it.
 
 The author-supplied manuscript base is preserved byte-for-byte at
-[`paper/MM-mixer.tex`](paper/MM-mixer.tex), with its LaTeX dependencies
+[`paper/archive/v001/MM-mixer.tex`](paper/archive/v001/MM-mixer.tex), with its LaTeX dependencies
 alongside it. Its tables and prose are unchanged.
 
 The editable manuscript entry is now [`paper/Main.tex`](paper/Main.tex),
 which includes [`paper/Supplement.tex`](paper/Supplement.tex), a one-column
 MELD scene figure, and the AMM diagram. The complete PDF is
-[`paper/Main.pdf`](paper/Main.pdf). All final TeX/PDF files live directly
-in `paper/`. See the [version history](paper/VERSIONS.md) and
+[`paper/Main.pdf`](paper/Main.pdf). The `paper/` top level contains only
+the current version and its dependencies; older sources and PDFs are grouped
+by version under [`paper/archive/`](paper/archive/README.md). See the [version history](paper/VERSIONS.md) and
 [TeX change log](paper/TEX_CHANGELOG.md) for completed revisions; each is
 compiled and pushed to this repository.
 

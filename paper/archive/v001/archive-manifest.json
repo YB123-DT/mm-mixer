@@ -1,0 +1,18 @@
+{
+  "version": "v001",
+  "description": "作者原稿",
+  "source_git_tag": "paper-v003",
+  "entry": "MM-mixer.tex",
+  "pdf": "Main.pdf",
+  "pages": 8,
+  "original_pdf_filename": "MM-Mixer-v001-original.pdf",
+  "files_sha256": {
+    "MM-mixer.tex": "7e9d5470c30331704a1baadfa9031906cbda5c0f322bb4fbefe3f6646f447064",
+    "MM-Mixer.pdf": "0e7fb745d20bf0d456d764fa1107ecaf9cc9947bf7551762fe91a56a24b90b35",
+    "aaai2027.bib": "c479c14bc1abeb6eca5935984a5ccb174b2d4d66e70b09f5cadde80bff69d022",
+    "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
+    "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
+    "Main.pdf": "c88cadc10a372886b691a7022da1b5246f595977adf2a5f8390f5e23274d91ec"
+  },
+  "source_and_pdf_bytes_match_git_tag": true
+}

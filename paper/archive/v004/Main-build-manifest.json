@@ -1,0 +1,77 @@
+{
+  "version": "v004",
+  "git_tag": "paper-v004",
+  "completed_at": "2026-09-30T11:40:05.745910+00:00",
+  "entry": "Main.tex",
+  "supplement": "Supplement.tex",
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/main -jobname=Main Main.tex",
+  "sources_sha256": {
+    "Main.tex": "2eb5f5baa9fb5ea182079142ccd2682113961f0939f1aaf0ae16c40acaf1f3a5",
+    "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+    "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
+    "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
+    "aaai2027.bib": "c479c14bc1abeb6eca5935984a5ccb174b2d4d66e70b09f5cadde80bff69d022",
+    "01_same_words_scenes_single_column.pdf": "4c0a641f993616525547073e4a93f8b09d810aaa811319b79d1594cb5ea05f6b",
+    "MM-Mixer.pdf": "0e7fb745d20bf0d456d764fa1107ecaf9cc9947bf7551762fe91a56a24b90b35",
+    "02_amm_projection_axes.pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb",
+    "iemocap-component-ablation-tsne-11panel.pdf": "63c156d5a18b07c8e44a43a9a9e5e09042c2580dff6d5b62a63a23e7e123de2f",
+    "meld-component-ablation-tsne-11panel.pdf": "f00e998a53f4c6a822c1b2bf7dd2f7e34f06a866be788af63072f13a98fa758f",
+    "model-comparison-tsne-16panel.pdf": "f6e726e2ec5ec873d3f738a556f2b3fee180ea5a207eaccc25c13ea4241407c5"
+  },
+  "outputs": {
+    "Main.pdf": {
+      "pages": 12,
+      "sha256": "50935ea062996d5b73e4640e1a50d027795b55224be6e245c1919ddcbda4137c"
+    }
+  },
+  "checks": {
+    "unique_labels": 33,
+    "resolved_reference_targets": 12,
+    "available_citation_keys": 25,
+    "included_graphics": 6,
+    "one_shared_bibliography": true,
+    "single_column_scene": true,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "underfull_messages": 7,
+    "original_source_byte_identical": true,
+    "source_newlines": "CRLF",
+    "original_main_body_byte_identical_after_removing_insertions": true
+  },
+  "section_and_figure_pages": {
+    "Hey!": [
+      1
+    ],
+    "AMM: learned projection": [
+      5
+    ],
+    "Supplementary Material": [
+      9
+    ],
+    "Component-ablation t-SNE visualization on IEMOCAP": [
+      10
+    ],
+    "Component-ablation t-SNE visualization on MELD": [
+      10
+    ],
+    "learned by eight models": [
+      11
+    ],
+    "References": [
+      12
+    ]
+  },
+  "visual_review": {
+    "score": 95,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [],
+    "suggestions": [],
+    "reasoning": "All 12 pages reviewed. The scene fits one column with legible labels; AMM and supplementary plots are complete; the shared references have normal spacing."
+  },
+  "archive": {
+    "source_git_tag": "paper-v004",
+    "original_pdf_filename": "MM-Mixer-v004-main-with-supplement.pdf",
+    "paths_relative_to": "this archive directory"
+  }
+}
