@@ -2,6 +2,8 @@
 
 当前修改与编译入口是 [Main.tex](Main.tex)，它调用 [Supplement.tex](Supplement.tex)，完整 PDF 是 [Main.pdf](Main.pdf)。
 
+两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。该清单是改稿计划，尚未写入 TeX。
+
 `paper/` 顶层只保留当前版本及其依赖：主稿、补充材料、完整 PDF、当前图文件、AAAI 样式与参考文献、版本索引和操作日志。`MM-Mixer.pdf` 是当前稿引用的架构图，完整论文请打开 `Main.pdf`。
 
 旧版本按版号分开保存在 [archive/](archive/README.md)：每个目录都有对应的源码、PDF、图文件和编译依赖。当前图稿的 SVG/PNG 与来源记录在 `figures/motivation/`；中间构建文件在不上传的 `build/`。
