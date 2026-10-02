@@ -78,3 +78,15 @@
 编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/intro-v009 -jobname=Main Main.tex` 成功。完整稿为 **13 页**：新增文献后最后一个参考条目自然续排到第 13 页，没有修改模板字号、页边距或强制压缩间距。33 个标签无重复，12 个交叉引用目标和 26 个文献键均解析，六份图文件全部存在；无未定义引用或超宽盒，有 5 条 underfull 提示。检查全稿缩略图并详细检查引言、正文衔接、补充材料衔接和参考文献页，没有裁切或重叠；第 10–11 页与 v008 像素一致。独立文字复核通过，八份归档清单哈希通过。
 
 当前文件为 [Main.tex](Main.tex) 和 [Main.pdf](Main.pdf)；旧稿为 [archive/v008/](archive/v008/Main.tex)。版本标签为 `paper-v009`，编译与范围检查记录见 [Main-build-manifest.json](Main-build-manifest.json)。
+
+## 2026-10-02 · v010：Figure 1 替换为 AMM 三轴交互原理图
+
+1. 修改前将 v009 的 `Main.tex`、`Supplement.tex`、`Main.pdf`、六张图、参考文献、样式、编译清单及图稿来源复制到 `archive/v009/`，共 26 个原文件；每个文件与 `paper-v009` 逐字节核对，并记录 SHA256。历史 PDF 保留原始字节。
+2. `Main.tex:187`：将原有三个 Ross “Hey!” 样本的场景说明替换为一句对 AMM 轴向交互图的引导，不再用真实场景作为 Figure 1。
+3. `Main.tex:189`：保留普通 `figure[t]` 和 `width=\columnwidth`，图片路径改为 `01_amm_axis_mixing.pdf`，标签改为 `fig:amm_axis_mixing`。图注说明三轴张量、各轴向量映射在其余位置共享、映射在 mixer block 内依次应用，并明确投影视角不是时间步；说明为清晰起见省略归一化和残差相加。
+4. 修改范围只包含原场景段及该图的路径、图注、标签。反向还原这一连续块后，Main 与 v009 逐字节一致；摘要、Despite 段、后续方法介绍、实验总结、贡献、其余正文及 Supplement 均保持原字节。主稿继续使用 CRLF。
+5. 更新 README、版本索引和归档索引，v009 路径指向 `archive/v009/`，新版本登记为 v010。图稿生成、完整稿编译和发布由本轮主流程完成。
+
+编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v010 -jobname=Main Main.tex` 成功，完整稿为 **13 页**。33 个标签无重复，12 个交叉引用目标、26 个引用键及 6 张图均解析；无未定义引用、超宽盒或 LaTeX 错误，保留 7 条 underfull 提示。检查独立图稿、全文缩略图和第 1–2 页，单栏图无裁切或重叠；独立图稿/第一页复核得分 95/100。与 v009 像素一致的页面为 [10, 11, 12, 13]。图以 SVG 为可编辑源，PyMuPDF 导出矢量 PDF，检查确认 0 个位图和可提取文字。完整旧图已在 v009 归档，旧场景 PDF 从顶层移除。哈希和检查结果见 `Main-build-manifest.json`；没有运行训练或修改实验代码。
+
+当前入口为 [Main.tex](Main.tex)，旧稿为 [archive/v009/](archive/v009/Main.tex)。版本标签为 `paper-v010`。

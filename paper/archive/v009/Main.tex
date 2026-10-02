@@ -184,13 +184,13 @@ To address this issue, we propose a simple yet strong MERC framework named \text
 
 Multimodal Emotion Recognition in Conversation (MERC) aims to identify the emotion expressed by each utterance in a dialogue by integrating textual, acoustic, and visual signals. Early ERC studies mainly focused on text-based conversational context and speaker dependencies through recurrent state tracking and graph-based reasoning~\cite{dialoguernn,dialoguegcn}. With the increasing availability of multimodal conversational data, subsequent MERC methods have incorporated acoustic and visual signals through multimodal graph learning~\cite{mmgcn}, cross-modal attention~\cite{dialoguetrm}, and more expressive fusion mechanisms~\cite{sdt,css}. These approaches have substantially advanced multimodal representation learning for MERC by enabling information exchange among heterogeneous modality streams.
 
-Figure~\ref{fig:amm_axis_mixing} previews the axis-wise interaction used in our proposed framework.
+Even a one-word greeting can convey different emotions in conversation. Figure~\ref{fig:motivation_scenes} shows three distinct MELD~\cite{meld} utterance samples from the same speaker, Ross. Each current utterance is transcribed as ``Hey!'', while the emotion annotations are joy, sadness, and neutral. These examples motivate considering conversational context together with vocal delivery and facial expression when interpreting short utterances. Once these sources of evidence are encoded as modality-specific representations, a broader fusion question is how to organize their interactions for utterance-level emotion recognition.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{01_amm_axis_mixing.pdf}
-\caption{Axis-wise interaction in AMM. Each aligned modality branch is expanded into $S$ learned projection views, forming a tensor with modality, projection, and hidden-feature axes. A highlighted vector along each axis illustrates its mapping, which is shared over the remaining positions. The three mappings are applied sequentially within each mixer block. The projection views are not temporal steps. Normalization along $D$ and residual additions are omitted for clarity.}
-\label{fig:amm_axis_mixing}
+\includegraphics[width=\columnwidth]{01_same_words_scenes_single_column.pdf}
+\caption{Three MELD utterance samples from Ross, each transcribed as ``Hey!'', with dataset emotion labels of joy, sadness, and neutral. The model also uses dialogue history, so matching current words does not imply matching text features.}
+\label{fig:motivation_scenes}
 \end{figure}
 
 Despite this progress, fusion designs that treat each utterance-level modality-specific representation as a holistic interaction unit leave the organization of multiple learned views within each modality implicit. Although such representations may contain rich affective information, exchanging and aggregating these vectors does not by itself distinguish within-modality view processing from cross-modal exchange. A remaining design question is how to construct multiple learned views and organize these two types of interaction along distinct representation axes.

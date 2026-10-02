@@ -12,5 +12,6 @@
 | v006 | Main场景正文和图注明确三个仅含Hey!的样本 | [源码](v006/Main.tex) | [完整 PDF](v006/Main.pdf) | paper-v006 |
 | v007 | 删除场景图注中的音频与坐标尺度说明 | [源码](v007/Main.tex) | [完整 PDF](v007/Main.pdf) | paper-v007 |
 | v008 | 整理目录：顶层仅当前稿，旧版本分别归档 | [源码](v008/Main.tex) | [完整 PDF](v008/Main.pdf) | paper-v008 |
+| v009 | 引言衔接与多投影视角主线，保留贡献列表 | [源码](v009/Main.tex) | [完整 PDF](v009/Main.pdf) | paper-v009 |
 
 每个版本目录包含编译所需的样式、参考文献和图文件。v003 还保留了原独立 Supplement、宽幅场景图及当时的图稿和导出记录。归档 PDF 保留原始字节；复跑或验证输出写入 `paper/build/`。

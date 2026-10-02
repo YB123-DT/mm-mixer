@@ -1,17 +1,14 @@
 {
-  "version": "v009",
-  "git_tag": "paper-v009",
-  "completed_at": "2026-10-01T09:52:56.827619+00:00",
-  "entry": "Main.tex",
-  "supplement": "Supplement.tex",
-  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/intro-v009 -jobname=Main Main.tex",
-  "sources_sha256": {
-    "Main.tex": "eb1226e3f957295ad4fea45c4e6c2930484e6ea2defc5c65d148bea994238c83",
+  "version": "v010",
+  "date": "2026-10-02",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v010 -jobname=Main Main.tex",
+  "inputs": {
+    "Main.tex": "49487b74632317d13a9c59d951423ba16d4f7137ae3b477a83ba8b8483297853",
     "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+    "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
-    "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
-    "01_same_words_scenes_single_column.pdf": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
+    "01_amm_axis_mixing.pdf": "fd7bba69936d339660d12ae7aa40faf7951cf24ad089fb171ede5ca49a6c6ff3",
     "MM-Mixer.pdf": "0e7fb745d20bf0d456d764fa1107ecaf9cc9947bf7551762fe91a56a24b90b35",
     "02_amm_projection_axes.pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb",
     "iemocap-component-ablation-tsne-11panel.pdf": "63c156d5a18b07c8e44a43a9a9e5e09042c2580dff6d5b62a63a23e7e123de2f",
@@ -21,86 +18,47 @@
   "outputs": {
     "Main.pdf": {
       "pages": 13,
-      "sha256": "72179770eed88dfdc32af69e6b3ac0734b69d53e90362306ee772b585444c2ce"
+      "sha256": "4dcf6262a25f498bc8eb3c19fa19f43c0b134e9dc3c59c3491bfd4926d5fd4d7"
+    },
+    "01_amm_axis_mixing.pdf": {
+      "pages": 1,
+      "sha256": "fd7bba69936d339660d12ae7aa40faf7951cf24ad089fb171ede5ca49a6c6ff3"
+    },
+    "figures/amm_axis_mixing/01_amm_axis_mixing.svg": {
+      "sha256": "d135da98af5b97bfe7dd7de7faf2cf414665b714189dd9d7e15aad77e93bfc9f"
     }
   },
   "checks": {
-    "abstract_and_preamble_unchanged": true,
-    "contributions_and_experiment_summary_unchanged": true,
-    "everything_after_introduction_unchanged": true,
+    "source_scope_only_figure1_block": true,
     "source_newlines": "CRLF",
+    "supplement_unchanged": true,
     "unique_labels": 33,
     "resolved_reference_targets": 12,
-    "available_citation_keys": 26,
     "resolved_citation_keys": 26,
     "included_graphics": 6,
-    "one_shared_bibliography": true,
-    "single_column_scene": true,
     "undefined_references_or_citations": false,
     "overfull_boxes": false,
-    "underfull_messages": 5,
-    "pixel_identical_pages_from_v008": [
+    "underfull_messages": 7,
+    "figure_pdf_raster_images": 0,
+    "figure_pdf_vector_paths": 128,
+    "figure_pdf_text_extractable": true,
+    "figure1_single_column": true,
+    "pixel_identical_pages_from_v009": [
       10,
-      11
+      11,
+      12,
+      13
     ],
-    "archive_versions_verified": 8,
-    "top_level_contains_only_current_files": true,
-    "supplement_styles_and_all_figures_unchanged": true
-  },
-  "section_and_figure_pages": {
-    "Hey!": [
-      1
-    ],
-    "AMM: learned projection": [
-      5
-    ],
-    "Supplementary Material": [
-      9
-    ],
-    "Component-ablation t-SNE visualization on IEMOCAP": [
-      10
-    ],
-    "Component-ablation t-SNE visualization on MELD": [
-      10
-    ],
-    "learned by eight models": [
-      11
-    ],
-    "References": [
-      12
-    ]
+    "v009_archive_files_verified_against_tag": 26
   },
   "visual_review": {
-    "score": 92,
+    "score": 95,
     "verdict": "pass",
     "category_match": true,
-    "differences": [
-      "Introduction text reflows on pages 1–9; figure-only pages 10–11 remain pixel-identical to v008.",
-      "The added multi-head attention reference causes the last bibliography entry to continue on page 13."
-    ],
+    "differences": [],
     "suggestions": [],
-    "reasoning": "The revised Introduction, figures and equations remain readable, without clipping or overlap. The extra reference page follows the unchanged template; no spacing or font-size overrides were introduced to force a page limit."
+    "reasoning": "Independent review of the standalone figure and manuscript page 1 passed. All three M positions, the origin and axes, mappings, and sequential block order are legible; no clipping or overlap."
   },
-  "visual_reviewed_pages": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13
-  ],
-  "visual_review_provenance": "All-page contact sheet; detailed inspection of pages 1, 2, 3, 9, 12 and 13; unchanged pages 10 and 11 verified by pixel comparison.",
-  "citation_provenance": {
-    "metadata_url": "https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
-    "bibtex_url": "https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Bibtex.bib",
-    "claim_url": "https://arxiv.org/html/1706.03762v7#S3.SS2.SSS2"
-  },
-  "scope": "Introduction scene bridge, bounded gap, AMM projection-view motivation and module roles; contributions and experimental summary preserved byte for byte."
+  "visual_review_provenance": "Standalone PNG, detailed pages 1–2, full 13-page contact sheet; direct raster comparison with v009 for unchanged pages.",
+  "scope": "Replace the old Figure 1 scene block with an AMM axis schematic; all other manuscript bytes preserved."
 }

@@ -117,19 +117,36 @@
     {
       "version": "v009",
       "description": "引言衔接与多投影视角主线，保留贡献列表",
-      "source": "Main.tex",
+      "source": "archive/v009/Main.tex",
       "source_sha256": "eb1226e3f957295ad4fea45c4e6c2930484e6ea2defc5c65d148bea994238c83",
-      "included_source": "Supplement.tex",
+      "included_source": "archive/v009/Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
-      "figure": "01_same_words_scenes_single_column.pdf",
+      "figure": "archive/v009/01_same_words_scenes_single_column.pdf",
       "figure_sha256": "20094667d69fba984875649771627114af1098dcf173c141e8a876a1564d5f70",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v009/Main.pdf",
       "pdf_sha256": "72179770eed88dfdc32af69e6b3ac0734b69d53e90362306ee772b585444c2ce",
       "pages": 13,
-      "git_tag": "paper-v009"
+      "git_tag": "paper-v009",
+      "archive_directory": "archive/v009"
+    },
+    {
+      "version": "v010",
+      "description": "AMM 三轴原理图替换引言场景图",
+      "source": "Main.tex",
+      "source_sha256": "49487b74632317d13a9c59d951423ba16d4f7137ae3b477a83ba8b8483297853",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "01_amm_axis_mixing.pdf",
+      "figure_sha256": "fd7bba69936d339660d12ae7aa40faf7951cf24ad089fb171ede5ca49a6c6ff3",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "4dcf6262a25f498bc8eb3c19fa19f43c0b134e9dc3c59c3491bfd4926d5fd4d7",
+      "pages": 13,
+      "git_tag": "paper-v010",
+      "validation_status": "passed",
+      "figure_source": "figures/amm_axis_mixing/01_amm_axis_mixing.svg"
     }
   ],
-  "latest": "v009",
+  "latest": "v010",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }
