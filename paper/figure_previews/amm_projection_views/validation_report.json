@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "pdf_pages": 1,
+  "native_size_mm": [
+    86.0,
+    48.375
+  ],
+  "pdf_raster_images": 0,
+  "pdf_vector_drawings": 197,
+  "minimum_font_pt": 7.047,
+  "all_text_within_page": true,
+  "axis_voxel_counts": {
+    "S": 6,
+    "M": 3,
+    "D": 7
+  },
+  "axis_exposed_face_counts": {
+    "S": 13,
+    "M": 7,
+    "D": 15
+  },
+  "fibers_disjoint": true,
+  "bounding_edges": 12,
+  "source_hashes_match": true,
+  "semantic_review": "pass; shared learned projection plus reshape, correct axes and no parallel-branch implication",
+  "visual_review": {
+    "score": 90,
+    "threshold": 90,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [],
+    "suggestions": [],
+    "reasoning": "The matrix-to-tensor story, solid voxel fibers, sharing label and single-column typography are clear; no blocking collision or crop remains."
+  },
+  "manuscript_integration": "standalone preview; Main.tex and Main.pdf unchanged"
+}

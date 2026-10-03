@@ -1,0 +1,135 @@
+{
+  "status": "concept_preview_not_integrated_in_Main",
+  "claim": "A shared learned projection constructs S views per aligned modality branch before axis-wise mixing.",
+  "size_mm": [
+    86,
+    48.375
+  ],
+  "input_shape_without_batch": [
+    3,
+    256
+  ],
+  "output_shape_without_batch": [
+    3,
+    6,
+    256
+  ],
+  "display_grid_shape_M_S_D": [
+    3,
+    6,
+    7
+  ],
+  "D_grid_schematic": true,
+  "input": "MCA-aligned branch vectors; not raw unimodal observations",
+  "expansion": "shared Linear D->S*D followed by reshape; no feature copying or dimensional partition",
+  "weights_shared_across": "modality branches",
+  "axis_fiber_indices_d_s_m": {
+    "S": [
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        3,
+        1,
+        2
+      ],
+      [
+        3,
+        2,
+        2
+      ],
+      [
+        3,
+        3,
+        2
+      ],
+      [
+        3,
+        4,
+        2
+      ],
+      [
+        3,
+        5,
+        2
+      ]
+    ],
+    "M": [
+      [
+        6,
+        1,
+        0
+      ],
+      [
+        6,
+        1,
+        1
+      ],
+      [
+        6,
+        1,
+        2
+      ]
+    ],
+    "D": [
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        1,
+        5,
+        0
+      ],
+      [
+        2,
+        5,
+        0
+      ],
+      [
+        3,
+        5,
+        0
+      ],
+      [
+        4,
+        5,
+        0
+      ],
+      [
+        5,
+        5,
+        0
+      ],
+      [
+        6,
+        5,
+        0
+      ]
+    ]
+  },
+  "colored_exposed_face_count": 35,
+  "operators": {
+    "S": "MLP 6->12->6",
+    "M": "bias-free static Linear 3->3",
+    "D": "MLP 256->1536->256"
+  },
+  "callout_semantics": "axis directions, not parallel computation branches",
+  "omitted": [
+    "batch dimension",
+    "block orders S-M-D / M-S-D",
+    "LayerNorm",
+    "residual additions",
+    "pooling"
+  ],
+  "minimum_main_font_pt": 7.046751968503938,
+  "source_code": [
+    "vendor/meld/model.py:102-160",
+    "vendor/iemocap/factorized_mixer/model.py:321-396"
+  ],
+  "svg_sha256": "c1ea97b43d3a439c77af1bb23a02f11628ceda5809de54f1a138aa208f9f9f60",
+  "pdf_sha256": "bf9ac9c2260ab3a566a726a6a85cbeb7d85d52cf524a69314c91cabab2eb6fbf"
+}
