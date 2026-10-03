@@ -67,9 +67,15 @@ licensed datasets and pre-extracted features before replaying elsewhere.
 No dataset or pretrained feature-extractor weights are included in this repo.
 The Full four-GPU scheduling example is in `launch_full.py`.
 
+The supplemental three-seed experiment implementation is documented in
+[`REVISION_EXPERIMENTS.md`](REVISION_EXPERIMENTS.md). It adds seven controlled
+replacements, explicit experiment plans, a persistent GPU queue, prediction
+analysis, and checkpoint-based efficiency measurement. Formal supplemental
+training has not yet been run; the historical results above remain separate.
+
 The vendored training sources retain legacy variant branches because the
-corrected Full runner imports them. **Only `--variant full` and its eight
-results are part of this release.** Each result manifest records source
+corrected Full runner imports them. **Only `--variant full` has the eight
+published results above.** Each result manifest records source
 hashes from its original run. Some runner/config files were subsequently
 edited for path fixes, audits, and ablations; the published source is the
 post-run corrected Full runner, not a byte-identical snapshot for all eight

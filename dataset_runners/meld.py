@@ -39,6 +39,11 @@ from mm_mixer_final.audit import (
     source_hashes,
 )
 from mm_mixer_final.config import config_contract_sha256, get_config
+from mm_mixer_final.revision_controls import (
+    NO_AUXILIARY_LOSS_VARIANTS,
+    REVISION_CONTROL_VARIANTS,
+    revision_control_metadata,
+)
 from mm_mixer_final.modalities import (
     MODALITY_VARIANTS,
     active_modalities,
@@ -55,6 +60,7 @@ CAPACITY_VARIANTS = {
     "no_auxiliary_loss": "M4_PAIR",
     **{variant: "M4_PAIR" for variant in MODALITY_VARIANTS},
     **{variant: "M4_PAIR" for variant in STRUCTURAL_ABLATION_VARIANTS},
+    **{variant: "M4_PAIR" for variant in REVISION_CONTROL_VARIANTS},
 }
 
 
@@ -81,7 +87,7 @@ def materialize_config(
         aux_loss_weights={"t": 1.0, "a": 1.0, "v": 1.0},
         checkpoint_prefix=str((run_dir / "checkpoints" / "full_").resolve()),
     )
-    if variant == "no_auxiliary_loss":
+    if variant in NO_AUXILIARY_LOSS_VARIANTS:
         fixed["aux_loss_weights"] = {}
     elif variant in MODALITY_VARIANTS:
         enabled = frozenset(active_modalities(variant))
@@ -161,6 +167,7 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
                 ROOT / "mm_mixer_final/cli.py",
                 ROOT / "mm_mixer_final/adapters.py",
                 Path(__file__).resolve(),
+                BASE_CONFIG,
                 TRAIN_SOURCE,
                 TRUE_ROUTE / "model.py",
                 TRUE_ROUTE / "variant_override.py",
@@ -189,12 +196,33 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
             "no_sequence_mixing",
             "no_modality_mixing",
             "no_feature_mixing",
+            "amm_mlp", "amm_mlp_no_aux", "amm_attention", "amm_cubemlp",
         }:
             assert_true_mixer(probe, cfg)
+        if variant in REVISION_CONTROL_VARIANTS:
+            control = revision_control_metadata(probe)
+            config["runtime_audit"]["revision_control"] = control
+            config["runtime_audit"]["reference_amm_architecture"] = cfg.mixer
+            config["runtime_audit"]["architecture"] = {
+                "blocks": control["actual_blocks"], "tokens": control["actual_tokens"],
+                "dim": control["actual_dim"], "operation": control["operation"],
+                "replacement_hidden": control.get("hidden"),
+                "block_types": [type(block).__name__ for block in probe.transformer_encoder.blocks],
+            }
+            config["runtime_audit"]["effective_loss_weights"] = {
+                "main": config["fixed_params"]["main_loss_weight"],
+                "auxiliary": config["fixed_params"]["aux_loss_weights"],
+                "normalize_auxiliary": config["fixed_params"]["normalize_aux_loss_weights"],
+            }
         del probe
     torch.random.set_rng_state(cpu_rng)
     if cuda_rng is not None:
         torch.cuda.set_rng_state_all(cuda_rng)
+    # The actual replacement shape is known only after the model is built.
+    # Freeze it into the same config that is hashed and passed to the trainer.
+    if variant in REVISION_CONTROL_VARIANTS:
+        config_path.write_text(json.dumps(config, indent=2) + "\n")
+        preliminary_manifest["config_sha256"] = config_payload_sha256(config)
 
     old_cwd, old_argv = Path.cwd(), sys.argv[:]
     old_multiattn = sys.modules.get("multiattn")
@@ -261,6 +289,7 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
                 ROOT / "mm_mixer_final/cli.py",
                 ROOT / "mm_mixer_final/adapters.py",
                 Path(__file__).resolve(),
+                BASE_CONFIG,
                 TRAIN_SOURCE,
                 TRUE_ROUTE / "model.py",
                 TRUE_ROUTE / "variant_override.py",

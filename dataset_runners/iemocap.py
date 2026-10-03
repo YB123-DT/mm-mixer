@@ -39,6 +39,12 @@ from mm_mixer_final.audit import (
     source_hashes,
 )
 from mm_mixer_final.config import config_contract_sha256, get_config
+from mm_mixer_final.revision_controls import (
+    NO_AUXILIARY_LOSS_VARIANTS,
+    REVISION_CONTROL_VARIANTS,
+    apply_revision_control,
+    revision_control_metadata,
+)
 from mm_mixer_final.modalities import (
     MODALITY_VARIANTS,
     active_modalities,
@@ -71,9 +77,11 @@ def build_variant_model(variant: str, dropout: float):
         "no_auxiliary_loss",
         *MODALITY_VARIANTS,
         *STRUCTURAL_ABLATION_VARIANTS,
+        *REVISION_CONTROL_VARIANTS,
     }:
         raise ValueError(f"unsupported IEMOCAP variant: {variant}")
     apply_structural_ablation(model, variant)
+    apply_revision_control(model, variant)
     install_training_input_mask(model, active_modalities(variant))
     model.capacity_variant = f"{model.capacity_variant}_FINAL_{variant.upper()}"
     return model
@@ -86,7 +94,7 @@ def _build_full(dropout: float):
 
 def apply_loss_ablation(fixed: dict, variant: str) -> dict:
     fixed = copy.deepcopy(fixed)
-    if variant == "no_auxiliary_loss":
+    if variant in NO_AUXILIARY_LOSS_VARIANTS:
         fixed["aux_loss_weights"] = {"t": 0.0, "a": 0.0, "v": 0.0}
         fixed["normalize_aux_loss_weights"] = False
     elif variant in MODALITY_VARIANTS:
@@ -143,6 +151,7 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
     encoder = LabelEncoder()
     encoder.classes_ = np.asarray(cfg.class_names)
     fixed = apply_loss_ablation(formal._training_cfg(legacy_cfg), variant)
+    runtime_config["effective_training_config"] = copy.deepcopy(fixed)
 
     # Structural auditing must not consume the formal run's RNG stream.
     cpu_rng = torch.random.get_rng_state()
@@ -156,8 +165,24 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
         "no_sequence_mixing",
         "no_modality_mixing",
         "no_feature_mixing",
+        "amm_mlp", "amm_mlp_no_aux", "amm_attention", "amm_cubemlp",
     }:
         assert_true_mixer(probe, cfg)
+    if variant in REVISION_CONTROL_VARIANTS:
+        control = revision_control_metadata(probe)
+        runtime_config["runtime_audit"]["revision_control"] = control
+        runtime_config["runtime_audit"]["reference_amm_architecture"] = cfg.mixer
+        runtime_config["runtime_audit"]["architecture"] = {
+            "blocks": control["actual_blocks"], "tokens": control["actual_tokens"],
+            "dim": control["actual_dim"], "operation": control["operation"],
+            "replacement_hidden": control.get("hidden"),
+            "block_types": [type(block).__name__ for block in probe.transformer_encoder.blocks],
+        }
+        runtime_config["runtime_audit"]["effective_loss_weights"] = {
+            "main": fixed.get("main_loss_weight"),
+            "auxiliary": fixed.get("aux_loss_weights"),
+            "normalize_auxiliary": fixed.get("normalize_aux_loss_weights"),
+        }
     runtime_config["runtime_audit"]["optimizer_groups"] = optimizer_group_audit(
         probe, optimizer_parameter_groups(probe, 3e-5)
     )
@@ -166,6 +191,7 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
     if cuda_rng is not None:
         torch.cuda.set_rng_state_all(cuda_rng)
     source_extras = (
+        Path(legacy_cfg.baseline_config),
         ROOT / "run.py",
         ROOT / "mm_mixer_final/cli.py",
         ROOT / "mm_mixer_final/adapters.py",

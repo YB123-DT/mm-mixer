@@ -111,8 +111,10 @@ class CandidateHierarchicalAttentionFusion(ORIGINAL_FUSION):
                 raise RuntimeError("candidate context is not active")
             apply_candidate(self, _ACTIVE_CANDIDATE)
             from mm_mixer_final.structural_ablations import apply_structural_ablation
+            from mm_mixer_final.revision_controls import apply_revision_control
 
             apply_structural_ablation(self, _ACTIVE_STRUCTURAL_VARIANT)
+            apply_revision_control(self, _ACTIVE_STRUCTURAL_VARIANT)
             if frozenset(_ACTIVE_MODALITIES) != frozenset(("t", "a", "v")):
                 from mm_mixer_final.modalities import install_training_input_mask
 

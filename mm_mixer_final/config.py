@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .modalities import MODALITY_VARIANTS
+from .revision_controls import REVISION_CONTROL_VARIANTS
 from .structural_ablations import STRUCTURAL_ABLATION_VARIANTS
 
 
@@ -19,7 +20,7 @@ VARIANTS = (
     "no_cross_attention",
     "no_auxiliary_loss",
 )
-RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS
+RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS
 _SWITCHES = (
     "no_mixer",
     "no_pairwise",
@@ -147,7 +148,17 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     switches = dict(base.switches)
     if variant in _SWITCHES:
         switches[variant] = True
-    return replace(base, variant=variant, seed=int(seed), switches=switches)
+    if variant in REVISION_CONTROL_VARIANTS:
+        switches[variant] = True
+    if variant == "amm_mlp_no_aux":
+        switches["no_auxiliary_loss"] = True
+    if variant == "no_feature_and_adaptive_gating":
+        switches["no_feature_gating"] = True
+        switches["no_adaptive_gating"] = True
+    mixer = dict(base.mixer)
+    if variant == "single_projection_view":
+        mixer.update(tokens=1, subspace_hidden=2)
+    return replace(base, variant=variant, seed=int(seed), switches=switches, mixer=mixer)
 
 
 def config_contract_sha256(config: FinalConfig) -> str:
