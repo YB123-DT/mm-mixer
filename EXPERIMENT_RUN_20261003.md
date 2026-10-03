@@ -1,6 +1,8 @@
 # 三种子补充实验运行记录
 
-状态：**正式训练已启动，尚未全部完成**。本文件记录启动协议与任务位置，不给出未完成的性能结论。
+状态（2026-10-03 23:44 UTC）：**训练及预测结果核验全部完成，效率测试等待空闲 GPU**。
+144 个位置全部通过验证：119 次新训练、25 次历史结果复用；48 个数据集/配置组合均齐 3 种子。
+完整数值和结论见 [三种子结果](results/revision_20261003/README.md)。
 
 ## 固定版本与协议
 
@@ -47,11 +49,11 @@
 | Phase 1 日志 | `queue/phase1/logs/` |
 | 启动命令与并发调整记录 | `queue/phase1/launch_record.json` |
 | Phase 2 计划 | `plans/phase2_49_jobs.json` |
-| Phase 2 状态 | `queue/phase2/status.json`（该阶段开始后生成） |
+| Phase 2 状态 | `queue/phase2/status.json` |
 | 单次训练产物 | `runs/revision_1b8b1ff/{dataset}/{variant}/seed{seed}/` |
 | 后续流程状态 | `pipeline/pipeline_status.json` |
-| 全部结果汇总 | `pipeline/analysis.json`、`pipeline/analysis.md`（训练后生成） |
-| 效率结果 | `pipeline/efficiency/`、`pipeline/efficiency_summary.json`（训练后生成） |
+| 全部结果汇总 | `pipeline/analysis.json`、`pipeline/analysis.md`（已生成并核验） |
+| 效率结果 | `pipeline/efficiency/`、`pipeline/efficiency_summary.json`（等待空闲 GPU，尚未生成） |
 
 Phase 1 的持久会话名为 `mm_mixer_revision_phase1`。
 后续控制器在 Phase 1 结束后运行 Phase 2，合并全部 144 个位置并重查预测/指标，
@@ -59,9 +61,17 @@ Phase 1 的持久会话名为 `mm_mixer_revision_phase1`。
 八次效率测量固定在同一张空闲健康 GPU；GPU 忙时等待，不与训练共卡计时。
 失败和缺失项保留；调度器异常退出时标记需要处理，不盲目重新训练。
 
+Phase 1 于 19:39 UTC 完成 95/95；Phase 2 于 22:03 UTC 完成 49/49。
+合并分析于 22:03:36 UTC 正常结束，`analysis.json` 的 `complete` 为 `true`。
+本地独立重算全部组的 WF1、ACC、Macro-F1 均值、样本标准差及同种子差值，与报告一致。
+当前控制器在 `mm_mixer_revision_followon` 持久会话中运行，状态为 `waiting_for_idle_gpu`；
+允许使用的 GPU 0–3 均有其他用户进程。卡空闲后自动测量，不以共享 GPU 的耗时作为正式效率结果。
+
 ## 本地审计位置
 
 本地 `outputs/revision_20261003/` 保存 `reuse_audit.{json,md}`、
 `reuse_strict_gate.{json,md}`、阶段计划、启动记录和单轮流程检查证据。
 训练中间结果留在服务器并按需同步；checkpoint、数据和日志不进入 Git。
+最终分类指标的 JSON 和 Markdown 已按服务器原始字节保存到 `results/revision_20261003/`，
+对应 SHA-256 与冻结训练版本见该目录的 `provenance.json`。
 当前没有将新分数填入 TeX/PDF。

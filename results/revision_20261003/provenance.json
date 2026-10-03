@@ -1,0 +1,19 @@
+{
+  "training_commit": "1b8b1fff90e19d793a99c0d0cf01c4bfd3cf51ab",
+  "server": "biggpu",
+  "source_directory": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline",
+  "analysis_finished_at": "2026-10-03T22:03:36Z",
+  "status_checked_at": "2026-10-03T23:44:51Z",
+  "classification_complete": true,
+  "efficiency_status": "waiting_for_idle_gpu",
+  "positions": 144,
+  "new_training_runs": 119,
+  "historical_reuses": 25,
+  "groups": 48,
+  "seeds_per_group": 3,
+  "sha256": {
+    "analysis.json": "00419365fd00cb92152eef0ab0af46cd44c449bb8703761e514e8e6fe42f0a3a",
+    "analysis.md": "966e5a4b6e307213773a4b938ea0ccfa42010431886768dbec3737177797c06a"
+  },
+  "provenance_note": "Analysis files are byte-for-byte copies of server outputs. All 119 new runs use the frozen commit; 25 reused runs retain historical source/config identities in their original bundles."
+}

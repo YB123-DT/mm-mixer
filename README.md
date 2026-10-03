@@ -71,8 +71,12 @@ The supplemental three-seed experiment implementation is documented in
 [`REVISION_EXPERIMENTS.md`](REVISION_EXPERIMENTS.md). It adds seven controlled
 replacements, explicit experiment plans, a persistent GPU queue, prediction
 analysis, and checkpoint-based efficiency measurement. Formal supplemental
-training started on 2026-10-03; see the [run record](EXPERIMENT_RUN_20261003.md).
-Complete supplemental results are pending; the historical results above remain separate.
+training and prediction verification finished on 2026-10-03: all 144 positions
+(119 new runs and 25 verified historical reuses) are complete, covering 48
+dataset/configuration groups with three seeds each. See the
+[three-seed results](results/revision_20261003/README.md) and
+[run record](EXPERIMENT_RUN_20261003.md). Efficiency measurements are still
+waiting for an idle GPU; the historical results above remain separate.
 
 The vendored training sources retain legacy variant branches because the
 corrected Full runner imports them. **Only `--variant full` has the eight
