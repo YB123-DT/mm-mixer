@@ -189,7 +189,7 @@ Figure~\ref{fig:amm_axis_mixing} previews the axis-wise interaction used in our 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{01_amm_axis_mixing.pdf}
-\caption{Tensor organization in AMM. Three aligned modality branches are expanded into $S$ learned projection views with $D$ hidden features. Colored cell groups highlight example vectors along the projection ($S$), modality ($M$), and hidden-feature ($D$) axes, with the other two indices fixed. The feature axis is drawn schematically. Learned views are not temporal steps.}
+\caption{Axis-wise interaction in AMM. Each aligned modality branch is expanded into $S$ learned projection views, forming a tensor with modality, projection, and hidden-feature axes. A highlighted vector along each axis illustrates its mapping, which is shared over the remaining positions. The three mappings are applied sequentially within each mixer block. The projection views are not temporal steps. Normalization along $D$ and residual additions are omitted for clarity.}
 \label{fig:amm_axis_mixing}
 \end{figure}
 

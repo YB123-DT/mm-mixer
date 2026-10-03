@@ -1,0 +1,65 @@
+{
+  "claim": "AMM applies distinct shared mappings along learned-view, modality, and hidden-feature axes.",
+  "source_format": "editable SVG",
+  "exporter": "PyMuPDF SVG to vector PDF",
+  "native_size_mm": [
+    86,
+    80.84
+  ],
+  "tensor_shape": [
+    3,
+    6,
+    256
+  ],
+  "modality_axis_order_from_origin": [
+    "V",
+    "A",
+    "T"
+  ],
+  "operators": {
+    "S": {
+      "type": "MLP",
+      "widths": [
+        6,
+        12,
+        6
+      ]
+    },
+    "M": {
+      "type": "bias-free Linear",
+      "widths": [
+        3,
+        3
+      ]
+    },
+    "D": {
+      "type": "MLP",
+      "widths": [
+        256,
+        1536,
+        256
+      ]
+    }
+  },
+  "sharing": "Each axis mapping is shared across other positions within a block; block weights are distinct.",
+  "block_orders": [
+    [
+      "S",
+      "M",
+      "D"
+    ],
+    [
+      "M",
+      "S",
+      "D"
+    ]
+  ],
+  "output": "Mean over S, giving 3 × D",
+  "omissions": [
+    "LayerNorm over D before each operation",
+    "Residual addition after each operation"
+  ],
+  "illustration_not_data": true,
+  "svg_sha256": "d135da98af5b97bfe7dd7de7faf2cf414665b714189dd9d7e15aad77e93bfc9f",
+  "pdf_sha256": "fd7bba69936d339660d12ae7aa40faf7951cf24ad089fb171ede5ca49a6c6ff3"
+}

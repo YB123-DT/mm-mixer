@@ -132,21 +132,38 @@
     {
       "version": "v010",
       "description": "AMM 三轴原理图替换引言场景图",
-      "source": "Main.tex",
+      "source": "archive/v010/Main.tex",
       "source_sha256": "49487b74632317d13a9c59d951423ba16d4f7137ae3b477a83ba8b8483297853",
-      "included_source": "Supplement.tex",
+      "included_source": "archive/v010/Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
-      "figure": "01_amm_axis_mixing.pdf",
+      "figure": "archive/v010/01_amm_axis_mixing.pdf",
       "figure_sha256": "fd7bba69936d339660d12ae7aa40faf7951cf24ad089fb171ede5ca49a6c6ff3",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v010/Main.pdf",
       "pdf_sha256": "4dcf6262a25f498bc8eb3c19fa19f43c0b134e9dc3c59c3491bfd4926d5fd4d7",
       "pages": 13,
       "git_tag": "paper-v010",
       "validation_status": "passed",
+      "figure_source": "archive/v010/figures/amm_axis_mixing/01_amm_axis_mixing.svg",
+      "archive_directory": "archive/v010"
+    },
+    {
+      "version": "v011",
+      "description": "完整 AMM 长方体与错开的三轴格子示例，移除下半映射流程",
+      "source": "Main.tex",
+      "source_sha256": "a28e550e9f508a0d776b8a845f867e20da7a63d9864e35f21ba42a00d4d6c34f",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "01_amm_axis_mixing.pdf",
+      "figure_sha256": "2ba9b3c5796683e5ae17d1468b2e103d1dc36a9cb55f1a00994e9e4dd8030237",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "689f23c5f0857714ca4cfd070a71343f95a747518094a62180bf5b2cf6dd531c",
+      "pages": 13,
+      "git_tag": "paper-v011",
+      "validation_status": "passed",
       "figure_source": "figures/amm_axis_mixing/01_amm_axis_mixing.svg"
     }
   ],
-  "latest": "v010",
+  "latest": "v011",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

@@ -1,21 +1,49 @@
 {
-  "claim": "AMM applies distinct shared mappings along learned-view, modality, and hidden-feature axes.",
+  "claim": "Three disjoint cell strips illustrate axis-wise vectors in the AMM tensor.",
   "source_format": "editable SVG",
   "exporter": "PyMuPDF SVG to vector PDF",
   "native_size_mm": [
     86,
-    80.84
+    49.88
   ],
   "tensor_shape": [
     3,
     6,
     256
   ],
+  "display_grid_shape": [
+    3,
+    6,
+    8
+  ],
   "modality_axis_order_from_origin": [
     "V",
     "A",
     "T"
   ],
+  "bounding_edge_count": 12,
+  "selected_indices": {
+    "S": {
+      "m": 2,
+      "d": 6,
+      "varies": "s"
+    },
+    "M": {
+      "s": 1,
+      "d": 0,
+      "varies": "m"
+    },
+    "D": {
+      "m": 0,
+      "s": 5,
+      "varies": "d"
+    }
+  },
+  "primary_colored_cell_counts": {
+    "S": 6,
+    "M": 3,
+    "D": 8
+  },
   "operators": {
     "S": {
       "type": "MLP",
@@ -41,25 +69,17 @@
       ]
     }
   },
-  "sharing": "Each axis mapping is shared across other positions within a block; block weights are distinct.",
-  "block_orders": [
-    [
-      "S",
-      "M",
-      "D"
-    ],
-    [
-      "M",
-      "S",
-      "D"
-    ]
-  ],
-  "output": "Mean over S, giving 3 × D",
+  "operators_shown": false,
+  "lower_operation_panels_shown": false,
   "omissions": [
-    "LayerNorm over D before each operation",
-    "Residual addition after each operation"
+    "Projection expansion",
+    "Axis mappings",
+    "LayerNorm over D",
+    "Residual additions",
+    "Block order",
+    "Pooling"
   ],
   "illustration_not_data": true,
-  "svg_sha256": "d135da98af5b97bfe7dd7de7faf2cf414665b714189dd9d7e15aad77e93bfc9f",
-  "pdf_sha256": "fd7bba69936d339660d12ae7aa40faf7951cf24ad089fb171ede5ca49a6c6ff3"
+  "svg_sha256": "757e3deae0a6e13574249c6f205edb5b9da9b325cb2bc0d9149e5210b96f2a13",
+  "pdf_sha256": "2ba9b3c5796683e5ae17d1468b2e103d1dc36a9cb55f1a00994e9e4dd8030237"
 }

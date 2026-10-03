@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "source_scope_only_figure1_block": true,
+    "source_newlines": "CRLF",
+    "supplement_unchanged": true,
+    "unique_labels": 33,
+    "resolved_reference_targets": 12,
+    "resolved_citation_keys": 26,
+    "included_graphics": 6,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "underfull_messages": 7,
+    "figure_pdf_raster_images": 0,
+    "figure_pdf_vector_paths": 128,
+    "figure_pdf_text_extractable": true,
+    "figure1_single_column": true,
+    "pixel_identical_pages_from_v009": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "v009_archive_files_verified_against_tag": 26
+  },
+  "visual_review": {
+    "score": 95,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [],
+    "suggestions": [],
+    "reasoning": "Independent review of the standalone figure and manuscript page 1 passed. All three M positions, the origin and axes, mappings, and sequential block order are legible; no clipping or overlap."
+  }
+}

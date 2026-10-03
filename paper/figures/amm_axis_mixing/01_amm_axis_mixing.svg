@@ -1,166 +1,112 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="86mm" height="80.84mm" viewBox="0 0 1000 940">
-<title>Axis-wise Multimodal Mixer</title>
-<desc>Three aligned modality branches are expanded into a tensor with three modality rows, six learned projection views, and 256 hidden features. Colored vectors illustrate view MLP, modality linear, and feature MLP mappings. The mappings are shared over other positions and applied sequentially.</desc>
-<rect x="0" y="0" width="1000" height="940" rx="0" fill="white" stroke="none" stroke-width="1.8"/>
-<text x="500" y="38" font-family="Times New Roman, Times, serif" font-size="30" fill="#243447" text-anchor="middle" font-weight="bold">AMM: axis-wise interaction</text>
-<text x="500" y="83" font-family="Times New Roman, Times, serif" font-size="27" fill="#243447" text-anchor="middle" font-weight="normal">Shared expansion per branch: D → S × D</text>
-<polygon points="300,335 740,335 740,152 300,152" fill="#f2f5f8" fill-opacity="0.32" stroke="#a2b0bc" stroke-width="1.7"/>
-<polygon points="300,335 162,437 162,254 300,152" fill="#e9eff5" fill-opacity="0.38" stroke="#a2b0bc" stroke-width="1.7"/>
-<polygon points="300,152 740,152 602,254 162,254" fill="#eef3f7" fill-opacity="0.6" stroke="#a2b0bc" stroke-width="1.7"/>
-<polygon points="162,437 602,437 602,376 162,376" fill="#f3f6f9" fill-opacity="0.48" stroke="#a2b0bc" stroke-width="1.7"/>
-<polygon points="162,376 602,376 602,315 162,315" fill="#e8eef4" fill-opacity="0.48" stroke="#a2b0bc" stroke-width="1.7"/>
-<polygon points="162,315 602,315 602,254 162,254" fill="#f3f6f9" fill-opacity="0.48" stroke="#a2b0bc" stroke-width="1.7"/>
-<line x1="300" y1="152" x2="162" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="437" x2="162" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="355" y1="152" x2="217" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="217" y1="437" x2="217" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="410" y1="152" x2="272" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="272" y1="437" x2="272" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="465" y1="152" x2="327" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="327" y1="437" x2="327" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="520" y1="152" x2="382" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="382" y1="437" x2="382" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="575" y1="152" x2="437" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="437" y1="437" x2="437" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="630" y1="152" x2="492" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="492" y1="437" x2="492" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="685" y1="152" x2="547" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="547" y1="437" x2="547" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="740" y1="152" x2="602" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="602" y1="437" x2="602" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="152" x2="740" y2="152" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="335" x2="300" y2="152" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="277" y1="169" x2="717" y2="169" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="277" y1="352" x2="277" y2="169" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="254" y1="186" x2="694" y2="186" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="254" y1="369" x2="254" y2="186" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="231" y1="203" x2="671" y2="203" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="231" y1="386" x2="231" y2="203" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="208" y1="220" x2="648" y2="220" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="208" y1="403" x2="208" y2="220" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="185" y1="237" x2="625" y2="237" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="185" y1="420" x2="185" y2="237" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="254" x2="602" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="437" x2="162" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="335" x2="162" y2="437" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="437" x2="602" y2="437" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="274" x2="162" y2="376" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="376" x2="602" y2="376" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="213" x2="162" y2="315" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="315" x2="602" y2="315" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="152" x2="162" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="162" y1="254" x2="602" y2="254" stroke="#a2b0bc" stroke-width="1.8" opacity="1"/>
-<line x1="300" y1="335" x2="740" y2="335" stroke="#243447" stroke-width="1.5" opacity="0.45" stroke-dasharray="6 6"/>
-<line x1="300" y1="335" x2="300" y2="152" stroke="#243447" stroke-width="1.5" opacity="0.45" stroke-dasharray="6 6"/>
-<line x1="300" y1="335" x2="162" y2="437" stroke="#243447" stroke-width="1.5" opacity="0.45" stroke-dasharray="6 6"/>
-<line x1="300" y1="335" x2="845" y2="335" stroke="#243447" stroke-width="2.1" opacity="1"/>
-<polygon points="845,335 833.0,340.04 833.0,329.96" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5"/>
-<line x1="300" y1="335" x2="300" y2="111" stroke="#243447" stroke-width="2.1" opacity="1"/>
-<polygon points="300,111 305.04,123.0 294.96,123.0" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5"/>
-<line x1="300" y1="335" x2="121" y2="467" stroke="#243447" stroke-width="2.1" opacity="1"/>
-<polygon points="121,467 127.66668812719345,455.82158913732644 133.64922599983194,463.93427307067714" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5"/>
-<circle cx="300" cy="335" r="5.5" fill="#243447" stroke="white" stroke-width="1.2"/>
-<text x="309" y="360" font-family="Times New Roman, Times, serif" font-size="25" fill="#243447" text-anchor="start" font-weight="normal">O</text>
-<text x="332" y="123" font-family="Times New Roman, Times, serif" font-size="27" fill="#8370b4" text-anchor="start" font-weight="normal">M = 3</text>
-<text x="858" y="329" font-family="Times New Roman, Times, serif" font-size="27" fill="#b47730" text-anchor="start" font-weight="normal">D = 256</text>
-<text x="70" y="494" font-family="Times New Roman, Times, serif" font-size="27" fill="#337fae" text-anchor="start" font-weight="normal">S = 6</text>
-<text x="135" y="415.5" font-family="Times New Roman, Times, serif" font-size="28" fill="#243447" text-anchor="middle" font-weight="bold">V</text>
-<text x="135" y="354.5" font-family="Times New Roman, Times, serif" font-size="28" fill="#243447" text-anchor="middle" font-weight="bold">A</text>
-<text x="135" y="293.5" font-family="Times New Roman, Times, serif" font-size="28" fill="#243447" text-anchor="middle" font-weight="bold">T</text>
-<line x1="591.0" y1="160.5" x2="476.0" y2="245.5" stroke="white" stroke-width="11" opacity="1"/>
-<line x1="591.0" y1="160.5" x2="476.0" y2="245.5" stroke="#337fae" stroke-width="6" opacity="1"/>
-<circle cx="591.0" cy="160.5" r="6" fill="#337fae" stroke="white" stroke-width="1.8"/>
-<circle cx="568.0" cy="177.5" r="6" fill="#337fae" stroke="white" stroke-width="1.8"/>
-<circle cx="545.0" cy="194.5" r="6" fill="#337fae" stroke="white" stroke-width="1.8"/>
-<circle cx="522.0" cy="211.5" r="6" fill="#337fae" stroke="white" stroke-width="1.8"/>
-<circle cx="499.0" cy="228.5" r="6" fill="#337fae" stroke="white" stroke-width="1.8"/>
-<circle cx="476.0" cy="245.5" r="6" fill="#337fae" stroke="white" stroke-width="1.8"/>
-<line x1="267.5" y1="389.5" x2="267.5" y2="267.5" stroke="white" stroke-width="11" opacity="1"/>
-<line x1="267.5" y1="389.5" x2="267.5" y2="267.5" stroke="#8370b4" stroke-width="6" opacity="1"/>
-<circle cx="267.5" cy="389.5" r="6" fill="#8370b4" stroke="white" stroke-width="1.8"/>
-<circle cx="267.5" cy="328.5" r="6" fill="#8370b4" stroke="white" stroke-width="1.8"/>
-<circle cx="267.5" cy="267.5" r="6" fill="#8370b4" stroke="white" stroke-width="1.8"/>
-<line x1="189.5" y1="406.5" x2="574.5" y2="406.5" stroke="white" stroke-width="11" opacity="1"/>
-<line x1="189.5" y1="406.5" x2="574.5" y2="406.5" stroke="#b47730" stroke-width="6" opacity="1"/>
-<circle cx="189.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="244.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="299.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="354.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="409.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="464.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="519.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<circle cx="574.5" cy="406.5" r="6" fill="#b47730" stroke="white" stroke-width="1.8"/>
-<text x="622" y="181" font-family="Times New Roman, Times, serif" font-size="27" fill="#337fae" text-anchor="start" font-weight="bold">S</text>
-<text x="244" y="250" font-family="Times New Roman, Times, serif" font-size="27" fill="#8370b4" text-anchor="start" font-weight="bold">M</text>
-<text x="621" y="415" font-family="Times New Roman, Times, serif" font-size="27" fill="#b47730" text-anchor="start" font-weight="bold">D</text>
-<text x="552" y="487" font-family="Times New Roman, Times, serif" font-size="25" fill="#586779" text-anchor="middle" font-weight="normal">D channels shown schematically</text>
-<line x1="22" y1="520" x2="978" y2="520" stroke="#d9e1e7" stroke-width="1.5" opacity="1"/>
-<text x="22" y="555" font-family="Times New Roman, Times, serif" font-size="27" fill="#243447" text-anchor="start" font-weight="bold">One vector from each axis</text>
-<text x="22" y="602" font-family="Times New Roman, Times, serif" font-size="26" fill="#337fae" text-anchor="start" font-weight="bold">View axis</text>
-<text x="22" y="634" font-family="Times New Roman, Times, serif" font-size="26" fill="#337fae" text-anchor="start" font-weight="normal">Z[m, :, d]</text>
-<rect x="247" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="275" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="303" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="331" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="359" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="387" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<line x1="423" y1="607" x2="470" y2="607" stroke="#337fae" stroke-width="2.5" opacity="1"/>
-<polygon points="470,607 460.0,611.2 460.0,602.8" fill="#337fae" fill-opacity="1" stroke="#337fae" stroke-width="0.5"/>
-<rect x="480" y="572" width="278" height="70" rx="8" fill="#fafbfc" stroke="#337fae" stroke-width="2"/>
-<text x="619" y="601" font-family="Times New Roman, Times, serif" font-size="27" fill="#337fae" text-anchor="middle" font-weight="bold">View MLP</text>
-<text x="619" y="630" font-family="Times New Roman, Times, serif" font-size="25" fill="#337fae" text-anchor="middle" font-weight="normal">6 → 12 → 6</text>
-<line x1="767" y1="607" x2="794" y2="607" stroke="#337fae" stroke-width="2.5" opacity="1"/>
-<polygon points="794,607 784.0,611.2 784.0,602.8" fill="#337fae" fill-opacity="1" stroke="#337fae" stroke-width="0.5"/>
-<rect x="810" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="838" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="866" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="894" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="922" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<rect x="950" y="593" width="23" height="28" rx="2" fill="white" stroke="#337fae" stroke-width="2"/>
-<text x="22" y="692" font-family="Times New Roman, Times, serif" font-size="26" fill="#8370b4" text-anchor="start" font-weight="bold">Modality axis</text>
-<text x="22" y="724" font-family="Times New Roman, Times, serif" font-size="26" fill="#8370b4" text-anchor="start" font-weight="normal">Z[:, s, d]</text>
-<rect x="255" y="679" width="44" height="36" rx="2" fill="white" stroke="#8370b4" stroke-width="2"/>
-<text x="277" y="706" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">V</text>
-<rect x="307" y="679" width="44" height="36" rx="2" fill="white" stroke="#8370b4" stroke-width="2"/>
-<text x="329" y="706" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">A</text>
-<rect x="359" y="679" width="44" height="36" rx="2" fill="white" stroke="#8370b4" stroke-width="2"/>
-<text x="381" y="706" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">T</text>
-<line x1="423" y1="697" x2="470" y2="697" stroke="#8370b4" stroke-width="2.5" opacity="1"/>
-<polygon points="470,697 460.0,701.2 460.0,692.8" fill="#8370b4" fill-opacity="1" stroke="#8370b4" stroke-width="0.5"/>
-<rect x="480" y="662" width="278" height="70" rx="8" fill="#fafbfc" stroke="#8370b4" stroke-width="2"/>
-<text x="619" y="691" font-family="Times New Roman, Times, serif" font-size="27" fill="#8370b4" text-anchor="middle" font-weight="bold">Linear</text>
-<text x="619" y="720" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">3 → 3</text>
-<line x1="767" y1="697" x2="794" y2="697" stroke="#8370b4" stroke-width="2.5" opacity="1"/>
-<polygon points="794,697 784.0,701.2 784.0,692.8" fill="#8370b4" fill-opacity="1" stroke="#8370b4" stroke-width="0.5"/>
-<rect x="818" y="679" width="44" height="36" rx="2" fill="white" stroke="#8370b4" stroke-width="2"/>
-<text x="840" y="706" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">V</text>
-<rect x="870" y="679" width="44" height="36" rx="2" fill="white" stroke="#8370b4" stroke-width="2"/>
-<text x="892" y="706" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">A</text>
-<rect x="922" y="679" width="44" height="36" rx="2" fill="white" stroke="#8370b4" stroke-width="2"/>
-<text x="944" y="706" font-family="Times New Roman, Times, serif" font-size="25" fill="#8370b4" text-anchor="middle" font-weight="normal">T</text>
-<text x="22" y="782" font-family="Times New Roman, Times, serif" font-size="26" fill="#b47730" text-anchor="start" font-weight="bold">Feature axis</text>
-<text x="22" y="814" font-family="Times New Roman, Times, serif" font-size="26" fill="#b47730" text-anchor="start" font-weight="normal">Z[m, s, :]</text>
-<rect x="247" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<rect x="275" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<rect x="303" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<rect x="387" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<text x="361" y="793" font-family="Times New Roman, Times, serif" font-size="25" fill="#b47730" text-anchor="middle" font-weight="normal">···</text>
-<line x1="423" y1="787" x2="470" y2="787" stroke="#b47730" stroke-width="2.5" opacity="1"/>
-<polygon points="470,787 460.0,791.2 460.0,782.8" fill="#b47730" fill-opacity="1" stroke="#b47730" stroke-width="0.5"/>
-<rect x="480" y="752" width="278" height="70" rx="8" fill="#fafbfc" stroke="#b47730" stroke-width="2"/>
-<text x="619" y="781" font-family="Times New Roman, Times, serif" font-size="27" fill="#b47730" text-anchor="middle" font-weight="bold">Feature MLP</text>
-<text x="619" y="810" font-family="Times New Roman, Times, serif" font-size="25" fill="#b47730" text-anchor="middle" font-weight="normal">256 → 1536 → 256</text>
-<line x1="767" y1="787" x2="794" y2="787" stroke="#b47730" stroke-width="2.5" opacity="1"/>
-<polygon points="794,787 784.0,791.2 784.0,782.8" fill="#b47730" fill-opacity="1" stroke="#b47730" stroke-width="0.5"/>
-<rect x="810" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<rect x="838" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<rect x="866" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<rect x="950" y="773" width="23" height="28" rx="2" fill="white" stroke="#b47730" stroke-width="2"/>
-<text x="924" y="793" font-family="Times New Roman, Times, serif" font-size="25" fill="#b47730" text-anchor="middle" font-weight="normal">···</text>
-<text x="500" y="854" font-family="Times New Roman, Times, serif" font-size="25" fill="#586779" text-anchor="middle" font-weight="normal">Mappings are shared across the other positions.</text>
-<text x="295" y="892" font-family="Times New Roman, Times, serif" font-size="25" fill="#243447" text-anchor="middle" font-weight="normal">Block 1: S → M → D</text>
-<line x1="470" y1="883" x2="530" y2="883" stroke="#243447" stroke-width="1.8" opacity="1"/>
-<polygon points="530,883 521.0,886.78 521.0,879.22" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5"/>
-<text x="720" y="892" font-family="Times New Roman, Times, serif" font-size="25" fill="#243447" text-anchor="middle" font-weight="normal">Block 2: M → S → D</text>
-<text x="500" y="929" font-family="Times New Roman, Times, serif" font-size="26" fill="#243447" text-anchor="middle" font-weight="normal">Mean over S → 3 × D</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="86mm" height="49.88mm" viewBox="0 0 1000 580">
+<title>AMM tensor with three separate axis vectors</title>
+<desc>A complete transparent cuboid has three modality rows, six learned projection views and a schematic feature dimension. Blue, purple and orange full-cell strips are spatially separated and show vectors along S, M and D, respectively.</desc>
+<rect width="1000" height="580" fill="white"/>
+<text x="500" y="40" font-family="Times New Roman, Times, serif" font-size="32" fill="#243447" text-anchor="middle" font-weight="bold">AMM: three representation axes</text>
+<polygon points="310.0,360 770.0,360 770.0,150 310.0,150" fill="#edf2f6" fill-opacity="0.18" stroke="none" stroke-width="0" />
+<polygon points="310.0,360 770.0,360 608.0,480 148.0,480" fill="#edf2f6" fill-opacity="0.12" stroke="none" stroke-width="0" />
+<polygon points="770.0,360 608.0,480 608.0,270 770.0,150" fill="#edf2f6" fill-opacity="0.45" stroke="none" stroke-width="0" />
+<polygon points="310.0,360 148.0,480 148.0,270 310.0,150" fill="#edf2f6" fill-opacity="0.26" stroke="none" stroke-width="0" />
+<polygon points="310.0,150 770.0,150 608.0,270 148.0,270" fill="#eef3f7" fill-opacity="0.65" stroke="none" stroke-width="0" />
+<polygon points="148.0,480 608.0,480 608.0,270 148.0,270" fill="#f3f6f9" fill-opacity="0.35" stroke="none" stroke-width="0" />
+<polygon points="283.0,380 256.0,400 256.0,330 283.0,310" fill="#b5a2d6" fill-opacity="1" stroke="#71549e" stroke-width="1.7" data-axis="M" data-role="cell" data-index="0"/>
+<polygon points="283.0,310 256.0,330 256.0,260 283.0,240" fill="#b5a2d6" fill-opacity="1" stroke="#71549e" stroke-width="1.7" data-axis="M" data-role="cell" data-index="1"/>
+<polygon points="283.0,240 256.0,260 256.0,190 283.0,170" fill="#b5a2d6" fill-opacity="1" stroke="#71549e" stroke-width="1.7" data-axis="M" data-role="cell" data-index="2"/>
+<polygon points="283.0,170 340.5,170 313.5,190 256.0,190" fill="#b5a2d6" fill-opacity="1" stroke="#71549e" stroke-width="1.7" data-axis="M" data-role="cap" data-index="top"/>
+<polygon points="655.0,150 712.5,150 685.5,170 628.0,170" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cell" data-index="0"/>
+<polygon points="628.0,170 685.5,170 658.5,190 601.0,190" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cell" data-index="1"/>
+<polygon points="601.0,190 658.5,190 631.5,210 574.0,210" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cell" data-index="2"/>
+<polygon points="574.0,210 631.5,210 604.5,230 547.0,230" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cell" data-index="3"/>
+<polygon points="547.0,230 604.5,230 577.5,250 520.0,250" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cell" data-index="4"/>
+<polygon points="520.0,250 577.5,250 550.5,270 493.0,270" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cell" data-index="5"/>
+<polygon points="493.0,340 550.5,340 550.5,270 493.0,270" fill="#75b4d8" fill-opacity="1" stroke="#28668f" stroke-width="1.7" data-axis="S" data-role="cap" data-index="front"/>
+<polygon points="148.0,480 205.5,480 205.5,410 148.0,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="0"/>
+<polygon points="205.5,480 263.0,480 263.0,410 205.5,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="1"/>
+<polygon points="263.0,480 320.5,480 320.5,410 263.0,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="2"/>
+<polygon points="320.5,480 378.0,480 378.0,410 320.5,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="3"/>
+<polygon points="378.0,480 435.5,480 435.5,410 378.0,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="4"/>
+<polygon points="435.5,480 493.0,480 493.0,410 435.5,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="5"/>
+<polygon points="493.0,480 550.5,480 550.5,410 493.0,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="6"/>
+<polygon points="550.5,480 608.0,480 608.0,410 550.5,410" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cell" data-index="7"/>
+<polygon points="635.0,460 608.0,480 608.0,410 635.0,390" fill="#e7b475" fill-opacity="1" stroke="#a96b24" stroke-width="1.7" data-axis="D" data-role="cap" data-index="right"/>
+<line x1="310.0" y1="150" x2="148.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="148.0" y1="480" x2="148.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="367.5" y1="150" x2="205.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="205.5" y1="480" x2="205.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="425.0" y1="150" x2="263.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="263.0" y1="480" x2="263.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="482.5" y1="150" x2="320.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="320.5" y1="480" x2="320.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="540.0" y1="150" x2="378.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="378.0" y1="480" x2="378.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="597.5" y1="150" x2="435.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="435.5" y1="480" x2="435.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="655.0" y1="150" x2="493.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="493.0" y1="480" x2="493.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="712.5" y1="150" x2="550.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="550.5" y1="480" x2="550.5" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="770.0" y1="150" x2="608.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="608.0" y1="480" x2="608.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="310.0" y1="150" x2="770.0" y2="150" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="770.0" y1="360" x2="770.0" y2="150" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="283.0" y1="170" x2="743.0" y2="170" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="743.0" y1="380" x2="743.0" y2="170" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="256.0" y1="190" x2="716.0" y2="190" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="716.0" y1="400" x2="716.0" y2="190" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="229.0" y1="210" x2="689.0" y2="210" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="689.0" y1="420" x2="689.0" y2="210" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="202.0" y1="230" x2="662.0" y2="230" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="662.0" y1="440" x2="662.0" y2="230" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="175.0" y1="250" x2="635.0" y2="250" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="635.0" y1="460" x2="635.0" y2="250" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="148.0" y1="270" x2="608.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="608.0" y1="480" x2="608.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="148.0" y1="480" x2="608.0" y2="480" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="770.0" y1="360" x2="608.0" y2="480" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="310.0" y1="360" x2="148.0" y2="480" stroke="#93a4b3" stroke-width="1.2" opacity="0.4" stroke-dasharray="5 5"/>
+<line x1="148.0" y1="410" x2="608.0" y2="410" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="770.0" y1="290" x2="608.0" y2="410" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="310.0" y1="290" x2="148.0" y2="410" stroke="#93a4b3" stroke-width="1.2" opacity="0.4" stroke-dasharray="5 5"/>
+<line x1="148.0" y1="340" x2="608.0" y2="340" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="770.0" y1="220" x2="608.0" y2="340" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="310.0" y1="220" x2="148.0" y2="340" stroke="#93a4b3" stroke-width="1.2" opacity="0.4" stroke-dasharray="5 5"/>
+<line x1="148.0" y1="270" x2="608.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="770.0" y1="150" x2="608.0" y2="270" stroke="#93a4b3" stroke-width="1.7" opacity="1"/>
+<line x1="310.0" y1="150" x2="148.0" y2="270" stroke="#93a4b3" stroke-width="1.2" opacity="0.4" stroke-dasharray="5 5"/>
+<line x1="283.0" y1="380" x2="283.0" y2="170" stroke="#93a4b3" stroke-width="1.2" opacity="0.38" stroke-dasharray="5 5"/>
+<line x1="256.0" y1="400" x2="256.0" y2="190" stroke="#93a4b3" stroke-width="1.2" opacity="0.38" stroke-dasharray="5 5"/>
+<line x1="229.0" y1="420" x2="229.0" y2="210" stroke="#93a4b3" stroke-width="1.2" opacity="0.38" stroke-dasharray="5 5"/>
+<line x1="202.0" y1="440" x2="202.0" y2="230" stroke="#93a4b3" stroke-width="1.2" opacity="0.38" stroke-dasharray="5 5"/>
+<line x1="175.0" y1="460" x2="175.0" y2="250" stroke="#93a4b3" stroke-width="1.2" opacity="0.38" stroke-dasharray="5 5"/>
+<g id="cuboid-edges">
+<line x1="310.0" y1="360" x2="770.0" y2="360" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="310.0" y1="150" x2="770.0" y2="150" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="148.0" y1="480" x2="608.0" y2="480" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="148.0" y1="270" x2="608.0" y2="270" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="310.0" y1="360" x2="148.0" y2="480" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="310.0" y1="150" x2="148.0" y2="270" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="770.0" y1="360" x2="608.0" y2="480" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="770.0" y1="150" x2="608.0" y2="270" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="310.0" y1="360" x2="310.0" y2="150" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="148.0" y1="480" x2="148.0" y2="270" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="770.0" y1="360" x2="770.0" y2="150" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+<line x1="608.0" y1="480" x2="608.0" y2="270" stroke="#8295a6" stroke-width="2.4" opacity="1"/>
+</g>
+<text x="710" y="177" font-family="Times New Roman, Times, serif" font-size="31" fill="#28668f" text-anchor="start" font-weight="bold">S</text>
+<text x="211" y="263" font-family="Times New Roman, Times, serif" font-size="31" fill="#71549e" text-anchor="start" font-weight="bold">M</text>
+<text x="630" y="451" font-family="Times New Roman, Times, serif" font-size="31" fill="#a96b24" text-anchor="start" font-weight="bold">D</text>
+<line x1="310.0" y1="360" x2="865" y2="360" stroke="#243447" stroke-width="2.4" opacity="1"/>
+<polygon points="865,360 853.0,365.04 853.0,354.96" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5" />
+<line x1="310.0" y1="360" x2="310" y2="95" stroke="#243447" stroke-width="2.4" opacity="1"/>
+<polygon points="310,95 315.04,107.0 304.96,107.0" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5" />
+<line x1="310.0" y1="360" x2="103" y2="514" stroke="#243447" stroke-width="2.4" opacity="1"/>
+<polygon points="103,514 109.61948516119598,502.7935725496166 115.63618415256975,510.8809536613982" fill="#243447" fill-opacity="1" stroke="#243447" stroke-width="0.5" />
+<circle cx="310.0" cy="360" r="5.5" fill="#243447" stroke="white" stroke-width="1.4"/>
+<text x="322" y="387" font-family="Times New Roman, Times, serif" font-size="27" fill="#243447" text-anchor="start" font-weight="normal">O</text>
+<text x="333" y="105" font-family="Times New Roman, Times, serif" font-size="30" fill="#71549e" text-anchor="start" font-weight="normal">M = 3</text>
+<text x="873" y="349" font-family="Times New Roman, Times, serif" font-size="29" fill="#a96b24" text-anchor="start" font-weight="normal">D = 256</text>
+<text x="61" y="550" font-family="Times New Roman, Times, serif" font-size="30" fill="#28668f" text-anchor="start" font-weight="normal">S = 6</text>
+<text x="117.0" y="455.0" font-family="Times New Roman, Times, serif" font-size="32" fill="#243447" text-anchor="middle" font-weight="bold">V</text>
+<text x="117.0" y="385.0" font-family="Times New Roman, Times, serif" font-size="32" fill="#243447" text-anchor="middle" font-weight="bold">A</text>
+<text x="117.0" y="315.0" font-family="Times New Roman, Times, serif" font-size="32" fill="#243447" text-anchor="middle" font-weight="bold">T</text>
 </svg>

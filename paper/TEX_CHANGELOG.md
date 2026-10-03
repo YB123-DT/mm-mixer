@@ -90,3 +90,15 @@
 编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v010 -jobname=Main Main.tex` 成功，完整稿为 **13 页**。33 个标签无重复，12 个交叉引用目标、26 个引用键及 6 张图均解析；无未定义引用、超宽盒或 LaTeX 错误，保留 7 条 underfull 提示。检查独立图稿、全文缩略图和第 1–2 页，单栏图无裁切或重叠；独立图稿/第一页复核得分 95/100。与 v009 像素一致的页面为 [10, 11, 12, 13]。图以 SVG 为可编辑源，PyMuPDF 导出矢量 PDF，检查确认 0 个位图和可提取文字。完整旧图已在 v009 归档，旧场景 PDF 从顶层移除。哈希和检查结果见 `Main-build-manifest.json`；没有运行训练或修改实验代码。
 
 当前入口为 [Main.tex](Main.tex)，旧稿为 [archive/v009/](archive/v009/Main.tex)。版本标签为 `paper-v010`。
+
+## 2026-10-03 · v011：完整长方体与错开的三轴格子示例
+
+1. 修改前将 v010 的主稿、补充材料、完整 PDF、六张图、参考文献、样式、编译清单、六个三轴图稿文件及原方法图来源复制到 `archive/v010/`，共 32 个原文件；逐文件与 `paper-v010` 核对字节并记录 SHA256，历史 PDF 保留原始字节。
+2. 按作者要求，Figure 1 改为完整透明网格长方体，从同一起点引出三个坐标轴；投影、模态、隐藏特征三个示例条带分别以蓝、紫、橙色填满对应格子，并错开位置。移除下半部分映射、公式及块流程。可编辑图稿与导出产物由本轮主流程更新。
+3. `Main.tex:192`：只替换 `fig:amm_axis_mixing` 图注，改为说明三模态分支、学习投影视角、特征维度及三个轴向向量示例，明确固定另外两个索引、特征轴为示意和视角不是时间步。删除关于图中映射、共享、顺序与归一化/残差省略的说明，避免描述已经移除的内容。
+4. 图文件路径、标签、单栏宽度、浮动位置及引导句不变。反向还原图注后，`Main.tex` 与 v010 逐字节一致，CRLF 保留；摘要、全部正文、贡献、公式、表格及 Supplement 均未修改。
+5. 更新当前 README、版本索引、归档索引及 `versions.json`，v010 文件路径指向 `archive/v010/`，新版本登记为 v011。
+
+编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v011 -jobname=Main Main.tex` 成功，全文为 **13 页**。33 个标签无重复，12 个交叉引用目标、26 个引用键和 6 张图均解析；没有未定义引用、超宽盒或 LaTeX 错误，保留 5 条 underfull 提示。核查独立图稿、全文缩略图及第 1–2 页，无裁切或重叠；独立图稿及单栏第一页复核得分 96/100。SVG 中完整长方体含 12 条边，S/M/D 主着色格子分别为 6/3/8 个，三组索引互不相交；D 轴 8 格仅为示意，真实维度 256。独立图 PDF 为 86 × 49.88 mm，0 个位图、104 条矢量路径且文字可提取。第 10–13 页与 v010 渲染像素一致，v010 归档的 32 个原文件均与 Git 标签逐字节一致。哈希及详细检查见 `Main-build-manifest.json` 和图稿目录的 `validation_report.json`；没有运行训练或修改实验代码。
+
+当前入口为 [Main.tex](Main.tex)，旧稿为 [archive/v010/](archive/v010/Main.tex)。版本标签为 `paper-v011`。

@@ -4,7 +4,8 @@
 
 | 版本 | 内容 | TeX | PDF | Git 快照 |
 |---|---|---|---|---|
-| v010 | AMM 三轴原理图替换引言场景图 | [主文件](Main.tex) 与 [Supplement](Supplement.tex) | [当前完整 PDF](Main.pdf) | paper-v010 |
+| v011 | 完整 AMM 长方体与错开的三轴格子示例，移除下半映射流程 | [主文件](Main.tex) 与 [Supplement](Supplement.tex) | [当前完整 PDF](Main.pdf) | paper-v011 |
+| v010 | AMM 三轴原理图替换引言场景图 | [主文件](archive/v010/Main.tex) 与 [Supplement](archive/v010/Supplement.tex) | [归档 PDF](archive/v010/Main.pdf) | paper-v010 |
 | v009 | 引言衔接与多投影视角主线，保留贡献列表 | [主文件](archive/v009/Main.tex) 与 [Supplement](archive/v009/Supplement.tex) | [归档 PDF](archive/v009/Main.pdf) | paper-v009 |
 | v008 | 整理目录：顶层仅当前稿，旧版本分别归档 | [主文件](archive/v008/Main.tex) 与 [Supplement](archive/v008/Supplement.tex) | [归档 PDF](archive/v008/Main.pdf) | paper-v008 |
 | v007 | 删除场景图注中的音频与坐标尺度说明 | [主文件](archive/v007/Main.tex) 与 [Supplement](archive/v007/Supplement.tex) | [归档 PDF](archive/v007/Main.pdf) | paper-v007 |
