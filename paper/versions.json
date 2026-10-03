@@ -149,21 +149,39 @@
     {
       "version": "v011",
       "description": "完整 AMM 长方体与错开的三轴格子示例，移除下半映射流程",
+      "source": "archive/v011/Main.tex",
+      "source_sha256": "a28e550e9f508a0d776b8a845f867e20da7a63d9864e35f21ba42a00d4d6c34f",
+      "included_source": "archive/v011/Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "figure": "archive/v011/01_amm_axis_mixing.pdf",
+      "figure_sha256": "2ba9b3c5796683e5ae17d1468b2e103d1dc36a9cb55f1a00994e9e4dd8030237",
+      "pdf": "archive/v011/Main.pdf",
+      "pdf_sha256": "689f23c5f0857714ca4cfd070a71343f95a747518094a62180bf5b2cf6dd531c",
+      "pages": 13,
+      "git_tag": "paper-v011",
+      "validation_status": "passed",
+      "figure_source": "archive/v011/figures/amm_axis_mixing/01_amm_axis_mixing.svg",
+      "archive_directory": "archive/v011"
+    },
+    {
+      "version": "v012",
+      "description": "AMM 长方体布局美化与轴线、标签简化，TeX 不变",
       "source": "Main.tex",
       "source_sha256": "a28e550e9f508a0d776b8a845f867e20da7a63d9864e35f21ba42a00d4d6c34f",
       "included_source": "Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
       "figure": "01_amm_axis_mixing.pdf",
-      "figure_sha256": "2ba9b3c5796683e5ae17d1468b2e103d1dc36a9cb55f1a00994e9e4dd8030237",
+      "figure_sha256": "85f66eabec67fd2387249349d6e84fdabc15e48d0cfb4cb641914f0eb423ce00",
       "pdf": "Main.pdf",
-      "pdf_sha256": "689f23c5f0857714ca4cfd070a71343f95a747518094a62180bf5b2cf6dd531c",
+      "pdf_sha256": "2692da32eff942a5e4ce75fc9c9ab67c40db03b348325a03bfc0958ce9eac08b",
       "pages": 13,
-      "git_tag": "paper-v011",
+      "git_tag": "paper-v012",
       "validation_status": "passed",
-      "figure_source": "figures/amm_axis_mixing/01_amm_axis_mixing.svg"
+      "figure_source": "figures/amm_axis_mixing/01_amm_axis_mixing.svg",
+      "tex_content_unchanged_from": "v011"
     }
   ],
-  "latest": "v011",
+  "latest": "v012",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

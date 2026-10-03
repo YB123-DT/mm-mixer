@@ -102,3 +102,14 @@
 编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v011 -jobname=Main Main.tex` 成功，全文为 **13 页**。33 个标签无重复，12 个交叉引用目标、26 个引用键和 6 张图均解析；没有未定义引用、超宽盒或 LaTeX 错误，保留 5 条 underfull 提示。核查独立图稿、全文缩略图及第 1–2 页，无裁切或重叠；独立图稿及单栏第一页复核得分 96/100。SVG 中完整长方体含 12 条边，S/M/D 主着色格子分别为 6/3/8 个，三组索引互不相交；D 轴 8 格仅为示意，真实维度 256。独立图 PDF 为 86 × 49.88 mm，0 个位图、104 条矢量路径且文字可提取。第 10–13 页与 v010 渲染像素一致，v010 归档的 32 个原文件均与 Git 标签逐字节一致。哈希及详细检查见 `Main-build-manifest.json` 和图稿目录的 `validation_report.json`；没有运行训练或修改实验代码。
 
 当前入口为 [Main.tex](Main.tex)，旧稿为 [archive/v010/](archive/v010/Main.tex)。版本标签为 `paper-v011`。
+
+## 2026-10-03 · v012：AMM 长方体布局与轴线、标签简化
+
+1. 修改图稿前将 v011 的主稿、补充材料、完整 PDF、六张图、参考文献、样式、编译清单、六个三轴图稿文件及原方法图来源复制到 `archive/v011/`，沿用 v010 归档依赖清单，共 32 个原文件；逐文件与 `paper-v011` 核对字节并记录 SHA256，历史 PDF 保留原始字节。
+2. 本版只调整 Figure 1 的视觉布局：移除重复标题和标签，取消透明内部网格，将 S/M/D 示例分别放在长方体顶部、右侧和前面；隐藏部分的坐标轴使用细虚线，并在外部衔接短箭头。隐藏边使用显式断段路径，避免 SVG 导出器忽略 `stroke-dasharray` 后变成实线；微调深度投影，消除 O 竖轴与前面网格近重合形成的双线。统一无衬线字体并移除跨面的彩色端帽。
+3. `Main.tex` 和 `Supplement.tex` 均不修改；主稿正文、图注、图文件引用、标签和单栏宽度继续沿用 v011。已确认两份 TeX 与 `paper-v011` 逐字节一致，主稿 CRLF 保留。
+4. 更新当前 README、版本索引、归档索引及 `versions.json`，v011 文件路径指向 `archive/v011/`，新版本登记为 v012。图文件继续使用 `01_amm_axis_mixing.pdf`，完整稿继续使用 `Main.pdf`，顶层不增加带版号副本。
+
+编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v012 -jobname=Main Main.tex` 成功，全文仍为 **13 页**。33 个标签无重复，12 个交叉引用目标、26 个引用键及 6 张图均解析；无未定义引用、超宽盒或 LaTeX 错误，保留 5 条 underfull 提示。PDF 第 2–13 页与 v011 渲染像素一致。图稿为 86 × 46.44 mm 矢量 PDF，0 个位图、76 条矢量路径且文字可提取；核对 9 条可见边、3 条显式虚线隐藏边以及互不相交的 6/3/8 个 S/M/D 主着色格子，断段几何在 PDF 导出中保留。检查独立图稿、全文缩略图及第一页单栏，独立视觉复核为 90/100；O 和隐藏边较淡但可辨认，原图注偏长，留待文字修订。v011 归档的 32 个原文件与 Git 标签字节一致。详细哈希和检查见 `Main-build-manifest.json` 与图稿 `validation_report.json`；没有运行训练或修改实验代码。
+
+当前入口为 [Main.tex](Main.tex)，旧稿为 [archive/v011/](archive/v011/Main.tex)。版本标签为 `paper-v012`。

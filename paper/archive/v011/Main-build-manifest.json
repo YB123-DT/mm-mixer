@@ -1,0 +1,77 @@
+{
+  "version": "v011",
+  "date": "2026-10-03",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v011 -jobname=Main Main.tex",
+  "inputs": {
+    "Main.tex": "a28e550e9f508a0d776b8a845f867e20da7a63d9864e35f21ba42a00d4d6c34f",
+    "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+    "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
+    "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
+    "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
+    "01_amm_axis_mixing.pdf": "2ba9b3c5796683e5ae17d1468b2e103d1dc36a9cb55f1a00994e9e4dd8030237",
+    "MM-Mixer.pdf": "0e7fb745d20bf0d456d764fa1107ecaf9cc9947bf7551762fe91a56a24b90b35",
+    "02_amm_projection_axes.pdf": "b0be34880c0b67d6af05a2178ef1cc9fbdb79bc64c295f68aab98b26f7cd46eb",
+    "iemocap-component-ablation-tsne-11panel.pdf": "63c156d5a18b07c8e44a43a9a9e5e09042c2580dff6d5b62a63a23e7e123de2f",
+    "meld-component-ablation-tsne-11panel.pdf": "f00e998a53f4c6a822c1b2bf7dd2f7e34f06a866be788af63072f13a98fa758f",
+    "model-comparison-tsne-16panel.pdf": "f6e726e2ec5ec873d3f738a556f2b3fee180ea5a207eaccc25c13ea4241407c5"
+  },
+  "outputs": {
+    "Main.pdf": {
+      "pages": 13,
+      "sha256": "689f23c5f0857714ca4cfd070a71343f95a747518094a62180bf5b2cf6dd531c"
+    },
+    "01_amm_axis_mixing.pdf": {
+      "pages": 1,
+      "sha256": "2ba9b3c5796683e5ae17d1468b2e103d1dc36a9cb55f1a00994e9e4dd8030237"
+    },
+    "figures/amm_axis_mixing/01_amm_axis_mixing.svg": {
+      "sha256": "757e3deae0a6e13574249c6f205edb5b9da9b325cb2bc0d9149e5210b96f2a13"
+    }
+  },
+  "checks": {
+    "source_scope_only_figure1_caption": true,
+    "source_newlines": "CRLF",
+    "supplement_unchanged": true,
+    "unique_labels": 33,
+    "resolved_reference_targets": 12,
+    "resolved_citation_keys": 26,
+    "included_graphics": 6,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "underfull_messages": 5,
+    "figure_pdf_raster_images": 0,
+    "figure_pdf_vector_paths": 104,
+    "figure_pdf_text_extractable": true,
+    "figure_pdf_size_mm": [
+      86.0,
+      49.88
+    ],
+    "figure1_single_column": true,
+    "cuboid_edges": 12,
+    "primary_colored_cells": {
+      "M": 3,
+      "S": 6,
+      "D": 8
+    },
+    "colored_cell_sets_disjoint": true,
+    "lower_mapping_panels_absent": true,
+    "pixel_identical_pages_from_v010": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "v010_archive_files_verified_against_tag": 32
+  },
+  "visual_review": {
+    "score": 96,
+    "threshold": 90,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [],
+    "suggestions": [],
+    "reasoning": "Independent visual review of the standalone SVG/PNG and manuscript page 1 passed. The complete cuboid, three disjoint full-cell axis vectors, labels and origin are legible without clipping or overlap. The caption states that the other two indices are fixed, D is schematic and views are not temporal. The lower panels are absent."
+  },
+  "visual_review_provenance": "Standalone SVG/PNG, detailed pages 1–2, full 13-page contact sheet; independent review of figure and manuscript page 1. Direct raster comparison with v010 for unchanged pages.",
+  "scope": "Redraw Figure 1 with a complete cuboid and disjoint full-cell S/M/D strips; remove lower operation panels. Only the figure caption changes in Main.tex, all other manuscript bytes preserved."
+}

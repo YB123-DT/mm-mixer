@@ -2,7 +2,7 @@
 
 当前修改与编译入口是 [Main.tex](Main.tex)，它调用 [Supplement.tex](Supplement.tex)，完整 PDF 是 [Main.pdf](Main.pdf)。
 
-两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；v010 将 Figure 1 替换为 AMM 三轴交互原理图，v011 按作者要求改为完整长方体及错开的三轴格子示例，移除下半映射流程。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
+两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v012 优化 Figure 1 的长方体布局，将 S/M/D 示例分别放在顶部、右侧和前面，简化标题、标签与轴线。v011 已移除下半映射流程；本次不修改 TeX 正文或图注。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
 
 `paper/` 顶层只保留当前版本及其依赖：主稿、补充材料、完整 PDF、当前图文件、AAAI 样式与参考文献、版本索引和操作日志。`MM-Mixer.pdf` 是当前稿引用的架构图，完整论文请打开 `Main.pdf`。
 
@@ -14,7 +14,7 @@ paper/
   当前图文件、样式、参考文献和索引
   figures/amm_axis_mixing/               新 Figure 1 图稿
   figures/motivation/                     正文原有 AMM 图稿
-  archive/v001/ ... archive/v010/         历史版本
+  archive/v001/ ... archive/v011/         历史版本
   build/                                 临时编译与验证
 ```
 

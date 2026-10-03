@@ -13,51 +13,35 @@ import fitz
 
 HERE = Path(__file__).resolve().parent
 PAPER = HERE.parents[1]
-W, H = 1000, 540
+W, H = 1000, 580
 WIDTH_MM = 86
 HEIGHT_MM = WIDTH_MM * H / W
-INK = "#354152"
-GRID = "#c3cdd7"
-COLORS = {"S": "#8ebdd3", "M": "#b5a8d1", "D": "#e7bd8d"}
-LABELS = {"S": "#347b9c", "M": "#77609d", "D": "#a66f32"}
+INK = "#243447"
+GRID = "#93a4b3"
+COLORS = {"S": "#75b4d8", "M": "#b5a2d6", "D": "#e7b475"}
+LABELS = {"S": "#28668f", "M": "#71549e", "D": "#a96b24"}
 parts: list[str] = []
 
 
 def text(x, y, value, size=29, color=INK, anchor="start", weight="normal"):
-    parts.append(f'<text x="{x}" y="{y}" font-family="Helvetica, Arial, sans-serif" '
+    parts.append(f'<text x="{x}" y="{y}" font-family="Times New Roman, Times, serif" '
                  f'font-size="{size}" fill="{color}" text-anchor="{anchor}" '
                  f'font-weight="{weight}">{escape(value)}</text>')
 
 
-def line(a, b, color=GRID, width=1.3, dash=None, opacity=1):
-    if dash:
-        # MuPDF's SVG importer ignores stroke-dasharray. Explicit subpaths keep
-        # hidden edges dashed in both the editable SVG and the exported PDF.
-        on, off = map(float, dash.split())
-        length = math.dist(a, b)
-        ux, uy = (b[0]-a[0])/length, (b[1]-a[1])/length
-        segments = []
-        start = 0.0
-        while start < length:
-            end = min(start+on, length)
-            segments.append(f'M {a[0]+ux*start:.3f} {a[1]+uy*start:.3f} '
-                            f'L {a[0]+ux*end:.3f} {a[1]+uy*end:.3f}')
-            start += on+off
-        parts.append(f'<path d="{" ".join(segments)}" fill="none" '
-                     f'stroke="{color}" stroke-width="{width}" opacity="{opacity}" '
-                     f'data-edge-visibility="hidden"/>')
-        return
+def line(a, b, color=GRID, width=1.7, dash=None, opacity=1):
+    extra = f' stroke-dasharray="{dash}"' if dash else ""
     parts.append(f'<line x1="{a[0]}" y1="{a[1]}" x2="{b[0]}" y2="{b[1]}" '
-                 f'stroke="{color}" stroke-width="{width}" opacity="{opacity}"/>')
+                 f'stroke="{color}" stroke-width="{width}" opacity="{opacity}"{extra}/>')
 
 
-def polygon(points, fill="none", stroke=GRID, width=1.3, opacity=1, extra=""):
+def polygon(points, fill="none", stroke=GRID, width=1.7, opacity=1, extra=""):
     points_text = " ".join(f"{x},{y}" for x, y in points)
     parts.append(f'<polygon points="{points_text}" fill="{fill}" fill-opacity="{opacity}" '
                  f'stroke="{stroke}" stroke-width="{width}" {extra}/>')
 
 
-def arrow(a, b, color=INK, width=1.8, head=10):
+def arrow(a, b, color=INK, width=2.4, head=12):
     line(a, b, color, width)
     angle = math.atan2(b[1]-a[1], b[0]-a[0])
     back = (b[0]-head*math.cos(angle), b[1]-head*math.sin(angle))
@@ -68,16 +52,17 @@ def arrow(a, b, color=INK, width=1.8, head=10):
 
 def p(d, s, m):
     """Common origin: inner back-bottom-left vertex; V/A/T increase up."""
-    return (295 + 58*d - (203/6)*s, 338 + 20*s - 70*m)
+    return (310 + 57.5*d - 27*s, 360 + 20*s - 70*m)
 
 
-def face(vertices, fill, opacity=1):
+def face(vertices, fill, opacity=.36):
     polygon([p(*v) for v in vertices], fill, "none", 0, opacity)
 
 
-def colored_cell(axis, vertices, index):
-    polygon([p(*v) for v in vertices], COLORS[axis], LABELS[axis], 1.1,
-            extra=f'data-axis="{axis}" data-role="cell" data-index="{index}"')
+def colored_cell(axis, vertices, index, cap=False):
+    role = "cap" if cap else "cell"
+    polygon([p(*v) for v in vertices], COLORS[axis], LABELS[axis], 1.7,
+            extra=f'data-axis="{axis}" data-role="{role}" data-index="{index}"')
 
 
 def build_svg():
@@ -85,36 +70,47 @@ def build_svg():
     parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH_MM}mm" '
                  f'height="{HEIGHT_MM}mm" viewBox="0 0 {W} {H}">')
     parts.append('<title>AMM tensor with three separate axis vectors</title>')
-    parts.append('<desc>A complete cuboid has three modality rows, '
+    parts.append('<desc>A complete transparent cuboid has three modality rows, '
                  'six learned projection views and a schematic feature dimension. '
                  'Blue, purple and orange full-cell strips are spatially separated '
                  'and show vectors along S, M and D, respectively.</desc>')
     parts.append(f'<rect width="{W}" height="{H}" fill="white"/>')
+    text(500, 40, "AMM: three representation axes", 32, anchor="middle", weight="bold")
 
-    # Only visible faces carry grids. Hidden edges below retain the full cuboid.
-    face([(8,0,0),(8,6,0),(8,6,3),(8,0,3)], "#edf2f6")
-    face([(0,0,3),(8,0,3),(8,6,3),(0,6,3)], "#f4f7fa")
-    face([(0,6,0),(8,6,0),(8,6,3),(0,6,3)], "#fafbfc")
+    # All six faces are present. Transparency exposes the inner common origin.
+    face([(0,0,0),(8,0,0),(8,0,3),(0,0,3)], "#edf2f6", .18)
+    face([(0,0,0),(8,0,0),(8,6,0),(0,6,0)], "#edf2f6", .12)
+    face([(8,0,0),(8,6,0),(8,6,3),(8,0,3)], "#edf2f6", .45)
+    face([(0,0,0),(0,6,0),(0,6,3),(0,0,3)], "#edf2f6", .26)
+    face([(0,0,3),(8,0,3),(8,6,3),(0,6,3)], "#eef3f7", .65)
+    face([(0,6,0),(8,6,0),(8,6,3),(0,6,3)], "#f3f6f9", .35)
 
-    # M: fixed d=7, s=1. Three visible cells on the right face.
+    # M: fixed d=0, s=1. Three full cells, one per modality.
     for m in range(3):
-        colored_cell("M",[(8,1,m),(8,2,m),(8,2,m+1),(8,1,m+1)],m)
-    # S: fixed m=2, d=4. Six projection cells on the top face.
+        colored_cell("M",[(0,1,m),(0,2,m),(0,2,m+1),(0,1,m+1)],m)
+    colored_cell("M",[(0,1,3),(1,1,3),(1,2,3),(0,2,3)],"top",cap=True)
+    # S: fixed m=2, d=6. All six projection cells on the top.
     for s in range(6):
-        colored_cell("S",[(4,s,3),(5,s,3),(5,s+1,3),(4,s+1,3)],s)
+        colored_cell("S",[(6,s,3),(7,s,3),(7,s+1,3),(6,s+1,3)],s)
+    colored_cell("S",[(6,6,2),(7,6,2),(7,6,3),(6,6,3)],"front",cap=True)
     # D: fixed m=0, s=5. Eight schematic cells represent the 256 channels.
     for d in range(8):
         colored_cell("D",[(d,6,0),(d+1,6,0),(d+1,6,1),(d,6,1)],d)
+    colored_cell("D",[(8,5,0),(8,6,0),(8,6,1),(8,5,1)],"right",cap=True)
 
-    for d in range(1,8):
+    for d in range(9):
         line(p(d,0,3),p(d,6,3))
         line(p(d,6,0),p(d,6,3))
-    for s in range(1,6):
+    for s in range(7):
         line(p(0,s,3),p(8,s,3))
         line(p(8,s,0),p(8,s,3))
-    for m in range(1,3):
+    for m in range(4):
         line(p(0,6,m),p(8,6,m))
         line(p(8,0,m),p(8,6,m))
+        line(p(0,0,m),p(0,6,m),GRID,1.2,"5 5",.40)
+    # The far-left face grid is faint, distinguishing it from the front face.
+    for s in range(1,6):
+        line(p(0,s,0),p(0,s,3),GRID,1.2,"5 5",.38)
 
     edges=[]
     for s in [0,6]:
@@ -124,26 +120,25 @@ def build_svg():
     for d in [0,8]:
         for s in [0,6]: edges.append((p(d,s,0),p(d,s,3)))
     parts.append('<g id="cuboid-edges">')
-    origin=p(0,0,0)
-    for a,b in edges:
-        hidden = a==origin or b==origin
-        line(a,b,"#8998a8" if hidden else "#718498",
-             1.25 if hidden else 1.9,"5 6" if hidden else None,.65 if hidden else 1)
+    for a,b in edges: line(a,b,"#8295a6",2.4)
     parts.append('</g>')
 
-    # Axes share the three hidden cuboid edges and extend only outside the body.
-    arrow(p(8,0,0),(824,338))
-    arrow(p(0,0,3),(295,73))
-    arrow(p(0,6,0),p(0,7.2,0))
-    parts.append(f'<circle cx="{origin[0]}" cy="{origin[1]}" r="3.6" '
-                 f'fill="{INK}" stroke="white" stroke-width="1.2"/>')
-    text(305,360,"O",23,color="#6f7f90")
-    text(312,83,"M = 3",29,LABELS["M"])
-    text(838,348,"D = 256",29,LABELS["D"])
-    text(28,523,"S = 6",29,LABELS["S"])
+    text(710,177,"S",31,LABELS["S"],weight="bold")
+    text(211,263,"M",31,LABELS["M"],weight="bold")
+    text(630,451,"D",31,LABELS["D"],weight="bold")
+    origin=p(0,0,0)
+    arrow(origin,(865,360),INK)
+    arrow(origin,(310,95),INK)
+    arrow(origin,(103,514),INK)
+    parts.append(f'<circle cx="{origin[0]}" cy="{origin[1]}" r="5.5" '
+                 f'fill="{INK}" stroke="white" stroke-width="1.4"/>')
+    text(322,387,"O",27)
+    text(333,105,"M = 3",30,LABELS["M"])
+    text(873,349,"D = 256",29,LABELS["D"])
+    text(61,550,"S = 6",30,LABELS["S"])
     for m,name in enumerate(["V","A","T"]):
         x,y=p(0,6,m+.5)
-        text(x-28,y+10,name,29,INK,"middle")
+        text(x-31,y+10,name,32,INK,"middle","bold")
     parts.append('</svg>')
     return '\n'.join(parts)
 
@@ -167,14 +162,10 @@ def main(export_only=False):
         'native_size_mm':[WIDTH_MM,HEIGHT_MM],'tensor_shape':[3,6,256],
         'display_grid_shape':[3,6,8],'modality_axis_order_from_origin':['V','A','T'],
         'bounding_edge_count':12,
-        'selected_indices':{'S':{'m':2,'d':4,'varies':'s'},
-                            'M':{'s':1,'d':7,'varies':'m'},
+        'selected_indices':{'S':{'m':2,'d':6,'varies':'s'},
+                            'M':{'s':1,'d':0,'varies':'m'},
                             'D':{'m':0,'s':5,'varies':'d'}},
         'primary_colored_cell_counts':{'S':6,'M':3,'D':8},
-        'visible_face_strips':{'S':'top','M':'right','D':'front'},
-        'visible_edges':9,'hidden_edges':3,
-        'axis_style':'Hidden cuboid edges from O, then short external arrow segments',
-        'internal_grid_shown':False,'colored_caps_shown':False,'title_shown':False,
         'operators':{'S':{'type':'MLP','widths':[6,12,6]},
                      'M':{'type':'bias-free Linear','widths':[3,3]},
                      'D':{'type':'MLP','widths':[256,1536,256]}},
