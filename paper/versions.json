@@ -166,22 +166,36 @@
     {
       "version": "v012",
       "description": "AMM 长方体布局美化与轴线、标签简化，TeX 不变",
-      "source": "Main.tex",
+      "source": "archive/v012/Main.tex",
       "source_sha256": "a28e550e9f508a0d776b8a845f867e20da7a63d9864e35f21ba42a00d4d6c34f",
-      "included_source": "Supplement.tex",
+      "included_source": "archive/v012/Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
-      "figure": "01_amm_axis_mixing.pdf",
+      "figure": "archive/v012/01_amm_axis_mixing.pdf",
       "figure_sha256": "85f66eabec67fd2387249349d6e84fdabc15e48d0cfb4cb641914f0eb423ce00",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v012/Main.pdf",
       "pdf_sha256": "2692da32eff942a5e4ce75fc9c9ab67c40db03b348325a03bfc0958ce9eac08b",
       "pages": 13,
       "git_tag": "paper-v012",
       "validation_status": "passed",
-      "figure_source": "figures/amm_axis_mixing/01_amm_axis_mixing.svg",
-      "tex_content_unchanged_from": "v011"
+      "figure_source": "archive/v012/figures/amm_axis_mixing/01_amm_axis_mixing.svg",
+      "tex_content_unchanged_from": "v011",
+      "archive_directory": "archive/v012"
+    },
+    {
+      "version": "v013",
+      "description": "效率表加入 FLOPs 并对齐实例参数量与统计范围",
+      "source": "Main.tex",
+      "source_sha256": "6ac718e21bea8ac781b3868f552702a9affa35b746d92f14db3cbef480f4e957",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "2a6befd2935e1f21a796223effc25bdf80d8df12725afd6a3d2fb2c6e21b8320",
+      "pages": 13,
+      "git_tag": "paper-v013",
+      "validation_status": "passed"
     }
   ],
-  "latest": "v012",
+  "latest": "v013",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

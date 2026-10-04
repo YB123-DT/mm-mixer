@@ -113,3 +113,15 @@
 编译及验证：`latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v012 -jobname=Main Main.tex` 成功，全文仍为 **13 页**。33 个标签无重复，12 个交叉引用目标、26 个引用键及 6 张图均解析；无未定义引用、超宽盒或 LaTeX 错误，保留 5 条 underfull 提示。PDF 第 2–13 页与 v011 渲染像素一致。图稿为 86 × 46.44 mm 矢量 PDF，0 个位图、76 条矢量路径且文字可提取；核对 9 条可见边、3 条显式虚线隐藏边以及互不相交的 6/3/8 个 S/M/D 主着色格子，断段几何在 PDF 导出中保留。检查独立图稿、全文缩略图及第一页单栏，独立视觉复核为 90/100；O 和隐藏边较淡但可辨认，原图注偏长，留待文字修订。v011 归档的 32 个原文件与 Git 标签字节一致。详细哈希和检查见 `Main-build-manifest.json` 与图稿 `validation_report.json`；没有运行训练或修改实验代码。
 
 当前入口为 [Main.tex](Main.tex)，旧稿为 [archive/v011/](archive/v011/Main.tex)。版本标签为 `paper-v012`。
+
+## 2026-10-04 · v013：效率表加入 FLOPs
+
+1. 修改前核验已有 `archive/v012/`：全部清单文件哈希与当前旧稿一致，保留归档原字节。
+2. `Main.tex` 原 `tab:model_parameters`：单栏表从两列参数量扩展为两个数据集各列 Params/FLOPs，单位均为百万；数据逐项来自 `results/flops_20261004/baseline_comparison.csv`。
+3. 参数列改为 registered downstream parameters，与实际实例一致。MELD 的 MM-Mixer 更正为 5.71M、SDT 为 78.39M、MM-DFN 按精确值舍入为 2.87M；其余数字同样从计数记录生成。
+4. 表注明确 FLOPs 仅为矩阵/卷积、baseline 按 32 对话批含 padding 后用完整测试集有效话语归一；标注 DialogueRNN 输入模态差异及 CSS 缺权重、按原配置重建。
+5. 将 Model efficiency 段改为 Downstream model size and computation，说明 2 FLOPs/MAC 与排除项，加入 MM-Mixer 的 69.00M/68.72M 计算量。只作有证据的四个基线比较，删除旧参数降幅和模块有效性的因果归因，不声称推理更快。
+6. 通过反向还原两处修改逐字节复原原 Main.tex，确认其余正文不变，保留 CRLF；Supplement 与全部图文件不变。
+7. 完整稿编译通过，仍为 13 页，无未定义引用或 overfull；检查第 7 页单栏表及第 8 页效率段，数字和表注清晰、无溢出或重叠。更新 Main.pdf、编译清单、版本与归档索引。
+
+版本标签：`paper-v013`。证据见 `Main-build-manifest.json` 和 `results/flops_20261004/BASELINES.md`。

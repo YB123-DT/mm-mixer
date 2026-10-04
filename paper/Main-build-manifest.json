@@ -1,9 +1,9 @@
 {
-  "version": "v012",
-  "date": "2026-10-03",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/amm-v012 -jobname=Main Main.tex",
+  "version": "v013",
+  "date": "2026-10-04",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/flops-v013 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "a28e550e9f508a0d776b8a845f867e20da7a63d9864e35f21ba42a00d4d6c34f",
+    "Main.tex": "6ac718e21bea8ac781b3868f552702a9affa35b746d92f14db3cbef480f4e957",
     "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
     "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
@@ -18,82 +18,46 @@
   "outputs": {
     "Main.pdf": {
       "pages": 13,
-      "sha256": "2692da32eff942a5e4ce75fc9c9ab67c40db03b348325a03bfc0958ce9eac08b"
-    },
-    "01_amm_axis_mixing.pdf": {
-      "pages": 1,
-      "sha256": "85f66eabec67fd2387249349d6e84fdabc15e48d0cfb4cb641914f0eb423ce00"
-    },
-    "figures/amm_axis_mixing/01_amm_axis_mixing.svg": {
-      "sha256": "3783102664bdf5fcb70bc6cee685745228202781cb4c2847a07a1e672923bce4"
+      "sha256": "2a6befd2935e1f21a796223effc25bdf80d8df12725afd6a3d2fb2c6e21b8320"
     }
   },
   "checks": {
-    "main_tex_unchanged": true,
-    "source_newlines": "CRLF",
-    "supplement_unchanged": true,
-    "unique_labels": 33,
-    "resolved_reference_targets": 12,
-    "resolved_citation_keys": 26,
-    "included_graphics": 6,
-    "undefined_references_or_citations": false,
-    "overfull_boxes": false,
-    "underfull_messages": 5,
-    "figure_pdf_raster_images": 0,
-    "figure_pdf_vector_paths": 76,
-    "figure_pdf_text_extractable": true,
-    "figure_pdf_size_mm": [
-      86.0,
-      46.44
-    ],
-    "figure1_single_column": true,
-    "cuboid_edges": 12,
-    "visible_edges": 9,
-    "hidden_edges_explicit_dashed_paths": 3,
-    "hidden_segmented_paths_survive_pdf_export": true,
-    "primary_colored_cells": {
-      "M": 3,
-      "S": 6,
-      "D": 8
-    },
-    "colored_cell_sets_disjoint": true,
-    "visible_face_strips": {
-      "S": "top",
-      "M": "right",
-      "D": "front"
-    },
-    "lower_mapping_panels_absent": true,
-    "title_and_redundant_symbols_absent": true,
-    "pixel_identical_pages_from_v011": [
+    "pages": 13,
+    "no_undefined_references": true,
+    "no_overfull_boxes": true,
+    "underfull_notices": 6,
+    "unchanged_pages": [
+      1,
       2,
       3,
       4,
       5,
       6,
-      7,
-      8,
-      9,
       10,
       11,
       12,
       13
     ],
-    "v011_archive_files_verified_against_tag": 32
+    "only_table_and_efficiency_paragraph_changed": true,
+    "archive_verified": true,
+    "source_newlines": "CRLF",
+    "supplement_unchanged": true,
+    "visual_verdict": {
+      "score": 94,
+      "verdict": "pass",
+      "category_match": true,
+      "differences": [
+        "Efficiency table expanded from three to five columns within one column.",
+        "Longer caption and paragraph move text across pages 7–9."
+      ],
+      "suggestions": [],
+      "reasoning": "Table numbers and grouped headers remain readable, with no overlap or clipping. All changed pages retain the two-column manuscript layout.",
+      "next_actions": []
+    }
   },
-  "visual_review": {
-    "score": 90,
-    "threshold": 90,
-    "verdict": "pass",
-    "category_match": true,
-    "differences": [
-      "O and the hidden edges are light at single-column size but remain legible.",
-      "The existing caption is relatively long compared with the simplified figure."
-    ],
-    "suggestions": [
-      "Keep the current geometry; caption shortening can be considered in a later prose revision."
-    ],
-    "reasoning": "Independent review of the figure and manuscript page 1 found clear face separation, disjoint colored strips, and a complete outline. Explicit hidden dashes and adjusted depth remove axis/grid ambiguity and the near-overlap around O. No label collisions or clipping were found."
+  "evidence": {
+    "path": "../results/flops_20261004/baseline_comparison.csv",
+    "sha256": "b168f1c7b18b603ab1ef33b5b6c4d78e9248372918d247408546c21070f71b18"
   },
-  "visual_review_provenance": "Standalone SVG/PNG and manuscript page 1; full 13-page contact sheet; pages 2–13 verified pixel-identical to v011. Independent review found and corrected the near-overlap of O and a front grid line.",
-  "scope": "Visual revision of Figure 1 only: visible-face grids, separate top/right/front color strips, shared hidden-edge axes, unified typography. Main.tex and Supplement.tex remain byte-identical to v011."
+  "scope": "Efficiency table and corresponding paragraph only; parameter counts match profiled instances."
 }

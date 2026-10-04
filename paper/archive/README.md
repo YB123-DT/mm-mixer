@@ -16,4 +16,6 @@
 | v010 | AMM 三轴原理图替换引言场景图 | [源码](v010/Main.tex) | [完整 PDF](v010/Main.pdf) | paper-v010 |
 | v011 | 完整 AMM 长方体与错开的三轴格子示例，移除下半映射流程 | [源码](v011/Main.tex) | [完整 PDF](v011/Main.pdf) | paper-v011 |
 
+| v012 | AMM 长方体布局与轴线、标签简化 | [源码](v012/Main.tex) | [完整 PDF](v012/Main.pdf) | paper-v012 |
+
 每个版本目录包含编译所需的样式、参考文献和图文件。v003 还保留了原独立 Supplement、宽幅场景图及当时的图稿和导出记录。归档 PDF 保留原始字节；复跑或验证输出写入 `paper/build/`。

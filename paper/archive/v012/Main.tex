@@ -816,33 +816,32 @@ respectively.}
 
 \begin{table}[t]
 \centering
-\small
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{lrrrr}
+\resizebox{0.6\linewidth}{!}{
+\begin{tabular}{lcc}
 \toprule
-& \multicolumn{2}{c}{IEMOCAP} & \multicolumn{2}{c}{MELD} \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}
-Model & Params & FLOPs & Params & FLOPs \\
+Model & IEMOCAP & MELD \\
 \midrule
-DialogueRNN$^{\dagger}$ & 8.88 & 42.78 & 2.67 & 53.97 \\
-MMGCN & 2.70 & 482.41 & 2.55 & 54.93 \\
-MM-DFN & 2.06 & 351.20 & 2.87 & 131.49 \\
-M3Net & 6.55 & 11.71 & 14.11 & 29.01 \\
-Ada2I & 35.67 & 124.89 & 18.56 & 87.94 \\
-SDT & 79.69 & 289.80 & 78.39 & 385.88 \\
-CSS$^{\ddagger}$ & 50.45 & 200.96 & 53.40 & 286.10 \\
+%DialogueRNN & 8.880M & 2.667M \\
+DialogueRNN & 8.88M & 2.67M \\
+%MMGCN & 2.702M & 2.552M \\
+MMGCN & 2.70M & 2.55M \\
+%MM-DFN & 2.064M & 2.875M \\
+MM-DFN & 2.06M & 2.88M \\
+%M3Net & 6.553M & 14.110M \\
+M3Net & 6.55M & 14.11M \\
+%Ada2I & 35.671M & 18.564M \\
+Ada2I & 35.67M & 18.56M \\
+%SDT & 79.688M & 68.949M \\
+SDT & 79.69M & 68.95M \\
+%CSS & 50.453M & 53.399M \\
+CSS & 50.45M & 53.40M \\
 \midrule
-MM-Mixer & 6.36 & 69.00 & 5.71 & 68.72 \\
+%MM-Mixer & 6.358M & 6.107M \\
+MM-Mixer & 6.36M & 6.11M \\
 \bottomrule
-\end{tabular}
-\caption{Downstream registered parameters (millions) and
-matrix/convolution FLOPs (millions per valid utterance).
-Baseline counts include padding in batches of 32 dialogues and are
-averaged over the full test set; MM-Mixer uses fixed-length utterance
-vectors. Input settings differ across models.
-$^{\dagger}$DialogueRNN uses text only on IEMOCAP and text--audio
-on MELD. $^{\ddagger}$CSS is reconstructed from its original
-configuration because the saved weights are unavailable.}
+\end{tabular}}
+\caption{Trainable downstream parameters in millions. Pretrained
+feature extractors are excluded.}
 \label{tab:model_parameters}
 \end{table}
 
@@ -907,19 +906,10 @@ The experimental results on the IEMOCAP benchmark are shown in Table~\ref{tab:ie
 The experimental results on the MELD benchmark are shown in Table~\ref{tab:meld_results}. The seven-class MELD benchmark is larger and more imbalanced, but MM-Mixer achieves the highest overall ACC (68.36\%) and WF1 (67.62\%), improving over CSS by 1.11\% and 1.34\%, respectively. Besides, it also achieves the strongest F1 score across all seven emotion categories. The largest gains over CSS occur for fear and disgust, with improvements of 10.29\% and 4.96\%. These two minority emotions are particularly difficult for existing methods, several of which obtain near-zero or substantially lower F1 scores. The results
 suggest that preserving axis-specific information while injecting explicit pairwise interactions helps retain weak but discriminative multimodal cues. Nevertheless, the absolute performance on fear and disgust remains below that of the majority emotions, highlighting the remaining challenge of robust minority-class modeling.
 
-\paragraph{Downstream model size and computation.}
-Table~\ref{tab:model_parameters} reports the parameter counts and
-matrix/convolution FLOPs of the evaluated implementations. We count
-one multiply--accumulate as two FLOPs, excluding pretrained feature
-extraction, backward computation, and non-matrix operations such as
-normalization, activations, and elementwise/scatter message aggregation.
-MM-Mixer uses 6.36M and 5.71M registered downstream parameters and
-requires 69.00M and 68.72M FLOPs per utterance on IEMOCAP and MELD,
-respectively. Under this counting convention, its matrix computation
-is lower than that of MM-DFN, Ada2I, SDT, and CSS on both datasets,
-although it is not the lowest among the evaluated implementations.
-These implementation-level counts depend on the input representations
-and batching and do not establish an inference-speed advantage.
+\paragraph{Model efficiency.}
+Table~\ref{tab:model_parameters} shows that MM-Mixer only uses 6.36M and 6.11M trainable downstream parameters on IEMOCAP and MELD, respectively. In comparison, SDT uses 79.69M and 68.95M parameters, whereas CSS uses 50.45M and 53.40M on the two datasets. Consequently,
+MM-Mixer reduces the trainable parameter count relative to SDT and CSS by 92.0\% and 87.4\% on IEMOCAP, and by 91.1\% and 88.6\% on MELD. Although several earlier graph-based baselines are smaller, MM-Mixer remains markedly more compact than these recent multimodal fusion
+models while retaining stronger performance. These results indicate that structured axis-wise interaction and a compact pairwise correction can provide effective multimodal modeling without requiring a large downstream network.
 
 
 \begin{table}[t]
