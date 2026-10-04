@@ -1,0 +1,9 @@
+{
+  "dataset": "iemocap",
+  "checkpoint": "checkpoint/iemocap_causal_s13_best.pt",
+  "causal_history": true,
+  "samples": 1623,
+  "feature_dim": 900,
+  "accuracy": 0.6389402341343191,
+  "weighted_f1": 0.6369277078635569
+}

@@ -1,0 +1,18 @@
+{
+  "dataset": "MELD",
+  "device": "Tesla V100-SXM2-32GB",
+  "timing_scope": "model forward only; disk I/O and H2D excluded",
+  "batch_size": 32,
+  "warmup_full_test_passes": 2,
+  "timed_full_test_passes": 10,
+  "utterances": 2610,
+  "seconds_per_full_test_mean": 5.9483730618376285,
+  "seconds_per_full_test_std": 0.5981845722124861,
+  "ms_per_utterance": 2.279070138635107,
+  "feature_shape": [
+    2610,
+    900
+  ],
+  "acc_percent": 60.383141762452105,
+  "wf1_percent": 57.60239093377185
+}

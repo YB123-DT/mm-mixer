@@ -1,0 +1,147 @@
+{
+  "recovered_on": "2026-10-04",
+  "source_server": "biggpu",
+  "source_root": "/data2/yb/paper/tsne_baselines_20260728",
+  "original_files": {
+    "figures/inference-speed.json": {
+      "sha256": "b069fb5f379c688eadc865e86a4e924b22df19615c9f48c989b579eaba3eff87"
+    },
+    "summarize_benchmarks.py": {
+      "sha256": "4ffe0ac9e3e3055d35b1ed0f614a442f8db0260eba529c4df1c4d94d123391f8"
+    },
+    "extract_mm_mixer_final.py": {
+      "sha256": "3616642c610171c7e9fe650802f93b6387946cbfe548c0fcebee40af353e4c4d"
+    },
+    "extract_css.py": {
+      "sha256": "cb581cbbece241c005fb8228ee67a8448844bd324069d8b399736474cdd8035d"
+    },
+    "extract_ada2i.py": {
+      "sha256": "618aa63e3aea8129ad05be1e6b34eae73a0b04f94fa2ad25866399c1399dac33"
+    },
+    "DialogueRNN/benchmark_checkpoint.py": {
+      "sha256": "204478e8d321a213e530ffc96e35644cfe4547c77eeeef613707b235d2c00588"
+    },
+    "MMGCN/export_checkpoint.py": {
+      "sha256": "fc2fd6c382409d59cadcd8801fa7b99b35c368f4f5ffbb66f2c4fcb27c2de270"
+    },
+    "SDT/run_export.py": {
+      "sha256": "4d6f4c73a4e629ae468cccc7f66d17f43b2f890e7b806fce5397496c22a16029"
+    },
+    "results/ada2i/iemocap/benchmark.json": {
+      "sha256": "d5f106f412c18c7c7f3e914fe03d828efed132a7f39a4041c116504902eec796"
+    },
+    "results/ada2i/meld/benchmark.json": {
+      "sha256": "edea9aa5b9b7edd28613a1444087e6bb89ad79c5cd664da7420fe64e106d900b"
+    },
+    "results/css/iemocap/benchmark.json": {
+      "sha256": "320fabf523a2e68194ef19671774f8388bc44f56efec06a2822f62daa00a4e39"
+    },
+    "results/css/meld/benchmark.json": {
+      "sha256": "5de184e96b8c27fb711b39a7d76d1bbd8a5b80ce920edad8ef50d11a4ed571d7"
+    },
+    "results/dialoguernn/iemocap/benchmark.json": {
+      "sha256": "ba5620346efe1c7e912c79f888bf50e5d39b2d7f0f1d6003d711e4720fbc1d3c"
+    },
+    "results/dialoguernn/meld/benchmark.json": {
+      "sha256": "c0b3751f6ace750cd3c6a1262773dbe5e23344212c7ee64bb7fc8f7148acd34c"
+    },
+    "results/m3net/iemocap/benchmark.json": {
+      "sha256": "704f11184b8c93a10e38ec8c8cc83b397506566b0c54f4a8b954dabf970cf0bf"
+    },
+    "results/m3net/meld/benchmark.json": {
+      "sha256": "8616b8ec1ad07689f77d2f84c5aa4ceb6cca38da58c5038aaf852a6dea102c1c"
+    },
+    "results/mm_mixer/iemocap/benchmark.json": {
+      "sha256": "18536db7fa6ac5270f25cb94cca59289d19fd030b3562de907e5dc8ae1654f40"
+    },
+    "results/mm_mixer/meld/benchmark.json": {
+      "sha256": "9392d8d6fa1ebd521ce1660bea2d81da49214f558d91c1321b1e081ced8d87a1"
+    },
+    "results/mmdfn/iemocap/benchmark.json": {
+      "sha256": "2cae7166ef39e076cf77f9024b74787235ec19707e27befa70050ea115a5eeb3"
+    },
+    "results/mmdfn/meld/benchmark.json": {
+      "sha256": "27f0a6e4c65d6a619dccf3eb23c55f64821a851c85a2978139f9a5bca1eba0d6"
+    },
+    "results/mmgcn/iemocap/benchmark.json": {
+      "sha256": "5d33203d13fd20b18e9eb8d566b29b9a07d6f2fda81e1229a06b2e676d724f80"
+    },
+    "results/mmgcn/meld/benchmark.json": {
+      "sha256": "4980a090e06253171ea72563a744bbbf0e295794378f2bf79accff1fedd9a1c2"
+    },
+    "results/sdt/iemocap/benchmark.json": {
+      "sha256": "f14aa048d70aac8a37094db2fabc24a7ac8fe2600475f4a9c1e8fab70501524e"
+    },
+    "results/sdt/meld/benchmark.json": {
+      "sha256": "364b2fbb3dd857c9a757c41636d415165efe715295ec3bb3dd31073486921ef3"
+    },
+    "results/ada2i/iemocap/metrics.json": {
+      "sha256": "a33d5a8b9002f03636a13a3a198453d36a252aebdd8b0c77cc77e34a447b5e61"
+    },
+    "results/ada2i/meld/metrics.json": {
+      "sha256": "49438091776e9e133d5f00c45c926029d09e454ede5d08f52c6736e7e497df10"
+    },
+    "results/css/iemocap/metrics.json": {
+      "sha256": "71604bbb4c5a415c1086db2aa06625658e510e22c5aebf08d6c8e3591f36621a"
+    },
+    "results/css/meld/metrics.json": {
+      "sha256": "f5587dccb809d0e643ed3d703c41a0e6ee38ca9dc193cce1d019104d8367dbca"
+    },
+    "results/dialoguernn/iemocap/metrics.json": {
+      "sha256": "551d98b8d0869373ae3b86375e8b762d1d9e134e3e95e2fca97df04710fc33da"
+    },
+    "results/dialoguernn/meld/metrics.json": {
+      "sha256": "630574d48b3e73a48eba9dcd52f351d992af35d53accd83f640d6d6a5a631079"
+    },
+    "results/m3net/iemocap/metrics.json": {
+      "sha256": "66830f028e4621b22fb1c566204f4f30b72fc90159be6b627cf04b777d8c5c66"
+    },
+    "results/m3net/meld/metrics.json": {
+      "sha256": "f9186e186e0d6e53c29529f95e9197953f9633b6f6a0d8d55db85180c8e7992e"
+    },
+    "results/mm_mixer/iemocap/metrics.json": {
+      "sha256": "428e935dcb37697fefbe793b6b07ed5b297b12b24eb9942a95178959a8e943f9"
+    },
+    "results/mm_mixer/meld/metrics.json": {
+      "sha256": "06a39f9d9bef4695cd16659919805b6ccfa52515633f24259feabcdbfab9a245"
+    },
+    "results/mmdfn/iemocap/metrics.json": {
+      "sha256": "29dd1f319039af2754c328fc886a1a414574b49946634816fffcd6303ecd13d1"
+    },
+    "results/mmdfn/meld/metrics.json": {
+      "sha256": "20ec835fef594672ee7b1e951d0301198fd51ff726d7534d80d41d06ec80091d"
+    },
+    "results/mmgcn/iemocap/metrics.json": {
+      "sha256": "b1c479f79387353e7c6e7b2c6be2098c9e7fbbc8cdfc7f5ee7df8b4fa95da468"
+    },
+    "results/mmgcn/meld/metrics.json": {
+      "sha256": "b83fa4c38fb3b739d89902c4346bdbd3b369a822805e1a25032087dd318d3ef5"
+    },
+    "results/sdt/iemocap/metrics.json": {
+      "sha256": "9a7fee7a3f1502d839dfd9ada0070bd7136728bd40ac6f45713206ee1ce37b64"
+    },
+    "results/sdt/meld/metrics.json": {
+      "sha256": "2287b3dfadba10c5da62715ebbdd2cfd51438c409e41d4c95417fc4a1b084613"
+    }
+  },
+  "current_full_parameter_recount": {
+    "code_commit": "1b8b1fff90e19d793a99c0d0cf01c4bfd3cf51ab",
+    "server": "biggpu",
+    "device": "CPU; CUDA_VISIBLE_DEVICES empty",
+    "iemocap": {
+      "registered": 6358082,
+      "trainable": 6358082
+    },
+    "meld": {
+      "registered": 6106825,
+      "trainable": 6106825
+    }
+  },
+  "limitations": [
+    "Historical full-test amortized forward timings, not direct 1000-target measurements.",
+    "Batch setting 32 may mean dialogues or utterances; original normalizer erased this distinction.",
+    "GPU model recorded; identical physical GPU and absence of competing workloads are not established.",
+    "Historical checkpoints/features differ across systems; current frozen revision equivalence is not established.",
+    "Baseline parameter counts copied from current manuscript, not re-counted in this audit."
+  ]
+}

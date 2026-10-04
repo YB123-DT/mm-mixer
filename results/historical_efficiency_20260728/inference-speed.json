@@ -1,0 +1,154 @@
+{
+  "dialoguernn": {
+    "name": "DialogueRNN",
+    "iemocap": {
+      "ms_per_utterance": 0.4430932790879906,
+      "utterances_per_second": 2256.861133299694,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.6767174075589555,
+      "utterances_per_second": 1477.7217030771892,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "mmgcn": {
+    "name": "MMGCN",
+    "iemocap": {
+      "ms_per_utterance": 0.1881037504071954,
+      "utterances_per_second": 5316.215109136642,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.7121210253861701,
+      "utterances_per_second": 1404.2556873780247,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "mmdfn": {
+    "name": "MM-DFN",
+    "iemocap": {
+      "ms_per_utterance": 0.658578242178724,
+      "utterances_per_second": 1518.4224682123972,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 2.279070138635107,
+      "utterances_per_second": 438.7754387405039,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "m3net": {
+    "name": "M3Net",
+    "iemocap": {
+      "ms_per_utterance": 0.2421708565660955,
+      "utterances_per_second": 4129.316029928939,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.21183975563666488,
+      "utterances_per_second": 4720.549251931452,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "ada2i": {
+    "name": "Ada2I",
+    "iemocap": {
+      "ms_per_utterance": 0.24920088092401138,
+      "utterances_per_second": 4012.826906117275,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.2979176043500674,
+      "utterances_per_second": 3356.6327917465132,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "sdt": {
+    "name": "SDT",
+    "iemocap": {
+      "ms_per_utterance": 0.10857103813958348,
+      "utterances_per_second": 9210.559437723696,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.1058485250566797,
+      "utterances_per_second": 9447.4627725282,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "css": {
+    "name": "CSS",
+    "iemocap": {
+      "ms_per_utterance": 0.046180025487908664,
+      "utterances_per_second": 21654.383890754467,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.07696321730098733,
+      "utterances_per_second": 12993.219814203003,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  },
+  "mm_mixer": {
+    "name": "MM-Mixer",
+    "iemocap": {
+      "ms_per_utterance": 0.3132044797325972,
+      "utterances_per_second": 3192.8023534457884,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    },
+    "meld": {
+      "ms_per_utterance": 0.2955739762744656,
+      "utterances_per_second": 3383.2477831925735,
+      "batch_size": 32,
+      "warmup_passes": 2,
+      "timed_passes": 10,
+      "device": "Tesla V100-SXM2-32GB"
+    }
+  }
+}

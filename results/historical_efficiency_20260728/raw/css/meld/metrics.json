@@ -1,0 +1,10 @@
+{
+  "dataset": "meld",
+  "checkpoint": "/data2/yb/reproduction_runs/paper_meld_seed_queue_20260724/css_meld_causal/seed10073/checkpoints/css_meld_causal_seed10073_best.pt",
+  "checkpoint_epoch": 87,
+  "causal_context": true,
+  "samples": 2610,
+  "feature_dim": 1024,
+  "accuracy": 0.6724137931034483,
+  "weighted_f1": 0.6627631092336035
+}

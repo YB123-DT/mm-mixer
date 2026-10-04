@@ -1,0 +1,12 @@
+{
+  "device": "Tesla V100-SXM2-32GB",
+  "batch_size_dialogues": 32,
+  "warmup_passes": 2,
+  "measured_passes": 10,
+  "samples_per_pass": 2610,
+  "pass_seconds_mean": 0.20087399715557694,
+  "pass_seconds_std": 0.03307144921521998,
+  "milliseconds_per_utterance": 0.07696321730098733,
+  "utterances_per_second": 12993.219814203003,
+  "timing_scope": "GPU forward only; data preloaded on device"
+}

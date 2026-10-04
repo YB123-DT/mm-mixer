@@ -1,0 +1,10 @@
+{
+  "dataset": "iemocap",
+  "checkpoint": "/data2/yb/reproduction_runs/CSS/causal_iemocap_10seeds/seed61080/checkpoints/causal_iemocap_seed61080_best.pt",
+  "checkpoint_epoch": 113,
+  "causal_context": true,
+  "samples": 1623,
+  "feature_dim": 1024,
+  "accuracy": 0.7147258163894024,
+  "weighted_f1": 0.7132713023271544
+}

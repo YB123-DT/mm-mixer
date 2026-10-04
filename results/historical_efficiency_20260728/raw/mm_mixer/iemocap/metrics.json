@@ -1,0 +1,9 @@
+{
+  "dataset": "iemocap",
+  "checkpoint": "/data2/yb/multimodalERC/IEMOCAP/Model_rawaux_textpeak_cssv_v1/runs/seed2118/runs/HO_WO_TAV/best_peak_test_state_dict.pt",
+  "samples": 1623,
+  "feature_dim": 256,
+  "acc": 0.7202711028958718,
+  "wf1": 0.7216611478894907,
+  "parameters": 6358082
+}

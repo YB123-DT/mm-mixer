@@ -78,6 +78,12 @@ dataset/configuration groups with three seeds each. See the
 [run record](EXPERIMENT_RUN_20261003.md). Efficiency measurements are still
 waiting for an idle GPU; the historical results above remain separate.
 
+Previously measured baseline inference timings are available in the
+[historical efficiency comparison](results/historical_efficiency_20260728/README.md).
+It preserves the raw records and distinguishes dialogue batches from utterance
+batches; these historical full-test timings are separate from the new
+1000-target efficiency measurements.
+
 The vendored training sources retain legacy variant branches because the
 corrected Full runner imports them. **Only `--variant full` has the eight
 published results above.** Each result manifest records source

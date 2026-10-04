@@ -1,0 +1,9 @@
+{
+  "dataset": "meld",
+  "checkpoint": "/data2/yb/multimodalERC/MM_Mixer_final_20260726/outputs/formal_full_cssv_corrected_20260726/meld/full/seed2069/.peak_bundles/epoch0040-fb875f7dbbe44651ac18fbef80feddae/best_peak_test_state_dict.pt",
+  "samples": 2610,
+  "feature_dim": 256,
+  "acc": 0.6862068965517242,
+  "wf1": 0.6788676908516699,
+  "parameters": 5712070
+}

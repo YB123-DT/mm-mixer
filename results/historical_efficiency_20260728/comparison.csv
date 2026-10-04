@@ -1,0 +1,17 @@
+model,dataset,parameters_million,parameter_source,historical_mean_ms_per_utterance,historical_utterances_per_second,test_utterances,batch_size_setting,batch_unit,warmup_full_test_passes,timed_full_test_passes,device_model,status
+DialogueRNN,iemocap,8.88,existing_manuscript_table_not_recounted,0.4430932790879906,2256.861133299694,1623,32,dialogues,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+DialogueRNN,meld,2.67,existing_manuscript_table_not_recounted,0.6767174075589555,1477.7217030771892,2610,32,dialogues,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+MMGCN,iemocap,2.7,existing_manuscript_table_not_recounted,0.1881037504071954,5316.215109136642,1623,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+MMGCN,meld,2.55,existing_manuscript_table_not_recounted,0.7121210253861701,1404.2556873780247,2610,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+MM-DFN,iemocap,2.06,existing_manuscript_table_not_recounted,0.658578242178724,1518.4224682123972,1623,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+MM-DFN,meld,2.88,existing_manuscript_table_not_recounted,2.279070138635107,438.7754387405039,2610,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+M3Net,iemocap,6.55,existing_manuscript_table_not_recounted,0.2421708565660955,4129.316029928939,1623,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+M3Net,meld,14.11,existing_manuscript_table_not_recounted,0.21183975563666488,4720.549251931452,2610,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+Ada2I,iemocap,35.67,existing_manuscript_table_not_recounted,0.24920088092401138,4012.826906117275,1623,32,dialogues,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+Ada2I,meld,18.56,existing_manuscript_table_not_recounted,0.2979176043500674,3356.6327917465132,2610,32,dialogues,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+SDT,iemocap,79.69,existing_manuscript_table_not_recounted,0.10857103813958348,9210.559437723696,1623,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+SDT,meld,68.95,existing_manuscript_table_not_recounted,0.1058485250566797,9447.4627725282,2610,32,not_audited_in_this_recovery,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+CSS,iemocap,50.45,existing_manuscript_table_not_recounted,0.046180025487908664,21654.383890754467,1623,32,dialogues,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+CSS,meld,53.4,existing_manuscript_table_not_recounted,0.07696321730098733,12993.219814203003,2610,32,dialogues,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+MM-Mixer,iemocap,6.358082,frozen_Full_CPU_recount_20261004,0.3132044797325972,3192.8023534457884,1623,32,utterances,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark
+MM-Mixer,meld,6.106825,frozen_Full_CPU_recount_20261004,0.2955739762744656,3383.2477831925735,2610,32,utterances,2,10,Tesla V100-SXM2-32GB,historical_reference_not_current_matched_benchmark

@@ -1,0 +1,9 @@
+{
+  "dataset": "meld",
+  "checkpoint": "checkpoint/meld_causal_s13_best.pt",
+  "causal_history": true,
+  "samples": 2610,
+  "feature_dim": 600,
+  "accuracy": 0.6333333333333333,
+  "weighted_f1": 0.5965266850201533
+}

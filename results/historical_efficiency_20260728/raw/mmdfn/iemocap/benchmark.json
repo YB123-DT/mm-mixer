@@ -1,0 +1,18 @@
+{
+  "dataset": "IEMOCAP",
+  "device": "Tesla V100-SXM2-32GB",
+  "timing_scope": "model forward only; disk I/O and H2D excluded",
+  "batch_size": 32,
+  "warmup_full_test_passes": 2,
+  "timed_full_test_passes": 10,
+  "utterances": 1623,
+  "seconds_per_full_test_mean": 1.068872487056069,
+  "seconds_per_full_test_std": 0.27591199259702454,
+  "ms_per_utterance": 0.658578242178724,
+  "feature_shape": [
+    1623,
+    900
+  ],
+  "acc_percent": 64.01725200246457,
+  "wf1_percent": 64.03396896875198
+}
