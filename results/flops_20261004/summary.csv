@@ -1,0 +1,3 @@
+dataset,registered_parameters,matrix_convolution_flops_per_utterance,MFLOPs_per_utterance
+iemocap,6358082,68997504,68.997504
+meld,5712070,68721024,68.721024
