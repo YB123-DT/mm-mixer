@@ -7,7 +7,8 @@
 
 统计冻结版本 `1b8b1fff90e19d793a99c0d0cf01c4bfd3cf51ab` 的 Full、seed2025，
 在 biggpu 的 CPU 上加载正式保存的 checkpoint 和真实预提取输入，严格匹配权重。
-这是 MM-Mixer 的计算量统计；尚未统计其他基线，不能据此声称计算量低于基线。
+这里记录 MM-Mixer 的计算量；其他模型的完整测试集统计与比较边界见
+[基线汇总](BASELINES.md)，原始数据见 [baseline_comparison.csv](baseline_comparison.csv)。
 
 ## 口径
 

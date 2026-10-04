@@ -1,0 +1,5 @@
+Namespace(no_cuda=False, lr=0.0001, l2=1e-05, dropout=0.5, batch_size=32, hidden_dim=1024, n_head=8, epochs=200, temp=1, rank=16, order=3, tensorboard=False, class_weight=True, Dataset='IEMOCAP', seed=61080, save_best_dir='/data2/yb/reproduction_runs/CSS/causal_iemocap_10seeds/seed61080/checkpoints', run_name='causal_iemocap_seed61080', checkpoint=None, eval_only=False, causal_context=True)
+Running on GPU
+temp 1
+total parameters: 50452563
+training parameters: 50452563

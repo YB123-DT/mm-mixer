@@ -1,0 +1,17 @@
+model,dataset,matrix_convolution_flops_per_utterance,MFLOPs_per_utterance,total_test_flops,test_utterances,registered_parameters,batch_unit,weight_source,max_abs_output_difference,source
+DialogueRNN,iemocap,42784996.67282809,42.78499667282809,69440049600,1623,8880406,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,rnn/dialoguernn_iemocap.json
+DialogueRNN,meld,53966395.09578544,53.96639509578544,140852291200,2610,2666607,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,rnn/dialoguernn_meld.json
+MMGCN,iemocap,482411900.69993836,482.41190069993837,782954514836,1623,2702015,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,graph/mmgcn_iemocap.json
+MMGCN,meld,54926253.51724138,54.92625351724138,143357521680,2610,2552217,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,graph/mmgcn_meld.json
+MM-DFN,iemocap,351196308.8330253,351.1963088330253,569991609236,1623,2064415,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,graph/mmdfn_iemocap.json
+MM-DFN,meld,131490851.21839081,131.49085121839082,343191121680,2610,2874617,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,graph/mmdfn_meld.json
+M3Net,iemocap,11708704.966112139,11.708704966112139,19003228160,1623,6553160,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,graph/m3net_iemocap.json
+M3Net,meld,29007401.195402298,29.0074011954023,75709317120,2610,14109769,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,graph/m3net_meld.json
+Ada2I,iemocap,124894904.87738755,124.89490487738756,202704430616,1623,35670850,"32 dialogues, final batch may be smaller",trained_checkpoint,3.814697265625e-06,rnn/ada2i_iemocap.json
+Ada2I,meld,87942997.11264367,87.94299711264367,229531222464,2610,18564043,"32 dialogues, final batch may be smaller",trained_checkpoint,3.814697265625e-06,rnn/ada2i_meld.json
+SDT,iemocap,289795924.3869378,289.79592438693777,470338785280,1623,79687704,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,transformers/sdt_iemocap.json
+SDT,meld,385877876.3279694,385.8778763279694,1007141257216,2610,78386204,"32 dialogues, final batch may be smaller",trained_checkpoint,0.0,transformers/sdt_meld.json
+CSS,iemocap,200959988.93900186,200.95998893900185,326158062048,1623,50452563,"32 dialogues, final batch may be smaller",architecture_reconstructed_missing_checkpoint,0.0,transformers/css_iemocap.json
+CSS,meld,286097236.548659,286.09723654865905,746713787392,2610,53398634,"32 dialogues, final batch may be smaller",architecture_reconstructed_missing_checkpoint,0.0,transformers/css_meld.json
+MM-Mixer,iemocap,68997504.0,68.997504,,,6358082,1 and 32 utterances; fixed-shape per-utterance count,trained_checkpoint,0.0,iemocap_full.json
+MM-Mixer,meld,68721024.0,68.721024,,,5712070,1 and 32 utterances; fixed-shape per-utterance count,trained_checkpoint,0.0,meld_full.json

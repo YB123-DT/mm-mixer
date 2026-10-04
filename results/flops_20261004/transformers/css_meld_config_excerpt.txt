@@ -1,0 +1,5 @@
+Namespace(no_cuda=False, lr=5e-06, l2=1e-05, dropout=0.5, batch_size=32, hidden_dim=1024, n_head=8, epochs=100, temp=4, rank=16, order=4, tensorboard=False, class_weight=True, Dataset='MELD', seed=10073, save_best_dir='/data2/yb/reproduction_runs/paper_meld_seed_queue_20260724/css_meld_causal/seed10073/checkpoints', run_name='css_meld_causal_seed10073', checkpoint=None, eval_only=False, causal_context=True)
+Running on GPU
+temp 4
+total parameters: 53398634
+training parameters: 53398634
