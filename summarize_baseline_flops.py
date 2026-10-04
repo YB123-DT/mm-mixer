@@ -67,7 +67,7 @@ def summarize(root):
             "source": str(path.relative_to(root)),
         })
     with (root / "baseline_comparison.csv").open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(ordered[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(ordered[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(ordered)
     print("Verified 14 full-test baseline results and 2 fixed-shape MM-Mixer results.")
