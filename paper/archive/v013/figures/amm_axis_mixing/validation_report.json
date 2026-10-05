@@ -1,0 +1,69 @@
+{
+  "version": "v012",
+  "checks": {
+    "main_tex_unchanged": true,
+    "source_newlines": "CRLF",
+    "supplement_unchanged": true,
+    "unique_labels": 33,
+    "resolved_reference_targets": 12,
+    "resolved_citation_keys": 26,
+    "included_graphics": 6,
+    "undefined_references_or_citations": false,
+    "overfull_boxes": false,
+    "underfull_messages": 5,
+    "figure_pdf_raster_images": 0,
+    "figure_pdf_vector_paths": 76,
+    "figure_pdf_text_extractable": true,
+    "figure_pdf_size_mm": [
+      86.0,
+      46.44
+    ],
+    "figure1_single_column": true,
+    "cuboid_edges": 12,
+    "visible_edges": 9,
+    "hidden_edges_explicit_dashed_paths": 3,
+    "hidden_segmented_paths_survive_pdf_export": true,
+    "primary_colored_cells": {
+      "M": 3,
+      "S": 6,
+      "D": 8
+    },
+    "colored_cell_sets_disjoint": true,
+    "visible_face_strips": {
+      "S": "top",
+      "M": "right",
+      "D": "front"
+    },
+    "lower_mapping_panels_absent": true,
+    "title_and_redundant_symbols_absent": true,
+    "pixel_identical_pages_from_v011": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "v011_archive_files_verified_against_tag": 32
+  },
+  "visual_review": {
+    "score": 90,
+    "threshold": 90,
+    "verdict": "pass",
+    "category_match": true,
+    "differences": [
+      "O and the hidden edges are light at single-column size but remain legible.",
+      "The existing caption is relatively long compared with the simplified figure."
+    ],
+    "suggestions": [
+      "Keep the current geometry; caption shortening can be considered in a later prose revision."
+    ],
+    "reasoning": "Independent review of the figure and manuscript page 1 found clear face separation, disjoint colored strips, and a complete outline. Explicit hidden dashes and adjusted depth remove axis/grid ambiguity and the near-overlap around O. No label collisions or clipping were found."
+  }
+}

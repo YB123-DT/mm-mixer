@@ -4,7 +4,8 @@
 
 | 版本 | 内容 | TeX | PDF | Git 快照 |
 |---|---|---|---|---|
-| v013 | 效率表加入 FLOPs 并对齐实例参数量与统计范围 | [主文件](Main.tex) 与 [Supplement](Supplement.tex) | [当前完整 PDF](Main.pdf) | paper-v013 |
+| v014 | 参数量与 FLOPs 拆成独立单栏表 | [主文件](Main.tex) 与 [Supplement](Supplement.tex) | [当前完整 PDF](Main.pdf) | paper-v014 |
+| v013 | 效率表加入 FLOPs 并对齐实例参数量与统计范围 | [主文件](archive/v013/Main.tex) 与 [Supplement](archive/v013/Supplement.tex) | [归档 PDF](archive/v013/Main.pdf) | paper-v013 |
 | v012 | AMM 长方体布局美化与轴线、标签简化，TeX 不变 | [主文件](archive/v012/Main.tex) 与 [Supplement](archive/v012/Supplement.tex) | [归档 PDF](archive/v012/Main.pdf) | paper-v012 |
 | v011 | 完整 AMM 长方体与错开的三轴格子示例，移除下半映射流程 | [主文件](archive/v011/Main.tex) 与 [Supplement](archive/v011/Supplement.tex) | [归档 PDF](archive/v011/Main.pdf) | paper-v011 |
 | v010 | AMM 三轴原理图替换引言场景图 | [主文件](archive/v010/Main.tex) 与 [Supplement](archive/v010/Supplement.tex) | [归档 PDF](archive/v010/Main.pdf) | paper-v010 |

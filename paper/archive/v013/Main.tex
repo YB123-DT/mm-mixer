@@ -817,53 +817,33 @@ respectively.}
 \begin{table}[t]
 \centering
 \small
-\begin{tabular}{lrr}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrr}
 \toprule
-Model & IEMOCAP & MELD \\
+& \multicolumn{2}{c}{IEMOCAP} & \multicolumn{2}{c}{MELD} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Model & Params & FLOPs & Params & FLOPs \\
 \midrule
-DialogueRNN & 8.88 & 2.67 \\
-MMGCN & 2.70 & 2.55 \\
-MM-DFN & 2.06 & 2.87 \\
-M3Net & 6.55 & 14.11 \\
-Ada2I & 35.67 & 18.56 \\
-SDT & 79.69 & 78.39 \\
-CSS & 50.45 & 53.40 \\
+DialogueRNN$^{\dagger}$ & 8.88 & 42.78 & 2.67 & 53.97 \\
+MMGCN & 2.70 & 482.41 & 2.55 & 54.93 \\
+MM-DFN & 2.06 & 351.20 & 2.87 & 131.49 \\
+M3Net & 6.55 & 11.71 & 14.11 & 29.01 \\
+Ada2I & 35.67 & 124.89 & 18.56 & 87.94 \\
+SDT & 79.69 & 289.80 & 78.39 & 385.88 \\
+CSS$^{\ddagger}$ & 50.45 & 200.96 & 53.40 & 286.10 \\
 \midrule
-MM-Mixer & 6.36 & 5.71 \\
+MM-Mixer & 6.36 & 69.00 & 5.71 & 68.72 \\
 \bottomrule
 \end{tabular}
-\caption{Registered downstream parameters (millions), excluding
-pretrained feature extractors. Model configurations correspond to
-those profiled in Table~\ref{tab:model_flops}.}
-\label{tab:model_parameters}
-\end{table}
-
-\begin{table}[t]
-\centering
-\small
-\begin{tabular}{lrr}
-\toprule
-Model & IEMOCAP & MELD \\
-\midrule
-DialogueRNN$^{\dagger}$ & 42.78 & 53.97 \\
-MMGCN & 482.41 & 54.93 \\
-MM-DFN & 351.20 & 131.49 \\
-M3Net & 11.71 & 29.01 \\
-Ada2I & 124.89 & 87.94 \\
-SDT & 289.80 & 385.88 \\
-CSS$^{\ddagger}$ & 200.96 & 286.10 \\
-\midrule
-MM-Mixer & 69.00 & 68.72 \\
-\bottomrule
-\end{tabular}
-\caption{Downstream matrix/convolution FLOPs (millions per valid
-utterance). Baseline counts include padding in batches of 32 dialogues
-and are averaged over the full test set; MM-Mixer uses fixed-length
-utterance vectors. Input settings differ across models.
+\caption{Downstream registered parameters (millions) and
+matrix/convolution FLOPs (millions per valid utterance).
+Baseline counts include padding in batches of 32 dialogues and are
+averaged over the full test set; MM-Mixer uses fixed-length utterance
+vectors. Input settings differ across models.
 $^{\dagger}$DialogueRNN uses text only on IEMOCAP and text--audio
 on MELD. $^{\ddagger}$CSS is reconstructed from its original
 configuration because the saved weights are unavailable.}
-\label{tab:model_flops}
+\label{tab:model_parameters}
 \end{table}
 
 \section{Experiments}
@@ -928,9 +908,8 @@ The experimental results on the MELD benchmark are shown in Table~\ref{tab:meld_
 suggest that preserving axis-specific information while injecting explicit pairwise interactions helps retain weak but discriminative multimodal cues. Nevertheless, the absolute performance on fear and disgust remains below that of the majority emotions, highlighting the remaining challenge of robust minority-class modeling.
 
 \paragraph{Downstream model size and computation.}
-Tables~\ref{tab:model_parameters} and~\ref{tab:model_flops} report
-the parameter counts and matrix/convolution FLOPs of the evaluated
-implementations, respectively. We count
+Table~\ref{tab:model_parameters} reports the parameter counts and
+matrix/convolution FLOPs of the evaluated implementations. We count
 one multiply--accumulate as two FLOPs, excluding pretrained feature
 extraction, backward computation, and non-matrix operations such as
 normalization, activations, and elementwise/scatter message aggregation.

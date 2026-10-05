@@ -184,18 +184,32 @@
     {
       "version": "v013",
       "description": "效率表加入 FLOPs 并对齐实例参数量与统计范围",
-      "source": "Main.tex",
+      "source": "archive/v013/Main.tex",
       "source_sha256": "6ac718e21bea8ac781b3868f552702a9affa35b746d92f14db3cbef480f4e957",
-      "included_source": "Supplement.tex",
+      "included_source": "archive/v013/Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v013/Main.pdf",
       "pdf_sha256": "2a6befd2935e1f21a796223effc25bdf80d8df12725afd6a3d2fb2c6e21b8320",
       "pages": 13,
       "git_tag": "paper-v013",
+      "validation_status": "passed",
+      "archive_directory": "archive/v013"
+    },
+    {
+      "version": "v014",
+      "description": "参数量与 FLOPs 拆成独立单栏表",
+      "source": "Main.tex",
+      "source_sha256": "d6e46342cfcdcf627670cb4023ebd8c5470fef0974c76ad9ead78772f867d76d",
+      "included_source": "Supplement.tex",
+      "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "fbeb6c7a29081f7bcada5f2badf422272a8a0932589ddf74e3ccb7332f7cb8d3",
+      "pages": 14,
+      "git_tag": "paper-v014",
       "validation_status": "passed"
     }
   ],
-  "latest": "v013",
+  "latest": "v014",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

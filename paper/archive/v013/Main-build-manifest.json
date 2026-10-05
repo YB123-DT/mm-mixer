@@ -1,9 +1,9 @@
 {
-  "version": "v014",
-  "date": "2026-10-05",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/flops-v014 -jobname=Main Main.tex",
+  "version": "v013",
+  "date": "2026-10-04",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/flops-v013 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "d6e46342cfcdcf627670cb4023ebd8c5470fef0974c76ad9ead78772f867d76d",
+    "Main.tex": "6ac718e21bea8ac781b3868f552702a9affa35b746d92f14db3cbef480f4e957",
     "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
     "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
@@ -17,27 +17,41 @@
   },
   "outputs": {
     "Main.pdf": {
-      "pages": 14,
-      "sha256": "fbeb6c7a29081f7bcada5f2badf422272a8a0932589ddf74e3ccb7332f7cb8d3"
+      "pages": 13,
+      "sha256": "2a6befd2935e1f21a796223effc25bdf80d8df12725afd6a3d2fb2c6e21b8320"
     }
   },
   "checks": {
-    "pages": 14,
+    "pages": 13,
     "no_undefined_references": true,
     "no_overfull_boxes": true,
     "underfull_notices": 6,
-    "source_newlines": "CRLF",
+    "unchanged_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      11,
+      12,
+      13
+    ],
+    "only_table_and_efficiency_paragraph_changed": true,
     "archive_verified": true,
+    "source_newlines": "CRLF",
     "supplement_unchanged": true,
     "visual_verdict": {
-      "score": 95,
+      "score": 94,
       "verdict": "pass",
       "category_match": true,
       "differences": [
-        "Independent parameter and FLOPs tables replace the merged table; both fit their columns on page 7."
+        "Efficiency table expanded from three to five columns within one column.",
+        "Longer caption and paragraph move text across pages 7–9."
       ],
       "suggestions": [],
-      "reasoning": "Both three-column tables have readable numbers, intact captions, and no clipping or overlap.",
+      "reasoning": "Table numbers and grouped headers remain readable, with no overlap or clipping. All changed pages retain the two-column manuscript layout.",
       "next_actions": []
     }
   },
@@ -45,5 +59,5 @@
     "path": "../results/flops_20261004/baseline_comparison.csv",
     "sha256": "b168f1c7b18b603ab1ef33b5b6c4d78e9248372918d247408546c21070f71b18"
   },
-  "scope": "Split parameter and FLOPs tables; update one reference sentence; all measured values unchanged."
+  "scope": "Efficiency table and corresponding paragraph only; parameter counts match profiled instances."
 }

@@ -125,3 +125,13 @@
 7. 完整稿编译通过，仍为 13 页，无未定义引用或 overfull；检查第 7 页单栏表及第 8 页效率段，数字和表注清晰、无溢出或重叠。更新 Main.pdf、编译清单、版本与归档索引。
 
 版本标签：`paper-v013`。证据见 `Main-build-manifest.json` 和 `results/flops_20261004/BASELINES.md`。
+
+## 2026-10-05 · v014：独立 FLOPs 表
+
+1. 修改前把 v013 源码、PDF、图稿及编译依赖复制至 `archive/v013/`，逐文件校验哈希，保存归档清单。
+2. `Main.tex` 的 `tab:model_parameters` 恢复仅列参数量，新建 `tab:model_flops` 单独列出八个模型在 IEMOCAP/MELD 上的 FLOPs；两个表均为单栏。数值沿用 v013，未改变计数口径。
+3. FLOPs 表保留 padding、输入差异与 CSS 重建等表注；参数表说明对应相同配置。效率分析的第一句改为分别引用两张表，其余分析不变。
+4. 已验证仅替换原合并表并改一处引用句；保留 CRLF，Supplement 与所有图文件不变。更新 PDF、编译清单与版本索引。
+5. latexmk 编译通过，无未定义引用或 overfull。两张表在第 7 页，视觉检查数字、表注清晰且无重叠；增加独立表后全文自然排为 14 页，未改模板或压缩间距。
+
+版本标签：`paper-v014`。
