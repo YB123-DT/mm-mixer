@@ -4,8 +4,8 @@
 
 - 用户指定仓库：https://github.com/YB123-DT/mm-mixer。
 - 2026-09-30 用户授权本项目每个完成的版本都提交并推送到该仓库；后续修改 `paper/Main.tex` 后，在编译验证完成的同一次任务中提交并推送，无需再次确认。
-- `paper/Main.tex` 是主要修改与编译入口。`paper/Supplement.tex` 作为它调用的补充正文，使用 Main 的前导和参考文献。
-- `paper/` 顶层只保留当前版本：`Main.tex`、`Supplement.tex`、`Main.pdf`、当前图文件、编译依赖和版本索引。不要在顶层保留多个完整稿或带历史版号的 PDF。
+- `paper/Main.tex` 是当前唯一 TeX 文件和编译入口，正文及补充材料全部内联；不得再拆出 Supplement.tex 或其他外部 TeX。旧版独立 Supplement.tex 仅保留在 archive 中。
+- `paper/` 顶层只保留当前版本：`Main.tex`（含全部补充材料）、`Main.pdf`、当前图文件、编译依赖和版本索引。不要在顶层保留多个完整稿或带历史版号的 PDF。
 - 旧版本全部按 `paper/archive/vNNN/` 分目录存放，包含该版对应的 TeX、完整 PDF、图文件及编译依赖；每次修改当前稿前先归档上一版。当前完整稿始终使用 `paper/Main.pdf`，不另存一个带版号的重复 PDF 到顶层。
 - 中间编译文件写入 `paper/build/`，不上传；归档目录用于保留历史，验证或复跑的输出也写入 `paper/build/`，避免覆盖归档 PDF。
 - 所有对 TeX 的修改追加记录到 `paper/TEX_CHANGELOG.md`：时间、文件、操作位置、修改内容、理由、编译/验证结果及对应版本。

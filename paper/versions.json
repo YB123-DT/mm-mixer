@@ -198,18 +198,31 @@
     {
       "version": "v014",
       "description": "参数量与 FLOPs 拆成独立单栏表",
-      "source": "Main.tex",
+      "source": "archive/v014/Main.tex",
       "source_sha256": "d6e46342cfcdcf627670cb4023ebd8c5470fef0974c76ad9ead78772f867d76d",
-      "included_source": "Supplement.tex",
+      "included_source": "archive/v014/Supplement.tex",
       "included_source_sha256": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v014/Main.pdf",
       "pdf_sha256": "fbeb6c7a29081f7bcada5f2badf422272a8a0932589ddf74e3ccb7332f7cb8d3",
       "pages": 14,
       "git_tag": "paper-v014",
-      "validation_status": "passed"
+      "validation_status": "passed",
+      "archive_directory": "archive/v014"
+    },
+    {
+      "version": "v015",
+      "description": "补充材料内联，当前稿仅保留 Main.tex",
+      "source": "Main.tex",
+      "source_sha256": "0e31b5c66a457a0066c467e9913b5a6761f8c8e617f6b61017d0a513c64bea30",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "3c901d390466f19e3369828aa00960e4373ba2a4ff9fb56a32bba16aca2f9138",
+      "pages": 14,
+      "git_tag": "paper-v015",
+      "validation_status": "passed",
+      "single_tex_source": true
     }
   ],
-  "latest": "v014",
+  "latest": "v015",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

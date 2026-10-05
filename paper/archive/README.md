@@ -20,4 +20,6 @@
 
 | v013 | 效率表加入 FLOPs 并对齐实例参数量与统计范围 | [源码](v013/Main.tex) | [完整 PDF](v013/Main.pdf) | paper-v013 |
 
+| v014 | 参数量与 FLOPs 拆成独立单栏表 | [源码](v014/Main.tex) | [完整 PDF](v014/Main.pdf) | paper-v014 |
+
 每个版本目录包含编译所需的样式、参考文献和图文件。v003 还保留了原独立 Supplement、宽幅场景图及当时的图稿和导出记录。归档 PDF 保留原始字节；复跑或验证输出写入 `paper/build/`。

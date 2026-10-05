@@ -1,10 +1,11 @@
 # 论文版本
 
-当前完整稿为 [Main.pdf](Main.pdf)，以 [Main.tex](Main.tex) 为修改入口。`paper/` 顶层只放当前版本，旧版本全部在 [archive/](archive/README.md) 中按版号分目录保存。
+当前完整稿为 [Main.pdf](Main.pdf)，全部正文与补充材料均在 [Main.tex](Main.tex) 中。`paper/` 顶层只放当前版本，旧版本全部在 [archive/](archive/README.md) 中按版号分目录保存。
 
 | 版本 | 内容 | TeX | PDF | Git 快照 |
 |---|---|---|---|---|
-| v014 | 参数量与 FLOPs 拆成独立单栏表 | [主文件](Main.tex) 与 [Supplement](Supplement.tex) | [当前完整 PDF](Main.pdf) | paper-v014 |
+| v015 | 补充材料内联，仅保留一个 TeX | [Main.tex](Main.tex) | [当前完整 PDF](Main.pdf) | paper-v015 |
+| v014 | 参数量与 FLOPs 拆成独立单栏表 | [主文件](archive/v014/Main.tex) 与 [Supplement](archive/v014/Supplement.tex) | [归档 PDF](archive/v014/Main.pdf) | paper-v014 |
 | v013 | 效率表加入 FLOPs 并对齐实例参数量与统计范围 | [主文件](archive/v013/Main.tex) 与 [Supplement](archive/v013/Supplement.tex) | [归档 PDF](archive/v013/Main.pdf) | paper-v013 |
 | v012 | AMM 长方体布局美化与轴线、标签简化，TeX 不变 | [主文件](archive/v012/Main.tex) 与 [Supplement](archive/v012/Supplement.tex) | [归档 PDF](archive/v012/Main.pdf) | paper-v012 |
 | v011 | 完整 AMM 长方体与错开的三轴格子示例，移除下半映射流程 | [主文件](archive/v011/Main.tex) 与 [Supplement](archive/v011/Supplement.tex) | [归档 PDF](archive/v011/Main.pdf) | paper-v011 |

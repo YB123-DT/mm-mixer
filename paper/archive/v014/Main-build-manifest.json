@@ -1,9 +1,10 @@
 {
-  "version": "v015",
+  "version": "v014",
   "date": "2026-10-05",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/single-tex-v015 -jobname=Main Main.tex",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/flops-v014 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "0e31b5c66a457a0066c467e9913b5a6761f8c8e617f6b61017d0a513c64bea30",
+    "Main.tex": "d6e46342cfcdcf627670cb4023ebd8c5470fef0974c76ad9ead78772f867d76d",
+    "Supplement.tex": "8f3d38dcab5cf50652516669231732520466269b4e0bbf394555dc4b1150b295",
     "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -17,22 +18,32 @@
   "outputs": {
     "Main.pdf": {
       "pages": 14,
-      "sha256": "3c901d390466f19e3369828aa00960e4373ba2a4ff9fb56a32bba16aca2f9138"
+      "sha256": "fbeb6c7a29081f7bcada5f2badf422272a8a0932589ddf74e3ccb7332f7cb8d3"
     }
   },
   "checks": {
     "pages": 14,
-    "all_pages_pixel_identical_to_v014": true,
     "no_undefined_references": true,
     "no_overfull_boxes": true,
-    "single_tex_entry": true,
-    "no_external_tex_input": true,
+    "underfull_notices": 6,
     "source_newlines": "CRLF",
-    "archive_verified": true
+    "archive_verified": true,
+    "supplement_unchanged": true,
+    "visual_verdict": {
+      "score": 95,
+      "verdict": "pass",
+      "category_match": true,
+      "differences": [
+        "Independent parameter and FLOPs tables replace the merged table; both fit their columns on page 7."
+      ],
+      "suggestions": [],
+      "reasoning": "Both three-column tables have readable numbers, intact captions, and no clipping or overlap.",
+      "next_actions": []
+    }
   },
   "evidence": {
     "path": "../results/flops_20261004/baseline_comparison.csv",
     "sha256": "b168f1c7b18b603ab1ef33b5b6c4d78e9248372918d247408546c21070f71b18"
   },
-  "scope": "Inline Supplement.tex into Main.tex; preserve all rendered content and archive the former standalone source."
+  "scope": "Split parameter and FLOPs tables; update one reference sentence; all measured values unchanged."
 }
