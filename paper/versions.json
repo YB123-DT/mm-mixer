@@ -238,17 +238,30 @@
     {
       "version": "v017",
       "description": "结论聚焦 AMM 主线并补充泛化限制",
-      "source": "Main.tex",
+      "source": "archive/v017/Main.tex",
       "source_sha256": "9642b334871f2df740af27e805dfa274bfcac84946aa896c9336f30edcd543ca",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v017/Main.pdf",
       "pdf_sha256": "c9ead748d0720d0ea702743e24c6a56fc6e9a48c1c613b4e55367a311bdfea12",
       "pages": 14,
       "git_tag": "paper-v017",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v017"
+    },
+    {
+      "version": "v018",
+      "description": "Future Work 独立成节并置于 Conclusion 前",
+      "source": "Main.tex",
+      "source_sha256": "469dbd117d99e97b3d7a775a08bd79c3b0185d9efbf4eab0f04531196b70aa6c",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "0af66eef5e8ad743bdf4242224ce34a43be430e5220c03afcc145da809ff5e59",
+      "pages": 14,
+      "git_tag": "paper-v018",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v017",
+  "latest": "v018",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

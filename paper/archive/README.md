@@ -26,4 +26,6 @@
 
 | v016 | 简化 FLOPs 表注并加入计算量降幅 | [源码](v016/Main.tex) | [完整 PDF](v016/Main.pdf) | paper-v016 |
 
+| v017 | 结论聚焦 AMM 主线并补充泛化限制 | [源码](v017/Main.tex) | [完整 PDF](v017/Main.pdf) | paper-v017 |
+
 每个版本目录包含编译所需的样式、参考文献和图文件。v003 还保留了原独立 Supplement、宽幅场景图及当时的图稿和导出记录。归档 PDF 保留原始字节；复跑或验证输出写入 `paper/build/`。

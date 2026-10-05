@@ -1047,20 +1047,6 @@ Table~\ref{tab:modality_ablation} shows the evaluation results on all unimodal, 
 %\FloatBarrier
 
 
-\section{Future Work}
-
-The results on MELD indicate that recognizing minority emotions remains
-challenging despite the overall performance. Future work will examine
-the error patterns of these classes and investigate how multimodal
-evidence can better support their recognition.
-
-The current evaluation trains and tests MM-Mixer within IEMOCAP and
-MELD separately, leaving its cross-dataset generalization untested.
-We plan to evaluate transfer across datasets under compatible emotion
-label definitions and consistent feature extraction settings to assess
-whether the learned fusion structure generalizes beyond the training
-domain.
-
 \section{Conclusion}
 
 We presented MM-Mixer, a framework for multimodal emotion recognition
@@ -1073,6 +1059,10 @@ interaction, while query-based fusion and a low-rank pairwise residual
 form the final multimodal representation. Experiments on IEMOCAP and
 MELD show competitive recognition performance with fewer downstream
 parameters and lower matrix/convolution FLOPs than CSS, SDT, and Ada2I.
+Our evaluation is limited to these two benchmarks; cross-dataset
+generalization and robustness in real-world conditions remain to be
+established. Future work will investigate these settings, as well as
+minority emotions and longer conversational contexts.
 %Component and modality ablations
 %further confirm that the proposed modules, unimodal supervision, and
 %the three input modalities provide complementary contributions. 

@@ -4,7 +4,8 @@
 
 | 版本 | 内容 | TeX | PDF | Git 快照 |
 |---|---|---|---|---|
-| v017 | 结论聚焦 AMM 主线并补充泛化限制 | [Main.tex](Main.tex) | [当前完整 PDF](Main.pdf) | paper-v017 |
+| v018 | Future Work 独立成节，位于 Conclusion 前 | [Main.tex](Main.tex) | [当前完整 PDF](Main.pdf) | paper-v018 |
+| v017 | 结论聚焦 AMM 主线并补充泛化限制 | [Main.tex](archive/v017/Main.tex) | [归档 PDF](archive/v017/Main.pdf) | paper-v017 |
 | v016 | 简化 FLOPs 表注并加入计算量降幅 | [Main.tex](archive/v016/Main.tex) | [归档 PDF](archive/v016/Main.pdf) | paper-v016 |
 | v015 | 补充材料内联，仅保留一个 TeX | [Main.tex](archive/v015/Main.tex) | [归档 PDF](archive/v015/Main.pdf) | paper-v015 |
 | v014 | 参数量与 FLOPs 拆成独立单栏表 | [主文件](archive/v014/Main.tex) 与 [Supplement](archive/v014/Supplement.tex) | [归档 PDF](archive/v014/Main.pdf) | paper-v014 |

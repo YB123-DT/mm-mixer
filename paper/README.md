@@ -2,7 +2,7 @@
 
 当前唯一 TeX 文件是 [Main.tex](Main.tex)，包含正文与全部补充材料，不再调用外部 TeX。完整 PDF 是 [Main.pdf](Main.pdf)。
 
-两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v017 修改 Conclusion：突出 AMM 的学习投影视角与分轴交互，压缩支持模块说明，并交代两数据集及泛化验证限制。正文与补充材料继续共用唯一 Main.tex。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
+两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v018 将 Future Work 独立成节并放在 Conclusion 前，展开少数类情绪识别与跨数据集泛化两个方向；Conclusion 仅总结工作与结果。正文与补充材料继续共用唯一 Main.tex。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
 
 `paper/` 顶层只保留当前版本及其依赖：单一主稿（含补充材料）、完整 PDF、当前图文件、AAAI 样式与参考文献、版本索引和操作日志。`MM-Mixer.pdf` 是当前稿引用的架构图，完整论文请打开 `Main.pdf`。
 
@@ -14,7 +14,7 @@ paper/
   当前图文件、样式、参考文献和索引
   figures/amm_axis_mixing/               新 Figure 1 图稿
   figures/motivation/                     正文原有 AMM 图稿
-  archive/v001/ ... archive/v016/         历史版本
+  archive/v001/ ... archive/v017/         历史版本
   build/                                 临时编译与验证
 ```
 
