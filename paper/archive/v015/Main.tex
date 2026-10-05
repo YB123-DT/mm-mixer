@@ -845,19 +845,24 @@ those profiled in Table~\ref{tab:model_flops}.}
 \toprule
 Model & IEMOCAP & MELD \\
 \midrule
-DialogueRNN & 42.78 & 53.97 \\
+DialogueRNN$^{\dagger}$ & 42.78 & 53.97 \\
 MMGCN & 482.41 & 54.93 \\
 MM-DFN & 351.20 & 131.49 \\
 M3Net & 11.71 & 29.01 \\
 Ada2I & 124.89 & 87.94 \\
 SDT & 289.80 & 385.88 \\
-CSS & 200.96 & 286.10 \\
+CSS$^{\ddagger}$ & 200.96 & 286.10 \\
 \midrule
 MM-Mixer & 69.00 & 68.72 \\
 \bottomrule
 \end{tabular}
-\caption{Downstream computational cost on IEMOCAP and MELD,
-measured in MFLOPs per utterance.}
+\caption{Downstream matrix/convolution FLOPs (millions per valid
+utterance). Baseline counts include padding in batches of 32 dialogues
+and are averaged over the full test set; MM-Mixer uses fixed-length
+utterance vectors. Input settings differ across models.
+$^{\dagger}$DialogueRNN uses text only on IEMOCAP and text--audio
+on MELD. $^{\ddagger}$CSS is reconstructed from its original
+configuration because the saved weights are unavailable.}
 \label{tab:model_flops}
 \end{table}
 
@@ -931,10 +936,9 @@ extraction, backward computation, and non-matrix operations such as
 normalization, activations, and elementwise/scatter message aggregation.
 MM-Mixer uses 6.36M and 5.71M registered downstream parameters and
 requires 69.00M and 68.72M FLOPs per utterance on IEMOCAP and MELD,
-respectively. Compared with CSS, SDT, and Ada2I, it reduces
-matrix/convolution FLOPs by 65.7\%, 76.2\%, and 44.8\%
-on IEMOCAP, and by 76.0\%, 82.2\%, and 21.9\% on MELD
-under the adopted counting convention.
+respectively. Under this counting convention, its matrix computation
+is lower than that of MM-DFN, Ada2I, SDT, and CSS on both datasets,
+although it is not the lowest among the evaluated implementations.
 These implementation-level counts depend on the input representations
 and batching and do not establish an inference-speed advantage.
 

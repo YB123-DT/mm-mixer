@@ -144,3 +144,12 @@
 4. latexmk 编译成功，仍为 14 页；与 v014 对全部页面逐像素比较完全一致，无未定义引用或 overfull。PDF 已更新，源码继续保留 CRLF。
 
 版本标签：`paper-v015`。以后只修改 `paper/Main.tex`。
+
+## 2026-10-05 · v016：落实 FLOPs 图注与百分比文字修改
+
+1. 修改前将 v015 源码、PDF 和依赖按原字节归档到 archive/v015，校验文件哈希。
+2. Main.tex 的 tab:model_flops 表注改为作者确认的简短版本，仅说明数据集和 MFLOPs/utterance 单位；无 Lower values indicate 句，删除原表注的模态/batch/重建说明及对应上下标，完整计数边界仍保留在 results/flops_20261004 的证据记录中。
+3. 效率段加入相对 CSS、SDT、Ada2I 的 FLOPs 降幅：IEMOCAP 65.7%、76.2%、44.8%；MELD 76.0%、82.2%、21.9%。保留正文矩阵/卷积计数范围与不推断速度优势的说明。
+4. 编译通过，共 13 页，无未定义引用或 overfull；更新 PDF、版本与编译清单。数值未重算或改变。
+
+版本标签：paper-v016。

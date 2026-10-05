@@ -1,9 +1,9 @@
 {
-  "version": "v016",
+  "version": "v015",
   "date": "2026-10-05",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/caption-v016 -jobname=Main Main.tex",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/single-tex-v015 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "0fb2160d7956373b896236cba7a2a41c4dee4b15edd44a6b8f579b1df26f252b",
+    "Main.tex": "0e31b5c66a457a0066c467e9913b5a6761f8c8e617f6b61017d0a513c64bea30",
     "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -16,20 +16,23 @@
   },
   "outputs": {
     "Main.pdf": {
-      "pages": 13,
-      "sha256": "8edb06c557afabd3405cbec96ddbad1195dde07d9aeb599f3b23692151f5fda7"
+      "pages": 14,
+      "sha256": "3c901d390466f19e3369828aa00960e4373ba2a4ff9fb56a32bba16aca2f9138"
     }
   },
   "checks": {
-    "pages": 13,
+    "pages": 14,
+    "all_pages_pixel_identical_to_v014": true,
     "no_undefined_references": true,
     "no_overfull_boxes": true,
     "single_tex_entry": true,
+    "no_external_tex_input": true,
+    "source_newlines": "CRLF",
     "archive_verified": true
   },
   "evidence": {
     "path": "../results/flops_20261004/baseline_comparison.csv",
     "sha256": "b168f1c7b18b603ab1ef33b5b6c4d78e9248372918d247408546c21070f71b18"
   },
-  "scope": "Use the agreed short FLOPs caption without Lower values text; remove caption markers; add measured reductions against CSS/SDT/Ada2I."
+  "scope": "Inline Supplement.tex into Main.tex; preserve all rendered content and archive the former standalone source."
 }

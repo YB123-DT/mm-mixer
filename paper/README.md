@@ -2,7 +2,7 @@
 
 当前唯一 TeX 文件是 [Main.tex](Main.tex)，包含正文与全部补充材料，不再调用外部 TeX。完整 PDF 是 [Main.pdf](Main.pdf)。
 
-两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v015 将补充材料直接合入 Main.tex，独立 Supplement.tex 仅保留在旧版归档；表 3/4 和所有渲染内容与 v014 相同。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
+两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v016 已简化 FLOPs 表注并在正文加入相对 CSS、SDT、Ada2I 的计算量降幅。正文与补充材料继续共用唯一 Main.tex。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
 
 `paper/` 顶层只保留当前版本及其依赖：单一主稿（含补充材料）、完整 PDF、当前图文件、AAAI 样式与参考文献、版本索引和操作日志。`MM-Mixer.pdf` 是当前稿引用的架构图，完整论文请打开 `Main.pdf`。
 
@@ -14,7 +14,7 @@ paper/
   当前图文件、样式、参考文献和索引
   figures/amm_axis_mixing/               新 Figure 1 图稿
   figures/motivation/                     正文原有 AMM 图稿
-  archive/v001/ ... archive/v014/         历史版本
+  archive/v001/ ... archive/v015/         历史版本
   build/                                 临时编译与验证
 ```
 

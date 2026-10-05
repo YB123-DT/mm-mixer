@@ -212,17 +212,30 @@
     {
       "version": "v015",
       "description": "补充材料内联，当前稿仅保留 Main.tex",
-      "source": "Main.tex",
+      "source": "archive/v015/Main.tex",
       "source_sha256": "0e31b5c66a457a0066c467e9913b5a6761f8c8e617f6b61017d0a513c64bea30",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v015/Main.pdf",
       "pdf_sha256": "3c901d390466f19e3369828aa00960e4373ba2a4ff9fb56a32bba16aca2f9138",
       "pages": 14,
       "git_tag": "paper-v015",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v015"
+    },
+    {
+      "version": "v016",
+      "description": "简化 FLOPs 表注并加入计算量降幅",
+      "source": "Main.tex",
+      "source_sha256": "0fb2160d7956373b896236cba7a2a41c4dee4b15edd44a6b8f579b1df26f252b",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "8edb06c557afabd3405cbec96ddbad1195dde07d9aeb599f3b23692151f5fda7",
+      "pages": 13,
+      "git_tag": "paper-v016",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v015",
+  "latest": "v016",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }
