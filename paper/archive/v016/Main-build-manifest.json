@@ -1,9 +1,9 @@
 {
-  "version": "v017",
+  "version": "v016",
   "date": "2026-10-05",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/conclusion-v017 -jobname=Main Main.tex",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/caption-v016 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "9642b334871f2df740af27e805dfa274bfcac84946aa896c9336f30edcd543ca",
+    "Main.tex": "0fb2160d7956373b896236cba7a2a41c4dee4b15edd44a6b8f579b1df26f252b",
     "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -16,32 +16,20 @@
   },
   "outputs": {
     "Main.pdf": {
-      "pages": 14,
-      "sha256": "c9ead748d0720d0ea702743e24c6a56fc6e9a48c1c613b4e55367a311bdfea12"
+      "pages": 13,
+      "sha256": "8edb06c557afabd3405cbec96ddbad1195dde07d9aeb599f3b23692151f5fda7"
     }
   },
   "checks": {
-    "pages": 14,
+    "pages": 13,
     "no_undefined_references": true,
     "no_overfull_boxes": true,
-    "only_conclusion_changed": true,
     "single_tex_entry": true,
-    "archive_verified": true,
-    "visual_verdict": {
-      "score": 95,
-      "verdict": "pass",
-      "category_match": true,
-      "differences": [
-        "Revised conclusion flows to page 9; total length becomes 14 pages."
-      ],
-      "suggestions": [],
-      "reasoning": "Conclusion and following supplementary headings are readable with no clipping or overlap.",
-      "next_actions": []
-    }
+    "archive_verified": true
   },
   "evidence": {
     "path": "../results/flops_20261004/baseline_comparison.csv",
     "sha256": "b168f1c7b18b603ab1ef33b5b6c4d78e9248372918d247408546c21070f71b18"
   },
-  "scope": "Conclusion prose only: center learned-view axis-wise interaction, summarize supporting modules and bound evidence and generalization claims."
+  "scope": "Use the agreed short FLOPs caption without Lower values text; remove caption markers; add measured reductions against CSS/SDT/Ada2I."
 }

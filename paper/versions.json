@@ -225,17 +225,30 @@
     {
       "version": "v016",
       "description": "简化 FLOPs 表注并加入计算量降幅",
-      "source": "Main.tex",
+      "source": "archive/v016/Main.tex",
       "source_sha256": "0fb2160d7956373b896236cba7a2a41c4dee4b15edd44a6b8f579b1df26f252b",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v016/Main.pdf",
       "pdf_sha256": "8edb06c557afabd3405cbec96ddbad1195dde07d9aeb599f3b23692151f5fda7",
       "pages": 13,
       "git_tag": "paper-v016",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v016"
+    },
+    {
+      "version": "v017",
+      "description": "结论聚焦 AMM 主线并补充泛化限制",
+      "source": "Main.tex",
+      "source_sha256": "9642b334871f2df740af27e805dfa274bfcac84946aa896c9336f30edcd543ca",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "c9ead748d0720d0ea702743e24c6a56fc6e9a48c1c613b4e55367a311bdfea12",
+      "pages": 14,
+      "git_tag": "paper-v017",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v016",
+  "latest": "v017",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

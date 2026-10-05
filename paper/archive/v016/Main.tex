@@ -1049,20 +1049,17 @@ Table~\ref{tab:modality_ablation} shows the evaluation results on all unimodal, 
 
 \section{Conclusion}
 
-We presented MM-Mixer, a framework for multimodal emotion recognition
-in conversation. Its core Axis-wise Multimodal Mixer expands
-utterance-level modality representations into learned projection views
-and separately performs within-modality view mixing, cross-modal
-exchange, and hidden-feature transformation. Adaptive gating and
-modality-centric alignment prepare the representations for this
-interaction, while query-based fusion and a low-rank pairwise residual
-form the final multimodal representation. Experiments on IEMOCAP and
-MELD show competitive recognition performance with fewer downstream
-parameters and lower matrix/convolution FLOPs than CSS, SDT, and Ada2I.
-Our evaluation is limited to these two benchmarks; cross-dataset
-generalization and robustness in real-world conditions remain to be
-established. Future work will investigate these settings, as well as
-minority emotions and longer conversational contexts.
+We presented MM-Mixer, a simple yet strong framework for emotion
+recognition in conversation. Adaptive Gating calibrates modalities
+using a shared reference, while Modality-centric Cross-modal Alignment
+retrieves complementary evidence from peer modalities. The Axis-wise
+Multimodal Mixer organizes interactions along the latent-sequence,
+modality, and feature dimensions, while the Explicit Pairwise
+Interaction Residual Correction complements the main fusion path by
+modeling multiplicative relations between modality pairs as a residual
+correction. Experiments on IEMOCAP and MELD demonstrate strong
+performance with fewer parameters than recent multimodal baselines.
+Future work will address minority emotions and longer contexts.
 %Component and modality ablations
 %further confirm that the proposed modules, unimodal supervision, and
 %the three input modalities provide complementary contributions. 
