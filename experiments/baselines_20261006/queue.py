@@ -107,7 +107,7 @@ def main():
                             if sum(x[3] == uuid for x in active.values()) < plan['per_gpu']
                             and info['free_mb'] >= job['required_free_mb']), None)
                 if gpu is None:
-                    break
+                    continue
                 verify_sources(job)
                 out = Path(job['output'])
                 if out.exists():
@@ -117,6 +117,10 @@ def main():
                 env.update(CUDA_VISIBLE_DEVICES=gpu, CUDA_DEVICE_ORDER='PCI_BUS_ID',
                            PYTHONUNBUFFERED='1', OMP_NUM_THREADS='1', MKL_NUM_THREADS='1')
                 env['PYTHONHASHSEED'] = str(job['seed'])
+                # multiprocessing AF_UNIX sockets have a ~108-byte path limit.
+                temporary = Path('/data2/yb/tmp/mmbl') / hashlib.sha256(str(out).encode()).hexdigest()[:12]
+                temporary.mkdir(parents=True, exist_ok=True)
+                env.update(TMPDIR=str(temporary), TEMP=str(temporary), TMP=str(temporary))
                 env.update(job.get('environment', {}))
                 if env['CUDA_VISIBLE_DEVICES'] != gpu:
                     raise ValueError('job must not override GPU allocation')

@@ -1,5 +1,8 @@
 # 2025 baseline reproduction — 2026-10-06
 
+**当前队列入口已更新：**系统盘满导致 ConFilMER 卡死，处理与新状态路径见
+[RECOVERY.md](RECOVERY.md)。旧 launch_state.json 仅为首次启动快照。
+
 用户要求：优先增加近期 baseline，复现三个种子查看分数。本批选定两篇 2025 年论文，
 两个数据集各三个种子，共 **12 次正式训练**。本目录不修改论文 TeX 或现有消融代码。
 
