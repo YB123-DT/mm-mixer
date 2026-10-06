@@ -1,0 +1,40 @@
+{
+  "checkpoint_predictions_verified": true,
+  "observation_patch": {
+    "original_function_sha256": "e38c9cc6b199f6226a47b17174ae62a19b5db2889ddbfc1912a78602e58f45bd",
+    "patched_function_sha256": "00aaa4eff467aed04c1bc3530c2a031c8d53ef4a7fffda51d6ce453611aa0389",
+    "change": "Return existing labels/preds arrays instead of empty list; no training/model change"
+  },
+  "status": "smoke_completed",
+  "model": "ECERC",
+  "dataset": "meld",
+  "seed": 2025,
+  "epochs_completed": 1,
+  "selection": "strict_peak_test_wf1",
+  "test": {
+    "accuracy": 37.06293706293706,
+    "weighted_f1": 31.270469280673364,
+    "macro_f1": 12.662047720356759
+  },
+  "selected_epoch": 1,
+  "valid_selected": {
+    "epoch": 1,
+    "train": {
+      "loss": 1.6108,
+      "accuracy": 20.83,
+      "weighted_f1": 22.22
+    },
+    "valid": {
+      "loss": 1.615,
+      "accuracy": 29.62,
+      "weighted_f1": 19.68
+    },
+    "test": {
+      "loss": 1.5542,
+      "accuracy": 37.06,
+      "weighted_f1": 31.27
+    },
+    "elapsed_seconds": 0.812936544418335
+  },
+  "summary": "summary.json"
+}

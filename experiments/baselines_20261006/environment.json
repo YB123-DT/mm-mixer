@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "torch": "2.2.2+cu121",
+    "torch-geometric": "2.7.0",
+    "numpy": "1.24.3",
+    "pandas": "2.0.3",
+    "scikit-learn": "1.3.2"
+  },
+  "python": "/data2/yb/reproduction_envs/s0/bin/python",
+  "gpu_inventory": "0, GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45, Tesla V100-SXM2-32GB, 32768 MiB\n1, GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049, Tesla V100-SXM2-32GB, 32768 MiB\n2, GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4, Tesla V100-SXM2-32GB, 32768 MiB\n3, GPU-cab071a3-de66-5a82-35d8-9f8b5b731e7a, Tesla V100-SXM2-32GB, 32768 MiB\n4, GPU-46fb379f-cc90-dc82-9b5e-5d011f552264, Tesla V100-SXM2-32GB, 32768 MiB\n5, GPU-fa1e8bfd-85d8-9599-f804-7c88b9c71b62, Tesla V100-SXM2-32GB, 32768 MiB\n6, GPU-e4cafb17-818e-216a-b94a-7440063a9153, Tesla V100-SXM2-32GB, 32768 MiB\n7, GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e, Tesla V100-SXM2-32GB, 32768 MiB\n"
+}

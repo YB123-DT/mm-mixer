@@ -1,0 +1,1 @@
+{"dataset": "meld", "finite_backward": true, "output_shape": [10, 7], "future_perturbation_max_past_delta": 0.1578385829925537, "causal_at_1e-6": false, "peak_cuda_bytes": 67518976}

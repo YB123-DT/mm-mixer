@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/TAN-OpenLab/ECERC",
+  "commit": "339fcaa68262f3fc64d860ebe6c6f79696e25818",
+  "sha256": {
+    "MELD/dataloader.py": "121db840ea1d57c2814edb061909fcb9c31f9df944f73e1be42b5e6f8c1387ad",
+    "MELD/inference.py": "21f7ce13ac1693d51f605ccc6298f1582432fab27dc3b989cdec0a3ba388e28f",
+    "MELD/model.py": "a09dbe3aa6fd662237fb9833a0544887e9441e46a08783ca39b363d97d6ccc32",
+    "MELD/train.py": "83117a9f2003da23ff84f826a5a7a89c19a3911b48bcf9b3ebab554647f88936",
+    "MELD/loss.py": "c348375c27c366e11f2509de30dd0c5c0f224adcf0eb434bc0d0d9fa12045246",
+    "IEMOCAP/dataloader.py": "b249e58c22213245e02f4fd04fb647984b32899ad9fd9f8c5d33e7be190ae605",
+    "IEMOCAP/inference.py": "93367aee4a6ad5db36068612a6488f2b408c8ebb7e171dd9779f0a4842fa6ae9",
+    "IEMOCAP/model.py": "34bea04b16a5bcabe97d9b136871152eecdb352f9791e632b1c6d0fdaeb7b7f6",
+    "IEMOCAP/train.py": "61fd68b1860c783dcc68ab4bc1d18164e24c19221c9cdf27d3606c10ceba832b",
+    "IEMOCAP/loss.py": "3a7afe62a853ae12fcebc6b69b5a9de5240cd70a47d1cf9d15493364982f7e1e"
+  }
+}

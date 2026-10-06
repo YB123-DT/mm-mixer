@@ -1,0 +1,22 @@
+{
+  "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/source/confilmer/IEMOCAP_features/IEMOCAP_features.pkl": {
+    "target": "/data2/yb/paper/tsne_baselines_20260728/M3NET/IEMOCAP_features/IEMOCAP_features.pkl",
+    "bytes": 72216498,
+    "sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+  },
+  "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/source/confilmer/IEMOCAP_features/iemocap_features_roberta.pkl": {
+    "target": "/data2/yb/paper/tsne_baselines_20260728/M3NET/IEMOCAP_features/iemocap_features_roberta.pkl",
+    "bytes": 124438886,
+    "sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+  },
+  "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/source/confilmer/MELD_features/MELD_features_raw1.pkl": {
+    "target": "/data2/yb/paper/tsne_baselines_20260728/M3NET/MELD_features/MELD_features_raw1.pkl",
+    "bytes": 88193675,
+    "sha256": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0"
+  },
+  "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/source/confilmer/MELD_features/meld_features_roberta.pkl": {
+    "target": "/data2/yb/paper/tsne_baselines_20260728/M3NET/MELD_features/meld_features_roberta.pkl",
+    "bytes": 229654413,
+    "sha256": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+  }
+}

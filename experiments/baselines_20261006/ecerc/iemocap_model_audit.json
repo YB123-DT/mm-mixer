@@ -1,0 +1,11 @@
+{
+  "dataset": "iemocap",
+  "finite_backward": true,
+  "output_shape": [
+    10,
+    6
+  ],
+  "future_perturbation_max_past_delta": 0.12746691703796387,
+  "causal_at_1e-6": false,
+  "peak_cuda_bytes": 70060544
+}

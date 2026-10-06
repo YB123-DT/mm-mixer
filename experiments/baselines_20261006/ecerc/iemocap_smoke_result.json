@@ -1,0 +1,36 @@
+{
+  "checkpoint_predictions_verified": true,
+  "observation_patch": null,
+  "status": "smoke_completed",
+  "model": "ECERC",
+  "dataset": "iemocap",
+  "seed": 2025,
+  "epochs_completed": 1,
+  "selection": "strict_peak_test_wf1",
+  "test": {
+    "accuracy": 17.375231053604438,
+    "weighted_f1": 10.214632631957267,
+    "macro_f1": 13.004637603361676
+  },
+  "selected_epoch": 1,
+  "valid_selected": {
+    "epoch": 1,
+    "train": {
+      "loss": 11.1552,
+      "accuracy": 14.76,
+      "weighted_f1": 14.97
+    },
+    "valid": {
+      "loss": 10.6314,
+      "accuracy": 19.58,
+      "weighted_f1": 12.59
+    },
+    "test": {
+      "loss": 10.5758,
+      "accuracy": 17.38,
+      "weighted_f1": 10.21
+    },
+    "elapsed_seconds": 1.5359807014465332
+  },
+  "summary": "summary.json"
+}

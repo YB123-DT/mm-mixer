@@ -1,0 +1,22 @@
+{
+  "iemocap/iemocap_emotion_features_roberta.pkl": {
+    "google_drive_id": "1vbgQ78Pzil6trugnPmgqP8q7j-fAweCj",
+    "size": 124438886,
+    "sha256": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06"
+  },
+  "iemocap/iemocap_emotion_semantic_features_roberta.pkl": {
+    "google_drive_id": "1CQ32t7FPvQU7i0S7h6fGUClPxwvQW9Qv",
+    "size": 314591031,
+    "sha256": "dd050aba37802fbef609a6ef35254923f7a184c9edec13836886bf3ae253747d"
+  },
+  "iemocap/IEMOCAP_features.pkl": {
+    "google_drive_id": "1RV-V6aiUzENUy97XskKqgm_bCJATpapS",
+    "size": 72216498,
+    "sha256": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+  },
+  "meld/meld_emotion_semantic_features_roberta.pkl": {
+    "google_drive_id": "1IQokygWgjaZuSXvCsfIcUzj1Gu69hDCb",
+    "size": 509327864,
+    "sha256": "a0349614b2b58e8b2db768f0144aa36b96fb2348ca436a6879ee2623cc2d2f80"
+  }
+}
