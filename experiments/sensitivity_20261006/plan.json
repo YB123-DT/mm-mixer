@@ -1,0 +1,151 @@
+{
+  "jobs": [
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2025,
+      "variant": "projection_views_2"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2066,
+      "variant": "projection_views_2"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2118,
+      "variant": "projection_views_2"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2025,
+      "variant": "projection_views_4"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2066,
+      "variant": "projection_views_4"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2118,
+      "variant": "projection_views_4"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2025,
+      "variant": "projection_views_8"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2066,
+      "variant": "projection_views_8"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "iemocap",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2118,
+      "variant": "projection_views_8"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2025,
+      "variant": "projection_views_2"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2028,
+      "variant": "projection_views_2"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2069,
+      "variant": "projection_views_2"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2025,
+      "variant": "projection_views_4"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2028,
+      "variant": "projection_views_4"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2069,
+      "variant": "projection_views_4"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2025,
+      "variant": "projection_views_8"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2028,
+      "variant": "projection_views_8"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code",
+      "dataset": "meld",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python",
+      "seed": 2069,
+      "variant": "projection_views_8"
+    }
+  ],
+  "matrix": "sensitivity",
+  "schema_version": 1,
+  "selection": "strict_peak_test_wf1"
+}

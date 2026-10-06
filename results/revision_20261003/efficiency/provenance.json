@@ -1,0 +1,159 @@
+{
+  "server": "biggpu",
+  "verification_date_utc": "2026-10-06T15:15:15.112005+00:00",
+  "completion_time_utc": "2026-10-04T20:44:33Z",
+  "files": [
+    {
+      "local": "iemocap_amm_attention_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/iemocap_amm_attention_seed2025.json",
+      "sha256": "2f0f40c36137621c1f8d4d6dda35613bd9ec4c16fd59b494c64036179b901fa6"
+    },
+    {
+      "local": "iemocap_amm_cubemlp_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/iemocap_amm_cubemlp_seed2025.json",
+      "sha256": "4582fbb99647ced96ff22230ee1c5b84b1f2033dfe3358900f6db6ea28f03f8b"
+    },
+    {
+      "local": "iemocap_amm_mlp_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/iemocap_amm_mlp_seed2025.json",
+      "sha256": "d0ff330174b1409d67376010370785f0a6613fdaeceb5948d66aee87f73fa103"
+    },
+    {
+      "local": "iemocap_full_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/iemocap_full_seed2025.json",
+      "sha256": "e1d6e25078ec89d190337b3e47a1725c2f61b568ad89e9e11decc1444bf7cd0b"
+    },
+    {
+      "local": "meld_amm_attention_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/meld_amm_attention_seed2025.json",
+      "sha256": "1d596a6277cebddf2b42822990e8202130e39bce0487f0086c3bcee3dc3a163d"
+    },
+    {
+      "local": "meld_amm_cubemlp_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/meld_amm_cubemlp_seed2025.json",
+      "sha256": "f234307dfccd704a1d492e8e7419b615c0b34c2b585f98655aa51c7ae0752ecd"
+    },
+    {
+      "local": "meld_amm_mlp_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/meld_amm_mlp_seed2025.json",
+      "sha256": "5df2973939edb27aafde56840c87aa62b106bec302412d10bae0a0a99af7912c"
+    },
+    {
+      "local": "meld_full_seed2025.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency/meld_full_seed2025.json",
+      "sha256": "dd774c7052602563a26fb0cc74d81b594e35413138380dfccba8543a94f47480"
+    },
+    {
+      "local": "efficiency_summary.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/efficiency_summary.json",
+      "sha256": "f0a1d53b8c561ded2011d43c05cbb23a777419b9557cda028dbae462b58ddfed"
+    },
+    {
+      "local": "pipeline_status.json",
+      "remote": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/pipeline/pipeline_status.json",
+      "sha256": "0b0925ae5283138e2525c589873ee28e81dc31ab18165e36e0c954e4241d0aa1"
+    }
+  ],
+  "checks": {
+    "eight_completed_non_smoke_results": true,
+    "eight_zero_exit_commands": true,
+    "commands_sequential": true,
+    "same_healthy_gpu": true,
+    "three_idle_checks_per_run_no_other_compute_processes": true,
+    "summary_exactly_matches_individual_results": true,
+    "remote_local_sha256_match": true,
+    "timing_statistics_recomputed": true,
+    "same_sample_ids_per_dataset": true,
+    "source_entries_have_no_explicit_hash_mismatch": true
+  },
+  "source_entries_not_loaded_or_ambiguous": {
+    "iemocap_amm_attention_seed2025.json": 17,
+    "iemocap_amm_cubemlp_seed2025.json": 17,
+    "iemocap_amm_mlp_seed2025.json": 17,
+    "iemocap_full_seed2025.json": 17,
+    "meld_amm_attention_seed2025.json": 5,
+    "meld_amm_cubemlp_seed2025.json": 5,
+    "meld_amm_mlp_seed2025.json": 5,
+    "meld_full_seed2025.json": 5
+  },
+  "limitations": [
+    "Idle checks are snapshots, not continuous GPU process monitoring.",
+    "No new predictive replay performed by efficiency runner.",
+    "Ten timing repeats are from seed2025, not three independent training seeds.",
+    "No matched training-cost benchmark or original baseline timing included."
+  ],
+  "summary": [
+    {
+      "dataset": "iemocap",
+      "variant": "amm_attention",
+      "median_seconds_1000": 0.39419911499135196,
+      "median_utterances_per_second": 2536.7890539833866,
+      "peak_allocated_mib": 57.89208984375,
+      "min_seconds": 0.38595376699231565,
+      "max_seconds": 0.42054951400496066
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_cubemlp",
+      "median_seconds_1000": 0.4203141360776499,
+      "median_utterances_per_second": 2379.1728951396904,
+      "peak_allocated_mib": 59.03857421875,
+      "min_seconds": 0.4076491049490869,
+      "max_seconds": 0.43696209392510355
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp",
+      "median_seconds_1000": 0.3741232705069706,
+      "median_utterances_per_second": 2672.9157976324495,
+      "peak_allocated_mib": 52.18603515625,
+      "min_seconds": 0.364615990081802,
+      "max_seconds": 0.382286136969924
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "full",
+      "median_seconds_1000": 0.43909242504741997,
+      "median_utterances_per_second": 2277.424849431198,
+      "peak_allocated_mib": 59.02783203125,
+      "min_seconds": 0.4251818840857595,
+      "max_seconds": 0.4564059409312904
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_attention",
+      "median_seconds_1000": 0.36670067999511957,
+      "median_utterances_per_second": 2727.0197590397406,
+      "peak_allocated_mib": 55.08544921875,
+      "min_seconds": 0.3524998619686812,
+      "max_seconds": 0.37386370706371963
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_cubemlp",
+      "median_seconds_1000": 0.3965283735888079,
+      "median_utterances_per_second": 2521.8876292494024,
+      "peak_allocated_mib": 56.23193359375,
+      "min_seconds": 0.38112127291969955,
+      "max_seconds": 0.4404607489705086
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp",
+      "median_seconds_1000": 0.34400929452385753,
+      "median_utterances_per_second": 2906.8982028061123,
+      "peak_allocated_mib": 49.47314453125,
+      "min_seconds": 0.3370776339434087,
+      "max_seconds": 0.35569963906891644
+    },
+    {
+      "dataset": "meld",
+      "variant": "full",
+      "median_seconds_1000": 0.37610047787893564,
+      "median_utterances_per_second": 2658.863944123713,
+      "peak_allocated_mib": 56.21533203125,
+      "min_seconds": 0.35673560202121735,
+      "max_seconds": 0.39381228294223547
+    }
+  ]
+}

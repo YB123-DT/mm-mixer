@@ -1,6 +1,6 @@
 # 三种子补充实验运行记录
 
-状态（2026-10-03 23:44 UTC）：**训练及预测结果核验全部完成，效率测试等待空闲 GPU**。
+状态（2026-10-06 复核）：**训练及预测结果核验全部完成，8 次效率测试也已完成并归档**。
 144 个位置全部通过验证：119 次新训练、25 次历史结果复用；48 个数据集/配置组合均齐 3 种子。
 完整数值和结论见 [三种子结果](results/revision_20261003/README.md)。
 
@@ -53,7 +53,7 @@
 | 单次训练产物 | `runs/revision_1b8b1ff/{dataset}/{variant}/seed{seed}/` |
 | 后续流程状态 | `pipeline/pipeline_status.json` |
 | 全部结果汇总 | `pipeline/analysis.json`、`pipeline/analysis.md`（已生成并核验） |
-| 效率结果 | `pipeline/efficiency/`、`pipeline/efficiency_summary.json`（等待空闲 GPU，尚未生成） |
+| 效率结果 | `pipeline/efficiency/`、`pipeline/efficiency_summary.json`（8/8 已完成，本地已归档） |
 
 Phase 1 的持久会话名为 `mm_mixer_revision_phase1`。
 后续控制器在 Phase 1 结束后运行 Phase 2，合并全部 144 个位置并重查预测/指标，
@@ -64,8 +64,14 @@ Phase 1 的持久会话名为 `mm_mixer_revision_phase1`。
 Phase 1 于 19:39 UTC 完成 95/95；Phase 2 于 22:03 UTC 完成 49/49。
 合并分析于 22:03:36 UTC 正常结束，`analysis.json` 的 `complete` 为 `true`。
 本地独立重算全部组的 WF1、ACC、Macro-F1 均值、样本标准差及同种子差值，与报告一致。
-当前控制器在 `mm_mixer_revision_followon` 持久会话中运行，状态为 `waiting_for_idle_gpu`；
-允许使用的 GPU 0–3 均有其他用户进程。卡空闲后自动测量，不以共享 GPU 的耗时作为正式效率结果。
+效率控制器已于 2026-10-04 20:44:33 UTC 进入 `completed`，8 个效率命令均 returncode=0。
+使用宿主 GPU 2（UUID `GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4`，V100-SXM2-32GB），
+八个命令顺序执行，起止时间不重叠；每项三次进程快照检查均无其他 GPU compute 进程。
+FP32、eval/no_grad，前 1000 个测试目标、batch 32、20 batch 预热、10 次 sweep；
+报告中位耗时而非三种子计时均值。输入预先驻留 GPU，排除特征提取、加载与 H2D。
+详细数值、显存定义、源码匹配边界及哈希核验见
+[效率结果](results/revision_20261003/efficiency/README.md)。
+统一训练成本和其他完整 baseline 的相同 1000 话语计时仍未补齐。
 
 ## 本地审计位置
 
@@ -74,4 +80,5 @@ Phase 1 于 19:39 UTC 完成 95/95；Phase 2 于 22:03 UTC 完成 49/49。
 训练中间结果留在服务器并按需同步；checkpoint、数据和日志不进入 Git。
 最终分类指标的 JSON 和 Markdown 已按服务器原始字节保存到 `results/revision_20261003/`，
 对应 SHA-256 与冻结训练版本见该目录的 `provenance.json`。
-当前没有将新分数填入 TeX/PDF。
+8 项原始效率 JSON、服务器汇总和控制器完成快照同步至 `results/revision_20261003/efficiency/`；
+其 `provenance.json` 保存服务器来源、SHA-256 和本次独立核验。论文是否收录各项以当前 Main.tex 为准。

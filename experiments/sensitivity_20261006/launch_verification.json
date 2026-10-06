@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-10-06T05:46:37.733768+00:00",
+  "pipeline_pid": 197886,
+  "queue_pid": 197891,
+  "counts": {
+    "running": 2,
+    "queued": 16,
+    "failed": 0,
+    "completed": 0
+  },
+  "running_jobs": [
+    {
+      "id": "iemocap/projection_views_2/seed2025",
+      "pid": 197900,
+      "gpu_uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e",
+      "gpu_host_index": 7,
+      "started_at": "2026-10-06T05:44:52Z",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "projection_views_2",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs"
+      ],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/pipeline/logs/iemocap_projection_views_2_seed2025.log",
+      "last_epoch_line": "[fusion] Epoch   1/100 | Train Loss: 2.5734 F1: 0.1700 Acc: 0.1799 | Test Loss: 2.6237 F1: 0.0961 Acc: 0.1269"
+    },
+    {
+      "id": "iemocap/projection_views_2/seed2066",
+      "pid": 199331,
+      "gpu_uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e",
+      "gpu_host_index": 7,
+      "started_at": "2026-10-06T05:45:12Z",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "projection_views_2",
+        "--seed",
+        "2066",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/runs"
+      ],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_Sensitivity_20261006/pipeline/logs/iemocap_projection_views_2_seed2066.log",
+      "last_epoch_line": "[fusion] Epoch   1/100 | Train Loss: 2.5235 F1: 0.2171 Acc: 0.2155 | Test Loss: 2.5581 F1: 0.2004 Acc: 0.2267"
+    }
+  ]
+}

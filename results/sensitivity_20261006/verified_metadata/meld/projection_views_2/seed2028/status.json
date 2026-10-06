@@ -1,0 +1,8 @@
+{
+  "checkpoint_sha256": "7b6dc74a850b77975b305b296ececd21b9e0f959d7cfefb04a6ea3b4c5c28b0a",
+  "epoch": 30,
+  "fresh_strict_replay_exact": true,
+  "predictions_sha256": "c3abf3563e7156c8036c3decf3e9187beb181659a02df6005918fb7cc9bb17a7",
+  "state": "complete",
+  "weighted_f1": 0.6789161905916815
+}

@@ -1,0 +1,214 @@
+--- /dev/null
++++ b/mm_mixer_final/sensitivity.py
+@@ -0,0 +1,5 @@
++"""Fixed S sensitivity variants; all other settings are inherited from Full."""
++PROJECTION_VIEW_VARIANTS = {f"projection_views_{s}": s for s in (2, 4, 8)}
++
++def projection_views(variant):
++    return PROJECTION_VIEW_VARIANTS.get(variant, 6)
+--- a/mm_mixer_final/config.py
++++ b/mm_mixer_final/config.py
+@@ -6,6 +6,7 @@
+ from pathlib import Path
+ from typing import Any
+ 
++from .sensitivity import PROJECTION_VIEW_VARIANTS
+ from .modalities import MODALITY_VARIANTS
+ from .revision_controls import REVISION_CONTROL_VARIANTS
+ from .structural_ablations import STRUCTURAL_ABLATION_VARIANTS
+@@ -20,7 +21,7 @@
+     "no_cross_attention",
+     "no_auxiliary_loss",
+ )
+-RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS
++RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS + tuple(PROJECTION_VIEW_VARIANTS)
+ _SWITCHES = (
+     "no_mixer",
+     "no_pairwise",
+@@ -158,6 +159,9 @@
+     mixer = dict(base.mixer)
+     if variant == "single_projection_view":
+         mixer.update(tokens=1, subspace_hidden=2)
++    if variant in PROJECTION_VIEW_VARIANTS:
++        s = PROJECTION_VIEW_VARIANTS[variant]
++        mixer.update(tokens=s, subspace_hidden=2 * s)
+     return replace(base, variant=variant, seed=int(seed), switches=switches, mixer=mixer)
+ 
+ 
+--- a/mm_mixer_final/audit.py
++++ b/mm_mixer_final/audit.py
+@@ -103,8 +103,13 @@
+     assert len(blocks) == cfg.mixer["blocks"]
+     assert encoder.token_count == cfg.mixer["tokens"]
+     assert encoder.token_dim == cfg.mixer["dim"]
++    assert encoder.split.out_features == cfg.mixer["tokens"] * cfg.mixer["dim"]
+     for block in blocks:
+         assert isinstance(block.route, nn.Linear)
+         assert block.route.bias is None
+         assert tuple(block.route.weight.shape) == (3, 3)
+         assert block.ffn[0].out_features == cfg.mixer["ffn"]
++        sub = block.subspace_mlp if hasattr(block, "subspace_mlp") else block.sub
++        assert sub[0].in_features == cfg.mixer["tokens"]
++        assert sub[0].out_features == 2 * cfg.mixer["tokens"]
++        assert sub[2].out_features == cfg.mixer["tokens"]
+--- a/dataset_runners/iemocap.py
++++ b/dataset_runners/iemocap.py
+@@ -38,6 +38,7 @@
+     optimizer_group_audit,
+     source_hashes,
+ )
++from mm_mixer_final.sensitivity import PROJECTION_VIEW_VARIANTS, projection_views
+ from mm_mixer_final.config import config_contract_sha256, get_config
+ from mm_mixer_final.revision_controls import (
+     NO_AUXILIARY_LOSS_VARIANTS,
+@@ -57,7 +58,7 @@
+ 
+ 
+ def build_variant_model(variant: str, dropout: float):
+-    model = build_factorized_mixer_model("HO_WO_TAV", dropout)
++    model = build_factorized_mixer_model("HO_WO_TAV", dropout, projection_views=projection_views(variant))
+     if variant == "no_mixer":
+         encoder = model.transformer_encoder
+         model.transformer_encoder = IdentityEncoderWithCross(
+@@ -78,6 +79,7 @@
+         *MODALITY_VARIANTS,
+         *STRUCTURAL_ABLATION_VARIANTS,
+         *REVISION_CONTROL_VARIANTS,
++        *PROJECTION_VIEW_VARIANTS,
+     }:
+         raise ValueError(f"unsupported IEMOCAP variant: {variant}")
+     apply_structural_ablation(model, variant)
+--- a/dataset_runners/meld.py
++++ b/dataset_runners/meld.py
+@@ -38,6 +38,7 @@
+     loaded_python_source_hashes,
+     source_hashes,
+ )
++from mm_mixer_final.sensitivity import PROJECTION_VIEW_VARIANTS, projection_views
+ from mm_mixer_final.config import config_contract_sha256, get_config
+ from mm_mixer_final.revision_controls import (
+     NO_AUXILIARY_LOSS_VARIANTS,
+@@ -61,6 +62,7 @@
+     **{variant: "M4_PAIR" for variant in MODALITY_VARIANTS},
+     **{variant: "M4_PAIR" for variant in STRUCTURAL_ABLATION_VARIANTS},
+     **{variant: "M4_PAIR" for variant in REVISION_CONTROL_VARIANTS},
++    **{variant: "M4_PAIR" for variant in PROJECTION_VIEW_VARIANTS},
+ }
+ 
+ 
+--- a/vendor/iemocap/factorized_mixer/model.py
++++ b/vendor/iemocap/factorized_mixer/model.py
+@@ -517,7 +517,7 @@
+         return grouped
+ 
+ 
+-def build_factorized_mixer_model(experiment_id="M1", dropout=.1):
++def build_factorized_mixer_model(experiment_id="M1", dropout=.1, projection_views=6):
+     if experiment_id in FINAL_TUNE_VARIANTS:
+         base = build_factorized_mixer_model("HO_WO_TAV", dropout)
+         _apply_final_tune_overrides(base, FINAL_TUNE_VARIANTS[experiment_id])
+@@ -783,7 +783,7 @@
+         "HO_WO_TAV": {"av", "tv", "ta"},
+     }
+     if experiment_id in order_ablation:
+-        base = build_factorized_mixer_model("M4_LR2_D2_H1536", dropout)
++        base = build_factorized_mixer_model("M4_LR2_D2_H1536", dropout, projection_views=projection_views)
+         base.transformer_encoder.cross.active_interactions = frozenset(order_ablation[experiment_id])
+         base.capacity_variant = f"P3_FACTORIZED_MIXER_M4_LR2_D2_H1536_{experiment_id}"
+         return base
+@@ -866,7 +866,7 @@
+     routed, alternating = variants[experiment_id]
+     base = build_structured_cross_model("X3", dropout)
+     context = base.transformer_encoder._forward_context
+-    encoder = FactorizedMixerEncoder(dropout, 2, routed, alternating, context, hidden=hidden)
++    encoder = FactorizedMixerEncoder(dropout, 2, routed, alternating, context, hidden=hidden, token_count=projection_views)
+     encoder.cross = base.transformer_encoder.cross
+     base.transformer_encoder = encoder
+     base.capacity_variant = f"P3_FACTORIZED_MIXER_{experiment_id}"
+--- a/vendor/meld/model.py
++++ b/vendor/meld/model.py
+@@ -137,10 +137,10 @@
+ 
+ 
+ class FactorizedMixerEncoder(nn.Module):
+-    def __init__(self, channel, dropout=0.2, layers=2, hidden=1536, rank=32):
++    def __init__(self, channel, dropout=0.2, layers=2, hidden=1536, rank=32, projection_views=6):
+         super().__init__()
+         del dropout  # M4's validated Mixer block contains no internal dropout.
+-        self.token_count, self.token_dim = 6, 256
++        self.token_count, self.token_dim = int(projection_views), 256
+         self.split = nn.Linear(256, self.token_count * self.token_dim)
+         self.blocks = nn.ModuleList(
+             MixerBlock(self.token_count, self.token_dim, hidden, reverse=index % 2 == 1)
+@@ -193,12 +193,12 @@
+         return self.base_integrator(pooled) + self.scale * self._channel.consume()
+ 
+ 
+-def _install_pairwise(model, mixer):
++def _install_pairwise(model, mixer, projection_views=6):
+     channel = ResidualChannel()
+     if mixer:
+-        model.transformer_encoder = FactorizedMixerEncoder(channel, dropout=0.2, layers=2, hidden=1536, rank=32)
++        model.transformer_encoder = FactorizedMixerEncoder(channel, dropout=0.2, layers=2, hidden=1536, rank=32, projection_views=projection_views)
+         model.experiment_lr_multiplier = 2.0
+-        model.capacity_variant = "M4_K6_D256_L2_H1536_PAIR_WO_TAV"
++        model.capacity_variant = f"M4_K{projection_views}_D256_L2_H1536_PAIR_WO_TAV"
+     else:
+         model.transformer_encoder = EncoderPublisher(model.transformer_encoder, channel, rank=32)
+         model.experiment_lr_multiplier = 1.0
+@@ -231,6 +231,7 @@
+ class HierarchicalAttentionFusion(_base.HierarchicalAttentionFusion):
+     def __init__(self, *args, **kwargs):
+         requested = kwargs.get("capacity_variant")
++        projection_views = kwargs.pop("projection_views", 6)
+         controlled = {
+             "BASELINE",
+             "BASE_PAIR",
+@@ -260,7 +261,7 @@
+             "M4_PAIR_NO_AUX",
+         }:
+             rng_state = torch.random.get_rng_state()
+-            _install_pairwise(self, mixer=True)
++            _install_pairwise(self, mixer=True, projection_views=projection_views)
+             torch.random.set_rng_state(rng_state)
+             if requested == "M4_PAIR_NO_MIXER":
+                 _remove_mixer_preserving_pairwise(self)
+--- a/vendor/meld/variant_override.py
++++ b/vendor/meld/variant_override.py
+@@ -99,6 +99,8 @@
+ 
+     def __init__(self, *args, **kwargs):
+         requested = kwargs.get("capacity_variant")
++        from mm_mixer_final.sensitivity import projection_views
++        kwargs["projection_views"] = projection_views(_ACTIVE_STRUCTURAL_VARIANT)
+         super().__init__(*args, **kwargs)
+         if requested in {
+             "M4_PAIR",
+--- a/launch_revision.py
++++ b/launch_revision.py
+@@ -41,6 +41,7 @@
+     "no_feature_mixing", "one_mixer_block", "no_feature_gating",
+     "modal_t", "modal_a", "modal_v", "modal_ta", "modal_tv", "modal_av",
+ )
++SENSITIVITY_VARIANTS = ("projection_views_2", "projection_views_4", "projection_views_8")
+ CONTROL_VARIANTS = (
+     "amm_mlp", "amm_attention", "amm_cubemlp", "single_projection_view",
+     "no_feature_and_adaptive_gating", "pairwise_mlp_residual", "amm_mlp_no_aux",
+@@ -51,7 +52,7 @@
+     for name, value in (("code_root", code_root), ("output_root", output_root), ("python", python)):
+         if not Path(value).is_absolute():
+             raise ValueError(f"{name} must be explicit and absolute")
+-    variants = {"base": BASE_VARIANTS, "controls": CONTROL_VARIANTS,
++    variants = {"sensitivity": SENSITIVITY_VARIANTS, "base": BASE_VARIANTS, "controls": CONTROL_VARIANTS,
+                 "full": BASE_VARIANTS + CONTROL_VARIANTS}[matrix]
+     return {"schema_version": 1, "matrix": matrix, "selection": "strict_peak_test_wf1",
+         "jobs": [{"dataset": dataset, "variant": variant, "seed": seed,
+@@ -461,7 +462,7 @@
+     parser = argparse.ArgumentParser(description=__doc__)
+     sub = parser.add_subparsers(dest="action", required=True)
+     plan_parser = sub.add_parser("plan", help="write a fixed experiment matrix; never starts training")
+-    plan_parser.add_argument("--matrix", choices=("full", "base", "controls"), default="full")
++    plan_parser.add_argument("--matrix", choices=("full", "base", "controls", "sensitivity"), default="full")
+     plan_parser.add_argument("--plan", required=True, type=Path)
+     plan_parser.add_argument("--code-root", required=True)
+     plan_parser.add_argument("--output-root", required=True)

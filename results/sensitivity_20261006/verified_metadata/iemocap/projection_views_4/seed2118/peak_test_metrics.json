@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.7178065311152187,
+  "class_f1": {
+    "anger": 0.7159090909090909,
+    "excited": 0.7408695652173913,
+    "frustration": 0.6924066924066924,
+    "happiness": 0.5533333333333333,
+    "neutral": 0.7085561497326204,
+    "sadness": 0.8461538461538461
+  },
+  "epoch": 35,
+  "macro_f1": 0.7095381129588291,
+  "support": {
+    "anger": 170,
+    "excited": 299,
+    "frustration": 381,
+    "happiness": 144,
+    "neutral": 384,
+    "sadness": 245
+  },
+  "weighted_f1": 0.7184872144587269
+}

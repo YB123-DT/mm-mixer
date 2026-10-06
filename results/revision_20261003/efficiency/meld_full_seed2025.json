@@ -1,0 +1,6605 @@
+{
+  "status": "completed",
+  "protocol": "downstream_feature_forward_v1",
+  "smoke_only": false,
+  "dataset": "meld",
+  "variant": "full",
+  "seed": 2025,
+  "server": "biggpu",
+  "hostname": "user22",
+  "pid": 4194144,
+  "gpu": {
+    "physical_index": 2,
+    "uuid": "GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4",
+    "name": "Tesla V100-SXM2-32GB",
+    "memory_total_mib": 32768.0,
+    "driver_version": "575.51.03",
+    "logical_device": "cuda:0"
+  },
+  "idle_checks": [
+    {
+      "checked_at_unix": 1791146510.7734787,
+      "other_compute_processes": []
+    },
+    {
+      "checked_at_unix": 1791146526.390251,
+      "other_compute_processes": []
+    },
+    {
+      "checked_at_unix": 1791146531.2278314,
+      "other_compute_processes": []
+    }
+  ],
+  "torch_version": "2.2.2+cu121",
+  "cuda_version": "12.1",
+  "cudnn_version": 8902,
+  "cpu_threads": 1,
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "dtype": "float32",
+  "mode": "eval/no_grad",
+  "batch_size": 32,
+  "samples": 1000,
+  "batches": 32,
+  "batch_sizes": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    8
+  ],
+  "warmup_batches": 20,
+  "timed_repeats": 10,
+  "timing_boundary": "Default downstream forward, GPU-resident pre-extracted features; synchronized before/after each entire target sweep. Excludes feature extraction, loading, H2D, parameter audit, predictions/metrics. Includes auxiliary outputs computed by default forward.",
+  "timing": {
+    "seconds_each_repeat": [
+      0.3894649858120829,
+      0.3776967078447342,
+      0.39381228294223547,
+      0.3745042479131371,
+      0.3738446100614965,
+      0.35673560202121735,
+      0.37905819597654045,
+      0.36589541006833315,
+      0.3697292150463909,
+      0.37938234210014343
+    ],
+    "median_seconds": 0.37610047787893564,
+    "min_seconds": 0.35673560202121735,
+    "p90_seconds": 0.38989971552509817,
+    "all_repeats_total_seconds": 3.7601235997863114,
+    "median_utterances_per_second": 2658.863944123713,
+    "median_ms_per_utterance_amortized": 0.37610047787893564
+  },
+  "memory": {
+    "baseline_allocated_bytes": 49604096,
+    "peak_allocated_bytes": 58946048,
+    "peak_reserved_bytes": 102760448,
+    "incremental_peak_allocated_bytes": 9341952,
+    "resident_input_tensor_bytes": 9576000,
+    "definition": "PyTorch process allocation; includes model, all selected GPU inputs and retained model state. Incremental peak is relative to post-warmup baseline, not full activation memory. Not nvidia-smi device memory."
+  },
+  "parameters": {
+    "registered_total": 5712070,
+    "registered_trainable": 5712070,
+    "main_logit_gradient_connected_trainable": 5253966,
+    "main_logit_disconnected_trainable_names": [
+      "quality_detector.v.0.weight",
+      "quality_detector.v.0.bias",
+      "quality_detector.v.1.weight",
+      "quality_detector.v.1.bias",
+      "quality_detector.v.4.weight",
+      "quality_detector.v.4.bias",
+      "quality_detector.v.6.weight",
+      "quality_detector.v.6.bias",
+      "quality_detector.a.0.weight",
+      "quality_detector.a.0.bias",
+      "quality_detector.a.1.weight",
+      "quality_detector.a.1.bias",
+      "quality_detector.a.4.weight",
+      "quality_detector.a.4.bias",
+      "quality_detector.a.6.weight",
+      "quality_detector.a.6.bias",
+      "quality_detector.t.0.weight",
+      "quality_detector.t.0.bias",
+      "quality_detector.t.1.weight",
+      "quality_detector.t.1.bias",
+      "quality_detector.t.4.weight",
+      "quality_detector.t.4.bias",
+      "quality_detector.t.6.weight",
+      "quality_detector.t.6.bias",
+      "transformer_encoder.cross.triple_projections.0.weight",
+      "transformer_encoder.cross.triple_projections.0.bias",
+      "transformer_encoder.cross.triple_projections.1.weight",
+      "transformer_encoder.cross.triple_projections.1.bias",
+      "transformer_encoder.cross.triple_projections.2.weight",
+      "transformer_encoder.cross.triple_projections.2.bias",
+      "mod_classifiers.v.0.weight",
+      "mod_classifiers.v.0.bias",
+      "mod_classifiers.v.3.weight",
+      "mod_classifiers.v.3.bias",
+      "mod_classifiers.a.0.weight",
+      "mod_classifiers.a.0.bias",
+      "mod_classifiers.a.3.weight",
+      "mod_classifiers.a.3.bias",
+      "mod_classifiers.t.0.weight",
+      "mod_classifiers.t.0.bias",
+      "mod_classifiers.t.3.weight",
+      "mod_classifiers.t.3.bias"
+    ],
+    "connected_count_definition": "Requires-grad parameters connected to main logits on one eval batch; zero gradients still count. This excludes aux-only dependencies, not necessarily all forward compute. No optimizer/update is used; default forward is not pruned."
+  },
+  "revision_control": {},
+  "sample_selection": "first N test targets in dataset order; no resampling or duplication",
+  "sample_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    453,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    623,
+    624,
+    625,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    636,
+    637,
+    638,
+    639,
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700,
+    701,
+    702,
+    703,
+    704,
+    705,
+    706,
+    707,
+    708,
+    709,
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716,
+    717,
+    718,
+    719,
+    720,
+    721,
+    722,
+    723,
+    724,
+    725,
+    726,
+    727,
+    728,
+    729,
+    730,
+    731,
+    732,
+    733,
+    734,
+    735,
+    736,
+    737,
+    738,
+    739,
+    740,
+    741,
+    742,
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    751,
+    752,
+    753,
+    754,
+    755,
+    756,
+    757,
+    758,
+    759,
+    760,
+    761,
+    762,
+    763,
+    764,
+    765,
+    766,
+    767,
+    768,
+    769,
+    770,
+    771,
+    772,
+    773,
+    774,
+    775,
+    776,
+    777,
+    778,
+    779,
+    780,
+    781,
+    782,
+    783,
+    784,
+    785,
+    786,
+    787,
+    788,
+    789,
+    790,
+    791,
+    792,
+    793,
+    794,
+    795,
+    796,
+    797,
+    798,
+    799,
+    800,
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    815,
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919,
+    920,
+    921,
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    928,
+    929,
+    930,
+    931,
+    932,
+    933,
+    934,
+    935,
+    936,
+    937,
+    938,
+    939,
+    940,
+    941,
+    942,
+    943,
+    944,
+    945,
+    946,
+    947,
+    948,
+    949,
+    950,
+    951,
+    952,
+    953,
+    954,
+    955,
+    956,
+    957,
+    958,
+    959,
+    960,
+    961,
+    962,
+    963,
+    964,
+    965,
+    966,
+    967,
+    968,
+    969,
+    970,
+    971,
+    972,
+    973,
+    974,
+    975,
+    976,
+    977,
+    978,
+    979,
+    980,
+    981,
+    982,
+    983,
+    984,
+    985,
+    986,
+    987,
+    988,
+    989,
+    990,
+    991,
+    992,
+    993,
+    994,
+    995,
+    996,
+    997,
+    998,
+    999
+  ],
+  "sample_ids": [
+    {
+      "dialogue": 0,
+      "turn": 0,
+      "utterance_id": "dia0_utt0"
+    },
+    {
+      "dialogue": 0,
+      "turn": 1,
+      "utterance_id": "dia0_utt1"
+    },
+    {
+      "dialogue": 0,
+      "turn": 2,
+      "utterance_id": "dia0_utt2"
+    },
+    {
+      "dialogue": 1,
+      "turn": 0,
+      "utterance_id": "dia1_utt0"
+    },
+    {
+      "dialogue": 1,
+      "turn": 1,
+      "utterance_id": "dia1_utt1"
+    },
+    {
+      "dialogue": 1,
+      "turn": 2,
+      "utterance_id": "dia1_utt2"
+    },
+    {
+      "dialogue": 1,
+      "turn": 3,
+      "utterance_id": "dia1_utt3"
+    },
+    {
+      "dialogue": 1,
+      "turn": 4,
+      "utterance_id": "dia1_utt4"
+    },
+    {
+      "dialogue": 1,
+      "turn": 5,
+      "utterance_id": "dia1_utt5"
+    },
+    {
+      "dialogue": 1,
+      "turn": 6,
+      "utterance_id": "dia1_utt6"
+    },
+    {
+      "dialogue": 1,
+      "turn": 7,
+      "utterance_id": "dia1_utt7"
+    },
+    {
+      "dialogue": 2,
+      "turn": 0,
+      "utterance_id": "dia2_utt0"
+    },
+    {
+      "dialogue": 2,
+      "turn": 1,
+      "utterance_id": "dia2_utt1"
+    },
+    {
+      "dialogue": 2,
+      "turn": 2,
+      "utterance_id": "dia2_utt2"
+    },
+    {
+      "dialogue": 2,
+      "turn": 3,
+      "utterance_id": "dia2_utt3"
+    },
+    {
+      "dialogue": 2,
+      "turn": 4,
+      "utterance_id": "dia2_utt4"
+    },
+    {
+      "dialogue": 2,
+      "turn": 5,
+      "utterance_id": "dia2_utt5"
+    },
+    {
+      "dialogue": 2,
+      "turn": 6,
+      "utterance_id": "dia2_utt6"
+    },
+    {
+      "dialogue": 2,
+      "turn": 7,
+      "utterance_id": "dia2_utt7"
+    },
+    {
+      "dialogue": 2,
+      "turn": 8,
+      "utterance_id": "dia2_utt8"
+    },
+    {
+      "dialogue": 2,
+      "turn": 9,
+      "utterance_id": "dia2_utt9"
+    },
+    {
+      "dialogue": 2,
+      "turn": 10,
+      "utterance_id": "dia2_utt10"
+    },
+    {
+      "dialogue": 3,
+      "turn": 0,
+      "utterance_id": "dia3_utt0"
+    },
+    {
+      "dialogue": 3,
+      "turn": 1,
+      "utterance_id": "dia3_utt1"
+    },
+    {
+      "dialogue": 3,
+      "turn": 2,
+      "utterance_id": "dia3_utt2"
+    },
+    {
+      "dialogue": 3,
+      "turn": 3,
+      "utterance_id": "dia3_utt3"
+    },
+    {
+      "dialogue": 3,
+      "turn": 4,
+      "utterance_id": "dia3_utt4"
+    },
+    {
+      "dialogue": 3,
+      "turn": 5,
+      "utterance_id": "dia3_utt5"
+    },
+    {
+      "dialogue": 3,
+      "turn": 6,
+      "utterance_id": "dia3_utt6"
+    },
+    {
+      "dialogue": 4,
+      "turn": 0,
+      "utterance_id": "dia4_utt0"
+    },
+    {
+      "dialogue": 4,
+      "turn": 1,
+      "utterance_id": "dia4_utt1"
+    },
+    {
+      "dialogue": 4,
+      "turn": 2,
+      "utterance_id": "dia4_utt2"
+    },
+    {
+      "dialogue": 4,
+      "turn": 3,
+      "utterance_id": "dia4_utt3"
+    },
+    {
+      "dialogue": 4,
+      "turn": 4,
+      "utterance_id": "dia4_utt4"
+    },
+    {
+      "dialogue": 4,
+      "turn": 5,
+      "utterance_id": "dia4_utt5"
+    },
+    {
+      "dialogue": 4,
+      "turn": 6,
+      "utterance_id": "dia4_utt6"
+    },
+    {
+      "dialogue": 4,
+      "turn": 7,
+      "utterance_id": "dia4_utt7"
+    },
+    {
+      "dialogue": 4,
+      "turn": 8,
+      "utterance_id": "dia4_utt8"
+    },
+    {
+      "dialogue": 5,
+      "turn": 0,
+      "utterance_id": "dia5_utt0"
+    },
+    {
+      "dialogue": 5,
+      "turn": 1,
+      "utterance_id": "dia5_utt1"
+    },
+    {
+      "dialogue": 5,
+      "turn": 2,
+      "utterance_id": "dia5_utt2"
+    },
+    {
+      "dialogue": 5,
+      "turn": 3,
+      "utterance_id": "dia5_utt3"
+    },
+    {
+      "dialogue": 5,
+      "turn": 4,
+      "utterance_id": "dia5_utt4"
+    },
+    {
+      "dialogue": 5,
+      "turn": 5,
+      "utterance_id": "dia5_utt5"
+    },
+    {
+      "dialogue": 5,
+      "turn": 6,
+      "utterance_id": "dia5_utt6"
+    },
+    {
+      "dialogue": 5,
+      "turn": 7,
+      "utterance_id": "dia5_utt7"
+    },
+    {
+      "dialogue": 5,
+      "turn": 8,
+      "utterance_id": "dia5_utt8"
+    },
+    {
+      "dialogue": 6,
+      "turn": 0,
+      "utterance_id": "dia6_utt0"
+    },
+    {
+      "dialogue": 6,
+      "turn": 1,
+      "utterance_id": "dia6_utt1"
+    },
+    {
+      "dialogue": 6,
+      "turn": 2,
+      "utterance_id": "dia6_utt2"
+    },
+    {
+      "dialogue": 7,
+      "turn": 0,
+      "utterance_id": "dia7_utt0"
+    },
+    {
+      "dialogue": 7,
+      "turn": 1,
+      "utterance_id": "dia7_utt1"
+    },
+    {
+      "dialogue": 7,
+      "turn": 2,
+      "utterance_id": "dia7_utt2"
+    },
+    {
+      "dialogue": 7,
+      "turn": 3,
+      "utterance_id": "dia7_utt3"
+    },
+    {
+      "dialogue": 7,
+      "turn": 4,
+      "utterance_id": "dia7_utt4"
+    },
+    {
+      "dialogue": 7,
+      "turn": 5,
+      "utterance_id": "dia7_utt5"
+    },
+    {
+      "dialogue": 7,
+      "turn": 6,
+      "utterance_id": "dia7_utt6"
+    },
+    {
+      "dialogue": 7,
+      "turn": 7,
+      "utterance_id": "dia7_utt7"
+    },
+    {
+      "dialogue": 7,
+      "turn": 8,
+      "utterance_id": "dia7_utt8"
+    },
+    {
+      "dialogue": 8,
+      "turn": 0,
+      "utterance_id": "dia8_utt0"
+    },
+    {
+      "dialogue": 8,
+      "turn": 1,
+      "utterance_id": "dia8_utt1"
+    },
+    {
+      "dialogue": 8,
+      "turn": 2,
+      "utterance_id": "dia8_utt2"
+    },
+    {
+      "dialogue": 8,
+      "turn": 3,
+      "utterance_id": "dia8_utt3"
+    },
+    {
+      "dialogue": 8,
+      "turn": 4,
+      "utterance_id": "dia8_utt4"
+    },
+    {
+      "dialogue": 8,
+      "turn": 5,
+      "utterance_id": "dia8_utt5"
+    },
+    {
+      "dialogue": 8,
+      "turn": 6,
+      "utterance_id": "dia8_utt6"
+    },
+    {
+      "dialogue": 9,
+      "turn": 0,
+      "utterance_id": "dia9_utt0"
+    },
+    {
+      "dialogue": 9,
+      "turn": 1,
+      "utterance_id": "dia9_utt1"
+    },
+    {
+      "dialogue": 9,
+      "turn": 2,
+      "utterance_id": "dia9_utt2"
+    },
+    {
+      "dialogue": 9,
+      "turn": 3,
+      "utterance_id": "dia9_utt3"
+    },
+    {
+      "dialogue": 9,
+      "turn": 4,
+      "utterance_id": "dia9_utt4"
+    },
+    {
+      "dialogue": 9,
+      "turn": 5,
+      "utterance_id": "dia9_utt5"
+    },
+    {
+      "dialogue": 9,
+      "turn": 6,
+      "utterance_id": "dia9_utt6"
+    },
+    {
+      "dialogue": 9,
+      "turn": 7,
+      "utterance_id": "dia9_utt7"
+    },
+    {
+      "dialogue": 9,
+      "turn": 8,
+      "utterance_id": "dia9_utt8"
+    },
+    {
+      "dialogue": 9,
+      "turn": 9,
+      "utterance_id": "dia9_utt9"
+    },
+    {
+      "dialogue": 9,
+      "turn": 10,
+      "utterance_id": "dia9_utt10"
+    },
+    {
+      "dialogue": 9,
+      "turn": 11,
+      "utterance_id": "dia9_utt11"
+    },
+    {
+      "dialogue": 9,
+      "turn": 12,
+      "utterance_id": "dia9_utt12"
+    },
+    {
+      "dialogue": 9,
+      "turn": 13,
+      "utterance_id": "dia9_utt13"
+    },
+    {
+      "dialogue": 9,
+      "turn": 14,
+      "utterance_id": "dia9_utt14"
+    },
+    {
+      "dialogue": 9,
+      "turn": 15,
+      "utterance_id": "dia9_utt15"
+    },
+    {
+      "dialogue": 9,
+      "turn": 16,
+      "utterance_id": "dia9_utt16"
+    },
+    {
+      "dialogue": 9,
+      "turn": 17,
+      "utterance_id": "dia9_utt17"
+    },
+    {
+      "dialogue": 10,
+      "turn": 0,
+      "utterance_id": "dia10_utt0"
+    },
+    {
+      "dialogue": 10,
+      "turn": 1,
+      "utterance_id": "dia10_utt1"
+    },
+    {
+      "dialogue": 10,
+      "turn": 2,
+      "utterance_id": "dia10_utt2"
+    },
+    {
+      "dialogue": 10,
+      "turn": 3,
+      "utterance_id": "dia10_utt3"
+    },
+    {
+      "dialogue": 11,
+      "turn": 0,
+      "utterance_id": "dia11_utt0"
+    },
+    {
+      "dialogue": 11,
+      "turn": 1,
+      "utterance_id": "dia11_utt1"
+    },
+    {
+      "dialogue": 11,
+      "turn": 2,
+      "utterance_id": "dia11_utt2"
+    },
+    {
+      "dialogue": 11,
+      "turn": 3,
+      "utterance_id": "dia11_utt3"
+    },
+    {
+      "dialogue": 11,
+      "turn": 4,
+      "utterance_id": "dia11_utt4"
+    },
+    {
+      "dialogue": 12,
+      "turn": 0,
+      "utterance_id": "dia12_utt0"
+    },
+    {
+      "dialogue": 12,
+      "turn": 1,
+      "utterance_id": "dia12_utt1"
+    },
+    {
+      "dialogue": 12,
+      "turn": 2,
+      "utterance_id": "dia12_utt2"
+    },
+    {
+      "dialogue": 12,
+      "turn": 3,
+      "utterance_id": "dia12_utt3"
+    },
+    {
+      "dialogue": 12,
+      "turn": 4,
+      "utterance_id": "dia12_utt4"
+    },
+    {
+      "dialogue": 12,
+      "turn": 5,
+      "utterance_id": "dia12_utt5"
+    },
+    {
+      "dialogue": 12,
+      "turn": 6,
+      "utterance_id": "dia12_utt6"
+    },
+    {
+      "dialogue": 12,
+      "turn": 7,
+      "utterance_id": "dia12_utt7"
+    },
+    {
+      "dialogue": 12,
+      "turn": 8,
+      "utterance_id": "dia12_utt8"
+    },
+    {
+      "dialogue": 12,
+      "turn": 9,
+      "utterance_id": "dia12_utt9"
+    },
+    {
+      "dialogue": 12,
+      "turn": 10,
+      "utterance_id": "dia12_utt10"
+    },
+    {
+      "dialogue": 12,
+      "turn": 11,
+      "utterance_id": "dia12_utt11"
+    },
+    {
+      "dialogue": 12,
+      "turn": 12,
+      "utterance_id": "dia12_utt12"
+    },
+    {
+      "dialogue": 12,
+      "turn": 13,
+      "utterance_id": "dia12_utt13"
+    },
+    {
+      "dialogue": 12,
+      "turn": 14,
+      "utterance_id": "dia12_utt14"
+    },
+    {
+      "dialogue": 12,
+      "turn": 15,
+      "utterance_id": "dia12_utt15"
+    },
+    {
+      "dialogue": 12,
+      "turn": 16,
+      "utterance_id": "dia12_utt16"
+    },
+    {
+      "dialogue": 12,
+      "turn": 17,
+      "utterance_id": "dia12_utt17"
+    },
+    {
+      "dialogue": 12,
+      "turn": 18,
+      "utterance_id": "dia12_utt18"
+    },
+    {
+      "dialogue": 12,
+      "turn": 19,
+      "utterance_id": "dia12_utt19"
+    },
+    {
+      "dialogue": 13,
+      "turn": 0,
+      "utterance_id": "dia13_utt0"
+    },
+    {
+      "dialogue": 13,
+      "turn": 1,
+      "utterance_id": "dia13_utt1"
+    },
+    {
+      "dialogue": 13,
+      "turn": 2,
+      "utterance_id": "dia13_utt2"
+    },
+    {
+      "dialogue": 13,
+      "turn": 3,
+      "utterance_id": "dia13_utt3"
+    },
+    {
+      "dialogue": 13,
+      "turn": 4,
+      "utterance_id": "dia13_utt4"
+    },
+    {
+      "dialogue": 13,
+      "turn": 5,
+      "utterance_id": "dia13_utt5"
+    },
+    {
+      "dialogue": 13,
+      "turn": 6,
+      "utterance_id": "dia13_utt6"
+    },
+    {
+      "dialogue": 13,
+      "turn": 7,
+      "utterance_id": "dia13_utt7"
+    },
+    {
+      "dialogue": 14,
+      "turn": 0,
+      "utterance_id": "dia14_utt0"
+    },
+    {
+      "dialogue": 14,
+      "turn": 1,
+      "utterance_id": "dia14_utt1"
+    },
+    {
+      "dialogue": 14,
+      "turn": 2,
+      "utterance_id": "dia14_utt2"
+    },
+    {
+      "dialogue": 14,
+      "turn": 3,
+      "utterance_id": "dia14_utt3"
+    },
+    {
+      "dialogue": 14,
+      "turn": 4,
+      "utterance_id": "dia14_utt4"
+    },
+    {
+      "dialogue": 14,
+      "turn": 5,
+      "utterance_id": "dia14_utt5"
+    },
+    {
+      "dialogue": 14,
+      "turn": 6,
+      "utterance_id": "dia14_utt6"
+    },
+    {
+      "dialogue": 14,
+      "turn": 7,
+      "utterance_id": "dia14_utt7"
+    },
+    {
+      "dialogue": 14,
+      "turn": 8,
+      "utterance_id": "dia14_utt8"
+    },
+    {
+      "dialogue": 14,
+      "turn": 9,
+      "utterance_id": "dia14_utt9"
+    },
+    {
+      "dialogue": 14,
+      "turn": 10,
+      "utterance_id": "dia14_utt10"
+    },
+    {
+      "dialogue": 15,
+      "turn": 0,
+      "utterance_id": "dia15_utt0"
+    },
+    {
+      "dialogue": 15,
+      "turn": 1,
+      "utterance_id": "dia15_utt1"
+    },
+    {
+      "dialogue": 15,
+      "turn": 2,
+      "utterance_id": "dia15_utt2"
+    },
+    {
+      "dialogue": 15,
+      "turn": 3,
+      "utterance_id": "dia15_utt3"
+    },
+    {
+      "dialogue": 15,
+      "turn": 4,
+      "utterance_id": "dia15_utt4"
+    },
+    {
+      "dialogue": 15,
+      "turn": 5,
+      "utterance_id": "dia15_utt5"
+    },
+    {
+      "dialogue": 16,
+      "turn": 0,
+      "utterance_id": "dia16_utt0"
+    },
+    {
+      "dialogue": 16,
+      "turn": 1,
+      "utterance_id": "dia16_utt1"
+    },
+    {
+      "dialogue": 16,
+      "turn": 2,
+      "utterance_id": "dia16_utt2"
+    },
+    {
+      "dialogue": 16,
+      "turn": 3,
+      "utterance_id": "dia16_utt3"
+    },
+    {
+      "dialogue": 16,
+      "turn": 4,
+      "utterance_id": "dia16_utt4"
+    },
+    {
+      "dialogue": 16,
+      "turn": 5,
+      "utterance_id": "dia16_utt5"
+    },
+    {
+      "dialogue": 16,
+      "turn": 6,
+      "utterance_id": "dia16_utt6"
+    },
+    {
+      "dialogue": 16,
+      "turn": 7,
+      "utterance_id": "dia16_utt7"
+    },
+    {
+      "dialogue": 16,
+      "turn": 8,
+      "utterance_id": "dia16_utt8"
+    },
+    {
+      "dialogue": 16,
+      "turn": 9,
+      "utterance_id": "dia16_utt9"
+    },
+    {
+      "dialogue": 17,
+      "turn": 0,
+      "utterance_id": "dia17_utt0"
+    },
+    {
+      "dialogue": 17,
+      "turn": 1,
+      "utterance_id": "dia17_utt1"
+    },
+    {
+      "dialogue": 17,
+      "turn": 2,
+      "utterance_id": "dia17_utt2"
+    },
+    {
+      "dialogue": 17,
+      "turn": 3,
+      "utterance_id": "dia17_utt3"
+    },
+    {
+      "dialogue": 17,
+      "turn": 4,
+      "utterance_id": "dia17_utt4"
+    },
+    {
+      "dialogue": 17,
+      "turn": 5,
+      "utterance_id": "dia17_utt5"
+    },
+    {
+      "dialogue": 17,
+      "turn": 6,
+      "utterance_id": "dia17_utt6"
+    },
+    {
+      "dialogue": 17,
+      "turn": 7,
+      "utterance_id": "dia17_utt7"
+    },
+    {
+      "dialogue": 17,
+      "turn": 8,
+      "utterance_id": "dia17_utt8"
+    },
+    {
+      "dialogue": 17,
+      "turn": 9,
+      "utterance_id": "dia17_utt9"
+    },
+    {
+      "dialogue": 17,
+      "turn": 10,
+      "utterance_id": "dia17_utt10"
+    },
+    {
+      "dialogue": 17,
+      "turn": 11,
+      "utterance_id": "dia17_utt11"
+    },
+    {
+      "dialogue": 17,
+      "turn": 12,
+      "utterance_id": "dia17_utt12"
+    },
+    {
+      "dialogue": 17,
+      "turn": 13,
+      "utterance_id": "dia17_utt13"
+    },
+    {
+      "dialogue": 17,
+      "turn": 14,
+      "utterance_id": "dia17_utt14"
+    },
+    {
+      "dialogue": 17,
+      "turn": 15,
+      "utterance_id": "dia17_utt15"
+    },
+    {
+      "dialogue": 17,
+      "turn": 16,
+      "utterance_id": "dia17_utt16"
+    },
+    {
+      "dialogue": 17,
+      "turn": 17,
+      "utterance_id": "dia17_utt17"
+    },
+    {
+      "dialogue": 17,
+      "turn": 18,
+      "utterance_id": "dia17_utt18"
+    },
+    {
+      "dialogue": 17,
+      "turn": 19,
+      "utterance_id": "dia17_utt19"
+    },
+    {
+      "dialogue": 17,
+      "turn": 20,
+      "utterance_id": "dia17_utt20"
+    },
+    {
+      "dialogue": 17,
+      "turn": 21,
+      "utterance_id": "dia17_utt21"
+    },
+    {
+      "dialogue": 17,
+      "turn": 22,
+      "utterance_id": "dia17_utt22"
+    },
+    {
+      "dialogue": 17,
+      "turn": 23,
+      "utterance_id": "dia17_utt23"
+    },
+    {
+      "dialogue": 17,
+      "turn": 24,
+      "utterance_id": "dia17_utt24"
+    },
+    {
+      "dialogue": 17,
+      "turn": 25,
+      "utterance_id": "dia17_utt25"
+    },
+    {
+      "dialogue": 17,
+      "turn": 26,
+      "utterance_id": "dia17_utt26"
+    },
+    {
+      "dialogue": 17,
+      "turn": 27,
+      "utterance_id": "dia17_utt27"
+    },
+    {
+      "dialogue": 17,
+      "turn": 28,
+      "utterance_id": "dia17_utt28"
+    },
+    {
+      "dialogue": 17,
+      "turn": 29,
+      "utterance_id": "dia17_utt29"
+    },
+    {
+      "dialogue": 17,
+      "turn": 30,
+      "utterance_id": "dia17_utt30"
+    },
+    {
+      "dialogue": 17,
+      "turn": 31,
+      "utterance_id": "dia17_utt31"
+    },
+    {
+      "dialogue": 17,
+      "turn": 32,
+      "utterance_id": "dia17_utt32"
+    },
+    {
+      "dialogue": 18,
+      "turn": 0,
+      "utterance_id": "dia18_utt0"
+    },
+    {
+      "dialogue": 18,
+      "turn": 1,
+      "utterance_id": "dia18_utt1"
+    },
+    {
+      "dialogue": 18,
+      "turn": 2,
+      "utterance_id": "dia18_utt2"
+    },
+    {
+      "dialogue": 19,
+      "turn": 0,
+      "utterance_id": "dia19_utt0"
+    },
+    {
+      "dialogue": 20,
+      "turn": 0,
+      "utterance_id": "dia20_utt0"
+    },
+    {
+      "dialogue": 20,
+      "turn": 1,
+      "utterance_id": "dia20_utt1"
+    },
+    {
+      "dialogue": 20,
+      "turn": 2,
+      "utterance_id": "dia20_utt2"
+    },
+    {
+      "dialogue": 20,
+      "turn": 3,
+      "utterance_id": "dia20_utt3"
+    },
+    {
+      "dialogue": 20,
+      "turn": 4,
+      "utterance_id": "dia20_utt4"
+    },
+    {
+      "dialogue": 20,
+      "turn": 5,
+      "utterance_id": "dia20_utt5"
+    },
+    {
+      "dialogue": 20,
+      "turn": 6,
+      "utterance_id": "dia20_utt6"
+    },
+    {
+      "dialogue": 20,
+      "turn": 7,
+      "utterance_id": "dia20_utt7"
+    },
+    {
+      "dialogue": 21,
+      "turn": 0,
+      "utterance_id": "dia21_utt0"
+    },
+    {
+      "dialogue": 21,
+      "turn": 1,
+      "utterance_id": "dia21_utt1"
+    },
+    {
+      "dialogue": 21,
+      "turn": 2,
+      "utterance_id": "dia21_utt2"
+    },
+    {
+      "dialogue": 21,
+      "turn": 3,
+      "utterance_id": "dia21_utt3"
+    },
+    {
+      "dialogue": 21,
+      "turn": 4,
+      "utterance_id": "dia21_utt4"
+    },
+    {
+      "dialogue": 21,
+      "turn": 5,
+      "utterance_id": "dia21_utt5"
+    },
+    {
+      "dialogue": 21,
+      "turn": 6,
+      "utterance_id": "dia21_utt6"
+    },
+    {
+      "dialogue": 22,
+      "turn": 0,
+      "utterance_id": "dia22_utt0"
+    },
+    {
+      "dialogue": 22,
+      "turn": 1,
+      "utterance_id": "dia22_utt1"
+    },
+    {
+      "dialogue": 22,
+      "turn": 2,
+      "utterance_id": "dia22_utt2"
+    },
+    {
+      "dialogue": 22,
+      "turn": 3,
+      "utterance_id": "dia22_utt3"
+    },
+    {
+      "dialogue": 22,
+      "turn": 4,
+      "utterance_id": "dia22_utt4"
+    },
+    {
+      "dialogue": 22,
+      "turn": 5,
+      "utterance_id": "dia22_utt5"
+    },
+    {
+      "dialogue": 22,
+      "turn": 6,
+      "utterance_id": "dia22_utt6"
+    },
+    {
+      "dialogue": 22,
+      "turn": 7,
+      "utterance_id": "dia22_utt7"
+    },
+    {
+      "dialogue": 22,
+      "turn": 8,
+      "utterance_id": "dia22_utt8"
+    },
+    {
+      "dialogue": 22,
+      "turn": 9,
+      "utterance_id": "dia22_utt9"
+    },
+    {
+      "dialogue": 22,
+      "turn": 10,
+      "utterance_id": "dia22_utt10"
+    },
+    {
+      "dialogue": 22,
+      "turn": 11,
+      "utterance_id": "dia22_utt11"
+    },
+    {
+      "dialogue": 22,
+      "turn": 12,
+      "utterance_id": "dia22_utt12"
+    },
+    {
+      "dialogue": 22,
+      "turn": 13,
+      "utterance_id": "dia22_utt13"
+    },
+    {
+      "dialogue": 22,
+      "turn": 14,
+      "utterance_id": "dia22_utt14"
+    },
+    {
+      "dialogue": 22,
+      "turn": 15,
+      "utterance_id": "dia22_utt15"
+    },
+    {
+      "dialogue": 22,
+      "turn": 16,
+      "utterance_id": "dia22_utt16"
+    },
+    {
+      "dialogue": 22,
+      "turn": 17,
+      "utterance_id": "dia22_utt17"
+    },
+    {
+      "dialogue": 22,
+      "turn": 18,
+      "utterance_id": "dia22_utt18"
+    },
+    {
+      "dialogue": 22,
+      "turn": 19,
+      "utterance_id": "dia22_utt19"
+    },
+    {
+      "dialogue": 22,
+      "turn": 20,
+      "utterance_id": "dia22_utt20"
+    },
+    {
+      "dialogue": 22,
+      "turn": 21,
+      "utterance_id": "dia22_utt21"
+    },
+    {
+      "dialogue": 23,
+      "turn": 0,
+      "utterance_id": "dia23_utt0"
+    },
+    {
+      "dialogue": 23,
+      "turn": 1,
+      "utterance_id": "dia23_utt1"
+    },
+    {
+      "dialogue": 23,
+      "turn": 2,
+      "utterance_id": "dia23_utt2"
+    },
+    {
+      "dialogue": 24,
+      "turn": 0,
+      "utterance_id": "dia24_utt0"
+    },
+    {
+      "dialogue": 24,
+      "turn": 1,
+      "utterance_id": "dia24_utt1"
+    },
+    {
+      "dialogue": 24,
+      "turn": 2,
+      "utterance_id": "dia24_utt2"
+    },
+    {
+      "dialogue": 24,
+      "turn": 3,
+      "utterance_id": "dia24_utt3"
+    },
+    {
+      "dialogue": 25,
+      "turn": 0,
+      "utterance_id": "dia25_utt0"
+    },
+    {
+      "dialogue": 25,
+      "turn": 1,
+      "utterance_id": "dia25_utt1"
+    },
+    {
+      "dialogue": 25,
+      "turn": 2,
+      "utterance_id": "dia25_utt2"
+    },
+    {
+      "dialogue": 25,
+      "turn": 3,
+      "utterance_id": "dia25_utt3"
+    },
+    {
+      "dialogue": 25,
+      "turn": 4,
+      "utterance_id": "dia25_utt4"
+    },
+    {
+      "dialogue": 25,
+      "turn": 5,
+      "utterance_id": "dia25_utt5"
+    },
+    {
+      "dialogue": 25,
+      "turn": 6,
+      "utterance_id": "dia25_utt6"
+    },
+    {
+      "dialogue": 25,
+      "turn": 7,
+      "utterance_id": "dia25_utt7"
+    },
+    {
+      "dialogue": 25,
+      "turn": 8,
+      "utterance_id": "dia25_utt8"
+    },
+    {
+      "dialogue": 25,
+      "turn": 9,
+      "utterance_id": "dia25_utt9"
+    },
+    {
+      "dialogue": 25,
+      "turn": 10,
+      "utterance_id": "dia25_utt10"
+    },
+    {
+      "dialogue": 25,
+      "turn": 11,
+      "utterance_id": "dia25_utt11"
+    },
+    {
+      "dialogue": 25,
+      "turn": 12,
+      "utterance_id": "dia25_utt12"
+    },
+    {
+      "dialogue": 25,
+      "turn": 13,
+      "utterance_id": "dia25_utt13"
+    },
+    {
+      "dialogue": 25,
+      "turn": 14,
+      "utterance_id": "dia25_utt14"
+    },
+    {
+      "dialogue": 25,
+      "turn": 15,
+      "utterance_id": "dia25_utt15"
+    },
+    {
+      "dialogue": 25,
+      "turn": 16,
+      "utterance_id": "dia25_utt16"
+    },
+    {
+      "dialogue": 26,
+      "turn": 0,
+      "utterance_id": "dia26_utt0"
+    },
+    {
+      "dialogue": 27,
+      "turn": 0,
+      "utterance_id": "dia27_utt0"
+    },
+    {
+      "dialogue": 27,
+      "turn": 1,
+      "utterance_id": "dia27_utt1"
+    },
+    {
+      "dialogue": 28,
+      "turn": 0,
+      "utterance_id": "dia28_utt0"
+    },
+    {
+      "dialogue": 28,
+      "turn": 1,
+      "utterance_id": "dia28_utt1"
+    },
+    {
+      "dialogue": 28,
+      "turn": 2,
+      "utterance_id": "dia28_utt2"
+    },
+    {
+      "dialogue": 28,
+      "turn": 3,
+      "utterance_id": "dia28_utt3"
+    },
+    {
+      "dialogue": 28,
+      "turn": 4,
+      "utterance_id": "dia28_utt4"
+    },
+    {
+      "dialogue": 28,
+      "turn": 5,
+      "utterance_id": "dia28_utt5"
+    },
+    {
+      "dialogue": 28,
+      "turn": 6,
+      "utterance_id": "dia28_utt6"
+    },
+    {
+      "dialogue": 28,
+      "turn": 7,
+      "utterance_id": "dia28_utt7"
+    },
+    {
+      "dialogue": 28,
+      "turn": 8,
+      "utterance_id": "dia28_utt8"
+    },
+    {
+      "dialogue": 28,
+      "turn": 9,
+      "utterance_id": "dia28_utt9"
+    },
+    {
+      "dialogue": 28,
+      "turn": 10,
+      "utterance_id": "dia28_utt10"
+    },
+    {
+      "dialogue": 28,
+      "turn": 11,
+      "utterance_id": "dia28_utt11"
+    },
+    {
+      "dialogue": 28,
+      "turn": 12,
+      "utterance_id": "dia28_utt12"
+    },
+    {
+      "dialogue": 28,
+      "turn": 13,
+      "utterance_id": "dia28_utt13"
+    },
+    {
+      "dialogue": 28,
+      "turn": 14,
+      "utterance_id": "dia28_utt14"
+    },
+    {
+      "dialogue": 28,
+      "turn": 15,
+      "utterance_id": "dia28_utt15"
+    },
+    {
+      "dialogue": 28,
+      "turn": 16,
+      "utterance_id": "dia28_utt16"
+    },
+    {
+      "dialogue": 29,
+      "turn": 0,
+      "utterance_id": "dia29_utt0"
+    },
+    {
+      "dialogue": 29,
+      "turn": 1,
+      "utterance_id": "dia29_utt1"
+    },
+    {
+      "dialogue": 29,
+      "turn": 2,
+      "utterance_id": "dia29_utt2"
+    },
+    {
+      "dialogue": 29,
+      "turn": 3,
+      "utterance_id": "dia29_utt3"
+    },
+    {
+      "dialogue": 29,
+      "turn": 4,
+      "utterance_id": "dia29_utt4"
+    },
+    {
+      "dialogue": 29,
+      "turn": 5,
+      "utterance_id": "dia29_utt5"
+    },
+    {
+      "dialogue": 29,
+      "turn": 6,
+      "utterance_id": "dia29_utt6"
+    },
+    {
+      "dialogue": 29,
+      "turn": 7,
+      "utterance_id": "dia29_utt7"
+    },
+    {
+      "dialogue": 29,
+      "turn": 8,
+      "utterance_id": "dia29_utt8"
+    },
+    {
+      "dialogue": 29,
+      "turn": 9,
+      "utterance_id": "dia29_utt9"
+    },
+    {
+      "dialogue": 29,
+      "turn": 10,
+      "utterance_id": "dia29_utt10"
+    },
+    {
+      "dialogue": 29,
+      "turn": 11,
+      "utterance_id": "dia29_utt11"
+    },
+    {
+      "dialogue": 29,
+      "turn": 12,
+      "utterance_id": "dia29_utt12"
+    },
+    {
+      "dialogue": 30,
+      "turn": 0,
+      "utterance_id": "dia30_utt0"
+    },
+    {
+      "dialogue": 30,
+      "turn": 1,
+      "utterance_id": "dia30_utt1"
+    },
+    {
+      "dialogue": 30,
+      "turn": 2,
+      "utterance_id": "dia30_utt2"
+    },
+    {
+      "dialogue": 30,
+      "turn": 3,
+      "utterance_id": "dia30_utt3"
+    },
+    {
+      "dialogue": 30,
+      "turn": 4,
+      "utterance_id": "dia30_utt4"
+    },
+    {
+      "dialogue": 30,
+      "turn": 5,
+      "utterance_id": "dia30_utt5"
+    },
+    {
+      "dialogue": 31,
+      "turn": 0,
+      "utterance_id": "dia31_utt0"
+    },
+    {
+      "dialogue": 32,
+      "turn": 0,
+      "utterance_id": "dia32_utt0"
+    },
+    {
+      "dialogue": 32,
+      "turn": 1,
+      "utterance_id": "dia32_utt1"
+    },
+    {
+      "dialogue": 32,
+      "turn": 2,
+      "utterance_id": "dia32_utt2"
+    },
+    {
+      "dialogue": 32,
+      "turn": 3,
+      "utterance_id": "dia32_utt3"
+    },
+    {
+      "dialogue": 32,
+      "turn": 4,
+      "utterance_id": "dia32_utt4"
+    },
+    {
+      "dialogue": 32,
+      "turn": 5,
+      "utterance_id": "dia32_utt5"
+    },
+    {
+      "dialogue": 32,
+      "turn": 6,
+      "utterance_id": "dia32_utt6"
+    },
+    {
+      "dialogue": 32,
+      "turn": 7,
+      "utterance_id": "dia32_utt7"
+    },
+    {
+      "dialogue": 32,
+      "turn": 8,
+      "utterance_id": "dia32_utt8"
+    },
+    {
+      "dialogue": 32,
+      "turn": 9,
+      "utterance_id": "dia32_utt9"
+    },
+    {
+      "dialogue": 32,
+      "turn": 10,
+      "utterance_id": "dia32_utt10"
+    },
+    {
+      "dialogue": 32,
+      "turn": 11,
+      "utterance_id": "dia32_utt11"
+    },
+    {
+      "dialogue": 32,
+      "turn": 12,
+      "utterance_id": "dia32_utt12"
+    },
+    {
+      "dialogue": 33,
+      "turn": 0,
+      "utterance_id": "dia33_utt0"
+    },
+    {
+      "dialogue": 33,
+      "turn": 1,
+      "utterance_id": "dia33_utt1"
+    },
+    {
+      "dialogue": 33,
+      "turn": 2,
+      "utterance_id": "dia33_utt2"
+    },
+    {
+      "dialogue": 33,
+      "turn": 3,
+      "utterance_id": "dia33_utt3"
+    },
+    {
+      "dialogue": 33,
+      "turn": 4,
+      "utterance_id": "dia33_utt4"
+    },
+    {
+      "dialogue": 33,
+      "turn": 5,
+      "utterance_id": "dia33_utt5"
+    },
+    {
+      "dialogue": 33,
+      "turn": 6,
+      "utterance_id": "dia33_utt6"
+    },
+    {
+      "dialogue": 33,
+      "turn": 7,
+      "utterance_id": "dia33_utt7"
+    },
+    {
+      "dialogue": 33,
+      "turn": 8,
+      "utterance_id": "dia33_utt8"
+    },
+    {
+      "dialogue": 33,
+      "turn": 9,
+      "utterance_id": "dia33_utt9"
+    },
+    {
+      "dialogue": 33,
+      "turn": 10,
+      "utterance_id": "dia33_utt10"
+    },
+    {
+      "dialogue": 34,
+      "turn": 0,
+      "utterance_id": "dia34_utt0"
+    },
+    {
+      "dialogue": 34,
+      "turn": 1,
+      "utterance_id": "dia34_utt1"
+    },
+    {
+      "dialogue": 34,
+      "turn": 2,
+      "utterance_id": "dia34_utt2"
+    },
+    {
+      "dialogue": 34,
+      "turn": 3,
+      "utterance_id": "dia34_utt3"
+    },
+    {
+      "dialogue": 34,
+      "turn": 4,
+      "utterance_id": "dia34_utt4"
+    },
+    {
+      "dialogue": 34,
+      "turn": 5,
+      "utterance_id": "dia34_utt5"
+    },
+    {
+      "dialogue": 34,
+      "turn": 6,
+      "utterance_id": "dia34_utt6"
+    },
+    {
+      "dialogue": 34,
+      "turn": 7,
+      "utterance_id": "dia34_utt7"
+    },
+    {
+      "dialogue": 34,
+      "turn": 8,
+      "utterance_id": "dia34_utt8"
+    },
+    {
+      "dialogue": 34,
+      "turn": 9,
+      "utterance_id": "dia34_utt9"
+    },
+    {
+      "dialogue": 34,
+      "turn": 10,
+      "utterance_id": "dia34_utt10"
+    },
+    {
+      "dialogue": 34,
+      "turn": 11,
+      "utterance_id": "dia34_utt11"
+    },
+    {
+      "dialogue": 34,
+      "turn": 12,
+      "utterance_id": "dia34_utt12"
+    },
+    {
+      "dialogue": 34,
+      "turn": 13,
+      "utterance_id": "dia34_utt13"
+    },
+    {
+      "dialogue": 34,
+      "turn": 14,
+      "utterance_id": "dia34_utt14"
+    },
+    {
+      "dialogue": 34,
+      "turn": 15,
+      "utterance_id": "dia34_utt15"
+    },
+    {
+      "dialogue": 34,
+      "turn": 16,
+      "utterance_id": "dia34_utt16"
+    },
+    {
+      "dialogue": 34,
+      "turn": 17,
+      "utterance_id": "dia34_utt17"
+    },
+    {
+      "dialogue": 34,
+      "turn": 18,
+      "utterance_id": "dia34_utt18"
+    },
+    {
+      "dialogue": 35,
+      "turn": 0,
+      "utterance_id": "dia35_utt0"
+    },
+    {
+      "dialogue": 35,
+      "turn": 1,
+      "utterance_id": "dia35_utt1"
+    },
+    {
+      "dialogue": 35,
+      "turn": 2,
+      "utterance_id": "dia35_utt2"
+    },
+    {
+      "dialogue": 35,
+      "turn": 3,
+      "utterance_id": "dia35_utt3"
+    },
+    {
+      "dialogue": 35,
+      "turn": 4,
+      "utterance_id": "dia35_utt4"
+    },
+    {
+      "dialogue": 36,
+      "turn": 0,
+      "utterance_id": "dia36_utt0"
+    },
+    {
+      "dialogue": 36,
+      "turn": 1,
+      "utterance_id": "dia36_utt1"
+    },
+    {
+      "dialogue": 37,
+      "turn": 0,
+      "utterance_id": "dia37_utt0"
+    },
+    {
+      "dialogue": 37,
+      "turn": 1,
+      "utterance_id": "dia37_utt1"
+    },
+    {
+      "dialogue": 37,
+      "turn": 2,
+      "utterance_id": "dia37_utt2"
+    },
+    {
+      "dialogue": 37,
+      "turn": 3,
+      "utterance_id": "dia37_utt3"
+    },
+    {
+      "dialogue": 37,
+      "turn": 4,
+      "utterance_id": "dia37_utt4"
+    },
+    {
+      "dialogue": 37,
+      "turn": 5,
+      "utterance_id": "dia37_utt5"
+    },
+    {
+      "dialogue": 37,
+      "turn": 6,
+      "utterance_id": "dia37_utt6"
+    },
+    {
+      "dialogue": 37,
+      "turn": 7,
+      "utterance_id": "dia37_utt7"
+    },
+    {
+      "dialogue": 38,
+      "turn": 0,
+      "utterance_id": "dia38_utt0"
+    },
+    {
+      "dialogue": 38,
+      "turn": 1,
+      "utterance_id": "dia38_utt1"
+    },
+    {
+      "dialogue": 38,
+      "turn": 2,
+      "utterance_id": "dia38_utt2"
+    },
+    {
+      "dialogue": 38,
+      "turn": 3,
+      "utterance_id": "dia38_utt3"
+    },
+    {
+      "dialogue": 38,
+      "turn": 4,
+      "utterance_id": "dia38_utt4"
+    },
+    {
+      "dialogue": 39,
+      "turn": 0,
+      "utterance_id": "dia39_utt0"
+    },
+    {
+      "dialogue": 39,
+      "turn": 1,
+      "utterance_id": "dia39_utt1"
+    },
+    {
+      "dialogue": 39,
+      "turn": 2,
+      "utterance_id": "dia39_utt2"
+    },
+    {
+      "dialogue": 39,
+      "turn": 3,
+      "utterance_id": "dia39_utt3"
+    },
+    {
+      "dialogue": 39,
+      "turn": 4,
+      "utterance_id": "dia39_utt4"
+    },
+    {
+      "dialogue": 39,
+      "turn": 5,
+      "utterance_id": "dia39_utt5"
+    },
+    {
+      "dialogue": 39,
+      "turn": 6,
+      "utterance_id": "dia39_utt6"
+    },
+    {
+      "dialogue": 39,
+      "turn": 7,
+      "utterance_id": "dia39_utt7"
+    },
+    {
+      "dialogue": 39,
+      "turn": 8,
+      "utterance_id": "dia39_utt8"
+    },
+    {
+      "dialogue": 39,
+      "turn": 9,
+      "utterance_id": "dia39_utt9"
+    },
+    {
+      "dialogue": 39,
+      "turn": 10,
+      "utterance_id": "dia39_utt10"
+    },
+    {
+      "dialogue": 39,
+      "turn": 11,
+      "utterance_id": "dia39_utt11"
+    },
+    {
+      "dialogue": 40,
+      "turn": 0,
+      "utterance_id": "dia40_utt0"
+    },
+    {
+      "dialogue": 40,
+      "turn": 1,
+      "utterance_id": "dia40_utt1"
+    },
+    {
+      "dialogue": 41,
+      "turn": 0,
+      "utterance_id": "dia41_utt0"
+    },
+    {
+      "dialogue": 41,
+      "turn": 1,
+      "utterance_id": "dia41_utt1"
+    },
+    {
+      "dialogue": 41,
+      "turn": 2,
+      "utterance_id": "dia41_utt2"
+    },
+    {
+      "dialogue": 41,
+      "turn": 3,
+      "utterance_id": "dia41_utt3"
+    },
+    {
+      "dialogue": 41,
+      "turn": 4,
+      "utterance_id": "dia41_utt4"
+    },
+    {
+      "dialogue": 41,
+      "turn": 5,
+      "utterance_id": "dia41_utt5"
+    },
+    {
+      "dialogue": 41,
+      "turn": 6,
+      "utterance_id": "dia41_utt6"
+    },
+    {
+      "dialogue": 41,
+      "turn": 7,
+      "utterance_id": "dia41_utt7"
+    },
+    {
+      "dialogue": 41,
+      "turn": 8,
+      "utterance_id": "dia41_utt8"
+    },
+    {
+      "dialogue": 41,
+      "turn": 9,
+      "utterance_id": "dia41_utt9"
+    },
+    {
+      "dialogue": 41,
+      "turn": 10,
+      "utterance_id": "dia41_utt10"
+    },
+    {
+      "dialogue": 41,
+      "turn": 11,
+      "utterance_id": "dia41_utt11"
+    },
+    {
+      "dialogue": 41,
+      "turn": 12,
+      "utterance_id": "dia41_utt12"
+    },
+    {
+      "dialogue": 42,
+      "turn": 0,
+      "utterance_id": "dia42_utt0"
+    },
+    {
+      "dialogue": 42,
+      "turn": 1,
+      "utterance_id": "dia42_utt1"
+    },
+    {
+      "dialogue": 42,
+      "turn": 2,
+      "utterance_id": "dia42_utt2"
+    },
+    {
+      "dialogue": 42,
+      "turn": 3,
+      "utterance_id": "dia42_utt3"
+    },
+    {
+      "dialogue": 42,
+      "turn": 4,
+      "utterance_id": "dia42_utt4"
+    },
+    {
+      "dialogue": 42,
+      "turn": 5,
+      "utterance_id": "dia42_utt5"
+    },
+    {
+      "dialogue": 42,
+      "turn": 6,
+      "utterance_id": "dia42_utt6"
+    },
+    {
+      "dialogue": 42,
+      "turn": 7,
+      "utterance_id": "dia42_utt7"
+    },
+    {
+      "dialogue": 42,
+      "turn": 8,
+      "utterance_id": "dia42_utt8"
+    },
+    {
+      "dialogue": 43,
+      "turn": 0,
+      "utterance_id": "dia43_utt0"
+    },
+    {
+      "dialogue": 43,
+      "turn": 1,
+      "utterance_id": "dia43_utt1"
+    },
+    {
+      "dialogue": 43,
+      "turn": 2,
+      "utterance_id": "dia43_utt2"
+    },
+    {
+      "dialogue": 43,
+      "turn": 3,
+      "utterance_id": "dia43_utt3"
+    },
+    {
+      "dialogue": 43,
+      "turn": 4,
+      "utterance_id": "dia43_utt4"
+    },
+    {
+      "dialogue": 43,
+      "turn": 5,
+      "utterance_id": "dia43_utt5"
+    },
+    {
+      "dialogue": 43,
+      "turn": 6,
+      "utterance_id": "dia43_utt6"
+    },
+    {
+      "dialogue": 44,
+      "turn": 0,
+      "utterance_id": "dia44_utt0"
+    },
+    {
+      "dialogue": 44,
+      "turn": 1,
+      "utterance_id": "dia44_utt1"
+    },
+    {
+      "dialogue": 44,
+      "turn": 2,
+      "utterance_id": "dia44_utt2"
+    },
+    {
+      "dialogue": 44,
+      "turn": 3,
+      "utterance_id": "dia44_utt3"
+    },
+    {
+      "dialogue": 45,
+      "turn": 0,
+      "utterance_id": "dia45_utt0"
+    },
+    {
+      "dialogue": 45,
+      "turn": 1,
+      "utterance_id": "dia45_utt1"
+    },
+    {
+      "dialogue": 45,
+      "turn": 2,
+      "utterance_id": "dia45_utt2"
+    },
+    {
+      "dialogue": 45,
+      "turn": 3,
+      "utterance_id": "dia45_utt3"
+    },
+    {
+      "dialogue": 45,
+      "turn": 4,
+      "utterance_id": "dia45_utt4"
+    },
+    {
+      "dialogue": 45,
+      "turn": 5,
+      "utterance_id": "dia45_utt5"
+    },
+    {
+      "dialogue": 45,
+      "turn": 6,
+      "utterance_id": "dia45_utt6"
+    },
+    {
+      "dialogue": 45,
+      "turn": 7,
+      "utterance_id": "dia45_utt7"
+    },
+    {
+      "dialogue": 45,
+      "turn": 8,
+      "utterance_id": "dia45_utt8"
+    },
+    {
+      "dialogue": 46,
+      "turn": 0,
+      "utterance_id": "dia46_utt0"
+    },
+    {
+      "dialogue": 46,
+      "turn": 1,
+      "utterance_id": "dia46_utt1"
+    },
+    {
+      "dialogue": 46,
+      "turn": 2,
+      "utterance_id": "dia46_utt2"
+    },
+    {
+      "dialogue": 46,
+      "turn": 3,
+      "utterance_id": "dia46_utt3"
+    },
+    {
+      "dialogue": 46,
+      "turn": 4,
+      "utterance_id": "dia46_utt4"
+    },
+    {
+      "dialogue": 46,
+      "turn": 5,
+      "utterance_id": "dia46_utt5"
+    },
+    {
+      "dialogue": 46,
+      "turn": 6,
+      "utterance_id": "dia46_utt6"
+    },
+    {
+      "dialogue": 46,
+      "turn": 7,
+      "utterance_id": "dia46_utt7"
+    },
+    {
+      "dialogue": 46,
+      "turn": 8,
+      "utterance_id": "dia46_utt8"
+    },
+    {
+      "dialogue": 47,
+      "turn": 0,
+      "utterance_id": "dia47_utt0"
+    },
+    {
+      "dialogue": 47,
+      "turn": 1,
+      "utterance_id": "dia47_utt1"
+    },
+    {
+      "dialogue": 47,
+      "turn": 2,
+      "utterance_id": "dia47_utt2"
+    },
+    {
+      "dialogue": 47,
+      "turn": 3,
+      "utterance_id": "dia47_utt3"
+    },
+    {
+      "dialogue": 47,
+      "turn": 4,
+      "utterance_id": "dia47_utt4"
+    },
+    {
+      "dialogue": 47,
+      "turn": 5,
+      "utterance_id": "dia47_utt5"
+    },
+    {
+      "dialogue": 47,
+      "turn": 6,
+      "utterance_id": "dia47_utt6"
+    },
+    {
+      "dialogue": 47,
+      "turn": 7,
+      "utterance_id": "dia47_utt7"
+    },
+    {
+      "dialogue": 47,
+      "turn": 8,
+      "utterance_id": "dia47_utt8"
+    },
+    {
+      "dialogue": 47,
+      "turn": 9,
+      "utterance_id": "dia47_utt9"
+    },
+    {
+      "dialogue": 47,
+      "turn": 10,
+      "utterance_id": "dia47_utt10"
+    },
+    {
+      "dialogue": 47,
+      "turn": 11,
+      "utterance_id": "dia47_utt11"
+    },
+    {
+      "dialogue": 47,
+      "turn": 12,
+      "utterance_id": "dia47_utt12"
+    },
+    {
+      "dialogue": 47,
+      "turn": 13,
+      "utterance_id": "dia47_utt13"
+    },
+    {
+      "dialogue": 48,
+      "turn": 0,
+      "utterance_id": "dia48_utt0"
+    },
+    {
+      "dialogue": 48,
+      "turn": 1,
+      "utterance_id": "dia48_utt1"
+    },
+    {
+      "dialogue": 48,
+      "turn": 2,
+      "utterance_id": "dia48_utt2"
+    },
+    {
+      "dialogue": 48,
+      "turn": 3,
+      "utterance_id": "dia48_utt3"
+    },
+    {
+      "dialogue": 48,
+      "turn": 4,
+      "utterance_id": "dia48_utt4"
+    },
+    {
+      "dialogue": 48,
+      "turn": 5,
+      "utterance_id": "dia48_utt5"
+    },
+    {
+      "dialogue": 48,
+      "turn": 6,
+      "utterance_id": "dia48_utt6"
+    },
+    {
+      "dialogue": 49,
+      "turn": 0,
+      "utterance_id": "dia49_utt0"
+    },
+    {
+      "dialogue": 49,
+      "turn": 1,
+      "utterance_id": "dia49_utt1"
+    },
+    {
+      "dialogue": 49,
+      "turn": 2,
+      "utterance_id": "dia49_utt2"
+    },
+    {
+      "dialogue": 49,
+      "turn": 3,
+      "utterance_id": "dia49_utt3"
+    },
+    {
+      "dialogue": 49,
+      "turn": 4,
+      "utterance_id": "dia49_utt4"
+    },
+    {
+      "dialogue": 49,
+      "turn": 5,
+      "utterance_id": "dia49_utt5"
+    },
+    {
+      "dialogue": 49,
+      "turn": 6,
+      "utterance_id": "dia49_utt6"
+    },
+    {
+      "dialogue": 49,
+      "turn": 7,
+      "utterance_id": "dia49_utt7"
+    },
+    {
+      "dialogue": 49,
+      "turn": 8,
+      "utterance_id": "dia49_utt8"
+    },
+    {
+      "dialogue": 49,
+      "turn": 9,
+      "utterance_id": "dia49_utt9"
+    },
+    {
+      "dialogue": 49,
+      "turn": 10,
+      "utterance_id": "dia49_utt10"
+    },
+    {
+      "dialogue": 49,
+      "turn": 11,
+      "utterance_id": "dia49_utt11"
+    },
+    {
+      "dialogue": 49,
+      "turn": 12,
+      "utterance_id": "dia49_utt12"
+    },
+    {
+      "dialogue": 49,
+      "turn": 13,
+      "utterance_id": "dia49_utt13"
+    },
+    {
+      "dialogue": 49,
+      "turn": 14,
+      "utterance_id": "dia49_utt14"
+    },
+    {
+      "dialogue": 49,
+      "turn": 15,
+      "utterance_id": "dia49_utt15"
+    },
+    {
+      "dialogue": 49,
+      "turn": 16,
+      "utterance_id": "dia49_utt16"
+    },
+    {
+      "dialogue": 50,
+      "turn": 0,
+      "utterance_id": "dia50_utt0"
+    },
+    {
+      "dialogue": 50,
+      "turn": 1,
+      "utterance_id": "dia50_utt1"
+    },
+    {
+      "dialogue": 50,
+      "turn": 2,
+      "utterance_id": "dia50_utt2"
+    },
+    {
+      "dialogue": 50,
+      "turn": 3,
+      "utterance_id": "dia50_utt3"
+    },
+    {
+      "dialogue": 51,
+      "turn": 0,
+      "utterance_id": "dia51_utt0"
+    },
+    {
+      "dialogue": 51,
+      "turn": 1,
+      "utterance_id": "dia51_utt1"
+    },
+    {
+      "dialogue": 51,
+      "turn": 2,
+      "utterance_id": "dia51_utt2"
+    },
+    {
+      "dialogue": 52,
+      "turn": 0,
+      "utterance_id": "dia52_utt0"
+    },
+    {
+      "dialogue": 52,
+      "turn": 1,
+      "utterance_id": "dia52_utt1"
+    },
+    {
+      "dialogue": 52,
+      "turn": 2,
+      "utterance_id": "dia52_utt2"
+    },
+    {
+      "dialogue": 52,
+      "turn": 3,
+      "utterance_id": "dia52_utt3"
+    },
+    {
+      "dialogue": 52,
+      "turn": 4,
+      "utterance_id": "dia52_utt4"
+    },
+    {
+      "dialogue": 52,
+      "turn": 5,
+      "utterance_id": "dia52_utt5"
+    },
+    {
+      "dialogue": 52,
+      "turn": 6,
+      "utterance_id": "dia52_utt6"
+    },
+    {
+      "dialogue": 52,
+      "turn": 7,
+      "utterance_id": "dia52_utt7"
+    },
+    {
+      "dialogue": 52,
+      "turn": 8,
+      "utterance_id": "dia52_utt8"
+    },
+    {
+      "dialogue": 52,
+      "turn": 9,
+      "utterance_id": "dia52_utt9"
+    },
+    {
+      "dialogue": 52,
+      "turn": 10,
+      "utterance_id": "dia52_utt10"
+    },
+    {
+      "dialogue": 52,
+      "turn": 11,
+      "utterance_id": "dia52_utt11"
+    },
+    {
+      "dialogue": 53,
+      "turn": 0,
+      "utterance_id": "dia53_utt0"
+    },
+    {
+      "dialogue": 53,
+      "turn": 1,
+      "utterance_id": "dia53_utt1"
+    },
+    {
+      "dialogue": 53,
+      "turn": 2,
+      "utterance_id": "dia53_utt2"
+    },
+    {
+      "dialogue": 53,
+      "turn": 3,
+      "utterance_id": "dia53_utt3"
+    },
+    {
+      "dialogue": 53,
+      "turn": 4,
+      "utterance_id": "dia53_utt4"
+    },
+    {
+      "dialogue": 53,
+      "turn": 5,
+      "utterance_id": "dia53_utt5"
+    },
+    {
+      "dialogue": 53,
+      "turn": 6,
+      "utterance_id": "dia53_utt6"
+    },
+    {
+      "dialogue": 53,
+      "turn": 7,
+      "utterance_id": "dia53_utt7"
+    },
+    {
+      "dialogue": 53,
+      "turn": 8,
+      "utterance_id": "dia53_utt8"
+    },
+    {
+      "dialogue": 53,
+      "turn": 9,
+      "utterance_id": "dia53_utt9"
+    },
+    {
+      "dialogue": 53,
+      "turn": 10,
+      "utterance_id": "dia53_utt10"
+    },
+    {
+      "dialogue": 53,
+      "turn": 11,
+      "utterance_id": "dia53_utt11"
+    },
+    {
+      "dialogue": 53,
+      "turn": 12,
+      "utterance_id": "dia53_utt12"
+    },
+    {
+      "dialogue": 54,
+      "turn": 0,
+      "utterance_id": "dia54_utt0"
+    },
+    {
+      "dialogue": 54,
+      "turn": 1,
+      "utterance_id": "dia54_utt1"
+    },
+    {
+      "dialogue": 54,
+      "turn": 2,
+      "utterance_id": "dia54_utt2"
+    },
+    {
+      "dialogue": 54,
+      "turn": 3,
+      "utterance_id": "dia54_utt3"
+    },
+    {
+      "dialogue": 54,
+      "turn": 4,
+      "utterance_id": "dia54_utt4"
+    },
+    {
+      "dialogue": 54,
+      "turn": 5,
+      "utterance_id": "dia54_utt5"
+    },
+    {
+      "dialogue": 54,
+      "turn": 6,
+      "utterance_id": "dia54_utt6"
+    },
+    {
+      "dialogue": 54,
+      "turn": 7,
+      "utterance_id": "dia54_utt7"
+    },
+    {
+      "dialogue": 54,
+      "turn": 8,
+      "utterance_id": "dia54_utt8"
+    },
+    {
+      "dialogue": 54,
+      "turn": 9,
+      "utterance_id": "dia54_utt9"
+    },
+    {
+      "dialogue": 54,
+      "turn": 10,
+      "utterance_id": "dia54_utt10"
+    },
+    {
+      "dialogue": 54,
+      "turn": 11,
+      "utterance_id": "dia54_utt11"
+    },
+    {
+      "dialogue": 55,
+      "turn": 0,
+      "utterance_id": "dia55_utt0"
+    },
+    {
+      "dialogue": 55,
+      "turn": 1,
+      "utterance_id": "dia55_utt1"
+    },
+    {
+      "dialogue": 55,
+      "turn": 2,
+      "utterance_id": "dia55_utt2"
+    },
+    {
+      "dialogue": 56,
+      "turn": 0,
+      "utterance_id": "dia56_utt0"
+    },
+    {
+      "dialogue": 56,
+      "turn": 1,
+      "utterance_id": "dia56_utt1"
+    },
+    {
+      "dialogue": 56,
+      "turn": 2,
+      "utterance_id": "dia56_utt2"
+    },
+    {
+      "dialogue": 56,
+      "turn": 3,
+      "utterance_id": "dia56_utt3"
+    },
+    {
+      "dialogue": 56,
+      "turn": 4,
+      "utterance_id": "dia56_utt4"
+    },
+    {
+      "dialogue": 56,
+      "turn": 5,
+      "utterance_id": "dia56_utt5"
+    },
+    {
+      "dialogue": 56,
+      "turn": 6,
+      "utterance_id": "dia56_utt6"
+    },
+    {
+      "dialogue": 56,
+      "turn": 7,
+      "utterance_id": "dia56_utt7"
+    },
+    {
+      "dialogue": 56,
+      "turn": 8,
+      "utterance_id": "dia56_utt8"
+    },
+    {
+      "dialogue": 56,
+      "turn": 9,
+      "utterance_id": "dia56_utt9"
+    },
+    {
+      "dialogue": 56,
+      "turn": 10,
+      "utterance_id": "dia56_utt10"
+    },
+    {
+      "dialogue": 56,
+      "turn": 11,
+      "utterance_id": "dia56_utt11"
+    },
+    {
+      "dialogue": 57,
+      "turn": 0,
+      "utterance_id": "dia57_utt0"
+    },
+    {
+      "dialogue": 57,
+      "turn": 1,
+      "utterance_id": "dia57_utt1"
+    },
+    {
+      "dialogue": 57,
+      "turn": 2,
+      "utterance_id": "dia57_utt2"
+    },
+    {
+      "dialogue": 57,
+      "turn": 3,
+      "utterance_id": "dia57_utt3"
+    },
+    {
+      "dialogue": 57,
+      "turn": 4,
+      "utterance_id": "dia57_utt4"
+    },
+    {
+      "dialogue": 57,
+      "turn": 5,
+      "utterance_id": "dia57_utt5"
+    },
+    {
+      "dialogue": 58,
+      "turn": 0,
+      "utterance_id": "dia58_utt0"
+    },
+    {
+      "dialogue": 58,
+      "turn": 1,
+      "utterance_id": "dia58_utt1"
+    },
+    {
+      "dialogue": 58,
+      "turn": 2,
+      "utterance_id": "dia58_utt2"
+    },
+    {
+      "dialogue": 58,
+      "turn": 3,
+      "utterance_id": "dia58_utt3"
+    },
+    {
+      "dialogue": 58,
+      "turn": 4,
+      "utterance_id": "dia58_utt4"
+    },
+    {
+      "dialogue": 58,
+      "turn": 5,
+      "utterance_id": "dia58_utt5"
+    },
+    {
+      "dialogue": 58,
+      "turn": 6,
+      "utterance_id": "dia58_utt6"
+    },
+    {
+      "dialogue": 58,
+      "turn": 7,
+      "utterance_id": "dia58_utt7"
+    },
+    {
+      "dialogue": 58,
+      "turn": 8,
+      "utterance_id": "dia58_utt8"
+    },
+    {
+      "dialogue": 58,
+      "turn": 9,
+      "utterance_id": "dia58_utt9"
+    },
+    {
+      "dialogue": 58,
+      "turn": 10,
+      "utterance_id": "dia58_utt10"
+    },
+    {
+      "dialogue": 58,
+      "turn": 11,
+      "utterance_id": "dia58_utt11"
+    },
+    {
+      "dialogue": 58,
+      "turn": 12,
+      "utterance_id": "dia58_utt12"
+    },
+    {
+      "dialogue": 58,
+      "turn": 13,
+      "utterance_id": "dia58_utt13"
+    },
+    {
+      "dialogue": 58,
+      "turn": 14,
+      "utterance_id": "dia58_utt14"
+    },
+    {
+      "dialogue": 58,
+      "turn": 15,
+      "utterance_id": "dia58_utt15"
+    },
+    {
+      "dialogue": 58,
+      "turn": 16,
+      "utterance_id": "dia58_utt16"
+    },
+    {
+      "dialogue": 59,
+      "turn": 0,
+      "utterance_id": "dia59_utt0"
+    },
+    {
+      "dialogue": 59,
+      "turn": 1,
+      "utterance_id": "dia59_utt1"
+    },
+    {
+      "dialogue": 59,
+      "turn": 2,
+      "utterance_id": "dia59_utt2"
+    },
+    {
+      "dialogue": 60,
+      "turn": 0,
+      "utterance_id": "dia60_utt0"
+    },
+    {
+      "dialogue": 60,
+      "turn": 1,
+      "utterance_id": "dia60_utt1"
+    },
+    {
+      "dialogue": 60,
+      "turn": 2,
+      "utterance_id": "dia60_utt2"
+    },
+    {
+      "dialogue": 60,
+      "turn": 3,
+      "utterance_id": "dia60_utt3"
+    },
+    {
+      "dialogue": 60,
+      "turn": 4,
+      "utterance_id": "dia60_utt4"
+    },
+    {
+      "dialogue": 60,
+      "turn": 5,
+      "utterance_id": "dia60_utt5"
+    },
+    {
+      "dialogue": 60,
+      "turn": 6,
+      "utterance_id": "dia60_utt6"
+    },
+    {
+      "dialogue": 61,
+      "turn": 0,
+      "utterance_id": "dia61_utt0"
+    },
+    {
+      "dialogue": 61,
+      "turn": 1,
+      "utterance_id": "dia61_utt1"
+    },
+    {
+      "dialogue": 61,
+      "turn": 2,
+      "utterance_id": "dia61_utt2"
+    },
+    {
+      "dialogue": 62,
+      "turn": 0,
+      "utterance_id": "dia62_utt0"
+    },
+    {
+      "dialogue": 62,
+      "turn": 1,
+      "utterance_id": "dia62_utt1"
+    },
+    {
+      "dialogue": 63,
+      "turn": 0,
+      "utterance_id": "dia63_utt0"
+    },
+    {
+      "dialogue": 63,
+      "turn": 1,
+      "utterance_id": "dia63_utt1"
+    },
+    {
+      "dialogue": 64,
+      "turn": 0,
+      "utterance_id": "dia64_utt0"
+    },
+    {
+      "dialogue": 64,
+      "turn": 1,
+      "utterance_id": "dia64_utt1"
+    },
+    {
+      "dialogue": 64,
+      "turn": 2,
+      "utterance_id": "dia64_utt2"
+    },
+    {
+      "dialogue": 64,
+      "turn": 3,
+      "utterance_id": "dia64_utt3"
+    },
+    {
+      "dialogue": 64,
+      "turn": 4,
+      "utterance_id": "dia64_utt4"
+    },
+    {
+      "dialogue": 64,
+      "turn": 5,
+      "utterance_id": "dia64_utt5"
+    },
+    {
+      "dialogue": 64,
+      "turn": 6,
+      "utterance_id": "dia64_utt6"
+    },
+    {
+      "dialogue": 64,
+      "turn": 7,
+      "utterance_id": "dia64_utt7"
+    },
+    {
+      "dialogue": 64,
+      "turn": 8,
+      "utterance_id": "dia64_utt8"
+    },
+    {
+      "dialogue": 64,
+      "turn": 9,
+      "utterance_id": "dia64_utt9"
+    },
+    {
+      "dialogue": 64,
+      "turn": 10,
+      "utterance_id": "dia64_utt10"
+    },
+    {
+      "dialogue": 64,
+      "turn": 11,
+      "utterance_id": "dia64_utt11"
+    },
+    {
+      "dialogue": 64,
+      "turn": 12,
+      "utterance_id": "dia64_utt12"
+    },
+    {
+      "dialogue": 64,
+      "turn": 13,
+      "utterance_id": "dia64_utt13"
+    },
+    {
+      "dialogue": 64,
+      "turn": 14,
+      "utterance_id": "dia64_utt14"
+    },
+    {
+      "dialogue": 64,
+      "turn": 15,
+      "utterance_id": "dia64_utt15"
+    },
+    {
+      "dialogue": 64,
+      "turn": 16,
+      "utterance_id": "dia64_utt16"
+    },
+    {
+      "dialogue": 65,
+      "turn": 0,
+      "utterance_id": "dia65_utt0"
+    },
+    {
+      "dialogue": 65,
+      "turn": 1,
+      "utterance_id": "dia65_utt1"
+    },
+    {
+      "dialogue": 65,
+      "turn": 2,
+      "utterance_id": "dia65_utt2"
+    },
+    {
+      "dialogue": 65,
+      "turn": 3,
+      "utterance_id": "dia65_utt3"
+    },
+    {
+      "dialogue": 65,
+      "turn": 4,
+      "utterance_id": "dia65_utt4"
+    },
+    {
+      "dialogue": 65,
+      "turn": 5,
+      "utterance_id": "dia65_utt5"
+    },
+    {
+      "dialogue": 65,
+      "turn": 6,
+      "utterance_id": "dia65_utt6"
+    },
+    {
+      "dialogue": 65,
+      "turn": 7,
+      "utterance_id": "dia65_utt7"
+    },
+    {
+      "dialogue": 65,
+      "turn": 8,
+      "utterance_id": "dia65_utt8"
+    },
+    {
+      "dialogue": 65,
+      "turn": 9,
+      "utterance_id": "dia65_utt9"
+    },
+    {
+      "dialogue": 65,
+      "turn": 10,
+      "utterance_id": "dia65_utt10"
+    },
+    {
+      "dialogue": 66,
+      "turn": 0,
+      "utterance_id": "dia66_utt0"
+    },
+    {
+      "dialogue": 66,
+      "turn": 1,
+      "utterance_id": "dia66_utt1"
+    },
+    {
+      "dialogue": 66,
+      "turn": 2,
+      "utterance_id": "dia66_utt2"
+    },
+    {
+      "dialogue": 66,
+      "turn": 3,
+      "utterance_id": "dia66_utt3"
+    },
+    {
+      "dialogue": 66,
+      "turn": 4,
+      "utterance_id": "dia66_utt4"
+    },
+    {
+      "dialogue": 67,
+      "turn": 0,
+      "utterance_id": "dia67_utt0"
+    },
+    {
+      "dialogue": 67,
+      "turn": 1,
+      "utterance_id": "dia67_utt1"
+    },
+    {
+      "dialogue": 67,
+      "turn": 2,
+      "utterance_id": "dia67_utt2"
+    },
+    {
+      "dialogue": 67,
+      "turn": 3,
+      "utterance_id": "dia67_utt3"
+    },
+    {
+      "dialogue": 68,
+      "turn": 0,
+      "utterance_id": "dia68_utt0"
+    },
+    {
+      "dialogue": 68,
+      "turn": 1,
+      "utterance_id": "dia68_utt1"
+    },
+    {
+      "dialogue": 68,
+      "turn": 2,
+      "utterance_id": "dia68_utt2"
+    },
+    {
+      "dialogue": 68,
+      "turn": 3,
+      "utterance_id": "dia68_utt3"
+    },
+    {
+      "dialogue": 68,
+      "turn": 4,
+      "utterance_id": "dia68_utt4"
+    },
+    {
+      "dialogue": 68,
+      "turn": 5,
+      "utterance_id": "dia68_utt5"
+    },
+    {
+      "dialogue": 68,
+      "turn": 6,
+      "utterance_id": "dia68_utt6"
+    },
+    {
+      "dialogue": 68,
+      "turn": 7,
+      "utterance_id": "dia68_utt7"
+    },
+    {
+      "dialogue": 68,
+      "turn": 8,
+      "utterance_id": "dia68_utt8"
+    },
+    {
+      "dialogue": 68,
+      "turn": 9,
+      "utterance_id": "dia68_utt9"
+    },
+    {
+      "dialogue": 68,
+      "turn": 10,
+      "utterance_id": "dia68_utt10"
+    },
+    {
+      "dialogue": 68,
+      "turn": 11,
+      "utterance_id": "dia68_utt11"
+    },
+    {
+      "dialogue": 68,
+      "turn": 12,
+      "utterance_id": "dia68_utt12"
+    },
+    {
+      "dialogue": 68,
+      "turn": 13,
+      "utterance_id": "dia68_utt13"
+    },
+    {
+      "dialogue": 68,
+      "turn": 14,
+      "utterance_id": "dia68_utt14"
+    },
+    {
+      "dialogue": 69,
+      "turn": 0,
+      "utterance_id": "dia69_utt0"
+    },
+    {
+      "dialogue": 69,
+      "turn": 1,
+      "utterance_id": "dia69_utt1"
+    },
+    {
+      "dialogue": 69,
+      "turn": 2,
+      "utterance_id": "dia69_utt2"
+    },
+    {
+      "dialogue": 69,
+      "turn": 3,
+      "utterance_id": "dia69_utt3"
+    },
+    {
+      "dialogue": 69,
+      "turn": 4,
+      "utterance_id": "dia69_utt4"
+    },
+    {
+      "dialogue": 69,
+      "turn": 5,
+      "utterance_id": "dia69_utt5"
+    },
+    {
+      "dialogue": 70,
+      "turn": 0,
+      "utterance_id": "dia70_utt0"
+    },
+    {
+      "dialogue": 70,
+      "turn": 1,
+      "utterance_id": "dia70_utt1"
+    },
+    {
+      "dialogue": 70,
+      "turn": 2,
+      "utterance_id": "dia70_utt2"
+    },
+    {
+      "dialogue": 70,
+      "turn": 3,
+      "utterance_id": "dia70_utt3"
+    },
+    {
+      "dialogue": 70,
+      "turn": 4,
+      "utterance_id": "dia70_utt4"
+    },
+    {
+      "dialogue": 70,
+      "turn": 5,
+      "utterance_id": "dia70_utt5"
+    },
+    {
+      "dialogue": 70,
+      "turn": 6,
+      "utterance_id": "dia70_utt6"
+    },
+    {
+      "dialogue": 70,
+      "turn": 7,
+      "utterance_id": "dia70_utt7"
+    },
+    {
+      "dialogue": 70,
+      "turn": 8,
+      "utterance_id": "dia70_utt8"
+    },
+    {
+      "dialogue": 70,
+      "turn": 9,
+      "utterance_id": "dia70_utt9"
+    },
+    {
+      "dialogue": 70,
+      "turn": 10,
+      "utterance_id": "dia70_utt10"
+    },
+    {
+      "dialogue": 70,
+      "turn": 11,
+      "utterance_id": "dia70_utt11"
+    },
+    {
+      "dialogue": 70,
+      "turn": 12,
+      "utterance_id": "dia70_utt12"
+    },
+    {
+      "dialogue": 70,
+      "turn": 13,
+      "utterance_id": "dia70_utt13"
+    },
+    {
+      "dialogue": 70,
+      "turn": 14,
+      "utterance_id": "dia70_utt14"
+    },
+    {
+      "dialogue": 70,
+      "turn": 15,
+      "utterance_id": "dia70_utt15"
+    },
+    {
+      "dialogue": 70,
+      "turn": 16,
+      "utterance_id": "dia70_utt16"
+    },
+    {
+      "dialogue": 70,
+      "turn": 17,
+      "utterance_id": "dia70_utt17"
+    },
+    {
+      "dialogue": 70,
+      "turn": 18,
+      "utterance_id": "dia70_utt18"
+    },
+    {
+      "dialogue": 70,
+      "turn": 19,
+      "utterance_id": "dia70_utt19"
+    },
+    {
+      "dialogue": 70,
+      "turn": 20,
+      "utterance_id": "dia70_utt20"
+    },
+    {
+      "dialogue": 70,
+      "turn": 21,
+      "utterance_id": "dia70_utt21"
+    },
+    {
+      "dialogue": 70,
+      "turn": 22,
+      "utterance_id": "dia70_utt22"
+    },
+    {
+      "dialogue": 71,
+      "turn": 0,
+      "utterance_id": "dia71_utt0"
+    },
+    {
+      "dialogue": 71,
+      "turn": 1,
+      "utterance_id": "dia71_utt1"
+    },
+    {
+      "dialogue": 71,
+      "turn": 2,
+      "utterance_id": "dia71_utt2"
+    },
+    {
+      "dialogue": 71,
+      "turn": 3,
+      "utterance_id": "dia71_utt3"
+    },
+    {
+      "dialogue": 71,
+      "turn": 4,
+      "utterance_id": "dia71_utt4"
+    },
+    {
+      "dialogue": 71,
+      "turn": 5,
+      "utterance_id": "dia71_utt5"
+    },
+    {
+      "dialogue": 71,
+      "turn": 6,
+      "utterance_id": "dia71_utt6"
+    },
+    {
+      "dialogue": 71,
+      "turn": 7,
+      "utterance_id": "dia71_utt7"
+    },
+    {
+      "dialogue": 71,
+      "turn": 8,
+      "utterance_id": "dia71_utt8"
+    },
+    {
+      "dialogue": 71,
+      "turn": 9,
+      "utterance_id": "dia71_utt9"
+    },
+    {
+      "dialogue": 71,
+      "turn": 10,
+      "utterance_id": "dia71_utt10"
+    },
+    {
+      "dialogue": 71,
+      "turn": 11,
+      "utterance_id": "dia71_utt11"
+    },
+    {
+      "dialogue": 71,
+      "turn": 12,
+      "utterance_id": "dia71_utt12"
+    },
+    {
+      "dialogue": 71,
+      "turn": 13,
+      "utterance_id": "dia71_utt13"
+    },
+    {
+      "dialogue": 72,
+      "turn": 0,
+      "utterance_id": "dia72_utt0"
+    },
+    {
+      "dialogue": 72,
+      "turn": 1,
+      "utterance_id": "dia72_utt1"
+    },
+    {
+      "dialogue": 72,
+      "turn": 2,
+      "utterance_id": "dia72_utt2"
+    },
+    {
+      "dialogue": 72,
+      "turn": 3,
+      "utterance_id": "dia72_utt3"
+    },
+    {
+      "dialogue": 72,
+      "turn": 4,
+      "utterance_id": "dia72_utt4"
+    },
+    {
+      "dialogue": 72,
+      "turn": 5,
+      "utterance_id": "dia72_utt5"
+    },
+    {
+      "dialogue": 72,
+      "turn": 6,
+      "utterance_id": "dia72_utt6"
+    },
+    {
+      "dialogue": 72,
+      "turn": 7,
+      "utterance_id": "dia72_utt7"
+    },
+    {
+      "dialogue": 72,
+      "turn": 8,
+      "utterance_id": "dia72_utt8"
+    },
+    {
+      "dialogue": 72,
+      "turn": 9,
+      "utterance_id": "dia72_utt9"
+    },
+    {
+      "dialogue": 72,
+      "turn": 10,
+      "utterance_id": "dia72_utt10"
+    },
+    {
+      "dialogue": 72,
+      "turn": 11,
+      "utterance_id": "dia72_utt11"
+    },
+    {
+      "dialogue": 72,
+      "turn": 12,
+      "utterance_id": "dia72_utt12"
+    },
+    {
+      "dialogue": 72,
+      "turn": 13,
+      "utterance_id": "dia72_utt13"
+    },
+    {
+      "dialogue": 72,
+      "turn": 14,
+      "utterance_id": "dia72_utt14"
+    },
+    {
+      "dialogue": 72,
+      "turn": 15,
+      "utterance_id": "dia72_utt15"
+    },
+    {
+      "dialogue": 72,
+      "turn": 16,
+      "utterance_id": "dia72_utt16"
+    },
+    {
+      "dialogue": 73,
+      "turn": 0,
+      "utterance_id": "dia73_utt0"
+    },
+    {
+      "dialogue": 73,
+      "turn": 1,
+      "utterance_id": "dia73_utt1"
+    },
+    {
+      "dialogue": 73,
+      "turn": 2,
+      "utterance_id": "dia73_utt2"
+    },
+    {
+      "dialogue": 73,
+      "turn": 3,
+      "utterance_id": "dia73_utt3"
+    },
+    {
+      "dialogue": 73,
+      "turn": 4,
+      "utterance_id": "dia73_utt4"
+    },
+    {
+      "dialogue": 73,
+      "turn": 5,
+      "utterance_id": "dia73_utt5"
+    },
+    {
+      "dialogue": 73,
+      "turn": 6,
+      "utterance_id": "dia73_utt6"
+    },
+    {
+      "dialogue": 73,
+      "turn": 7,
+      "utterance_id": "dia73_utt7"
+    },
+    {
+      "dialogue": 73,
+      "turn": 8,
+      "utterance_id": "dia73_utt8"
+    },
+    {
+      "dialogue": 73,
+      "turn": 9,
+      "utterance_id": "dia73_utt9"
+    },
+    {
+      "dialogue": 73,
+      "turn": 10,
+      "utterance_id": "dia73_utt10"
+    },
+    {
+      "dialogue": 74,
+      "turn": 0,
+      "utterance_id": "dia74_utt0"
+    },
+    {
+      "dialogue": 74,
+      "turn": 1,
+      "utterance_id": "dia74_utt1"
+    },
+    {
+      "dialogue": 74,
+      "turn": 2,
+      "utterance_id": "dia74_utt2"
+    },
+    {
+      "dialogue": 74,
+      "turn": 3,
+      "utterance_id": "dia74_utt3"
+    },
+    {
+      "dialogue": 74,
+      "turn": 4,
+      "utterance_id": "dia74_utt4"
+    },
+    {
+      "dialogue": 75,
+      "turn": 0,
+      "utterance_id": "dia75_utt0"
+    },
+    {
+      "dialogue": 75,
+      "turn": 1,
+      "utterance_id": "dia75_utt1"
+    },
+    {
+      "dialogue": 75,
+      "turn": 2,
+      "utterance_id": "dia75_utt2"
+    },
+    {
+      "dialogue": 75,
+      "turn": 3,
+      "utterance_id": "dia75_utt3"
+    },
+    {
+      "dialogue": 75,
+      "turn": 4,
+      "utterance_id": "dia75_utt4"
+    },
+    {
+      "dialogue": 75,
+      "turn": 5,
+      "utterance_id": "dia75_utt5"
+    },
+    {
+      "dialogue": 76,
+      "turn": 0,
+      "utterance_id": "dia76_utt0"
+    },
+    {
+      "dialogue": 76,
+      "turn": 1,
+      "utterance_id": "dia76_utt1"
+    },
+    {
+      "dialogue": 76,
+      "turn": 2,
+      "utterance_id": "dia76_utt2"
+    },
+    {
+      "dialogue": 76,
+      "turn": 3,
+      "utterance_id": "dia76_utt3"
+    },
+    {
+      "dialogue": 76,
+      "turn": 4,
+      "utterance_id": "dia76_utt4"
+    },
+    {
+      "dialogue": 76,
+      "turn": 5,
+      "utterance_id": "dia76_utt5"
+    },
+    {
+      "dialogue": 76,
+      "turn": 6,
+      "utterance_id": "dia76_utt6"
+    },
+    {
+      "dialogue": 76,
+      "turn": 7,
+      "utterance_id": "dia76_utt7"
+    },
+    {
+      "dialogue": 76,
+      "turn": 8,
+      "utterance_id": "dia76_utt8"
+    },
+    {
+      "dialogue": 76,
+      "turn": 9,
+      "utterance_id": "dia76_utt9"
+    },
+    {
+      "dialogue": 76,
+      "turn": 10,
+      "utterance_id": "dia76_utt10"
+    },
+    {
+      "dialogue": 76,
+      "turn": 11,
+      "utterance_id": "dia76_utt11"
+    },
+    {
+      "dialogue": 76,
+      "turn": 12,
+      "utterance_id": "dia76_utt12"
+    },
+    {
+      "dialogue": 76,
+      "turn": 13,
+      "utterance_id": "dia76_utt13"
+    },
+    {
+      "dialogue": 76,
+      "turn": 14,
+      "utterance_id": "dia76_utt14"
+    },
+    {
+      "dialogue": 76,
+      "turn": 15,
+      "utterance_id": "dia76_utt15"
+    },
+    {
+      "dialogue": 76,
+      "turn": 16,
+      "utterance_id": "dia76_utt16"
+    },
+    {
+      "dialogue": 76,
+      "turn": 17,
+      "utterance_id": "dia76_utt17"
+    },
+    {
+      "dialogue": 76,
+      "turn": 18,
+      "utterance_id": "dia76_utt18"
+    },
+    {
+      "dialogue": 77,
+      "turn": 0,
+      "utterance_id": "dia77_utt0"
+    },
+    {
+      "dialogue": 77,
+      "turn": 1,
+      "utterance_id": "dia77_utt1"
+    },
+    {
+      "dialogue": 77,
+      "turn": 2,
+      "utterance_id": "dia77_utt2"
+    },
+    {
+      "dialogue": 77,
+      "turn": 3,
+      "utterance_id": "dia77_utt3"
+    },
+    {
+      "dialogue": 77,
+      "turn": 4,
+      "utterance_id": "dia77_utt4"
+    },
+    {
+      "dialogue": 78,
+      "turn": 0,
+      "utterance_id": "dia78_utt0"
+    },
+    {
+      "dialogue": 78,
+      "turn": 1,
+      "utterance_id": "dia78_utt1"
+    },
+    {
+      "dialogue": 78,
+      "turn": 2,
+      "utterance_id": "dia78_utt2"
+    },
+    {
+      "dialogue": 78,
+      "turn": 3,
+      "utterance_id": "dia78_utt3"
+    },
+    {
+      "dialogue": 78,
+      "turn": 4,
+      "utterance_id": "dia78_utt4"
+    },
+    {
+      "dialogue": 78,
+      "turn": 5,
+      "utterance_id": "dia78_utt5"
+    },
+    {
+      "dialogue": 78,
+      "turn": 6,
+      "utterance_id": "dia78_utt6"
+    },
+    {
+      "dialogue": 78,
+      "turn": 7,
+      "utterance_id": "dia78_utt7"
+    },
+    {
+      "dialogue": 78,
+      "turn": 8,
+      "utterance_id": "dia78_utt8"
+    },
+    {
+      "dialogue": 78,
+      "turn": 9,
+      "utterance_id": "dia78_utt9"
+    },
+    {
+      "dialogue": 79,
+      "turn": 0,
+      "utterance_id": "dia79_utt0"
+    },
+    {
+      "dialogue": 79,
+      "turn": 1,
+      "utterance_id": "dia79_utt1"
+    },
+    {
+      "dialogue": 80,
+      "turn": 0,
+      "utterance_id": "dia80_utt0"
+    },
+    {
+      "dialogue": 80,
+      "turn": 1,
+      "utterance_id": "dia80_utt1"
+    },
+    {
+      "dialogue": 80,
+      "turn": 2,
+      "utterance_id": "dia80_utt2"
+    },
+    {
+      "dialogue": 80,
+      "turn": 3,
+      "utterance_id": "dia80_utt3"
+    },
+    {
+      "dialogue": 80,
+      "turn": 4,
+      "utterance_id": "dia80_utt4"
+    },
+    {
+      "dialogue": 80,
+      "turn": 5,
+      "utterance_id": "dia80_utt5"
+    },
+    {
+      "dialogue": 80,
+      "turn": 6,
+      "utterance_id": "dia80_utt6"
+    },
+    {
+      "dialogue": 80,
+      "turn": 7,
+      "utterance_id": "dia80_utt7"
+    },
+    {
+      "dialogue": 80,
+      "turn": 8,
+      "utterance_id": "dia80_utt8"
+    },
+    {
+      "dialogue": 80,
+      "turn": 9,
+      "utterance_id": "dia80_utt9"
+    },
+    {
+      "dialogue": 81,
+      "turn": 0,
+      "utterance_id": "dia81_utt0"
+    },
+    {
+      "dialogue": 81,
+      "turn": 1,
+      "utterance_id": "dia81_utt1"
+    },
+    {
+      "dialogue": 82,
+      "turn": 0,
+      "utterance_id": "dia82_utt0"
+    },
+    {
+      "dialogue": 83,
+      "turn": 0,
+      "utterance_id": "dia83_utt0"
+    },
+    {
+      "dialogue": 83,
+      "turn": 1,
+      "utterance_id": "dia83_utt1"
+    },
+    {
+      "dialogue": 83,
+      "turn": 2,
+      "utterance_id": "dia83_utt2"
+    },
+    {
+      "dialogue": 83,
+      "turn": 3,
+      "utterance_id": "dia83_utt3"
+    },
+    {
+      "dialogue": 83,
+      "turn": 4,
+      "utterance_id": "dia83_utt4"
+    },
+    {
+      "dialogue": 83,
+      "turn": 5,
+      "utterance_id": "dia83_utt5"
+    },
+    {
+      "dialogue": 83,
+      "turn": 6,
+      "utterance_id": "dia83_utt6"
+    },
+    {
+      "dialogue": 83,
+      "turn": 7,
+      "utterance_id": "dia83_utt7"
+    },
+    {
+      "dialogue": 83,
+      "turn": 8,
+      "utterance_id": "dia83_utt8"
+    },
+    {
+      "dialogue": 83,
+      "turn": 9,
+      "utterance_id": "dia83_utt9"
+    },
+    {
+      "dialogue": 83,
+      "turn": 10,
+      "utterance_id": "dia83_utt10"
+    },
+    {
+      "dialogue": 84,
+      "turn": 0,
+      "utterance_id": "dia84_utt0"
+    },
+    {
+      "dialogue": 84,
+      "turn": 1,
+      "utterance_id": "dia84_utt1"
+    },
+    {
+      "dialogue": 84,
+      "turn": 2,
+      "utterance_id": "dia84_utt2"
+    },
+    {
+      "dialogue": 85,
+      "turn": 0,
+      "utterance_id": "dia85_utt0"
+    },
+    {
+      "dialogue": 85,
+      "turn": 1,
+      "utterance_id": "dia85_utt1"
+    },
+    {
+      "dialogue": 85,
+      "turn": 2,
+      "utterance_id": "dia85_utt2"
+    },
+    {
+      "dialogue": 85,
+      "turn": 3,
+      "utterance_id": "dia85_utt3"
+    },
+    {
+      "dialogue": 85,
+      "turn": 4,
+      "utterance_id": "dia85_utt4"
+    },
+    {
+      "dialogue": 85,
+      "turn": 5,
+      "utterance_id": "dia85_utt5"
+    },
+    {
+      "dialogue": 86,
+      "turn": 0,
+      "utterance_id": "dia86_utt0"
+    },
+    {
+      "dialogue": 86,
+      "turn": 1,
+      "utterance_id": "dia86_utt1"
+    },
+    {
+      "dialogue": 86,
+      "turn": 2,
+      "utterance_id": "dia86_utt2"
+    },
+    {
+      "dialogue": 86,
+      "turn": 3,
+      "utterance_id": "dia86_utt3"
+    },
+    {
+      "dialogue": 86,
+      "turn": 4,
+      "utterance_id": "dia86_utt4"
+    },
+    {
+      "dialogue": 86,
+      "turn": 5,
+      "utterance_id": "dia86_utt5"
+    },
+    {
+      "dialogue": 86,
+      "turn": 6,
+      "utterance_id": "dia86_utt6"
+    },
+    {
+      "dialogue": 86,
+      "turn": 7,
+      "utterance_id": "dia86_utt7"
+    },
+    {
+      "dialogue": 87,
+      "turn": 0,
+      "utterance_id": "dia87_utt0"
+    },
+    {
+      "dialogue": 87,
+      "turn": 1,
+      "utterance_id": "dia87_utt1"
+    },
+    {
+      "dialogue": 88,
+      "turn": 0,
+      "utterance_id": "dia88_utt0"
+    },
+    {
+      "dialogue": 88,
+      "turn": 1,
+      "utterance_id": "dia88_utt1"
+    },
+    {
+      "dialogue": 88,
+      "turn": 2,
+      "utterance_id": "dia88_utt2"
+    },
+    {
+      "dialogue": 88,
+      "turn": 3,
+      "utterance_id": "dia88_utt3"
+    },
+    {
+      "dialogue": 88,
+      "turn": 4,
+      "utterance_id": "dia88_utt4"
+    },
+    {
+      "dialogue": 88,
+      "turn": 5,
+      "utterance_id": "dia88_utt5"
+    },
+    {
+      "dialogue": 88,
+      "turn": 6,
+      "utterance_id": "dia88_utt6"
+    },
+    {
+      "dialogue": 88,
+      "turn": 7,
+      "utterance_id": "dia88_utt7"
+    },
+    {
+      "dialogue": 88,
+      "turn": 8,
+      "utterance_id": "dia88_utt8"
+    },
+    {
+      "dialogue": 88,
+      "turn": 9,
+      "utterance_id": "dia88_utt9"
+    },
+    {
+      "dialogue": 88,
+      "turn": 10,
+      "utterance_id": "dia88_utt10"
+    },
+    {
+      "dialogue": 88,
+      "turn": 11,
+      "utterance_id": "dia88_utt11"
+    },
+    {
+      "dialogue": 88,
+      "turn": 12,
+      "utterance_id": "dia88_utt12"
+    },
+    {
+      "dialogue": 88,
+      "turn": 13,
+      "utterance_id": "dia88_utt13"
+    },
+    {
+      "dialogue": 89,
+      "turn": 0,
+      "utterance_id": "dia89_utt0"
+    },
+    {
+      "dialogue": 89,
+      "turn": 1,
+      "utterance_id": "dia89_utt1"
+    },
+    {
+      "dialogue": 89,
+      "turn": 2,
+      "utterance_id": "dia89_utt2"
+    },
+    {
+      "dialogue": 90,
+      "turn": 0,
+      "utterance_id": "dia90_utt0"
+    },
+    {
+      "dialogue": 90,
+      "turn": 1,
+      "utterance_id": "dia90_utt1"
+    },
+    {
+      "dialogue": 90,
+      "turn": 2,
+      "utterance_id": "dia90_utt2"
+    },
+    {
+      "dialogue": 90,
+      "turn": 3,
+      "utterance_id": "dia90_utt3"
+    },
+    {
+      "dialogue": 90,
+      "turn": 4,
+      "utterance_id": "dia90_utt4"
+    },
+    {
+      "dialogue": 90,
+      "turn": 5,
+      "utterance_id": "dia90_utt5"
+    },
+    {
+      "dialogue": 91,
+      "turn": 0,
+      "utterance_id": "dia91_utt0"
+    },
+    {
+      "dialogue": 92,
+      "turn": 0,
+      "utterance_id": "dia92_utt0"
+    },
+    {
+      "dialogue": 92,
+      "turn": 1,
+      "utterance_id": "dia92_utt1"
+    },
+    {
+      "dialogue": 92,
+      "turn": 2,
+      "utterance_id": "dia92_utt2"
+    },
+    {
+      "dialogue": 92,
+      "turn": 3,
+      "utterance_id": "dia92_utt3"
+    },
+    {
+      "dialogue": 92,
+      "turn": 4,
+      "utterance_id": "dia92_utt4"
+    },
+    {
+      "dialogue": 92,
+      "turn": 5,
+      "utterance_id": "dia92_utt5"
+    },
+    {
+      "dialogue": 93,
+      "turn": 0,
+      "utterance_id": "dia93_utt0"
+    },
+    {
+      "dialogue": 93,
+      "turn": 1,
+      "utterance_id": "dia93_utt1"
+    },
+    {
+      "dialogue": 93,
+      "turn": 2,
+      "utterance_id": "dia93_utt2"
+    },
+    {
+      "dialogue": 93,
+      "turn": 3,
+      "utterance_id": "dia93_utt3"
+    },
+    {
+      "dialogue": 93,
+      "turn": 4,
+      "utterance_id": "dia93_utt4"
+    },
+    {
+      "dialogue": 93,
+      "turn": 8,
+      "utterance_id": "dia93_utt8"
+    },
+    {
+      "dialogue": 93,
+      "turn": 9,
+      "utterance_id": "dia93_utt9"
+    },
+    {
+      "dialogue": 93,
+      "turn": 10,
+      "utterance_id": "dia93_utt10"
+    },
+    {
+      "dialogue": 93,
+      "turn": 11,
+      "utterance_id": "dia93_utt11"
+    },
+    {
+      "dialogue": 93,
+      "turn": 12,
+      "utterance_id": "dia93_utt12"
+    },
+    {
+      "dialogue": 93,
+      "turn": 13,
+      "utterance_id": "dia93_utt13"
+    },
+    {
+      "dialogue": 93,
+      "turn": 14,
+      "utterance_id": "dia93_utt14"
+    },
+    {
+      "dialogue": 93,
+      "turn": 15,
+      "utterance_id": "dia93_utt15"
+    },
+    {
+      "dialogue": 94,
+      "turn": 0,
+      "utterance_id": "dia94_utt0"
+    },
+    {
+      "dialogue": 94,
+      "turn": 1,
+      "utterance_id": "dia94_utt1"
+    },
+    {
+      "dialogue": 94,
+      "turn": 2,
+      "utterance_id": "dia94_utt2"
+    },
+    {
+      "dialogue": 95,
+      "turn": 0,
+      "utterance_id": "dia95_utt0"
+    },
+    {
+      "dialogue": 95,
+      "turn": 1,
+      "utterance_id": "dia95_utt1"
+    },
+    {
+      "dialogue": 95,
+      "turn": 2,
+      "utterance_id": "dia95_utt2"
+    },
+    {
+      "dialogue": 95,
+      "turn": 3,
+      "utterance_id": "dia95_utt3"
+    },
+    {
+      "dialogue": 95,
+      "turn": 4,
+      "utterance_id": "dia95_utt4"
+    },
+    {
+      "dialogue": 95,
+      "turn": 5,
+      "utterance_id": "dia95_utt5"
+    },
+    {
+      "dialogue": 95,
+      "turn": 6,
+      "utterance_id": "dia95_utt6"
+    },
+    {
+      "dialogue": 95,
+      "turn": 7,
+      "utterance_id": "dia95_utt7"
+    },
+    {
+      "dialogue": 95,
+      "turn": 8,
+      "utterance_id": "dia95_utt8"
+    },
+    {
+      "dialogue": 95,
+      "turn": 9,
+      "utterance_id": "dia95_utt9"
+    },
+    {
+      "dialogue": 95,
+      "turn": 10,
+      "utterance_id": "dia95_utt10"
+    },
+    {
+      "dialogue": 95,
+      "turn": 11,
+      "utterance_id": "dia95_utt11"
+    },
+    {
+      "dialogue": 95,
+      "turn": 12,
+      "utterance_id": "dia95_utt12"
+    },
+    {
+      "dialogue": 95,
+      "turn": 13,
+      "utterance_id": "dia95_utt13"
+    },
+    {
+      "dialogue": 95,
+      "turn": 14,
+      "utterance_id": "dia95_utt14"
+    },
+    {
+      "dialogue": 95,
+      "turn": 15,
+      "utterance_id": "dia95_utt15"
+    },
+    {
+      "dialogue": 95,
+      "turn": 16,
+      "utterance_id": "dia95_utt16"
+    },
+    {
+      "dialogue": 95,
+      "turn": 17,
+      "utterance_id": "dia95_utt17"
+    },
+    {
+      "dialogue": 95,
+      "turn": 18,
+      "utterance_id": "dia95_utt18"
+    },
+    {
+      "dialogue": 95,
+      "turn": 19,
+      "utterance_id": "dia95_utt19"
+    },
+    {
+      "dialogue": 96,
+      "turn": 0,
+      "utterance_id": "dia96_utt0"
+    },
+    {
+      "dialogue": 96,
+      "turn": 1,
+      "utterance_id": "dia96_utt1"
+    },
+    {
+      "dialogue": 96,
+      "turn": 2,
+      "utterance_id": "dia96_utt2"
+    },
+    {
+      "dialogue": 96,
+      "turn": 3,
+      "utterance_id": "dia96_utt3"
+    },
+    {
+      "dialogue": 96,
+      "turn": 4,
+      "utterance_id": "dia96_utt4"
+    },
+    {
+      "dialogue": 96,
+      "turn": 5,
+      "utterance_id": "dia96_utt5"
+    },
+    {
+      "dialogue": 96,
+      "turn": 6,
+      "utterance_id": "dia96_utt6"
+    },
+    {
+      "dialogue": 96,
+      "turn": 7,
+      "utterance_id": "dia96_utt7"
+    },
+    {
+      "dialogue": 96,
+      "turn": 8,
+      "utterance_id": "dia96_utt8"
+    },
+    {
+      "dialogue": 96,
+      "turn": 9,
+      "utterance_id": "dia96_utt9"
+    },
+    {
+      "dialogue": 96,
+      "turn": 10,
+      "utterance_id": "dia96_utt10"
+    },
+    {
+      "dialogue": 96,
+      "turn": 11,
+      "utterance_id": "dia96_utt11"
+    },
+    {
+      "dialogue": 96,
+      "turn": 12,
+      "utterance_id": "dia96_utt12"
+    },
+    {
+      "dialogue": 96,
+      "turn": 13,
+      "utterance_id": "dia96_utt13"
+    },
+    {
+      "dialogue": 96,
+      "turn": 14,
+      "utterance_id": "dia96_utt14"
+    },
+    {
+      "dialogue": 96,
+      "turn": 15,
+      "utterance_id": "dia96_utt15"
+    },
+    {
+      "dialogue": 96,
+      "turn": 16,
+      "utterance_id": "dia96_utt16"
+    },
+    {
+      "dialogue": 96,
+      "turn": 17,
+      "utterance_id": "dia96_utt17"
+    },
+    {
+      "dialogue": 96,
+      "turn": 18,
+      "utterance_id": "dia96_utt18"
+    },
+    {
+      "dialogue": 96,
+      "turn": 19,
+      "utterance_id": "dia96_utt19"
+    },
+    {
+      "dialogue": 96,
+      "turn": 20,
+      "utterance_id": "dia96_utt20"
+    },
+    {
+      "dialogue": 97,
+      "turn": 0,
+      "utterance_id": "dia97_utt0"
+    },
+    {
+      "dialogue": 97,
+      "turn": 1,
+      "utterance_id": "dia97_utt1"
+    },
+    {
+      "dialogue": 97,
+      "turn": 2,
+      "utterance_id": "dia97_utt2"
+    },
+    {
+      "dialogue": 97,
+      "turn": 3,
+      "utterance_id": "dia97_utt3"
+    },
+    {
+      "dialogue": 97,
+      "turn": 4,
+      "utterance_id": "dia97_utt4"
+    },
+    {
+      "dialogue": 97,
+      "turn": 5,
+      "utterance_id": "dia97_utt5"
+    },
+    {
+      "dialogue": 97,
+      "turn": 6,
+      "utterance_id": "dia97_utt6"
+    },
+    {
+      "dialogue": 97,
+      "turn": 7,
+      "utterance_id": "dia97_utt7"
+    },
+    {
+      "dialogue": 97,
+      "turn": 8,
+      "utterance_id": "dia97_utt8"
+    },
+    {
+      "dialogue": 97,
+      "turn": 9,
+      "utterance_id": "dia97_utt9"
+    },
+    {
+      "dialogue": 97,
+      "turn": 10,
+      "utterance_id": "dia97_utt10"
+    },
+    {
+      "dialogue": 97,
+      "turn": 11,
+      "utterance_id": "dia97_utt11"
+    },
+    {
+      "dialogue": 98,
+      "turn": 0,
+      "utterance_id": "dia98_utt0"
+    },
+    {
+      "dialogue": 98,
+      "turn": 1,
+      "utterance_id": "dia98_utt1"
+    },
+    {
+      "dialogue": 98,
+      "turn": 2,
+      "utterance_id": "dia98_utt2"
+    },
+    {
+      "dialogue": 98,
+      "turn": 3,
+      "utterance_id": "dia98_utt3"
+    },
+    {
+      "dialogue": 98,
+      "turn": 4,
+      "utterance_id": "dia98_utt4"
+    },
+    {
+      "dialogue": 98,
+      "turn": 5,
+      "utterance_id": "dia98_utt5"
+    },
+    {
+      "dialogue": 98,
+      "turn": 6,
+      "utterance_id": "dia98_utt6"
+    },
+    {
+      "dialogue": 98,
+      "turn": 7,
+      "utterance_id": "dia98_utt7"
+    },
+    {
+      "dialogue": 98,
+      "turn": 8,
+      "utterance_id": "dia98_utt8"
+    },
+    {
+      "dialogue": 98,
+      "turn": 9,
+      "utterance_id": "dia98_utt9"
+    },
+    {
+      "dialogue": 98,
+      "turn": 10,
+      "utterance_id": "dia98_utt10"
+    },
+    {
+      "dialogue": 98,
+      "turn": 11,
+      "utterance_id": "dia98_utt11"
+    },
+    {
+      "dialogue": 99,
+      "turn": 0,
+      "utterance_id": "dia99_utt0"
+    },
+    {
+      "dialogue": 99,
+      "turn": 1,
+      "utterance_id": "dia99_utt1"
+    },
+    {
+      "dialogue": 99,
+      "turn": 2,
+      "utterance_id": "dia99_utt2"
+    },
+    {
+      "dialogue": 99,
+      "turn": 3,
+      "utterance_id": "dia99_utt3"
+    },
+    {
+      "dialogue": 99,
+      "turn": 4,
+      "utterance_id": "dia99_utt4"
+    },
+    {
+      "dialogue": 99,
+      "turn": 5,
+      "utterance_id": "dia99_utt5"
+    },
+    {
+      "dialogue": 99,
+      "turn": 6,
+      "utterance_id": "dia99_utt6"
+    },
+    {
+      "dialogue": 99,
+      "turn": 7,
+      "utterance_id": "dia99_utt7"
+    },
+    {
+      "dialogue": 99,
+      "turn": 8,
+      "utterance_id": "dia99_utt8"
+    },
+    {
+      "dialogue": 99,
+      "turn": 9,
+      "utterance_id": "dia99_utt9"
+    },
+    {
+      "dialogue": 100,
+      "turn": 0,
+      "utterance_id": "dia100_utt0"
+    },
+    {
+      "dialogue": 100,
+      "turn": 1,
+      "utterance_id": "dia100_utt1"
+    },
+    {
+      "dialogue": 100,
+      "turn": 2,
+      "utterance_id": "dia100_utt2"
+    },
+    {
+      "dialogue": 100,
+      "turn": 3,
+      "utterance_id": "dia100_utt3"
+    },
+    {
+      "dialogue": 100,
+      "turn": 4,
+      "utterance_id": "dia100_utt4"
+    },
+    {
+      "dialogue": 100,
+      "turn": 5,
+      "utterance_id": "dia100_utt5"
+    },
+    {
+      "dialogue": 100,
+      "turn": 6,
+      "utterance_id": "dia100_utt6"
+    },
+    {
+      "dialogue": 100,
+      "turn": 7,
+      "utterance_id": "dia100_utt7"
+    },
+    {
+      "dialogue": 100,
+      "turn": 8,
+      "utterance_id": "dia100_utt8"
+    },
+    {
+      "dialogue": 100,
+      "turn": 9,
+      "utterance_id": "dia100_utt9"
+    },
+    {
+      "dialogue": 100,
+      "turn": 10,
+      "utterance_id": "dia100_utt10"
+    },
+    {
+      "dialogue": 100,
+      "turn": 11,
+      "utterance_id": "dia100_utt11"
+    },
+    {
+      "dialogue": 100,
+      "turn": 12,
+      "utterance_id": "dia100_utt12"
+    },
+    {
+      "dialogue": 100,
+      "turn": 13,
+      "utterance_id": "dia100_utt13"
+    },
+    {
+      "dialogue": 100,
+      "turn": 14,
+      "utterance_id": "dia100_utt14"
+    },
+    {
+      "dialogue": 100,
+      "turn": 15,
+      "utterance_id": "dia100_utt15"
+    },
+    {
+      "dialogue": 100,
+      "turn": 16,
+      "utterance_id": "dia100_utt16"
+    },
+    {
+      "dialogue": 100,
+      "turn": 17,
+      "utterance_id": "dia100_utt17"
+    },
+    {
+      "dialogue": 100,
+      "turn": 18,
+      "utterance_id": "dia100_utt18"
+    },
+    {
+      "dialogue": 100,
+      "turn": 19,
+      "utterance_id": "dia100_utt19"
+    },
+    {
+      "dialogue": 101,
+      "turn": 0,
+      "utterance_id": "dia101_utt0"
+    },
+    {
+      "dialogue": 101,
+      "turn": 1,
+      "utterance_id": "dia101_utt1"
+    },
+    {
+      "dialogue": 101,
+      "turn": 2,
+      "utterance_id": "dia101_utt2"
+    },
+    {
+      "dialogue": 101,
+      "turn": 3,
+      "utterance_id": "dia101_utt3"
+    },
+    {
+      "dialogue": 102,
+      "turn": 0,
+      "utterance_id": "dia102_utt0"
+    },
+    {
+      "dialogue": 102,
+      "turn": 1,
+      "utterance_id": "dia102_utt1"
+    },
+    {
+      "dialogue": 102,
+      "turn": 2,
+      "utterance_id": "dia102_utt2"
+    },
+    {
+      "dialogue": 102,
+      "turn": 3,
+      "utterance_id": "dia102_utt3"
+    },
+    {
+      "dialogue": 102,
+      "turn": 4,
+      "utterance_id": "dia102_utt4"
+    },
+    {
+      "dialogue": 102,
+      "turn": 5,
+      "utterance_id": "dia102_utt5"
+    },
+    {
+      "dialogue": 102,
+      "turn": 6,
+      "utterance_id": "dia102_utt6"
+    },
+    {
+      "dialogue": 102,
+      "turn": 7,
+      "utterance_id": "dia102_utt7"
+    },
+    {
+      "dialogue": 102,
+      "turn": 8,
+      "utterance_id": "dia102_utt8"
+    },
+    {
+      "dialogue": 102,
+      "turn": 9,
+      "utterance_id": "dia102_utt9"
+    },
+    {
+      "dialogue": 103,
+      "turn": 0,
+      "utterance_id": "dia103_utt0"
+    },
+    {
+      "dialogue": 103,
+      "turn": 1,
+      "utterance_id": "dia103_utt1"
+    },
+    {
+      "dialogue": 103,
+      "turn": 2,
+      "utterance_id": "dia103_utt2"
+    },
+    {
+      "dialogue": 103,
+      "turn": 3,
+      "utterance_id": "dia103_utt3"
+    },
+    {
+      "dialogue": 103,
+      "turn": 4,
+      "utterance_id": "dia103_utt4"
+    },
+    {
+      "dialogue": 103,
+      "turn": 5,
+      "utterance_id": "dia103_utt5"
+    },
+    {
+      "dialogue": 104,
+      "turn": 0,
+      "utterance_id": "dia104_utt0"
+    },
+    {
+      "dialogue": 104,
+      "turn": 1,
+      "utterance_id": "dia104_utt1"
+    },
+    {
+      "dialogue": 104,
+      "turn": 2,
+      "utterance_id": "dia104_utt2"
+    },
+    {
+      "dialogue": 105,
+      "turn": 0,
+      "utterance_id": "dia105_utt0"
+    },
+    {
+      "dialogue": 105,
+      "turn": 1,
+      "utterance_id": "dia105_utt1"
+    },
+    {
+      "dialogue": 105,
+      "turn": 2,
+      "utterance_id": "dia105_utt2"
+    },
+    {
+      "dialogue": 106,
+      "turn": 0,
+      "utterance_id": "dia106_utt0"
+    },
+    {
+      "dialogue": 106,
+      "turn": 1,
+      "utterance_id": "dia106_utt1"
+    },
+    {
+      "dialogue": 106,
+      "turn": 2,
+      "utterance_id": "dia106_utt2"
+    },
+    {
+      "dialogue": 106,
+      "turn": 3,
+      "utterance_id": "dia106_utt3"
+    },
+    {
+      "dialogue": 107,
+      "turn": 0,
+      "utterance_id": "dia107_utt0"
+    },
+    {
+      "dialogue": 107,
+      "turn": 1,
+      "utterance_id": "dia107_utt1"
+    },
+    {
+      "dialogue": 107,
+      "turn": 2,
+      "utterance_id": "dia107_utt2"
+    },
+    {
+      "dialogue": 107,
+      "turn": 3,
+      "utterance_id": "dia107_utt3"
+    },
+    {
+      "dialogue": 107,
+      "turn": 4,
+      "utterance_id": "dia107_utt4"
+    },
+    {
+      "dialogue": 107,
+      "turn": 5,
+      "utterance_id": "dia107_utt5"
+    },
+    {
+      "dialogue": 107,
+      "turn": 6,
+      "utterance_id": "dia107_utt6"
+    },
+    {
+      "dialogue": 107,
+      "turn": 7,
+      "utterance_id": "dia107_utt7"
+    },
+    {
+      "dialogue": 107,
+      "turn": 8,
+      "utterance_id": "dia107_utt8"
+    },
+    {
+      "dialogue": 107,
+      "turn": 9,
+      "utterance_id": "dia107_utt9"
+    },
+    {
+      "dialogue": 107,
+      "turn": 10,
+      "utterance_id": "dia107_utt10"
+    },
+    {
+      "dialogue": 107,
+      "turn": 11,
+      "utterance_id": "dia107_utt11"
+    },
+    {
+      "dialogue": 107,
+      "turn": 12,
+      "utterance_id": "dia107_utt12"
+    },
+    {
+      "dialogue": 108,
+      "turn": 0,
+      "utterance_id": "dia108_utt0"
+    },
+    {
+      "dialogue": 108,
+      "turn": 3,
+      "utterance_id": "dia108_utt3"
+    },
+    {
+      "dialogue": 108,
+      "turn": 4,
+      "utterance_id": "dia108_utt4"
+    },
+    {
+      "dialogue": 108,
+      "turn": 5,
+      "utterance_id": "dia108_utt5"
+    },
+    {
+      "dialogue": 108,
+      "turn": 6,
+      "utterance_id": "dia108_utt6"
+    },
+    {
+      "dialogue": 108,
+      "turn": 7,
+      "utterance_id": "dia108_utt7"
+    },
+    {
+      "dialogue": 108,
+      "turn": 8,
+      "utterance_id": "dia108_utt8"
+    },
+    {
+      "dialogue": 108,
+      "turn": 9,
+      "utterance_id": "dia108_utt9"
+    },
+    {
+      "dialogue": 109,
+      "turn": 0,
+      "utterance_id": "dia109_utt0"
+    },
+    {
+      "dialogue": 109,
+      "turn": 1,
+      "utterance_id": "dia109_utt1"
+    },
+    {
+      "dialogue": 109,
+      "turn": 2,
+      "utterance_id": "dia109_utt2"
+    },
+    {
+      "dialogue": 109,
+      "turn": 3,
+      "utterance_id": "dia109_utt3"
+    },
+    {
+      "dialogue": 109,
+      "turn": 4,
+      "utterance_id": "dia109_utt4"
+    },
+    {
+      "dialogue": 109,
+      "turn": 5,
+      "utterance_id": "dia109_utt5"
+    },
+    {
+      "dialogue": 109,
+      "turn": 6,
+      "utterance_id": "dia109_utt6"
+    },
+    {
+      "dialogue": 109,
+      "turn": 7,
+      "utterance_id": "dia109_utt7"
+    },
+    {
+      "dialogue": 110,
+      "turn": 0,
+      "utterance_id": "dia110_utt0"
+    },
+    {
+      "dialogue": 110,
+      "turn": 1,
+      "utterance_id": "dia110_utt1"
+    },
+    {
+      "dialogue": 110,
+      "turn": 2,
+      "utterance_id": "dia110_utt2"
+    },
+    {
+      "dialogue": 110,
+      "turn": 3,
+      "utterance_id": "dia110_utt3"
+    },
+    {
+      "dialogue": 110,
+      "turn": 4,
+      "utterance_id": "dia110_utt4"
+    },
+    {
+      "dialogue": 110,
+      "turn": 5,
+      "utterance_id": "dia110_utt5"
+    },
+    {
+      "dialogue": 110,
+      "turn": 6,
+      "utterance_id": "dia110_utt6"
+    },
+    {
+      "dialogue": 110,
+      "turn": 7,
+      "utterance_id": "dia110_utt7"
+    },
+    {
+      "dialogue": 110,
+      "turn": 8,
+      "utterance_id": "dia110_utt8"
+    },
+    {
+      "dialogue": 111,
+      "turn": 0,
+      "utterance_id": "dia111_utt0"
+    },
+    {
+      "dialogue": 111,
+      "turn": 1,
+      "utterance_id": "dia111_utt1"
+    },
+    {
+      "dialogue": 111,
+      "turn": 2,
+      "utterance_id": "dia111_utt2"
+    },
+    {
+      "dialogue": 111,
+      "turn": 3,
+      "utterance_id": "dia111_utt3"
+    },
+    {
+      "dialogue": 111,
+      "turn": 4,
+      "utterance_id": "dia111_utt4"
+    },
+    {
+      "dialogue": 111,
+      "turn": 5,
+      "utterance_id": "dia111_utt5"
+    },
+    {
+      "dialogue": 111,
+      "turn": 6,
+      "utterance_id": "dia111_utt6"
+    },
+    {
+      "dialogue": 111,
+      "turn": 7,
+      "utterance_id": "dia111_utt7"
+    },
+    {
+      "dialogue": 111,
+      "turn": 8,
+      "utterance_id": "dia111_utt8"
+    },
+    {
+      "dialogue": 111,
+      "turn": 9,
+      "utterance_id": "dia111_utt9"
+    },
+    {
+      "dialogue": 111,
+      "turn": 10,
+      "utterance_id": "dia111_utt10"
+    },
+    {
+      "dialogue": 111,
+      "turn": 11,
+      "utterance_id": "dia111_utt11"
+    },
+    {
+      "dialogue": 111,
+      "turn": 12,
+      "utterance_id": "dia111_utt12"
+    },
+    {
+      "dialogue": 111,
+      "turn": 13,
+      "utterance_id": "dia111_utt13"
+    },
+    {
+      "dialogue": 111,
+      "turn": 14,
+      "utterance_id": "dia111_utt14"
+    },
+    {
+      "dialogue": 112,
+      "turn": 0,
+      "utterance_id": "dia112_utt0"
+    },
+    {
+      "dialogue": 112,
+      "turn": 1,
+      "utterance_id": "dia112_utt1"
+    },
+    {
+      "dialogue": 112,
+      "turn": 2,
+      "utterance_id": "dia112_utt2"
+    },
+    {
+      "dialogue": 112,
+      "turn": 3,
+      "utterance_id": "dia112_utt3"
+    },
+    {
+      "dialogue": 112,
+      "turn": 4,
+      "utterance_id": "dia112_utt4"
+    },
+    {
+      "dialogue": 112,
+      "turn": 5,
+      "utterance_id": "dia112_utt5"
+    },
+    {
+      "dialogue": 112,
+      "turn": 6,
+      "utterance_id": "dia112_utt6"
+    },
+    {
+      "dialogue": 112,
+      "turn": 7,
+      "utterance_id": "dia112_utt7"
+    },
+    {
+      "dialogue": 112,
+      "turn": 8,
+      "utterance_id": "dia112_utt8"
+    },
+    {
+      "dialogue": 112,
+      "turn": 9,
+      "utterance_id": "dia112_utt9"
+    },
+    {
+      "dialogue": 112,
+      "turn": 10,
+      "utterance_id": "dia112_utt10"
+    },
+    {
+      "dialogue": 112,
+      "turn": 11,
+      "utterance_id": "dia112_utt11"
+    }
+  ],
+  "input_tensor_sha256": "aca8af4c7a1beca3b32ac955039b41b01d15ff70a86047fb4bd4764506cef0f1",
+  "sample_ids_sha256": "d90fd768295c002b227c1bbfddc22f60ef8afb86988e0324c03fa3e4258cb4f5",
+  "artifact_dir": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/runs/revision_1b8b1ff/meld/full/seed2025/.peak_bundles/epoch0047-b394d19802664a7ea62a8b6efbd53d6b",
+  "checkpoint": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/runs/revision_1b8b1ff/meld/full/seed2025/.peak_bundles/epoch0047-b394d19802664a7ea62a8b6efbd53d6b/best_peak_test_state_dict.pt",
+  "artifact_sha256": {
+    "best_peak_test_state_dict.pt": "0a86d9dca4a6295db5923cc8d35c52e43ff84ea384d4eee4a9eda72696b5a0f4",
+    "peak_test_predictions.pt": "16a98a32c7cf96290eb41ffa764cf6526548bc725cea670771f1b903794dc78e",
+    "peak_test_metrics.json": "d0ad613548a1cd99d919993b1031102502726d47115604409906d53afb83dce3",
+    "classification_report.txt": "8dde50d87f0807d5f046008298f669081059a27d37f7eef40ea5b7f9aefa6fae",
+    "history.json": "2be132efeb10682761b51e60672738e246b342743c8c46115c38813ce7708789",
+    "config.json": "8b1a84a95c5525c755cada3fb9bdf482eb9457a5f6b6dc58f07fdfe7041121cc",
+    "manifest.json": "df65bf837a4d712b765ee3b8ac895861a2f5583c0f0254afc0d97319ce619dce",
+    "status.json": "8df70008325ff8e6e6758e6770cd99c8ac4b4ed7750e1745b3c0c7abaaae0d57"
+  },
+  "checkpoint_load": "strict=True",
+  "artifact_validation": "Completed bundle, stored strict-replay flags and all six artifact checksums verified; no fresh predictive replay or accuracy measurement is claimed.",
+  "feature_sources": {
+    "v": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json",
+      "sha256": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+      "manifest_hash_verified": true
+    },
+    "a": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+      "sha256": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+      "manifest_hash_verified": true
+    },
+    "t": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+      "sha256": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+      "manifest_hash_verified": true
+    },
+    "metadata": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_sent_emo.csv",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_sent_emo.csv",
+      "sha256": "2d3fdb6586bdcdf172a7197fae9244116b1103efd951db2317e6a67c7042d28e",
+      "manifest_hash_verified": false
+    }
+  },
+  "artifact_config": {
+    "batch_size": 32,
+    "classes": {
+      "meld": [
+        "neutral",
+        "surprise",
+        "fear",
+        "sadness",
+        "joy",
+        "disgust",
+        "anger"
+      ]
+    },
+    "embed_dims_full": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "feature_paths": {
+      "meld": {
+        "dev": {
+          "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+          "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+          "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+        },
+        "test": {
+          "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+          "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+          "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+        },
+        "train": {
+          "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+          "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+          "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+        }
+      }
+    },
+    "fixed_params": {
+      "aux_from_raw_projected": true,
+      "aux_loss_weights": {
+        "a": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "capacity_variant": "M4_PAIR",
+      "checkpoint_prefix": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/runs/revision_1b8b1ff/meld/full/seed2025/checkpoints/full_",
+      "distill_alpha": 0.5772777397767895,
+      "distill_temp": 1.8246074213744867,
+      "dropout_rate": 0.1113389962276903,
+      "early_stopping_patience": 12,
+      "focal_reweight_gamma": 2.5,
+      "fusion_dim": 256,
+      "fusion_dropout": 0.2,
+      "fusion_type": "hierarchical",
+      "gradient_clip_norm": 1.0,
+      "graph_k_audio": 6,
+      "graph_k_text": 12,
+      "graph_k_visual": 7,
+      "information_gate": "off",
+      "information_gate_enabled": false,
+      "label_smoothing": 0.0,
+      "layerwise_alpha": 0.3,
+      "layerwise_gamma": 0.1,
+      "layerwise_margin": 0.0,
+      "layerwise_tau": 0.1,
+      "layerwise_variant": "a0",
+      "loss_type": "poly",
+      "lr_audio": 4.003056259961667e-06,
+      "lr_fusion": 2.0832826726482106e-05,
+      "lr_reduce_factor": 0.5,
+      "lr_reduce_patience": 3,
+      "lr_text": 2.4163243028131906e-05,
+      "lr_visual": 2.2406991940069396e-05,
+      "main_loss_weight": 1.0,
+      "no_alignment": true,
+      "no_channel_attention": false,
+      "no_distill": false,
+      "no_gates": false,
+      "normalize_aux_loss_weights": false,
+      "num_heads_fusion": 8,
+      "num_layers_fusion": 2,
+      "poly_alpha": 1.9508055462649292,
+      "poly_gamma": 1.402459950741192,
+      "seed": 2025,
+      "selection_mode": "test",
+      "skip_pretrain": true,
+      "strict_clean_protocol": true,
+      "subspace_tokens": 6,
+      "temporal_weight_audio": 0.534697670184466,
+      "temporal_weight_text": 1.653647526520393,
+      "temporal_weight_visual": 1.0014116523635417,
+      "transformer_dim": 256,
+      "transformer_ffn": 1536,
+      "transformer_layers": 2,
+      "use_contrastive": false,
+      "use_moe": false,
+      "wd_audio": 1.1630145789712038e-05,
+      "wd_fusion": 9.97646370349997e-05,
+      "wd_text": 0.0004004846462605576,
+      "wd_visual": 9.208015059525338e-05
+    },
+    "num_epochs": 50,
+    "runtime_audit": {
+      "active_modalities": [
+        "t",
+        "a",
+        "v"
+      ],
+      "architecture": {
+        "blocks": 2,
+        "dim": 256,
+        "ffn": 1536,
+        "tokens": 6
+      },
+      "feature_paths": {
+        "dev": {
+          "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+          "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+          "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+        },
+        "test": {
+          "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+          "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+          "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+        },
+        "train": {
+          "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+          "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+          "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+        }
+      },
+      "input_dims": {
+        "a": 1024,
+        "t": 1024,
+        "v": 342
+      },
+      "learning_rates": {
+        "classifier": 4.166565345296421e-05,
+        "mixer": 2.0832826726482106e-05,
+        "projection": 1.0416413363241053e-05,
+        "remaining": 2.0832826726482106e-05
+      },
+      "loss": {
+        "aux_class_weight": true,
+        "fixed_task_weights": {
+          "a": 1.0,
+          "main": 1.0,
+          "t": 1.0,
+          "v": 1.0
+        },
+        "focal_gamma": 2.5,
+        "focal_probability_detached": false,
+        "kind": "meld_per_sample_focal_no_detach",
+        "main_class_weight": false,
+        "task_weighting": "fixed_unit"
+      },
+      "selection": "strict_peak_test_wf1"
+    }
+  },
+  "artifact_manifest": {
+    "artifact_sha256": {
+      "best_peak_test_state_dict.pt": "0a86d9dca4a6295db5923cc8d35c52e43ff84ea384d4eee4a9eda72696b5a0f4",
+      "classification_report.txt": "8dde50d87f0807d5f046008298f669081059a27d37f7eef40ea5b7f9aefa6fae",
+      "config.json": "8b1a84a95c5525c755cada3fb9bdf482eb9457a5f6b6dc58f07fdfe7041121cc",
+      "history.json": "2be132efeb10682761b51e60672738e246b342743c8c46115c38813ce7708789",
+      "peak_test_metrics.json": "d0ad613548a1cd99d919993b1031102502726d47115604409906d53afb83dce3",
+      "peak_test_predictions.pt": "16a98a32c7cf96290eb41ffa764cf6526548bc725cea670771f1b903794dc78e"
+    },
+    "config_contract_sha256": "be09038eb160f7600d78ecd42a578b7321b11900f84ca856b1f090f20c202793",
+    "config_sha256": "d5405201b1faf8d96356d03fefff0a87b90cfb59fc54599060ed4a2ac4107aa2",
+    "dataset": "meld",
+    "feature_hashes": {
+      "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+      "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+      "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+      "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+      "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+      "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+      "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+      "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+      "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1"
+    },
+    "fresh_strict_replay_exact": true,
+    "runtime_audit": {
+      "active_modalities": [
+        "t",
+        "a",
+        "v"
+      ],
+      "architecture": {
+        "blocks": 2,
+        "dim": 256,
+        "ffn": 1536,
+        "tokens": 6
+      },
+      "feature_paths": {
+        "dev": {
+          "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+          "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+          "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+        },
+        "test": {
+          "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+          "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+          "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+        },
+        "train": {
+          "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+          "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+          "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+        }
+      },
+      "input_dims": {
+        "a": 1024,
+        "t": 1024,
+        "v": 342
+      },
+      "learning_rates": {
+        "classifier": 4.166565345296421e-05,
+        "mixer": 2.0832826726482106e-05,
+        "projection": 1.0416413363241053e-05,
+        "remaining": 2.0832826726482106e-05
+      },
+      "loss": {
+        "aux_class_weight": true,
+        "fixed_task_weights": {
+          "a": 1.0,
+          "main": 1.0,
+          "t": 1.0,
+          "v": 1.0
+        },
+        "focal_gamma": 2.5,
+        "focal_probability_detached": false,
+        "kind": "meld_per_sample_focal_no_detach",
+        "main_class_weight": false,
+        "task_weighting": "fixed_unit"
+      },
+      "selection": "strict_peak_test_wf1"
+    },
+    "seed": 2025,
+    "selection": "strict_peak_test_wf1",
+    "source_hashes": {
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/dataset_runners/meld.py": "1e86e4f47261e88b7591bc7e1f7ba6b78418c2c3f8bc209f4b57745b370c2694",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/adapters.py": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/cli.py": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/config.py": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/structural_ablations.py": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/run.py": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/configs/config_meld_rawaux_s15m.json": "5635a1eed0eba2a7a979166620e2f873cfdda8c92d6e791f420aa9bf49b0ea2b",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/layerwise_objectives.py": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/model.py": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/train_erc.py": "0f6f51ad5c76372a6f9b5eda3a548647fc30cd81adf3a98bfe648adf93139c1e",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/variant_override.py": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae"
+    },
+    "variant": "full"
+  },
+  "source_provenance": {
+    "git_commit": "",
+    "git_status": null,
+    "tracked_diff": null,
+    "loaded_source_sha256": {
+      "measure_revision_efficiency.py": "9641b02c51203a4f551ff114be48c2fdeac8d6310776454eae8196e50b390318",
+      "vendor/meld/multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+      "vendor/meld/model.py": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+      "vendor/meld/variant_override.py": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae",
+      "mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+      "mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+      "mm_mixer_final/structural_ablations.py": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+      "mm_mixer_final/config.py": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+      "mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+      "mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+      "mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+      "dataset_runners/meld.py": "1e86e4f47261e88b7591bc7e1f7ba6b78418c2c3f8bc209f4b57745b370c2694",
+      "vendor/meld/layerwise_objectives.py": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78"
+    }
+  },
+  "checkpoint_source_comparison": {
+    "entries": [
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/dataset_runners/meld.py",
+        "current_relative_path": "dataset_runners/meld.py",
+        "recorded_sha256": "1e86e4f47261e88b7591bc7e1f7ba6b78418c2c3f8bc209f4b57745b370c2694",
+        "current_sha256": "1e86e4f47261e88b7591bc7e1f7ba6b78418c2c3f8bc209f4b57745b370c2694",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/__init__.py",
+        "current_relative_path": "mm_mixer_final/__init__.py",
+        "recorded_sha256": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+        "current_sha256": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/adapters.py",
+        "recorded_sha256": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/artifacts.py",
+        "current_relative_path": "mm_mixer_final/artifacts.py",
+        "recorded_sha256": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+        "current_sha256": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/audit.py",
+        "current_relative_path": "mm_mixer_final/audit.py",
+        "recorded_sha256": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+        "current_sha256": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/cli.py",
+        "recorded_sha256": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/config.py",
+        "current_relative_path": "mm_mixer_final/config.py",
+        "recorded_sha256": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+        "current_sha256": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/modalities.py",
+        "current_relative_path": "mm_mixer_final/modalities.py",
+        "recorded_sha256": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+        "current_sha256": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/revision_controls.py",
+        "current_relative_path": "mm_mixer_final/revision_controls.py",
+        "recorded_sha256": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+        "current_sha256": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/structural_ablations.py",
+        "current_relative_path": "mm_mixer_final/structural_ablations.py",
+        "recorded_sha256": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+        "current_sha256": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/run.py",
+        "recorded_sha256": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/configs/config_meld_rawaux_s15m.json",
+        "recorded_sha256": "5635a1eed0eba2a7a979166620e2f873cfdda8c92d6e791f420aa9bf49b0ea2b",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/layerwise_objectives.py",
+        "current_relative_path": "vendor/meld/layerwise_objectives.py",
+        "recorded_sha256": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+        "current_sha256": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/model.py",
+        "current_relative_path": "vendor/meld/model.py",
+        "recorded_sha256": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+        "current_sha256": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/multiattn.py",
+        "current_relative_path": "vendor/meld/multiattn.py",
+        "recorded_sha256": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+        "current_sha256": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/train_erc.py",
+        "recorded_sha256": "0f6f51ad5c76372a6f9b5eda3a548647fc30cd81adf3a98bfe648adf93139c1e",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/variant_override.py",
+        "current_relative_path": "vendor/meld/variant_override.py",
+        "recorded_sha256": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae",
+        "current_sha256": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae",
+        "status": "match"
+      }
+    ],
+    "all_recorded_sources_match": false,
+    "interpretation": "Current-code timing of a strict-loaded checkpoint. Source differences are recorded; completed timing does not establish historical prediction/accuracy reproduction."
+  },
+  "finished_at_unix": 1791146531.7564409
+}

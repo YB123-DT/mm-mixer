@@ -1,0 +1,100 @@
+[
+  {
+    "dataset": "iemocap",
+    "variant": "full",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6358082,
+    "initial_state_sha256": "38c82522c960ff7b6c5cbaddde781756378df6b9e4bddffeddec11869c8bbb08",
+    "logits_sha256": "1fbb9a050a147e13f111280088b37745be48b9bc6486466d34c3e7456465ec80",
+    "forward_backward_optimizer_update": "passed",
+    "original_commit_bitwise_regression": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "projection_views_2",
+    "tokens": 2,
+    "subspace_hidden": 4,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6094634,
+    "initial_state_sha256": "adf0cc8a48b36c83094e0ca77891cf11469fc26b839a500486e126f97a41db03",
+    "logits_sha256": "42e93a82e3e7d33650de2578b0f995a36f8a80dc9dc0e221c653efbacede5cc7",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "projection_views_4",
+    "tokens": 4,
+    "subspace_hidden": 8,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6226326,
+    "initial_state_sha256": "5e2cb277fb76932e5a0117ccd5ea5144f2c4541a5db596656fe1ad6b96afcaec",
+    "logits_sha256": "471cf14ad4a40839b4097aec8915d3c259135a97d2178d8d3ff143ec9e93d116",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "projection_views_8",
+    "tokens": 8,
+    "subspace_hidden": 16,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6489902,
+    "initial_state_sha256": "3f03d7c1c1398cab59d70c4e8e0832aa70ee154bfb8a19e45f1b0d8e6494a8b8",
+    "logits_sha256": "10af02ff0b5efa3640ba720cbfd54ffaebf909a65f74fa92767935787e111f1f",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "full",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6106825,
+    "initial_state_sha256": "43d09c77e5531a30d7f72936a0d21fe59d041c21baf4aba76c6aaf5853236f33",
+    "logits_sha256": "4712bfe6f291f02de0a0dba7f166ea7cc7bc3b9c6dda5efa0b42b8ac706e52ac",
+    "forward_backward_optimizer_update": "passed",
+    "original_commit_bitwise_regression": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "projection_views_2",
+    "tokens": 2,
+    "subspace_hidden": 4,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 5843377,
+    "initial_state_sha256": "3af515089725c3f54123f7079c551262094661a121526884b5922e55eff5d0ea",
+    "logits_sha256": "fe2687d446316ce75eb21eb66b49fd57ab080e9b8cce5e36caae2d4285dbbbfd",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "projection_views_4",
+    "tokens": 4,
+    "subspace_hidden": 8,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 5975069,
+    "initial_state_sha256": "2a0f6e674dff0a3adbf8b6a772a3599089f76dcfd4019d4aa238dca1ff249e39",
+    "logits_sha256": "376f661b342cb68ed65546a5432541937f41e6c25491fa69234fa22d91c9e15d",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "projection_views_8",
+    "tokens": 8,
+    "subspace_hidden": 16,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6238645,
+    "initial_state_sha256": "81e5e52c06f18e572e5a3089cfa449c4060c9500d2151cfca55c152a983a108f",
+    "logits_sha256": "fa9aae0ace8896abdf8692ddc2581840aa4f8be54c3e6fcd1735a4c3a8a17e3d",
+    "forward_backward_optimizer_update": "passed"
+  }
+]

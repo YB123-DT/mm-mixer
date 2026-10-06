@@ -1,0 +1,68 @@
+[
+  {
+    "dataset": "iemocap",
+    "variant": "projection_views_2",
+    "status": {
+      "checkpoint_sha256": "b87e79ff3c4d59520a35b3e85f1cd33c817a14b1dc7d846f7cc62e6f2c40ed6b",
+      "epoch": 1,
+      "fresh_strict_replay_exact": true,
+      "predictions_sha256": "bdadd58b096dfaf9079b404d4e824b985f179ad2228eb7cfb6264cfb2f0ea8f4",
+      "state": "complete",
+      "weighted_f1": 0.21868984735452893
+    },
+    "architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "subspace_hidden": 4,
+      "tokens": 2
+    },
+    "config_contract_sha256": "dbdd3329a5d400a63c1773b6d89ca96466cdca9861f6bb7b0deb0b1386b1de70",
+    "artifact_sha256": {
+      "best_peak_test_state_dict.pt": "b87e79ff3c4d59520a35b3e85f1cd33c817a14b1dc7d846f7cc62e6f2c40ed6b",
+      "classification_report.txt": "934d454d34bd840f3056ac281c762b9f440317356d4967e2be45eaa3bf46f843",
+      "config.json": "25f8f3aa27029babbe4dd667e6d0f6b46baf20afefab35ee05dc6814faa284f0",
+      "history.json": "a5724a4fc22b93e234b29fda045c03214e88e7aadb79f177b395c2c2f469374c",
+      "peak_test_metrics.json": "b44d870ad6a5983062fed08326ce09ef439b07ef721ab2c4fab1cbf3f6363d3f",
+      "peak_test_predictions.pt": "bdadd58b096dfaf9079b404d4e824b985f179ad2228eb7cfb6264cfb2f0ea8f4"
+    },
+    "artifact_hashes_verified": true,
+    "smoke_only": true,
+    "epochs": 1,
+    "server": "biggpu",
+    "gpu_uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e"
+  },
+  {
+    "dataset": "meld",
+    "variant": "projection_views_8",
+    "status": {
+      "checkpoint_sha256": "0bb97ffff174551888e526266a1ef7e72a03f0bae4c0813738222bba273ab1ce",
+      "epoch": 1,
+      "fresh_strict_replay_exact": true,
+      "predictions_sha256": "5de4d30a2039f15846f646377ba70b92e5b689d703b2a32462ed86056a110755",
+      "state": "complete",
+      "weighted_f1": 0.06705183407784053
+    },
+    "architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "subspace_hidden": 16,
+      "tokens": 8
+    },
+    "config_contract_sha256": "5ed514cccab019935266699efab12aa0422124999220f7d4323f1ed89025228d",
+    "artifact_sha256": {
+      "best_peak_test_state_dict.pt": "0bb97ffff174551888e526266a1ef7e72a03f0bae4c0813738222bba273ab1ce",
+      "classification_report.txt": "20f9a64598ccadff00eb1e80c6a8c2af13c6f16c2f3f892e94fe311b8512b2fb",
+      "config.json": "a846cd1b88a89a831e87f97c07bcd80cbdc8fdf98317298814a8cf18414d24a8",
+      "history.json": "8e356a875cc9fee20c47b7724ec1cc76560d0de0d0ecf3f2b1e1f3b62f7ed761",
+      "peak_test_metrics.json": "43753ea490f028fcede961b61bbe64cffecc46326d3da89d6a227f144435cef9",
+      "peak_test_predictions.pt": "5de4d30a2039f15846f646377ba70b92e5b689d703b2a32462ed86056a110755"
+    },
+    "artifact_hashes_verified": true,
+    "smoke_only": true,
+    "epochs": 1,
+    "server": "biggpu",
+    "gpu_uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e"
+  }
+]

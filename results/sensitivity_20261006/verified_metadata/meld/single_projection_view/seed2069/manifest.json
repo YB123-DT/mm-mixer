@@ -1,0 +1,137 @@
+{
+  "artifact_sha256": {
+    "best_peak_test_state_dict.pt": "111327f297bde3cfec79604c14c2d83079aa087a128b279cab335f12492d5afe",
+    "classification_report.txt": "bad3a277e78e18df6ca9d2a1f266e7d7bb266eb37cb56c84fb110743716c4fd2",
+    "config.json": "c73a1f2833934f72241afe1455ee211517d38fd1ec9114f254e8a20339cc450b",
+    "history.json": "d3eca8dcb7e912b2932f2627558ac3f88d0760ee42d02001a8843181ff29966e",
+    "peak_test_metrics.json": "1ea002be6d1bc04065b79fbdb9908e5aef592add60d423f69c85af5551eed3e2",
+    "peak_test_predictions.pt": "4c19c99d5c5a9d0f49e048778f3d887286a008e129fa5aacdec973592e56e400"
+  },
+  "config_contract_sha256": "17b674442160e3106cba6c823568779ff73e03c2f28be9883547555c83c2d89b",
+  "config_sha256": "544b0e67ebd59a1a069dc4167c81dff6f639aa3ceae55222911e03d4a9f4ab3f",
+  "dataset": "meld",
+  "feature_hashes": {
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1"
+  },
+  "fresh_strict_replay_exact": true,
+  "runtime_audit": {
+    "active_modalities": [
+      "t",
+      "a",
+      "v"
+    ],
+    "architecture": {
+      "block_types": [
+        "MixerBlock",
+        "MixerBlock"
+      ],
+      "blocks": 2,
+      "dim": 256,
+      "operation": "full_amm_with_one_projection_view",
+      "replacement_hidden": null,
+      "tokens": 1
+    },
+    "effective_loss_weights": {
+      "auxiliary": {
+        "a": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "main": 1.0,
+      "normalize_auxiliary": false
+    },
+    "feature_paths": {
+      "dev": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+      },
+      "test": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+      },
+      "train": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+      }
+    },
+    "input_dims": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "learning_rates": {
+      "classifier": 4.166565345296421e-05,
+      "mixer": 2.0832826726482106e-05,
+      "projection": 1.0416413363241053e-05,
+      "remaining": 2.0832826726482106e-05
+    },
+    "loss": {
+      "aux_class_weight": true,
+      "fixed_task_weights": {
+        "a": 1.0,
+        "main": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "focal_gamma": 2.5,
+      "focal_probability_detached": false,
+      "kind": "meld_per_sample_focal_no_detach",
+      "main_class_weight": false,
+      "task_weighting": "fixed_unit"
+    },
+    "reference_amm_architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "subspace_hidden": 2,
+      "tokens": 1
+    },
+    "revision_control": {
+      "actual_blocks": 2,
+      "actual_dim": 256,
+      "actual_tokens": 1,
+      "description": "Retain both AMM blocks and all axes, replacing D-to-6D by D-to-D and S MLPs by 1-to-2-to-1.",
+      "model_parameters_after": 5777555,
+      "model_parameters_before": 6106825,
+      "operation": "full_amm_with_one_projection_view",
+      "original_amm_parameters": 1974614,
+      "subspace_hidden": 2,
+      "tokens": 1,
+      "variant": "single_projection_view"
+    },
+    "selection": "strict_peak_test_wf1"
+  },
+  "seed": 2069,
+  "selection": "strict_peak_test_wf1",
+  "source_hashes": {
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/dataset_runners/meld.py": "1e86e4f47261e88b7591bc7e1f7ba6b78418c2c3f8bc209f4b57745b370c2694",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/adapters.py": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/cli.py": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/config.py": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/structural_ablations.py": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/run.py": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/configs/config_meld_rawaux_s15m.json": "5635a1eed0eba2a7a979166620e2f873cfdda8c92d6e791f420aa9bf49b0ea2b",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/layerwise_objectives.py": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/model.py": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/train_erc.py": "0f6f51ad5c76372a6f9b5eda3a548647fc30cd81adf3a98bfe648adf93139c1e",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/variant_override.py": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae"
+  },
+  "variant": "single_projection_view"
+}

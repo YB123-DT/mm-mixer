@@ -1,0 +1,7299 @@
+{
+  "status": "completed",
+  "protocol": "downstream_feature_forward_v1",
+  "smoke_only": false,
+  "dataset": "iemocap",
+  "variant": "full",
+  "seed": 2025,
+  "server": "biggpu",
+  "hostname": "user22",
+  "pid": 3607402,
+  "gpu": {
+    "physical_index": 2,
+    "uuid": "GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4",
+    "name": "Tesla V100-SXM2-32GB",
+    "memory_total_mib": 32768.0,
+    "driver_version": "575.51.03",
+    "logical_device": "cuda:0"
+  },
+  "idle_checks": [
+    {
+      "checked_at_unix": 1791146345.1681945,
+      "other_compute_processes": []
+    },
+    {
+      "checked_at_unix": 1791146362.084535,
+      "other_compute_processes": []
+    },
+    {
+      "checked_at_unix": 1791146366.9383705,
+      "other_compute_processes": []
+    }
+  ],
+  "torch_version": "2.2.2+cu121",
+  "cuda_version": "12.1",
+  "cudnn_version": 8902,
+  "cpu_threads": 1,
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": false,
+  "dtype": "float32",
+  "mode": "eval/no_grad",
+  "batch_size": 32,
+  "samples": 1000,
+  "batches": 32,
+  "batch_sizes": [
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    8
+  ],
+  "warmup_batches": 20,
+  "timed_repeats": 10,
+  "timing_boundary": "Default downstream forward, GPU-resident pre-extracted features; synchronized before/after each entire target sweep. Excludes feature extraction, loading, H2D, parameter audit, predictions/metrics. Includes auxiliary outputs computed by default forward.",
+  "timing": {
+    "seconds_each_repeat": [
+      0.44359607715159655,
+      0.4303287679795176,
+      0.4251818840857595,
+      0.4383615960832685,
+      0.4564059409312904,
+      0.43317431304603815,
+      0.44658991508185863,
+      0.4416501088999212,
+      0.43035631184466183,
+      0.4398232540115714
+    ],
+    "median_seconds": 0.43909242504741997,
+    "min_seconds": 0.4251818840857595,
+    "p90_seconds": 0.4475715176668018,
+    "all_repeats_total_seconds": 4.385468169115484,
+    "median_utterances_per_second": 2277.424849431198,
+    "median_ms_per_utterance_amortized": 0.43909242504741997
+  },
+  "memory": {
+    "baseline_allocated_bytes": 52323328,
+    "peak_allocated_bytes": 61895168,
+    "peak_reserved_bytes": 104857600,
+    "incremental_peak_allocated_bytes": 9571840,
+    "resident_input_tensor_bytes": 9560000,
+    "definition": "PyTorch process allocation; includes model, all selected GPU inputs and retained model state. Incremental peak is relative to post-warmup baseline, not full activation memory. Not nvidia-smi device memory."
+  },
+  "parameters": {
+    "registered_total": 6358082,
+    "registered_trainable": 6358082,
+    "main_logit_gradient_connected_trainable": 5253195,
+    "main_logit_disconnected_trainable_names": [
+      "seq_proj.v.0.weight",
+      "seq_proj.v.0.bias",
+      "seq_proj.v.1.weight",
+      "seq_proj.v.1.bias",
+      "seq_proj.a.0.weight",
+      "seq_proj.a.0.bias",
+      "seq_proj.a.1.weight",
+      "seq_proj.a.1.bias",
+      "seq_proj.t.0.weight",
+      "seq_proj.t.0.bias",
+      "seq_proj.t.1.weight",
+      "seq_proj.t.1.bias",
+      "quality_detector.v.0.weight",
+      "quality_detector.v.0.bias",
+      "quality_detector.v.1.weight",
+      "quality_detector.v.1.bias",
+      "quality_detector.v.4.weight",
+      "quality_detector.v.4.bias",
+      "quality_detector.v.6.weight",
+      "quality_detector.v.6.bias",
+      "quality_detector.a.0.weight",
+      "quality_detector.a.0.bias",
+      "quality_detector.a.1.weight",
+      "quality_detector.a.1.bias",
+      "quality_detector.a.4.weight",
+      "quality_detector.a.4.bias",
+      "quality_detector.a.6.weight",
+      "quality_detector.a.6.bias",
+      "quality_detector.t.0.weight",
+      "quality_detector.t.0.bias",
+      "quality_detector.t.1.weight",
+      "quality_detector.t.1.bias",
+      "quality_detector.t.4.weight",
+      "quality_detector.t.4.bias",
+      "quality_detector.t.6.weight",
+      "quality_detector.t.6.bias",
+      "transformer_encoder.cross.triple_projections.0.weight",
+      "transformer_encoder.cross.triple_projections.0.bias",
+      "transformer_encoder.cross.triple_projections.1.weight",
+      "transformer_encoder.cross.triple_projections.1.bias",
+      "transformer_encoder.cross.triple_projections.2.weight",
+      "transformer_encoder.cross.triple_projections.2.bias",
+      "mod_classifiers.v.0.weight",
+      "mod_classifiers.v.0.bias",
+      "mod_classifiers.v.3.weight",
+      "mod_classifiers.v.3.bias",
+      "mod_classifiers.a.0.weight",
+      "mod_classifiers.a.0.bias",
+      "mod_classifiers.a.3.weight",
+      "mod_classifiers.a.3.bias",
+      "mod_classifiers.t.0.weight",
+      "mod_classifiers.t.0.bias",
+      "mod_classifiers.t.3.weight",
+      "mod_classifiers.t.3.bias",
+      "confidence_estimator.0.weight",
+      "confidence_estimator.0.bias",
+      "confidence_estimator.2.weight",
+      "confidence_estimator.2.bias",
+      "uncertainty_estimator.0.weight",
+      "uncertainty_estimator.0.bias",
+      "uncertainty_estimator.2.weight",
+      "uncertainty_estimator.2.bias"
+    ],
+    "connected_count_definition": "Requires-grad parameters connected to main logits on one eval batch; zero gradients still count. This excludes aux-only dependencies, not necessarily all forward compute. No optimizer/update is used; default forward is not pruned."
+  },
+  "revision_control": {},
+  "sample_selection": "first N test targets in dataset order; no resampling or duplication",
+  "sample_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419,
+    420,
+    421,
+    422,
+    423,
+    424,
+    425,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    453,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552,
+    553,
+    554,
+    555,
+    556,
+    557,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    566,
+    567,
+    568,
+    569,
+    570,
+    571,
+    572,
+    573,
+    574,
+    575,
+    576,
+    577,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588,
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618,
+    619,
+    620,
+    621,
+    622,
+    623,
+    624,
+    625,
+    626,
+    627,
+    628,
+    629,
+    630,
+    631,
+    632,
+    633,
+    634,
+    635,
+    636,
+    637,
+    638,
+    639,
+    640,
+    641,
+    642,
+    643,
+    644,
+    645,
+    646,
+    647,
+    648,
+    649,
+    650,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    658,
+    659,
+    660,
+    661,
+    662,
+    663,
+    664,
+    665,
+    666,
+    667,
+    668,
+    669,
+    670,
+    671,
+    672,
+    673,
+    674,
+    675,
+    676,
+    677,
+    678,
+    679,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687,
+    688,
+    689,
+    690,
+    691,
+    692,
+    693,
+    694,
+    695,
+    696,
+    697,
+    698,
+    699,
+    700,
+    701,
+    702,
+    703,
+    704,
+    705,
+    706,
+    707,
+    708,
+    709,
+    710,
+    711,
+    712,
+    713,
+    714,
+    715,
+    716,
+    717,
+    718,
+    719,
+    720,
+    721,
+    722,
+    723,
+    724,
+    725,
+    726,
+    727,
+    728,
+    729,
+    730,
+    731,
+    732,
+    733,
+    734,
+    735,
+    736,
+    737,
+    738,
+    739,
+    740,
+    741,
+    742,
+    743,
+    744,
+    745,
+    746,
+    747,
+    748,
+    749,
+    750,
+    751,
+    752,
+    753,
+    754,
+    755,
+    756,
+    757,
+    758,
+    759,
+    760,
+    761,
+    762,
+    763,
+    764,
+    765,
+    766,
+    767,
+    768,
+    769,
+    770,
+    771,
+    772,
+    773,
+    774,
+    775,
+    776,
+    777,
+    778,
+    779,
+    780,
+    781,
+    782,
+    783,
+    784,
+    785,
+    786,
+    787,
+    788,
+    789,
+    790,
+    791,
+    792,
+    793,
+    794,
+    795,
+    796,
+    797,
+    798,
+    799,
+    800,
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    815,
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919,
+    920,
+    921,
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    928,
+    929,
+    930,
+    931,
+    932,
+    933,
+    934,
+    935,
+    936,
+    937,
+    938,
+    939,
+    940,
+    941,
+    942,
+    943,
+    944,
+    945,
+    946,
+    947,
+    948,
+    949,
+    950,
+    951,
+    952,
+    953,
+    954,
+    955,
+    956,
+    957,
+    958,
+    959,
+    960,
+    961,
+    962,
+    963,
+    964,
+    965,
+    966,
+    967,
+    968,
+    969,
+    970,
+    971,
+    972,
+    973,
+    974,
+    975,
+    976,
+    977,
+    978,
+    979,
+    980,
+    981,
+    982,
+    983,
+    984,
+    985,
+    986,
+    987,
+    988,
+    989,
+    990,
+    991,
+    992,
+    993,
+    994,
+    995,
+    996,
+    997,
+    998,
+    999
+  ],
+  "sample_ids": [
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro08_F000"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro08_M000"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro08_M001"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro08_F001"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro08_M002"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro08_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro08_M004"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro08_F003"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro08_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro08_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro08_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro08_F006"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro08_F007"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 13,
+      "utterance_id": "Ses05F_impro08_M006"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 14,
+      "utterance_id": "Ses05F_impro08_M007"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 15,
+      "utterance_id": "Ses05F_impro08_F008"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 16,
+      "utterance_id": "Ses05F_impro08_M008"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 17,
+      "utterance_id": "Ses05F_impro08_F009"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 18,
+      "utterance_id": "Ses05F_impro08_M009"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 19,
+      "utterance_id": "Ses05F_impro08_F010"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 20,
+      "utterance_id": "Ses05F_impro08_M010"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 21,
+      "utterance_id": "Ses05F_impro08_F011"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 22,
+      "utterance_id": "Ses05F_impro08_M011"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 23,
+      "utterance_id": "Ses05F_impro08_F012"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 24,
+      "utterance_id": "Ses05F_impro08_F014"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 25,
+      "utterance_id": "Ses05F_impro08_M012"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 26,
+      "utterance_id": "Ses05F_impro08_F015"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 27,
+      "utterance_id": "Ses05F_impro08_M013"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 28,
+      "utterance_id": "Ses05F_impro08_F016"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 29,
+      "utterance_id": "Ses05F_impro08_M014"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 30,
+      "utterance_id": "Ses05F_impro08_F017"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 31,
+      "utterance_id": "Ses05F_impro08_F018"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 32,
+      "utterance_id": "Ses05F_impro08_M016"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 33,
+      "utterance_id": "Ses05F_impro08_F019"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 34,
+      "utterance_id": "Ses05F_impro08_M018"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 35,
+      "utterance_id": "Ses05F_impro08_F020"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 36,
+      "utterance_id": "Ses05F_impro08_M019"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 37,
+      "utterance_id": "Ses05F_impro08_F021"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 38,
+      "utterance_id": "Ses05F_impro08_M020"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 39,
+      "utterance_id": "Ses05F_impro08_F022"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 40,
+      "utterance_id": "Ses05F_impro08_M021"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 41,
+      "utterance_id": "Ses05F_impro08_F023"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 42,
+      "utterance_id": "Ses05F_impro08_M022"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 43,
+      "utterance_id": "Ses05F_impro08_M023"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 44,
+      "utterance_id": "Ses05F_impro08_F024"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 45,
+      "utterance_id": "Ses05F_impro08_F025"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 46,
+      "utterance_id": "Ses05F_impro08_M025"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 47,
+      "utterance_id": "Ses05F_impro08_F026"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 48,
+      "utterance_id": "Ses05F_impro08_M026"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 49,
+      "utterance_id": "Ses05F_impro08_F027"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 50,
+      "utterance_id": "Ses05F_impro08_M027"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 51,
+      "utterance_id": "Ses05F_impro08_F028"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 52,
+      "utterance_id": "Ses05F_impro08_M028"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 53,
+      "utterance_id": "Ses05F_impro08_F029"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 54,
+      "utterance_id": "Ses05F_impro08_F030"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 55,
+      "utterance_id": "Ses05F_impro08_M030"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 56,
+      "utterance_id": "Ses05F_impro08_F032"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 57,
+      "utterance_id": "Ses05F_impro08_M031"
+    },
+    {
+      "dialogue": "Ses05F_impro08",
+      "turn": 58,
+      "utterance_id": "Ses05F_impro08_F033"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 0,
+      "utterance_id": "Ses05M_impro02_M000"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 1,
+      "utterance_id": "Ses05M_impro02_M001"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 2,
+      "utterance_id": "Ses05M_impro02_M007"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 3,
+      "utterance_id": "Ses05M_impro02_F006"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 4,
+      "utterance_id": "Ses05M_impro02_M008"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 5,
+      "utterance_id": "Ses05M_impro02_M010"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 6,
+      "utterance_id": "Ses05M_impro02_M011"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 7,
+      "utterance_id": "Ses05M_impro02_M012"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 8,
+      "utterance_id": "Ses05M_impro02_F009"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 9,
+      "utterance_id": "Ses05M_impro02_M013"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 10,
+      "utterance_id": "Ses05M_impro02_F010"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 11,
+      "utterance_id": "Ses05M_impro02_F012"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 12,
+      "utterance_id": "Ses05M_impro02_M017"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 13,
+      "utterance_id": "Ses05M_impro02_F013"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 14,
+      "utterance_id": "Ses05M_impro02_M018"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 15,
+      "utterance_id": "Ses05M_impro02_M019"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 16,
+      "utterance_id": "Ses05M_impro02_M021"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 17,
+      "utterance_id": "Ses05M_impro02_M022"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 18,
+      "utterance_id": "Ses05M_impro02_M023"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 19,
+      "utterance_id": "Ses05M_impro02_M024"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 20,
+      "utterance_id": "Ses05M_impro02_M025"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 21,
+      "utterance_id": "Ses05M_impro02_F020"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 22,
+      "utterance_id": "Ses05M_impro02_M027"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 23,
+      "utterance_id": "Ses05M_impro02_F021"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 24,
+      "utterance_id": "Ses05M_impro02_M028"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 25,
+      "utterance_id": "Ses05M_impro02_M029"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 26,
+      "utterance_id": "Ses05M_impro02_M030"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 27,
+      "utterance_id": "Ses05M_impro02_F023"
+    },
+    {
+      "dialogue": "Ses05M_impro02",
+      "turn": 28,
+      "utterance_id": "Ses05M_impro02_F024"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro01_F000"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro01_M000"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro01_F001"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro01_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro01_F003"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro01_M003"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro01_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro01_M004"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro01_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro01_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro01_F006"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro01_M006"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro01_F007"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 13,
+      "utterance_id": "Ses05F_impro01_M007"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 14,
+      "utterance_id": "Ses05F_impro01_F008"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 15,
+      "utterance_id": "Ses05F_impro01_M008"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 16,
+      "utterance_id": "Ses05F_impro01_F009"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 17,
+      "utterance_id": "Ses05F_impro01_M009"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 18,
+      "utterance_id": "Ses05F_impro01_F010"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 19,
+      "utterance_id": "Ses05F_impro01_M010"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 20,
+      "utterance_id": "Ses05F_impro01_F011"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 21,
+      "utterance_id": "Ses05F_impro01_M011"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 22,
+      "utterance_id": "Ses05F_impro01_F012"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 23,
+      "utterance_id": "Ses05F_impro01_M012"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 24,
+      "utterance_id": "Ses05F_impro01_M013"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 25,
+      "utterance_id": "Ses05F_impro01_F013"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 26,
+      "utterance_id": "Ses05F_impro01_M014"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 27,
+      "utterance_id": "Ses05F_impro01_F014"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 28,
+      "utterance_id": "Ses05F_impro01_M015"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 29,
+      "utterance_id": "Ses05F_impro01_F015"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 30,
+      "utterance_id": "Ses05F_impro01_F016"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 31,
+      "utterance_id": "Ses05F_impro01_M017"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 32,
+      "utterance_id": "Ses05F_impro01_F017"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 33,
+      "utterance_id": "Ses05F_impro01_M018"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 34,
+      "utterance_id": "Ses05F_impro01_F018"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 35,
+      "utterance_id": "Ses05F_impro01_M019"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 36,
+      "utterance_id": "Ses05F_impro01_F019"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 37,
+      "utterance_id": "Ses05F_impro01_M020"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 38,
+      "utterance_id": "Ses05F_impro01_F020"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 39,
+      "utterance_id": "Ses05F_impro01_M021"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 40,
+      "utterance_id": "Ses05F_impro01_F021"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 41,
+      "utterance_id": "Ses05F_impro01_F022"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 42,
+      "utterance_id": "Ses05F_impro01_M023"
+    },
+    {
+      "dialogue": "Ses05F_impro01",
+      "turn": 43,
+      "utterance_id": "Ses05F_impro01_F023"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 0,
+      "utterance_id": "Ses05F_script01_2_M000"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 1,
+      "utterance_id": "Ses05F_script01_2_F001"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 2,
+      "utterance_id": "Ses05F_script01_2_M001"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 3,
+      "utterance_id": "Ses05F_script01_2_M002"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 4,
+      "utterance_id": "Ses05F_script01_2_M003"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 5,
+      "utterance_id": "Ses05F_script01_2_M004"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 6,
+      "utterance_id": "Ses05F_script01_2_F005"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 7,
+      "utterance_id": "Ses05F_script01_2_M005"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 8,
+      "utterance_id": "Ses05F_script01_2_F006"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 9,
+      "utterance_id": "Ses05F_script01_2_F007"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 10,
+      "utterance_id": "Ses05F_script01_2_M007"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 11,
+      "utterance_id": "Ses05F_script01_2_F008"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 12,
+      "utterance_id": "Ses05F_script01_2_M008"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 13,
+      "utterance_id": "Ses05F_script01_2_F009"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 14,
+      "utterance_id": "Ses05F_script01_2_M009"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 15,
+      "utterance_id": "Ses05F_script01_2_F010"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 16,
+      "utterance_id": "Ses05F_script01_2_M010"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 17,
+      "utterance_id": "Ses05F_script01_2_F011"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 18,
+      "utterance_id": "Ses05F_script01_2_M011"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 19,
+      "utterance_id": "Ses05F_script01_2_F012"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 20,
+      "utterance_id": "Ses05F_script01_2_M012"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 21,
+      "utterance_id": "Ses05F_script01_2_M013"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 22,
+      "utterance_id": "Ses05F_script01_2_F014"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 23,
+      "utterance_id": "Ses05F_script01_2_M014"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 24,
+      "utterance_id": "Ses05F_script01_2_F016"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 25,
+      "utterance_id": "Ses05F_script01_2_M016"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 26,
+      "utterance_id": "Ses05F_script01_2_F017"
+    },
+    {
+      "dialogue": "Ses05F_script01_2",
+      "turn": 27,
+      "utterance_id": "Ses05F_script01_2_M017"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro05_F000"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro05_M000"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro05_F001"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro05_M001"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro05_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro05_M002"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro05_F003"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro05_M003"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro05_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro05_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro05_M004"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro05_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro05_F006"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 13,
+      "utterance_id": "Ses05F_impro05_M006"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 14,
+      "utterance_id": "Ses05F_impro05_M007"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 15,
+      "utterance_id": "Ses05F_impro05_F007"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 16,
+      "utterance_id": "Ses05F_impro05_M008"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 17,
+      "utterance_id": "Ses05F_impro05_F008"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 18,
+      "utterance_id": "Ses05F_impro05_M009"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 19,
+      "utterance_id": "Ses05F_impro05_F009"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 20,
+      "utterance_id": "Ses05F_impro05_M010"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 21,
+      "utterance_id": "Ses05F_impro05_F010"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 22,
+      "utterance_id": "Ses05F_impro05_M011"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 23,
+      "utterance_id": "Ses05F_impro05_F011"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 24,
+      "utterance_id": "Ses05F_impro05_M012"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 25,
+      "utterance_id": "Ses05F_impro05_F012"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 26,
+      "utterance_id": "Ses05F_impro05_M013"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 27,
+      "utterance_id": "Ses05F_impro05_F013"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 28,
+      "utterance_id": "Ses05F_impro05_M014"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 29,
+      "utterance_id": "Ses05F_impro05_F014"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 30,
+      "utterance_id": "Ses05F_impro05_M015"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 31,
+      "utterance_id": "Ses05F_impro05_M016"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 32,
+      "utterance_id": "Ses05F_impro05_M017"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 33,
+      "utterance_id": "Ses05F_impro05_F017"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 34,
+      "utterance_id": "Ses05F_impro05_M018"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 35,
+      "utterance_id": "Ses05F_impro05_F018"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 36,
+      "utterance_id": "Ses05F_impro05_M019"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 37,
+      "utterance_id": "Ses05F_impro05_M020"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 38,
+      "utterance_id": "Ses05F_impro05_M021"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 39,
+      "utterance_id": "Ses05F_impro05_M022"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 40,
+      "utterance_id": "Ses05F_impro05_M023"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 41,
+      "utterance_id": "Ses05F_impro05_F019"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 42,
+      "utterance_id": "Ses05F_impro05_F020"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 43,
+      "utterance_id": "Ses05F_impro05_M025"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 44,
+      "utterance_id": "Ses05F_impro05_F021"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 45,
+      "utterance_id": "Ses05F_impro05_M026"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 46,
+      "utterance_id": "Ses05F_impro05_M027"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 47,
+      "utterance_id": "Ses05F_impro05_F022"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 48,
+      "utterance_id": "Ses05F_impro05_M028"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 49,
+      "utterance_id": "Ses05F_impro05_F023"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 50,
+      "utterance_id": "Ses05F_impro05_M029"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 51,
+      "utterance_id": "Ses05F_impro05_F024"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 52,
+      "utterance_id": "Ses05F_impro05_M030"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 53,
+      "utterance_id": "Ses05F_impro05_M031"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 54,
+      "utterance_id": "Ses05F_impro05_F026"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 55,
+      "utterance_id": "Ses05F_impro05_M032"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 56,
+      "utterance_id": "Ses05F_impro05_F027"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 57,
+      "utterance_id": "Ses05F_impro05_M033"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 58,
+      "utterance_id": "Ses05F_impro05_F028"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 59,
+      "utterance_id": "Ses05F_impro05_M034"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 60,
+      "utterance_id": "Ses05F_impro05_M035"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 61,
+      "utterance_id": "Ses05F_impro05_F030"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 62,
+      "utterance_id": "Ses05F_impro05_M036"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 63,
+      "utterance_id": "Ses05F_impro05_F031"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 64,
+      "utterance_id": "Ses05F_impro05_M037"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 65,
+      "utterance_id": "Ses05F_impro05_M038"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 66,
+      "utterance_id": "Ses05F_impro05_M039"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 67,
+      "utterance_id": "Ses05F_impro05_F033"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 68,
+      "utterance_id": "Ses05F_impro05_M040"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 69,
+      "utterance_id": "Ses05F_impro05_F034"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 70,
+      "utterance_id": "Ses05F_impro05_M041"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 71,
+      "utterance_id": "Ses05F_impro05_F036"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 72,
+      "utterance_id": "Ses05F_impro05_M043"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 73,
+      "utterance_id": "Ses05F_impro05_F037"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 74,
+      "utterance_id": "Ses05F_impro05_M044"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 75,
+      "utterance_id": "Ses05F_impro05_F038"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 76,
+      "utterance_id": "Ses05F_impro05_M045"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 77,
+      "utterance_id": "Ses05F_impro05_F039"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 78,
+      "utterance_id": "Ses05F_impro05_M046"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 79,
+      "utterance_id": "Ses05F_impro05_F040"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 80,
+      "utterance_id": "Ses05F_impro05_M047"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 81,
+      "utterance_id": "Ses05F_impro05_F041"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 82,
+      "utterance_id": "Ses05F_impro05_M048"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 83,
+      "utterance_id": "Ses05F_impro05_F042"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 84,
+      "utterance_id": "Ses05F_impro05_M049"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 85,
+      "utterance_id": "Ses05F_impro05_M050"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 86,
+      "utterance_id": "Ses05F_impro05_M051"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 87,
+      "utterance_id": "Ses05F_impro05_F044"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 88,
+      "utterance_id": "Ses05F_impro05_M052"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 89,
+      "utterance_id": "Ses05F_impro05_F045"
+    },
+    {
+      "dialogue": "Ses05F_impro05",
+      "turn": 90,
+      "utterance_id": "Ses05F_impro05_M053"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 0,
+      "utterance_id": "Ses05M_script01_2_M000"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 1,
+      "utterance_id": "Ses05M_script01_2_M001"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 2,
+      "utterance_id": "Ses05M_script01_2_F002"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 3,
+      "utterance_id": "Ses05M_script01_2_M002"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 4,
+      "utterance_id": "Ses05M_script01_2_M003"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 5,
+      "utterance_id": "Ses05M_script01_2_F004"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 6,
+      "utterance_id": "Ses05M_script01_2_M004"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 7,
+      "utterance_id": "Ses05M_script01_2_F005"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 8,
+      "utterance_id": "Ses05M_script01_2_M005"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 9,
+      "utterance_id": "Ses05M_script01_2_M007"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 10,
+      "utterance_id": "Ses05M_script01_2_M008"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 11,
+      "utterance_id": "Ses05M_script01_2_M009"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 12,
+      "utterance_id": "Ses05M_script01_2_F010"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 13,
+      "utterance_id": "Ses05M_script01_2_M010"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 14,
+      "utterance_id": "Ses05M_script01_2_F011"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 15,
+      "utterance_id": "Ses05M_script01_2_M011"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 16,
+      "utterance_id": "Ses05M_script01_2_M012"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 17,
+      "utterance_id": "Ses05M_script01_2_F014"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 18,
+      "utterance_id": "Ses05M_script01_2_M013"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 19,
+      "utterance_id": "Ses05M_script01_2_F015"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 20,
+      "utterance_id": "Ses05M_script01_2_M015"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 21,
+      "utterance_id": "Ses05M_script01_2_F017"
+    },
+    {
+      "dialogue": "Ses05M_script01_2",
+      "turn": 22,
+      "utterance_id": "Ses05M_script01_2_M016"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro04_F000"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro04_M000"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro04_M001"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro04_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro04_M002"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro04_F003"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro04_M003"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro04_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro04_M004"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro04_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro04_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro04_F006"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro04_M006"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 13,
+      "utterance_id": "Ses05F_impro04_F007"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 14,
+      "utterance_id": "Ses05F_impro04_M007"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 15,
+      "utterance_id": "Ses05F_impro04_F008"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 16,
+      "utterance_id": "Ses05F_impro04_M008"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 17,
+      "utterance_id": "Ses05F_impro04_F009"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 18,
+      "utterance_id": "Ses05F_impro04_M009"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 19,
+      "utterance_id": "Ses05F_impro04_F010"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 20,
+      "utterance_id": "Ses05F_impro04_M010"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 21,
+      "utterance_id": "Ses05F_impro04_F011"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 22,
+      "utterance_id": "Ses05F_impro04_M011"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 23,
+      "utterance_id": "Ses05F_impro04_F012"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 24,
+      "utterance_id": "Ses05F_impro04_M012"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 25,
+      "utterance_id": "Ses05F_impro04_F013"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 26,
+      "utterance_id": "Ses05F_impro04_M013"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 27,
+      "utterance_id": "Ses05F_impro04_F014"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 28,
+      "utterance_id": "Ses05F_impro04_M014"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 29,
+      "utterance_id": "Ses05F_impro04_F015"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 30,
+      "utterance_id": "Ses05F_impro04_F016"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 31,
+      "utterance_id": "Ses05F_impro04_M015"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 32,
+      "utterance_id": "Ses05F_impro04_F017"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 33,
+      "utterance_id": "Ses05F_impro04_M016"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 34,
+      "utterance_id": "Ses05F_impro04_M017"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 35,
+      "utterance_id": "Ses05F_impro04_F019"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 36,
+      "utterance_id": "Ses05F_impro04_F020"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 37,
+      "utterance_id": "Ses05F_impro04_M019"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 38,
+      "utterance_id": "Ses05F_impro04_M020"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 39,
+      "utterance_id": "Ses05F_impro04_F022"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 40,
+      "utterance_id": "Ses05F_impro04_M021"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 41,
+      "utterance_id": "Ses05F_impro04_F023"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 42,
+      "utterance_id": "Ses05F_impro04_M022"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 43,
+      "utterance_id": "Ses05F_impro04_F024"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 44,
+      "utterance_id": "Ses05F_impro04_M023"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 45,
+      "utterance_id": "Ses05F_impro04_M024"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 46,
+      "utterance_id": "Ses05F_impro04_F026"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 47,
+      "utterance_id": "Ses05F_impro04_M025"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 48,
+      "utterance_id": "Ses05F_impro04_M026"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 49,
+      "utterance_id": "Ses05F_impro04_F028"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 50,
+      "utterance_id": "Ses05F_impro04_M027"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 51,
+      "utterance_id": "Ses05F_impro04_F029"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 52,
+      "utterance_id": "Ses05F_impro04_M028"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 53,
+      "utterance_id": "Ses05F_impro04_F030"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 54,
+      "utterance_id": "Ses05F_impro04_M029"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 55,
+      "utterance_id": "Ses05F_impro04_F031"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 56,
+      "utterance_id": "Ses05F_impro04_M030"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 57,
+      "utterance_id": "Ses05F_impro04_F032"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 58,
+      "utterance_id": "Ses05F_impro04_M031"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 59,
+      "utterance_id": "Ses05F_impro04_F033"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 60,
+      "utterance_id": "Ses05F_impro04_M032"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 61,
+      "utterance_id": "Ses05F_impro04_F034"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 62,
+      "utterance_id": "Ses05F_impro04_M033"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 63,
+      "utterance_id": "Ses05F_impro04_F035"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 64,
+      "utterance_id": "Ses05F_impro04_F036"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 65,
+      "utterance_id": "Ses05F_impro04_M034"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 66,
+      "utterance_id": "Ses05F_impro04_F037"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 67,
+      "utterance_id": "Ses05F_impro04_M035"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 68,
+      "utterance_id": "Ses05F_impro04_F038"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 69,
+      "utterance_id": "Ses05F_impro04_M036"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 70,
+      "utterance_id": "Ses05F_impro04_F039"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 71,
+      "utterance_id": "Ses05F_impro04_M037"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 72,
+      "utterance_id": "Ses05F_impro04_F040"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 73,
+      "utterance_id": "Ses05F_impro04_M038"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 74,
+      "utterance_id": "Ses05F_impro04_F041"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 75,
+      "utterance_id": "Ses05F_impro04_M039"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 76,
+      "utterance_id": "Ses05F_impro04_F042"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 77,
+      "utterance_id": "Ses05F_impro04_M040"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 78,
+      "utterance_id": "Ses05F_impro04_F043"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 79,
+      "utterance_id": "Ses05F_impro04_M041"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 80,
+      "utterance_id": "Ses05F_impro04_F044"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 81,
+      "utterance_id": "Ses05F_impro04_M042"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 82,
+      "utterance_id": "Ses05F_impro04_F045"
+    },
+    {
+      "dialogue": "Ses05F_impro04",
+      "turn": 83,
+      "utterance_id": "Ses05F_impro04_M043"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 0,
+      "utterance_id": "Ses05M_impro08_M000"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 1,
+      "utterance_id": "Ses05M_impro08_F000"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 2,
+      "utterance_id": "Ses05M_impro08_M001"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 3,
+      "utterance_id": "Ses05M_impro08_F001"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 4,
+      "utterance_id": "Ses05M_impro08_M002"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 5,
+      "utterance_id": "Ses05M_impro08_F002"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 6,
+      "utterance_id": "Ses05M_impro08_M003"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 7,
+      "utterance_id": "Ses05M_impro08_F003"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 8,
+      "utterance_id": "Ses05M_impro08_M004"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 9,
+      "utterance_id": "Ses05M_impro08_F004"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 10,
+      "utterance_id": "Ses05M_impro08_M005"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 11,
+      "utterance_id": "Ses05M_impro08_F005"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 12,
+      "utterance_id": "Ses05M_impro08_M006"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 13,
+      "utterance_id": "Ses05M_impro08_F006"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 14,
+      "utterance_id": "Ses05M_impro08_M007"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 15,
+      "utterance_id": "Ses05M_impro08_F007"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 16,
+      "utterance_id": "Ses05M_impro08_M008"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 17,
+      "utterance_id": "Ses05M_impro08_F008"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 18,
+      "utterance_id": "Ses05M_impro08_F009"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 19,
+      "utterance_id": "Ses05M_impro08_M009"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 20,
+      "utterance_id": "Ses05M_impro08_M010"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 21,
+      "utterance_id": "Ses05M_impro08_F011"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 22,
+      "utterance_id": "Ses05M_impro08_M011"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 23,
+      "utterance_id": "Ses05M_impro08_F012"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 24,
+      "utterance_id": "Ses05M_impro08_M012"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 25,
+      "utterance_id": "Ses05M_impro08_F013"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 26,
+      "utterance_id": "Ses05M_impro08_M013"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 27,
+      "utterance_id": "Ses05M_impro08_F014"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 28,
+      "utterance_id": "Ses05M_impro08_M014"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 29,
+      "utterance_id": "Ses05M_impro08_F015"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 30,
+      "utterance_id": "Ses05M_impro08_M015"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 31,
+      "utterance_id": "Ses05M_impro08_F016"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 32,
+      "utterance_id": "Ses05M_impro08_M016"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 33,
+      "utterance_id": "Ses05M_impro08_F017"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 34,
+      "utterance_id": "Ses05M_impro08_M017"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 35,
+      "utterance_id": "Ses05M_impro08_F018"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 36,
+      "utterance_id": "Ses05M_impro08_M018"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 37,
+      "utterance_id": "Ses05M_impro08_F019"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 38,
+      "utterance_id": "Ses05M_impro08_M019"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 39,
+      "utterance_id": "Ses05M_impro08_M020"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 40,
+      "utterance_id": "Ses05M_impro08_M021"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 41,
+      "utterance_id": "Ses05M_impro08_F022"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 42,
+      "utterance_id": "Ses05M_impro08_M022"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 43,
+      "utterance_id": "Ses05M_impro08_F023"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 44,
+      "utterance_id": "Ses05M_impro08_M023"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 45,
+      "utterance_id": "Ses05M_impro08_M024"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 46,
+      "utterance_id": "Ses05M_impro08_F025"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 47,
+      "utterance_id": "Ses05M_impro08_M025"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 48,
+      "utterance_id": "Ses05M_impro08_F026"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 49,
+      "utterance_id": "Ses05M_impro08_M026"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 50,
+      "utterance_id": "Ses05M_impro08_F027"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 51,
+      "utterance_id": "Ses05M_impro08_M027"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 52,
+      "utterance_id": "Ses05M_impro08_F028"
+    },
+    {
+      "dialogue": "Ses05M_impro08",
+      "turn": 53,
+      "utterance_id": "Ses05M_impro08_M028"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 0,
+      "utterance_id": "Ses05F_script03_2_F000"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 1,
+      "utterance_id": "Ses05F_script03_2_F001"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 2,
+      "utterance_id": "Ses05F_script03_2_F003"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 3,
+      "utterance_id": "Ses05F_script03_2_M004"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 4,
+      "utterance_id": "Ses05F_script03_2_F004"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 5,
+      "utterance_id": "Ses05F_script03_2_M005"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 6,
+      "utterance_id": "Ses05F_script03_2_F005"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 7,
+      "utterance_id": "Ses05F_script03_2_M006"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 8,
+      "utterance_id": "Ses05F_script03_2_F006"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 9,
+      "utterance_id": "Ses05F_script03_2_M008"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 10,
+      "utterance_id": "Ses05F_script03_2_F008"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 11,
+      "utterance_id": "Ses05F_script03_2_M009"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 12,
+      "utterance_id": "Ses05F_script03_2_M010"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 13,
+      "utterance_id": "Ses05F_script03_2_F010"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 14,
+      "utterance_id": "Ses05F_script03_2_F011"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 15,
+      "utterance_id": "Ses05F_script03_2_F012"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 16,
+      "utterance_id": "Ses05F_script03_2_M013"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 17,
+      "utterance_id": "Ses05F_script03_2_M014"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 18,
+      "utterance_id": "Ses05F_script03_2_F014"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 19,
+      "utterance_id": "Ses05F_script03_2_M016"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 20,
+      "utterance_id": "Ses05F_script03_2_M018"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 21,
+      "utterance_id": "Ses05F_script03_2_M019"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 22,
+      "utterance_id": "Ses05F_script03_2_F018"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 23,
+      "utterance_id": "Ses05F_script03_2_F019"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 24,
+      "utterance_id": "Ses05F_script03_2_F020"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 25,
+      "utterance_id": "Ses05F_script03_2_M022"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 26,
+      "utterance_id": "Ses05F_script03_2_F021"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 27,
+      "utterance_id": "Ses05F_script03_2_M023"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 28,
+      "utterance_id": "Ses05F_script03_2_M024"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 29,
+      "utterance_id": "Ses05F_script03_2_F022"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 30,
+      "utterance_id": "Ses05F_script03_2_M025"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 31,
+      "utterance_id": "Ses05F_script03_2_F023"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 32,
+      "utterance_id": "Ses05F_script03_2_M026"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 33,
+      "utterance_id": "Ses05F_script03_2_F024"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 34,
+      "utterance_id": "Ses05F_script03_2_F026"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 35,
+      "utterance_id": "Ses05F_script03_2_M030"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 36,
+      "utterance_id": "Ses05F_script03_2_F027"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 37,
+      "utterance_id": "Ses05F_script03_2_F028"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 38,
+      "utterance_id": "Ses05F_script03_2_M032"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 39,
+      "utterance_id": "Ses05F_script03_2_F029"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 40,
+      "utterance_id": "Ses05F_script03_2_F030"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 41,
+      "utterance_id": "Ses05F_script03_2_F031"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 42,
+      "utterance_id": "Ses05F_script03_2_F032"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 43,
+      "utterance_id": "Ses05F_script03_2_F033"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 44,
+      "utterance_id": "Ses05F_script03_2_M037"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 45,
+      "utterance_id": "Ses05F_script03_2_F034"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 46,
+      "utterance_id": "Ses05F_script03_2_M038"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 47,
+      "utterance_id": "Ses05F_script03_2_F035"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 48,
+      "utterance_id": "Ses05F_script03_2_M039"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 49,
+      "utterance_id": "Ses05F_script03_2_F036"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 50,
+      "utterance_id": "Ses05F_script03_2_M040"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 51,
+      "utterance_id": "Ses05F_script03_2_F037"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 52,
+      "utterance_id": "Ses05F_script03_2_F038"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 53,
+      "utterance_id": "Ses05F_script03_2_M041"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 54,
+      "utterance_id": "Ses05F_script03_2_F039"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 55,
+      "utterance_id": "Ses05F_script03_2_M042"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 56,
+      "utterance_id": "Ses05F_script03_2_F040"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 57,
+      "utterance_id": "Ses05F_script03_2_M043"
+    },
+    {
+      "dialogue": "Ses05F_script03_2",
+      "turn": 58,
+      "utterance_id": "Ses05F_script03_2_F041"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 0,
+      "utterance_id": "Ses05F_script02_2_M000"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 1,
+      "utterance_id": "Ses05F_script02_2_M001"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 2,
+      "utterance_id": "Ses05F_script02_2_M002"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 3,
+      "utterance_id": "Ses05F_script02_2_M003"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 4,
+      "utterance_id": "Ses05F_script02_2_F004"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 5,
+      "utterance_id": "Ses05F_script02_2_M005"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 6,
+      "utterance_id": "Ses05F_script02_2_F005"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 7,
+      "utterance_id": "Ses05F_script02_2_M006"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 8,
+      "utterance_id": "Ses05F_script02_2_F006"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 9,
+      "utterance_id": "Ses05F_script02_2_M007"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 10,
+      "utterance_id": "Ses05F_script02_2_F007"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 11,
+      "utterance_id": "Ses05F_script02_2_M008"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 12,
+      "utterance_id": "Ses05F_script02_2_F008"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 13,
+      "utterance_id": "Ses05F_script02_2_M009"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 14,
+      "utterance_id": "Ses05F_script02_2_F009"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 15,
+      "utterance_id": "Ses05F_script02_2_M010"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 16,
+      "utterance_id": "Ses05F_script02_2_F010"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 17,
+      "utterance_id": "Ses05F_script02_2_M011"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 18,
+      "utterance_id": "Ses05F_script02_2_F011"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 19,
+      "utterance_id": "Ses05F_script02_2_M012"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 20,
+      "utterance_id": "Ses05F_script02_2_F012"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 21,
+      "utterance_id": "Ses05F_script02_2_M013"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 22,
+      "utterance_id": "Ses05F_script02_2_F013"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 23,
+      "utterance_id": "Ses05F_script02_2_F014"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 24,
+      "utterance_id": "Ses05F_script02_2_F015"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 25,
+      "utterance_id": "Ses05F_script02_2_M016"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 26,
+      "utterance_id": "Ses05F_script02_2_F016"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 27,
+      "utterance_id": "Ses05F_script02_2_F017"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 28,
+      "utterance_id": "Ses05F_script02_2_M018"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 29,
+      "utterance_id": "Ses05F_script02_2_F018"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 30,
+      "utterance_id": "Ses05F_script02_2_M019"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 31,
+      "utterance_id": "Ses05F_script02_2_F019"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 32,
+      "utterance_id": "Ses05F_script02_2_M020"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 33,
+      "utterance_id": "Ses05F_script02_2_F020"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 34,
+      "utterance_id": "Ses05F_script02_2_M022"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 35,
+      "utterance_id": "Ses05F_script02_2_M023"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 36,
+      "utterance_id": "Ses05F_script02_2_F023"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 37,
+      "utterance_id": "Ses05F_script02_2_M024"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 38,
+      "utterance_id": "Ses05F_script02_2_F024"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 39,
+      "utterance_id": "Ses05F_script02_2_M025"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 40,
+      "utterance_id": "Ses05F_script02_2_M027"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 41,
+      "utterance_id": "Ses05F_script02_2_F025"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 42,
+      "utterance_id": "Ses05F_script02_2_F026"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 43,
+      "utterance_id": "Ses05F_script02_2_F027"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 44,
+      "utterance_id": "Ses05F_script02_2_M031"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 45,
+      "utterance_id": "Ses05F_script02_2_F028"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 46,
+      "utterance_id": "Ses05F_script02_2_M032"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 47,
+      "utterance_id": "Ses05F_script02_2_F029"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 48,
+      "utterance_id": "Ses05F_script02_2_M033"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 49,
+      "utterance_id": "Ses05F_script02_2_F030"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 50,
+      "utterance_id": "Ses05F_script02_2_F032"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 51,
+      "utterance_id": "Ses05F_script02_2_M035"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 52,
+      "utterance_id": "Ses05F_script02_2_F033"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 53,
+      "utterance_id": "Ses05F_script02_2_M036"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 54,
+      "utterance_id": "Ses05F_script02_2_F034"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 55,
+      "utterance_id": "Ses05F_script02_2_M037"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 56,
+      "utterance_id": "Ses05F_script02_2_F037"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 57,
+      "utterance_id": "Ses05F_script02_2_M040"
+    },
+    {
+      "dialogue": "Ses05F_script02_2",
+      "turn": 58,
+      "utterance_id": "Ses05F_script02_2_M041"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 0,
+      "utterance_id": "Ses05M_impro04_M000"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 1,
+      "utterance_id": "Ses05M_impro04_M001"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 2,
+      "utterance_id": "Ses05M_impro04_F001"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 3,
+      "utterance_id": "Ses05M_impro04_M002"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 4,
+      "utterance_id": "Ses05M_impro04_F002"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 5,
+      "utterance_id": "Ses05M_impro04_M003"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 6,
+      "utterance_id": "Ses05M_impro04_F003"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 7,
+      "utterance_id": "Ses05M_impro04_M004"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 8,
+      "utterance_id": "Ses05M_impro04_M005"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 9,
+      "utterance_id": "Ses05M_impro04_F004"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 10,
+      "utterance_id": "Ses05M_impro04_M006"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 11,
+      "utterance_id": "Ses05M_impro04_M007"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 12,
+      "utterance_id": "Ses05M_impro04_F005"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 13,
+      "utterance_id": "Ses05M_impro04_M008"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 14,
+      "utterance_id": "Ses05M_impro04_F006"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 15,
+      "utterance_id": "Ses05M_impro04_M009"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 16,
+      "utterance_id": "Ses05M_impro04_M010"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 17,
+      "utterance_id": "Ses05M_impro04_M011"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 18,
+      "utterance_id": "Ses05M_impro04_F007"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 19,
+      "utterance_id": "Ses05M_impro04_M012"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 20,
+      "utterance_id": "Ses05M_impro04_M013"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 21,
+      "utterance_id": "Ses05M_impro04_F008"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 22,
+      "utterance_id": "Ses05M_impro04_M014"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 23,
+      "utterance_id": "Ses05M_impro04_M015"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 24,
+      "utterance_id": "Ses05M_impro04_F009"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 25,
+      "utterance_id": "Ses05M_impro04_F010"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 26,
+      "utterance_id": "Ses05M_impro04_M016"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 27,
+      "utterance_id": "Ses05M_impro04_F011"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 28,
+      "utterance_id": "Ses05M_impro04_M017"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 29,
+      "utterance_id": "Ses05M_impro04_F012"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 30,
+      "utterance_id": "Ses05M_impro04_F013"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 31,
+      "utterance_id": "Ses05M_impro04_F014"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 32,
+      "utterance_id": "Ses05M_impro04_M019"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 33,
+      "utterance_id": "Ses05M_impro04_F015"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 34,
+      "utterance_id": "Ses05M_impro04_M020"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 35,
+      "utterance_id": "Ses05M_impro04_F016"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 36,
+      "utterance_id": "Ses05M_impro04_F017"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 37,
+      "utterance_id": "Ses05M_impro04_M022"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 38,
+      "utterance_id": "Ses05M_impro04_F018"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 39,
+      "utterance_id": "Ses05M_impro04_M023"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 40,
+      "utterance_id": "Ses05M_impro04_F019"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 41,
+      "utterance_id": "Ses05M_impro04_F020"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 42,
+      "utterance_id": "Ses05M_impro04_M024"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 43,
+      "utterance_id": "Ses05M_impro04_F021"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 44,
+      "utterance_id": "Ses05M_impro04_F022"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 45,
+      "utterance_id": "Ses05M_impro04_M025"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 46,
+      "utterance_id": "Ses05M_impro04_F023"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 47,
+      "utterance_id": "Ses05M_impro04_F024"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 48,
+      "utterance_id": "Ses05M_impro04_M026"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 49,
+      "utterance_id": "Ses05M_impro04_M027"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 50,
+      "utterance_id": "Ses05M_impro04_F026"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 51,
+      "utterance_id": "Ses05M_impro04_M028"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 52,
+      "utterance_id": "Ses05M_impro04_F027"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 53,
+      "utterance_id": "Ses05M_impro04_M029"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 54,
+      "utterance_id": "Ses05M_impro04_F028"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 55,
+      "utterance_id": "Ses05M_impro04_M030"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 56,
+      "utterance_id": "Ses05M_impro04_F029"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 57,
+      "utterance_id": "Ses05M_impro04_M031"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 58,
+      "utterance_id": "Ses05M_impro04_F030"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 59,
+      "utterance_id": "Ses05M_impro04_M032"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 60,
+      "utterance_id": "Ses05M_impro04_F031"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 61,
+      "utterance_id": "Ses05M_impro04_M033"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 62,
+      "utterance_id": "Ses05M_impro04_F032"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 63,
+      "utterance_id": "Ses05M_impro04_M034"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 64,
+      "utterance_id": "Ses05M_impro04_F033"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 65,
+      "utterance_id": "Ses05M_impro04_M035"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 66,
+      "utterance_id": "Ses05M_impro04_F034"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 67,
+      "utterance_id": "Ses05M_impro04_F035"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 68,
+      "utterance_id": "Ses05M_impro04_M037"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 69,
+      "utterance_id": "Ses05M_impro04_F036"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 70,
+      "utterance_id": "Ses05M_impro04_M038"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 71,
+      "utterance_id": "Ses05M_impro04_F037"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 72,
+      "utterance_id": "Ses05M_impro04_M039"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 73,
+      "utterance_id": "Ses05M_impro04_M040"
+    },
+    {
+      "dialogue": "Ses05M_impro04",
+      "turn": 74,
+      "utterance_id": "Ses05M_impro04_M041"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 0,
+      "utterance_id": "Ses05M_script03_2_F001"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 1,
+      "utterance_id": "Ses05M_script03_2_F002"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 2,
+      "utterance_id": "Ses05M_script03_2_F003"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 3,
+      "utterance_id": "Ses05M_script03_2_M004"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 4,
+      "utterance_id": "Ses05M_script03_2_F004"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 5,
+      "utterance_id": "Ses05M_script03_2_M005"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 6,
+      "utterance_id": "Ses05M_script03_2_F005"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 7,
+      "utterance_id": "Ses05M_script03_2_F006"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 8,
+      "utterance_id": "Ses05M_script03_2_M008"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 9,
+      "utterance_id": "Ses05M_script03_2_F008"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 10,
+      "utterance_id": "Ses05M_script03_2_M009"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 11,
+      "utterance_id": "Ses05M_script03_2_M010"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 12,
+      "utterance_id": "Ses05M_script03_2_F009"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 13,
+      "utterance_id": "Ses05M_script03_2_M011"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 14,
+      "utterance_id": "Ses05M_script03_2_F012"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 15,
+      "utterance_id": "Ses05M_script03_2_F013"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 16,
+      "utterance_id": "Ses05M_script03_2_M015"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 17,
+      "utterance_id": "Ses05M_script03_2_M016"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 18,
+      "utterance_id": "Ses05M_script03_2_F015"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 19,
+      "utterance_id": "Ses05M_script03_2_M017"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 20,
+      "utterance_id": "Ses05M_script03_2_F017"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 21,
+      "utterance_id": "Ses05M_script03_2_F018"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 22,
+      "utterance_id": "Ses05M_script03_2_M020"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 23,
+      "utterance_id": "Ses05M_script03_2_M022"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 24,
+      "utterance_id": "Ses05M_script03_2_F021"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 25,
+      "utterance_id": "Ses05M_script03_2_M023"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 26,
+      "utterance_id": "Ses05M_script03_2_M024"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 27,
+      "utterance_id": "Ses05M_script03_2_F023"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 28,
+      "utterance_id": "Ses05M_script03_2_M025"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 29,
+      "utterance_id": "Ses05M_script03_2_M026"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 30,
+      "utterance_id": "Ses05M_script03_2_F025"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 31,
+      "utterance_id": "Ses05M_script03_2_M027"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 32,
+      "utterance_id": "Ses05M_script03_2_F026"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 33,
+      "utterance_id": "Ses05M_script03_2_M028"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 34,
+      "utterance_id": "Ses05M_script03_2_M029"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 35,
+      "utterance_id": "Ses05M_script03_2_F028"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 36,
+      "utterance_id": "Ses05M_script03_2_M030"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 37,
+      "utterance_id": "Ses05M_script03_2_F029"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 38,
+      "utterance_id": "Ses05M_script03_2_M031"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 39,
+      "utterance_id": "Ses05M_script03_2_M032"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 40,
+      "utterance_id": "Ses05M_script03_2_M033"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 41,
+      "utterance_id": "Ses05M_script03_2_M034"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 42,
+      "utterance_id": "Ses05M_script03_2_M035"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 43,
+      "utterance_id": "Ses05M_script03_2_M036"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 44,
+      "utterance_id": "Ses05M_script03_2_F034"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 45,
+      "utterance_id": "Ses05M_script03_2_M037"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 46,
+      "utterance_id": "Ses05M_script03_2_F035"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 47,
+      "utterance_id": "Ses05M_script03_2_M038"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 48,
+      "utterance_id": "Ses05M_script03_2_F036"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 49,
+      "utterance_id": "Ses05M_script03_2_M039"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 50,
+      "utterance_id": "Ses05M_script03_2_F037"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 51,
+      "utterance_id": "Ses05M_script03_2_M040"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 52,
+      "utterance_id": "Ses05M_script03_2_F038"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 53,
+      "utterance_id": "Ses05M_script03_2_M041"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 54,
+      "utterance_id": "Ses05M_script03_2_F039"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 55,
+      "utterance_id": "Ses05M_script03_2_M042"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 56,
+      "utterance_id": "Ses05M_script03_2_F040"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 57,
+      "utterance_id": "Ses05M_script03_2_M043"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 58,
+      "utterance_id": "Ses05M_script03_2_F041"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 59,
+      "utterance_id": "Ses05M_script03_2_M044"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 60,
+      "utterance_id": "Ses05M_script03_2_F042"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 61,
+      "utterance_id": "Ses05M_script03_2_M045"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 62,
+      "utterance_id": "Ses05M_script03_2_F043"
+    },
+    {
+      "dialogue": "Ses05M_script03_2",
+      "turn": 63,
+      "utterance_id": "Ses05M_script03_2_F044"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 0,
+      "utterance_id": "Ses05M_impro05_M000"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 1,
+      "utterance_id": "Ses05M_impro05_F000"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 2,
+      "utterance_id": "Ses05M_impro05_M001"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 3,
+      "utterance_id": "Ses05M_impro05_F001"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 4,
+      "utterance_id": "Ses05M_impro05_M002"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 5,
+      "utterance_id": "Ses05M_impro05_F002"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 6,
+      "utterance_id": "Ses05M_impro05_M003"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 7,
+      "utterance_id": "Ses05M_impro05_F003"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 8,
+      "utterance_id": "Ses05M_impro05_M004"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 9,
+      "utterance_id": "Ses05M_impro05_F004"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 10,
+      "utterance_id": "Ses05M_impro05_M005"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 11,
+      "utterance_id": "Ses05M_impro05_F005"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 12,
+      "utterance_id": "Ses05M_impro05_M006"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 13,
+      "utterance_id": "Ses05M_impro05_F006"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 14,
+      "utterance_id": "Ses05M_impro05_M007"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 15,
+      "utterance_id": "Ses05M_impro05_F007"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 16,
+      "utterance_id": "Ses05M_impro05_M009"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 17,
+      "utterance_id": "Ses05M_impro05_F008"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 18,
+      "utterance_id": "Ses05M_impro05_M010"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 19,
+      "utterance_id": "Ses05M_impro05_F009"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 20,
+      "utterance_id": "Ses05M_impro05_F010"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 21,
+      "utterance_id": "Ses05M_impro05_M012"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 22,
+      "utterance_id": "Ses05M_impro05_F011"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 23,
+      "utterance_id": "Ses05M_impro05_F012"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 24,
+      "utterance_id": "Ses05M_impro05_M013"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 25,
+      "utterance_id": "Ses05M_impro05_F013"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 26,
+      "utterance_id": "Ses05M_impro05_M015"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 27,
+      "utterance_id": "Ses05M_impro05_F014"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 28,
+      "utterance_id": "Ses05M_impro05_M016"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 29,
+      "utterance_id": "Ses05M_impro05_F015"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 30,
+      "utterance_id": "Ses05M_impro05_F016"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 31,
+      "utterance_id": "Ses05M_impro05_M017"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 32,
+      "utterance_id": "Ses05M_impro05_F017"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 33,
+      "utterance_id": "Ses05M_impro05_M018"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 34,
+      "utterance_id": "Ses05M_impro05_F018"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 35,
+      "utterance_id": "Ses05M_impro05_M019"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 36,
+      "utterance_id": "Ses05M_impro05_F019"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 37,
+      "utterance_id": "Ses05M_impro05_M020"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 38,
+      "utterance_id": "Ses05M_impro05_F020"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 39,
+      "utterance_id": "Ses05M_impro05_M021"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 40,
+      "utterance_id": "Ses05M_impro05_F021"
+    },
+    {
+      "dialogue": "Ses05M_impro05",
+      "turn": 41,
+      "utterance_id": "Ses05M_impro05_M022"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 0,
+      "utterance_id": "Ses05M_impro03_M000"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 1,
+      "utterance_id": "Ses05M_impro03_F000"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 2,
+      "utterance_id": "Ses05M_impro03_M001"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 3,
+      "utterance_id": "Ses05M_impro03_M002"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 4,
+      "utterance_id": "Ses05M_impro03_F002"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 5,
+      "utterance_id": "Ses05M_impro03_M003"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 6,
+      "utterance_id": "Ses05M_impro03_F003"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 7,
+      "utterance_id": "Ses05M_impro03_M004"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 8,
+      "utterance_id": "Ses05M_impro03_F004"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 9,
+      "utterance_id": "Ses05M_impro03_F005"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 10,
+      "utterance_id": "Ses05M_impro03_M006"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 11,
+      "utterance_id": "Ses05M_impro03_M007"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 12,
+      "utterance_id": "Ses05M_impro03_F006"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 13,
+      "utterance_id": "Ses05M_impro03_M008"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 14,
+      "utterance_id": "Ses05M_impro03_M009"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 15,
+      "utterance_id": "Ses05M_impro03_M010"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 16,
+      "utterance_id": "Ses05M_impro03_M011"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 17,
+      "utterance_id": "Ses05M_impro03_F007"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 18,
+      "utterance_id": "Ses05M_impro03_M012"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 19,
+      "utterance_id": "Ses05M_impro03_F008"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 20,
+      "utterance_id": "Ses05M_impro03_F009"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 21,
+      "utterance_id": "Ses05M_impro03_F010"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 22,
+      "utterance_id": "Ses05M_impro03_M013"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 23,
+      "utterance_id": "Ses05M_impro03_F011"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 24,
+      "utterance_id": "Ses05M_impro03_M014"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 25,
+      "utterance_id": "Ses05M_impro03_F012"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 26,
+      "utterance_id": "Ses05M_impro03_M015"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 27,
+      "utterance_id": "Ses05M_impro03_F013"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 28,
+      "utterance_id": "Ses05M_impro03_M016"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 29,
+      "utterance_id": "Ses05M_impro03_F014"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 30,
+      "utterance_id": "Ses05M_impro03_F015"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 31,
+      "utterance_id": "Ses05M_impro03_M018"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 32,
+      "utterance_id": "Ses05M_impro03_F016"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 33,
+      "utterance_id": "Ses05M_impro03_M019"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 34,
+      "utterance_id": "Ses05M_impro03_F017"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 35,
+      "utterance_id": "Ses05M_impro03_M020"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 36,
+      "utterance_id": "Ses05M_impro03_F018"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 37,
+      "utterance_id": "Ses05M_impro03_M021"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 38,
+      "utterance_id": "Ses05M_impro03_F019"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 39,
+      "utterance_id": "Ses05M_impro03_F020"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 40,
+      "utterance_id": "Ses05M_impro03_M023"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 41,
+      "utterance_id": "Ses05M_impro03_F021"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 42,
+      "utterance_id": "Ses05M_impro03_M024"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 43,
+      "utterance_id": "Ses05M_impro03_F022"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 44,
+      "utterance_id": "Ses05M_impro03_M025"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 45,
+      "utterance_id": "Ses05M_impro03_M026"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 46,
+      "utterance_id": "Ses05M_impro03_F023"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 47,
+      "utterance_id": "Ses05M_impro03_M027"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 48,
+      "utterance_id": "Ses05M_impro03_M028"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 49,
+      "utterance_id": "Ses05M_impro03_F026"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 50,
+      "utterance_id": "Ses05M_impro03_M029"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 51,
+      "utterance_id": "Ses05M_impro03_F027"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 52,
+      "utterance_id": "Ses05M_impro03_M030"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 53,
+      "utterance_id": "Ses05M_impro03_M031"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 54,
+      "utterance_id": "Ses05M_impro03_F030"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 55,
+      "utterance_id": "Ses05M_impro03_M032"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 56,
+      "utterance_id": "Ses05M_impro03_F031"
+    },
+    {
+      "dialogue": "Ses05M_impro03",
+      "turn": 57,
+      "utterance_id": "Ses05M_impro03_M033"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 0,
+      "utterance_id": "Ses05M_script01_3_F000"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 1,
+      "utterance_id": "Ses05M_script01_3_F001"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 2,
+      "utterance_id": "Ses05M_script01_3_M001"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 3,
+      "utterance_id": "Ses05M_script01_3_F003"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 4,
+      "utterance_id": "Ses05M_script01_3_M003"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 5,
+      "utterance_id": "Ses05M_script01_3_F006"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 6,
+      "utterance_id": "Ses05M_script01_3_F007"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 7,
+      "utterance_id": "Ses05M_script01_3_M010"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 8,
+      "utterance_id": "Ses05M_script01_3_F009"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 9,
+      "utterance_id": "Ses05M_script01_3_F010"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 10,
+      "utterance_id": "Ses05M_script01_3_M013"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 11,
+      "utterance_id": "Ses05M_script01_3_F012"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 12,
+      "utterance_id": "Ses05M_script01_3_F013"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 13,
+      "utterance_id": "Ses05M_script01_3_M016"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 14,
+      "utterance_id": "Ses05M_script01_3_M017"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 15,
+      "utterance_id": "Ses05M_script01_3_F015"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 16,
+      "utterance_id": "Ses05M_script01_3_F016"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 17,
+      "utterance_id": "Ses05M_script01_3_M019"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 18,
+      "utterance_id": "Ses05M_script01_3_M020"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 19,
+      "utterance_id": "Ses05M_script01_3_F019"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 20,
+      "utterance_id": "Ses05M_script01_3_M021"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 21,
+      "utterance_id": "Ses05M_script01_3_F020"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 22,
+      "utterance_id": "Ses05M_script01_3_M022"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 23,
+      "utterance_id": "Ses05M_script01_3_F021"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 24,
+      "utterance_id": "Ses05M_script01_3_M023"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 25,
+      "utterance_id": "Ses05M_script01_3_F022"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 26,
+      "utterance_id": "Ses05M_script01_3_M025"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 27,
+      "utterance_id": "Ses05M_script01_3_F023"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 28,
+      "utterance_id": "Ses05M_script01_3_M026"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 29,
+      "utterance_id": "Ses05M_script01_3_M027"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 30,
+      "utterance_id": "Ses05M_script01_3_M029"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 31,
+      "utterance_id": "Ses05M_script01_3_M030"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 32,
+      "utterance_id": "Ses05M_script01_3_M033"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 33,
+      "utterance_id": "Ses05M_script01_3_M036"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 34,
+      "utterance_id": "Ses05M_script01_3_M037"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 35,
+      "utterance_id": "Ses05M_script01_3_M038"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 36,
+      "utterance_id": "Ses05M_script01_3_M039"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 37,
+      "utterance_id": "Ses05M_script01_3_F024"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 38,
+      "utterance_id": "Ses05M_script01_3_M040"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 39,
+      "utterance_id": "Ses05M_script01_3_F025"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 40,
+      "utterance_id": "Ses05M_script01_3_M041"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 41,
+      "utterance_id": "Ses05M_script01_3_F027"
+    },
+    {
+      "dialogue": "Ses05M_script01_3",
+      "turn": 42,
+      "utterance_id": "Ses05M_script01_3_M042"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro02_M000"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro02_F001"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro02_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro02_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro02_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro02_M004"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro02_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro02_M006"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro02_F008"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro02_M008"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro02_F009"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro02_F010"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro02_M010"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 13,
+      "utterance_id": "Ses05F_impro02_F011"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 14,
+      "utterance_id": "Ses05F_impro02_F012"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 15,
+      "utterance_id": "Ses05F_impro02_F013"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 16,
+      "utterance_id": "Ses05F_impro02_M014"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 17,
+      "utterance_id": "Ses05F_impro02_F014"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 18,
+      "utterance_id": "Ses05F_impro02_M015"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 19,
+      "utterance_id": "Ses05F_impro02_M016"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 20,
+      "utterance_id": "Ses05F_impro02_F017"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 21,
+      "utterance_id": "Ses05F_impro02_F018"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 22,
+      "utterance_id": "Ses05F_impro02_F020"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 23,
+      "utterance_id": "Ses05F_impro02_F021"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 24,
+      "utterance_id": "Ses05F_impro02_M024"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 25,
+      "utterance_id": "Ses05F_impro02_M025"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 26,
+      "utterance_id": "Ses05F_impro02_F023"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 27,
+      "utterance_id": "Ses05F_impro02_M026"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 28,
+      "utterance_id": "Ses05F_impro02_F024"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 29,
+      "utterance_id": "Ses05F_impro02_F025"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 30,
+      "utterance_id": "Ses05F_impro02_F026"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 31,
+      "utterance_id": "Ses05F_impro02_M029"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 32,
+      "utterance_id": "Ses05F_impro02_F027"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 33,
+      "utterance_id": "Ses05F_impro02_F028"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 34,
+      "utterance_id": "Ses05F_impro02_M031"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 35,
+      "utterance_id": "Ses05F_impro02_F029"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 36,
+      "utterance_id": "Ses05F_impro02_M032"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 37,
+      "utterance_id": "Ses05F_impro02_M033"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 38,
+      "utterance_id": "Ses05F_impro02_M034"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 39,
+      "utterance_id": "Ses05F_impro02_F031"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 40,
+      "utterance_id": "Ses05F_impro02_M035"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 41,
+      "utterance_id": "Ses05F_impro02_F032"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 42,
+      "utterance_id": "Ses05F_impro02_M036"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 43,
+      "utterance_id": "Ses05F_impro02_F034"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 44,
+      "utterance_id": "Ses05F_impro02_F035"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 45,
+      "utterance_id": "Ses05F_impro02_F036"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 46,
+      "utterance_id": "Ses05F_impro02_F037"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 47,
+      "utterance_id": "Ses05F_impro02_M041"
+    },
+    {
+      "dialogue": "Ses05F_impro02",
+      "turn": 48,
+      "utterance_id": "Ses05F_impro02_F038"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 0,
+      "utterance_id": "Ses05F_script02_1_M000"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 1,
+      "utterance_id": "Ses05F_script02_1_M001"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 2,
+      "utterance_id": "Ses05F_script02_1_F000"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 3,
+      "utterance_id": "Ses05F_script02_1_M002"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 4,
+      "utterance_id": "Ses05F_script02_1_M003"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 5,
+      "utterance_id": "Ses05F_script02_1_F001"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 6,
+      "utterance_id": "Ses05F_script02_1_M004"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 7,
+      "utterance_id": "Ses05F_script02_1_F002"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 8,
+      "utterance_id": "Ses05F_script02_1_M005"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 9,
+      "utterance_id": "Ses05F_script02_1_M006"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 10,
+      "utterance_id": "Ses05F_script02_1_F004"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 11,
+      "utterance_id": "Ses05F_script02_1_M007"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 12,
+      "utterance_id": "Ses05F_script02_1_F005"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 13,
+      "utterance_id": "Ses05F_script02_1_M009"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 14,
+      "utterance_id": "Ses05F_script02_1_M010"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 15,
+      "utterance_id": "Ses05F_script02_1_M011"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 16,
+      "utterance_id": "Ses05F_script02_1_M012"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 17,
+      "utterance_id": "Ses05F_script02_1_F007"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 18,
+      "utterance_id": "Ses05F_script02_1_F008"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 19,
+      "utterance_id": "Ses05F_script02_1_M014"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 20,
+      "utterance_id": "Ses05F_script02_1_F010"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 21,
+      "utterance_id": "Ses05F_script02_1_F011"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 22,
+      "utterance_id": "Ses05F_script02_1_M017"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 23,
+      "utterance_id": "Ses05F_script02_1_F012"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 24,
+      "utterance_id": "Ses05F_script02_1_M018"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 25,
+      "utterance_id": "Ses05F_script02_1_M019"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 26,
+      "utterance_id": "Ses05F_script02_1_F013"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 27,
+      "utterance_id": "Ses05F_script02_1_M020"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 28,
+      "utterance_id": "Ses05F_script02_1_M021"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 29,
+      "utterance_id": "Ses05F_script02_1_F014"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 30,
+      "utterance_id": "Ses05F_script02_1_M023"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 31,
+      "utterance_id": "Ses05F_script02_1_M024"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 32,
+      "utterance_id": "Ses05F_script02_1_F015"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 33,
+      "utterance_id": "Ses05F_script02_1_F016"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 34,
+      "utterance_id": "Ses05F_script02_1_F017"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 35,
+      "utterance_id": "Ses05F_script02_1_M027"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 36,
+      "utterance_id": "Ses05F_script02_1_F018"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 37,
+      "utterance_id": "Ses05F_script02_1_M029"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 38,
+      "utterance_id": "Ses05F_script02_1_M030"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 39,
+      "utterance_id": "Ses05F_script02_1_M031"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 40,
+      "utterance_id": "Ses05F_script02_1_M032"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 41,
+      "utterance_id": "Ses05F_script02_1_M033"
+    },
+    {
+      "dialogue": "Ses05F_script02_1",
+      "turn": 42,
+      "utterance_id": "Ses05F_script02_1_M034"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro03_F000"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro03_M000"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro03_M001"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro03_F001"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro03_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro03_M003"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro03_F003"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro03_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro03_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro03_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro03_M006"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro03_M007"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro03_F007"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 13,
+      "utterance_id": "Ses05F_impro03_M008"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 14,
+      "utterance_id": "Ses05F_impro03_F008"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 15,
+      "utterance_id": "Ses05F_impro03_M009"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 16,
+      "utterance_id": "Ses05F_impro03_M010"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 17,
+      "utterance_id": "Ses05F_impro03_F009"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 18,
+      "utterance_id": "Ses05F_impro03_M011"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 19,
+      "utterance_id": "Ses05F_impro03_F011"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 20,
+      "utterance_id": "Ses05F_impro03_M012"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 21,
+      "utterance_id": "Ses05F_impro03_M013"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 22,
+      "utterance_id": "Ses05F_impro03_M020"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 23,
+      "utterance_id": "Ses05F_impro03_F020"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 24,
+      "utterance_id": "Ses05F_impro03_M027"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 25,
+      "utterance_id": "Ses05F_impro03_F027"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 26,
+      "utterance_id": "Ses05F_impro03_F028"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 27,
+      "utterance_id": "Ses05F_impro03_F029"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 28,
+      "utterance_id": "Ses05F_impro03_M030"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 29,
+      "utterance_id": "Ses05F_impro03_F030"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 30,
+      "utterance_id": "Ses05F_impro03_M031"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 31,
+      "utterance_id": "Ses05F_impro03_F031"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 32,
+      "utterance_id": "Ses05F_impro03_M032"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 33,
+      "utterance_id": "Ses05F_impro03_F032"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 34,
+      "utterance_id": "Ses05F_impro03_M033"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 35,
+      "utterance_id": "Ses05F_impro03_F033"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 36,
+      "utterance_id": "Ses05F_impro03_F034"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 37,
+      "utterance_id": "Ses05F_impro03_M035"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 38,
+      "utterance_id": "Ses05F_impro03_M036"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 39,
+      "utterance_id": "Ses05F_impro03_F035"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 40,
+      "utterance_id": "Ses05F_impro03_M037"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 41,
+      "utterance_id": "Ses05F_impro03_F036"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 42,
+      "utterance_id": "Ses05F_impro03_M038"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 43,
+      "utterance_id": "Ses05F_impro03_F037"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 44,
+      "utterance_id": "Ses05F_impro03_M039"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 45,
+      "utterance_id": "Ses05F_impro03_M040"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 46,
+      "utterance_id": "Ses05F_impro03_M041"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 47,
+      "utterance_id": "Ses05F_impro03_F039"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 48,
+      "utterance_id": "Ses05F_impro03_F040"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 49,
+      "utterance_id": "Ses05F_impro03_M043"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 50,
+      "utterance_id": "Ses05F_impro03_F041"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 51,
+      "utterance_id": "Ses05F_impro03_M044"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 52,
+      "utterance_id": "Ses05F_impro03_M045"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 53,
+      "utterance_id": "Ses05F_impro03_F042"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 54,
+      "utterance_id": "Ses05F_impro03_M046"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 55,
+      "utterance_id": "Ses05F_impro03_F043"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 56,
+      "utterance_id": "Ses05F_impro03_M049"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 57,
+      "utterance_id": "Ses05F_impro03_F046"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 58,
+      "utterance_id": "Ses05F_impro03_M050"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 59,
+      "utterance_id": "Ses05F_impro03_F047"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 60,
+      "utterance_id": "Ses05F_impro03_M051"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 61,
+      "utterance_id": "Ses05F_impro03_F048"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 62,
+      "utterance_id": "Ses05F_impro03_F049"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 63,
+      "utterance_id": "Ses05F_impro03_F051"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 64,
+      "utterance_id": "Ses05F_impro03_M057"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 65,
+      "utterance_id": "Ses05F_impro03_M058"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 66,
+      "utterance_id": "Ses05F_impro03_F053"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 67,
+      "utterance_id": "Ses05F_impro03_F054"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 68,
+      "utterance_id": "Ses05F_impro03_F055"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 69,
+      "utterance_id": "Ses05F_impro03_M060"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 70,
+      "utterance_id": "Ses05F_impro03_M061"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 71,
+      "utterance_id": "Ses05F_impro03_F056"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 72,
+      "utterance_id": "Ses05F_impro03_M062"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 73,
+      "utterance_id": "Ses05F_impro03_M063"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 74,
+      "utterance_id": "Ses05F_impro03_F057"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 75,
+      "utterance_id": "Ses05F_impro03_M064"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 76,
+      "utterance_id": "Ses05F_impro03_M065"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 77,
+      "utterance_id": "Ses05F_impro03_F058"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 78,
+      "utterance_id": "Ses05F_impro03_M066"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 79,
+      "utterance_id": "Ses05F_impro03_F059"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 80,
+      "utterance_id": "Ses05F_impro03_M067"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 81,
+      "utterance_id": "Ses05F_impro03_F060"
+    },
+    {
+      "dialogue": "Ses05F_impro03",
+      "turn": 82,
+      "utterance_id": "Ses05F_impro03_M068"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 0,
+      "utterance_id": "Ses05F_impro06_F000"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 1,
+      "utterance_id": "Ses05F_impro06_M001"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 2,
+      "utterance_id": "Ses05F_impro06_F001"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 3,
+      "utterance_id": "Ses05F_impro06_F002"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 4,
+      "utterance_id": "Ses05F_impro06_M002"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 5,
+      "utterance_id": "Ses05F_impro06_F003"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 6,
+      "utterance_id": "Ses05F_impro06_F004"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 7,
+      "utterance_id": "Ses05F_impro06_M003"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 8,
+      "utterance_id": "Ses05F_impro06_M004"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 9,
+      "utterance_id": "Ses05F_impro06_F005"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 10,
+      "utterance_id": "Ses05F_impro06_F006"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 11,
+      "utterance_id": "Ses05F_impro06_M005"
+    },
+    {
+      "dialogue": "Ses05F_impro06",
+      "turn": 12,
+      "utterance_id": "Ses05F_impro06_M006"
+    }
+  ],
+  "input_tensor_sha256": "d0c2b305437a4d101013f7f40dc9366c99019728528a29cdd80eea0d01e67a3b",
+  "sample_ids_sha256": "9a5fe3677b1359adf75762fc8e55b71e0894425358a88a64c1d501a698f87357",
+  "artifact_dir": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/runs/revision_1b8b1ff/iemocap/full/seed2025/.peak_bundles/epoch0036-230e2faffaea4f029196a25cb9b6a716",
+  "checkpoint": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/runs/revision_1b8b1ff/iemocap/full/seed2025/.peak_bundles/epoch0036-230e2faffaea4f029196a25cb9b6a716/best_peak_test_state_dict.pt",
+  "artifact_sha256": {
+    "best_peak_test_state_dict.pt": "431629fe3aff5b419fb3a81c0629c245368fc751406445317678abb6bc1eed76",
+    "peak_test_predictions.pt": "d7424fea01f0a208e5c5aa6382458d0817e7bd4299041871103a9e9ed85be4bc",
+    "peak_test_metrics.json": "bafd0307b52564433e824268c1b729c677b48f9283afbe03972aee8a6b7a72b5",
+    "classification_report.txt": "ea298c4ce440a3c6036cf6b65d426d20f629e4588e109b62fb25240205698c8c",
+    "history.json": "39ca11e55160f22498c4102707627cefb1bf97f66dd26cb26d8815337798f79c",
+    "config.json": "34c3eb46244ad258033375b5fcf19f709489dd501d7689b77805ea3aafe73650",
+    "manifest.json": "eda8d51c77448c52b02d21da4ce9fa23cecb18400dd65af4439688a8b1cf2711",
+    "status.json": "71cd3db0729237f6417640378c48e52073dbf15986dec3ea0fdd4fe9161660c7"
+  },
+  "checkpoint_load": "strict=True",
+  "artifact_validation": "Completed bundle, stored strict-replay flags and all six artifact checksums verified; no fresh predictive replay or accuracy measurement is claimed.",
+  "feature_sources": {
+    "metadata": {
+      "recorded_path": "/data2/yb/multimodalERC/IEMOCAP/external/CSS/data/iemocap_multimodal_features.pkl",
+      "actual_path": "/data2/yb/multimodalERC/IEMOCAP/external/CSS/data/iemocap_multimodal_features.pkl",
+      "sha256": "368c20fa87ea49fe9f068a5755085538e4d5d44ef4f1431794975c7ddbcbcbe2",
+      "manifest_hash_verified": true
+    },
+    "packed": {
+      "recorded_path": "/data2/yb/multimodalERC/IEMOCAP/Model_rawaux_textpeak_cssv_v1/artifacts/iemocap_textpeak_audio_cssv.npz",
+      "actual_path": "/data2/yb/multimodalERC/IEMOCAP/Model_rawaux_textpeak_cssv_v1/artifacts/iemocap_textpeak_audio_cssv.npz",
+      "sha256": "88c271b82789438fc8fa197acc453468e4be4c2bd430679c8080ff398811c4ea",
+      "manifest_hash_verified": true
+    }
+  },
+  "artifact_config": {
+    "batch_size": 32,
+    "class_names": [
+      "happiness",
+      "sadness",
+      "neutral",
+      "anger",
+      "excited",
+      "frustration"
+    ],
+    "dataset": "iemocap",
+    "effective_training_config": {
+      "align_self_weight": 0.95,
+      "aux_from_raw_projected": true,
+      "aux_loss_weights": {
+        "a": 0.2,
+        "t": 0.6,
+        "v": 0.2
+      },
+      "checkpoint_prefix": "ht_iemo_v27_lr30_wd20_fd10_mw45_auxt_",
+      "distill_alpha": 0.5772777397767895,
+      "distill_temp": 1.8246074213744867,
+      "dropout_rate": 0.1113389962276903,
+      "early_stopping_patience": 6,
+      "focal_reweight_gamma": 2.5,
+      "fusion_dim": 256,
+      "fusion_dropout": 0.1,
+      "fusion_early_stopping_patience": 30,
+      "fusion_early_stopping_threshold": 0.0,
+      "fusion_lr_reduce_factor": 0.5,
+      "fusion_lr_reduce_patience": 5,
+      "fusion_type": "hierarchical",
+      "gradient_clip_norm": 0.6311058766199245,
+      "graph_k_audio": 6,
+      "graph_k_text": 12,
+      "graph_k_visual": 7,
+      "label_smoothing": 0.0,
+      "loss_type": "poly",
+      "lr_audio": 4.003056259961667e-06,
+      "lr_fusion": 3e-05,
+      "lr_reduce_factor": 0.4431268354268777,
+      "lr_reduce_patience": 3,
+      "lr_text": 2.4163243028131906e-05,
+      "lr_visual": 2.2406991940069396e-05,
+      "main_loss_weight": 0.45,
+      "no_alignment": true,
+      "no_channel_attention": false,
+      "no_distill": false,
+      "no_gates": false,
+      "num_heads_fusion": 8,
+      "num_layers_fusion": 3,
+      "poly_alpha": 1.9508055462649292,
+      "poly_gamma": 1.402459950741192,
+      "seed": 2025,
+      "skip_pretrain": true,
+      "temporal_weight_audio": 0.534697670184466,
+      "temporal_weight_text": 1.653647526520393,
+      "temporal_weight_visual": 1.0014116523635417,
+      "use_contrastive": false,
+      "use_moe": false,
+      "use_uncertainty": true,
+      "wd_audio": 1.1630145789712038e-05,
+      "wd_fusion": 0.0002,
+      "wd_text": 0.0004004846462605576,
+      "wd_visual": 9.208015059525338e-05
+    },
+    "epochs": 100,
+    "feature_paths": {
+      "metadata": "/data2/yb/multimodalERC/IEMOCAP/external/CSS/data/iemocap_multimodal_features.pkl",
+      "packed": "/data2/yb/multimodalERC/IEMOCAP/Model_rawaux_textpeak_cssv_v1/artifacts/iemocap_textpeak_audio_cssv.npz"
+    },
+    "input_dims": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "learning_rates": {
+      "classifier": 0.00012,
+      "cross_attention": 6e-05,
+      "mixer": 6e-05,
+      "pairwise_cross": 0.00012,
+      "projection": 3e-05,
+      "remaining": 6e-05
+    },
+    "legacy_training_config": {
+      "baseline_config": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/configs/textpeak_grid32/v27_lr30_wd20_fd10_mw45_auxt.json",
+      "batch_size": 32,
+      "epochs": 100,
+      "experiment_id": "HO_WO_TAV",
+      "feature_protocol": "textpeak_audio_cssv",
+      "features": "/data2/yb/multimodalERC/IEMOCAP/Model_rawaux_textpeak_cssv_v1/artifacts/iemocap_textpeak_audio_cssv.npz",
+      "gradient_accumulation": 1,
+      "pkl": "/data2/yb/multimodalERC/IEMOCAP/external/CSS/data/iemocap_multimodal_features.pkl",
+      "run_id": "full",
+      "scheduler_mode": "legacy",
+      "seed": 2025
+    },
+    "loss": {
+      "aux_class_weight": true,
+      "focal_gamma": 2.5,
+      "focal_probability_detached": true,
+      "kind": "iemocap_batch_focal_detached",
+      "main_class_weight": true,
+      "weights": {
+        "a": 0.11,
+        "main": 0.45,
+        "t": 0.33,
+        "v": 0.11
+      }
+    },
+    "mixer": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "tokens": 6
+    },
+    "runtime_audit": {
+      "active_modalities": [
+        "t",
+        "a",
+        "v"
+      ],
+      "architecture": {
+        "blocks": 2,
+        "dim": 256,
+        "ffn": 1536,
+        "tokens": 6
+      },
+      "input_dims": {
+        "a": 1024,
+        "t": 1024,
+        "v": 342
+      },
+      "learning_rates": {
+        "classifier": 0.00012,
+        "cross_attention": 6e-05,
+        "mixer": 6e-05,
+        "pairwise_cross": 0.00012,
+        "projection": 3e-05,
+        "remaining": 6e-05
+      },
+      "loss": {
+        "aux_class_weight": true,
+        "focal_gamma": 2.5,
+        "focal_probability_detached": true,
+        "kind": "iemocap_batch_focal_detached",
+        "main_class_weight": true,
+        "weights": {
+          "a": 0.11,
+          "main": 0.45,
+          "t": 0.33,
+          "v": 0.11
+        }
+      },
+      "optimizer_groups": [
+        {
+          "lr": 3e-05,
+          "name": "projection",
+          "parameter_count": 614144,
+          "parameter_names": [
+            "proj.v.0.weight",
+            "proj.v.0.bias",
+            "proj.v.1.weight",
+            "proj.v.1.bias",
+            "proj.a.0.weight",
+            "proj.a.0.bias",
+            "proj.a.1.weight",
+            "proj.a.1.bias",
+            "proj.t.0.weight",
+            "proj.t.0.bias",
+            "proj.t.1.weight",
+            "proj.t.1.bias"
+          ]
+        },
+        {
+          "lr": 0.00012,
+          "name": "pairwise_cross",
+          "parameter_count": 82368,
+          "parameter_names": [
+            "transformer_encoder.cross.pair_projections.0.weight",
+            "transformer_encoder.cross.pair_projections.0.bias",
+            "transformer_encoder.cross.pair_projections.1.weight",
+            "transformer_encoder.cross.pair_projections.1.bias",
+            "transformer_encoder.cross.pair_projections.2.weight",
+            "transformer_encoder.cross.pair_projections.2.bias",
+            "transformer_encoder.cross.triple_projections.0.weight",
+            "transformer_encoder.cross.triple_projections.0.bias",
+            "transformer_encoder.cross.triple_projections.1.weight",
+            "transformer_encoder.cross.triple_projections.1.bias",
+            "transformer_encoder.cross.triple_projections.2.weight",
+            "transformer_encoder.cross.triple_projections.2.bias",
+            "transformer_encoder.cross.output.weight",
+            "transformer_encoder.cross.output.bias"
+          ]
+        },
+        {
+          "lr": 6e-05,
+          "name": "cross_attention",
+          "parameter_count": 789504,
+          "parameter_names": [
+            "cross_attn.v.in_proj_weight",
+            "cross_attn.v.in_proj_bias",
+            "cross_attn.v.out_proj.weight",
+            "cross_attn.v.out_proj.bias",
+            "cross_attn.a.in_proj_weight",
+            "cross_attn.a.in_proj_bias",
+            "cross_attn.a.out_proj.weight",
+            "cross_attn.a.out_proj.bias",
+            "cross_attn.t.in_proj_weight",
+            "cross_attn.t.in_proj_bias",
+            "cross_attn.t.out_proj.weight",
+            "cross_attn.t.out_proj.bias"
+          ]
+        },
+        {
+          "lr": 6e-05,
+          "name": "mixer_encoder",
+          "parameter_count": 1974614,
+          "parameter_names": [
+            "transformer_encoder.split.weight",
+            "transformer_encoder.split.bias",
+            "transformer_encoder.blocks.0.norm_sub.weight",
+            "transformer_encoder.blocks.0.norm_sub.bias",
+            "transformer_encoder.blocks.0.sub.0.weight",
+            "transformer_encoder.blocks.0.sub.0.bias",
+            "transformer_encoder.blocks.0.sub.2.weight",
+            "transformer_encoder.blocks.0.sub.2.bias",
+            "transformer_encoder.blocks.0.norm_mod.weight",
+            "transformer_encoder.blocks.0.norm_mod.bias",
+            "transformer_encoder.blocks.0.route.weight",
+            "transformer_encoder.blocks.0.norm_ffn.weight",
+            "transformer_encoder.blocks.0.norm_ffn.bias",
+            "transformer_encoder.blocks.0.ffn.0.weight",
+            "transformer_encoder.blocks.0.ffn.0.bias",
+            "transformer_encoder.blocks.0.ffn.2.weight",
+            "transformer_encoder.blocks.0.ffn.2.bias",
+            "transformer_encoder.blocks.1.norm_sub.weight",
+            "transformer_encoder.blocks.1.norm_sub.bias",
+            "transformer_encoder.blocks.1.sub.0.weight",
+            "transformer_encoder.blocks.1.sub.0.bias",
+            "transformer_encoder.blocks.1.sub.2.weight",
+            "transformer_encoder.blocks.1.sub.2.bias",
+            "transformer_encoder.blocks.1.norm_mod.weight",
+            "transformer_encoder.blocks.1.norm_mod.bias",
+            "transformer_encoder.blocks.1.route.weight",
+            "transformer_encoder.blocks.1.norm_ffn.weight",
+            "transformer_encoder.blocks.1.norm_ffn.bias",
+            "transformer_encoder.blocks.1.ffn.0.weight",
+            "transformer_encoder.blocks.1.ffn.0.bias",
+            "transformer_encoder.blocks.1.ffn.2.weight",
+            "transformer_encoder.blocks.1.ffn.2.bias"
+          ]
+        },
+        {
+          "lr": 0.00012,
+          "name": "classifier",
+          "parameter_count": 4626,
+          "parameter_names": [
+            "classifiers.0.weight",
+            "classifiers.0.bias",
+            "classifiers.1.weight",
+            "classifiers.1.bias",
+            "classifiers.2.weight",
+            "classifiers.2.bias"
+          ]
+        },
+        {
+          "lr": 6e-05,
+          "name": "remaining",
+          "parameter_count": 2892826,
+          "parameter_names": [
+            "pool_queries",
+            "seq_proj.v.0.weight",
+            "seq_proj.v.0.bias",
+            "seq_proj.v.1.weight",
+            "seq_proj.v.1.bias",
+            "seq_proj.a.0.weight",
+            "seq_proj.a.0.bias",
+            "seq_proj.a.1.weight",
+            "seq_proj.a.1.bias",
+            "seq_proj.t.0.weight",
+            "seq_proj.t.0.bias",
+            "seq_proj.t.1.weight",
+            "seq_proj.t.1.bias",
+            "adaptive_fusion.context_net.0.weight",
+            "adaptive_fusion.context_net.0.bias",
+            "adaptive_fusion.context_net.1.weight",
+            "adaptive_fusion.context_net.1.bias",
+            "adaptive_fusion.context_net.4.weight",
+            "adaptive_fusion.context_net.4.bias",
+            "adaptive_fusion.context_net.6.weight",
+            "adaptive_fusion.context_net.6.bias",
+            "feature_selectors.v.gate.0.weight",
+            "feature_selectors.v.gate.0.bias",
+            "feature_selectors.v.gate.1.weight",
+            "feature_selectors.v.gate.1.bias",
+            "feature_selectors.v.gate.3.weight",
+            "feature_selectors.v.gate.3.bias",
+            "feature_selectors.a.gate.0.weight",
+            "feature_selectors.a.gate.0.bias",
+            "feature_selectors.a.gate.1.weight",
+            "feature_selectors.a.gate.1.bias",
+            "feature_selectors.a.gate.3.weight",
+            "feature_selectors.a.gate.3.bias",
+            "feature_selectors.t.gate.0.weight",
+            "feature_selectors.t.gate.0.bias",
+            "feature_selectors.t.gate.1.weight",
+            "feature_selectors.t.gate.1.bias",
+            "feature_selectors.t.gate.3.weight",
+            "feature_selectors.t.gate.3.bias",
+            "quality_detector.v.0.weight",
+            "quality_detector.v.0.bias",
+            "quality_detector.v.1.weight",
+            "quality_detector.v.1.bias",
+            "quality_detector.v.4.weight",
+            "quality_detector.v.4.bias",
+            "quality_detector.v.6.weight",
+            "quality_detector.v.6.bias",
+            "quality_detector.a.0.weight",
+            "quality_detector.a.0.bias",
+            "quality_detector.a.1.weight",
+            "quality_detector.a.1.bias",
+            "quality_detector.a.4.weight",
+            "quality_detector.a.4.bias",
+            "quality_detector.a.6.weight",
+            "quality_detector.a.6.bias",
+            "quality_detector.t.0.weight",
+            "quality_detector.t.0.bias",
+            "quality_detector.t.1.weight",
+            "quality_detector.t.1.bias",
+            "quality_detector.t.4.weight",
+            "quality_detector.t.4.bias",
+            "quality_detector.t.6.weight",
+            "quality_detector.t.6.bias",
+            "gates.v.0.weight",
+            "gates.v.0.bias",
+            "gates.v.1.weight",
+            "gates.v.1.bias",
+            "gates.v.4.weight",
+            "gates.v.4.bias",
+            "gates.a.0.weight",
+            "gates.a.0.bias",
+            "gates.a.1.weight",
+            "gates.a.1.bias",
+            "gates.a.4.weight",
+            "gates.a.4.bias",
+            "gates.t.0.weight",
+            "gates.t.0.bias",
+            "gates.t.1.weight",
+            "gates.t.1.bias",
+            "gates.t.4.weight",
+            "gates.t.4.bias",
+            "pool.in_proj_weight",
+            "pool.in_proj_bias",
+            "pool.out_proj.weight",
+            "pool.out_proj.bias",
+            "feature_integrator.base_integrator.0.weight",
+            "feature_integrator.base_integrator.0.bias",
+            "feature_integrator.base_integrator.1.weight",
+            "feature_integrator.base_integrator.1.bias",
+            "feature_integrator.base_integrator.4.weight",
+            "feature_integrator.base_integrator.4.bias",
+            "feature_integrator.base_integrator.5.weight",
+            "feature_integrator.base_integrator.5.bias",
+            "mod_classifiers.v.0.weight",
+            "mod_classifiers.v.0.bias",
+            "mod_classifiers.v.3.weight",
+            "mod_classifiers.v.3.bias",
+            "mod_classifiers.a.0.weight",
+            "mod_classifiers.a.0.bias",
+            "mod_classifiers.a.3.weight",
+            "mod_classifiers.a.3.bias",
+            "mod_classifiers.t.0.weight",
+            "mod_classifiers.t.0.bias",
+            "mod_classifiers.t.3.weight",
+            "mod_classifiers.t.3.bias",
+            "confidence_estimator.0.weight",
+            "confidence_estimator.0.bias",
+            "confidence_estimator.2.weight",
+            "confidence_estimator.2.bias",
+            "uncertainty_estimator.0.weight",
+            "uncertainty_estimator.0.bias",
+            "uncertainty_estimator.2.weight",
+            "uncertainty_estimator.2.bias"
+          ]
+        }
+      ]
+    },
+    "seed": 2025,
+    "seeds": [
+      2025,
+      2066,
+      2088,
+      2118
+    ],
+    "selection": "strict_peak_test_wf1",
+    "source_root": "vendor/iemocap",
+    "switches": {
+      "no_adaptive_gating": false,
+      "no_auxiliary_loss": false,
+      "no_cross_attention": false,
+      "no_feature_gating": false,
+      "no_feature_mixing": false,
+      "no_mixer": false,
+      "no_modality_mixing": false,
+      "no_pairwise": false,
+      "no_sequence_mixing": false,
+      "one_mixer_block": false
+    },
+    "variant": "full"
+  },
+  "artifact_manifest": {
+    "artifact_sha256": {
+      "best_peak_test_state_dict.pt": "431629fe3aff5b419fb3a81c0629c245368fc751406445317678abb6bc1eed76",
+      "classification_report.txt": "ea298c4ce440a3c6036cf6b65d426d20f629e4588e109b62fb25240205698c8c",
+      "config.json": "34c3eb46244ad258033375b5fcf19f709489dd501d7689b77805ea3aafe73650",
+      "history.json": "39ca11e55160f22498c4102707627cefb1bf97f66dd26cb26d8815337798f79c",
+      "peak_test_metrics.json": "bafd0307b52564433e824268c1b729c677b48f9283afbe03972aee8a6b7a72b5",
+      "peak_test_predictions.pt": "d7424fea01f0a208e5c5aa6382458d0817e7bd4299041871103a9e9ed85be4bc"
+    },
+    "config_contract_sha256": "221f544c2c7ab35768091665a6744a7355236e8f51cb1176473e9b37dbf089dc",
+    "config_sha256": "75e1dac38f4f49fe8822e239c976359855afb0084e97ef1d06bc6049eb82d5fb",
+    "dataset": "iemocap",
+    "feature_hashes": {
+      "/data2/yb/multimodalERC/IEMOCAP/Model_rawaux_textpeak_cssv_v1/artifacts/iemocap_textpeak_audio_cssv.npz": "88c271b82789438fc8fa197acc453468e4be4c2bd430679c8080ff398811c4ea",
+      "/data2/yb/multimodalERC/IEMOCAP/external/CSS/data/iemocap_multimodal_features.pkl": "368c20fa87ea49fe9f068a5755085538e4d5d44ef4f1431794975c7ddbcbcbe2"
+    },
+    "fresh_strict_replay_exact": true,
+    "runtime_audit": {
+      "active_modalities": [
+        "t",
+        "a",
+        "v"
+      ],
+      "architecture": {
+        "blocks": 2,
+        "dim": 256,
+        "ffn": 1536,
+        "tokens": 6
+      },
+      "input_dims": {
+        "a": 1024,
+        "t": 1024,
+        "v": 342
+      },
+      "learning_rates": {
+        "classifier": 0.00012,
+        "cross_attention": 6e-05,
+        "mixer": 6e-05,
+        "pairwise_cross": 0.00012,
+        "projection": 3e-05,
+        "remaining": 6e-05
+      },
+      "loss": {
+        "aux_class_weight": true,
+        "focal_gamma": 2.5,
+        "focal_probability_detached": true,
+        "kind": "iemocap_batch_focal_detached",
+        "main_class_weight": true,
+        "weights": {
+          "a": 0.11,
+          "main": 0.45,
+          "t": 0.33,
+          "v": 0.11
+        }
+      },
+      "optimizer_groups": [
+        {
+          "lr": 3e-05,
+          "name": "projection",
+          "parameter_count": 614144,
+          "parameter_names": [
+            "proj.v.0.weight",
+            "proj.v.0.bias",
+            "proj.v.1.weight",
+            "proj.v.1.bias",
+            "proj.a.0.weight",
+            "proj.a.0.bias",
+            "proj.a.1.weight",
+            "proj.a.1.bias",
+            "proj.t.0.weight",
+            "proj.t.0.bias",
+            "proj.t.1.weight",
+            "proj.t.1.bias"
+          ]
+        },
+        {
+          "lr": 0.00012,
+          "name": "pairwise_cross",
+          "parameter_count": 82368,
+          "parameter_names": [
+            "transformer_encoder.cross.pair_projections.0.weight",
+            "transformer_encoder.cross.pair_projections.0.bias",
+            "transformer_encoder.cross.pair_projections.1.weight",
+            "transformer_encoder.cross.pair_projections.1.bias",
+            "transformer_encoder.cross.pair_projections.2.weight",
+            "transformer_encoder.cross.pair_projections.2.bias",
+            "transformer_encoder.cross.triple_projections.0.weight",
+            "transformer_encoder.cross.triple_projections.0.bias",
+            "transformer_encoder.cross.triple_projections.1.weight",
+            "transformer_encoder.cross.triple_projections.1.bias",
+            "transformer_encoder.cross.triple_projections.2.weight",
+            "transformer_encoder.cross.triple_projections.2.bias",
+            "transformer_encoder.cross.output.weight",
+            "transformer_encoder.cross.output.bias"
+          ]
+        },
+        {
+          "lr": 6e-05,
+          "name": "cross_attention",
+          "parameter_count": 789504,
+          "parameter_names": [
+            "cross_attn.v.in_proj_weight",
+            "cross_attn.v.in_proj_bias",
+            "cross_attn.v.out_proj.weight",
+            "cross_attn.v.out_proj.bias",
+            "cross_attn.a.in_proj_weight",
+            "cross_attn.a.in_proj_bias",
+            "cross_attn.a.out_proj.weight",
+            "cross_attn.a.out_proj.bias",
+            "cross_attn.t.in_proj_weight",
+            "cross_attn.t.in_proj_bias",
+            "cross_attn.t.out_proj.weight",
+            "cross_attn.t.out_proj.bias"
+          ]
+        },
+        {
+          "lr": 6e-05,
+          "name": "mixer_encoder",
+          "parameter_count": 1974614,
+          "parameter_names": [
+            "transformer_encoder.split.weight",
+            "transformer_encoder.split.bias",
+            "transformer_encoder.blocks.0.norm_sub.weight",
+            "transformer_encoder.blocks.0.norm_sub.bias",
+            "transformer_encoder.blocks.0.sub.0.weight",
+            "transformer_encoder.blocks.0.sub.0.bias",
+            "transformer_encoder.blocks.0.sub.2.weight",
+            "transformer_encoder.blocks.0.sub.2.bias",
+            "transformer_encoder.blocks.0.norm_mod.weight",
+            "transformer_encoder.blocks.0.norm_mod.bias",
+            "transformer_encoder.blocks.0.route.weight",
+            "transformer_encoder.blocks.0.norm_ffn.weight",
+            "transformer_encoder.blocks.0.norm_ffn.bias",
+            "transformer_encoder.blocks.0.ffn.0.weight",
+            "transformer_encoder.blocks.0.ffn.0.bias",
+            "transformer_encoder.blocks.0.ffn.2.weight",
+            "transformer_encoder.blocks.0.ffn.2.bias",
+            "transformer_encoder.blocks.1.norm_sub.weight",
+            "transformer_encoder.blocks.1.norm_sub.bias",
+            "transformer_encoder.blocks.1.sub.0.weight",
+            "transformer_encoder.blocks.1.sub.0.bias",
+            "transformer_encoder.blocks.1.sub.2.weight",
+            "transformer_encoder.blocks.1.sub.2.bias",
+            "transformer_encoder.blocks.1.norm_mod.weight",
+            "transformer_encoder.blocks.1.norm_mod.bias",
+            "transformer_encoder.blocks.1.route.weight",
+            "transformer_encoder.blocks.1.norm_ffn.weight",
+            "transformer_encoder.blocks.1.norm_ffn.bias",
+            "transformer_encoder.blocks.1.ffn.0.weight",
+            "transformer_encoder.blocks.1.ffn.0.bias",
+            "transformer_encoder.blocks.1.ffn.2.weight",
+            "transformer_encoder.blocks.1.ffn.2.bias"
+          ]
+        },
+        {
+          "lr": 0.00012,
+          "name": "classifier",
+          "parameter_count": 4626,
+          "parameter_names": [
+            "classifiers.0.weight",
+            "classifiers.0.bias",
+            "classifiers.1.weight",
+            "classifiers.1.bias",
+            "classifiers.2.weight",
+            "classifiers.2.bias"
+          ]
+        },
+        {
+          "lr": 6e-05,
+          "name": "remaining",
+          "parameter_count": 2892826,
+          "parameter_names": [
+            "pool_queries",
+            "seq_proj.v.0.weight",
+            "seq_proj.v.0.bias",
+            "seq_proj.v.1.weight",
+            "seq_proj.v.1.bias",
+            "seq_proj.a.0.weight",
+            "seq_proj.a.0.bias",
+            "seq_proj.a.1.weight",
+            "seq_proj.a.1.bias",
+            "seq_proj.t.0.weight",
+            "seq_proj.t.0.bias",
+            "seq_proj.t.1.weight",
+            "seq_proj.t.1.bias",
+            "adaptive_fusion.context_net.0.weight",
+            "adaptive_fusion.context_net.0.bias",
+            "adaptive_fusion.context_net.1.weight",
+            "adaptive_fusion.context_net.1.bias",
+            "adaptive_fusion.context_net.4.weight",
+            "adaptive_fusion.context_net.4.bias",
+            "adaptive_fusion.context_net.6.weight",
+            "adaptive_fusion.context_net.6.bias",
+            "feature_selectors.v.gate.0.weight",
+            "feature_selectors.v.gate.0.bias",
+            "feature_selectors.v.gate.1.weight",
+            "feature_selectors.v.gate.1.bias",
+            "feature_selectors.v.gate.3.weight",
+            "feature_selectors.v.gate.3.bias",
+            "feature_selectors.a.gate.0.weight",
+            "feature_selectors.a.gate.0.bias",
+            "feature_selectors.a.gate.1.weight",
+            "feature_selectors.a.gate.1.bias",
+            "feature_selectors.a.gate.3.weight",
+            "feature_selectors.a.gate.3.bias",
+            "feature_selectors.t.gate.0.weight",
+            "feature_selectors.t.gate.0.bias",
+            "feature_selectors.t.gate.1.weight",
+            "feature_selectors.t.gate.1.bias",
+            "feature_selectors.t.gate.3.weight",
+            "feature_selectors.t.gate.3.bias",
+            "quality_detector.v.0.weight",
+            "quality_detector.v.0.bias",
+            "quality_detector.v.1.weight",
+            "quality_detector.v.1.bias",
+            "quality_detector.v.4.weight",
+            "quality_detector.v.4.bias",
+            "quality_detector.v.6.weight",
+            "quality_detector.v.6.bias",
+            "quality_detector.a.0.weight",
+            "quality_detector.a.0.bias",
+            "quality_detector.a.1.weight",
+            "quality_detector.a.1.bias",
+            "quality_detector.a.4.weight",
+            "quality_detector.a.4.bias",
+            "quality_detector.a.6.weight",
+            "quality_detector.a.6.bias",
+            "quality_detector.t.0.weight",
+            "quality_detector.t.0.bias",
+            "quality_detector.t.1.weight",
+            "quality_detector.t.1.bias",
+            "quality_detector.t.4.weight",
+            "quality_detector.t.4.bias",
+            "quality_detector.t.6.weight",
+            "quality_detector.t.6.bias",
+            "gates.v.0.weight",
+            "gates.v.0.bias",
+            "gates.v.1.weight",
+            "gates.v.1.bias",
+            "gates.v.4.weight",
+            "gates.v.4.bias",
+            "gates.a.0.weight",
+            "gates.a.0.bias",
+            "gates.a.1.weight",
+            "gates.a.1.bias",
+            "gates.a.4.weight",
+            "gates.a.4.bias",
+            "gates.t.0.weight",
+            "gates.t.0.bias",
+            "gates.t.1.weight",
+            "gates.t.1.bias",
+            "gates.t.4.weight",
+            "gates.t.4.bias",
+            "pool.in_proj_weight",
+            "pool.in_proj_bias",
+            "pool.out_proj.weight",
+            "pool.out_proj.bias",
+            "feature_integrator.base_integrator.0.weight",
+            "feature_integrator.base_integrator.0.bias",
+            "feature_integrator.base_integrator.1.weight",
+            "feature_integrator.base_integrator.1.bias",
+            "feature_integrator.base_integrator.4.weight",
+            "feature_integrator.base_integrator.4.bias",
+            "feature_integrator.base_integrator.5.weight",
+            "feature_integrator.base_integrator.5.bias",
+            "mod_classifiers.v.0.weight",
+            "mod_classifiers.v.0.bias",
+            "mod_classifiers.v.3.weight",
+            "mod_classifiers.v.3.bias",
+            "mod_classifiers.a.0.weight",
+            "mod_classifiers.a.0.bias",
+            "mod_classifiers.a.3.weight",
+            "mod_classifiers.a.3.bias",
+            "mod_classifiers.t.0.weight",
+            "mod_classifiers.t.0.bias",
+            "mod_classifiers.t.3.weight",
+            "mod_classifiers.t.3.bias",
+            "confidence_estimator.0.weight",
+            "confidence_estimator.0.bias",
+            "confidence_estimator.2.weight",
+            "confidence_estimator.2.bias",
+            "uncertainty_estimator.0.weight",
+            "uncertainty_estimator.0.bias",
+            "uncertainty_estimator.2.weight",
+            "uncertainty_estimator.2.bias"
+          ]
+        }
+      ]
+    },
+    "seed": 2025,
+    "selection": "strict_peak_test_wf1",
+    "source_hashes": {
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/dataset_runners/iemocap.py": "cc600122f4cd418c6c3c25b4fcae55c783340a8d519c1fef2cd34d2ecfb31ca5",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/adapters.py": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/cli.py": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/config.py": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/structural_ablations.py": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/run.py": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/__init__.py": "65e5ebf02299dd0379b534638a9eb34393724a7e18de8cd0a9918af3bef7631d",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/builder.py": "83481eec9201153d218f5ce06aa0c1edd5d8e8da3fdb6df8b32f6599ccfc20d2",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/e14.py": "dd816cf8aa218cd6c7231b9301e0d7d6da7d593e108c59fc0bb4cb55ce464f61",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/formal_runner.py": "a00d80ff6a048ac4bdab4d4e32d1ccf864cb4c3dab5653fc80cacb561182d293",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/lock.py": "d61abd256f5342fb6fb6a596f304d1869af01f57b9923467017b1ab8640c4642",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_01_12.py": "b4d1430f587618688eb08c43043cee1684542761c03cc8b78eaae8940fb4bcc9",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_13_24.py": "0e2e100e43cfaa2d85bd734356a70afb17d8659627bee68adda6246758455213",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_25_36.py": "e4c39bb03060efae5e0f02e80afbbad2b6ec7de4810083062577f016934d1645",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_37_46.py": "cbe7c4fd14d90c94bb6594e7b47b68460e5d61b3b6f3c12b0121708bea1286a2",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/registry.py": "f8327a52f638790a45782e8504af3bbf9d3bc5565a5691db6be623a8c98ed447",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/configs/textpeak_grid32/v27_lr30_wd20_fd10_mw45_auxt.json": "72a713d80f04a50a3c46e205311884dfd24e7826fb509fadb7cba7a7addb6472",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/multiattn.py": "98268db0b90f4acf807fcd7420fb304482995a209a2e2f15b93d921b790630bf",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/train_erc.py": "2c0e58a3fed3cdbca053020e640a2e6ff72891c2fa7f73f61220abb0cc5aad5c",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/__init__.py": "78e8ed4950c33351edf605b505e3634f0d2bfe5966f2c8a08c499e3f8aaa61c6",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/interventions.py": "a1d490de7500bc2ca08565d9c7581221297d814a735138469759ba1e479266be",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/model.py": "24c47e61283319dfa695c43e55eddf66b7f991832eab87d9c21ff2683677446f",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/registry.py": "f10512f5ef6c4a61d9f258f1cc6ea56cd217c39b0aa49a750f207d9edcfbfb85",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/roles.py": "59ccea8e91d082b3f43aaa724fe7f70dbd838dd6e0e78342dc5cc502660db2cf",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/runner.py": "e11e2f0f71b6f2a1ca7b86d0fb5d9b33ac2efc0edd583ca541cbcbbf225e1fe5",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/data/fill53_dataset.py": "8db6c34aa1c28a98e945dad223802fdb71c5da9d3ec9249559e94b6024b07a24",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/__init__.py": "010bf8af87bb357467ff6bab2250558b6c9b54a552571fa2084def793e09644f",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/model.py": "dc61ad68ae7ac70a40b9749c1a0728d4566a5c9a30ed6288c8068a7e2de14be5",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/registry.py": "ecb07f9452bca9167a3e9cdd49bbb947f7c9de73a4d15b9aad13af90a8e06b20",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/runner.py": "56e6fb0cb7186893bffcdbdb25ef1c4307b54d2173c6160d209814d69be4b061",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/__init__.py": "248de6a762eab1d2ec14d3551c6d06d33751ecac19cc3169c7a746e2d6c40e53",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/model.py": "9c1bbde1c2641ac02b532568dc416d6a620f25253ef1c14b128c35bf38b47846",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/modules.py": "5caa433fdf543ad0426dddfb5f3be9e7777f57d54f5d966132b57cf921c86e95",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/registry.py": "dfbb9238f56f83ee2ce7f4e17e64a53f4c56b534fefd6180023b26a6ace06c9e",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/runner.py": "62761ab5aa772b4b31ca9d3216bf9e79ab68e0c8e2cbcf1153f94238065d2ade",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/structured_cross/__init__.py": "d8cd93b90426fbbc627f9a452f63e0d893fd09c2fd372bc616b1c4928e57c99d",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/structured_cross/model.py": "86e53b39f08aeab18c6b671b38595614dd4a35b621e80975cec71c34c603fdf4",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/__init__.py": "7b240008b932cc785f2ac499a9d18f305ccdbf8fc6400b33eb2749053ef394da",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/data.py": "6355fcafe867a2c187abfca459a88bc8b22fea166c530b36d95819b31ab23e2d",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/model.py": "784a3a22095b0533122202c4f767b9338df1e385c6429ab85115aeff0160c6b8",
+      "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/runner.py": "82d160e07de7fb41360227baa02f6df0189a88fc32a6c693da93c2a0b4bd50ae"
+    },
+    "variant": "full"
+  },
+  "source_provenance": {
+    "git_commit": "",
+    "git_status": null,
+    "tracked_diff": null,
+    "loaded_source_sha256": {
+      "measure_revision_efficiency.py": "9641b02c51203a4f551ff114be48c2fdeac8d6310776454eae8196e50b390318",
+      "vendor/iemocap/calibration/registry.py": "f10512f5ef6c4a61d9f258f1cc6ea56cd217c39b0aa49a750f207d9edcfbfb85",
+      "vendor/iemocap/calibration/__init__.py": "78e8ed4950c33351edf605b505e3634f0d2bfe5966f2c8a08c499e3f8aaa61c6",
+      "vendor/iemocap/peer_residual/registry.py": "dfbb9238f56f83ee2ce7f4e17e64a53f4c56b534fefd6180023b26a6ace06c9e",
+      "vendor/iemocap/peer_residual/modules.py": "5caa433fdf543ad0426dddfb5f3be9e7777f57d54f5d966132b57cf921c86e95",
+      "vendor/iemocap/peer_residual/model.py": "9c1bbde1c2641ac02b532568dc416d6a620f25253ef1c14b128c35bf38b47846",
+      "vendor/iemocap/peer_residual/__init__.py": "248de6a762eab1d2ec14d3551c6d06d33751ecac19cc3169c7a746e2d6c40e53",
+      "vendor/iemocap/peer_residual/runner.py": "62761ab5aa772b4b31ca9d3216bf9e79ab68e0c8e2cbcf1153f94238065d2ade",
+      "vendor/iemocap/calibration/interventions.py": "a1d490de7500bc2ca08565d9c7581221297d814a735138469759ba1e479266be",
+      "vendor/iemocap/calibration/roles.py": "59ccea8e91d082b3f43aaa724fe7f70dbd838dd6e0e78342dc5cc502660db2cf",
+      "vendor/iemocap/calibration/model.py": "24c47e61283319dfa695c43e55eddf66b7f991832eab87d9c21ff2683677446f",
+      "vendor/iemocap/calibration/runner.py": "e11e2f0f71b6f2a1ca7b86d0fb5d9b33ac2efc0edd583ca541cbcbbf225e1fe5",
+      "vendor/iemocap/factorized_mixer/__init__.py": "010bf8af87bb357467ff6bab2250558b6c9b54a552571fa2084def793e09644f",
+      "vendor/iemocap/factorized_mixer/registry.py": "ecb07f9452bca9167a3e9cdd49bbb947f7c9de73a4d15b9aad13af90a8e06b20",
+      "vendor/iemocap/structured_cross/model.py": "86e53b39f08aeab18c6b671b38595614dd4a35b621e80975cec71c34c603fdf4",
+      "vendor/iemocap/structured_cross/__init__.py": "d8cd93b90426fbbc627f9a452f63e0d893fd09c2fd372bc616b1c4928e57c99d",
+      "vendor/iemocap/factorized_mixer/model.py": "dc61ad68ae7ac70a40b9749c1a0728d4566a5c9a30ed6288c8068a7e2de14be5",
+      "vendor/iemocap/factorized_mixer/runner.py": "56e6fb0cb7186893bffcdbdb25ef1c4307b54d2173c6160d209814d69be4b061",
+      "mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+      "mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+      "mm_mixer_final/structural_ablations.py": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+      "mm_mixer_final/config.py": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+      "mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+      "mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+      "mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+      "dataset_runners/iemocap.py": "cc600122f4cd418c6c3c25b4fcae55c783340a8d519c1fef2cd34d2ecfb31ca5",
+      "vendor/iemocap/utterance_history/__init__.py": "7b240008b932cc785f2ac499a9d18f305ccdbf8fc6400b33eb2749053ef394da",
+      "vendor/iemocap/utterance_history/data.py": "6355fcafe867a2c187abfca459a88bc8b22fea166c530b36d95819b31ab23e2d",
+      "vendor/iemocap/utterance_history/model.py": "784a3a22095b0533122202c4f767b9338df1e385c6429ab85115aeff0160c6b8",
+      "vendor/iemocap/utterance_history/runner.py": "82d160e07de7fb41360227baa02f6df0189a88fc32a6c693da93c2a0b4bd50ae"
+    }
+  },
+  "checkpoint_source_comparison": {
+    "entries": [
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/dataset_runners/iemocap.py",
+        "current_relative_path": "dataset_runners/iemocap.py",
+        "recorded_sha256": "cc600122f4cd418c6c3c25b4fcae55c783340a8d519c1fef2cd34d2ecfb31ca5",
+        "current_sha256": "cc600122f4cd418c6c3c25b4fcae55c783340a8d519c1fef2cd34d2ecfb31ca5",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/__init__.py",
+        "current_relative_path": "mm_mixer_final/__init__.py",
+        "recorded_sha256": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+        "current_sha256": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/adapters.py",
+        "recorded_sha256": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/artifacts.py",
+        "current_relative_path": "mm_mixer_final/artifacts.py",
+        "recorded_sha256": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+        "current_sha256": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/audit.py",
+        "current_relative_path": "mm_mixer_final/audit.py",
+        "recorded_sha256": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+        "current_sha256": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/cli.py",
+        "recorded_sha256": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/config.py",
+        "current_relative_path": "mm_mixer_final/config.py",
+        "recorded_sha256": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+        "current_sha256": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/modalities.py",
+        "current_relative_path": "mm_mixer_final/modalities.py",
+        "recorded_sha256": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+        "current_sha256": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/revision_controls.py",
+        "current_relative_path": "mm_mixer_final/revision_controls.py",
+        "recorded_sha256": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+        "current_sha256": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/structural_ablations.py",
+        "current_relative_path": "mm_mixer_final/structural_ablations.py",
+        "recorded_sha256": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+        "current_sha256": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/run.py",
+        "recorded_sha256": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/__init__.py",
+        "recorded_sha256": "65e5ebf02299dd0379b534638a9eb34393724a7e18de8cd0a9918af3bef7631d",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/builder.py",
+        "recorded_sha256": "83481eec9201153d218f5ce06aa0c1edd5d8e8da3fdb6df8b32f6599ccfc20d2",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/e14.py",
+        "recorded_sha256": "dd816cf8aa218cd6c7231b9301e0d7d6da7d593e108c59fc0bb4cb55ce464f61",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/formal_runner.py",
+        "recorded_sha256": "a00d80ff6a048ac4bdab4d4e32d1ccf864cb4c3dab5653fc80cacb561182d293",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/lock.py",
+        "recorded_sha256": "d61abd256f5342fb6fb6a596f304d1869af01f57b9923467017b1ab8640c4642",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_01_12.py",
+        "recorded_sha256": "b4d1430f587618688eb08c43043cee1684542761c03cc8b78eaae8940fb4bcc9",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_13_24.py",
+        "recorded_sha256": "0e2e100e43cfaa2d85bd734356a70afb17d8659627bee68adda6246758455213",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_25_36.py",
+        "recorded_sha256": "e4c39bb03060efae5e0f02e80afbbad2b6ec7de4810083062577f016934d1645",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/modules_37_46.py",
+        "recorded_sha256": "cbe7c4fd14d90c94bb6594e7b47b68460e5d61b3b6f3c12b0121708bea1286a2",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/ablation48/registry.py",
+        "recorded_sha256": "f8327a52f638790a45782e8504af3bbf9d3bc5565a5691db6be623a8c98ed447",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/configs/textpeak_grid32/v27_lr30_wd20_fd10_mw45_auxt.json",
+        "recorded_sha256": "72a713d80f04a50a3c46e205311884dfd24e7826fb509fadb7cba7a7addb6472",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/multiattn.py",
+        "recorded_sha256": "98268db0b90f4acf807fcd7420fb304482995a209a2e2f15b93d921b790630bf",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/base/train_erc.py",
+        "recorded_sha256": "2c0e58a3fed3cdbca053020e640a2e6ff72891c2fa7f73f61220abb0cc5aad5c",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/__init__.py",
+        "current_relative_path": "vendor/iemocap/calibration/__init__.py",
+        "recorded_sha256": "78e8ed4950c33351edf605b505e3634f0d2bfe5966f2c8a08c499e3f8aaa61c6",
+        "current_sha256": "78e8ed4950c33351edf605b505e3634f0d2bfe5966f2c8a08c499e3f8aaa61c6",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/interventions.py",
+        "current_relative_path": "vendor/iemocap/calibration/interventions.py",
+        "recorded_sha256": "a1d490de7500bc2ca08565d9c7581221297d814a735138469759ba1e479266be",
+        "current_sha256": "a1d490de7500bc2ca08565d9c7581221297d814a735138469759ba1e479266be",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/model.py",
+        "current_relative_path": "vendor/iemocap/calibration/model.py",
+        "recorded_sha256": "24c47e61283319dfa695c43e55eddf66b7f991832eab87d9c21ff2683677446f",
+        "current_sha256": "24c47e61283319dfa695c43e55eddf66b7f991832eab87d9c21ff2683677446f",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/registry.py",
+        "current_relative_path": "vendor/iemocap/calibration/registry.py",
+        "recorded_sha256": "f10512f5ef6c4a61d9f258f1cc6ea56cd217c39b0aa49a750f207d9edcfbfb85",
+        "current_sha256": "f10512f5ef6c4a61d9f258f1cc6ea56cd217c39b0aa49a750f207d9edcfbfb85",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/roles.py",
+        "current_relative_path": "vendor/iemocap/calibration/roles.py",
+        "recorded_sha256": "59ccea8e91d082b3f43aaa724fe7f70dbd838dd6e0e78342dc5cc502660db2cf",
+        "current_sha256": "59ccea8e91d082b3f43aaa724fe7f70dbd838dd6e0e78342dc5cc502660db2cf",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/calibration/runner.py",
+        "current_relative_path": "vendor/iemocap/calibration/runner.py",
+        "recorded_sha256": "e11e2f0f71b6f2a1ca7b86d0fb5d9b33ac2efc0edd583ca541cbcbbf225e1fe5",
+        "current_sha256": "e11e2f0f71b6f2a1ca7b86d0fb5d9b33ac2efc0edd583ca541cbcbbf225e1fe5",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/data/fill53_dataset.py",
+        "recorded_sha256": "8db6c34aa1c28a98e945dad223802fdb71c5da9d3ec9249559e94b6024b07a24",
+        "status": "not_loaded_or_ambiguous"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/__init__.py",
+        "current_relative_path": "vendor/iemocap/factorized_mixer/__init__.py",
+        "recorded_sha256": "010bf8af87bb357467ff6bab2250558b6c9b54a552571fa2084def793e09644f",
+        "current_sha256": "010bf8af87bb357467ff6bab2250558b6c9b54a552571fa2084def793e09644f",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/model.py",
+        "current_relative_path": "vendor/iemocap/factorized_mixer/model.py",
+        "recorded_sha256": "dc61ad68ae7ac70a40b9749c1a0728d4566a5c9a30ed6288c8068a7e2de14be5",
+        "current_sha256": "dc61ad68ae7ac70a40b9749c1a0728d4566a5c9a30ed6288c8068a7e2de14be5",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/registry.py",
+        "current_relative_path": "vendor/iemocap/factorized_mixer/registry.py",
+        "recorded_sha256": "ecb07f9452bca9167a3e9cdd49bbb947f7c9de73a4d15b9aad13af90a8e06b20",
+        "current_sha256": "ecb07f9452bca9167a3e9cdd49bbb947f7c9de73a4d15b9aad13af90a8e06b20",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/factorized_mixer/runner.py",
+        "current_relative_path": "vendor/iemocap/factorized_mixer/runner.py",
+        "recorded_sha256": "56e6fb0cb7186893bffcdbdb25ef1c4307b54d2173c6160d209814d69be4b061",
+        "current_sha256": "56e6fb0cb7186893bffcdbdb25ef1c4307b54d2173c6160d209814d69be4b061",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/__init__.py",
+        "current_relative_path": "vendor/iemocap/peer_residual/__init__.py",
+        "recorded_sha256": "248de6a762eab1d2ec14d3551c6d06d33751ecac19cc3169c7a746e2d6c40e53",
+        "current_sha256": "248de6a762eab1d2ec14d3551c6d06d33751ecac19cc3169c7a746e2d6c40e53",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/model.py",
+        "current_relative_path": "vendor/iemocap/peer_residual/model.py",
+        "recorded_sha256": "9c1bbde1c2641ac02b532568dc416d6a620f25253ef1c14b128c35bf38b47846",
+        "current_sha256": "9c1bbde1c2641ac02b532568dc416d6a620f25253ef1c14b128c35bf38b47846",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/modules.py",
+        "current_relative_path": "vendor/iemocap/peer_residual/modules.py",
+        "recorded_sha256": "5caa433fdf543ad0426dddfb5f3be9e7777f57d54f5d966132b57cf921c86e95",
+        "current_sha256": "5caa433fdf543ad0426dddfb5f3be9e7777f57d54f5d966132b57cf921c86e95",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/registry.py",
+        "current_relative_path": "vendor/iemocap/peer_residual/registry.py",
+        "recorded_sha256": "dfbb9238f56f83ee2ce7f4e17e64a53f4c56b534fefd6180023b26a6ace06c9e",
+        "current_sha256": "dfbb9238f56f83ee2ce7f4e17e64a53f4c56b534fefd6180023b26a6ace06c9e",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/peer_residual/runner.py",
+        "current_relative_path": "vendor/iemocap/peer_residual/runner.py",
+        "recorded_sha256": "62761ab5aa772b4b31ca9d3216bf9e79ab68e0c8e2cbcf1153f94238065d2ade",
+        "current_sha256": "62761ab5aa772b4b31ca9d3216bf9e79ab68e0c8e2cbcf1153f94238065d2ade",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/structured_cross/__init__.py",
+        "current_relative_path": "vendor/iemocap/structured_cross/__init__.py",
+        "recorded_sha256": "d8cd93b90426fbbc627f9a452f63e0d893fd09c2fd372bc616b1c4928e57c99d",
+        "current_sha256": "d8cd93b90426fbbc627f9a452f63e0d893fd09c2fd372bc616b1c4928e57c99d",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/structured_cross/model.py",
+        "current_relative_path": "vendor/iemocap/structured_cross/model.py",
+        "recorded_sha256": "86e53b39f08aeab18c6b671b38595614dd4a35b621e80975cec71c34c603fdf4",
+        "current_sha256": "86e53b39f08aeab18c6b671b38595614dd4a35b621e80975cec71c34c603fdf4",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/__init__.py",
+        "current_relative_path": "vendor/iemocap/utterance_history/__init__.py",
+        "recorded_sha256": "7b240008b932cc785f2ac499a9d18f305ccdbf8fc6400b33eb2749053ef394da",
+        "current_sha256": "7b240008b932cc785f2ac499a9d18f305ccdbf8fc6400b33eb2749053ef394da",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/data.py",
+        "current_relative_path": "vendor/iemocap/utterance_history/data.py",
+        "recorded_sha256": "6355fcafe867a2c187abfca459a88bc8b22fea166c530b36d95819b31ab23e2d",
+        "current_sha256": "6355fcafe867a2c187abfca459a88bc8b22fea166c530b36d95819b31ab23e2d",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/model.py",
+        "current_relative_path": "vendor/iemocap/utterance_history/model.py",
+        "recorded_sha256": "784a3a22095b0533122202c4f767b9338df1e385c6429ab85115aeff0160c6b8",
+        "current_sha256": "784a3a22095b0533122202c4f767b9338df1e385c6429ab85115aeff0160c6b8",
+        "status": "match"
+      },
+      {
+        "recorded_path": "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/iemocap/utterance_history/runner.py",
+        "current_relative_path": "vendor/iemocap/utterance_history/runner.py",
+        "recorded_sha256": "82d160e07de7fb41360227baa02f6df0189a88fc32a6c693da93c2a0b4bd50ae",
+        "current_sha256": "82d160e07de7fb41360227baa02f6df0189a88fc32a6c693da93c2a0b4bd50ae",
+        "status": "match"
+      }
+    ],
+    "all_recorded_sources_match": false,
+    "interpretation": "Current-code timing of a strict-loaded checkpoint. Source differences are recorded; completed timing does not establish historical prediction/accuracy reproduction."
+  },
+  "finished_at_unix": 1791146367.520705
+}

@@ -1,0 +1,103 @@
+{
+  "artifact_sha256": {
+    "best_peak_test_state_dict.pt": "9b7d5980b43d2652f4768c543164100078ab1c0d800415361c2369f2ad6b09dc",
+    "classification_report.txt": "ee7bd8c5fef581a1f6a3477f10ca5fe1ad69984764589a4054470428c936e664",
+    "config.json": "5d44ecba4047a02a1679685b0e87cc26b6ce6d46fea4f92b9cc50f3a5eadce27",
+    "history.json": "a36178a3f026b4f5e931aea47f71ea3014b718e043c3576195564cfcbe54f6de",
+    "peak_test_metrics.json": "a81bbe98d7b634385b92ed3dfba8409915a9c8c0d111854b9c207268fa8bca03",
+    "peak_test_predictions.pt": "5b04ad4c819e37d4d4f3f7fd50e8c2541c896165df41da6b905b5bc39add8833"
+  },
+  "config_contract_sha256": "dba3b9cb4abb7ae2829537a28aae64cca3435f10074b0f5f46a4da5654170ba6",
+  "config_sha256": "433d5859b52d6c736eb501a5cedd082dd04bbbcf8c3a02bed1736b342e21caba",
+  "dataset": "meld",
+  "feature_hashes": {
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+    "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1"
+  },
+  "fresh_strict_replay_exact": true,
+  "runtime_audit": {
+    "active_modalities": [
+      "t",
+      "a",
+      "v"
+    ],
+    "architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "tokens": 6
+    },
+    "feature_paths": {
+      "dev": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+      },
+      "test": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+      },
+      "train": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+      }
+    },
+    "input_dims": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "learning_rates": {
+      "classifier": 4.166565345296421e-05,
+      "mixer": 2.0832826726482106e-05,
+      "projection": 1.0416413363241053e-05,
+      "remaining": 2.0832826726482106e-05
+    },
+    "loss": {
+      "aux_class_weight": true,
+      "fixed_task_weights": {
+        "a": 1.0,
+        "main": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "focal_gamma": 2.5,
+      "focal_probability_detached": false,
+      "kind": "meld_per_sample_focal_no_detach",
+      "main_class_weight": false,
+      "task_weighting": "fixed_unit"
+    },
+    "selection": "strict_peak_test_wf1"
+  },
+  "seed": 2069,
+  "selection": "strict_peak_test_wf1",
+  "source_hashes": {
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/dataset_runners/meld.py": "1e86e4f47261e88b7591bc7e1f7ba6b78418c2c3f8bc209f4b57745b370c2694",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/adapters.py": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/cli.py": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/config.py": "54aa6bcf0efe3079365ecca616c331d64dcda3d9d00823ed17df2eedfe12dfb4",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/mm_mixer_final/structural_ablations.py": "cac72c4b39e5802aca480b239c7018d0ef5e26c3cd09241f6be38c321583d7f1",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/run.py": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/configs/config_meld_rawaux_s15m.json": "5635a1eed0eba2a7a979166620e2f873cfdda8c92d6e791f420aa9bf49b0ea2b",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/layerwise_objectives.py": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/model.py": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/train_erc.py": "0f6f51ad5c76372a6f9b5eda3a548647fc30cd81adf3a98bfe648adf93139c1e",
+    "/data2/yb/multimodalERC/MM_Mixer_Revision_20261003/code/revision_1b8b1ff/vendor/meld/variant_override.py": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae"
+  },
+  "variant": "full"
+}
