@@ -1,0 +1,75 @@
+{
+  "status": "waiting_for_idle_gpu",
+  "gpu_uuid": "GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4",
+  "server": "biggpu",
+  "pid": 936168,
+  "started_at": 1791300193.294819,
+  "jobs": {
+    "dialoguernn_iemocap": {
+      "status": "pending"
+    },
+    "dialoguernn_meld": {
+      "status": "pending"
+    },
+    "ada2i_iemocap": {
+      "status": "pending"
+    },
+    "ada2i_meld": {
+      "status": "pending"
+    },
+    "mmgcn_iemocap": {
+      "status": "pending"
+    },
+    "mmgcn_meld": {
+      "status": "pending"
+    },
+    "mmdfn_iemocap": {
+      "status": "pending"
+    },
+    "mmdfn_meld": {
+      "status": "pending"
+    },
+    "m3net_iemocap": {
+      "status": "pending"
+    },
+    "m3net_meld": {
+      "status": "pending"
+    },
+    "sdt_iemocap": {
+      "status": "pending"
+    },
+    "sdt_meld": {
+      "status": "pending"
+    },
+    "css_iemocap": {
+      "status": "pending"
+    },
+    "css_meld": {
+      "status": "pending"
+    },
+    "ecerc_iemocap": {
+      "status": "pending"
+    },
+    "ecerc_meld": {
+      "status": "pending"
+    },
+    "confilmer_iemocap": {
+      "status": "pending"
+    },
+    "confilmer_meld": {
+      "status": "pending"
+    }
+  },
+  "gpu_last_observation": {
+    "index": 2,
+    "uuid": "GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4",
+    "utilization": 100,
+    "memory_used_mib": 24814,
+    "processes": [
+      "GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4, 3885825, 24802 MiB"
+    ],
+    "idle": false
+  },
+  "next_job": "dialoguernn_iemocap",
+  "updated_at": 1791300377.9411385
+}

@@ -1,0 +1,183 @@
+{
+  "status": "cpu_smoke_passed",
+  "model": "mmgcn",
+  "dataset": "iemocap",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "script_sha256": {
+    "run_queue.py": "5f2f8e27cbfe7a70dd75e2af9e7bf60471169b0e0ef16b6bd2eb23b418324b01",
+    "adapters.py": "108471d67522df8e167e65c8636e3734ddf6c6a9cb2228302b0724141fcbb441",
+    "measure.py": "806a6d9ecec7f5471054435721e29dd12996d972da82abb98a6153e9bf097c81"
+  },
+  "target_ids_labels_sha256": "594b9edfc8ea49a04cdd4d4957b9807541bceb48051b046505cb6fb1ca88f133",
+  "provenance": {
+    "repo": "/data2/yb/paper/tsne_baselines_20260728/MMGCN",
+    "checkpoint": "/data2/yb/paper/tsne_baselines_20260728/results/mmgcn/iemocap/model.pt",
+    "weight_source": "trained_checkpoint",
+    "configuration": {
+      "wf1": 0.5693,
+      "acc": 0.5798,
+      "best_epoch": 17,
+      "seed": 27351
+    },
+    "batch_size_dialogues": 32,
+    "raw_format": "tuple"
+  },
+  "dialogues": [
+    {
+      "id": "Ses05F_impro08",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05M_impro02",
+      "original_length": 29,
+      "selected_length": 29
+    },
+    {
+      "id": "Ses05F_impro01",
+      "original_length": 44,
+      "selected_length": 44
+    },
+    {
+      "id": "Ses05F_script01_2",
+      "original_length": 28,
+      "selected_length": 28
+    },
+    {
+      "id": "Ses05F_impro05",
+      "original_length": 91,
+      "selected_length": 91
+    },
+    {
+      "id": "Ses05M_script01_2",
+      "original_length": 23,
+      "selected_length": 23
+    },
+    {
+      "id": "Ses05F_impro04",
+      "original_length": 84,
+      "selected_length": 84
+    },
+    {
+      "id": "Ses05M_impro08",
+      "original_length": 54,
+      "selected_length": 54
+    },
+    {
+      "id": "Ses05F_script03_2",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05F_script02_2",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05M_impro04",
+      "original_length": 75,
+      "selected_length": 75
+    },
+    {
+      "id": "Ses05M_script03_2",
+      "original_length": 64,
+      "selected_length": 64
+    },
+    {
+      "id": "Ses05M_impro05",
+      "original_length": 42,
+      "selected_length": 42
+    },
+    {
+      "id": "Ses05M_impro03",
+      "original_length": 58,
+      "selected_length": 58
+    },
+    {
+      "id": "Ses05M_script01_3",
+      "original_length": 43,
+      "selected_length": 43
+    },
+    {
+      "id": "Ses05F_impro02",
+      "original_length": 49,
+      "selected_length": 49
+    },
+    {
+      "id": "Ses05F_script02_1",
+      "original_length": 43,
+      "selected_length": 43
+    },
+    {
+      "id": "Ses05F_impro03",
+      "original_length": 83,
+      "selected_length": 83
+    },
+    {
+      "id": "Ses05F_impro06",
+      "original_length": 52,
+      "selected_length": 13
+    }
+  ],
+  "batches": [
+    {
+      "lengths": [
+        59,
+        29,
+        44,
+        28,
+        91,
+        23,
+        84,
+        54,
+        59,
+        59,
+        75,
+        64,
+        42,
+        58,
+        43,
+        49,
+        43,
+        83,
+        13
+      ],
+      "valid_utterances": 1000,
+      "padded_positions": 1729
+    }
+  ],
+  "valid_utterances": 1000,
+  "registered_parameters": 2702015,
+  "protocol": "Original test dialogue order; concatenate whole dialogues then retain only final dialogue prefix needed for exactly 1000. Re-collate all fields/masks and construct graphs in original model. No features re-extracted; upstream contextual embeddings unchanged. GPU resident inputs; default eval forward incl. executed diagnostics; no feature extraction/H2D; 20 warmup batches cycling the selected workload, 10 timed complete passes; synchronize before/after each pass.",
+  "smoke_validation": {
+    "valid_predictions": 59,
+    "logit_shape": [
+      59,
+      6
+    ],
+    "all_tensor_outputs_finite": true
+  },
+  "smoke_dialogue_utterances": 59,
+  "checkpoint_sha256": "cb73aa4611e024111d55ad751d53773af6603ae8d6e043bd3f49215a51c5ebea",
+  "source_sha256": {
+    "model_mm.py": "7ccc72f41f102af6b5ad0eba3e3e3576459cc5fd402ac78b012fb1e3a1150962",
+    "model_GCN.py": "586f0e572ca9dc90bb8f8d18ef73a70ea163e3b7e4ba5ec79bba8b3f8c46c087",
+    "train.py": "ae3b3d69b273801e55c93a5a0208a903012f5cc3a7119811d378e427fa8c9cdd",
+    "model.py": "fa2d17c9c2143a1baf1f0e9c7b79d308f9362bbf47bf4aa61e784b139ab854f5",
+    "dataloader.py": "0fa13d3478b8bb10395eb3d392437938ef07b4983dcdf979f06ee72b8c817f0d",
+    "export_checkpoint.py": "fc2fd6c382409d59cadcd8801fa7b99b35c368f4f5ffbb66f2c4fcb27c2de270",
+    "tests/test_cuda_visibility.py": "fa7f86d3547cd9c709c9d0e5b4e6d458734fe1efc857871dbda8ccc16dd743f4",
+    "tests/test_modality_diagonal_adjacency.py": "8c2ef743961968629fd92c0ccc6b3dd226df98b6af04bd6cb00d4024cf4f8062",
+    "tests/test_run_record_support.py": "1efe8f85c9ee0a8577abf9eb50661c556400fb171165649183091323c4f8af84",
+    "tests/test_causal_history.py": "bf7ac32c594d5237b3045083c76cfc299a11c937235af39639748e74a61230e7",
+    "tests/test_import_without_ipdb.py": "c7a34171d7d1ebd6db5900ed4e1ae8e1ffc19caf4e4b5e4dfb7cb5b53bb19083"
+  },
+  "feature_sha256": {
+    "/data2/yb/paper/tsne_baselines_20260728/MMGCN/IEMOCAP_features/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+  }
+}

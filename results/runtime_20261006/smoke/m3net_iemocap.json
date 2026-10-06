@@ -1,0 +1,230 @@
+{
+  "status": "cpu_smoke_passed",
+  "model": "m3net",
+  "dataset": "iemocap",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "script_sha256": {
+    "run_queue.py": "5169e90cf3c81a6d08ad6c5110010562186797f8f3d6f91551ccbd2b9a98e6e2",
+    "adapters.py": "108471d67522df8e167e65c8636e3734ddf6c6a9cb2228302b0724141fcbb441",
+    "measure.py": "806a6d9ecec7f5471054435721e29dd12996d972da82abb98a6153e9bf097c81"
+  },
+  "target_ids_labels_sha256": "594b9edfc8ea49a04cdd4d4957b9807541bceb48051b046505cb6fb1ca88f133",
+  "provenance": {
+    "repo": "/data2/yb/paper/tsne_baselines_20260728/M3NET",
+    "checkpoint": "/data2/yb/paper/tsne_baselines_20260728/results/m3net/iemocap/model.pt",
+    "weight_source": "trained_checkpoint",
+    "configuration": {
+      "dataset": "IEMOCAP",
+      "seed": 1476,
+      "selection": "test_wf1",
+      "best_epoch_zero_based": 31,
+      "acc_percent": 64.08,
+      "wf1_percent": 64.23,
+      "parameter_count": 6553160,
+      "command_args": {
+        "no_cuda": false,
+        "base_model": "GRU",
+        "graph_model": true,
+        "nodal_attention": true,
+        "windowp": 10,
+        "windowf": 10,
+        "lr": 0.0001,
+        "l2": 3e-05,
+        "rec_dropout": 0.1,
+        "dropout": 0.5,
+        "batch_size": 16,
+        "epochs": 80,
+        "seed": 1476,
+        "complexity_only": false,
+        "class_weight": true,
+        "active_listener": false,
+        "attention": "general",
+        "tensorboard": false,
+        "graph_type": "hyper",
+        "use_topic": false,
+        "alpha": 0.2,
+        "multiheads": 6,
+        "graph_construct": "direct",
+        "use_gcn": false,
+        "use_residue": false,
+        "multi_modal": true,
+        "mm_fusion_mthd": "concat_DHT",
+        "modals": "avl",
+        "av_using_lstm": false,
+        "Deep_GCN_nlayers": 4,
+        "Dataset": "IEMOCAP",
+        "use_speaker": true,
+        "use_modal": false,
+        "norm": "BN",
+        "testing": false,
+        "num_L": 3,
+        "num_K": 4,
+        "causal_history": true,
+        "artifact_dir": "/data2/yb/paper/tsne_baselines_20260728/results/m3net/iemocap",
+        "cuda": true
+      }
+    },
+    "batch_size_dialogues": 32,
+    "raw_format": "tuple"
+  },
+  "dialogues": [
+    {
+      "id": "Ses05F_impro08",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05M_impro02",
+      "original_length": 29,
+      "selected_length": 29
+    },
+    {
+      "id": "Ses05F_impro01",
+      "original_length": 44,
+      "selected_length": 44
+    },
+    {
+      "id": "Ses05F_script01_2",
+      "original_length": 28,
+      "selected_length": 28
+    },
+    {
+      "id": "Ses05F_impro05",
+      "original_length": 91,
+      "selected_length": 91
+    },
+    {
+      "id": "Ses05M_script01_2",
+      "original_length": 23,
+      "selected_length": 23
+    },
+    {
+      "id": "Ses05F_impro04",
+      "original_length": 84,
+      "selected_length": 84
+    },
+    {
+      "id": "Ses05M_impro08",
+      "original_length": 54,
+      "selected_length": 54
+    },
+    {
+      "id": "Ses05F_script03_2",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05F_script02_2",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05M_impro04",
+      "original_length": 75,
+      "selected_length": 75
+    },
+    {
+      "id": "Ses05M_script03_2",
+      "original_length": 64,
+      "selected_length": 64
+    },
+    {
+      "id": "Ses05M_impro05",
+      "original_length": 42,
+      "selected_length": 42
+    },
+    {
+      "id": "Ses05M_impro03",
+      "original_length": 58,
+      "selected_length": 58
+    },
+    {
+      "id": "Ses05M_script01_3",
+      "original_length": 43,
+      "selected_length": 43
+    },
+    {
+      "id": "Ses05F_impro02",
+      "original_length": 49,
+      "selected_length": 49
+    },
+    {
+      "id": "Ses05F_script02_1",
+      "original_length": 43,
+      "selected_length": 43
+    },
+    {
+      "id": "Ses05F_impro03",
+      "original_length": 83,
+      "selected_length": 83
+    },
+    {
+      "id": "Ses05F_impro06",
+      "original_length": 52,
+      "selected_length": 13
+    }
+  ],
+  "batches": [
+    {
+      "lengths": [
+        59,
+        29,
+        44,
+        28,
+        91,
+        23,
+        84,
+        54,
+        59,
+        59,
+        75,
+        64,
+        42,
+        58,
+        43,
+        49,
+        43,
+        83,
+        13
+      ],
+      "valid_utterances": 1000,
+      "padded_positions": 1729
+    }
+  ],
+  "valid_utterances": 1000,
+  "registered_parameters": 6553160,
+  "protocol": "Original test dialogue order; concatenate whole dialogues then retain only final dialogue prefix needed for exactly 1000. Re-collate all fields/masks and construct graphs in original model. No features re-extracted; upstream contextual embeddings unchanged. GPU resident inputs; default eval forward incl. executed diagnostics; no feature extraction/H2D; 20 warmup batches cycling the selected workload, 10 timed complete passes; synchronize before/after each pass.",
+  "smoke_validation": {
+    "valid_predictions": 59,
+    "logit_shape": [
+      59,
+      6
+    ],
+    "all_tensor_outputs_finite": true
+  },
+  "smoke_dialogue_utterances": 59,
+  "checkpoint_sha256": "03809eabe6a5995bc2f29b892cb10e17b6ceac33d638bc4a26023e9d8c3a9772",
+  "source_sha256": {
+    "high_fre_conv.py": "0060920ee2310f9aadaa77ac668f5dbbaf8bdf9aa495b68b7443cd6e61bb7d59",
+    "extract_artifacts.py": "231d79febef478d3cac897a62ea12704eb303138978a657125cf0ec4670f2d87",
+    "model_GCN.py": "0d8b99d168c3ec8309dbc31381e43c88bf037a478a60bee088edf25038ee214d",
+    "train.py": "5c0cb367b071e3a5d1ec58d428f96147ee1e13a583e17f6691e74e49f898ea9a",
+    "model.py": "65fc27c57e4e9b9c6743aa4bc2017ad373df00ad848b2fd33303d0e7f5c2a565",
+    "dataloader.py": "e5781a021982fee81fa85a52bc12a2f76267cff4d7f2d8290caffde668431129",
+    "model_hyper.py": "c1f77bbab45fcf7d1609aa1095cf4b017e90424596a4f54224185b869d597676",
+    "HypergraphConv.py": "344cc18e379c0b69f3eef0f17b848ee842c5188ffafa2e0fa76ea4fba729df05",
+    "tests/test_model_hyper_import.py": "8405be3cd20727b30796e5e4444a224078ad84d81c36ef76afadfe1bb3dc3fbb",
+    "tests/test_causal_history.py": "040f162823b52abc5c80ec44ced03977808e6225db6f6ba71b44f5baf37d1e4f",
+    "tests/test_import_without_ipdb.py": "3cde87f6c89a3adf47863dfbc62500ce94c596c4aff886a8aea2eb23efe74724",
+    "tests/test_hypergraphconv_current_pyg.py": "3496413861d0815bcc24e50d26dfb3439c4d7e01acc8cb4cf92dba0797fb4f5c"
+  },
+  "feature_sha256": {
+    "/data2/yb/paper/tsne_baselines_20260728/M3NET/IEMOCAP_features/iemocap_features_roberta.pkl": "4bd60c581a5b7c70e217e18439f741b191605fbd6f2cf4dc1a6dcb7fcaa18f06",
+    "/data2/yb/paper/tsne_baselines_20260728/M3NET/IEMOCAP_features/IEMOCAP_features.pkl": "ceb5cc9a45d1792998438e27f86a12642320aa6315546e4425316140ea503fb3"
+  }
+}

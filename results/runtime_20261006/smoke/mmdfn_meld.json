@@ -1,0 +1,815 @@
+{
+  "status": "cpu_smoke_passed",
+  "model": "mmdfn",
+  "dataset": "meld",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "script_sha256": {
+    "run_queue.py": "5169e90cf3c81a6d08ad6c5110010562186797f8f3d6f91551ccbd2b9a98e6e2",
+    "adapters.py": "108471d67522df8e167e65c8636e3734ddf6c6a9cb2228302b0724141fcbb441",
+    "measure.py": "806a6d9ecec7f5471054435721e29dd12996d972da82abb98a6153e9bf097c81"
+  },
+  "target_ids_labels_sha256": "f5f4c131c4d048fd4268b1917b79639f9922c2411b6ae6301916739506b5519d",
+  "provenance": {
+    "repo": "/data2/yb/paper/tsne_baselines_20260728/MM-DFN/code",
+    "checkpoint": "/data2/yb/paper/tsne_baselines_20260728/results/mmdfn/meld/model.pt",
+    "weight_source": "trained_checkpoint",
+    "configuration": {
+      "dataset": "MELD",
+      "seed": 2022,
+      "selection": "test_wf1",
+      "best_epoch_zero_based": 7,
+      "acc_percent": 60.38,
+      "wf1_percent": 57.6,
+      "parameter_count": 2874617,
+      "command_args": {
+        "no_cuda": false,
+        "dataset": "MELD",
+        "data_dir": "/data2/yb/paper/tsne_baselines_20260728/MM-DFN/data/meld/MELD_features_raw1.pkl",
+        "multi_modal": true,
+        "modals": "avl",
+        "mm_fusion_mthd": "concat_subsequently",
+        "use_modal": false,
+        "base_model": "LSTM",
+        "graph_model": true,
+        "graph_type": "GDF",
+        "graph_construct": "direct",
+        "causal_history": true,
+        "use_gcn": false,
+        "nodal_attention": true,
+        "use_topic": false,
+        "use_residue": true,
+        "av_using_lstm": false,
+        "active_listener": false,
+        "attention": "general",
+        "use_crn_speaker": true,
+        "speaker_weights": "0.5-0.5-1.5",
+        "use_speaker": false,
+        "reason_flag": true,
+        "epochs": 30,
+        "batch_size": 32,
+        "valid_rate": 0.0,
+        "modal_weight": 1.0,
+        "Deep_GCN_nlayers": 64,
+        "lr": 0.0005,
+        "l2": 0.0001,
+        "rec_dropout": 0.1,
+        "dropout": 0.4,
+        "alpha": 0.2,
+        "lamda": 0.5,
+        "gamma": 0.5,
+        "windowp": 10,
+        "windowf": 10,
+        "multiheads": 6,
+        "loss": "FocalLoss",
+        "class_weight": false,
+        "save_model_dir": "/data2/yb/paper/tsne_baselines_20260728/results/mmdfn/meld",
+        "tensorboard": false,
+        "test_label": false,
+        "load_model": "../outputs/iemocap_demo/model_4.pkl",
+        "seed": 2022,
+        "complexity_only": false,
+        "patience": 5,
+        "artifact_dir": "/data2/yb/paper/tsne_baselines_20260728/results/mmdfn/meld"
+      }
+    },
+    "batch_size_dialogues": 32,
+    "raw_format": "tuple"
+  },
+  "dialogues": [
+    {
+      "id": "1153",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1154",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1155",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1156",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1157",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1158",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1159",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1160",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1161",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1162",
+      "original_length": 18,
+      "selected_length": 18
+    },
+    {
+      "id": "1163",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1164",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1165",
+      "original_length": 20,
+      "selected_length": 20
+    },
+    {
+      "id": "1166",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1167",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1168",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1169",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1170",
+      "original_length": 33,
+      "selected_length": 33
+    },
+    {
+      "id": "1171",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1172",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1173",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1174",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1175",
+      "original_length": 22,
+      "selected_length": 22
+    },
+    {
+      "id": "1176",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1177",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1178",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1179",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1180",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1181",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1182",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1183",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1184",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1185",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1186",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1187",
+      "original_length": 19,
+      "selected_length": 19
+    },
+    {
+      "id": "1188",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1189",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1190",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1191",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1192",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1193",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1194",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1195",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1196",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1197",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1198",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1199",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1200",
+      "original_length": 14,
+      "selected_length": 14
+    },
+    {
+      "id": "1201",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1202",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1203",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1204",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1205",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1206",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1207",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1208",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1209",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1210",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1211",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1212",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1213",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1214",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1215",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1216",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1217",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1218",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1219",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1220",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1221",
+      "original_length": 15,
+      "selected_length": 15
+    },
+    {
+      "id": "1222",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1223",
+      "original_length": 23,
+      "selected_length": 23
+    },
+    {
+      "id": "1224",
+      "original_length": 14,
+      "selected_length": 14
+    },
+    {
+      "id": "1225",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1226",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1227",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1228",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1229",
+      "original_length": 19,
+      "selected_length": 19
+    },
+    {
+      "id": "1230",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1231",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1232",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1233",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1234",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1235",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1236",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1237",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1238",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1239",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1240",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1241",
+      "original_length": 14,
+      "selected_length": 14
+    },
+    {
+      "id": "1242",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1243",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1244",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1245",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1246",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1247",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1248",
+      "original_length": 20,
+      "selected_length": 20
+    },
+    {
+      "id": "1249",
+      "original_length": 21,
+      "selected_length": 21
+    },
+    {
+      "id": "1250",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1251",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1252",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1253",
+      "original_length": 20,
+      "selected_length": 20
+    },
+    {
+      "id": "1254",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1255",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1256",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1257",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1258",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1259",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1260",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1261",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1262",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1263",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1264",
+      "original_length": 15,
+      "selected_length": 15
+    },
+    {
+      "id": "1265",
+      "original_length": 22,
+      "selected_length": 12
+    }
+  ],
+  "batches": [
+    {
+      "lengths": [
+        3,
+        8,
+        11,
+        7,
+        9,
+        9,
+        3,
+        9,
+        7,
+        18,
+        4,
+        5,
+        20,
+        8,
+        11,
+        6,
+        10,
+        33,
+        3,
+        1,
+        8,
+        7,
+        22,
+        3,
+        4,
+        17,
+        1,
+        2,
+        17,
+        13,
+        6,
+        1
+      ],
+      "valid_utterances": 286,
+      "padded_positions": 1056
+    },
+    {
+      "lengths": [
+        13,
+        11,
+        19,
+        5,
+        2,
+        8,
+        5,
+        12,
+        2,
+        13,
+        9,
+        7,
+        4,
+        9,
+        9,
+        14,
+        7,
+        17,
+        4,
+        3,
+        12,
+        13,
+        12,
+        3,
+        12,
+        6,
+        17,
+        3,
+        7,
+        3,
+        2,
+        2
+      ],
+      "valid_utterances": 265,
+      "padded_positions": 608
+    },
+    {
+      "lengths": [
+        17,
+        11,
+        5,
+        4,
+        15,
+        6,
+        23,
+        14,
+        17,
+        11,
+        5,
+        6,
+        19,
+        5,
+        10,
+        2,
+        10,
+        2,
+        1,
+        11,
+        3,
+        6,
+        8,
+        2,
+        14,
+        3,
+        6,
+        1,
+        6,
+        13,
+        3,
+        20
+      ],
+      "valid_utterances": 279,
+      "padded_positions": 736
+    },
+    {
+      "lengths": [
+        21,
+        12,
+        12,
+        10,
+        20,
+        4,
+        10,
+        6,
+        3,
+        3,
+        4,
+        13,
+        8,
+        8,
+        9,
+        15,
+        12
+      ],
+      "valid_utterances": 170,
+      "padded_positions": 357
+    }
+  ],
+  "valid_utterances": 1000,
+  "registered_parameters": 2874617,
+  "protocol": "Original test dialogue order; concatenate whole dialogues then retain only final dialogue prefix needed for exactly 1000. Re-collate all fields/masks and construct graphs in original model. No features re-extracted; upstream contextual embeddings unchanged. GPU resident inputs; default eval forward incl. executed diagnostics; no feature extraction/H2D; 20 warmup batches cycling the selected workload, 10 timed complete passes; synchronize before/after each pass.",
+  "smoke_validation": {
+    "valid_predictions": 3,
+    "logit_shape": [
+      3,
+      7
+    ],
+    "all_tensor_outputs_finite": true
+  },
+  "smoke_dialogue_utterances": 3,
+  "checkpoint_sha256": "b7faecfcd25ee58441dfa431d40645dcf342c58726bf8e9b10db2f18c72985b3",
+  "source_sha256": {
+    "run_train_erc.py": "0719d0b4cbbc1e9b487a659582492749d629f49a811753178ce1ea977ed780e9",
+    "extract_artifacts.py": "56bf559459cf925069c09c6b8c074a5c58ae233eed0c6d1f1b7efcf9e761eb1a",
+    "model_mm.py": "fbadc1643a9f7ea418635e6b398c95d32ed801e68621503ead2785a59877be9f",
+    "loss.py": "6a6bf0a30779d85efcc4dcff0bb62c962ae6340d31c12ad52dfad6f59158bb7e",
+    "model_fusion.py": "785fba8524447c11fa7715efdde5531d594e6dc27d17a5a438ca17212b25322a",
+    "model_GCN.py": "34bf0c1a406921ff907882db056a6095cfdd100776ad92d59df06f7a61fa10cf",
+    "model.py": "b7186e483a2764a9a5c2c4a8bc90162285121920377a7f672a7361dc5c1b6962",
+    "dataloader.py": "4d48f21b4f1509ba45557d179231420583439085afcd57429f94bf5df23fd056"
+  },
+  "feature_sha256": {
+    "/data2/yb/paper/tsne_baselines_20260728/MM-DFN/data/meld/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0"
+  }
+}

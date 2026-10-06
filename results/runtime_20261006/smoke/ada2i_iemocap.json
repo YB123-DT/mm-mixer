@@ -1,0 +1,285 @@
+{
+  "status": "cpu_smoke_passed",
+  "model": "ada2i",
+  "dataset": "iemocap",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "script_sha256": {
+    "run_queue.py": "5f2f8e27cbfe7a70dd75e2af9e7bf60471169b0e0ef16b6bd2eb23b418324b01",
+    "adapters.py": "108471d67522df8e167e65c8636e3734ddf6c6a9cb2228302b0724141fcbb441",
+    "measure.py": "806a6d9ecec7f5471054435721e29dd12996d972da82abb98a6153e9bf097c81"
+  },
+  "target_ids_labels_sha256": "7e107b457fbef8ebcd016b95a014dea17187c11c0dfe4e7767a1b923fa32cfc3",
+  "provenance": {
+    "repo": "/data2/yb/paper/tsne_baselines_20260728/Ada2I",
+    "checkpoint": "/data2/yb/paper/tsne_baselines_20260728/Ada2I/checkpoint/iemocap_causal_s13_best.pt",
+    "weight_source": "trained_checkpoint",
+    "configuration": {
+      "project": "erc-gm",
+      "dataset": "iemocap",
+      "emotion": null,
+      "devset_ratio": 0.1,
+      "modalities": "atv",
+      "data_dir_path": "data",
+      "seed": 13,
+      "checkpoint_path": "/data2/yb/paper/05_reproduction/runs/ERC/multiseed_20260723/ada2i_iemocap_causal_s13/best_f1.pt",
+      "optimizer": "adam",
+      "scheduler": "reduceLR",
+      "learning_rate": 0.00017,
+      "weight_decay": 1e-08,
+      "early_stopping": 20,
+      "batch_size": 32,
+      "epochs": 50,
+      "device": "cpu",
+      "modulation": true,
+      "alpha": 0.037,
+      "start_mod": 4,
+      "end_mod": 3000,
+      "normalize": true,
+      "comet": false,
+      "mmcosine": true,
+      "grad_clipping": false,
+      "grad_norm": 2.0,
+      "grad_norm_max": 2.0,
+      "encoder_modules": "transformer",
+      "encoder_nlayers": 2,
+      "mmt_nlayers": 2,
+      "tensor_rank": 11,
+      "beta": 0.012,
+      "nheads": 2,
+      "hidden_dim": 300,
+      "fusion": "concat",
+      "drop_rate": 0.5,
+      "no_mmt": false,
+      "causal_history": true,
+      "embedding_dim": {
+        "iemocap": {
+          "a": 512,
+          "t": 768,
+          "v": 1024
+        },
+        "mosei": {
+          "a": 512,
+          "t": 768,
+          "v": 1024
+        },
+        "meld": {
+          "a": 300,
+          "t": 768,
+          "v": 342
+        }
+      },
+      "dataset_label_dict": {
+        "iemocap": {
+          "hap": 0,
+          "sad": 1,
+          "neu": 2,
+          "ang": 3,
+          "exc": 4,
+          "fru": 5
+        },
+        "iemocap_4": {
+          "hap": 0,
+          "sad": 1,
+          "neu": 2,
+          "ang": 3
+        },
+        "meld": {
+          "neu": 0,
+          "sup": 1,
+          "fea": 2,
+          "sad": 3,
+          "joy": 4,
+          "dis": 5,
+          "ang": 6
+        },
+        "mosei7": {
+          "Strong Negative": 0,
+          "Weak Negative": 1,
+          "Negative": 2,
+          "Neutral": 3,
+          "Positive": 4,
+          "Weak Positive": 5,
+          "Strong Positive": 6
+        },
+        "mosei2": {
+          "Negative": 0,
+          "Positive": 1
+        }
+      },
+      "dataset_num_speakers": {
+        "iemocap": 2,
+        "iemocap_4": 2,
+        "mosei7": 1,
+        "mosei2": 1
+      }
+    },
+    "batch_size_dialogues": 32,
+    "raw_format": "ada2i"
+  },
+  "dialogues": [
+    {
+      "id": "Ses05F_impro05",
+      "original_length": 91,
+      "selected_length": 91
+    },
+    {
+      "id": "Ses05M_script01_2",
+      "original_length": 23,
+      "selected_length": 23
+    },
+    {
+      "id": "Ses05F_impro08",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05M_script02_2",
+      "original_length": 58,
+      "selected_length": 58
+    },
+    {
+      "id": "Ses05F_impro03",
+      "original_length": 83,
+      "selected_length": 83
+    },
+    {
+      "id": "Ses05M_script01_1",
+      "original_length": 52,
+      "selected_length": 52
+    },
+    {
+      "id": "Ses05M_impro01",
+      "original_length": 40,
+      "selected_length": 40
+    },
+    {
+      "id": "Ses05F_impro02",
+      "original_length": 49,
+      "selected_length": 49
+    },
+    {
+      "id": "Ses05M_script03_2",
+      "original_length": 64,
+      "selected_length": 64
+    },
+    {
+      "id": "Ses05F_impro06",
+      "original_length": 52,
+      "selected_length": 52
+    },
+    {
+      "id": "Ses05F_script02_1",
+      "original_length": 43,
+      "selected_length": 43
+    },
+    {
+      "id": "Ses05F_script01_2",
+      "original_length": 28,
+      "selected_length": 28
+    },
+    {
+      "id": "Ses05F_impro01",
+      "original_length": 44,
+      "selected_length": 44
+    },
+    {
+      "id": "Ses05M_impro04",
+      "original_length": 75,
+      "selected_length": 75
+    },
+    {
+      "id": "Ses05F_script02_2",
+      "original_length": 59,
+      "selected_length": 59
+    },
+    {
+      "id": "Ses05F_script01_1",
+      "original_length": 53,
+      "selected_length": 53
+    },
+    {
+      "id": "Ses05M_script01_3",
+      "original_length": 43,
+      "selected_length": 43
+    },
+    {
+      "id": "Ses05M_script02_1",
+      "original_length": 34,
+      "selected_length": 34
+    },
+    {
+      "id": "Ses05M_impro06",
+      "original_length": 28,
+      "selected_length": 28
+    },
+    {
+      "id": "Ses05M_script03_1",
+      "original_length": 43,
+      "selected_length": 22
+    }
+  ],
+  "batches": [
+    {
+      "lengths": [
+        91,
+        23,
+        59,
+        58,
+        83,
+        52,
+        40,
+        49,
+        64,
+        52,
+        43,
+        28,
+        44,
+        75,
+        59,
+        53,
+        43,
+        34,
+        28,
+        22
+      ],
+      "valid_utterances": 1000,
+      "padded_positions": 1820
+    }
+  ],
+  "valid_utterances": 1000,
+  "registered_parameters": 35670850,
+  "protocol": "Original test dialogue order; concatenate whole dialogues then retain only final dialogue prefix needed for exactly 1000. Re-collate all fields/masks and construct graphs in original model. No features re-extracted; upstream contextual embeddings unchanged. GPU resident inputs; default eval forward incl. executed diagnostics; no feature extraction/H2D; 20 warmup batches cycling the selected workload, 10 timed complete passes; synchronize before/after each pass.",
+  "smoke_validation": {
+    "valid_predictions": 91,
+    "logit_shape": [
+      91,
+      6
+    ],
+    "all_tensor_outputs_finite": true
+  },
+  "smoke_dialogue_utterances": 91,
+  "checkpoint_sha256": "b7728bde50ed81b9678540c3aa4d9dbb760bcd45d22e176b8473641c657ca407",
+  "source_sha256": {
+    "extract_ada2i.py": "618aa63e3aea8129ad05be1e6b34eae73a0b04f94fa2ad25866399c1399dac33",
+    "utils.py": "a207e6f4d53d7b0462ad2cc0d3d7c63fb301ca260e47f66b088c325a4db8741a",
+    "train.py": "f6b3d311d108cb81e7f1d89f934cedec3f8ec5ea1f68e2e500d4117d345f4619",
+    "dataloader.py": "cae4da51093cd5a9d87ed9d693a6c96fca33b61816a1acc245219adc0da20688",
+    "optimizer.py": "41c0ef8ee76b317fe2dba620e40c9aeb1c9e088b34d0b6cf215a3d49f80cb6df",
+    "model/utils.py": "1e61f39df90708f495349203905702302a9db40783882edd7b8406f7c4983c35",
+    "model/__init__.py": "a24bb790e37c5c1437b98f107fd93fc92c973655cafc3e2b3144c7129c19dab6",
+    "model/encoder.py": "227a54074ea71b905fe6d6c828a6b1b7197a0a1af6c8cecb27bebb246061bcc3",
+    "model/AFW.py": "e6e8e79e7bdece7850a990eb7f8b7390174303f08a00646d7a58fa004eaef45f",
+    "model/ada2i.py": "b7543b04f5b9d574b1101021471708d69ad55b2f06c6b29b9387a2c306a85d67",
+    "model/net.py": "3379a47f879b667ad71d6d8df0c7f88cc4471656b7b72fdaac9b461c69021007",
+    "tests/test_import_without_comet.py": "f64932a5cec9670ac073ba399b76d298bfb91dc35371fc18c729df791114ab8f",
+    "tests/test_causal_history.py": "af22d0fd963d65f2aba0a26482f2e3a5b1d7deeeee80238b38f4852b591e6ea4"
+  },
+  "feature_sha256": {
+    "/data2/yb/paper/tsne_baselines_20260728/Ada2I/data/iemocap/iemocap.pkl": "61c0a4290859d9d1c356ae16d6dfddade92f1064b6fea23cf1246baa6c181f0f"
+  }
+}

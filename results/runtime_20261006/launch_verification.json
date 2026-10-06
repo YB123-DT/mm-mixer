@@ -1,0 +1,41 @@
+{
+  "verified_at": "2026-10-06T15:26:43.396521+00:00",
+  "server": "biggpu",
+  "tmux_session": "mm_runtime_1000_20261006",
+  "pid": 936168,
+  "process_verified": true,
+  "remote_root": "/data2/yb/multimodalERC/MM_Mixer_Runtime_20261006",
+  "queue_status": "waiting_for_idle_gpu",
+  "gpu_uuid": "GPU-a8bb25f8-e771-1975-ef10-fdc0679488a4",
+  "formal_completed": 0,
+  "formal_total": 18,
+  "smoke_status": {
+    "ecerc_meld": "cpu_smoke_passed",
+    "sdt_iemocap": "cpu_smoke_passed",
+    "m3net_iemocap": "cpu_smoke_passed",
+    "css_iemocap": "cpu_smoke_passed",
+    "ecerc_iemocap": "cpu_smoke_passed",
+    "confilmer_meld": "cpu_smoke_passed",
+    "mmdfn_meld": "cpu_smoke_passed",
+    "dialoguernn_iemocap": "cpu_smoke_passed",
+    "confilmer_iemocap": "cpu_smoke_passed",
+    "dialoguernn_meld": "cpu_smoke_passed",
+    "sdt_meld": "cpu_smoke_passed",
+    "mmdfn_iemocap": "cpu_smoke_passed",
+    "css_meld": "cpu_smoke_passed",
+    "m3net_meld": "cpu_smoke_passed",
+    "ada2i_meld": "cpu_smoke_passed",
+    "mmgcn_iemocap": "cpu_smoke_passed",
+    "mmgcn_meld": "cpu_smoke_passed",
+    "ada2i_iemocap": "cpu_smoke_passed"
+  },
+  "confilmer_recovery": "CPU visibility corrected from empty string to -1; both corrective smoke runs passed; initial failed logs retained remotely.",
+  "code_sha256": {
+    "run_queue.py": "5169e90cf3c81a6d08ad6c5110010562186797f8f3d6f91551ccbd2b9a98e6e2",
+    "adapters.py": "108471d67522df8e167e65c8636e3734ddf6c6a9cb2228302b0724141fcbb441",
+    "measure.py": "806a6d9ecec7f5471054435721e29dd12996d972da82abb98a6153e9bf097c81",
+    "README.md": "df84d5171ced5fe9697082b0f3e61e483a40a4739dc69b50e400c2ac4d89b36b",
+    "smoke.sh": "667d0262c157e7efc4d45ab4a2fb6e32233fc9c7c3c4f8251a3ef98c428521b1"
+  },
+  "smoke_passed": 18
+}

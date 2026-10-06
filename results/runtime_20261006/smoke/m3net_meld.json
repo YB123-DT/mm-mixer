@@ -1,0 +1,812 @@
+{
+  "status": "cpu_smoke_passed",
+  "model": "m3net",
+  "dataset": "meld",
+  "device": "cpu",
+  "cpu_threads": 1,
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "cudnn": 8902,
+  "script_sha256": {
+    "run_queue.py": "5169e90cf3c81a6d08ad6c5110010562186797f8f3d6f91551ccbd2b9a98e6e2",
+    "adapters.py": "108471d67522df8e167e65c8636e3734ddf6c6a9cb2228302b0724141fcbb441",
+    "measure.py": "806a6d9ecec7f5471054435721e29dd12996d972da82abb98a6153e9bf097c81"
+  },
+  "target_ids_labels_sha256": "f5f4c131c4d048fd4268b1917b79639f9922c2411b6ae6301916739506b5519d",
+  "provenance": {
+    "repo": "/data2/yb/paper/tsne_baselines_20260728/M3NET",
+    "checkpoint": "/data2/yb/paper/tsne_baselines_20260728/results/m3net/meld/model.pt",
+    "weight_source": "trained_checkpoint",
+    "configuration": {
+      "dataset": "MELD",
+      "seed": 1476,
+      "selection": "test_wf1",
+      "best_epoch_zero_based": 8,
+      "acc_percent": 66.86,
+      "wf1_percent": 65.62,
+      "parameter_count": 14109769,
+      "command_args": {
+        "no_cuda": false,
+        "base_model": "GRU",
+        "graph_model": true,
+        "nodal_attention": true,
+        "windowp": 10,
+        "windowf": 10,
+        "lr": 0.0001,
+        "l2": 3e-05,
+        "rec_dropout": 0.1,
+        "dropout": 0.4,
+        "batch_size": 16,
+        "epochs": 15,
+        "seed": 1476,
+        "complexity_only": false,
+        "class_weight": true,
+        "active_listener": false,
+        "attention": "general",
+        "tensorboard": false,
+        "graph_type": "hyper",
+        "use_topic": false,
+        "alpha": 0.2,
+        "multiheads": 6,
+        "graph_construct": "direct",
+        "use_gcn": false,
+        "use_residue": false,
+        "multi_modal": true,
+        "mm_fusion_mthd": "concat_DHT",
+        "modals": "avl",
+        "av_using_lstm": false,
+        "Deep_GCN_nlayers": 4,
+        "Dataset": "MELD",
+        "use_speaker": true,
+        "use_modal": false,
+        "norm": "BN",
+        "testing": false,
+        "num_L": 3,
+        "num_K": 3,
+        "causal_history": true,
+        "artifact_dir": "/data2/yb/paper/tsne_baselines_20260728/results/m3net/meld",
+        "cuda": true
+      }
+    },
+    "batch_size_dialogues": 32,
+    "raw_format": "tuple"
+  },
+  "dialogues": [
+    {
+      "id": "1153",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1154",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1155",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1156",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1157",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1158",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1159",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1160",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1161",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1162",
+      "original_length": 18,
+      "selected_length": 18
+    },
+    {
+      "id": "1163",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1164",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1165",
+      "original_length": 20,
+      "selected_length": 20
+    },
+    {
+      "id": "1166",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1167",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1168",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1169",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1170",
+      "original_length": 33,
+      "selected_length": 33
+    },
+    {
+      "id": "1171",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1172",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1173",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1174",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1175",
+      "original_length": 22,
+      "selected_length": 22
+    },
+    {
+      "id": "1176",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1177",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1178",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1179",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1180",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1181",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1182",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1183",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1184",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1185",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1186",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1187",
+      "original_length": 19,
+      "selected_length": 19
+    },
+    {
+      "id": "1188",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1189",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1190",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1191",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1192",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1193",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1194",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1195",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1196",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1197",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1198",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1199",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1200",
+      "original_length": 14,
+      "selected_length": 14
+    },
+    {
+      "id": "1201",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1202",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1203",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1204",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1205",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1206",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1207",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1208",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1209",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1210",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1211",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1212",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1213",
+      "original_length": 7,
+      "selected_length": 7
+    },
+    {
+      "id": "1214",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1215",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1216",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1217",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1218",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1219",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1220",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1221",
+      "original_length": 15,
+      "selected_length": 15
+    },
+    {
+      "id": "1222",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1223",
+      "original_length": 23,
+      "selected_length": 23
+    },
+    {
+      "id": "1224",
+      "original_length": 14,
+      "selected_length": 14
+    },
+    {
+      "id": "1225",
+      "original_length": 17,
+      "selected_length": 17
+    },
+    {
+      "id": "1226",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1227",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1228",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1229",
+      "original_length": 19,
+      "selected_length": 19
+    },
+    {
+      "id": "1230",
+      "original_length": 5,
+      "selected_length": 5
+    },
+    {
+      "id": "1231",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1232",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1233",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1234",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1235",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1236",
+      "original_length": 11,
+      "selected_length": 11
+    },
+    {
+      "id": "1237",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1238",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1239",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1240",
+      "original_length": 2,
+      "selected_length": 2
+    },
+    {
+      "id": "1241",
+      "original_length": 14,
+      "selected_length": 14
+    },
+    {
+      "id": "1242",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1243",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1244",
+      "original_length": 1,
+      "selected_length": 1
+    },
+    {
+      "id": "1245",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1246",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1247",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1248",
+      "original_length": 20,
+      "selected_length": 20
+    },
+    {
+      "id": "1249",
+      "original_length": 21,
+      "selected_length": 21
+    },
+    {
+      "id": "1250",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1251",
+      "original_length": 12,
+      "selected_length": 12
+    },
+    {
+      "id": "1252",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1253",
+      "original_length": 20,
+      "selected_length": 20
+    },
+    {
+      "id": "1254",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1255",
+      "original_length": 10,
+      "selected_length": 10
+    },
+    {
+      "id": "1256",
+      "original_length": 6,
+      "selected_length": 6
+    },
+    {
+      "id": "1257",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1258",
+      "original_length": 3,
+      "selected_length": 3
+    },
+    {
+      "id": "1259",
+      "original_length": 4,
+      "selected_length": 4
+    },
+    {
+      "id": "1260",
+      "original_length": 13,
+      "selected_length": 13
+    },
+    {
+      "id": "1261",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1262",
+      "original_length": 8,
+      "selected_length": 8
+    },
+    {
+      "id": "1263",
+      "original_length": 9,
+      "selected_length": 9
+    },
+    {
+      "id": "1264",
+      "original_length": 15,
+      "selected_length": 15
+    },
+    {
+      "id": "1265",
+      "original_length": 22,
+      "selected_length": 12
+    }
+  ],
+  "batches": [
+    {
+      "lengths": [
+        3,
+        8,
+        11,
+        7,
+        9,
+        9,
+        3,
+        9,
+        7,
+        18,
+        4,
+        5,
+        20,
+        8,
+        11,
+        6,
+        10,
+        33,
+        3,
+        1,
+        8,
+        7,
+        22,
+        3,
+        4,
+        17,
+        1,
+        2,
+        17,
+        13,
+        6,
+        1
+      ],
+      "valid_utterances": 286,
+      "padded_positions": 1056
+    },
+    {
+      "lengths": [
+        13,
+        11,
+        19,
+        5,
+        2,
+        8,
+        5,
+        12,
+        2,
+        13,
+        9,
+        7,
+        4,
+        9,
+        9,
+        14,
+        7,
+        17,
+        4,
+        3,
+        12,
+        13,
+        12,
+        3,
+        12,
+        6,
+        17,
+        3,
+        7,
+        3,
+        2,
+        2
+      ],
+      "valid_utterances": 265,
+      "padded_positions": 608
+    },
+    {
+      "lengths": [
+        17,
+        11,
+        5,
+        4,
+        15,
+        6,
+        23,
+        14,
+        17,
+        11,
+        5,
+        6,
+        19,
+        5,
+        10,
+        2,
+        10,
+        2,
+        1,
+        11,
+        3,
+        6,
+        8,
+        2,
+        14,
+        3,
+        6,
+        1,
+        6,
+        13,
+        3,
+        20
+      ],
+      "valid_utterances": 279,
+      "padded_positions": 736
+    },
+    {
+      "lengths": [
+        21,
+        12,
+        12,
+        10,
+        20,
+        4,
+        10,
+        6,
+        3,
+        3,
+        4,
+        13,
+        8,
+        8,
+        9,
+        15,
+        12
+      ],
+      "valid_utterances": 170,
+      "padded_positions": 357
+    }
+  ],
+  "valid_utterances": 1000,
+  "registered_parameters": 14109769,
+  "protocol": "Original test dialogue order; concatenate whole dialogues then retain only final dialogue prefix needed for exactly 1000. Re-collate all fields/masks and construct graphs in original model. No features re-extracted; upstream contextual embeddings unchanged. GPU resident inputs; default eval forward incl. executed diagnostics; no feature extraction/H2D; 20 warmup batches cycling the selected workload, 10 timed complete passes; synchronize before/after each pass.",
+  "smoke_validation": {
+    "valid_predictions": 3,
+    "logit_shape": [
+      3,
+      7
+    ],
+    "all_tensor_outputs_finite": true
+  },
+  "smoke_dialogue_utterances": 3,
+  "checkpoint_sha256": "1a06d355b1b8d511aacecc33de78dd5d1a3a0fa4001c59122345a82a5123a37b",
+  "source_sha256": {
+    "high_fre_conv.py": "0060920ee2310f9aadaa77ac668f5dbbaf8bdf9aa495b68b7443cd6e61bb7d59",
+    "extract_artifacts.py": "231d79febef478d3cac897a62ea12704eb303138978a657125cf0ec4670f2d87",
+    "model_GCN.py": "0d8b99d168c3ec8309dbc31381e43c88bf037a478a60bee088edf25038ee214d",
+    "train.py": "5c0cb367b071e3a5d1ec58d428f96147ee1e13a583e17f6691e74e49f898ea9a",
+    "model.py": "65fc27c57e4e9b9c6743aa4bc2017ad373df00ad848b2fd33303d0e7f5c2a565",
+    "dataloader.py": "e5781a021982fee81fa85a52bc12a2f76267cff4d7f2d8290caffde668431129",
+    "model_hyper.py": "c1f77bbab45fcf7d1609aa1095cf4b017e90424596a4f54224185b869d597676",
+    "HypergraphConv.py": "344cc18e379c0b69f3eef0f17b848ee842c5188ffafa2e0fa76ea4fba729df05",
+    "tests/test_model_hyper_import.py": "8405be3cd20727b30796e5e4444a224078ad84d81c36ef76afadfe1bb3dc3fbb",
+    "tests/test_causal_history.py": "040f162823b52abc5c80ec44ced03977808e6225db6f6ba71b44f5baf37d1e4f",
+    "tests/test_import_without_ipdb.py": "3cde87f6c89a3adf47863dfbc62500ce94c596c4aff886a8aea2eb23efe74724",
+    "tests/test_hypergraphconv_current_pyg.py": "3496413861d0815bcc24e50d26dfb3439c4d7e01acc8cb4cf92dba0797fb4f5c"
+  },
+  "feature_sha256": {
+    "/data2/yb/paper/tsne_baselines_20260728/M3NET/MELD_features/MELD_features_raw1.pkl": "d043b3ec1813c8917e2067af01e933ff0892d33d19d93595098aaf88c4b200b0",
+    "/data2/yb/paper/tsne_baselines_20260728/M3NET/MELD_features/meld_features_roberta.pkl": "58b2bdadc2eaec6abb40ac0cb3ffa3f31e929d636ece8197aecf1ca373a92951"
+  }
+}
