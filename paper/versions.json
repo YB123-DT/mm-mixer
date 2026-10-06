@@ -251,17 +251,30 @@
     {
       "version": "v018",
       "description": "Future Work 独立成节并置于 Conclusion 前",
-      "source": "Main.tex",
+      "source": "archive/v018/Main.tex",
       "source_sha256": "469dbd117d99e97b3d7a775a08bd79c3b0185d9efbf4eab0f04531196b70aa6c",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v018/Main.pdf",
       "pdf_sha256": "0af66eef5e8ad743bdf4242224ce34a43be430e5220c03afcc145da809ff5e59",
       "pages": 14,
       "git_tag": "paper-v018",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v018"
+    },
+    {
+      "version": "v019",
+      "description": "补充 ECERC、ConFilMER 三种子各类别分数、参数量与 FLOPs",
+      "source": "Main.tex",
+      "source_sha256": "7a7dd634a9fdbe4a7a258784c005eef6126da04449cd413719c9cfd838fcaefc",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "7d6ece3daac3494b730e41bf5eb22c35d436e3c012cdbb6ca70f9fe3d31973f4",
+      "pages": 14,
+      "git_tag": "paper-v019",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v018",
+  "latest": "v019",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

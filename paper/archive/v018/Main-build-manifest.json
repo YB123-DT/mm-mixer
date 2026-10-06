@@ -1,10 +1,10 @@
 {
-  "version": "v019",
-  "date": "2026-10-06",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/baselines-v019 -jobname=Main Main.tex",
+  "version": "v018",
+  "date": "2026-10-05",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/future-v018 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "7a7dd634a9fdbe4a7a258784c005eef6126da04449cd413719c9cfd838fcaefc",
-    "aaai2027.bib": "051f5f468ce072d7408ac8204cea37a0e504673bc39e3d5bae53d88dacdacc09",
+    "Main.tex": "469dbd117d99e97b3d7a775a08bd79c3b0185d9efbf4eab0f04531196b70aa6c",
+    "aaai2027.bib": "56d6dbb69bf7d87363bda667664eaebff389f6e2416cfec409908b9257b0e969",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
     "01_amm_axis_mixing.pdf": "85f66eabec67fd2387249349d6e84fdabc15e48d0cfb4cb641914f0eb423ce00",
@@ -17,7 +17,7 @@
   "outputs": {
     "Main.pdf": {
       "pages": 14,
-      "sha256": "7d6ece3daac3494b730e41bf5eb22c35d436e3c012cdbb6ca70f9fe3d31973f4"
+      "sha256": "0af66eef5e8ad743bdf4242224ce34a43be430e5220c03afcc145da809ff5e59"
     }
   },
   "checks": {
@@ -26,31 +26,22 @@
     "no_overfull_boxes": true,
     "single_tex_entry": true,
     "archive_verified": true,
+    "only_future_and_conclusion_changed": true,
     "visual_verdict": {
       "score": 95,
       "verdict": "pass",
       "category_match": true,
       "differences": [
-        "Recent baseline classwise results and cost rows fit on page 7."
+        "Future Work is an independent section immediately before Conclusion on page 9."
       ],
       "suggestions": [],
-      "reasoning": "All four tables are readable without overlap or clipping.",
+      "reasoning": "Both headings and their paragraphs are readable, with no overlap or clipping.",
       "next_actions": []
     }
   },
-  "evidence": [
-    {
-      "path": "../results/baselines_20261006/summary.json",
-      "sha256": "24bda7e54cc3fa7c2fb90e1a91ed75c5fe5d6913a26d849ec7f07a03dca61db2"
-    },
-    {
-      "path": "../results/baselines_20261006/classwise.json",
-      "sha256": "123fefa0a5c79d4fe91bf5e95925c2aed76b372d1c153374d2d278cb8aca8be2"
-    },
-    {
-      "path": "../results/baselines_20261006/costs/summary.json",
-      "sha256": "2ec6aefa24106f0b0d5d0bea8c2452b1c93ddde38cb0e0b8355d3bb7bd36d9f9"
-    }
-  ],
-  "scope": "Add ECERC and ConFilMER three-seed classwise metrics, parameters and FLOPs with released-setting protocol disclosure."
+  "evidence": {
+    "path": "../results/flops_20261004/baseline_comparison.csv",
+    "sha256": "b168f1c7b18b603ab1ef33b5b6c4d78e9248372918d247408546c21070f71b18"
+  },
+  "scope": "Independent Future Work before Conclusion, with minority-emotion and cross-dataset directions; remove overlapping future sentences from Conclusion."
 }

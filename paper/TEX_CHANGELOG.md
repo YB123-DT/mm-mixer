@@ -173,3 +173,13 @@
 5. latexmk 编译成功，14 页，无未定义引用或 overfull；第 9 页 Future Work 位于 Conclusion 前，视觉检查通过。更新 PDF、编译清单、版本索引和操作记录。
 
 版本标签：paper-v018。
+
+## 2026-10-06 — v019：近期基线结果与复杂度
+
+- 修改 `Main.tex` 的 IEMOCAP/MELD 主结果表：加入 ECERC、ConFilMER 三种子各类别 F1、ACC、WF1，均为均值 ± 样本标准差。IEMOCAP 六类和 MELD 七类直接从已验证预测文件统计，见 `results/baselines_20261006/classwise.json`。
+- 新结果单列 released settings；Experiment Settings 说明沿用原特征及上下文，ConFilMER MELD 合并 train/dev，新增运行按 test WF1 选择 checkpoint。主比较 history-only 说明限定于原比较部分；表注排名限定于主比较。
+- 参数表新增 ECERC 5.98/5.81M、ConFilMER 8.14/14.13M；FLOPs 表新增 ECERC 24.08/30.31、ConFilMER 34.04/50.32 MFLOPs（IEMOCAP/MELD）。
+- FLOPs 为全测试集矩阵/卷积运算，2 FLOPs/MAC，含 padding 后除有效话语数；ECERC batch32、ConFilMER batch16。ConFilMER IEMOCAP 原权重的 1000 个 hyperedge 参数不支持 batch32，保持原模型，未扩展权重。四项计数 forward 与原始 forward 差异均为 0；完整证据见 `results/baselines_20261006/costs/`。
+- `aaai2027.bib` 增加 ConFilMER ICASSP 2025 引用；ECERC 复用原引用。
+- 修改前 v018 源码、PDF 和依赖按原字节归档至 `archive/v018/`，校验全部归档 SHA256。更新版本索引与构建清单。
+- latexmk 编译成功，完整稿 14 页，无 undefined references 或 overfull boxes；检查第 7 页四张表无裁切或重叠。

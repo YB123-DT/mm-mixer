@@ -752,17 +752,12 @@ MM-Mixer & $57.72{\pm}0.22$ & $\mathbf{84.14}{\pm}0.22$ &
 $\underline{71.81}{\pm}0.36$ & $\mathbf{71.59}{\pm}1.06$ &
 $74.04{\pm}1.12$ & $\mathbf{69.15}{\pm}0.38$ &
 $\mathbf{72.07}{\pm}0.15$ & $\mathbf{72.19}{\pm}0.12$ \\
-\midrule
-\multicolumn{9}{l}{\textit{Recent baselines under released settings}} \\
-ECERC~\cite{ecerc} & $57.35{\pm}1.02$ & $78.70{\pm}0.68$ & $69.58{\pm}1.88$ & $65.32{\pm}0.89$ & $77.67{\pm}2.70$ & $67.42{\pm}0.76$ & $70.24{\pm}0.67$ & $70.41{\pm}0.67$ \\
-ConFilMER~\cite{confilmer} & $48.83{\pm}4.61$ & $80.67{\pm}2.13$ & $69.44{\pm}1.38$ & $68.98{\pm}0.08$ & $75.53{\pm}0.85$ & $65.66{\pm}1.49$ & $69.52{\pm}0.82$ & $69.49{\pm}0.50$ \\
 \bottomrule
 \end{tabular}}
 \caption{Performance comparison on the IEMOCAP dataset. All
 entries are reported as mean $\pm$ standard deviation in percentages.
 The best and second-best means are shown in bold and underlined,
-respectively, within the main comparison. Additional rows use released
-settings described in Experiment Settings.}
+respectively.}
 \label{tab:iemocap_results}
 \end{table*}
 
@@ -809,17 +804,12 @@ $\mathbf{29.57}{\pm}1.94$ & $\mathbf{42.87}{\pm}0.59$ &
 $\mathbf{65.34}{\pm}0.59$ & $\mathbf{34.93}{\pm}3.86$ &
 $\mathbf{55.94}{\pm}0.55$ &
 $\mathbf{68.36}{\pm}0.25$ & $\mathbf{67.62}{\pm}0.23$ \\
-\midrule
-\multicolumn{10}{l}{\textit{Recent baselines under released settings}} \\
-ECERC~\cite{ecerc} & $79.84{\pm}0.14$ & $59.29{\pm}0.87$ & $16.29{\pm}8.55$ & $39.06{\pm}1.17$ & $63.83{\pm}0.30$ & $29.73{\pm}3.13$ & $53.12{\pm}0.35$ & $67.14{\pm}0.21$ & $65.86{\pm}0.44$ \\
-ConFilMER~\cite{confilmer} & $79.75{\pm}0.19$ & $59.38{\pm}0.56$ & $23.03{\pm}6.29$ & $39.82{\pm}0.82$ & $63.85{\pm}0.60$ & $25.39{\pm}4.20$ & $52.76{\pm}1.06$ & $67.01{\pm}0.18$ & $65.86{\pm}0.19$ \\
 \bottomrule
 \end{tabular}}
 \caption{Performance comparison on the MELD dataset. All
 entries are reported as mean $\pm$ standard deviation in percentages.
 The best and second-best means are shown in bold and underlined,
-respectively, within the main comparison. Additional rows use released
-settings described in Experiment Settings.}
+respectively.}
 \label{tab:meld_results}
 \end{table*}
 
@@ -838,8 +828,6 @@ M3Net & 6.55 & 14.11 \\
 Ada2I & 35.67 & 18.56 \\
 SDT & 79.69 & 78.39 \\
 CSS & 50.45 & 53.40 \\
-ECERC & 5.98 & 5.81 \\
-ConFilMER & 8.14 & 14.13 \\
 \midrule
 MM-Mixer & 6.36 & 5.71 \\
 \bottomrule
@@ -864,8 +852,6 @@ M3Net & 11.71 & 29.01 \\
 Ada2I & 124.89 & 87.94 \\
 SDT & 289.80 & 385.88 \\
 CSS & 200.96 & 286.10 \\
-ECERC & 24.08 & 30.31 \\
-ConFilMER & 34.04 & 50.32 \\
 \midrule
 MM-Mixer & 69.00 & 68.72 \\
 \bottomrule
@@ -892,10 +878,8 @@ MERC paradigms. First, DialogueRNN~\cite{dialoguernn} is a sequence-based model 
 MM-DFN~\cite{mmdfn}, and M3Net~\cite{m3net} are graph-based methods that model structural dependencies among utterances and modalities. Third, Ada2I~\cite{ada2i}, SDT~\cite{sdt}, and CSS~\cite{css} employ attention-based or specialized fusion mechanisms to exchange and
 integrate multimodal information. Together, these baselines cover recurrent context modeling, graph reasoning, and multimodal attention and fusion. For fair comparison, we retain their models with their released data, features, and hyperparameters to avoid introducing method-specific changes beyond the evaluated protocol.
 
-We additionally reproduce ECERC~\cite{ecerc} and ConFilMER~\cite{confilmer}, two 2025 baselines, with three seeds per dataset. These additional comparisons retain the released features and contextual access rather than imposing the history-only restriction; ConFilMER also uses the combined MELD training and development sets. Their results are therefore listed separately from the main comparison. We report test-WF1-selected checkpoints for these runs, with mean and sample standard deviation across the three seeds.
-
 \noindent\textbf{Evaluation metrics.}
-We report per-class F1, accuracy (ACC), and weighted F1 (WF1). ACC and WF1 serve as the main overall metrics. The main comparison is conducted under a history-only evaluation protocol in which, when predicting the emotion of utterance $u_t$, a model can only take  $u_{t}$ and
+We report per-class F1, accuracy (ACC), and weighted F1 (WF1). ACC and WF1 serve as the main overall metrics. Evaluation is conducted under a history-only evaluation protocol in which, when predicting the emotion of utterance $u_t$, a model can only take  $u_{t}$ and
 the dialogue history $\{u_1,\ldots,u_{t-1}\}$ as input.
 We use the full dialogue history, up to 109 preceding utterances on
 IEMOCAP and 32 on MELD.

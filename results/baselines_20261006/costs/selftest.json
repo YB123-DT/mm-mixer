@@ -1,0 +1,23 @@
+{
+  "server": "biggpu",
+  "device": "cpu",
+  "torch": "2.2.2+cu121",
+  "mkldnn_enabled": false,
+  "gru": {
+    "input_size": 3,
+    "hidden_size": 5,
+    "num_layers": 2,
+    "bidirectional": true,
+    "sequence_length": 7,
+    "batch_size": 2,
+    "expected_flops": 19320,
+    "measured_flops": 19320
+  },
+  "sparse_mm": {
+    "nnz": 3,
+    "output_width": 4,
+    "expected_flops": 24,
+    "measured_flops": 24,
+    "dense_parity": true
+  }
+}

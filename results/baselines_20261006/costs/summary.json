@@ -1,0 +1,38 @@
+[
+  {
+    "model": "ecerc",
+    "dataset": "iemocap",
+    "parameters": 5975310,
+    "mflops": 24.076099995070855,
+    "batch_size_dialogues": 32,
+    "valid_utterances": 1623,
+    "max_logit_difference": 0.0
+  },
+  {
+    "model": "ecerc",
+    "dataset": "meld",
+    "parameters": 5810187,
+    "mflops": 30.306251249042145,
+    "batch_size_dialogues": 32,
+    "valid_utterances": 2610,
+    "max_logit_difference": 0.0
+  },
+  {
+    "model": "confilmer",
+    "dataset": "iemocap",
+    "parameters": 8137288,
+    "mflops": 34.043401779420826,
+    "batch_size_dialogues": 16,
+    "valid_utterances": 1623,
+    "max_logit_difference": 0.0
+  },
+  {
+    "model": "confilmer",
+    "dataset": "meld",
+    "parameters": 14131273,
+    "mflops": 50.32026394482759,
+    "batch_size_dialogues": 16,
+    "valid_utterances": 2610,
+    "max_logit_difference": 0.0
+  }
+]
