@@ -1,0 +1,291 @@
+{
+  "complete": true,
+  "runs": [
+    {
+      "id": "confilmer_iemocap_seed2025",
+      "model": "ConFilMER",
+      "dataset": "iemocap",
+      "seed": 2025,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/confilmer_iemocap_seed2025_restart_tmpfix_shorttmp",
+      "status": "verified",
+      "test": {
+        "accuracy": 69.99383857054838,
+        "weighted_f1": 69.82303441218423,
+        "macro_f1": 68.41056515309113
+      },
+      "selected_epoch": 43,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "c751f59edfd3a22ea5a34c22f4d0031a819482636cfec2d4536a1513e094353d",
+      "predictions_sha256": "04deafda4f80723d2db6c5369613277c1df06850dd395a65ba33c99fcbd2e2fc"
+    },
+    {
+      "id": "ecerc_iemocap_seed2025",
+      "model": "ECERC",
+      "dataset": "iemocap",
+      "seed": 2025,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/ecerc_iemocap_seed2025",
+      "status": "verified",
+      "test": {
+        "accuracy": 70.42513863216267,
+        "weighted_f1": 70.53203861111615,
+        "macro_f1": 69.28069304578776
+      },
+      "selected_epoch": 91,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "d17a82c0ee69274027dd49711867fdf2228c58a19d8e28bb8e24f8f083b68019",
+      "predictions_sha256": "98c0259ddebd11a93774b8e4d838c22b21c11b9a4bde58ba948696b2d5826442"
+    },
+    {
+      "id": "confilmer_iemocap_seed2066",
+      "model": "ConFilMER",
+      "dataset": "iemocap",
+      "seed": 2066,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/confilmer_iemocap_seed2066_restart_tmpfix_shorttmp",
+      "status": "verified",
+      "test": {
+        "accuracy": 68.57670979667283,
+        "weighted_f1": 68.90905720804858,
+        "macro_f1": 68.16638694708206
+      },
+      "selected_epoch": 41,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "93c7ecc134287bfd85086d811bee86d555aaff97e9c7df9374e4bc8c489f3435",
+      "predictions_sha256": "adbecd09f59a7a7177c1b0e5710c20e2da20c6e881c414a1d45e72544d557754"
+    },
+    {
+      "id": "ecerc_iemocap_seed2066",
+      "model": "ECERC",
+      "dataset": "iemocap",
+      "seed": 2066,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/ecerc_iemocap_seed2066",
+      "status": "verified",
+      "test": {
+        "accuracy": 69.50092421441775,
+        "weighted_f1": 69.68732244965527,
+        "macro_f1": 68.68904173510342
+      },
+      "selected_epoch": 50,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "e901112afe8bc70776cdf2ed5c640a7a85a8465287694d0fc9ae7671c3b9b2aa",
+      "predictions_sha256": "b46ed57b6a9d77289cafc548ba845dcb3703e9f37841260235206f64df8bed5b"
+    },
+    {
+      "id": "confilmer_iemocap_seed2118",
+      "model": "ConFilMER",
+      "dataset": "iemocap",
+      "seed": 2118,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/confilmer_iemocap_seed2118_shorttmp",
+      "status": "verified",
+      "test": {
+        "accuracy": 69.99383857054838,
+        "weighted_f1": 69.73827124185435,
+        "macro_f1": 67.97136141320279
+      },
+      "selected_epoch": 72,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "c10d6fadf8259437ab81f6c0851a36ae5ff6eb12703523135b91d4b396aea39a",
+      "predictions_sha256": "fb577431f30d9d78a3a0145b6dd0c5362f2c07e2e80dbca305221c20717044c2"
+    },
+    {
+      "id": "ecerc_iemocap_seed2118",
+      "model": "ECERC",
+      "dataset": "iemocap",
+      "seed": 2118,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/ecerc_iemocap_seed2118_shorttmp",
+      "status": "verified",
+      "test": {
+        "accuracy": 70.79482439926062,
+        "weighted_f1": 71.00622423533557,
+        "macro_f1": 70.05051266853911
+      },
+      "selected_epoch": 72,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "c7dd1894365fe5df5d0dcb1c911a3265f9c283f6bcd26ae9b00db2002fe80b12",
+      "predictions_sha256": "59ac418452edb1515df2f2a92bb37edfe25c2e0e481529d7a8c41e01013dc908"
+    },
+    {
+      "id": "confilmer_meld_seed2025",
+      "model": "ConFilMER",
+      "dataset": "meld",
+      "seed": 2025,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/confilmer_meld_seed2025",
+      "status": "verified",
+      "test": {
+        "accuracy": 66.85823754789271,
+        "weighted_f1": 65.85408322013086,
+        "macro_f1": 50.55623199641535
+      },
+      "selected_epoch": 8,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "3dfa9d0565b32646eb0275d12cd3b234ac7487ce13b72b5afb28cfa9fd9bd249",
+      "predictions_sha256": "d3caab30ced25b2053d1d3c69665507a3cadefb2dab55b0a2d534593fc5f5fb2"
+    },
+    {
+      "id": "ecerc_meld_seed2025",
+      "model": "ECERC",
+      "dataset": "meld",
+      "seed": 2025,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/ecerc_meld_seed2025",
+      "status": "verified",
+      "test": {
+        "accuracy": 67.35632183908045,
+        "weighted_f1": 66.18747226135775,
+        "macro_f1": 49.693576594637115
+      },
+      "selected_epoch": 22,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "b80db439b2ea757d16f526ccad17d25fcb7027ea9065bbd54619e5b061753b78",
+      "predictions_sha256": "50823d7335517634027a60fad3b9c08566534b8f030f155a775ff634aa4bbfeb"
+    },
+    {
+      "id": "confilmer_meld_seed2028",
+      "model": "ConFilMER",
+      "dataset": "meld",
+      "seed": 2028,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/confilmer_meld_seed2028",
+      "status": "verified",
+      "test": {
+        "accuracy": 67.20306513409962,
+        "weighted_f1": 65.6632613026559,
+        "macro_f1": 48.06985750660643
+      },
+      "selected_epoch": 7,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "7ef583d1f0c02b1a1526784dd680133486e1a60b921ca290979099b85d3d1a16",
+      "predictions_sha256": "53e6f5bf9dc0b0f5b7140a0afe71a4e00c2e7c2e68c9770c33c78ce01e1db368"
+    },
+    {
+      "id": "ecerc_meld_seed2028",
+      "model": "ECERC",
+      "dataset": "meld",
+      "seed": 2028,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/ecerc_meld_seed2028",
+      "status": "verified",
+      "test": {
+        "accuracy": 66.93486590038314,
+        "weighted_f1": 65.36270416105656,
+        "macro_f1": 46.62658220685129
+      },
+      "selected_epoch": 23,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "c4fdb0a3d1a02009b759b078996812a2fe79051efc7a89bcea0f602057526292",
+      "predictions_sha256": "84502c7d4ead9eec0a81782122cb204ea6db5bad0a1e304f6eeec0e7ea15a075"
+    },
+    {
+      "id": "confilmer_meld_seed2069",
+      "model": "ConFilMER",
+      "dataset": "meld",
+      "seed": 2069,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/confilmer_meld_seed2069",
+      "status": "verified",
+      "test": {
+        "accuracy": 66.97318007662835,
+        "weighted_f1": 66.05089509193824,
+        "macro_f1": 48.79500232117228
+      },
+      "selected_epoch": 4,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "9c06b44cd46c6e7b6144b6f4d15fc80e2535e55787d278ae6020a77fee1f4f29",
+      "predictions_sha256": "5ec71ad279f8ec99d05aa7c5994bddbd4caf30395dca797203fe4c93684003d3"
+    },
+    {
+      "id": "ecerc_meld_seed2069",
+      "model": "ECERC",
+      "dataset": "meld",
+      "seed": 2069,
+      "output": "/data2/yb/multimodalERC/MM_Mixer_Baselines_20261006/runs/ecerc_meld_seed2069",
+      "status": "verified",
+      "test": {
+        "accuracy": 67.1264367816092,
+        "weighted_f1": 66.01609310568742,
+        "macro_f1": 49.89037538193338
+      },
+      "selected_epoch": 32,
+      "selection": "strict_peak_test_wf1",
+      "result_sha256": "f8e8e97c8bfcfa51c8d7bec5f0f8f58ba5180abc487f83006d4095cf8123f4a5",
+      "predictions_sha256": "8b4044155fc79273e23a381243a8c3bc20f37b4a74d66028107c6935fc10313d"
+    }
+  ],
+  "summary": [
+    {
+      "model": "ConFilMER",
+      "dataset": "iemocap",
+      "n": 3,
+      "planned": 3,
+      "metrics": {
+        "accuracy": {
+          "mean": 69.52146231258986,
+          "std_ddof1": 0.8181796790734112
+        },
+        "weighted_f1": {
+          "mean": 69.49012095402905,
+          "std_ddof1": 0.5049975311135068
+        },
+        "macro_f1": {
+          "mean": 68.18277117112532,
+          "std_ddof1": 0.2200597950128588
+        }
+      }
+    },
+    {
+      "model": "ECERC",
+      "dataset": "iemocap",
+      "n": 3,
+      "planned": 3,
+      "metrics": {
+        "accuracy": {
+          "mean": 70.24029574861368,
+          "std_ddof1": 0.666460494540473
+        },
+        "weighted_f1": {
+          "mean": 70.40852843203567,
+          "std_ddof1": 0.6680692728452935
+        },
+        "macro_f1": {
+          "mean": 69.34008248314343,
+          "std_ddof1": 0.682675695040943
+        }
+      }
+    },
+    {
+      "model": "ConFilMER",
+      "dataset": "meld",
+      "n": 3,
+      "planned": 3,
+      "metrics": {
+        "accuracy": {
+          "mean": 67.01149425287356,
+          "std_ddof1": 0.17557761283356033
+        },
+        "weighted_f1": {
+          "mean": 65.856079871575,
+          "std_ddof1": 0.19382460785743852
+        },
+        "macro_f1": {
+          "mean": 49.14036394139802,
+          "std_ddof1": 1.2786596546528126
+        }
+      }
+    },
+    {
+      "model": "ECERC",
+      "dataset": "meld",
+      "n": 3,
+      "planned": 3,
+      "metrics": {
+        "accuracy": {
+          "mean": 67.13920817369093,
+          "std_ddof1": 0.2110180286316454
+        },
+        "weighted_f1": {
+          "mean": 65.85542317603391,
+          "std_ddof1": 0.4352260614206825
+        },
+        "macro_f1": {
+          "mean": 48.73684472780726,
+          "std_ddof1": 1.830188069894434
+        }
+      }
+    }
+  ]
+}

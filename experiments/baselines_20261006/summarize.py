@@ -4,6 +4,11 @@ import hashlib
 import json
 from pathlib import Path
 import statistics
+import sys
+
+# The controller's historical filename queue.py must not shadow stdlib queue
+# when sklearn imports multiprocessing. This script needs no sibling imports.
+sys.path = [p for p in sys.path if Path(p).resolve() != Path(__file__).resolve().parent]
 
 import numpy as np
 from sklearn.metrics import accuracy_score, f1_score
