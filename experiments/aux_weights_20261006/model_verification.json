@@ -1,0 +1,88 @@
+[
+  {
+    "dataset": "iemocap",
+    "variant": "full",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6358082,
+    "initial_state_sha256": "38c82522c960ff7b6c5cbaddde781756378df6b9e4bddffeddec11869c8bbb08",
+    "logits_sha256": "bdd6d31c75ca4495e1c31660683aaa1c88af0db3fe9004a4acbc43256fbc03df",
+    "forward_backward_optimizer_update": "passed",
+    "original_commit_bitwise_regression": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "aux_half",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6358082,
+    "initial_state_sha256": "38c82522c960ff7b6c5cbaddde781756378df6b9e4bddffeddec11869c8bbb08",
+    "logits_sha256": "bdd6d31c75ca4495e1c31660683aaa1c88af0db3fe9004a4acbc43256fbc03df",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "aux_double",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6358082,
+    "initial_state_sha256": "38c82522c960ff7b6c5cbaddde781756378df6b9e4bddffeddec11869c8bbb08",
+    "logits_sha256": "bdd6d31c75ca4495e1c31660683aaa1c88af0db3fe9004a4acbc43256fbc03df",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "aux_equal",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6358082,
+    "initial_state_sha256": "38c82522c960ff7b6c5cbaddde781756378df6b9e4bddffeddec11869c8bbb08",
+    "logits_sha256": "bdd6d31c75ca4495e1c31660683aaa1c88af0db3fe9004a4acbc43256fbc03df",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "full",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6106825,
+    "initial_state_sha256": "43d09c77e5531a30d7f72936a0d21fe59d041c21baf4aba76c6aaf5853236f33",
+    "logits_sha256": "5160bde793ef2c7797fe1e139fba30b240ceab5c8dc5189e13e488f17d0ccecb",
+    "forward_backward_optimizer_update": "passed",
+    "original_commit_bitwise_regression": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "aux_half",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6106825,
+    "initial_state_sha256": "43d09c77e5531a30d7f72936a0d21fe59d041c21baf4aba76c6aaf5853236f33",
+    "logits_sha256": "5160bde793ef2c7797fe1e139fba30b240ceab5c8dc5189e13e488f17d0ccecb",
+    "forward_backward_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "aux_double",
+    "tokens": 6,
+    "subspace_hidden": 12,
+    "blocks": 2,
+    "feature_hidden": 1536,
+    "parameters": 6106825,
+    "initial_state_sha256": "43d09c77e5531a30d7f72936a0d21fe59d041c21baf4aba76c6aaf5853236f33",
+    "logits_sha256": "5160bde793ef2c7797fe1e139fba30b240ceab5c8dc5189e13e488f17d0ccecb",
+    "forward_backward_optimizer_update": "passed"
+  }
+]

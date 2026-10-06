@@ -1,0 +1,44 @@
+{
+  "original_full_loss_bitwise_equal": true,
+  "checks": [
+    {
+      "variant": "aux_half",
+      "weights": {
+        "main": 0.45,
+        "t": 0.165,
+        "a": 0.055,
+        "v": 0.055
+      },
+      "loss": 2.5042407512664795,
+      "expected": 2.5042407512664795,
+      "gradients": "finite_nonzero",
+      "effective_configuration": "verified"
+    },
+    {
+      "variant": "aux_double",
+      "weights": {
+        "main": 0.45,
+        "t": 0.66,
+        "a": 0.22,
+        "v": 0.22
+      },
+      "loss": 6.0767717361450195,
+      "expected": 6.0767717361450195,
+      "gradients": "finite_nonzero",
+      "effective_configuration": "verified"
+    },
+    {
+      "variant": "aux_equal",
+      "weights": {
+        "main": 0.45,
+        "t": 0.18333333333333335,
+        "a": 0.18333333333333335,
+        "v": 0.18333333333333335
+      },
+      "loss": 3.5120160579681396,
+      "expected": 3.5120160579681396,
+      "gradients": "finite_nonzero",
+      "effective_configuration": "verified"
+    }
+  ]
+}

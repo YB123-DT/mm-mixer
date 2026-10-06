@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-10-06T15:24:24.617694+00:00",
+  "server": "biggpu",
+  "shell_pid": 921128,
+  "queue_pid": 921415,
+  "queue_log": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/pipeline/queue.log",
+  "state_path": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/pipeline/state.json",
+  "counts": {
+    "queued": 13,
+    "running": 2
+  },
+  "gpus": [
+    {
+      "index": 7,
+      "uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e"
+    }
+  ],
+  "running_jobs": [
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "aux_half",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs"
+      ],
+      "dataset": "iemocap",
+      "gpu_host_index": 7,
+      "gpu_uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e",
+      "id": "iemocap/aux_half/seed2025",
+      "launch_provenance": {
+        "captured_at": "2026-10-06T15:22:30Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code/snapshot.json",
+          "sha256": "d195bc0a9e1d23f9bade63ccde88beb1367252ff6db9fc64176ff2eb644ead95"
+        }
+      },
+      "live_pids": [
+        921965,
+        923069
+      ],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/pipeline/logs/iemocap_aux_half_seed2025.log",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "pid": 921965,
+      "process_token": "4b04f5208107429abe96e5f7d3ac3d81",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs/iemocap/aux_half/seed2025",
+      "seed": 2025,
+      "start_ticks": "133851776",
+      "started_at": "2026-10-06T15:22:30Z",
+      "state": "running",
+      "variant": "aux_half"
+    },
+    {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "aux_half",
+        "--seed",
+        "2066",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs"
+      ],
+      "dataset": "iemocap",
+      "gpu_host_index": 7,
+      "gpu_uuid": "GPU-c38d9fe1-0b58-158f-a289-32d21e96df2e",
+      "id": "iemocap/aux_half/seed2066",
+      "launch_provenance": {
+        "captured_at": "2026-10-06T15:22:53Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code/snapshot.json",
+          "sha256": "d195bc0a9e1d23f9bade63ccde88beb1367252ff6db9fc64176ff2eb644ead95"
+        }
+      },
+      "live_pids": [
+        930185,
+        930971
+      ],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/pipeline/logs/iemocap_aux_half_seed2066.log",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "pid": 930185,
+      "process_token": "e81c9547f49e44cea23bdaf9bbd2c07f",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs/iemocap/aux_half/seed2066",
+      "seed": 2066,
+      "start_ticks": "133854176",
+      "started_at": "2026-10-06T15:22:53Z",
+      "state": "running",
+      "variant": "aux_half"
+    }
+  ],
+  "first_epoch_lines": {
+    "iemocap_aux_half_seed2066.log": [
+      "[fusion] Epoch   1/100 | Train Loss: 1.7175 F1: 0.1439 Acc: 0.1728 | Test Loss: 1.7611 F1: 0.0771 Acc: 0.1491"
+    ],
+    "iemocap_aux_half_seed2025.log": [
+      "[fusion] Epoch   1/100 | Train Loss: 1.7153 F1: 0.1706 Acc: 0.1874 | Test Loss: 1.7207 F1: 0.0965 Acc: 0.1294"
+    ]
+  },
+  "snapshot_sha256": "4cafbde8f2a577a7413d0eb6b2d05bb2eb047ee9af99e194ea7ea87dea1fd946",
+  "snapshot_verified": true,
+  "smoke_strict_replay_exact": true,
+  "formal_results_complete": false
+}

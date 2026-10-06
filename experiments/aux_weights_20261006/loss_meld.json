@@ -1,0 +1,31 @@
+{
+  "original_full_loss_bitwise_equal": true,
+  "checks": [
+    {
+      "variant": "aux_half",
+      "weights": {
+        "main": 1.0,
+        "t": 0.5,
+        "a": 0.5,
+        "v": 0.5
+      },
+      "loss": 9.789337158203125,
+      "expected": 9.789336204528809,
+      "gradients": "finite_nonzero",
+      "effective_configuration": "verified"
+    },
+    {
+      "variant": "aux_double",
+      "weights": {
+        "main": 1.0,
+        "t": 2.0,
+        "a": 2.0,
+        "v": 2.0
+      },
+      "loss": 27.778038024902344,
+      "expected": 27.77803611755371,
+      "gradients": "finite_nonzero",
+      "effective_configuration": "verified"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "matrix": "aux_weights",
+  "selection": "strict_peak_test_wf1",
+  "jobs": [
+    {
+      "dataset": "iemocap",
+      "variant": "aux_half",
+      "seed": 2025,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_half",
+      "seed": 2066,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_half",
+      "seed": 2118,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_double",
+      "seed": 2025,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_double",
+      "seed": 2066,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_double",
+      "seed": 2118,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_equal",
+      "seed": 2025,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_equal",
+      "seed": 2066,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "aux_equal",
+      "seed": 2118,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "meld",
+      "variant": "aux_half",
+      "seed": 2025,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "meld",
+      "variant": "aux_half",
+      "seed": 2028,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "meld",
+      "variant": "aux_half",
+      "seed": 2069,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "meld",
+      "variant": "aux_double",
+      "seed": 2025,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "meld",
+      "variant": "aux_double",
+      "seed": 2028,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    },
+    {
+      "dataset": "meld",
+      "variant": "aux_double",
+      "seed": 2069,
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/code",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AuxWeights_20261006/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python"
+    }
+  ]
+}

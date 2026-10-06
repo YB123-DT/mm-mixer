@@ -1,0 +1,123 @@
+--- a/dataset_runners/iemocap.py
++++ b/dataset_runners/iemocap.py
+@@ -38,6 +38,7 @@
+     optimizer_group_audit,
+     source_hashes,
+ )
++from mm_mixer_final.aux_weights import AUX_WEIGHT_VARIANTS, apply_weights
+ from mm_mixer_final.config import config_contract_sha256, get_config
+ from mm_mixer_final.revision_controls import (
+     NO_AUXILIARY_LOSS_VARIANTS,
+@@ -78,6 +79,7 @@
+         *MODALITY_VARIANTS,
+         *STRUCTURAL_ABLATION_VARIANTS,
+         *REVISION_CONTROL_VARIANTS,
++        *AUX_WEIGHT_VARIANTS,
+     }:
+         raise ValueError(f"unsupported IEMOCAP variant: {variant}")
+     apply_structural_ablation(model, variant)
+@@ -104,7 +106,7 @@
+             for name, weight in fixed["aux_loss_weights"].items()
+         }
+         fixed["normalize_aux_loss_weights"] = False
+-    return fixed
++    return apply_weights(fixed, "iemocap", variant)
+ 
+ 
+ def materialize_legacy_config(cfg, epochs: int, variant: str) -> MixerRunConfig:
+--- a/dataset_runners/meld.py
++++ b/dataset_runners/meld.py
+@@ -38,6 +38,7 @@
+     loaded_python_source_hashes,
+     source_hashes,
+ )
++from mm_mixer_final.aux_weights import AUX_WEIGHT_VARIANTS, apply_weights
+ from mm_mixer_final.config import config_contract_sha256, get_config
+ from mm_mixer_final.revision_controls import (
+     NO_AUXILIARY_LOSS_VARIANTS,
+@@ -61,6 +62,7 @@
+     **{variant: "M4_PAIR" for variant in MODALITY_VARIANTS},
+     **{variant: "M4_PAIR" for variant in STRUCTURAL_ABLATION_VARIANTS},
+     **{variant: "M4_PAIR" for variant in REVISION_CONTROL_VARIANTS},
++    **{variant: "M4_PAIR" for variant in AUX_WEIGHT_VARIANTS},
+ }
+ 
+ 
+@@ -96,6 +98,7 @@
+             for name, weight in fixed["aux_loss_weights"].items()
+             if name in enabled
+         }
++    fixed.update(apply_weights(fixed, "meld", variant))
+     config["runtime_audit"] = {
+         "selection": "strict_peak_test_wf1",
+         "architecture": cfg.mixer,
+--- /dev/null
++++ b/mm_mixer_final/aux_weights.py
+@@ -0,0 +1,19 @@
++"""Prespecified auxiliary-weight sensitivity; no normalization."""
++import copy
++AUX_WEIGHT_VARIANTS = ("aux_half", "aux_double", "aux_equal")
++def weights(dataset, variant):
++    value = {"main": .45, "t": .33, "a": .11, "v": .11} if dataset == "iemocap" else {"main": 1., "t": 1., "a": 1., "v": 1.}
++    if variant == "aux_equal":
++        if dataset != "iemocap": raise ValueError("MELD is already equal weighted")
++        value.update({m: .55 / 3 for m in ("t", "a", "v")})
++    elif variant in ("aux_half", "aux_double"):
++        scale = .5 if variant == "aux_half" else 2.
++        value.update({m: value[m] * scale for m in ("t", "a", "v")})
++    return value
++
++def apply_weights(fixed, dataset, variant):
++    if variant not in AUX_WEIGHT_VARIANTS: return fixed
++    fixed = copy.deepcopy(fixed)
++    w = weights(dataset, variant)
++    fixed.update(main_loss_weight=w["main"], aux_loss_weights={m:w[m] for m in ("t","a","v")}, normalize_aux_loss_weights=False)
++    return fixed
+--- a/mm_mixer_final/config.py
++++ b/mm_mixer_final/config.py
+@@ -6,6 +6,7 @@
+ from pathlib import Path
+ from typing import Any
+ 
++from .aux_weights import AUX_WEIGHT_VARIANTS, weights
+ from .modalities import MODALITY_VARIANTS
+ from .revision_controls import REVISION_CONTROL_VARIANTS
+ from .structural_ablations import STRUCTURAL_ABLATION_VARIANTS
+@@ -20,7 +21,7 @@
+     "no_cross_attention",
+     "no_auxiliary_loss",
+ )
+-RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS
++RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS + AUX_WEIGHT_VARIANTS
+ _SWITCHES = (
+     "no_mixer",
+     "no_pairwise",
+@@ -158,7 +159,11 @@
+     mixer = dict(base.mixer)
+     if variant == "single_projection_view":
+         mixer.update(tokens=1, subspace_hidden=2)
+-    return replace(base, variant=variant, seed=int(seed), switches=switches, mixer=mixer)
++    loss = dict(base.loss)
++    if variant in AUX_WEIGHT_VARIANTS:
++        loss["weights" if dataset == "iemocap" else "fixed_task_weights"] = weights(dataset, variant)
++        loss["task_weighting"] = "fixed_prespecified_aux_sensitivity"
++    return replace(base, variant=variant, seed=int(seed), switches=switches, mixer=mixer, loss=loss)
+ 
+ 
+ def config_contract_sha256(config: FinalConfig) -> str:
+--- a/vendor/meld/multiattn.py
++++ b/vendor/meld/multiattn.py
+@@ -3344,10 +3344,11 @@
+ 
+         # The effective historical objective was unit-weighted across tasks.
+         # Encode L_main + L_T + L_A + L_V directly.
+-        total_loss = weighted_main_loss
++        total_loss = weighted_main_loss if self.main_weight == 1.0 else self.main_weight * weighted_main_loss
+         for m, logits in aux_logits.items():
+             if m in self.aux_weights:
+-                total_loss += self.ce_loss(logits, targets)
++                aux_loss = self.ce_loss(logits, targets)
++                total_loss += aux_loss if self.aux_weights[m] == 1.0 else self.aux_weights[m] * aux_loss
+ 
+         if contrastive_loss is not None:
+             total_loss += self.contrastive_weight * contrastive_loss
