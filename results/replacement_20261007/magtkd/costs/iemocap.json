@@ -1,0 +1,246 @@
+{
+  "model": "MAGTKD",
+  "dataset": "iemocap",
+  "status": "completed",
+  "stage": "stage2_only",
+  "seed": 2025,
+  "device": "cpu",
+  "batch_size_dialogues": 16,
+  "counting_convention": "2 FLOPs per explicit matrix/convolution MAC. Excludes stage1/feature extraction, elementwise/norm/nonlinear/scatter, backward and losses. Includes complete released stage2 forward.",
+  "records": [
+    {
+      "batch": 0,
+      "valid_utterances": 860,
+      "padded_positions": 1456,
+      "lengths": [
+        64,
+        49,
+        40,
+        54,
+        44,
+        59,
+        59,
+        37,
+        43,
+        23,
+        42,
+        84,
+        83,
+        91,
+        29,
+        59
+      ],
+      "flops": 127368364032,
+      "max_abs_forward_difference": 0.0,
+      "counted_operators": {
+        "aten.mm": 39504052224,
+        "aten.bmm": 3663249408,
+        "aten.addmm": 84201062400
+      },
+      "observed_operator_calls": {
+        "aten.select": 32,
+        "aten.ones": 16,
+        "aten.mul": 25,
+        "aten._to_copy": 17,
+        "aten.slice": 46,
+        "aten.copy_": 16,
+        "aten.embedding": 1,
+        "aten.transpose": 48,
+        "aten.equal": 18,
+        "aten.add": 71,
+        "aten.eq": 9,
+        "aten.unsqueeze": 18,
+        "aten.t": 69,
+        "aten.clone": 59,
+        "aten._unsafe_view": 91,
+        "aten.mm": 23,
+        "aten.view": 137,
+        "aten.div": 9,
+        "aten.expand": 45,
+        "aten.bmm": 18,
+        "aten.masked_fill": 9,
+        "aten._softmax": 9,
+        "aten.detach": 27,
+        "aten.addmm": 46,
+        "aten.native_layer_norm": 9,
+        "aten.gelu": 9,
+        "aten.relu": 9,
+        "aten.sigmoid": 9,
+        "aten.cat": 3
+      }
+    },
+    {
+      "batch": 1,
+      "valid_utterances": 763,
+      "padded_positions": 1245,
+      "lengths": [
+        28,
+        34,
+        68,
+        44,
+        52,
+        28,
+        52,
+        58,
+        43,
+        75,
+        58,
+        43,
+        83,
+        44,
+        53
+      ],
+      "flops": 108635074560,
+      "max_abs_forward_difference": 0.0,
+      "counted_operators": {
+        "aten.mm": 33779220480,
+        "aten.bmm": 2857006080,
+        "aten.addmm": 71998848000
+      },
+      "observed_operator_calls": {
+        "aten.select": 30,
+        "aten.ones": 15,
+        "aten.mul": 24,
+        "aten._to_copy": 16,
+        "aten.slice": 45,
+        "aten.copy_": 15,
+        "aten.embedding": 1,
+        "aten.transpose": 48,
+        "aten.equal": 18,
+        "aten.add": 71,
+        "aten.eq": 9,
+        "aten.unsqueeze": 18,
+        "aten.t": 69,
+        "aten.clone": 59,
+        "aten._unsafe_view": 91,
+        "aten.mm": 23,
+        "aten.view": 137,
+        "aten.div": 9,
+        "aten.expand": 45,
+        "aten.bmm": 18,
+        "aten.masked_fill": 9,
+        "aten._softmax": 9,
+        "aten.detach": 27,
+        "aten.addmm": 46,
+        "aten.native_layer_norm": 9,
+        "aten.gelu": 9,
+        "aten.relu": 9,
+        "aten.sigmoid": 9,
+        "aten.cat": 3
+      }
+    }
+  ],
+  "checkpoint": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/runs/iemocap_seed2025/test_peak.pt",
+  "checkpoint_sha256": "480b2a3bf4174e39eae690dc9ae1c753d9ca806a1609704065e8fb7791f0ba28",
+  "training_result_sha256": "69b86e22f859c87184fc876fd366d715047585af77e458baa04c6663f352c590",
+  "torch": "2.2.2+cu121",
+  "counter_script_sha256": "82469f412e407d2ce7782260c82f5ccf62d038e54e29815d747ef8f8f6160171",
+  "source_sha256": {
+    "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/IEMOCAP/model.py": "c93bdd14beffccd11bae879b781117f8e354f9449237dd9c4cf706c3f4ee5303",
+    "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/IEMOCAP/dataset.py": "4fe55e51478948c0f901958f1798b2c783bbe968af4c2b455be836243fd2cf0e"
+  },
+  "parameters": 44332050,
+  "configuration": {
+    "model": "MAGTKD",
+    "dataset": "iemocap",
+    "seed": 2025,
+    "source_commit": "95d0760c26ad2a6ad2181daf372abfd5be348b2d",
+    "source_sha256": {
+      "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/IEMOCAP/model.py": "c93bdd14beffccd11bae879b781117f8e354f9449237dd9c4cf706c3f4ee5303",
+      "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/IEMOCAP/dataset.py": "4fe55e51478948c0f901958f1798b2c783bbe968af4c2b455be836243fd2cf0e",
+      "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/IEMOCAP/multimodel_fusion.py": "2e05563111b7bcb06f67839f8a71fedc232bf2aff08f8704ea89eeb8f9ade631",
+      "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/run.py": "73038be4b950a3da29b8d812e09d13eb4a80dbbc30e1a0c25ca38ee6cb23f43f"
+    },
+    "data": {
+      "train": {
+        "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_train_features.pkl",
+        "sha256": "b83ed5dfca6137e53f5b13424b11795d39e198beb9d9c09fc9c3b9573bc26b28",
+        "dialogues": 108,
+        "utterances": 5163,
+        "class_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "dev": {
+        "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_dev_features.pkl",
+        "sha256": "fc7c4e5bd2d8912cb48989c56895669e90db7197e4b0f9185fb3ddb4f71d51d5",
+        "dialogues": 12,
+        "utterances": 647,
+        "class_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "test": {
+        "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_test_features.pkl",
+        "sha256": "10c7020a7ead109e7025b9f34240bb3eaeec33a0ffa9b24fe22c002e0258c2ef",
+        "dialogues": 31,
+        "utterances": 1623,
+        "class_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "args": {
+      "lr": 0.0001,
+      "l2": 1e-06,
+      "batch_size": 16,
+      "seed": 2025,
+      "epochs": 30,
+      "dropout": 0.5,
+      "hidden_dim": 768,
+      "n_head": 8,
+      "temp": 2.0,
+      "clsNum": 6,
+      "train": true
+    },
+    "smoke": false,
+    "class_names": [
+      "anger",
+      "excited",
+      "frustrated",
+      "happy",
+      "neutral",
+      "sadness"
+    ],
+    "parameters": 44332050,
+    "selection": "strict_peak_test_wf1_rounded_2dp",
+    "stage1": "fixed official supervised-distilled features; not retrained per seed",
+    "scheduler_warmup_steps": 108,
+    "scheduler_total_steps": 3240,
+    "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+    "torch": "2.2.2+cu121",
+    "numpy": "1.24.3",
+    "device": "Tesla V100-SXM2-32GB",
+    "cuda_visible_devices": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+    "adaptations": [
+      "omit unused first-stage transformers imports",
+      "HF linear scheduler reproduced algebraically",
+      "num_workers=0 for existing host resource limits",
+      "isolated outputs/full-precision prediction export/strict replay"
+    ]
+  },
+  "feature": {
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_test_features.pkl",
+    "sha256": "10c7020a7ead109e7025b9f34240bb3eaeec33a0ffa9b24fe22c002e0258c2ef"
+  },
+  "valid_utterances": 1623,
+  "total_flops": 236003438592,
+  "mflops_per_utterance": 145.41185372273569,
+  "cpu_predictions_match_saved": true,
+  "cpu_accuracy": 68.26863832409119
+}

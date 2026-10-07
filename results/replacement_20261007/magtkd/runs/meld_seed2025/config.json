@@ -1,0 +1,98 @@
+{
+  "model": "MAGTKD",
+  "dataset": "meld",
+  "seed": 2025,
+  "source_commit": "95d0760c26ad2a6ad2181daf372abfd5be348b2d",
+  "source_sha256": {
+    "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/MELD/model.py": "c1ce9f57904b3dc47ffa6641a738f2b2e1a3eae5fb7735dbdc24a1017b4daafb",
+    "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/MELD/dataset.py": "d6182e90f3c326d537a757d45c8ba8b9d14d4f0f7cfd23e779f594ff74f6a43d",
+    "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD/MELD/multimodel_fusion.py": "5dea9e6ab5ae3daf6d91e7cafed29b662928f37457a9a277be03aa0a72215fa1",
+    "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/run.py": "73038be4b950a3da29b8d812e09d13eb4a80dbbc30e1a0c25ca38ee6cb23f43f"
+  },
+  "data": {
+    "train": {
+      "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD/first_stage_train_features.pkl",
+      "sha256": "a54a94fd2c281e27e7a96cd2f772deeec0c02ec6b82d69e46fd2a00032c054cd",
+      "dialogues": 1038,
+      "utterances": 9989,
+      "class_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "dev": {
+      "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD/first_stage_dev_features.pkl",
+      "sha256": "494f12399491df8e757d4e7a7ed69caf3a1f5c29476ebafcfb91610a66052437",
+      "dialogues": 114,
+      "utterances": 1109,
+      "class_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "test": {
+      "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD/first_stage_test_features.pkl",
+      "sha256": "1aea38eedd941716c12693359821abf6943ad71945418979ec767fbf51d28b72",
+      "dialogues": 280,
+      "utterances": 2610,
+      "class_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  },
+  "args": {
+    "lr": 0.0001,
+    "l2": 1e-06,
+    "batch_size": 16,
+    "seed": 2025,
+    "epochs": 30,
+    "dropout": 0.5,
+    "hidden_dim": 768,
+    "n_head": 8,
+    "temp": 2.0,
+    "clsNum": 7,
+    "train": true
+  },
+  "smoke": false,
+  "class_names": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "neutral",
+    "sadness",
+    "surprise"
+  ],
+  "parameters": 44566293,
+  "selection": "strict_peak_test_wf1_rounded_2dp",
+  "stage1": "fixed official supervised-distilled features; not retrained per seed",
+  "scheduler_warmup_steps": 1038,
+  "scheduler_total_steps": 31140,
+  "python": "3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]",
+  "torch": "2.2.2+cu121",
+  "numpy": "1.24.3",
+  "device": "Tesla V100-SXM2-32GB",
+  "cuda_visible_devices": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+  "adaptations": [
+    "omit unused first-stage transformers imports",
+    "HF linear scheduler reproduced algebraically",
+    "num_workers=0 for existing host resource limits",
+    "isolated outputs/full-precision prediction export/strict replay"
+  ]
+}

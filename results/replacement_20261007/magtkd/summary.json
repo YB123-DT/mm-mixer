@@ -1,0 +1,327 @@
+{
+  "complete": true,
+  "missing": [],
+  "groups": [
+    {
+      "dataset": "iemocap",
+      "seeds": [
+        2025,
+        2066,
+        2118
+      ],
+      "class_names": [
+        "anger",
+        "excited",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sadness"
+      ],
+      "parameters": 44332050,
+      "n": 3,
+      "accuracy": {
+        "mean": 68.82316697473813,
+        "sample_std": 0.5043347364061866
+      },
+      "weighted_f1": {
+        "mean": 69.06104062370918,
+        "sample_std": 0.46929485698002393
+      },
+      "class_f1": {
+        "mean": [
+          68.09695889123249,
+          69.7804229780974,
+          68.4132842707574,
+          57.423537307044064,
+          66.91935844821421,
+          80.05614337482523
+        ],
+        "sample_std": [
+          0.9289501590911649,
+          0.28906272820440676,
+          0.4591220243796532,
+          1.7877106139712255,
+          0.30537982281157267,
+          0.4950731104032957
+        ]
+      }
+    },
+    {
+      "dataset": "meld",
+      "seeds": [
+        2025,
+        2028,
+        2069
+      ],
+      "class_names": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "neutral",
+        "sadness",
+        "surprise"
+      ],
+      "parameters": 44566293,
+      "n": 3,
+      "accuracy": {
+        "mean": 65.72158365261814,
+        "sample_std": 0.022120699968949827
+      },
+      "weighted_f1": {
+        "mean": 64.71347344642433,
+        "sample_std": 0.18437265137119316
+      },
+      "class_f1": {
+        "mean": [
+          51.84901319095666,
+          32.97491039426524,
+          18.010413110276545,
+          61.0129558069742,
+          78.94451785991555,
+          39.909513509594234,
+          56.54355909434319
+        ],
+        "sample_std": [
+          0.3671149618465323,
+          0.6208067410641153,
+          2.4640087858099107,
+          0.768455752795844,
+          0.07609819928517277,
+          0.6648595875923008,
+          0.208483177838023
+        ]
+      }
+    }
+  ],
+  "runs": [
+    {
+      "status": "completed",
+      "smoke_only": false,
+      "model": "MAGTKD",
+      "dataset": "iemocap",
+      "seed": 2025,
+      "epochs_completed": 30,
+      "selected_epoch": 17,
+      "parameters": 44332050,
+      "checkpoint_predictions_verified": true,
+      "replay_mode": "fresh_model_same_process",
+      "samples": 1623,
+      "class_names": [
+        "anger",
+        "excited",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sadness"
+      ],
+      "test": {
+        "accuracy": 68.26863832409119,
+        "weighted_f1": 68.53967112621791,
+        "class_f1": [
+          67.08074534161491,
+          69.4980694980695,
+          67.90123456790123,
+          55.42168674698795,
+          67.00379266750947,
+          79.49260042283298
+        ]
+      },
+      "cuda_peak_allocated_bytes": 1368291840,
+      "smoke_updated_parameters": null,
+      "predictions_sha256": "755b02d8fb875e9787ee67070713115e8eeecd1e30e9b49bca2c5bd19352026b",
+      "checkpoint_sha256": "480b2a3bf4174e39eae690dc9ae1c753d9ca806a1609704065e8fb7791f0ba28"
+    },
+    {
+      "status": "completed",
+      "smoke_only": false,
+      "model": "MAGTKD",
+      "dataset": "meld",
+      "seed": 2025,
+      "epochs_completed": 30,
+      "selected_epoch": 11,
+      "parameters": 44566293,
+      "checkpoint_predictions_verified": true,
+      "replay_mode": "fresh_model_same_process",
+      "samples": 2610,
+      "class_names": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "neutral",
+        "sadness",
+        "surprise"
+      ],
+      "test": {
+        "accuracy": 65.74712643678161,
+        "weighted_f1": 64.5094602974886,
+        "class_f1": [
+          52.10608424336974,
+          33.333333333333336,
+          15.84158415841584,
+          60.1889338731444,
+          78.85672407475266,
+          39.76945244956773,
+          56.30712979890311
+        ]
+      },
+      "cuda_peak_allocated_bytes": 803489280,
+      "smoke_updated_parameters": null,
+      "predictions_sha256": "d97c36c2835c508db96e663c735a6147311bba3c9112a4455097a368e4694c39",
+      "checkpoint_sha256": "b9728ac7c4e01903f351daa349ffaaed8f68f35939d55c066df37d646248613e"
+    },
+    {
+      "status": "completed",
+      "smoke_only": false,
+      "model": "MAGTKD",
+      "dataset": "iemocap",
+      "seed": 2066,
+      "epochs_completed": 30,
+      "selected_epoch": 21,
+      "parameters": 44332050,
+      "checkpoint_predictions_verified": true,
+      "replay_mode": "fresh_model_same_process",
+      "samples": 1623,
+      "class_names": [
+        "anger",
+        "excited",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sadness"
+      ],
+      "test": {
+        "accuracy": 68.94639556377079,
+        "weighted_f1": 69.19378769973025,
+        "class_f1": [
+          68.30769230769232,
+          69.76744186046511,
+          68.78824969400245,
+          57.98816568047337,
+          66.58064516129033,
+          80.42105263157896
+        ]
+      },
+      "cuda_peak_allocated_bytes": 1366784000,
+      "smoke_updated_parameters": null,
+      "predictions_sha256": "cef1bdbaa71608a0f0d8e02ec244b87d1ec132a95d9d0f74cef496887f3104b7",
+      "checkpoint_sha256": "18931c1a0eb51a0669bc33c062fae8a736c1f93b2242279a3a759daf256c998e"
+    },
+    {
+      "status": "completed",
+      "smoke_only": false,
+      "model": "MAGTKD",
+      "dataset": "meld",
+      "seed": 2028,
+      "epochs_completed": 30,
+      "selected_epoch": 7,
+      "parameters": 44566293,
+      "checkpoint_predictions_verified": true,
+      "replay_mode": "fresh_model_same_process",
+      "samples": 2610,
+      "class_names": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "neutral",
+        "sadness",
+        "surprise"
+      ],
+      "test": {
+        "accuracy": 65.7088122605364,
+        "weighted_f1": 64.8681796496351,
+        "class_f1": [
+          52.012383900928796,
+          32.25806451612903,
+          20.689655172413797,
+          61.7100371747212,
+          78.99159663865547,
+          39.325842696629216,
+          56.70103092783505
+        ]
+      },
+      "cuda_peak_allocated_bytes": 800717824,
+      "smoke_updated_parameters": null,
+      "predictions_sha256": "b98a2bb3f0dcef67cd479fff97c5f456bc6ffad198576267f0c43b9d7c70f1d2",
+      "checkpoint_sha256": "ea63b7595dcc443ba2a1872613799398e1aa4688fffcaadd9a7a3942b423830a"
+    },
+    {
+      "status": "completed",
+      "smoke_only": false,
+      "model": "MAGTKD",
+      "dataset": "iemocap",
+      "seed": 2118,
+      "epochs_completed": 30,
+      "selected_epoch": 28,
+      "parameters": 44332050,
+      "checkpoint_predictions_verified": true,
+      "replay_mode": "fresh_model_same_process",
+      "samples": 1623,
+      "class_names": [
+        "anger",
+        "excited",
+        "frustrated",
+        "happy",
+        "neutral",
+        "sadness"
+      ],
+      "test": {
+        "accuracy": 69.25446703635242,
+        "weighted_f1": 69.44966304517938,
+        "class_f1": [
+          68.90243902439023,
+          70.07575757575758,
+          68.55036855036856,
+          58.86075949367088,
+          67.17363751584283,
+          80.2547770700637
+        ]
+      },
+      "cuda_peak_allocated_bytes": 1364859392,
+      "smoke_updated_parameters": null,
+      "predictions_sha256": "9f5a1a77464b428085c88a73fa1f3ce7b1dfd60dab6e86565e25f290bb048f93",
+      "checkpoint_sha256": "7c769342c24fd7d2f5cd47e133399fbec5fcdc6fd2a960ccac38856ae506f78d"
+    },
+    {
+      "status": "completed",
+      "smoke_only": false,
+      "model": "MAGTKD",
+      "dataset": "meld",
+      "seed": 2069,
+      "epochs_completed": 30,
+      "selected_epoch": 5,
+      "parameters": 44566293,
+      "checkpoint_predictions_verified": true,
+      "replay_mode": "fresh_model_same_process",
+      "samples": 2610,
+      "class_names": [
+        "anger",
+        "disgust",
+        "fear",
+        "joy",
+        "neutral",
+        "sadness",
+        "surprise"
+      ],
+      "test": {
+        "accuracy": 65.7088122605364,
+        "weighted_f1": 64.7627803921493,
+        "class_f1": [
+          51.42857142857144,
+          33.333333333333336,
+          17.5,
+          61.139896373057,
+          78.98523286633852,
+          40.633245382585756,
+          56.622516556291394
+        ]
+      },
+      "cuda_peak_allocated_bytes": 801007104,
+      "smoke_updated_parameters": null,
+      "predictions_sha256": "9e3dc93dfdee83e2a2d5f0248d5944f62e826a2f2baad53a10b255fae9ab0a85",
+      "checkpoint_sha256": "d7feb629891cae72c9fb0ee8c9b6e546dd6829f451a3df6274b62fb326cb9936"
+    }
+  ]
+}

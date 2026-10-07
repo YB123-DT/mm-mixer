@@ -30,4 +30,6 @@
 
 | v018 | Future Work 独立成节并置于 Conclusion 前 | [源码](v018/Main.tex) | [完整 PDF](v018/Main.pdf) | paper-v018 |
 
+| v019 | ECERC、ConFilMER 三种子结果与模型成本 | [源码](v019/Main.tex) | [完整 PDF](v019/Main.pdf) | paper-v019 |
+
 每个版本目录包含编译所需的样式、参考文献和图文件。v003 还保留了原独立 Supplement、宽幅场景图及当时的图稿和导出记录。归档 PDF 保留原始字节；复跑或验证输出写入 `paper/build/`。

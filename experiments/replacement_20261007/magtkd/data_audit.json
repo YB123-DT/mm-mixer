@@ -1,0 +1,353 @@
+[
+  {
+    "dataset": "IEMOCAP",
+    "split": "train",
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_train_features.pkl",
+    "sha256": "b83ed5dfca6137e53f5b13424b11795d39e198beb9d9c09fc9c3b9573bc26b28",
+    "dialogues": 108,
+    "utterances": 5163,
+    "label_counts": [
+      831,
+      593,
+      1296,
+      451,
+      1221,
+      771
+    ],
+    "features": {
+      "text": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "split": "dev",
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_dev_features.pkl",
+    "sha256": "fc7c4e5bd2d8912cb48989c56895669e90db7197e4b0f9185fb3ddb4f71d51d5",
+    "dialogues": 12,
+    "utterances": 647,
+    "label_counts": [
+      102,
+      149,
+      172,
+      53,
+      103,
+      68
+    ],
+    "features": {
+      "text": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      }
+    }
+  },
+  {
+    "dataset": "IEMOCAP",
+    "split": "test",
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP/first_stage_test_features.pkl",
+    "sha256": "10c7020a7ead109e7025b9f34240bb3eaeec33a0ffa9b24fe22c002e0258c2ef",
+    "dialogues": 31,
+    "utterances": 1623,
+    "label_counts": [
+      170,
+      299,
+      381,
+      144,
+      384,
+      245
+    ],
+    "features": {
+      "text": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "split": "train",
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD/first_stage_train_features.pkl",
+    "sha256": "a54a94fd2c281e27e7a96cd2f772deeec0c02ec6b82d69e46fd2a00032c054cd",
+    "dialogues": 1038,
+    "utterances": 9989,
+    "label_counts": [
+      1109,
+      271,
+      268,
+      1743,
+      4710,
+      683,
+      1205
+    ],
+    "features": {
+      "text": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "split": "dev",
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD/first_stage_dev_features.pkl",
+    "sha256": "494f12399491df8e757d4e7a7ed69caf3a1f5c29476ebafcfb91610a66052437",
+    "dialogues": 114,
+    "utterances": 1109,
+    "label_counts": [
+      153,
+      22,
+      40,
+      163,
+      470,
+      111,
+      150
+    ],
+    "features": {
+      "text": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      }
+    }
+  },
+  {
+    "dataset": "MELD",
+    "split": "test",
+    "path": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD/first_stage_test_features.pkl",
+    "sha256": "1aea38eedd941716c12693359821abf6943ad71945418979ec767fbf51d28b72",
+    "dialogues": 280,
+    "utterances": 2610,
+    "label_counts": [
+      345,
+      68,
+      50,
+      402,
+      1256,
+      208,
+      281
+    ],
+    "features": {
+      "text": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "audio_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      },
+      "video_kd": {
+        "dimensions": [
+          [
+            768
+          ]
+        ],
+        "finite": true
+      }
+    }
+  }
+]

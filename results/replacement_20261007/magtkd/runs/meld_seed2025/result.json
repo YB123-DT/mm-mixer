@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "smoke_only": false,
+  "model": "MAGTKD",
+  "dataset": "meld",
+  "seed": 2025,
+  "epochs_completed": 30,
+  "selected_epoch": 11,
+  "parameters": 44566293,
+  "checkpoint_predictions_verified": true,
+  "replay_mode": "fresh_model_same_process",
+  "samples": 2610,
+  "class_names": [
+    "anger",
+    "disgust",
+    "fear",
+    "joy",
+    "neutral",
+    "sadness",
+    "surprise"
+  ],
+  "test": {
+    "accuracy": 65.74712643678161,
+    "weighted_f1": 64.5094602974886,
+    "class_f1": [
+      52.10608424336974,
+      33.333333333333336,
+      15.84158415841584,
+      60.1889338731444,
+      78.85672407475266,
+      39.76945244956773,
+      56.30712979890311
+    ]
+  },
+  "cuda_peak_allocated_bytes": 803489280,
+  "smoke_updated_parameters": null,
+  "predictions_sha256": "d97c36c2835c508db96e663c735a6147311bba3c9112a4455097a368e4694c39",
+  "checkpoint_sha256": "b9728ac7c4e01903f351daa349ffaaed8f68f35939d55c066df37d646248613e"
+}

@@ -264,17 +264,30 @@
     {
       "version": "v019",
       "description": "补充 ECERC、ConFilMER 三种子各类别分数、参数量与 FLOPs",
-      "source": "Main.tex",
+      "source": "archive/v019/Main.tex",
       "source_sha256": "7a7dd634a9fdbe4a7a258784c005eef6126da04449cd413719c9cfd838fcaefc",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v019/Main.pdf",
       "pdf_sha256": "7d6ece3daac3494b730e41bf5eb22c35d436e3c012cdbb6ca70f9fe3d31973f4",
       "pages": 14,
       "git_tag": "paper-v019",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v019"
+    },
+    {
+      "version": "v020",
+      "description": "MAGTKD 替换 ECERC：三种子逐类分数、参数量与 FLOPs",
+      "source": "Main.tex",
+      "source_sha256": "45d84cecc81658930ab0f197eb38a957e0a3eebd93e40e7625c328b65eba6980",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "0584a44b12b0dbba331318d0227ef151937df69cf83ae35e986f80738469da48",
+      "pages": 14,
+      "git_tag": "paper-v020",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v019",
+  "latest": "v020",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

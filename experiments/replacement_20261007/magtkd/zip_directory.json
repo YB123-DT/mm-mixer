@@ -1,0 +1,218 @@
+[
+  {
+    "name": "MAGTKD/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 0,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 69,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/feature/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 146,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/feature/first_stage_dev_features.pkl",
+    "compressed_bytes": 9239366,
+    "uncompressed_bytes": 10053954,
+    "offset": 231,
+    "compression": 8,
+    "crc": 2555890151
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/feature/first_stage_test_features.pkl",
+    "compressed_bytes": 23173572,
+    "uncompressed_bytes": 25220038,
+    "offset": 9239726,
+    "compression": 8,
+    "crc": 2657757832
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/feature/first_stage_train_features.pkl",
+    "compressed_bytes": 73715984,
+    "uncompressed_bytes": 80228564,
+    "offset": 32413428,
+    "compression": 8,
+    "crc": 3231052534
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 106129543,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 106129628,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/text.bin",
+    "compressed_bytes": 1261438655,
+    "uncompressed_bytes": 1424786303,
+    "offset": 106129724,
+    "compression": 8,
+    "crc": 3003341565
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/audio.bin",
+    "compressed_bytes": 346581013,
+    "uncompressed_bytes": 372754397,
+    "offset": 1367568499,
+    "compression": 8,
+    "crc": 2083965952
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/video.bin",
+    "compressed_bytes": 449942972,
+    "uncompressed_bytes": 485142745,
+    "offset": 1714149633,
+    "compression": 8,
+    "crc": 1435362215
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/text_KD_audio.bin",
+    "compressed_bytes": 346586144,
+    "uncompressed_bytes": 372771053,
+    "offset": 2164092726,
+    "compression": 8,
+    "crc": 111371912
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/text_KD_video.bin",
+    "compressed_bytes": 449941082,
+    "uncompressed_bytes": 485160625,
+    "offset": 2510678999,
+    "compression": 8,
+    "crc": 1880172758
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/multimodal_fusion_best.bin",
+    "compressed_bytes": 176095011,
+    "uncompressed_bytes": 191560529,
+    "offset": 2960620210,
+    "compression": 8,
+    "crc": 2787832001
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/IEMOCAP/save_model/multimodal_fusion_best.json",
+    "compressed_bytes": 1298,
+    "uncompressed_bytes": 35751,
+    "offset": 3136715359,
+    "compression": 8,
+    "crc": 2667964853
+  },
+  {
+    "name": "MAGTKD/MELD/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 3136716796,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 3136716870,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 3136716949,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/first_stage_train_features.pkl",
+    "compressed_bytes": 142573113,
+    "uncompressed_bytes": 155268208,
+    "offset": 3136717036,
+    "compression": 8,
+    "crc": 1073229856
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/first_stage_test_features.pkl",
+    "compressed_bytes": 37071580,
+    "uncompressed_bytes": 40568765,
+    "offset": 3279290282,
+    "compression": 8,
+    "crc": 2096674423
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/first_stage_dev_features.pkl",
+    "compressed_bytes": 15833929,
+    "uncompressed_bytes": 17237620,
+    "offset": 3316361994,
+    "compression": 8,
+    "crc": 2941653629
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/save_model/",
+    "compressed_bytes": 0,
+    "uncompressed_bytes": 0,
+    "offset": 3332196054,
+    "compression": 0,
+    "crc": 0
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/save_model/text.bin",
+    "compressed_bytes": 1266773640,
+    "uncompressed_bytes": 1424789375,
+    "offset": 3332196144,
+    "compression": 8,
+    "crc": 4179749362
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/save_model/video.bin",
+    "compressed_bytes": 449951062,
+    "uncompressed_bytes": 485145817,
+    "offset": 4598969898,
+    "compression": 8,
+    "crc": 2524400165
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/save_model/audio.bin",
+    "compressed_bytes": 346580429,
+    "uncompressed_bytes": 372757469,
+    "offset": 5048921075,
+    "compression": 8,
+    "crc": 229854411
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/save_model/text_KD_audio.bin",
+    "compressed_bytes": 346580454,
+    "uncompressed_bytes": 372774125,
+    "offset": 5395501619,
+    "compression": 8,
+    "crc": 2533937432
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/save_model/text_KD_video.bin",
+    "compressed_bytes": 449941102,
+    "uncompressed_bytes": 485163697,
+    "offset": 5742082196,
+    "compression": 8,
+    "crc": 3817692377
+  }
+]

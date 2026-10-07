@@ -1,0 +1,49 @@
+{
+  "plan_sha256": "a9c1046d21ae7d4c91696fa20fa4cb02553f9cb99540e847db797757695e6b2c",
+  "jobs": {
+    "magtkd_iemocap_seed2025": {
+      "status": "running",
+      "started_at": 1791338442.0875094,
+      "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+      "gpu_index": 1,
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/run.py",
+        "--source",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD",
+        "--features",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/IEMOCAP",
+        "--dataset",
+        "iemocap",
+        "--seed",
+        "2025",
+        "--output",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/runs/iemocap_seed2025"
+      ],
+      "cwd": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code",
+      "pid": 1936809
+    },
+    "magtkd_meld_seed2025": {
+      "status": "running",
+      "started_at": 1791338463.2299576,
+      "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+      "gpu_index": 1,
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/run.py",
+        "--source",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code/MAGTKD",
+        "--features",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/data/MELD",
+        "--dataset",
+        "meld",
+        "--seed",
+        "2025",
+        "--output",
+        "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/runs/meld_seed2025"
+      ],
+      "cwd": "/data2/yb/multimodalERC/MM_Mixer_MAGTKD_20261007/code",
+      "pid": 1939364
+    }
+  }
+}

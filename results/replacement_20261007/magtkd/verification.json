@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "run": "iemocap_seed2025",
+      "samples": 1623,
+      "selected_epoch": 17,
+      "accuracy": 68.26863832409119,
+      "weighted_f1": 68.53967112621791,
+      "checks": "prediction hash, confusion-matrix full precision metrics, earliest rounded test peak, 30 epochs, fresh-instance strict replay"
+    },
+    {
+      "run": "iemocap_seed2066",
+      "samples": 1623,
+      "selected_epoch": 21,
+      "accuracy": 68.94639556377079,
+      "weighted_f1": 69.19378769973024,
+      "checks": "prediction hash, confusion-matrix full precision metrics, earliest rounded test peak, 30 epochs, fresh-instance strict replay"
+    },
+    {
+      "run": "iemocap_seed2118",
+      "samples": 1623,
+      "selected_epoch": 28,
+      "accuracy": 69.25446703635242,
+      "weighted_f1": 69.44966304517939,
+      "checks": "prediction hash, confusion-matrix full precision metrics, earliest rounded test peak, 30 epochs, fresh-instance strict replay"
+    },
+    {
+      "run": "meld_seed2025",
+      "samples": 2610,
+      "selected_epoch": 11,
+      "accuracy": 65.74712643678161,
+      "weighted_f1": 64.50946029748862,
+      "checks": "prediction hash, confusion-matrix full precision metrics, earliest rounded test peak, 30 epochs, fresh-instance strict replay"
+    },
+    {
+      "run": "meld_seed2028",
+      "samples": 2610,
+      "selected_epoch": 7,
+      "accuracy": 65.7088122605364,
+      "weighted_f1": 64.8681796496351,
+      "checks": "prediction hash, confusion-matrix full precision metrics, earliest rounded test peak, 30 epochs, fresh-instance strict replay"
+    },
+    {
+      "run": "meld_seed2069",
+      "samples": 2610,
+      "selected_epoch": 5,
+      "accuracy": 65.7088122605364,
+      "weighted_f1": 64.76278039214927,
+      "checks": "prediction hash, confusion-matrix full precision metrics, earliest rounded test peak, 30 epochs, fresh-instance strict replay"
+    }
+  ],
+  "groups": "means and sample standard deviations independently recomputed"
+}

@@ -1,10 +1,10 @@
 {
-  "version": "v019",
-  "date": "2026-10-06",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/baselines-v019 -jobname=Main Main.tex",
+  "version": "v020",
+  "date": "2026-10-07",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/magtkd-v020 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "7a7dd634a9fdbe4a7a258784c005eef6126da04449cd413719c9cfd838fcaefc",
-    "aaai2027.bib": "051f5f468ce072d7408ac8204cea37a0e504673bc39e3d5bae53d88dacdacc09",
+    "Main.tex": "45d84cecc81658930ab0f197eb38a957e0a3eebd93e40e7625c328b65eba6980",
+    "aaai2027.bib": "8a2699bd63f8eef7584bc7a5695f695ccf7860023bdef589a3ee17fa4fc21ace",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
     "01_amm_axis_mixing.pdf": "85f66eabec67fd2387249349d6e84fdabc15e48d0cfb4cb641914f0eb423ce00",
@@ -17,7 +17,7 @@
   "outputs": {
     "Main.pdf": {
       "pages": 14,
-      "sha256": "7d6ece3daac3494b730e41bf5eb22c35d436e3c012cdbb6ca70f9fe3d31973f4"
+      "sha256": "0584a44b12b0dbba331318d0227ef151937df69cf83ae35e986f80738469da48"
     }
   },
   "checks": {
@@ -26,31 +26,30 @@
     "no_overfull_boxes": true,
     "single_tex_entry": true,
     "archive_verified": true,
+    "other_model_rows_unchanged": true,
     "visual_verdict": {
       "score": 95,
       "verdict": "pass",
       "category_match": true,
-      "differences": [
-        "Recent baseline classwise results and cost rows fit on page 7."
-      ],
+      "differences": [],
       "suggestions": [],
-      "reasoning": "All four tables are readable without overlap or clipping.",
+      "reasoning": "Rendered page 7 visually inspected: both result tables and cost tables contain MAGTKD, readable and without clipping or overlap.",
       "next_actions": []
     }
   },
   "evidence": [
     {
+      "path": "../results/replacement_20261007/magtkd/summary.json",
+      "sha256": "a4214d3edd3e1376cf056c3b4ed5a4ce6cb6763197fa151a91f323728dfa4a6a"
+    },
+    {
+      "path": "../results/replacement_20261007/magtkd/costs/summary.json",
+      "sha256": "05c27e27b09103a2a060abf14d863f987bf09de4d86ce154098af9990f36c55a"
+    },
+    {
       "path": "../results/baselines_20261006/summary.json",
       "sha256": "24bda7e54cc3fa7c2fb90e1a91ed75c5fe5d6913a26d849ec7f07a03dca61db2"
-    },
-    {
-      "path": "../results/baselines_20261006/classwise.json",
-      "sha256": "123fefa0a5c79d4fe91bf5e95925c2aed76b372d1c153374d2d278cb8aca8be2"
-    },
-    {
-      "path": "../results/baselines_20261006/costs/summary.json",
-      "sha256": "2ec6aefa24106f0b0d5d0bea8c2452b1c93ddde38cb0e0b8355d3bb7bd36d9f9"
     }
   ],
-  "scope": "Add ECERC and ConFilMER three-seed classwise metrics, parameters and FLOPs with released-setting protocol disclosure."
+  "scope": "Replace ECERC result and cost rows with verified three-seed MAGTKD stage-two reproduction; preserve all other model rows."
 }

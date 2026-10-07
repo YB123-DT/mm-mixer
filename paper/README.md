@@ -2,7 +2,7 @@
 
 当前唯一 TeX 文件是 [Main.tex](Main.tex)，包含正文与全部补充材料，不再调用外部 TeX。完整 PDF 是 [Main.pdf](Main.pdf)。
 
-两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v019 补充 ECERC、ConFilMER 三种子各类别 F1、ACC/WF1、参数量与 FLOPs；新增结果按原发布设置单列，并说明上下文、MELD 训练划分及 checkpoint 选择口径。正文与补充材料继续共用唯一 Main.tex。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
+两位审稿人的逐句修改待办见 [REVISION_PLAN.md](REVISION_PLAN.md)：按 R1/R2 编号列出原句、位置、改法和证据需求；表格口径问题按作者安排留待后续处理。引言前四项文字修改已在 v009 写入 TeX；当前 v020 按作者要求将近期基线 ECERC 替换为 MAGTKD（IJCAI 2025），写入三种子各类别 F1、ACC/WF1、参数量与 FLOPs。MAGTKD 使用作者固定第一阶段蒸馏特征重训第二阶段融合；新增结果按原发布设置单列，明确数据、上下文和 checkpoint 选择边界。其他模型结果行原样保留。正文与补充材料继续共用唯一 Main.tex。贡献列表及其他待办仍按清单逐项处理，进度见清单开头。
 
 `paper/` 顶层只保留当前版本及其依赖：单一主稿（含补充材料）、完整 PDF、当前图文件、AAAI 样式与参考文献、版本索引和操作日志。`MM-Mixer.pdf` 是当前稿引用的架构图，完整论文请打开 `Main.pdf`。
 
@@ -14,7 +14,7 @@ paper/
   当前图文件、样式、参考文献和索引
   figures/amm_axis_mixing/               新 Figure 1 图稿
   figures/motivation/                     正文原有 AMM 图稿
-  archive/v001/ ... archive/v018/         历史版本
+  archive/v001/ ... archive/v019/         历史版本
   build/                                 临时编译与验证
 ```
 

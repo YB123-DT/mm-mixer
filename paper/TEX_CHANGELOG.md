@@ -183,3 +183,14 @@
 - `aaai2027.bib` 增加 ConFilMER ICASSP 2025 引用；ECERC 复用原引用。
 - 修改前 v018 源码、PDF 和依赖按原字节归档至 `archive/v018/`，校验全部归档 SHA256。更新版本索引与构建清单。
 - latexmk 编译成功，完整稿 14 页，无 undefined references 或 overfull boxes；检查第 7 页四张表无裁切或重叠。
+
+## 2026-10-07 — v020：用 MAGTKD 替换 ECERC
+
+- 按作者“ECERC 换一个”的要求，筛查官方代码与资源后选择 MAGTKD（IJCAI 2025）。两数据集各三个固定种子，原30轮、batch16配置；第一阶段作者蒸馏特征固定，只复现第二阶段融合，不声称端到端三种子。
+- Main.tex 两个结果表仅替换 ECERC 行为 MAGTKD：按类别名称重排逐类 F1，加入 ACC/WF1，均值 ± 样本标准差来自全部三种子预测重算。其他模型行（特别是 CSS）逐字节验证未改。
+- 参数表与 FLOPs 表仅将 ECERC 行换为 MAGTKD 全测试集真实计数；2 FLOPs/MAC、下游矩阵/卷积口径保持，排除第一阶段特征提取与蒸馏。
+- Experiment Settings 的近期基线说明更换模型名，并明确固定作者蒸馏特征、原上下文/训练划分及 test-WF1 选 checkpoint 的比较边界。
+- aaai2027.bib 增加 MAGTKD 的 IJCAI 官方引用；不删除仍在 Related Work 使用的 ECERC 引用。
+- 上一版源码、PDF、图与依赖按原字节归档 archive/v019，并核验全部 SHA256；更新版本索引、构建清单与当前完整 PDF。
+- 证据：results/replacement_20261007/magtkd/summary.json、costs/summary.json；代码/特征/运行配置见 experiments/replacement_20261007/magtkd/。ECERC 旧结果保留。
+- latexmk 编译成功，无 undefined references/overfull boxes；结果与成本表视觉检查通过，完整页数见构建清单。

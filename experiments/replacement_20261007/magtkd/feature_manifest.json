@@ -1,0 +1,56 @@
+[
+  {
+    "name": "MAGTKD/IEMOCAP/feature/first_stage_dev_features.pkl",
+    "compressed_bytes": 9239366,
+    "uncompressed_bytes": 10053954,
+    "offset": 231,
+    "compression": 8,
+    "crc": 2555890151,
+    "sha256": "fc7c4e5bd2d8912cb48989c56895669e90db7197e4b0f9185fb3ddb4f71d51d5"
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/feature/first_stage_test_features.pkl",
+    "compressed_bytes": 23173572,
+    "uncompressed_bytes": 25220038,
+    "offset": 9239726,
+    "compression": 8,
+    "crc": 2657757832,
+    "sha256": "10c7020a7ead109e7025b9f34240bb3eaeec33a0ffa9b24fe22c002e0258c2ef"
+  },
+  {
+    "name": "MAGTKD/IEMOCAP/feature/first_stage_train_features.pkl",
+    "compressed_bytes": 73715984,
+    "uncompressed_bytes": 80228564,
+    "offset": 32413428,
+    "compression": 8,
+    "crc": 3231052534,
+    "sha256": "b83ed5dfca6137e53f5b13424b11795d39e198beb9d9c09fc9c3b9573bc26b28"
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/first_stage_train_features.pkl",
+    "compressed_bytes": 142573113,
+    "uncompressed_bytes": 155268208,
+    "offset": 3136717036,
+    "compression": 8,
+    "crc": 1073229856,
+    "sha256": "a54a94fd2c281e27e7a96cd2f772deeec0c02ec6b82d69e46fd2a00032c054cd"
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/first_stage_test_features.pkl",
+    "compressed_bytes": 37071580,
+    "uncompressed_bytes": 40568765,
+    "offset": 3279290282,
+    "compression": 8,
+    "crc": 2096674423,
+    "sha256": "1aea38eedd941716c12693359821abf6943ad71945418979ec767fbf51d28b72"
+  },
+  {
+    "name": "MAGTKD/MELD/MELD/feature/first_stage_dev_features.pkl",
+    "compressed_bytes": 15833929,
+    "uncompressed_bytes": 17237620,
+    "offset": 3316361994,
+    "compression": 8,
+    "crc": 2941653629,
+    "sha256": "494f12399491df8e757d4e7a7ed69caf3a1f5c29476ebafcfb91610a66052437"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "model": "MAGTKD",
+    "dataset": "iemocap",
+    "parameters": 44332050,
+    "mflops": 145.41185372273569,
+    "batch_size_dialogues": 16,
+    "valid_utterances": 1623,
+    "max_logit_difference": 0.0,
+    "cpu_predictions_match_saved": true
+  },
+  {
+    "model": "MAGTKD",
+    "dataset": "meld",
+    "parameters": 44566293,
+    "mflops": 183.28056231724136,
+    "batch_size_dialogues": 16,
+    "valid_utterances": 2610,
+    "max_logit_difference": 0.0,
+    "cpu_predictions_match_saved": true
+  }
+]

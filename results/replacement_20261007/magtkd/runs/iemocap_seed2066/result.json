@@ -1,0 +1,37 @@
+{
+  "status": "completed",
+  "smoke_only": false,
+  "model": "MAGTKD",
+  "dataset": "iemocap",
+  "seed": 2066,
+  "epochs_completed": 30,
+  "selected_epoch": 21,
+  "parameters": 44332050,
+  "checkpoint_predictions_verified": true,
+  "replay_mode": "fresh_model_same_process",
+  "samples": 1623,
+  "class_names": [
+    "anger",
+    "excited",
+    "frustrated",
+    "happy",
+    "neutral",
+    "sadness"
+  ],
+  "test": {
+    "accuracy": 68.94639556377079,
+    "weighted_f1": 69.19378769973025,
+    "class_f1": [
+      68.30769230769232,
+      69.76744186046511,
+      68.78824969400245,
+      57.98816568047337,
+      66.58064516129033,
+      80.42105263157896
+    ]
+  },
+  "cuda_peak_allocated_bytes": 1366784000,
+  "smoke_updated_parameters": null,
+  "predictions_sha256": "cef1bdbaa71608a0f0d8e02ec244b87d1ec132a95d9d0f74cef496887f3104b7",
+  "checkpoint_sha256": "18931c1a0eb51a0669bc33c062fae8a736c1f93b2242279a3a759daf256c998e"
+}
