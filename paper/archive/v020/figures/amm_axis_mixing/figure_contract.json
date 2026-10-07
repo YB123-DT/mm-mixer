@@ -1,0 +1,96 @@
+{
+  "claim": "Three disjoint cell strips illustrate axis-wise vectors in the AMM tensor.",
+  "source_format": "editable SVG",
+  "exporter": "PyMuPDF SVG to vector PDF",
+  "native_size_mm": [
+    86,
+    46.44
+  ],
+  "tensor_shape": [
+    3,
+    6,
+    256
+  ],
+  "display_grid_shape": [
+    3,
+    6,
+    8
+  ],
+  "modality_axis_order_from_origin": [
+    "V",
+    "A",
+    "T"
+  ],
+  "bounding_edge_count": 12,
+  "selected_indices": {
+    "S": {
+      "m": 2,
+      "d": 4,
+      "varies": "s"
+    },
+    "M": {
+      "s": 1,
+      "d": 7,
+      "varies": "m"
+    },
+    "D": {
+      "m": 0,
+      "s": 5,
+      "varies": "d"
+    }
+  },
+  "primary_colored_cell_counts": {
+    "S": 6,
+    "M": 3,
+    "D": 8
+  },
+  "visible_face_strips": {
+    "S": "top",
+    "M": "right",
+    "D": "front"
+  },
+  "visible_edges": 9,
+  "hidden_edges": 3,
+  "axis_style": "Hidden cuboid edges from O, then short external arrow segments",
+  "internal_grid_shown": false,
+  "colored_caps_shown": false,
+  "title_shown": false,
+  "operators": {
+    "S": {
+      "type": "MLP",
+      "widths": [
+        6,
+        12,
+        6
+      ]
+    },
+    "M": {
+      "type": "bias-free Linear",
+      "widths": [
+        3,
+        3
+      ]
+    },
+    "D": {
+      "type": "MLP",
+      "widths": [
+        256,
+        1536,
+        256
+      ]
+    }
+  },
+  "operators_shown": false,
+  "lower_operation_panels_shown": false,
+  "omissions": [
+    "Projection expansion",
+    "Axis mappings",
+    "LayerNorm over D",
+    "Residual additions",
+    "Block order",
+    "Pooling"
+  ],
+  "illustration_not_data": true,
+  "svg_sha256": "3783102664bdf5fcb70bc6cee685745228202781cb4c2847a07a1e672923bce4",
+  "pdf_sha256": "85f66eabec67fd2387249349d6e84fdabc15e48d0cfb4cb641914f0eb423ce00"
+}

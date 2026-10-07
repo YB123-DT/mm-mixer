@@ -194,3 +194,10 @@
 - 上一版源码、PDF、图与依赖按原字节归档 archive/v019，并核验全部 SHA256；更新版本索引、构建清单与当前完整 PDF。
 - 证据：results/replacement_20261007/magtkd/summary.json、costs/summary.json；代码/特征/运行配置见 experiments/replacement_20261007/magtkd/。ECERC 旧结果保留。
 - latexmk 编译成功，无 undefined references/overfull boxes；结果与成本表视觉检查通过，完整页数见构建清单。
+
+## 2026-10-07 — v021：统一新增基线结果行格式
+
+- 按作者要求，Main.tex 两个结果表按 SDT → MAGTKD → ConFilMER → CSS → MM-Mixer 排列；MAGTKD 和 ConFilMER 去掉行内引用，保留 Experiment Settings 中的引用。
+- 删除空出的独立近期基线分组；正文不再声称另列分组。图注明确原有最佳/次佳标注不覆盖采用不同发布设置的两条新增基线，避免仅移动行造成含义变化。
+- 所有表格单元格内容与上一版逐项一致，没有改动分数、参数量或 FLOPs。
+- v020 完整归档；更新 PDF、版本索引与构建清单。latexmk 成功，14页，无未定义引用或超宽框；第7页视觉检查通过。

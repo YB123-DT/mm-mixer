@@ -277,17 +277,30 @@
     {
       "version": "v020",
       "description": "MAGTKD 替换 ECERC：三种子逐类分数、参数量与 FLOPs",
-      "source": "Main.tex",
+      "source": "archive/v020/Main.tex",
       "source_sha256": "45d84cecc81658930ab0f197eb38a957e0a3eebd93e40e7625c328b65eba6980",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v020/Main.pdf",
       "pdf_sha256": "0584a44b12b0dbba331318d0227ef151937df69cf83ae35e986f80738469da48",
       "pages": 14,
       "git_tag": "paper-v020",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v020"
+    },
+    {
+      "version": "v021",
+      "description": "统一 MAGTKD、ConFilMER 结果行位置与格式",
+      "source": "Main.tex",
+      "source_sha256": "4bb9c178c22d843226c4d9c02e9092ed40941cc5f64838bd41adcfd8d84e1dbb",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "d72f459acda4211e22abbe60d4ebfc6a05039c8f88a6eb01ed19abf3ef3831fa",
+      "pages": 14,
+      "git_tag": "paper-v021",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v020",
+  "latest": "v021",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }

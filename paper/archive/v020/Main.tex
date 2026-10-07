@@ -743,8 +743,6 @@ SDT & $\mathbf{62.27}{\pm}1.41$ & $78.32{\pm}0.77$ &
 $71.46{\pm}0.48$ & $67.90{\pm}1.01$ &
 $\mathbf{79.21}{\pm}0.96$ & $65.04{\pm}1.36$ &
 $71.19{\pm}0.38$ & $71.23{\pm}0.48$ \\
-MAGTKD & $57.42{\pm}1.79$ & $80.06{\pm}0.50$ & $66.92{\pm}0.31$ & $68.10{\pm}0.93$ & $69.78{\pm}0.29$ & $68.41{\pm}0.46$ & $68.82{\pm}0.50$ & $69.06{\pm}0.47$ \\
-ConFilMER & $48.83{\pm}4.61$ & $80.67{\pm}2.13$ & $69.44{\pm}1.38$ & $68.98{\pm}0.08$ & $75.53{\pm}0.85$ & $65.66{\pm}1.49$ & $69.52{\pm}0.82$ & $69.49{\pm}0.50$ \\
 CSS & $\underline{61.58}{\pm}2.51$ & $\underline{79.74}{\pm}0.67$ &
 $\mathbf{72.27}{\pm}0.48$ & $\underline{68.70}{\pm}0.48$ &
 $\underline{77.22}{\pm}0.31$ & $\underline{66.00}{\pm}0.56$ &
@@ -754,12 +752,16 @@ MM-Mixer & $57.72{\pm}0.22$ & $\mathbf{84.14}{\pm}0.22$ &
 $\underline{71.81}{\pm}0.36$ & $\mathbf{71.59}{\pm}1.06$ &
 $74.04{\pm}1.12$ & $\mathbf{69.15}{\pm}0.38$ &
 $\mathbf{72.07}{\pm}0.15$ & $\mathbf{72.19}{\pm}0.12$ \\
+\midrule
+\multicolumn{9}{l}{\textit{Recent baselines under released settings}} \\
+MAGTKD~\cite{magtkd} & $57.42{\pm}1.79$ & $80.06{\pm}0.50$ & $66.92{\pm}0.31$ & $68.10{\pm}0.93$ & $69.78{\pm}0.29$ & $68.41{\pm}0.46$ & $68.82{\pm}0.50$ & $69.06{\pm}0.47$ \\
+ConFilMER~\cite{confilmer} & $48.83{\pm}4.61$ & $80.67{\pm}2.13$ & $69.44{\pm}1.38$ & $68.98{\pm}0.08$ & $75.53{\pm}0.85$ & $65.66{\pm}1.49$ & $69.52{\pm}0.82$ & $69.49{\pm}0.50$ \\
 \bottomrule
 \end{tabular}}
 \caption{Performance comparison on the IEMOCAP dataset. All
 entries are reported as mean $\pm$ standard deviation in percentages.
 The best and second-best means are shown in bold and underlined,
-respectively, excluding MAGTKD and ConFilMER, which use released
+respectively, within the main comparison. Additional rows use released
 settings described in Experiment Settings.}
 \label{tab:iemocap_results}
 \end{table*}
@@ -796,8 +798,6 @@ SDT & $79.85{\pm}0.16$ & $\underline{58.13}{\pm}0.25$ &
 $17.20{\pm}1.18$ & $\underline{42.64}{\pm}1.92$ &
 $63.95{\pm}0.20$ & $28.34{\pm}2.01$ & $53.63{\pm}0.59$ &
 $67.06{\pm}0.44$ & $66.09{\pm}0.39$ \\
-MAGTKD & $78.94{\pm}0.08$ & $56.54{\pm}0.21$ & $18.01{\pm}2.46$ & $39.91{\pm}0.66$ & $61.01{\pm}0.77$ & $32.97{\pm}0.62$ & $51.85{\pm}0.37$ & $65.72{\pm}0.02$ & $64.71{\pm}0.18$ \\
-ConFilMER & $79.75{\pm}0.19$ & $59.38{\pm}0.56$ & $23.03{\pm}6.29$ & $39.82{\pm}0.82$ & $63.85{\pm}0.60$ & $25.39{\pm}4.20$ & $52.76{\pm}1.06$ & $67.01{\pm}0.18$ & $65.86{\pm}0.19$ \\
 CSS & $\underline{80.04}{\pm}0.02$ & $57.90{\pm}0.21$ &
 $19.28{\pm}1.97$ & $41.71{\pm}0.77$ &
 $\underline{64.10}{\pm}0.34$ & $\underline{29.97}{\pm}0.74$ &
@@ -809,12 +809,16 @@ $\mathbf{29.57}{\pm}1.94$ & $\mathbf{42.87}{\pm}0.59$ &
 $\mathbf{65.34}{\pm}0.59$ & $\mathbf{34.93}{\pm}3.86$ &
 $\mathbf{55.94}{\pm}0.55$ &
 $\mathbf{68.36}{\pm}0.25$ & $\mathbf{67.62}{\pm}0.23$ \\
+\midrule
+\multicolumn{10}{l}{\textit{Recent baselines under released settings}} \\
+MAGTKD~\cite{magtkd} & $78.94{\pm}0.08$ & $56.54{\pm}0.21$ & $18.01{\pm}2.46$ & $39.91{\pm}0.66$ & $61.01{\pm}0.77$ & $32.97{\pm}0.62$ & $51.85{\pm}0.37$ & $65.72{\pm}0.02$ & $64.71{\pm}0.18$ \\
+ConFilMER~\cite{confilmer} & $79.75{\pm}0.19$ & $59.38{\pm}0.56$ & $23.03{\pm}6.29$ & $39.82{\pm}0.82$ & $63.85{\pm}0.60$ & $25.39{\pm}4.20$ & $52.76{\pm}1.06$ & $67.01{\pm}0.18$ & $65.86{\pm}0.19$ \\
 \bottomrule
 \end{tabular}}
 \caption{Performance comparison on the MELD dataset. All
 entries are reported as mean $\pm$ standard deviation in percentages.
 The best and second-best means are shown in bold and underlined,
-respectively, excluding MAGTKD and ConFilMER, which use released
+respectively, within the main comparison. Additional rows use released
 settings described in Experiment Settings.}
 \label{tab:meld_results}
 \end{table*}
@@ -888,7 +892,7 @@ MERC paradigms. First, DialogueRNN~\cite{dialoguernn} is a sequence-based model 
 MM-DFN~\cite{mmdfn}, and M3Net~\cite{m3net} are graph-based methods that model structural dependencies among utterances and modalities. Third, Ada2I~\cite{ada2i}, SDT~\cite{sdt}, and CSS~\cite{css} employ attention-based or specialized fusion mechanisms to exchange and
 integrate multimodal information. Together, these baselines cover recurrent context modeling, graph reasoning, and multimodal attention and fusion. For fair comparison, we retain their models with their released data, features, and hyperparameters to avoid introducing method-specific changes beyond the evaluated protocol.
 
-We additionally reproduce MAGTKD~\cite{magtkd} and ConFilMER~\cite{confilmer}, two 2025 baselines, with three seeds per dataset. For MAGTKD, we retrain the second-stage fusion model on the authors' fixed first-stage distilled features; feature extraction and distillation are not repeated across seeds. These additional comparisons retain the released features and contextual access rather than imposing the history-only restriction; ConFilMER also uses the combined MELD training and development sets. Their released settings differ from those of the main comparison. We report test-WF1-selected checkpoints for these runs, with mean and sample standard deviation across the three seeds.
+We additionally reproduce MAGTKD~\cite{magtkd} and ConFilMER~\cite{confilmer}, two 2025 baselines, with three seeds per dataset. For MAGTKD, we retrain the second-stage fusion model on the authors' fixed first-stage distilled features; feature extraction and distillation are not repeated across seeds. These additional comparisons retain the released features and contextual access rather than imposing the history-only restriction; ConFilMER also uses the combined MELD training and development sets. Their results are therefore listed separately from the main comparison. We report test-WF1-selected checkpoints for these runs, with mean and sample standard deviation across the three seeds.
 
 \noindent\textbf{Evaluation metrics.}
 We report per-class F1, accuracy (ACC), and weighted F1 (WF1). ACC and WF1 serve as the main overall metrics. The main comparison is conducted under a history-only evaluation protocol in which, when predicting the emotion of utterance $u_t$, a model can only take  $u_{t}$ and

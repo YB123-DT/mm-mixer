@@ -1,9 +1,9 @@
 {
-  "version": "v021",
+  "version": "v020",
   "date": "2026-10-07",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/v021 Main.tex",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/magtkd-v020 -jobname=Main Main.tex",
   "inputs": {
-    "Main.tex": "4bb9c178c22d843226c4d9c02e9092ed40941cc5f64838bd41adcfd8d84e1dbb",
+    "Main.tex": "45d84cecc81658930ab0f197eb38a957e0a3eebd93e40e7625c328b65eba6980",
     "aaai2027.bib": "8a2699bd63f8eef7584bc7a5695f695ccf7860023bdef589a3ee17fa4fc21ace",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -17,7 +17,7 @@
   "outputs": {
     "Main.pdf": {
       "pages": 14,
-      "sha256": "d72f459acda4211e22abbe60d4ebfc6a05039c8f88a6eb01ed19abf3ef3831fa"
+      "sha256": "0584a44b12b0dbba331318d0227ef151937df69cf83ae35e986f80738469da48"
     }
   },
   "checks": {
@@ -28,15 +28,14 @@
     "archive_verified": true,
     "other_model_rows_unchanged": true,
     "visual_verdict": {
-      "score": 96,
+      "score": 95,
       "verdict": "pass",
       "category_match": true,
       "differences": [],
       "suggestions": [],
-      "reasoning": "Both result tables show SDT, MAGTKD, ConFilMER, CSS, MM-Mixer in order with plain names and no separate group; no overlap or clipping.",
+      "reasoning": "Rendered page 7 visually inspected: both result tables and cost tables contain MAGTKD, readable and without clipping or overlap.",
       "next_actions": []
-    },
-    "all_table_cells_unchanged": true
+    }
   },
   "evidence": [
     {
@@ -52,5 +51,5 @@
       "sha256": "24bda7e54cc3fa7c2fb90e1a91ed75c5fe5d6913a26d849ec7f07a03dca61db2"
     }
   ],
-  "scope": "Move MAGTKD and ConFilMER between SDT and CSS in both result tables; use plain model names and preserve every result cell."
+  "scope": "Replace ECERC result and cost rows with verified three-seed MAGTKD stage-two reproduction; preserve all other model rows."
 }
