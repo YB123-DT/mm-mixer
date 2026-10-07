@@ -34,4 +34,6 @@
 
 | v020 | MAGTKD 替换 ECERC | [源码](v020/Main.tex) | [完整 PDF](v020/Main.pdf) | paper-v020 |
 
+| v021 | 统一新增基线行位置与格式 | [源码](v021/Main.tex) | [完整 PDF](v021/Main.pdf) | paper-v021 |
+
 每个版本目录包含编译所需的样式、参考文献和图文件。v003 还保留了原独立 Supplement、宽幅场景图及当时的图稿和导出记录。归档 PDF 保留原始字节；复跑或验证输出写入 `paper/build/`。

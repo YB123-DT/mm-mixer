@@ -4,7 +4,8 @@
 
 | 版本 | 内容 | TeX | PDF | Git 快照 |
 |---|---|---|---|---|
-| v021 | 统一新增基线行位置与格式 | [Main.tex](Main.tex) | [当前完整 PDF](Main.pdf) | paper-v021 |
+| v022 | 新增四组三种子消融表与分析 | [Main.tex](Main.tex) | [当前完整 PDF](Main.pdf) | paper-v022 |
+| v021 | 统一新增基线行位置与格式 | [Main.tex](archive/v021/Main.tex) | [归档 PDF](archive/v021/Main.pdf) | paper-v021 |
 | v020 | MAGTKD 替换 ECERC 的分数与模型成本 | [Main.tex](archive/v020/Main.tex) | [归档 PDF](archive/v020/Main.pdf) | paper-v020 |
 | v019 | ECERC、ConFilMER 各类别分数、参数量与 FLOPs | [Main.tex](archive/v019/Main.tex) | [归档 PDF](archive/v019/Main.pdf) | paper-v019 |
 | v018 | Future Work 独立成节，位于 Conclusion 前 | [Main.tex](archive/v018/Main.tex) | [归档 PDF](archive/v018/Main.pdf) | paper-v018 |

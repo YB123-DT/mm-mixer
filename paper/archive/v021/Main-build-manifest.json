@@ -1,9 +1,9 @@
 {
-  "version": "v022",
+  "version": "v021",
   "date": "2026-10-07",
-  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/v022 Main.tex",
+  "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build/v021 Main.tex",
   "inputs": {
-    "Main.tex": "afabcf689e248c1b9dd34dfcc0d45fbce174baac59bd65d0bff48802736b4a17",
+    "Main.tex": "4bb9c178c22d843226c4d9c02e9092ed40941cc5f64838bd41adcfd8d84e1dbb",
     "aaai2027.bib": "8a2699bd63f8eef7584bc7a5695f695ccf7860023bdef589a3ee17fa4fc21ace",
     "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
     "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c",
@@ -16,42 +16,41 @@
   },
   "outputs": {
     "Main.pdf": {
-      "pages": 15,
-      "sha256": "ec20514d13836601842e780046512bed745c291345b34efd07a6f1fc73438313"
+      "pages": 14,
+      "sha256": "d72f459acda4211e22abbe60d4ebfc6a05039c8f88a6eb01ed19abf3ef3831fa"
     }
   },
   "checks": {
-    "pages": 15,
+    "pages": 14,
     "no_undefined_references": true,
     "no_overfull_boxes": true,
     "single_tex_entry": true,
     "archive_verified": true,
     "other_model_rows_unchanged": true,
     "visual_verdict": {
-      "score": 94,
+      "score": 96,
       "verdict": "pass",
       "category_match": true,
       "differences": [],
       "suggestions": [],
-      "reasoning": "Pages 9 and 10 inspected: four readable single-column tables, correct references, no clipping or overlap; floats remain before Future Work.",
+      "reasoning": "Both result tables show SDT, MAGTKD, ConFilMER, CSS, MM-Mixer in order with plain names and no separate group; no overlap or clipping.",
       "next_actions": []
     },
-    "all_previous_content_unchanged": true,
-    "new_results_verified": true
+    "all_table_cells_unchanged": true
   },
   "evidence": [
     {
-      "path": "../results/revision_20261003/analysis.json",
-      "sha256": "00419365fd00cb92152eef0ab0af46cd44c449bb8703761e514e8e6fe42f0a3a"
+      "path": "../results/replacement_20261007/magtkd/summary.json",
+      "sha256": "a4214d3edd3e1376cf056c3b4ed5a4ce6cb6763197fa151a91f323728dfa4a6a"
     },
     {
-      "path": "../results/sensitivity_20261006/comparison.csv",
-      "sha256": "fcecdb3b360cdef589b826002d24d2014fbcd2597314ef2a65dea117ae2bd425"
+      "path": "../results/replacement_20261007/magtkd/costs/summary.json",
+      "sha256": "05c27e27b09103a2a060abf14d863f987bf09de4d86ce154098af9990f36c55a"
+    },
+    {
+      "path": "../results/baselines_20261006/summary.json",
+      "sha256": "24bda7e54cc3fa7c2fb90e1a91ed75c5fe5d6913a26d849ec7f07a03dca61db2"
     }
   ],
-  "scope": "Add four verified three-seed ablation tables and evidence-grounded analysis; preserve previous manuscript text and tables for staged revision.",
-  "remaining_work": [
-    "Original component/modality tables and their prose still await three-seed revision; original table-scope reconciliation remains deferred.",
-    "Auxiliary-weight sweep omitted pending complete verified aggregation."
-  ]
+  "scope": "Move MAGTKD and ConFilMER between SDT and CSS in both result tables; use plain model names and preserve every result cell."
 }

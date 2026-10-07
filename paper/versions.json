@@ -290,17 +290,30 @@
     {
       "version": "v021",
       "description": "统一 MAGTKD、ConFilMER 结果行位置与格式",
-      "source": "Main.tex",
+      "source": "archive/v021/Main.tex",
       "source_sha256": "4bb9c178c22d843226c4d9c02e9092ed40941cc5f64838bd41adcfd8d84e1dbb",
-      "pdf": "Main.pdf",
+      "pdf": "archive/v021/Main.pdf",
       "pdf_sha256": "d72f459acda4211e22abbe60d4ebfc6a05039c8f88a6eb01ed19abf3ef3831fa",
       "pages": 14,
       "git_tag": "paper-v021",
       "validation_status": "passed",
+      "single_tex_source": true,
+      "archive_directory": "archive/v021"
+    },
+    {
+      "version": "v022",
+      "description": "新增四组三种子消融对照表与分析",
+      "source": "Main.tex",
+      "source_sha256": "afabcf689e248c1b9dd34dfcc0d45fbce174baac59bd65d0bff48802736b4a17",
+      "pdf": "Main.pdf",
+      "pdf_sha256": "ec20514d13836601842e780046512bed745c291345b34efd07a6f1fc73438313",
+      "pages": 15,
+      "git_tag": "paper-v022",
+      "validation_status": "passed",
       "single_tex_source": true
     }
   ],
-  "latest": "v021",
+  "latest": "v022",
   "current_pdf": "Main.pdf",
   "archive_root": "archive"
 }
