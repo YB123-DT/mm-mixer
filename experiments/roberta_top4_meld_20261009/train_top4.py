@@ -310,7 +310,9 @@ def main():
     test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False, collate_fn=collate)
 
     model = RobertaMELDClassifier(args.model_name, len(LABELS), pooling=args.pooling, model_type=args.model_type)
-    model.encoder.resize_token_embeddings(len(tokenizer))
+    # Match the historical Transformers behavior for the nine added speaker
+    # tokens. Newer releases otherwise enable covariance-based mean resizing.
+    model.encoder.resize_token_embeddings(len(tokenizer), mean_resizing=False)
     if args.init_text_encoder_checkpoint:
         info = load_text_encoder_checkpoint(model, args.init_text_encoder_checkpoint, args.model_type)
         print(f"[text] initialized encoder from {args.init_text_encoder_checkpoint}: {info}", flush=True)

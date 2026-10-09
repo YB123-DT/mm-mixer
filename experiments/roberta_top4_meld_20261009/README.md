@@ -13,4 +13,3 @@ rate 1e-6, classifier/projection learning rate 5e-5, weight decay 0.01,
 The Top-4 ranking uses test labels at the user's request. These checkpoints
 are diagnostic controls and must not be described as validation-selected
 publication results.
-

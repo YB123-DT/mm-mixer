@@ -2,10 +2,11 @@
 set -euo pipefail
 
 ROOT=/data2/yb/multimodalERC/MM_Mixer_RoBERTa_Top4_MELD_20261009
-MODEL=/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59
-CSV=/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw
+MODEL=${ROBERTA_MODEL:-/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59}
+CSV=${MELD_CSV_DIR:-/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw}
+PYTHON=${PYTHON_BIN:-python}
 
-python -u "$ROOT/code/train_top4.py" \
+"$PYTHON" -u "$ROOT/code/train_top4.py" \
   --meld_csv_dir "$CSV" \
   --model_name "$MODEL" \
   --model_type roberta \
