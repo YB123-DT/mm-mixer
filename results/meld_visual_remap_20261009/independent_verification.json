@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "all_exported_vectors_verified": 13707,
+  "unique_source_dialogues": 1432,
+  "splits": {
+    "train": {
+      "verified": 9988,
+      "changed_vectors_vs_old": 0,
+      "old_features_hash_unchanged": true
+    },
+    "dev": {
+      "verified": 1109,
+      "changed_vectors_vs_old": 0,
+      "old_features_hash_unchanged": true
+    },
+    "test": {
+      "verified": 2610,
+      "changed_vectors_vs_old": 0,
+      "old_features_hash_unchanged": true
+    }
+  },
+  "quarantined": "train/dia556_utt6",
+  "training_ready": false
+}

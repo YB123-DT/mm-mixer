@@ -1,0 +1,72 @@
+{
+  "status": "source_mapping_verified_source_visual_duplication_unresolved",
+  "training_ready": false,
+  "warning": "NOT a repaired feature set: all 13707 exported vectors equal old JSONs; cross-dialogue duplicated visuals already occur in source pickle. Additionally train has 1 quarantined row; do not silently zero-fill it.",
+  "stats": {
+    "train": {
+      "csv_rows": 9989,
+      "dialogues": 1038,
+      "exported_rows": 9988,
+      "quarantined_rows": 1,
+      "source_zero_vectors": 3407,
+      "dimensions": 342,
+      "nonfinite": 0
+    },
+    "dev": {
+      "csv_rows": 1109,
+      "dialogues": 114,
+      "exported_rows": 1109,
+      "quarantined_rows": 0,
+      "source_zero_vectors": 95,
+      "dimensions": 342,
+      "nonfinite": 0
+    },
+    "test": {
+      "csv_rows": 2610,
+      "dialogues": 280,
+      "exported_rows": 2610,
+      "quarantined_rows": 0,
+      "source_zero_vectors": 258,
+      "dimensions": 342,
+      "nonfinite": 0
+    }
+  },
+  "source_label_map": {
+    "0": "neutral",
+    "1": "surprise",
+    "2": "fear",
+    "3": "sadness",
+    "4": "joy",
+    "5": "disgust",
+    "6": "anger"
+  },
+  "source_hashes": {
+    "/data2/yb/paper/datasets/meld_multimodal_features.pkl": "7ad660ebd929861b0cbaada5b406223f58787fb1b0dc152aab3746164a355af2",
+    "/data2/yb/paper/mm-mixer/experiments/meld_visual_remap_20261009/remap.py": "cde28a20609e230565df62b61dc87b897f30f8f264a81f084162fabc533d62c3",
+    "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/train_sent_emo.csv": "4e3907e95e7ad4fd413a5a58d807dee79ebdb0c16b050cd33c3a3ac35ddb9ebf",
+    "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/dev_sent_emo.csv": "7e306369c2d1625b063132310aa30bc6979fcf0f51c783e903edfcaa1c98b15c",
+    "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw/test_sent_emo.csv": "2d3fdb6586bdcdf172a7197fae9244116b1103efd951db2317e6a67c7042d28e"
+  },
+  "output_sha256": {
+    "/data2/yb/paper/mm-mixer/outputs/meld_visual_remap_20261009/train_features/visual_features.json": "95782ff0637e851a7a94555bd082b6da3c48e2d5cb8d9efe9da3423e64882240",
+    "/data2/yb/paper/mm-mixer/outputs/meld_visual_remap_20261009/dev_features/visual_features.json": "368194e794cbca6434f67b02addf0e9f1331185f8ee9ee586ba3578384d61a99",
+    "/data2/yb/paper/mm-mixer/outputs/meld_visual_remap_20261009/test_features/visual_features.json": "5d5296a39adcff15007151742b683b04f654b38c119e9ce3dc0602adeb97ca50"
+  },
+  "mapping_sha256": "5f6b8e6d50e56b765e5b10aba68339c73ce7bb020cc32aa0d4283ba69820b0bc",
+  "matching_uses_emotion_labels": false,
+  "speaker_partition_validation": true,
+  "one_to_one_source_dialogues": 1432,
+  "json_reload_exact_vector_hashes": 13707,
+  "fresh_zero_fills": 0,
+  "comparison_to_old": {
+    "exported_vectors_compared": 13707,
+    "changed_vectors": 0,
+    "evidence": "independent_verification.json"
+  },
+  "source_visual_duplication": {
+    "confirmed": true,
+    "evidence": "source_duplication.json",
+    "nonzero_dev_equal_to_other_source_dialogue": 609,
+    "nonzero_test_equal_to_other_source_dialogue": 1548
+  }
+}

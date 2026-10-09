@@ -1,0 +1,43 @@
+{
+  "finding": "Correct sentence-based remapping reproduces every previous exported vector. Cross-dialogue duplicates already occur in source pickle. Export-only remapping cannot fix this.",
+  "splits": {
+    "dev": {
+      "rows": 1109,
+      "correct_source_equals_source_at_splitlocal_dia": 675,
+      "nonzero_equal": 609,
+      "no_splitlocal_source_utterance": 434
+    },
+    "test": {
+      "rows": 2610,
+      "correct_source_equals_source_at_splitlocal_dia": 1740,
+      "nonzero_equal": 1548,
+      "no_splitlocal_source_utterance": 870
+    }
+  },
+  "examples": [
+    {
+      "split": "dev",
+      "target_key": "dia0_utt0",
+      "correct_source_dialogue": 1039,
+      "correct_source_sentence": "Oh my God, hes lost it. Hes totally lost it.",
+      "other_source_dialogue": 0,
+      "other_source_sentence": "also I was the point person on my companys transition from the KL-5 to GR-6 system.",
+      "exact_visual_equal": true,
+      "same_python_object": false,
+      "shares_memory": false,
+      "vector_sha256": "2091c28aec6511b57f1b5b985c2c37a8624c994b8b375312b9b5775f1abda1a3"
+    },
+    {
+      "split": "test",
+      "target_key": "dia0_utt0",
+      "correct_source_dialogue": 1153,
+      "correct_source_sentence": "Why do all youre coffee mugs have numbers on the bottom?",
+      "other_source_dialogue": 0,
+      "other_source_sentence": "also I was the point person on my companys transition from the KL-5 to GR-6 system.",
+      "exact_visual_equal": true,
+      "same_python_object": false,
+      "shares_memory": false,
+      "vector_sha256": "2091c28aec6511b57f1b5b985c2c37a8624c994b8b375312b9b5775f1abda1a3"
+    }
+  ]
+}

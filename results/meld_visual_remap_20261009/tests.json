@@ -1,0 +1,9 @@
+{
+  "command": "python -m unittest discover -s experiments/meld_visual_remap_20261009 -p 'test_*.py' -v",
+  "tests_run": 4,
+  "failures": 0,
+  "errors": 0,
+  "python": "3.13.11",
+  "numpy": "2.4.4",
+  "test_source_sha256": "ec1b6cc3b8151cff564ba64874512587da4e69340ad6f52d55f9120fece70d69"
+}

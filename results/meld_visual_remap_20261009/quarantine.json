@@ -1,0 +1,14 @@
+[
+  {
+    "split": "train",
+    "key": "dia556_utt6",
+    "source_dialogue": 556,
+    "source_index": 6,
+    "source_utterance_id": 6,
+    "dialogue_mapping": "six_exact_anchors_last_row_quarantined",
+    "status": "quarantined",
+    "reason": "source_sentence_and_speaker_mismatch",
+    "csv_sentence": "My son? Pretty serious.  Oh hey Katie!  What uh, what are you doing here?",
+    "source_sentence": "What do I do?"
+  }
+]
