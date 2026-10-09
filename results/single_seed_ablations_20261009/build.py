@@ -55,6 +55,6 @@ for s,h in hashes.items():lines.append(f'- `{s}`；SHA256 `{h}`')
 (OUT/'results.json').write_text(json.dumps({'completed':rows,'pending':pending,'source_sha256':hashes},indent=2)+'\n')
 fields=['dataset','variant','seed','accuracy','weighted_f1','epoch']+list(dict.fromkeys(classes['iemocap']+classes['meld']))+['source']
 with (OUT/'results.csv').open('w',newline='') as f:
- w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
+ w=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");w.writeheader()
  for r in rows:w.writerow({**{k:r[k] for k in fields if k in r},**r['class_f1']})
 print('Verified completed runs:',len(rows),'pending:',len(pending))
