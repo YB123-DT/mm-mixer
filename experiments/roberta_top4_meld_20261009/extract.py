@@ -130,7 +130,7 @@ def main():
 
     if args.checkpoint and os.path.exists(args.checkpoint):
         print(f"[extract] Loading fine-tuned checkpoint: {args.checkpoint}")
-        ckpt = torch.load(args.checkpoint, map_location="cpu")
+        ckpt = torch.load(args.checkpoint, map_location="cpu", weights_only=False)
         checkpoint_args = ckpt.get("args", {})
         if args.context_mode is None:
             args.context_mode = checkpoint_args.get("context_mode", "history")
@@ -143,6 +143,11 @@ def main():
                 tokenizer_len = len(tokenizer)
         if tokenizer_len is None:
             tokenizer_len = len(tokenizer)
+        if tokenizer_len != len(tokenizer):
+            raise ValueError(
+                f"checkpoint tokenizer length {tokenizer_len} does not match "
+                f"the reconstructed tokenizer length {len(tokenizer)}"
+            )
         model.resize_token_embeddings(tokenizer_len)
 
         roberta_state = {}
@@ -163,7 +168,7 @@ def main():
             raise ValueError(
                 f"No RoBERTa encoder weights matched in checkpoint: {args.checkpoint}"
             )
-        model.load_state_dict(roberta_state, strict=False)
+        model.load_state_dict(roberta_state, strict=True)
         print(f"[extract] Loaded {len(roberta_state)} RoBERTa weights from checkpoint")
     else:
         print(f"[extract] Using pretrained {args.model_name} (no fine-tuning checkpoint)")

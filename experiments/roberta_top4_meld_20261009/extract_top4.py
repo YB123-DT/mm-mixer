@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import json
 import subprocess
@@ -23,7 +24,17 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def verify_feature_file(path: Path, expected_rows: int) -> dict:
+def expected_keys(csv_path: Path) -> set[str]:
+    with csv_path.open(newline="", encoding="utf8") as handle:
+        return {
+            f"dia{row['Dialogue_ID']}_utt{row['Utterance_ID']}"
+            for row in csv.DictReader(handle)
+        }
+
+
+def verify_feature_file(
+    path: Path, expected_rows: int, required_keys: set[str]
+) -> dict:
     payload = json.loads(path.read_text())
     if len(payload) != expected_rows:
         raise ValueError(f"{path}: expected {expected_rows} rows, got {len(payload)}")
@@ -32,6 +43,11 @@ def verify_feature_file(path: Path, expected_rows: int) -> dict:
         raise ValueError(f"{path}: unexpected shape {matrix.shape}")
     if not np.isfinite(matrix).all():
         raise ValueError(f"{path}: contains non-finite values")
+    actual_keys = set(payload)
+    if actual_keys != required_keys:
+        missing = sorted(required_keys - actual_keys)[:5]
+        extra = sorted(actual_keys - required_keys)[:5]
+        raise ValueError(f"{path}: key mismatch; missing={missing}, extra={extra}")
     return {
         "rows": expected_rows,
         "dimension": 1024,
@@ -88,7 +104,8 @@ def main() -> None:
         split_info = {}
         for split, expected_rows in SPLIT_SIZES.items():
             path = output_dir / f"{split}_features" / "text_features.json"
-            split_info[split] = verify_feature_file(path, expected_rows)
+            keys = expected_keys(Path(args.csv_dir) / f"{split}_sent_emo.csv")
+            split_info[split] = verify_feature_file(path, expected_rows, keys)
         manifest = {
             "rank": rank,
             "epoch": item["epoch"],
@@ -97,6 +114,9 @@ def main() -> None:
             "checkpoint": str(checkpoint),
             "checkpoint_sha256": sha256(checkpoint),
             "feature_root": str(output_dir),
+            "context": "history_through_current_utterance",
+            "pooling": "last_non_padding_normally_eos",
+            "max_length": 511,
             "splits": split_info,
         }
         (output_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
