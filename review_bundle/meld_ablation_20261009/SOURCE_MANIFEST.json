@@ -1,0 +1,47 @@
+{
+  "copied_sources": [
+    {
+      "path": "feature_extraction/extract_roberta_features.py",
+      "sha256": "7f2271faa189d325fe1273dcbcc1b92d501af331dbbdabd68d442aa1ffb807b1",
+      "origin": "/data2/yb/multimodalERC/MELD/Model/extract_roberta_features.py",
+      "origin_sha256": "7f2271faa189d325fe1273dcbcc1b92d501af331dbbdabd68d442aa1ffb807b1",
+      "byte_exact": true
+    },
+    {
+      "path": "feature_extraction/train_roberta_text_only_meld.py",
+      "sha256": "eba6acc4319f7f797592d451b34e70050587ed4822b08b3992be4546b61868e7",
+      "origin": "/data2/yb/multimodalERC/MELD/Model/train_roberta_text_only_meld.py",
+      "origin_sha256": "eba6acc4319f7f797592d451b34e70050587ed4822b08b3992be4546b61868e7",
+      "byte_exact": true
+    },
+    {
+      "path": "feature_extraction/legacy_multimodal_feature_extract.py",
+      "sha256": "8492788a8efe67054f9dca1c4ffb418d5cee44b1e9cb2f045f51112157b3c18b",
+      "origin": "/data2/yb/multimodalERC/MELD/Dataset/feature_extract.py",
+      "origin_sha256": "5fc5064ff7ebd5980fe6198be455867b51b039c2c950161bf2157ec0426b14b9",
+      "byte_exact": false,
+      "normalization": "trailing whitespace removed only"
+    },
+    {
+      "path": "feature_extraction/video_audio_extract.py",
+      "sha256": "f8d625f47290af3c35dc5c9f758f1236a0e63e2a8c1ed5220706f00fddc115d3",
+      "origin": "/data2/yb/multimodalERC/MELD/Dataset/video_audio_extract.py",
+      "origin_sha256": "f8d625f47290af3c35dc5c9f758f1236a0e63e2a8c1ed5220706f00fddc115d3",
+      "byte_exact": true
+    },
+    {
+      "path": "feature_extraction/run_feature_extract_split.py",
+      "sha256": "6d1eacb8d83307db684c57594b4b98073de805167210a3354a2d54faccc967b1",
+      "origin": "/data2/yb/multimodalERC/MELD/Dataset/run_feature_extract_split.py",
+      "origin_sha256": "6d1eacb8d83307db684c57594b4b98073de805167210a3354a2d54faccc967b1",
+      "byte_exact": true
+    },
+    {
+      "path": "feature_extraction/extract_frozen_roberta.py",
+      "sha256": "87023af26d769755e37bc5b457de05726923f1a74b3110882fb13978977821f1",
+      "origin": "experiments/frozen_roberta_meld_20261009/extract.py",
+      "origin_sha256": "87023af26d769755e37bc5b457de05726923f1a74b3110882fb13978977821f1",
+      "byte_exact": true
+    }
+  ]
+}
