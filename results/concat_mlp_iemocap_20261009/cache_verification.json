@@ -1,0 +1,26 @@
+{
+  "train": {
+    "samples_checked": [
+      0,
+      1,
+      31,
+      2905,
+      5809
+    ],
+    "batch_exact": true,
+    "post_rng_exact": true,
+    "cache_not_mutated": true
+  },
+  "test": {
+    "samples_checked": [
+      0,
+      1,
+      31,
+      811,
+      1622
+    ],
+    "batch_exact": true,
+    "post_rng_exact": true,
+    "cache_not_mutated": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "smoke_only": true,
+  "epochs_completed": 1,
+  "early_stopped": false,
+  "selected_epoch": 1,
+  "dataset": "iemocap",
+  "seed": 2025,
+  "parameters": 613638,
+  "test": {
+    "accuracy": 9.057301293900185,
+    "weighted_f1": 8.498699456125436,
+    "class_f1": [
+      4.270462633451958,
+      19.393939393939398,
+      15.144230769230768,
+      4.294478527607363,
+      0.0,
+      4.938271604938272
+    ]
+  },
+  "class_names": [
+    "happiness",
+    "sadness",
+    "neutral",
+    "anger",
+    "excited",
+    "frustration"
+  ],
+  "samples": 1623,
+  "fresh_strict_replay_exact": true,
+  "elapsed_seconds": 1.6869134902954102,
+  "checkpoint_sha256": "8161d9ba7d0f6e1ea3be696b841fc1429b0b51c779d48811da84390fc4852cdc",
+  "predictions_sha256": "134a0b58b2ba49fd7f71da3fe9e081e5d89d31fb75703666861f0a873e3c3050"
+}

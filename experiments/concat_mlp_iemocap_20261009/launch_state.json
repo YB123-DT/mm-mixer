@@ -1,0 +1,16 @@
+{
+  "launched_at_utc": "2026-10-09T10:11:09.270249+00:00",
+  "server": "biggpu",
+  "remote_root": "/data2/yb/multimodalERC/MM_Mixer_ConcatMLP_IEMOCAP_20261009",
+  "tmux": "concat_mlp_iemocap_20261009",
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+  "status": "completed",
+  "seed": 2025,
+  "max_epochs": 100,
+  "early_stopping_patience": 30,
+  "source_commit": "1b8b1fff90e19d793a99c0d0cf01c4bfd3cf51ab",
+  "epochs_completed": 100,
+  "selected_epoch": 82,
+  "exit_code": 0
+}

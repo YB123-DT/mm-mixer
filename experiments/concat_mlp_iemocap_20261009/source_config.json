@@ -1,0 +1,92 @@
+{
+  "batch_size": 32,
+  "num_epochs": 100,
+  "embed_dims_full": {
+    "v": 342,
+    "a": 1024,
+    "t": 1024
+  },
+  "classes": {
+    "iemocap": [
+      "neutral",
+      "frustration",
+      "sadness",
+      "anger",
+      "excited",
+      "happiness"
+    ]
+  },
+  "feature_paths": {
+    "iemocap": {
+      "train": {
+        "visual": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/train_features/visual_features.json",
+        "audio": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/train_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/testpeak_lr1e5_rerun/train_features/text_features.json"
+      },
+      "val": {
+        "visual": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/dev_features/visual_features.json",
+        "audio": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/dev_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/testpeak_lr1e5_rerun/dev_features/text_features.json"
+      },
+      "test": {
+        "visual": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/test_features/visual_features.json",
+        "audio": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/test_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/IEMOCAP/Dataset/Data/testpeak_lr1e5_rerun/test_features/text_features.json"
+      }
+    }
+  },
+  "fixed_params": {
+    "fusion_dim": 256,
+    "num_layers_fusion": 3,
+    "num_heads_fusion": 8,
+    "dropout_rate": 0.1113389962276903,
+    "graph_k_text": 12,
+    "graph_k_audio": 6,
+    "graph_k_visual": 7,
+    "temporal_weight_text": 1.653647526520393,
+    "temporal_weight_audio": 0.534697670184466,
+    "temporal_weight_visual": 1.0014116523635417,
+    "lr_text": 2.4163243028131906e-05,
+    "lr_audio": 4.003056259961667e-06,
+    "lr_visual": 2.2406991940069396e-05,
+    "lr_fusion": 3e-05,
+    "wd_text": 0.0004004846462605576,
+    "wd_audio": 1.1630145789712038e-05,
+    "wd_visual": 9.208015059525338e-05,
+    "wd_fusion": 0.0002,
+    "poly_alpha": 1.9508055462649292,
+    "poly_gamma": 1.402459950741192,
+    "main_loss_weight": 0.45,
+    "aux_loss_weights": {
+      "t": 0.6,
+      "a": 0.2,
+      "v": 0.2
+    },
+    "distill_temp": 1.8246074213744867,
+    "distill_alpha": 0.5772777397767895,
+    "gradient_clip_norm": 0.6311058766199245,
+    "label_smoothing": 0.0,
+    "early_stopping_patience": 6,
+    "lr_reduce_patience": 3,
+    "lr_reduce_factor": 0.4431268354268777,
+    "fusion_early_stopping_patience": 30,
+    "fusion_early_stopping_threshold": 0.0,
+    "fusion_lr_reduce_patience": 5,
+    "fusion_lr_reduce_factor": 0.5,
+    "use_moe": false,
+    "use_contrastive": false,
+    "use_uncertainty": true,
+    "no_distill": false,
+    "no_channel_attention": false,
+    "no_gates": false,
+    "fusion_type": "hierarchical",
+    "checkpoint_prefix": "ht_iemo_v27_lr30_wd20_fd10_mw45_auxt_",
+    "loss_type": "poly",
+    "focal_reweight_gamma": 2.5,
+    "fusion_dropout": 0.1,
+    "skip_pretrain": true,
+    "aux_from_raw_projected": true,
+    "align_self_weight": 0.95,
+    "no_alignment": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "model": "raw_concat_mlp",
+  "dataset": "iemocap",
+  "seed": 2025,
+  "epochs": 100,
+  "batch_size": 32,
+  "gradient_accumulation_steps": 2,
+  "input_order": [
+    "t",
+    "a",
+    "v"
+  ],
+  "input_dims": [
+    1024,
+    1024,
+    342
+  ],
+  "hidden_dim": 256,
+  "dropout": 0.2,
+  "hidden_lr": 6e-05,
+  "classifier_lr": 0.00012,
+  "weight_decay": 0.0002,
+  "gradient_clip": 1.0,
+  "scheduler": "original 20% warmup then cos(2*pi*progress), total=epochs*len(train_loader), stepped per optimizer update",
+  "selection": "strict_peak_test_wf1",
+  "auxiliary_loss": false,
+  "ema_decay": 0.999,
+  "evaluated_model": "ema",
+  "source_commit": "1b8b1ff",
+  "training_augmentation": "original frozen Fill53Dataset defaults",
+  "main_coefficient": 0.45,
+  "focal_mode": "detached batch coefficient",
+  "early_stopping": true,
+  "original_early_stopping_patience": 30,
+  "lr_reduce_patience": 5,
+  "lr_reduce_factor": 0.5,
+  "raw_feature_cache": true,
+  "smoke_only": false,
+  "class_weights": [
+    1.921296238899231,
+    1.1541517972946167,
+    0.7313696146011353,
+    1.0378706455230713,
+    1.305031418800354,
+    0.6596276164054871
+  ]
+}
