@@ -133,6 +133,20 @@ def main() -> None:
             )
 
     rows.sort(key=lambda row: (row["rank"], VARIANTS.index(row["variant"])))
+    upstream_by_rank = {entry["rank"]: entry for entry in feature_manifest}
+    full_by_rank = {
+        row["rank"]: row["weighted_f1"]
+        for row in rows
+        if row["variant"] == "full"
+    }
+    for row in rows:
+        upstream = upstream_by_rank[row["rank"]]
+        row["upstream_epoch"] = upstream["epoch"]
+        row["upstream_dev_wf1"] = upstream["dev_wf1"]
+        row["upstream_test_wf1"] = upstream["test_wf1"]
+        row["full_minus_variant_wf1"] = (
+            full_by_rank[row["rank"]] - row["weighted_f1"]
+        )
     result_dir = root / "analysis"
     result_dir.mkdir(parents=True, exist_ok=True)
     (result_dir / "screening_results.json").write_text(
@@ -142,6 +156,35 @@ def main() -> None:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
+
+    by_rank = {
+        rank: {row["variant"]: row for row in rows if row["rank"] == rank}
+        for rank in sorted(upstream_by_rank)
+    }
+    lines = [
+        "# MELD Top-4 text-checkpoint ablation screen",
+        "",
+        "All values are single-seed diagnostic test weighted F1 percentages. "
+        "Positive deltas mean Full is higher than the named control.",
+        "",
+        "| Rank | Upstream epoch | Upstream test | Full | Text only | "
+        "Full-Text | Full-No AMM | Full-No EPIRC | Full-No MCA | Full-No FG+AG |",
+        "|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for rank, variants in by_rank.items():
+        upstream = upstream_by_rank[rank]
+        full = variants["full"]["weighted_f1"]
+        value = lambda name: variants[name]["weighted_f1"]
+        lines.append(
+            f"| {rank} | {upstream['epoch']} | {100 * upstream['test_wf1']:.2f} "
+            f"| {100 * full:.2f} | {100 * value('modal_t'):.2f} "
+            f"| {100 * (full - value('modal_t')):+.2f} "
+            f"| {100 * (full - value('no_mixer')):+.2f} "
+            f"| {100 * (full - value('no_pairwise')):+.2f} "
+            f"| {100 * (full - value('no_cross_attention')):+.2f} "
+            f"| {100 * (full - value('no_feature_and_adaptive_gating')):+.2f} |"
+        )
+    (result_dir / "README.md").write_text("\n".join(lines) + "\n")
 
 
 if __name__ == "__main__":
