@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "smoke_only": true,
+  "epochs_completed": 1,
+  "selected_epoch": 1,
+  "dataset": "meld",
+  "seed": 2025,
+  "parameters": 613895,
+  "test": {
+    "accuracy": 25.78544061302682,
+    "weighted_f1": 25.41040889576748,
+    "class_f1": [
+      44.81327800829875,
+      2.083333333333333,
+      9.1254752851711,
+      0.0,
+      0.0,
+      1.6528925619834711,
+      25.743776563448694
+    ]
+  },
+  "class_names": [
+    "neutral",
+    "surprise",
+    "fear",
+    "sadness",
+    "joy",
+    "disgust",
+    "anger"
+  ],
+  "samples": 2610,
+  "fresh_strict_replay_exact": true,
+  "elapsed_seconds": 5.56478214263916,
+  "checkpoint_sha256": "ef6a3cfa4278c0d00d531ab08639d9a200eb3310714b6a7aae6999b1265ae930",
+  "predictions_sha256": "e5cba1170f50b4d78321a6fc7147ea79bbb9dc61caf2622d01b9fd38119f7862"
+}

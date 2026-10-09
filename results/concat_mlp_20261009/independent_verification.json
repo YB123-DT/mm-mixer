@@ -1,0 +1,10 @@
+{
+  "independent_confusion_metrics_verified": true,
+  "all_50_epochs_verified": true,
+  "earliest_peak_epoch_verified": 48,
+  "prediction_npz_hash_verified": true,
+  "samples": 2610,
+  "wf1": 67.88797397685944,
+  "accuracy": 68.77394636015326,
+  "parameter_reduction_vs_full_pct": 89.25267022287893
+}

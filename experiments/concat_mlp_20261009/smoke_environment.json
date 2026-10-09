@@ -1,0 +1,13 @@
+{
+  "python": "3.10.20",
+  "torch": "2.2.2+cu121",
+  "cuda": "12.1",
+  "device": "Tesla V100-SXM2-32GB",
+  "visible_device": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+  "source_hashes": {
+    "source_config.json": "5635a1eed0eba2a7a979166620e2f873cfdda8c92d6e791f420aa9bf49b0ea2b",
+    "run_pipeline.sh": "5666b90a86b48ec6a530375bb19f42d8b4c89df38aaeb5e2f8d3a01e211c6659",
+    "train.py": "f8eb1974175e874b97e68c3cc65771ac067420bed9f3a4d658df4b5a57617340",
+    "source_multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8"
+  }
+}

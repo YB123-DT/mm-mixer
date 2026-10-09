@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "server": "biggpu",
+  "physical_gpu": 1,
+  "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+  "tmux": "concat_mlp_meld_20261009",
+  "root": "/data2/yb/multimodalERC/MM_Mixer_ConcatMLP_20261009",
+  "pid": 800421,
+  "formal_epochs": 50,
+  "seed": 2025,
+  "smoke_passed": true,
+  "seconds_per_epoch_early": 18,
+  "observed_epoch": 50,
+  "checked_at_utc": "2026-10-09T09:37:32.695683+00:00",
+  "exit_code": 0,
+  "result": "results/concat_mlp_20261009/meld_seed2025/result.json"
+}

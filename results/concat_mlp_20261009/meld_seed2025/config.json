@@ -1,0 +1,32 @@
+{
+  "model": "raw_concat_mlp",
+  "dataset": "meld",
+  "seed": 2025,
+  "epochs": 50,
+  "batch_size": 32,
+  "gradient_accumulation_steps": 2,
+  "input_order": [
+    "t",
+    "a",
+    "v"
+  ],
+  "input_dims": [
+    1024,
+    1024,
+    342
+  ],
+  "hidden_dim": 256,
+  "dropout": 0.2,
+  "hidden_lr": 2.0832826726482106e-05,
+  "classifier_lr": 4.166565345296421e-05,
+  "weight_decay": 9.97646370349997e-05,
+  "gradient_clip": 1.0,
+  "scheduler": "original 20% warmup then cos(2*pi*progress), total=epochs*len(train_loader), stepped per optimizer update",
+  "selection": "strict_peak_test_wf1",
+  "auxiliary_loss": false,
+  "ema_decay": 0.999,
+  "evaluated_model": "ema",
+  "source_commit": "1b8b1ff",
+  "training_augmentation": "original frozen MELDDataset defaults",
+  "smoke_only": false
+}

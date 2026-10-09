@@ -1,0 +1,16 @@
+{
+  "loss_value_exact": true,
+  "loss_gradient_exact": true,
+  "updated_parameters": {
+    "hidden.weight": true,
+    "hidden.bias": true,
+    "classifier.weight": true,
+    "classifier.bias": true
+  },
+  "parameters": 613895,
+  "shape": [
+    32,
+    7
+  ],
+  "finite": true
+}
