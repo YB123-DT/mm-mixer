@@ -19,3 +19,9 @@ history-aware EOS-pooled features for train/dev/test, verifies exact split
 coverage, 1,024-dimensional finite vectors and records checkpoint/feature
 hashes. This deliberately matches the existing downstream feature-export
 semantics even though upstream training uses the final MASK representation.
+
+The initial downstream screen runs seed 2025 for Full, text only, no AMM,
+no EPIRC, no MCA, and no Feature Gating plus no Adaptive Gating on every
+ranked feature set. Four runs share one healthy GPU. Every selected bundle
+must pass exact replay and contain the expected text-feature hash before it is
+included in `screening_results.csv`.
