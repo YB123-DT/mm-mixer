@@ -1,0 +1,101 @@
+{
+  "artifact_sha256": {
+    "best_peak_test_state_dict.pt": "c25d07a117983bd05d2be8cae86908a5698c756a18ab01421a410785c0b5cafc",
+    "classification_report.txt": "bf1ab94d99f5453d02cf92d585b242d35c202ade8e54ac38d84eaed726623d36",
+    "config.json": "87dabf772d9a5d3ce4a3f9be85f69508de075c63e0e35565530dd998a83313ef",
+    "history.json": "fa91497d6b1ff92c24ab631caffb8d39f53d8b87d5d8fb6c88f77bd1bc2bc6aa",
+    "peak_test_metrics.json": "511a20adec480534184556c48da77c834c2855781ba111715826f264e299e5da",
+    "peak_test_predictions.pt": "49878c47e585822cc72c90757a5d85be3b1ded6783c57b02e2b9d0291c513541"
+  },
+  "config_contract_sha256": "7cf156063928bb24ee8f7515c28e880bba763fcf4b79975a5890a141e2245056",
+  "config_sha256": "cce42a9c4bebed770fb4814ebd6e7e3c73e70010bec508a937d9b3e86913f004",
+  "dataset": "meld",
+  "feature_hashes": {
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+    "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+    "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/features/dev_features/text_features.json": "26b453fd3d3e054abb2eb7ecc021a171fcf251a3e57f7ef9e50f582741c7e194",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/features/test_features/text_features.json": "9cb9bff1023dfb76dec66d47f9292f876eb2848075d5c32ee13f2266050a2e6d",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/features/train_features/text_features.json": "978ca42e402889178d8d007d73f955c3300f5db72ac0184efdd31a581857e013"
+  },
+  "fresh_strict_replay_exact": true,
+  "runtime_audit": {
+    "active_modalities": [
+      "t"
+    ],
+    "architecture": {
+      "blocks": 2,
+      "dim": 256,
+      "ffn": 1536,
+      "tokens": 6
+    },
+    "feature_paths": {
+      "dev": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/../MM_Mixer_FrozenRoBERTa_MELD_20261009/features/dev_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+      },
+      "test": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/../MM_Mixer_FrozenRoBERTa_MELD_20261009/features/test_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+      },
+      "train": {
+        "a": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+        "t": "/data2/yb/multimodalERC/MELD/../MM_Mixer_FrozenRoBERTa_MELD_20261009/features/train_features/text_features.json",
+        "v": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+      }
+    },
+    "input_dims": {
+      "a": 1024,
+      "t": 1024,
+      "v": 342
+    },
+    "learning_rates": {
+      "classifier": 4.166565345296421e-05,
+      "mixer": 2.0832826726482106e-05,
+      "projection": 1.0416413363241053e-05,
+      "remaining": 2.0832826726482106e-05
+    },
+    "loss": {
+      "aux_class_weight": true,
+      "fixed_task_weights": {
+        "a": 1.0,
+        "main": 1.0,
+        "t": 1.0,
+        "v": 1.0
+      },
+      "focal_gamma": 2.5,
+      "focal_probability_detached": false,
+      "kind": "meld_per_sample_focal_no_detach",
+      "main_class_weight": false,
+      "task_weighting": "fixed_unit"
+    },
+    "selection": "strict_peak_test_wf1"
+  },
+  "seed": 2025,
+  "selection": "strict_peak_test_wf1",
+  "source_hashes": {
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/dataset_runners/meld.py": "58d3a1931eb1c776dc2cc6a4cb58383fee78c1077f1a24de1020f08b47e03e6d",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/__init__.py": "7d6b2f58d3ae4774eb5f399a8ca1f056ddc8a0ba871ae172885559536dceaa59",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/adapters.py": "a7136993446e706c0523ffe15fed7d6039bb1c8785676a07e0774be036a1d719",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/artifacts.py": "97c13366f793a7e5f85fc5ab222287583e1ebed96b382eab454730934b9f0baa",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/audit.py": "46e2926f949741da6d9622121c067e88348308baa42e2d7a6b4b7adf08699a1e",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/cli.py": "5d7f813766ee802c9da92aad53514108024df30b98598e6a8913796cf6fbd2ec",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/config.py": "189fab4fa4c0004e92ff0c1ca6609a380fdf4a8553612831b7ee23f59f36dbd7",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/modalities.py": "b08cc8e7d6639eb1c4ede631077f0330350edaf0676e961e24d67cc0de0c5f3b",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/revision_controls.py": "70a7468e6764de0d962bd7d1ccc51e9d16beb22f74a6680db770d681e8171ca1",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/mm_mixer_final/structural_ablations.py": "f26b8bd134634979a1a0a98fac924c4f6178f1b1bab8bbbdd9e4f80858614ea6",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/run.py": "224873ebbb4b6e3ac6f33c23d44abcb18b12eff45d631e102d90b2ff735ede39",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/vendor/meld/configs/config_meld_rawaux_s15m.json": "5635a1eed0eba2a7a979166620e2f873cfdda8c92d6e791f420aa9bf49b0ea2b",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/vendor/meld/layerwise_objectives.py": "0b2b8eb6a9394f0bf4280119082a7d906b353d34b000b3657d7a40023a585e78",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/vendor/meld/model.py": "60048701316c137f98fdecb1291c640a593943ed45819512ba081de530bca43c",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/vendor/meld/multiattn.py": "7c7ed839c7cf6cfe76b75618f1c02b723d4e00417270c7403b0b25dce8b8d4e8",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/vendor/meld/train_erc.py": "0f6f51ad5c76372a6f9b5eda3a548647fc30cd81adf3a98bfe648adf93139c1e",
+    "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/downstream_code/vendor/meld/variant_override.py": "6b4a066addf89e56155b47176685c343e7322e8edeb1603a3fa1fa7576ff27ae"
+  },
+  "variant": "modal_t"
+}

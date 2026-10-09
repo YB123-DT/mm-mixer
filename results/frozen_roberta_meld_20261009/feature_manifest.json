@@ -1,0 +1,47 @@
+{
+  "kind": "task_agnostic_frozen_roberta_large",
+  "model": "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/model/roberta-large",
+  "seed": 2025,
+  "pooling": "last_non_padding_normally_eos",
+  "context": "history_through_current_utterance",
+  "truncation": "right",
+  "max_length": 511,
+  "speaker_markers": "original_tokenizer_no_added_tokens",
+  "tokenizer_length": 50265,
+  "embedding_rows": 50265,
+  "python": "3.10.21",
+  "torch": "2.5.1",
+  "transformers": "4.57.6",
+  "splits": {
+    "train": {
+      "rows": 9989,
+      "dimension": 1024,
+      "finite": true,
+      "over_max_length": 2,
+      "csv": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_sent_emo.csv",
+      "csv_sha256": "4e3907e95e7ad4fd413a5a58d807dee79ebdb0c16b050cd33c3a3ac35ddb9ebf",
+      "output": "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/features/train_features/text_features.json",
+      "output_sha256": "978ca42e402889178d8d007d73f955c3300f5db72ac0184efdd31a581857e013"
+    },
+    "dev": {
+      "rows": 1109,
+      "dimension": 1024,
+      "finite": true,
+      "over_max_length": 0,
+      "csv": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_sent_emo.csv",
+      "csv_sha256": "7e306369c2d1625b063132310aa30bc6979fcf0f51c783e903edfcaa1c98b15c",
+      "output": "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/features/dev_features/text_features.json",
+      "output_sha256": "26b453fd3d3e054abb2eb7ecc021a171fcf251a3e57f7ef9e50f582741c7e194"
+    },
+    "test": {
+      "rows": 2610,
+      "dimension": 1024,
+      "finite": true,
+      "over_max_length": 8,
+      "csv": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_sent_emo.csv",
+      "csv_sha256": "2d3fdb6586bdcdf172a7197fae9244116b1103efd951db2317e6a67c7042d28e",
+      "output": "/data2/yb/multimodalERC/MM_Mixer_FrozenRoBERTa_MELD_20261009/features/test_features/text_features.json",
+      "output_sha256": "9cb9bff1023dfb76dec66d47f9292f876eb2848075d5c32ee13f2266050a2e6d"
+    }
+  }
+}

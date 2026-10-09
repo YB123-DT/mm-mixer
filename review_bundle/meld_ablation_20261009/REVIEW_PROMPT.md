@@ -27,5 +27,14 @@ Answer these questions using concrete code references:
    feature dominance and genuinely ineffective interaction modules. Do not
    suggest broad hyperparameter searches before checking these mechanisms.
 
+Additional verified evidence: after replacing the MELD-supervised text input
+with frozen RoBERTa-large features, the corrected seed-2025 Full run obtains
+48.41 weighted F1 and text only obtains 31.27, with exact fresh replay for
+both. An earlier apparently identical pair was invalid because only audit
+metadata received the replacement paths; commit `ce6265b` fixes the actual
+trainer configuration. Account for this result without attributing the full
+17.15-point gap to a particular interaction module, since Full also adds audio
+and visual inputs.
+
 Please separate confirmed defects from plausible hypotheses, and state what
 evidence would falsify each hypothesis.

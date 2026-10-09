@@ -1,0 +1,38 @@
+{
+  "train": {
+    "rows": 9989,
+    "shape": [
+      9989,
+      1024
+    ],
+    "finite": true,
+    "keys_exact": true,
+    "mean_cosine_vs_finetuned": 0.12162047624588013,
+    "std_cosine_vs_finetuned": 0.23742815852165222,
+    "sha256": "978ca42e402889178d8d007d73f955c3300f5db72ac0184efdd31a581857e013"
+  },
+  "dev": {
+    "rows": 1109,
+    "shape": [
+      1109,
+      1024
+    ],
+    "finite": true,
+    "keys_exact": true,
+    "mean_cosine_vs_finetuned": 0.1245400607585907,
+    "std_cosine_vs_finetuned": 0.23763568699359894,
+    "sha256": "26b453fd3d3e054abb2eb7ecc021a171fcf251a3e57f7ef9e50f582741c7e194"
+  },
+  "test": {
+    "rows": 2610,
+    "shape": [
+      2610,
+      1024
+    ],
+    "finite": true,
+    "keys_exact": true,
+    "mean_cosine_vs_finetuned": 0.11366836726665497,
+    "std_cosine_vs_finetuned": 0.23959246277809143,
+    "sha256": "9cb9bff1023dfb76dec66d47f9292f876eb2848075d5c32ee13f2266050a2e6d"
+  }
+}

@@ -69,13 +69,16 @@ approximately one, with maximum absolute error below `1e-4`.
   upstream text/audio/visual audit.
 - [`../../results/meld_visual_remap_20261009/README.md`](../../results/meld_visual_remap_20261009/README.md):
   corrected visual-duplication diagnosis.
+- [`../../results/frozen_roberta_meld_20261009/README.md`](../../results/frozen_roberta_meld_20261009/README.md):
+  corrected frozen-RoBERTa Full versus text-only diagnostic and compact
+  replay-verified artifacts.
 
 All existing revision results use `strict_peak_test_wf1`: each variant keeps
 the epoch with the highest test weighted F1. This is a diagnostic protocol and
 is itself a likely source of compressed differences between variants. A
 validation-selected rerun is still required for a publication-grade claim.
 
-## Key observations before the frozen-text run finishes
+## Key observations
 
 Three-seed MELD weighted F1:
 
@@ -98,3 +101,15 @@ The visual source artifact contains 3,407 all-zero train vectors. At least 609
 nonzero dev vectors and 1,548 nonzero test vectors exactly match train vectors
 attached to different utterance text. This repetition is already present in
 the CSS/SDT source pickle rather than being introduced by the JSON exporter.
+
+The valid frozen-RoBERTa seed-2025 diagnostic produces 48.41 weighted F1 for
+Full and 31.27 for text only, a +17.15-point gap. This shows that Full and text
+only are no longer tied when the task-supervised text representation is
+removed. It supports text-feature dominance as an explanation for compressed
+multimodal differences, but it does not isolate the contribution of AMM,
+MCA, EPIRC or any other individual module.
+
+The first frozen-feature attempt was invalid: the runtime audit contained the
+new paths while the vendor trainer still read hardcoded fine-tuned-text paths.
+Commit `ce6265b` synchronizes the trainer-facing and audit-facing paths and
+adds a regression test. The invalid run is excluded from this bundle.
