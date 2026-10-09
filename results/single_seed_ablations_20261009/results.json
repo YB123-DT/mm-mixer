@@ -1,0 +1,3240 @@
+{
+  "completed": [
+    {
+      "dataset": "iemocap",
+      "variant": "full",
+      "seed": 2025,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.92653797281977,
+      "class_f1": {
+        "anger": 72.82913165266106,
+        "excited": 73.14487632508832,
+        "frustration": 68.57142857142857,
+        "happiness": 56.60377358490567,
+        "neutral": 70.96774193548386,
+        "sadness": 85.5397148676171
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "full",
+      "seed": 2066,
+      "accuracy": 72.2735674676525,
+      "weighted_f1": 72.3450989234245,
+      "class_f1": {
+        "anger": 71.50837988826815,
+        "excited": 74.78260869565217,
+        "frustration": 69.17098445595855,
+        "happiness": 57.432432432432435,
+        "neutral": 72.22222222222221,
+        "sadness": 83.84458077709613
+      },
+      "epoch": 65,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "full",
+      "seed": 2118,
+      "accuracy": 72.02711028958718,
+      "weighted_f1": 72.16611478894906,
+      "class_f1": {
+        "anger": 70.32967032967034,
+        "excited": 74.86818980667837,
+        "frustration": 68.67627785058978,
+        "happiness": 57.96178343949043,
+        "neutral": 71.87079407806192,
+        "sadness": 84.38133874239351
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_gating",
+      "seed": 2025,
+      "accuracy": 71.71903881700554,
+      "weighted_f1": 71.8730003069736,
+      "class_f1": {
+        "anger": 72.42339832869081,
+        "excited": 73.72134038800705,
+        "frustration": 68.48958333333334,
+        "happiness": 56.68789808917197,
+        "neutral": 71.01063829787235,
+        "sadness": 84.77366255144034
+      },
+      "epoch": 32,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_gating",
+      "seed": 2066,
+      "accuracy": 71.65742452248922,
+      "weighted_f1": 71.77664218239957,
+      "class_f1": {
+        "anger": 71.23287671232877,
+        "excited": 73.53463587921848,
+        "frustration": 68.93840104849279,
+        "happiness": 57.234726688102896,
+        "neutral": 70.91633466135458,
+        "sadness": 84.31771894093687
+      },
+      "epoch": 44,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_gating",
+      "seed": 2118,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.89648541725889,
+      "class_f1": {
+        "anger": 69.39890710382512,
+        "excited": 74.69458987783595,
+        "frustration": 68.15789473684211,
+        "happiness": 57.41935483870968,
+        "neutral": 71.69811320754717,
+        "sadness": 84.84848484848484
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_adaptive_gating",
+      "seed": 2025,
+      "accuracy": 71.41096734442391,
+      "weighted_f1": 71.58810536756359,
+      "class_f1": {
+        "anger": 71.8232044198895,
+        "excited": 72.7927927927928,
+        "frustration": 68.22916666666666,
+        "happiness": 57.230769230769226,
+        "neutral": 71.14093959731544,
+        "sadness": 84.31771894093687
+      },
+      "epoch": 39,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_adaptive_gating",
+      "seed": 2066,
+      "accuracy": 72.15033887861983,
+      "weighted_f1": 72.2383430518017,
+      "class_f1": {
+        "anger": 70.96774193548386,
+        "excited": 75.043630017452,
+        "frustration": 67.90945406125167,
+        "happiness": 57.52508361204013,
+        "neutral": 72.84595300261097,
+        "sadness": 84.12371134020619
+      },
+      "epoch": 55,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_adaptive_gating",
+      "seed": 2118,
+      "accuracy": 71.1645101663586,
+      "weighted_f1": 71.3130142170277,
+      "class_f1": {
+        "anger": 69.91869918699187,
+        "excited": 73.17939609236234,
+        "frustration": 67.88036410923277,
+        "happiness": 56.782334384858046,
+        "neutral": 70.84468664850135,
+        "sadness": 84.61538461538461
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_and_adaptive_gating",
+      "seed": 2025,
+      "accuracy": 71.04128157732595,
+      "weighted_f1": 71.21440880749796,
+      "class_f1": {
+        "anger": 71.62534435261708,
+        "excited": 73.44028520499108,
+        "frustration": 67.62402088772845,
+        "happiness": 56.25,
+        "neutral": 70.41499330655957,
+        "sadness": 83.84458077709613
+      },
+      "epoch": 35,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_and_adaptive_gating",
+      "seed": 2066,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 71.93993751729374,
+      "class_f1": {
+        "anger": 69.81627296587926,
+        "excited": 75.043630017452,
+        "frustration": 67.55674232309747,
+        "happiness": 57.999999999999986,
+        "neutral": 72.48677248677248,
+        "sadness": 83.77823408624229
+      },
+      "epoch": 52,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_and_adaptive_gating",
+      "seed": 2118,
+      "accuracy": 71.34935304990758,
+      "weighted_f1": 71.47739731609339,
+      "class_f1": {
+        "anger": 68.85245901639345,
+        "excited": 74.25569176882662,
+        "frustration": 67.44487678339817,
+        "happiness": 58.63192182410424,
+        "neutral": 71.62162162162163,
+        "sadness": 83.50305498981672
+      },
+      "epoch": 48,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_cross_attention",
+      "seed": 2025,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 72.0143973223914,
+      "class_f1": {
+        "anger": 71.7948717948718,
+        "excited": 73.53463587921848,
+        "frustration": 68.59395532194482,
+        "happiness": 56.172839506172835,
+        "neutral": 71.44754316069057,
+        "sadness": 85.82995951417006
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_cross_attention",
+      "seed": 2066,
+      "accuracy": 71.28773875539125,
+      "weighted_f1": 71.35933978030437,
+      "class_f1": {
+        "anger": 72.32876712328768,
+        "excited": 73.53463587921848,
+        "frustration": 68.65284974093264,
+        "happiness": 56.393442622950815,
+        "neutral": 69.07630522088354,
+        "sadness": 84.61538461538461
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_cross_attention",
+      "seed": 2118,
+      "accuracy": 71.65742452248922,
+      "weighted_f1": 71.85414777146217,
+      "class_f1": {
+        "anger": 72.0,
+        "excited": 71.63636363636363,
+        "frustration": 70.22106631989598,
+        "happiness": 54.98489425981873,
+        "neutral": 71.46666666666667,
+        "sadness": 85.08064516129032
+      },
+      "epoch": 32,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_mixer",
+      "seed": 2025,
+      "accuracy": 71.53419593345656,
+      "weighted_f1": 71.66765115051896,
+      "class_f1": {
+        "anger": 72.57142857142857,
+        "excited": 71.97106690777576,
+        "frustration": 69.20152091254752,
+        "happiness": 56.77419354838711,
+        "neutral": 71.59841479524438,
+        "sadness": 83.36755646817248
+      },
+      "epoch": 53,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_mixer",
+      "seed": 2066,
+      "accuracy": 72.33518176216882,
+      "weighted_f1": 72.42166953104051,
+      "class_f1": {
+        "anger": 71.09826589595374,
+        "excited": 74.07407407407408,
+        "frustration": 69.8331193838254,
+        "happiness": 57.615894039735096,
+        "neutral": 71.84210526315789,
+        "sadness": 84.95934959349594
+      },
+      "epoch": 43,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_mixer",
+      "seed": 2118,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.92167701868772,
+      "class_f1": {
+        "anger": 72.36467236467237,
+        "excited": 74.21602787456445,
+        "frustration": 69.14212548015365,
+        "happiness": 56.41025641025642,
+        "neutral": 70.90663058186739,
+        "sadness": 83.84458077709613
+      },
+      "epoch": 48,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_pairwise",
+      "seed": 2025,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 71.99106315899752,
+      "class_f1": {
+        "anger": 72.42339832869081,
+        "excited": 73.27433628318583,
+        "frustration": 68.57142857142857,
+        "happiness": 56.782334384858046,
+        "neutral": 71.14093959731544,
+        "sadness": 85.71428571428571
+      },
+      "epoch": 35,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_pairwise",
+      "seed": 2066,
+      "accuracy": 72.21195317313617,
+      "weighted_f1": 72.30387377348082,
+      "class_f1": {
+        "anger": 71.75141242937853,
+        "excited": 74.12587412587412,
+        "frustration": 69.6774193548387,
+        "happiness": 56.666666666666664,
+        "neutral": 72.12681638044914,
+        "sadness": 84.01639344262296
+      },
+      "epoch": 68,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_pairwise",
+      "seed": 2118,
+      "accuracy": 72.08872458410352,
+      "weighted_f1": 72.23232987671689,
+      "class_f1": {
+        "anger": 70.52341597796142,
+        "excited": 74.86818980667837,
+        "frustration": 68.40731070496084,
+        "happiness": 58.14696485623002,
+        "neutral": 72.04301075268819,
+        "sadness": 84.72505091649694
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_auxiliary_loss",
+      "seed": 2025,
+      "accuracy": 71.59581022797289,
+      "weighted_f1": 71.65113996439051,
+      "class_f1": {
+        "anger": 70.91412742382272,
+        "excited": 72.85464098073555,
+        "frustration": 69.01041666666666,
+        "happiness": 55.97269624573378,
+        "neutral": 71.54046997389034,
+        "sadness": 84.18891170431212
+      },
+      "epoch": 72,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_auxiliary_loss",
+      "seed": 2066,
+      "accuracy": 71.34935304990758,
+      "weighted_f1": 71.3783779106061,
+      "class_f1": {
+        "anger": 71.42857142857143,
+        "excited": 73.07692307692307,
+        "frustration": 69.38775510204083,
+        "happiness": 53.74149659863946,
+        "neutral": 69.91869918699187,
+        "sadness": 85.02024291497976
+      },
+      "epoch": 69,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_auxiliary_loss",
+      "seed": 2118,
+      "accuracy": 70.67159581022797,
+      "weighted_f1": 70.85215866356418,
+      "class_f1": {
+        "anger": 71.42857142857143,
+        "excited": 72.37076648841355,
+        "frustration": 67.88511749347259,
+        "happiness": 55.451713395638635,
+        "neutral": 69.25133689839572,
+        "sadness": 84.77366255144034
+      },
+      "epoch": 35,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_sequence_mixing",
+      "seed": 2025,
+      "accuracy": 71.28773875539125,
+      "weighted_f1": 71.43320136340037,
+      "class_f1": {
+        "anger": 71.23287671232877,
+        "excited": 73.14487632508832,
+        "frustration": 68.64516129032258,
+        "happiness": 56.86900958466454,
+        "neutral": 70.54054054054053,
+        "sadness": 83.77823408624229
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_sequence_mixing",
+      "seed": 2066,
+      "accuracy": 71.53419593345656,
+      "weighted_f1": 71.64739693303807,
+      "class_f1": {
+        "anger": 70.39106145251397,
+        "excited": 72.69503546099291,
+        "frustration": 69.09090909090908,
+        "happiness": 56.209150326797385,
+        "neutral": 71.40974967061922,
+        "sadness": 84.66257668711657
+      },
+      "epoch": 45,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_sequence_mixing",
+      "seed": 2118,
+      "accuracy": 71.47258163894024,
+      "weighted_f1": 71.63648821452867,
+      "class_f1": {
+        "anger": 70.1949860724234,
+        "excited": 74.03508771929823,
+        "frustration": 68.13471502590674,
+        "happiness": 56.68789808917197,
+        "neutral": 71.69811320754717,
+        "sadness": 83.84458077709613
+      },
+      "epoch": 51,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_modality_mixing",
+      "seed": 2025,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.92182102317697,
+      "class_f1": {
+        "anger": 72.88135593220338,
+        "excited": 73.30960854092527,
+        "frustration": 69.06290115532735,
+        "happiness": 58.044164037854884,
+        "neutral": 70.69892473118279,
+        "sadness": 84.08163265306122
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_modality_mixing",
+      "seed": 2066,
+      "accuracy": 72.15033887861983,
+      "weighted_f1": 72.25445486325967,
+      "class_f1": {
+        "anger": 71.91011235955057,
+        "excited": 74.38596491228068,
+        "frustration": 69.02887139107612,
+        "happiness": 57.14285714285715,
+        "neutral": 71.76781002638522,
+        "sadness": 84.55284552845528
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_modality_mixing",
+      "seed": 2118,
+      "accuracy": 71.65742452248922,
+      "weighted_f1": 71.80136975384818,
+      "class_f1": {
+        "anger": 70.36011080332409,
+        "excited": 73.17939609236234,
+        "frustration": 69.00129701686122,
+        "happiness": 57.413249211356465,
+        "neutral": 71.25506072874494,
+        "sadness": 84.7870182555781
+      },
+      "epoch": 48,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_mixing",
+      "seed": 2025,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 71.95690279666105,
+      "class_f1": {
+        "anger": 72.93447293447292,
+        "excited": 73.4622144112478,
+        "frustration": 69.23076923076923,
+        "happiness": 56.77419354838711,
+        "neutral": 70.60402684563759,
+        "sadness": 84.72505091649694
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_mixing",
+      "seed": 2066,
+      "accuracy": 71.96549599507087,
+      "weighted_f1": 72.07926747001643,
+      "class_f1": {
+        "anger": 70.98591549295776,
+        "excited": 74.38596491228068,
+        "frustration": 68.91191709844558,
+        "happiness": 57.516339869281055,
+        "neutral": 71.71314741035857,
+        "sadness": 84.08163265306122
+      },
+      "epoch": 49,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_feature_mixing",
+      "seed": 2118,
+      "accuracy": 71.65742452248922,
+      "weighted_f1": 71.81023351937536,
+      "class_f1": {
+        "anger": 70.52341597796142,
+        "excited": 73.85159010600707,
+        "frustration": 68.51119894598156,
+        "happiness": 57.49999999999999,
+        "neutral": 71.40939597315436,
+        "sadness": 84.38133874239351
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "one_mixer_block",
+      "seed": 2025,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.91437493230889,
+      "class_f1": {
+        "anger": 73.4463276836158,
+        "excited": 73.17939609236234,
+        "frustration": 68.72586872586872,
+        "happiness": 56.9620253164557,
+        "neutral": 70.69892473118279,
+        "sadness": 84.95934959349594
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "one_mixer_block",
+      "seed": 2066,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 71.97853904400874,
+      "class_f1": {
+        "anger": 71.66666666666667,
+        "excited": 73.57142857142858,
+        "frustration": 68.66840731070496,
+        "happiness": 57.324840764331206,
+        "neutral": 71.52317880794702,
+        "sadness": 84.72505091649694
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "one_mixer_block",
+      "seed": 2118,
+      "accuracy": 71.04128157732595,
+      "weighted_f1": 71.19436068113029,
+      "class_f1": {
+        "anger": 70.65217391304347,
+        "excited": 73.23943661971832,
+        "frustration": 68.06282722513089,
+        "happiness": 55.06329113924051,
+        "neutral": 70.36535859269283,
+        "sadness": 84.72505091649694
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp",
+      "seed": 2025,
+      "accuracy": 71.22612446087491,
+      "weighted_f1": 71.3960332528515,
+      "class_f1": {
+        "anger": 72.15909090909092,
+        "excited": 72.40143369175628,
+        "frustration": 68.76574307304784,
+        "happiness": 56.329113924050645,
+        "neutral": 70.0,
+        "sadness": 84.77366255144034
+      },
+      "epoch": 32,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp",
+      "seed": 2066,
+      "accuracy": 72.33518176216882,
+      "weighted_f1": 72.35801831490181,
+      "class_f1": {
+        "anger": 72.57142857142857,
+        "excited": 73.59154929577464,
+        "frustration": 70.1164294954722,
+        "happiness": 56.756756756756765,
+        "neutral": 71.22207621550591,
+        "sadness": 85.14056224899599
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp",
+      "seed": 2118,
+      "accuracy": 71.59581022797289,
+      "weighted_f1": 71.7499955370762,
+      "class_f1": {
+        "anger": 71.50837988826815,
+        "excited": 73.01587301587301,
+        "frustration": 68.9922480620155,
+        "happiness": 55.69620253164557,
+        "neutral": 71.71853856562922,
+        "sadness": 84.14634146341461
+      },
+      "epoch": 43,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_attention",
+      "seed": 2025,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.90568360997901,
+      "class_f1": {
+        "anger": 72.77936962750717,
+        "excited": 73.30960854092527,
+        "frustration": 69.21119592875317,
+        "happiness": 57.32899022801303,
+        "neutral": 70.72847682119206,
+        "sadness": 84.18891170431212
+      },
+      "epoch": 33,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_attention",
+      "seed": 2066,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 71.95784695552555,
+      "class_f1": {
+        "anger": 72.0,
+        "excited": 74.12587412587412,
+        "frustration": 68.87755102040816,
+        "happiness": 57.42574257425742,
+        "neutral": 71.1051930758988,
+        "sadness": 83.95061728395062
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_attention",
+      "seed": 2118,
+      "accuracy": 72.15033887861983,
+      "weighted_f1": 72.25984737093019,
+      "class_f1": {
+        "anger": 71.95467422096317,
+        "excited": 74.08695652173914,
+        "frustration": 68.96551724137932,
+        "happiness": 58.252427184466015,
+        "neutral": 71.75989085948157,
+        "sadness": 84.38133874239351
+      },
+      "epoch": 50,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_cubemlp",
+      "seed": 2025,
+      "accuracy": 71.53419593345656,
+      "weighted_f1": 71.65898684093415,
+      "class_f1": {
+        "anger": 70.32967032967034,
+        "excited": 72.85714285714288,
+        "frustration": 68.81443298969072,
+        "happiness": 58.70967741935485,
+        "neutral": 71.2182061579652,
+        "sadness": 83.84458077709613
+      },
+      "epoch": 51,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_cubemlp",
+      "seed": 2066,
+      "accuracy": 71.71903881700554,
+      "weighted_f1": 71.86096639962783,
+      "class_f1": {
+        "anger": 71.50837988826815,
+        "excited": 73.05605786618446,
+        "frustration": 69.58762886597938,
+        "happiness": 57.49999999999999,
+        "neutral": 70.69892473118279,
+        "sadness": 84.44444444444446
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_cubemlp",
+      "seed": 2118,
+      "accuracy": 72.21195317313617,
+      "weighted_f1": 72.32381601132795,
+      "class_f1": {
+        "anger": 71.54929577464787,
+        "excited": 74.52339688041594,
+        "frustration": 69.77950713359274,
+        "happiness": 56.02605863192183,
+        "neutral": 71.67785234899328,
+        "sadness": 84.72505091649694
+      },
+      "epoch": 58,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp_no_aux",
+      "seed": 2025,
+      "accuracy": 71.22612446087491,
+      "weighted_f1": 71.26276909590872,
+      "class_f1": {
+        "anger": 69.9724517906336,
+        "excited": 73.07692307692307,
+        "frustration": 68.66840731070496,
+        "happiness": 55.172413793103445,
+        "neutral": 71.11111111111113,
+        "sadness": 83.6734693877551
+      },
+      "epoch": 64,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp_no_aux",
+      "seed": 2066,
+      "accuracy": 71.59581022797289,
+      "weighted_f1": 71.68695888780991,
+      "class_f1": {
+        "anger": 70.62146892655367,
+        "excited": 73.04964539007092,
+        "frustration": 69.8331193838254,
+        "happiness": 55.194805194805184,
+        "neutral": 70.79407806191116,
+        "sadness": 84.73895582329317
+      },
+      "epoch": 43,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "amm_mlp_no_aux",
+      "seed": 2118,
+      "accuracy": 71.53419593345656,
+      "weighted_f1": 71.61901126521833,
+      "class_f1": {
+        "anger": 72.02216066481995,
+        "excited": 73.86759581881532,
+        "frustration": 69.17098445595855,
+        "happiness": 55.84415584415584,
+        "neutral": 69.74219810040707,
+        "sadness": 84.61538461538461
+      },
+      "epoch": 35,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "pairwise_mlp_residual",
+      "seed": 2025,
+      "accuracy": 71.34935304990758,
+      "weighted_f1": 71.48227166774954,
+      "class_f1": {
+        "anger": 71.75141242937853,
+        "excited": 72.37076648841355,
+        "frustration": 68.94803548795943,
+        "happiness": 58.06451612903225,
+        "neutral": 70.41499330655957,
+        "sadness": 83.71134020618558
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "pairwise_mlp_residual",
+      "seed": 2066,
+      "accuracy": 72.2735674676525,
+      "weighted_f1": 72.36351819052105,
+      "class_f1": {
+        "anger": 72.1311475409836,
+        "excited": 74.38596491228068,
+        "frustration": 68.84816753926701,
+        "happiness": 57.42574257425742,
+        "neutral": 72.24435590969455,
+        "sadness": 84.48979591836736
+      },
+      "epoch": 49,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "pairwise_mlp_residual",
+      "seed": 2118,
+      "accuracy": 71.28773875539125,
+      "weighted_f1": 71.41350054961318,
+      "class_f1": {
+        "anger": 70.1086956521739,
+        "excited": 74.16520210896309,
+        "frustration": 67.72068511198945,
+        "happiness": 56.05095541401275,
+        "neutral": 70.8108108108108,
+        "sadness": 84.67741935483872
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "single_projection_view",
+      "seed": 2025,
+      "accuracy": 71.1645101663586,
+      "weighted_f1": 71.28928016658521,
+      "class_f1": {
+        "anger": 71.62534435261708,
+        "excited": 72.07207207207207,
+        "frustration": 68.3311432325887,
+        "happiness": 56.9620253164557,
+        "neutral": 70.52631578947368,
+        "sadness": 84.31771894093687
+      },
+      "epoch": 29,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "single_projection_view",
+      "seed": 2066,
+      "accuracy": 71.96549599507087,
+      "weighted_f1": 72.11498653027417,
+      "class_f1": {
+        "anger": 71.86629526462396,
+        "excited": 73.96768402154397,
+        "frustration": 68.39378238341969,
+        "happiness": 59.49367088607595,
+        "neutral": 71.3527851458886,
+        "sadness": 84.42622950819671
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "single_projection_view",
+      "seed": 2118,
+      "accuracy": 71.59581022797289,
+      "weighted_f1": 71.71941778982567,
+      "class_f1": {
+        "anger": 70.2247191011236,
+        "excited": 73.64746945898779,
+        "frustration": 69.00129701686122,
+        "happiness": 55.128205128205124,
+        "neutral": 71.27371273712737,
+        "sadness": 85.08064516129032
+      },
+      "epoch": 41,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_2",
+      "seed": 2025,
+      "accuracy": 71.22612446087491,
+      "weighted_f1": 71.35384827367214,
+      "class_f1": {
+        "anger": 70.28571428571428,
+        "excited": 72.82415630550622,
+        "frustration": 68.79795396419438,
+        "happiness": 55.769230769230774,
+        "neutral": 70.96774193548386,
+        "sadness": 84.04040404040404
+      },
+      "epoch": 33,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_2",
+      "seed": 2066,
+      "accuracy": 71.28773875539125,
+      "weighted_f1": 71.38451446641758,
+      "class_f1": {
+        "anger": 71.75141242937853,
+        "excited": 72.5,
+        "frustration": 69.1326530612245,
+        "happiness": 57.14285714285715,
+        "neutral": 69.78609625668449,
+        "sadness": 84.14634146341461
+      },
+      "epoch": 45,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_2",
+      "seed": 2118,
+      "accuracy": 71.65742452248922,
+      "weighted_f1": 71.85171959920513,
+      "class_f1": {
+        "anger": 71.7948717948718,
+        "excited": 73.66548042704625,
+        "frustration": 69.14212548015365,
+        "happiness": 56.42633228840125,
+        "neutral": 71.2182061579652,
+        "sadness": 83.95061728395062
+      },
+      "epoch": 37,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_4",
+      "seed": 2025,
+      "accuracy": 71.41096734442391,
+      "weighted_f1": 71.54775894076454,
+      "class_f1": {
+        "anger": 71.62534435261708,
+        "excited": 73.44028520499108,
+        "frustration": 68.31812255541068,
+        "happiness": 58.12500000000001,
+        "neutral": 70.71524966261808,
+        "sadness": 83.40080971659918
+      },
+      "epoch": 38,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_4",
+      "seed": 2066,
+      "accuracy": 71.84226740603819,
+      "weighted_f1": 71.9106100088771,
+      "class_f1": {
+        "anger": 70.62146892655367,
+        "excited": 73.27433628318583,
+        "frustration": 69.28104575163398,
+        "happiness": 57.333333333333336,
+        "neutral": 71.68831168831169,
+        "sadness": 84.14634146341461
+      },
+      "epoch": 54,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_4",
+      "seed": 2118,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.84872144587268,
+      "class_f1": {
+        "anger": 71.5909090909091,
+        "excited": 74.08695652173914,
+        "frustration": 69.24066924066923,
+        "happiness": 55.333333333333336,
+        "neutral": 70.85561497326204,
+        "sadness": 84.61538461538461
+      },
+      "epoch": 35,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_8",
+      "seed": 2025,
+      "accuracy": 71.59581022797289,
+      "weighted_f1": 71.64270277199613,
+      "class_f1": {
+        "anger": 71.46814404432133,
+        "excited": 72.88732394366197,
+        "frustration": 69.38775510204083,
+        "happiness": 56.856187290969906,
+        "neutral": 70.36535859269283,
+        "sadness": 84.44444444444446
+      },
+      "epoch": 43,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_8",
+      "seed": 2066,
+      "accuracy": 71.90388170055454,
+      "weighted_f1": 72.01992464245502,
+      "class_f1": {
+        "anger": 72.06703910614526,
+        "excited": 74.42680776014109,
+        "frustration": 68.72586872586872,
+        "happiness": 56.76567656765676,
+        "neutral": 71.08753315649867,
+        "sadness": 84.59958932238193
+      },
+      "epoch": 32,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "projection_views_8",
+      "seed": 2118,
+      "accuracy": 71.90388170055454,
+      "weighted_f1": 72.02933899257596,
+      "class_f1": {
+        "anger": 71.91011235955057,
+        "excited": 73.6283185840708,
+        "frustration": 69.17098445595855,
+        "happiness": 57.234726688102896,
+        "neutral": 71.01063829787235,
+        "sadness": 84.89795918367346
+      },
+      "epoch": 43,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_mca_no_amm",
+      "seed": 2025,
+      "accuracy": 71.10289587184226,
+      "weighted_f1": 71.21225172797189,
+      "class_f1": {
+        "anger": 71.63323782234957,
+        "excited": 72.10144927536231,
+        "frustration": 68.1462140992167,
+        "happiness": 57.05128205128205,
+        "neutral": 70.54263565891472,
+        "sadness": 83.97565922920893
+      },
+      "epoch": 33,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_mca_no_amm",
+      "seed": 2066,
+      "accuracy": 71.78065311152187,
+      "weighted_f1": 71.87127898123856,
+      "class_f1": {
+        "anger": 71.17647058823529,
+        "excited": 73.30960854092527,
+        "frustration": 69.55414012738854,
+        "happiness": 58.27814569536424,
+        "neutral": 70.66492829204694,
+        "sadness": 84.08163265306122
+      },
+      "epoch": 53,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "no_mca_no_amm",
+      "seed": 2118,
+      "accuracy": 71.47258163894024,
+      "weighted_f1": 71.54461702302699,
+      "class_f1": {
+        "anger": 72.09302325581395,
+        "excited": 73.51916376306619,
+        "frustration": 68.18757921419518,
+        "happiness": 58.19397993311036,
+        "neutral": 70.32085561497327,
+        "sadness": 83.73983739837398
+      },
+      "epoch": 49,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "concat_mlp",
+      "seed": 2025,
+      "accuracy": 70.11706715958103,
+      "weighted_f1": 70.12560602033261,
+      "class_f1": {
+        "happiness": 53.237410071942435,
+        "sadness": 82.54620123203287,
+        "neutral": 68.76640419947506,
+        "anger": 71.09826589595374,
+        "excited": 72.72727272727272,
+        "frustration": 67.41573033707866
+      },
+      "epoch": 82,
+      "source": "results/concat_mlp_iemocap_20261009/result.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_t",
+      "seed": 2025,
+      "accuracy": 68.33025261860752,
+      "weighted_f1": 68.33427622259391,
+      "class_f1": {
+        "anger": 66.66666666666666,
+        "excited": 68.8695652173913,
+        "frustration": 65.32258064516128,
+        "happiness": 46.57534246575342,
+        "neutral": 69.63350785340315,
+        "sadness": 84.2741935483871
+      },
+      "epoch": 26,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_t",
+      "seed": 2066,
+      "accuracy": 67.71410967344423,
+      "weighted_f1": 67.84158036249869,
+      "class_f1": {
+        "anger": 64.87935656836463,
+        "excited": 67.26943942133816,
+        "frustration": 65.42056074766356,
+        "happiness": 50.160771704180064,
+        "neutral": 67.96875,
+        "sadness": 84.55284552845528
+      },
+      "epoch": 28,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_t",
+      "seed": 2118,
+      "accuracy": 67.89895255699322,
+      "weighted_f1": 67.9932567230855,
+      "class_f1": {
+        "anger": 65.27415143603133,
+        "excited": 68.58168761220826,
+        "frustration": 64.10958904109589,
+        "happiness": 50.0,
+        "neutral": 69.01960784313724,
+        "sadness": 84.16833667334669
+      },
+      "epoch": 31,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_a",
+      "seed": 2025,
+      "accuracy": 54.775107825015404,
+      "weighted_f1": 54.509867034209634,
+      "class_f1": {
+        "anger": 59.48717948717949,
+        "excited": 56.893542757417094,
+        "frustration": 49.860724233983284,
+        "happiness": 27.758007117437728,
+        "neutral": 57.58754863813229,
+        "sadness": 66.27680311890839
+      },
+      "epoch": 78,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_a",
+      "seed": 2066,
+      "accuracy": 55.329636475662355,
+      "weighted_f1": 55.47384744383513,
+      "class_f1": {
+        "anger": 58.94736842105264,
+        "excited": 57.0409982174688,
+        "frustration": 50.204638472032734,
+        "happiness": 33.22884012539185,
+        "neutral": 57.929226736566186,
+        "sadness": 68.57142857142857
+      },
+      "epoch": 98,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_a",
+      "seed": 2118,
+      "accuracy": 54.34380776340111,
+      "weighted_f1": 54.22726653168214,
+      "class_f1": {
+        "anger": 57.948717948717956,
+        "excited": 57.29537366548043,
+        "frustration": 48.70041039671683,
+        "happiness": 28.474576271186443,
+        "neutral": 57.06666666666668,
+        "sadness": 67.18146718146717
+      },
+      "epoch": 94,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_v",
+      "seed": 2025,
+      "accuracy": 35.428219346888476,
+      "weighted_f1": 34.63308601606016,
+      "class_f1": {
+        "anger": 10.619469026548673,
+        "excited": 45.98130841121495,
+        "frustration": 35.73333333333334,
+        "happiness": 35.768261964735515,
+        "neutral": 32.83173734610123,
+        "sadness": 37.89126853377266
+      },
+      "epoch": 34,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_v",
+      "seed": 2066,
+      "accuracy": 34.13431916204559,
+      "weighted_f1": 33.381151414729366,
+      "class_f1": {
+        "anger": 13.100436681222707,
+        "excited": 42.91044776119403,
+        "frustration": 35.24590163934426,
+        "happiness": 32.28699551569507,
+        "neutral": 30.132939438700145,
+        "sadness": 38.65814696485623
+      },
+      "epoch": 45,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_v",
+      "seed": 2118,
+      "accuracy": 34.44239063462724,
+      "weighted_f1": 33.667644061894784,
+      "class_f1": {
+        "anger": 12.444444444444445,
+        "excited": 44.364937388193205,
+        "frustration": 36.408977556109726,
+        "happiness": 31.65829145728643,
+        "neutral": 29.461756373937675,
+        "sadness": 38.84892086330935
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_ta",
+      "seed": 2025,
+      "accuracy": 70.7332101047443,
+      "weighted_f1": 70.78460996724299,
+      "class_f1": {
+        "anger": 68.58638743455498,
+        "excited": 72.66313932980599,
+        "frustration": 66.04026845637584,
+        "happiness": 57.23905723905723,
+        "neutral": 71.29750982961993,
+        "sadness": 84.55284552845528
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_ta",
+      "seed": 2066,
+      "accuracy": 70.60998151571165,
+      "weighted_f1": 70.7238947130291,
+      "class_f1": {
+        "anger": 69.45169712793734,
+        "excited": 72.36363636363636,
+        "frustration": 66.66666666666666,
+        "happiness": 57.04918032786884,
+        "neutral": 70.57291666666666,
+        "sadness": 84.18891170431212
+      },
+      "epoch": 34,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_ta",
+      "seed": 2118,
+      "accuracy": 70.24029574861368,
+      "weighted_f1": 70.30190468358583,
+      "class_f1": {
+        "anger": 68.04123711340206,
+        "excited": 71.50635208711434,
+        "frustration": 64.81994459833794,
+        "happiness": 56.9620253164557,
+        "neutral": 71.59533073929961,
+        "sadness": 84.73895582329317
+      },
+      "epoch": 39,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_tv",
+      "seed": 2025,
+      "accuracy": 68.57670979667283,
+      "weighted_f1": 68.65237806104277,
+      "class_f1": {
+        "anger": 66.47230320699707,
+        "excited": 69.25795053003534,
+        "frustration": 66.23376623376625,
+        "happiness": 49.5114006514658,
+        "neutral": 68.42105263157895,
+        "sadness": 84.80000000000001
+      },
+      "epoch": 27,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_tv",
+      "seed": 2066,
+      "accuracy": 68.57670979667283,
+      "weighted_f1": 68.68480219084883,
+      "class_f1": {
+        "anger": 65.88921282798835,
+        "excited": 70.79646017699115,
+        "frustration": 66.07142857142857,
+        "happiness": 51.973684210526315,
+        "neutral": 67.8996036988111,
+        "sadness": 83.16430020283975
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_tv",
+      "seed": 2118,
+      "accuracy": 68.63832409118915,
+      "weighted_f1": 68.7649786829409,
+      "class_f1": {
+        "anger": 67.05539358600583,
+        "excited": 71.10332749562173,
+        "frustration": 66.07594936708861,
+        "happiness": 51.92307692307692,
+        "neutral": 66.93877551020407,
+        "sadness": 84.04040404040404
+      },
+      "epoch": 39,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_av",
+      "seed": 2025,
+      "accuracy": 56.43869377695625,
+      "weighted_f1": 56.54089332349855,
+      "class_f1": {
+        "anger": 55.40897097625329,
+        "excited": 57.04347826086955,
+        "frustration": 55.40897097625329,
+        "happiness": 36.53846153846153,
+        "neutral": 58.156028368794324,
+        "sadness": 67.69825918762089
+      },
+      "epoch": 64,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_av",
+      "seed": 2066,
+      "accuracy": 57.4245224892175,
+      "weighted_f1": 57.52463978211133,
+      "class_f1": {
+        "anger": 53.68421052631579,
+        "excited": 60.00000000000001,
+        "frustration": 52.99860529986052,
+        "happiness": 37.5796178343949,
+        "neutral": 61.369863013698634,
+        "sadness": 69.90291262135922
+      },
+      "epoch": 67,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "modal_av",
+      "seed": 2118,
+      "accuracy": 56.62353666050524,
+      "weighted_f1": 56.56190119804311,
+      "class_f1": {
+        "anger": 55.189873417721515,
+        "excited": 58.78260869565216,
+        "frustration": 52.29885057471265,
+        "happiness": 35.736677115987455,
+        "neutral": 58.46153846153847,
+        "sadness": 70.6959706959707
+      },
+      "epoch": 54,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_256",
+      "seed": 2025,
+      "accuracy": 71.90388170055454,
+      "weighted_f1": 72.04992099556496,
+      "class_f1": {
+        "anger": 73.08781869688386,
+        "excited": 73.0837789661319,
+        "frustration": 69.25064599483206,
+        "happiness": 56.42633228840125,
+        "neutral": 70.77747989276139,
+        "sadness": 85.59837728194726
+      },
+      "epoch": 36,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_256",
+      "seed": 2066,
+      "accuracy": 72.33518176216882,
+      "weighted_f1": 72.43266048371795,
+      "class_f1": {
+        "anger": 72.11267605633802,
+        "excited": 74.25569176882662,
+        "frustration": 69.08150064683053,
+        "happiness": 58.08580858085809,
+        "neutral": 72.31788079470198,
+        "sadness": 84.25357873210635
+      },
+      "epoch": 49,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_256",
+      "seed": 2118,
+      "accuracy": 71.47258163894024,
+      "weighted_f1": 71.58167074204388,
+      "class_f1": {
+        "anger": 69.56521739130434,
+        "excited": 73.20490367775831,
+        "frustration": 68.0794701986755,
+        "happiness": 56.31067961165047,
+        "neutral": 72.09612817089453,
+        "sadness": 84.61538461538461
+      },
+      "epoch": 47,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "full",
+      "seed": 2025,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.88359990807896,
+      "class_f1": {
+        "anger": 56.782334384858046,
+        "disgust": 40.0,
+        "fear": 30.303030303030308,
+        "joy": 64.70588235294117,
+        "neutral": 80.63902624572081,
+        "sadness": 42.73972602739726,
+        "surprise": 61.092150170648466
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "full",
+      "seed": 2028,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.78145114634475,
+      "class_f1": {
+        "anger": 55.855855855855864,
+        "disgust": 34.42622950819673,
+        "fear": 33.33333333333333,
+        "joy": 65.74307304785894,
+        "neutral": 80.68702290076337,
+        "sadness": 42.69662921348314,
+        "surprise": 60.42402826855123
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "full",
+      "seed": 2069,
+      "accuracy": 68.62068965517241,
+      "weighted_f1": 67.88676908516699,
+      "class_f1": {
+        "anger": 56.53495440729483,
+        "disgust": 35.59322033898305,
+        "fear": 31.250000000000007,
+        "joy": 65.21181001283696,
+        "neutral": 80.85268366958506,
+        "sadness": 43.888888888888886,
+        "surprise": 59.79381443298969
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_gating",
+      "seed": 2025,
+      "accuracy": 68.544061302682,
+      "weighted_f1": 67.83673822102014,
+      "class_f1": {
+        "anger": 56.049004594180694,
+        "disgust": 36.0655737704918,
+        "fear": 34.48275862068966,
+        "joy": 64.72819216182047,
+        "neutral": 80.75153374233128,
+        "sadness": 44.75920679886685,
+        "surprise": 59.735973597359745
+      },
+      "epoch": 28,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_gating",
+      "seed": 2028,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.7348865320366,
+      "class_f1": {
+        "anger": 55.03759398496242,
+        "disgust": 32.432432432432435,
+        "fear": 26.82926829268293,
+        "joy": 65.92039800995025,
+        "neutral": 80.8641975308642,
+        "sadness": 44.134078212290504,
+        "surprise": 60.526315789473685
+      },
+      "epoch": 26,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_gating",
+      "seed": 2069,
+      "accuracy": 68.62068965517241,
+      "weighted_f1": 67.91709194417973,
+      "class_f1": {
+        "anger": 55.52147239263804,
+        "disgust": 36.0655737704918,
+        "fear": 30.927835051546392,
+        "joy": 65.48223350253807,
+        "neutral": 80.93058733790998,
+        "sadness": 44.3213296398892,
+        "surprise": 60.207612456747405
+      },
+      "epoch": 41,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_adaptive_gating",
+      "seed": 2025,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.5923007325037,
+      "class_f1": {
+        "anger": 56.35528330781011,
+        "disgust": 35.0,
+        "fear": 27.848101265822784,
+        "joy": 64.19437340153453,
+        "neutral": 80.64024390243904,
+        "sadness": 44.565217391304344,
+        "surprise": 59.932659932659924
+      },
+      "epoch": 26,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_adaptive_gating",
+      "seed": 2028,
+      "accuracy": 68.65900383141762,
+      "weighted_f1": 67.92346433060243,
+      "class_f1": {
+        "anger": 54.853620955315876,
+        "disgust": 33.333333333333336,
+        "fear": 31.818181818181817,
+        "joy": 65.67534076827758,
+        "neutral": 80.93774019984626,
+        "sadness": 45.05494505494505,
+        "surprise": 60.73825503355705
+      },
+      "epoch": 27,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_adaptive_gating",
+      "seed": 2069,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.87265389685736,
+      "class_f1": {
+        "anger": 55.469953775038505,
+        "disgust": 35.77235772357724,
+        "fear": 30.61224489795918,
+        "joy": 65.31645569620252,
+        "neutral": 80.91603053435114,
+        "sadness": 43.45403899721448,
+        "surprise": 60.92943201376936
+      },
+      "epoch": 43,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_and_adaptive_gating",
+      "seed": 2025,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.89083611201315,
+      "class_f1": {
+        "anger": 55.60538116591929,
+        "disgust": 33.599999999999994,
+        "fear": 35.29411764705882,
+        "joy": 65.56962025316454,
+        "neutral": 80.76628352490422,
+        "sadness": 44.943820224719104,
+        "surprise": 59.82905982905983
+      },
+      "epoch": 30,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_and_adaptive_gating",
+      "seed": 2028,
+      "accuracy": 68.62068965517241,
+      "weighted_f1": 67.96246331059436,
+      "class_f1": {
+        "anger": 55.70776255707762,
+        "disgust": 37.398373983739845,
+        "fear": 33.33333333333333,
+        "joy": 65.65272496831433,
+        "neutral": 80.73394495412843,
+        "sadness": 43.71584699453553,
+        "surprise": 60.732984293193724
+      },
+      "epoch": 41,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_and_adaptive_gating",
+      "seed": 2069,
+      "accuracy": 68.73563218390805,
+      "weighted_f1": 67.99653630568045,
+      "class_f1": {
+        "anger": 55.19379844961241,
+        "disgust": 37.79527559055118,
+        "fear": 29.47368421052632,
+        "joy": 65.90621039290242,
+        "neutral": 80.89802130898022,
+        "sadness": 43.33333333333334,
+        "surprise": 61.458333333333336
+      },
+      "epoch": 45,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_cross_attention",
+      "seed": 2025,
+      "accuracy": 68.42911877394636,
+      "weighted_f1": 67.85358506203262,
+      "class_f1": {
+        "anger": 55.53822152886115,
+        "disgust": 39.0625,
+        "fear": 33.663366336633665,
+        "joy": 65.40404040404042,
+        "neutral": 80.32159264931086,
+        "sadness": 45.40540540540541,
+        "surprise": 60.41666666666667
+      },
+      "epoch": 34,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_cross_attention",
+      "seed": 2028,
+      "accuracy": 68.04597701149426,
+      "weighted_f1": 67.36498335558049,
+      "class_f1": {
+        "anger": 55.16178736517718,
+        "disgust": 34.710743801652896,
+        "fear": 28.865979381443303,
+        "joy": 64.33041301627034,
+        "neutral": 80.47564250095895,
+        "sadness": 42.42424242424242,
+        "surprise": 61.3013698630137
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_cross_attention",
+      "seed": 2069,
+      "accuracy": 68.00766283524904,
+      "weighted_f1": 67.13874780188269,
+      "class_f1": {
+        "anger": 53.91849529780565,
+        "disgust": 34.92063492063492,
+        "fear": 25.80645161290322,
+        "joy": 64.5408163265306,
+        "neutral": 80.87845513063233,
+        "sadness": 41.92634560906516,
+        "surprise": 59.487179487179496
+      },
+      "epoch": 42,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_mixer",
+      "seed": 2025,
+      "accuracy": 68.46743295019158,
+      "weighted_f1": 67.74645956582603,
+      "class_f1": {
+        "anger": 55.96330275229357,
+        "disgust": 35.48387096774193,
+        "fear": 31.914893617021278,
+        "joy": 64.96815286624204,
+        "neutral": 80.73254483021746,
+        "sadness": 42.89693593314763,
+        "surprise": 60.72041166380788
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_mixer",
+      "seed": 2028,
+      "accuracy": 68.69731800766283,
+      "weighted_f1": 67.99311447350384,
+      "class_f1": {
+        "anger": 56.845238095238095,
+        "disgust": 30.508474576271183,
+        "fear": 28.571428571428566,
+        "joy": 64.97461928934011,
+        "neutral": 81.0477657935285,
+        "sadness": 44.0771349862259,
+        "surprise": 61.43572621035058
+      },
+      "epoch": 30,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_mixer",
+      "seed": 2069,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.65173728467182,
+      "class_f1": {
+        "anger": 55.55555555555556,
+        "disgust": 33.057851239669425,
+        "fear": 30.76923076923077,
+        "joy": 64.95507060333762,
+        "neutral": 80.72699734948883,
+        "sadness": 43.75,
+        "surprise": 60.544217687074834
+      },
+      "epoch": 41,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_pairwise",
+      "seed": 2025,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.88654610115192,
+      "class_f1": {
+        "anger": 56.69291338582677,
+        "disgust": 40.0,
+        "fear": 30.303030303030308,
+        "joy": 64.70588235294117,
+        "neutral": 80.66971080669711,
+        "sadness": 42.73972602739726,
+        "surprise": 61.092150170648466
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_pairwise",
+      "seed": 2028,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.78145114634475,
+      "class_f1": {
+        "anger": 55.855855855855864,
+        "disgust": 34.42622950819673,
+        "fear": 33.33333333333333,
+        "joy": 65.74307304785894,
+        "neutral": 80.68702290076337,
+        "sadness": 42.69662921348314,
+        "surprise": 60.42402826855123
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_pairwise",
+      "seed": 2069,
+      "accuracy": 68.62068965517241,
+      "weighted_f1": 67.88740402565077,
+      "class_f1": {
+        "anger": 56.53495440729483,
+        "disgust": 35.59322033898305,
+        "fear": 31.250000000000007,
+        "joy": 65.3846153846154,
+        "neutral": 80.85268366958506,
+        "sadness": 43.888888888888886,
+        "surprise": 59.552495697074015
+      },
+      "epoch": 40,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_auxiliary_loss",
+      "seed": 2025,
+      "accuracy": 68.27586206896552,
+      "weighted_f1": 67.58869611041463,
+      "class_f1": {
+        "anger": 56.193353474320254,
+        "disgust": 34.42622950819673,
+        "fear": 28.571428571428566,
+        "joy": 64.40251572327044,
+        "neutral": 80.58551617873651,
+        "sadness": 44.01114206128134,
+        "surprise": 60.46511627906976
+      },
+      "epoch": 29,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_auxiliary_loss",
+      "seed": 2028,
+      "accuracy": 68.27586206896552,
+      "weighted_f1": 67.36028524333719,
+      "class_f1": {
+        "anger": 55.21472392638038,
+        "disgust": 30.630630630630627,
+        "fear": 25.0,
+        "joy": 64.20382165605095,
+        "neutral": 80.71646341463415,
+        "sadness": 43.526170798898065,
+        "surprise": 61.15702479338844
+      },
+      "epoch": 29,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_auxiliary_loss",
+      "seed": 2069,
+      "accuracy": 68.2375478927203,
+      "weighted_f1": 67.5826668263941,
+      "class_f1": {
+        "anger": 55.29953917050692,
+        "disgust": 33.87096774193549,
+        "fear": 26.66666666666666,
+        "joy": 65.21181001283696,
+        "neutral": 80.61302681992338,
+        "sadness": 44.86486486486487,
+        "surprise": 60.06711409395974
+      },
+      "epoch": 39,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_sequence_mixing",
+      "seed": 2025,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.6512319629623,
+      "class_f1": {
+        "anger": 57.40458015267175,
+        "disgust": 32.520325203252035,
+        "fear": 34.09090909090909,
+        "joy": 64.63878326996198,
+        "neutral": 80.47292143401984,
+        "sadness": 43.21329639889196,
+        "surprise": 59.79381443298969
+      },
+      "epoch": 31,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_sequence_mixing",
+      "seed": 2028,
+      "accuracy": 68.46743295019158,
+      "weighted_f1": 67.69813315993314,
+      "class_f1": {
+        "anger": 55.35168195718656,
+        "disgust": 33.87096774193549,
+        "fear": 28.888888888888893,
+        "joy": 65.23929471032746,
+        "neutral": 80.77803203661327,
+        "sadness": 43.943661971830984,
+        "surprise": 60.58519793459553
+      },
+      "epoch": 37,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_sequence_mixing",
+      "seed": 2069,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.75054389940861,
+      "class_f1": {
+        "anger": 54.858934169279,
+        "disgust": 37.096774193548384,
+        "fear": 30.61224489795918,
+        "joy": 64.8854961832061,
+        "neutral": 80.80577727099963,
+        "sadness": 44.38202247191011,
+        "surprise": 60.647359454855184
+      },
+      "epoch": 44,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_modality_mixing",
+      "seed": 2025,
+      "accuracy": 68.35249042145594,
+      "weighted_f1": 67.64282742336938,
+      "class_f1": {
+        "anger": 56.752655538694995,
+        "disgust": 33.87096774193549,
+        "fear": 34.04255319148936,
+        "joy": 64.35006435006436,
+        "neutral": 80.82348455966452,
+        "sadness": 43.943661971830984,
+        "surprise": 58.503401360544224
+      },
+      "epoch": 31,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_modality_mixing",
+      "seed": 2028,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.80475378116684,
+      "class_f1": {
+        "anger": 54.7112462006079,
+        "disgust": 29.565217391304348,
+        "fear": 32.608695652173914,
+        "joy": 65.23388116308469,
+        "neutral": 80.97598170034313,
+        "sadness": 45.85635359116023,
+        "surprise": 60.44905008635577
+      },
+      "epoch": 34,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_modality_mixing",
+      "seed": 2069,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.71472936098378,
+      "class_f1": {
+        "anger": 56.221198156682014,
+        "disgust": 37.096774193548384,
+        "fear": 27.956989247311824,
+        "joy": 64.69833119383824,
+        "neutral": 80.55024837600305,
+        "sadness": 45.00000000000001,
+        "surprise": 60.06711409395974
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_mixing",
+      "seed": 2025,
+      "accuracy": 68.65900383141762,
+      "weighted_f1": 67.92073287987806,
+      "class_f1": {
+        "anger": 56.43410852713179,
+        "disgust": 36.507936507936506,
+        "fear": 33.68421052631579,
+        "joy": 64.96815286624204,
+        "neutral": 80.76045627376426,
+        "sadness": 43.69747899159665,
+        "surprise": 60.48109965635739
+      },
+      "epoch": 32,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_mixing",
+      "seed": 2028,
+      "accuracy": 68.77394636015326,
+      "weighted_f1": 68.04462338199414,
+      "class_f1": {
+        "anger": 55.722891566265076,
+        "disgust": 35.59322033898305,
+        "fear": 33.68421052631579,
+        "joy": 65.6641604010025,
+        "neutral": 80.93236530378296,
+        "sadness": 43.575418994413404,
+        "surprise": 61.052631578947384
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_feature_mixing",
+      "seed": 2069,
+      "accuracy": 68.46743295019158,
+      "weighted_f1": 67.6476154179276,
+      "class_f1": {
+        "anger": 55.792682926829265,
+        "disgust": 31.9327731092437,
+        "fear": 26.82926829268293,
+        "joy": 65.39440203562341,
+        "neutral": 80.67226890756304,
+        "sadness": 45.01424501424501,
+        "surprise": 59.86842105263158
+      },
+      "epoch": 24,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "one_mixer_block",
+      "seed": 2025,
+      "accuracy": 68.31417624521072,
+      "weighted_f1": 67.67323693305285,
+      "class_f1": {
+        "anger": 56.20094191522762,
+        "disgust": 37.20930232558139,
+        "fear": 34.693877551020414,
+        "joy": 64.73551637279598,
+        "neutral": 80.65875143623133,
+        "sadness": 42.5414364640884,
+        "surprise": 59.7623089983022
+      },
+      "epoch": 34,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "one_mixer_block",
+      "seed": 2028,
+      "accuracy": 68.35249042145594,
+      "weighted_f1": 67.57301093403336,
+      "class_f1": {
+        "anger": 55.90433482810164,
+        "disgust": 33.009708737864074,
+        "fear": 22.5,
+        "joy": 65.41822721598002,
+        "neutral": 80.5866460825936,
+        "sadness": 44.20485175202156,
+        "surprise": 60.49586776859503
+      },
+      "epoch": 24,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "one_mixer_block",
+      "seed": 2069,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.8457088098835,
+      "class_f1": {
+        "anger": 55.70776255707762,
+        "disgust": 34.42622950819673,
+        "fear": 31.11111111111111,
+        "joy": 65.3061224489796,
+        "neutral": 80.8413001912046,
+        "sadness": 44.31818181818182,
+        "surprise": 60.333333333333336
+      },
+      "epoch": 28,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp",
+      "seed": 2025,
+      "accuracy": 68.2375478927203,
+      "weighted_f1": 67.48797751988795,
+      "class_f1": {
+        "anger": 55.19379844961241,
+        "disgust": 36.36363636363637,
+        "fear": 35.55555555555556,
+        "joy": 65.39923954372622,
+        "neutral": 80.15238095238094,
+        "sadness": 42.857142857142854,
+        "surprise": 60.40955631399317
+      },
+      "epoch": 31,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp",
+      "seed": 2028,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.72654433039527,
+      "class_f1": {
+        "anger": 55.70776255707762,
+        "disgust": 29.82456140350877,
+        "fear": 27.27272727272727,
+        "joy": 65.49560853199498,
+        "neutral": 81.01071975497702,
+        "sadness": 43.47826086956522,
+        "surprise": 60.61643835616438
+      },
+      "epoch": 27,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp",
+      "seed": 2069,
+      "accuracy": 68.2375478927203,
+      "weighted_f1": 67.47484690281107,
+      "class_f1": {
+        "anger": 54.1213063763608,
+        "disgust": 30.76923076923077,
+        "fear": 30.434782608695656,
+        "joy": 65.23388116308469,
+        "neutral": 80.73535044044426,
+        "sadness": 43.767313019390585,
+        "surprise": 60.82644628099173
+      },
+      "epoch": 26,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_attention",
+      "seed": 2025,
+      "accuracy": 68.27586206896552,
+      "weighted_f1": 67.4071973895504,
+      "class_f1": {
+        "anger": 56.79758308157099,
+        "disgust": 31.034482758620697,
+        "fear": 27.368421052631575,
+        "joy": 65.4639175257732,
+        "neutral": 80.60606060606061,
+        "sadness": 40.90909090909091,
+        "surprise": 59.758203799654574
+      },
+      "epoch": 35,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_attention",
+      "seed": 2028,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.50762763132184,
+      "class_f1": {
+        "anger": 55.917159763313606,
+        "disgust": 28.84615384615385,
+        "fear": 21.333333333333336,
+        "joy": 64.84375,
+        "neutral": 81.1320754716981,
+        "sadness": 44.3213296398892,
+        "surprise": 59.38566552901023
+      },
+      "epoch": 25,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_attention",
+      "seed": 2069,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.5531782448729,
+      "class_f1": {
+        "anger": 55.29225908372828,
+        "disgust": 33.057851239669425,
+        "fear": 30.76923076923077,
+        "joy": 64.98740554156171,
+        "neutral": 80.72837632776935,
+        "sadness": 44.25770308123249,
+        "surprise": 59.52380952380953
+      },
+      "epoch": 27,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_cubemlp",
+      "seed": 2025,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.80713325496522,
+      "class_f1": {
+        "anger": 55.65749235474004,
+        "disgust": 33.587786259541986,
+        "fear": 34.78260869565217,
+        "joy": 65.10480887792849,
+        "neutral": 80.74102663064453,
+        "sadness": 44.56824512534819,
+        "surprise": 60.137457044673546
+      },
+      "epoch": 39,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_cubemlp",
+      "seed": 2028,
+      "accuracy": 68.65900383141762,
+      "weighted_f1": 67.95901334003838,
+      "class_f1": {
+        "anger": 54.65465465465464,
+        "disgust": 33.898305084745765,
+        "fear": 27.65957446808511,
+        "joy": 65.37467700258398,
+        "neutral": 81.10175975516451,
+        "sadness": 44.628099173553714,
+        "surprise": 61.92893401015228
+      },
+      "epoch": 45,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_cubemlp",
+      "seed": 2069,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.78123387594482,
+      "class_f1": {
+        "anger": 54.4891640866873,
+        "disgust": 33.333333333333336,
+        "fear": 31.68316831683168,
+        "joy": 65.81632653061224,
+        "neutral": 80.87557603686636,
+        "sadness": 44.692737430167604,
+        "surprise": 60.232945091514146
+      },
+      "epoch": 49,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp_no_aux",
+      "seed": 2025,
+      "accuracy": 68.16091954022988,
+      "weighted_f1": 67.46173728462152,
+      "class_f1": {
+        "anger": 55.73770491803278,
+        "disgust": 30.76923076923077,
+        "fear": 25.287356321839077,
+        "joy": 66.32911392405063,
+        "neutral": 80.36951501154735,
+        "sadness": 40.97035040431267,
+        "surprise": 61.774744027303754
+      },
+      "epoch": 30,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp_no_aux",
+      "seed": 2028,
+      "accuracy": 68.62068965517241,
+      "weighted_f1": 67.45690316553558,
+      "class_f1": {
+        "anger": 56.6951566951567,
+        "disgust": 24.719101123595507,
+        "fear": 14.705882352941178,
+        "joy": 65.57788944723619,
+        "neutral": 81.01265822784809,
+        "sadness": 42.45810055865922,
+        "surprise": 61.0
+      },
+      "epoch": 19,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "amm_mlp_no_aux",
+      "seed": 2069,
+      "accuracy": 68.19923371647509,
+      "weighted_f1": 67.56381988613246,
+      "class_f1": {
+        "anger": 54.63108320251177,
+        "disgust": 29.92125984251969,
+        "fear": 26.26262626262626,
+        "joy": 65.04481434058899,
+        "neutral": 80.62787136294027,
+        "sadness": 45.23160762942779,
+        "surprise": 61.64154103852596
+      },
+      "epoch": 41,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "pairwise_mlp_residual",
+      "seed": 2025,
+      "accuracy": 68.04597701149426,
+      "weighted_f1": 67.26495041636294,
+      "class_f1": {
+        "anger": 55.62700964630226,
+        "disgust": 33.599999999999994,
+        "fear": 29.166666666666668,
+        "joy": 64.54891994917406,
+        "neutral": 80.48595292331056,
+        "sadness": 42.77777777777778,
+        "surprise": 59.395973154362416
+      },
+      "epoch": 32,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "pairwise_mlp_residual",
+      "seed": 2028,
+      "accuracy": 68.69731800766283,
+      "weighted_f1": 67.86729371593522,
+      "class_f1": {
+        "anger": 55.55555555555555,
+        "disgust": 31.034482758620697,
+        "fear": 30.23255813953488,
+        "joy": 65.39440203562341,
+        "neutral": 81.03579588728104,
+        "sadness": 44.01114206128134,
+        "surprise": 60.92943201376936
+      },
+      "epoch": 28,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "pairwise_mlp_residual",
+      "seed": 2069,
+      "accuracy": 68.31417624521072,
+      "weighted_f1": 67.6021529021208,
+      "class_f1": {
+        "anger": 56.00000000000001,
+        "disgust": 36.8,
+        "fear": 31.250000000000007,
+        "joy": 64.5408163265306,
+        "neutral": 80.60952380952381,
+        "sadness": 43.575418994413404,
+        "surprise": 59.79381443298969
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "single_projection_view",
+      "seed": 2025,
+      "accuracy": 68.35249042145594,
+      "weighted_f1": 67.79096259764775,
+      "class_f1": {
+        "anger": 56.69781931464175,
+        "disgust": 34.375,
+        "fear": 31.11111111111111,
+        "joy": 65.33166458072593,
+        "neutral": 80.5566293003479,
+        "sadness": 43.90243902439025,
+        "surprise": 60.16528925619834
+      },
+      "epoch": 28,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "single_projection_view",
+      "seed": 2028,
+      "accuracy": 68.544061302682,
+      "weighted_f1": 67.76101837095855,
+      "class_f1": {
+        "anger": 55.60675883256528,
+        "disgust": 35.59322033898305,
+        "fear": 27.906976744186046,
+        "joy": 65.73604060913706,
+        "neutral": 80.57772709996198,
+        "sadness": 44.50402144772118,
+        "surprise": 60.38394415357766
+      },
+      "epoch": 32,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "single_projection_view",
+      "seed": 2069,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.79066474717604,
+      "class_f1": {
+        "anger": 56.528417818740394,
+        "disgust": 35.0,
+        "fear": 30.107526881720435,
+        "joy": 64.54891994917406,
+        "neutral": 80.73394495412843,
+        "sadness": 45.19774011299435,
+        "surprise": 59.76627712854757
+      },
+      "epoch": 28,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_2",
+      "seed": 2025,
+      "accuracy": 68.42911877394636,
+      "weighted_f1": 67.9048885480505,
+      "class_f1": {
+        "anger": 56.09756097560975,
+        "disgust": 39.0625,
+        "fear": 34.693877551020414,
+        "joy": 65.06935687263557,
+        "neutral": 80.74102663064453,
+        "sadness": 43.596730245231605,
+        "surprise": 59.96592844974447
+      },
+      "epoch": 31,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_2",
+      "seed": 2028,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.89161905916815,
+      "class_f1": {
+        "anger": 55.6732223903177,
+        "disgust": 32.47863247863248,
+        "fear": 29.88505747126437,
+        "joy": 65.56962025316454,
+        "neutral": 80.89025326170376,
+        "sadness": 45.52845528455284,
+        "surprise": 60.0
+      },
+      "epoch": 30,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_2",
+      "seed": 2069,
+      "accuracy": 68.50574712643677,
+      "weighted_f1": 67.7214416727015,
+      "class_f1": {
+        "anger": 56.514913657770805,
+        "disgust": 35.48387096774193,
+        "fear": 31.914893617021278,
+        "joy": 65.04481434058899,
+        "neutral": 80.39438756162306,
+        "sadness": 44.44444444444444,
+        "surprise": 60.06711409395974
+      },
+      "epoch": 37,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_4",
+      "seed": 2025,
+      "accuracy": 68.16091954022988,
+      "weighted_f1": 67.53530719126,
+      "class_f1": {
+        "anger": 56.44171779141104,
+        "disgust": 33.87096774193549,
+        "fear": 29.88505747126437,
+        "joy": 64.321608040201,
+        "neutral": 80.55555555555557,
+        "sadness": 43.71584699453553,
+        "surprise": 60.03316749585406
+      },
+      "epoch": 29,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_4",
+      "seed": 2028,
+      "accuracy": 68.77394636015326,
+      "weighted_f1": 68.01632230423297,
+      "class_f1": {
+        "anger": 55.96330275229357,
+        "disgust": 36.0655737704918,
+        "fear": 32.96703296703297,
+        "joy": 65.56962025316454,
+        "neutral": 80.79117535184481,
+        "sadness": 45.76271186440678,
+        "surprise": 59.6551724137931
+      },
+      "epoch": 36,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_4",
+      "seed": 2069,
+      "accuracy": 68.62068965517241,
+      "weighted_f1": 67.7149844226132,
+      "class_f1": {
+        "anger": 55.96330275229357,
+        "disgust": 35.08771929824562,
+        "fear": 31.11111111111111,
+        "joy": 65.30089628681179,
+        "neutral": 80.77214231642697,
+        "sadness": 43.731778425655975,
+        "surprise": 59.395973154362416
+      },
+      "epoch": 24,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_8",
+      "seed": 2025,
+      "accuracy": 68.39080459770115,
+      "weighted_f1": 67.54432607054046,
+      "class_f1": {
+        "anger": 56.25,
+        "disgust": 31.304347826086953,
+        "fear": 31.16883116883117,
+        "joy": 65.06935687263557,
+        "neutral": 80.53537284894836,
+        "sadness": 43.626062322946176,
+        "surprise": 59.83193277310923
+      },
+      "epoch": 24,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_8",
+      "seed": 2028,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.8047505712454,
+      "class_f1": {
+        "anger": 55.13016845329249,
+        "disgust": 36.36363636363637,
+        "fear": 29.166666666666668,
+        "joy": 65.0571791613723,
+        "neutral": 80.98859315589353,
+        "sadness": 43.13725490196079,
+        "surprise": 61.11111111111111
+      },
+      "epoch": 32,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "projection_views_8",
+      "seed": 2069,
+      "accuracy": 68.46743295019158,
+      "weighted_f1": 67.72849556652322,
+      "class_f1": {
+        "anger": 55.16178736517718,
+        "disgust": 32.786885245901644,
+        "fear": 29.166666666666668,
+        "joy": 65.03225806451613,
+        "neutral": 80.80731150038079,
+        "sadness": 44.943820224719104,
+        "surprise": 60.73825503355705
+      },
+      "epoch": 33,
+      "source": "results/sensitivity_20261006/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_mca_no_amm",
+      "seed": 2025,
+      "accuracy": 68.46743295019158,
+      "weighted_f1": 67.78982075986019,
+      "class_f1": {
+        "anger": 56.32530120481929,
+        "disgust": 31.66666666666667,
+        "fear": 35.55555555555556,
+        "joy": 65.73957016434892,
+        "neutral": 80.47655649500385,
+        "sadness": 43.69747899159665,
+        "surprise": 60.40268456375839
+      },
+      "epoch": 29,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_mca_no_amm",
+      "seed": 2028,
+      "accuracy": 68.27586206896552,
+      "weighted_f1": 67.63500017503985,
+      "class_f1": {
+        "anger": 55.92705167173252,
+        "disgust": 34.146341463414636,
+        "fear": 31.57894736842105,
+        "joy": 65.22292993630573,
+        "neutral": 80.5843906189927,
+        "sadness": 43.13725490196079,
+        "surprise": 60.232945091514146
+      },
+      "epoch": 36,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "no_mca_no_amm",
+      "seed": 2069,
+      "accuracy": 68.96551724137932,
+      "weighted_f1": 68.15007282071312,
+      "class_f1": {
+        "anger": 55.90062111801242,
+        "disgust": 32.47863247863248,
+        "fear": 29.21348314606742,
+        "joy": 66.08040201005025,
+        "neutral": 81.33129303749043,
+        "sadness": 43.75,
+        "surprise": 60.85526315789473
+      },
+      "epoch": 29,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "concat_mlp",
+      "seed": 2025,
+      "accuracy": 68.77394636015326,
+      "weighted_f1": 67.88797397685946,
+      "class_f1": {
+        "neutral": 80.8027262400606,
+        "surprise": 61.06346483704973,
+        "fear": 34.883720930232556,
+        "sadness": 42.5414364640884,
+        "joy": 65.40880503144655,
+        "disgust": 35.59322033898305,
+        "anger": 55.748031496063
+      },
+      "epoch": 48,
+      "source": "results/concat_mlp_20261009/meld_seed2025/result.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_t",
+      "seed": 2025,
+      "accuracy": 68.42911877394636,
+      "weighted_f1": 67.7050384586421,
+      "class_f1": {
+        "anger": 55.38461538461539,
+        "disgust": 34.710743801652896,
+        "fear": 30.23255813953488,
+        "joy": 64.47534766118838,
+        "neutral": 80.75153374233128,
+        "sadness": 45.00000000000001,
+        "surprise": 60.59602649006624
+      },
+      "epoch": 25,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_t",
+      "seed": 2028,
+      "accuracy": 68.31417624521072,
+      "weighted_f1": 67.4996557873617,
+      "class_f1": {
+        "anger": 54.263565891472865,
+        "disgust": 33.898305084745765,
+        "fear": 28.915662650602407,
+        "joy": 65.40404040404042,
+        "neutral": 80.51849027830728,
+        "sadness": 45.05494505494505,
+        "surprise": 60.16806722689076
+      },
+      "epoch": 29,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_t",
+      "seed": 2069,
+      "accuracy": 68.16091954022988,
+      "weighted_f1": 67.29236230640352,
+      "class_f1": {
+        "anger": 54.516640253565775,
+        "disgust": 32.520325203252035,
+        "fear": 30.588235294117645,
+        "joy": 64.98740554156171,
+        "neutral": 80.70041872858774,
+        "sadness": 42.3728813559322,
+        "surprise": 59.735973597359745
+      },
+      "epoch": 27,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_a",
+      "seed": 2025,
+      "accuracy": 52.52873563218391,
+      "weighted_f1": 48.37548149398866,
+      "class_f1": {
+        "anger": 40.86330935251799,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 31.718061674008812,
+        "neutral": 68.71414107323658,
+        "sadness": 24.734982332155482,
+        "surprise": 28.333333333333332
+      },
+      "epoch": 43,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_a",
+      "seed": 2028,
+      "accuracy": 52.643678160919535,
+      "weighted_f1": 48.64937197615018,
+      "class_f1": {
+        "anger": 43.681318681318686,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 31.024096385542173,
+        "neutral": 68.48381601362861,
+        "sadness": 25.42955326460481,
+        "surprise": 28.925619834710748
+      },
+      "epoch": 48,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_a",
+      "seed": 2069,
+      "accuracy": 52.41379310344828,
+      "weighted_f1": 48.314637585107036,
+      "class_f1": {
+        "anger": 42.73255813953487,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 30.76923076923077,
+        "neutral": 68.31247886371322,
+        "sadness": 23.703703703703706,
+        "surprise": 29.38931297709924
+      },
+      "epoch": 47,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_v",
+      "seed": 2025,
+      "accuracy": 41.91570881226054,
+      "weighted_f1": 32.599344284740106,
+      "class_f1": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 30.68072866730585,
+        "neutral": 57.922480620155035,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "epoch": 3,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_v",
+      "seed": 2028,
+      "accuracy": 48.122605363984675,
+      "weighted_f1": 31.26849060381001,
+      "class_f1": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.0,
+        "neutral": 64.97672012415934,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "epoch": 1,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_v",
+      "seed": 2069,
+      "accuracy": 48.122605363984675,
+      "weighted_f1": 31.26849060381001,
+      "class_f1": {
+        "anger": 0.0,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 0.0,
+        "neutral": 64.97672012415934,
+        "sadness": 0.0,
+        "surprise": 0.0
+      },
+      "epoch": 5,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_ta",
+      "seed": 2025,
+      "accuracy": 68.5823754789272,
+      "weighted_f1": 67.81412735485162,
+      "class_f1": {
+        "anger": 56.172839506172835,
+        "disgust": 34.42622950819673,
+        "fear": 29.545454545454547,
+        "joy": 64.65408805031446,
+        "neutral": 80.85758039816233,
+        "sadness": 43.75,
+        "surprise": 61.02819237147595
+      },
+      "epoch": 27,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_ta",
+      "seed": 2028,
+      "accuracy": 68.544061302682,
+      "weighted_f1": 67.7571062669293,
+      "class_f1": {
+        "anger": 55.04587155963303,
+        "disgust": 36.97478991596639,
+        "fear": 35.05154639175258,
+        "joy": 65.32663316582915,
+        "neutral": 80.72976054732041,
+        "sadness": 43.75,
+        "surprise": 59.89492119089317
+      },
+      "epoch": 36,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_ta",
+      "seed": 2069,
+      "accuracy": 68.85057471264368,
+      "weighted_f1": 68.07734103947412,
+      "class_f1": {
+        "anger": 55.641421947449764,
+        "disgust": 37.398373983739845,
+        "fear": 32.25806451612903,
+        "joy": 65.40404040404042,
+        "neutral": 81.03382744203725,
+        "sadness": 44.01114206128134,
+        "surprise": 60.8695652173913
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_tv",
+      "seed": 2025,
+      "accuracy": 68.00766283524904,
+      "weighted_f1": 67.37399043325428,
+      "class_f1": {
+        "anger": 56.162246489859605,
+        "disgust": 39.682539682539684,
+        "fear": 31.775700934579444,
+        "joy": 64.11238825031928,
+        "neutral": 80.25964108438338,
+        "sadness": 41.666666666666664,
+        "surprise": 60.273972602739725
+      },
+      "epoch": 39,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_tv",
+      "seed": 2028,
+      "accuracy": 68.16091954022988,
+      "weighted_f1": 67.39146399859875,
+      "class_f1": {
+        "anger": 54.878048780487795,
+        "disgust": 34.42622950819673,
+        "fear": 34.0,
+        "joy": 65.22292993630573,
+        "neutral": 80.62310030395136,
+        "sadness": 42.73504273504273,
+        "surprise": 58.88501742160279
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_tv",
+      "seed": 2069,
+      "accuracy": 68.16091954022988,
+      "weighted_f1": 67.28833127349978,
+      "class_f1": {
+        "anger": 55.03144654088049,
+        "disgust": 36.36363636363637,
+        "fear": 33.68421052631579,
+        "joy": 64.62324393358875,
+        "neutral": 80.40847201210288,
+        "sadness": 40.563380281690144,
+        "surprise": 60.750853242320815
+      },
+      "epoch": 44,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_av",
+      "seed": 2025,
+      "accuracy": 52.68199233716475,
+      "weighted_f1": 48.63730265110873,
+      "class_f1": {
+        "anger": 43.75,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 32.61802575107296,
+        "neutral": 68.70748299319727,
+        "sadness": 24.19928825622776,
+        "surprise": 26.35983263598326
+      },
+      "epoch": 38,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_av",
+      "seed": 2028,
+      "accuracy": 52.758620689655174,
+      "weighted_f1": 49.11527468737921,
+      "class_f1": {
+        "anger": 45.25745257452574,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 32.16995447647952,
+        "neutral": 68.48652384243262,
+        "sadness": 27.831715210355984,
+        "surprise": 27.888446215139446
+      },
+      "epoch": 46,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "modal_av",
+      "seed": 2069,
+      "accuracy": 52.643678160919535,
+      "weighted_f1": 48.831266178702876,
+      "class_f1": {
+        "anger": 43.25068870523416,
+        "disgust": 0.0,
+        "fear": 0.0,
+        "joy": 33.383458646616546,
+        "neutral": 68.5890834191555,
+        "sadness": 23.859649122807017,
+        "surprise": 28.460038986354775
+      },
+      "epoch": 41,
+      "source": "results/revision_20261003/analysis.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_256",
+      "seed": 2025,
+      "accuracy": 68.12260536398468,
+      "weighted_f1": 67.45158535616302,
+      "class_f1": {
+        "anger": 56.87789799072643,
+        "disgust": 35.294117647058826,
+        "fear": 30.107526881720435,
+        "joy": 64.29479034307496,
+        "neutral": 80.45889101338433,
+        "sadness": 43.66576819407009,
+        "surprise": 58.843537414965986
+      },
+      "epoch": 33,
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    }
+  ],
+  "pending": [
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_512",
+      "seed": 2025,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_512",
+      "seed": 2066,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_512",
+      "seed": 2118,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_768",
+      "seed": 2025,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_768",
+      "seed": 2066,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_768",
+      "seed": 2118,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_256",
+      "seed": 2028,
+      "state": "running",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_256",
+      "seed": 2069,
+      "state": "running",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_512",
+      "seed": 2025,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_512",
+      "seed": 2028,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_512",
+      "seed": 2069,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_768",
+      "seed": 2025,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_768",
+      "seed": 2028,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_768",
+      "seed": 2069,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/mca_ffn.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_3072",
+      "seed": 2025,
+      "state": "running",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_3072",
+      "seed": 2066,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_3072",
+      "seed": 2118,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_6144",
+      "seed": 2025,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_6144",
+      "seed": 2066,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_6144",
+      "seed": 2118,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_3072",
+      "seed": 2025,
+      "state": "running",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_3072",
+      "seed": 2028,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_3072",
+      "seed": 2069,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_6144",
+      "seed": 2025,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_6144",
+      "seed": 2028,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_6144",
+      "seed": 2069,
+      "state": "queued",
+      "source": "results/single_seed_ablations_20261009/sources/amm_capacity.json"
+    }
+  ],
+  "source_sha256": {
+    "results/revision_20261003/analysis.json": "00419365fd00cb92152eef0ab0af46cd44c449bb8703761e514e8e6fe42f0a3a",
+    "results/sensitivity_20261006/analysis.json": "106f38e5425fbe6853d34daf9f8b0fb77a86831fa20d5d036082883eb0023be9",
+    "results/single_seed_ablations_20261009/sources/mca_ffn.json": "6b9fdfe8b8aebfa2f13b5f510f96948fa913e5b8d6cc4e6acba1ec1566f3379f",
+    "results/single_seed_ablations_20261009/sources/amm_capacity.json": "0cf7b6a46fc1581571da49b65bdca5299f3df6eaf2831642d6daafd262615a59",
+    "results/concat_mlp_iemocap_20261009/result.json": "b15706aa6d5e5cac3b492f46396b61bd6cab25aba17b590c3715d044fba9d3d9",
+    "results/concat_mlp_20261009/meld_seed2025/result.json": "a0c56afc12ac243ba253c1b88c6d64fdbd46bce6dc645b9b3ca7637f699643e7"
+  }
+}
