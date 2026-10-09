@@ -1,47 +1,33 @@
-# MCA × AMM 与 FFN 宽度对照（2026-10-09）
+# MCA × AMM and FFN-width controls (2026-10-09)
 
-状态：18个既有参照运行已重新核验；8个真实数据一轮smoke及fresh strict replay全部通过，24个新增正式运行已在biggpu持久队列启动。完整结果未出，不将smoke当正式结果。
+Status: complete. All 24 new runs and 18 reused reference runs were verified for both datasets and three predetermined seeds. The experiment uses the historical `strict_peak_test_wf1` diagnostic selection rule; these numbers are controlled diagnostics, not validation-selected generalization estimates.
 
-## 固定设计
+## MCA × AMM four-way control
 
-- 两数据集各三个预定种子：IEMOCAP 2025/2066/2118，MELD 2025/2028/2069。
-- MCA × AMM 四格：两者有、仅MCA、仅AMM、两者无。前三格复用原三种子；第四格新增6次。
-- FFN宽度：256、512、768对比默认1536；S=6、D=256、两块、其余模块及训练设置固定，新增18次。
-- 不按测试结果追加宽度/挑种子/改默认设置。沿用已有明确的 strict_peak_test_wf1 口径，属于该口径下的控制实验，不作为验证集选超参数的证据。
-- 原始训练预算IEMOCAP100轮、MELD50轮，不因模型较小减少轮数。
-- 执行固定在biggpu，宿主GPU4禁用；源代码独立快照避免未提交模型改动污染。
+| Dataset | MCA | AMM | WF1 (mean ± sample SD) |
+| --- | --- | --- | ---: |
+| IEMOCAP | on | on | 72.15 ± 0.21 |
+| IEMOCAP | on | off | 72.00 ± 0.38 |
+| IEMOCAP | off | on | 71.74 ± 0.34 |
+| IEMOCAP | off | off | 71.54 ± 0.33 |
+| MELD | on | on | 67.85 ± 0.06 |
+| MELD | on | off | 67.80 ± 0.18 |
+| MELD | off | on | 67.45 ± 0.37 |
+| MELD | off | off | 67.86 ± 0.26 |
 
-## 已核验参照
+AMM contributes `+0.14 ± 0.19` WF1 points with MCA and `+0.20 ± 0.66` without MCA on IEMOCAP. On MELD, the corresponding effects are `+0.05 ± 0.23` and `-0.41 ± 0.55`. Thus, the four-way control does not support a stable standalone AMM gain on MELD; its behavior depends on the MCA path.
 
-| 数据集 | MCA | AMM | WF1（三种子） |
-|---|---|---|---:|
-| IEMOCAP | 有 | 有 | 72.15±0.21 |
-| IEMOCAP | 有 | 无 | 72.00±0.38 |
-| IEMOCAP | 无 | 有 | 71.74±0.34 |
-| IEMOCAP | 无 | 无 | 正式队列中 |
-| MELD | 有 | 有 | 67.85±0.06 |
-| MELD | 有 | 无 | 67.80±0.18 |
-| MELD | 无 | 有 | 67.45±0.37 |
-| MELD | 无 | 无 | 正式队列中 |
+## FFN-width control
 
-`references.json` 保存18次运行及其来源，54个原始config/metrics/predictions文件在服务器上重新计算SHA256，均匹配已核验报告。
+The default AMM uses width 1536. All other settings remain fixed.
 
-## 分析规则
+| FFN width | IEMOCAP WF1 | MELD WF1 |
+| ---: | ---: | ---: |
+| 256 | 72.02 ± 0.43 | 67.49 ± 0.11 |
+| 512 | 72.00 ± 0.40 | 67.46 ± 0.22 |
+| 768 | 72.16 ± 0.54 | 67.47 ± 0.26 |
+| 1536 (default) | 72.15 ± 0.21 | 67.85 ± 0.06 |
 
-按同种子计算AMM增益：
+Increasing width above 1536 is reported separately in `results/amm_capacity_20261009`. The compact-width results show no monotonic capacity trend: width 768 is effectively tied with the default on IEMOCAP, whereas all three compact widths trail the default by about 0.36--0.39 points on MELD.
 
-- 有MCA时：Full − no_mixer。
-- 无MCA时：no_cross_attention − both_off。
-- 交互差：上述前者减后者；负值表示AMM在无MCA时增益更大。三种子仅描述均值和样本标准差，不凭正负直接断言功能冗余或统计显著。
-
-FFN报告WF1、ACC、参数量与默认1536的同种子差；减小FFN同时改变容量，不将分数差自动归因于正则化。保留不利或无差异结果。
-
-本轮不改论文，待正式结果核验完成后再决定写法。
-
-## 执行与参数核验
-
-- 持久会话 `mca_ffn_24runs`；调度PID647399，宿主GPU1（UUID `GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049`），最多2并发。实时状态在远程 `pipeline/state.json`，本地启动证据见 `experiments/mca_ffn_20261009/launch_verification.json`。
-- 10项CPU结构/梯度检查通过，两个Full与原始快照的参数、初始化状态和输出逐位一致；新变体FFN参数实际进入优化器并更新。8个smoke均核验正式模型配置、检查点哈希和严格回放。
-- 模型参数：FFN256/512/768时IEMOCAP为5,044,802 / 5,307,458 / 5,570,114，MELD为4,398,790 / 4,661,446 / 4,924,102。双去除为3,593,964 / 2,947,952。
-- MELD快捷建模函数额外注册394,755个正式训练会由no_alignment移除的对齐层参数；表中按实际训练检查点统计。IEMOCAP检查点另有1,536个固定alpha缓冲元素，不计为参数。
-- 队列完成后自动执行analyze_revision.py；下载核验后运行summarize_controls.py，输出配对效应与宽度比较。尚不能据运行启动宣称性能结果完成。
+Machine-readable evidence is in `analysis.json`, `comparison.json`, `references.json`, and `state.json`.

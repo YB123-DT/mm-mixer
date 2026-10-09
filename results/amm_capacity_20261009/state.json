@@ -1,5 +1,6 @@
 {
   "created_at": "2026-10-09T12:43:07Z",
+  "finished_at": "2026-10-09T19:52:03Z",
   "gpus": [
     {
       "index": 0,
@@ -8,6 +9,8 @@
   ],
   "jobs": {
     "iemocap/ffn_width_3072/seed2025": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2025/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -23,6 +26,9 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "iemocap",
+      "finished_at": "2026-10-09T13:38:24Z",
+      "formal_epochs": 100,
+      "formal_protocol_verified": true,
       "gpu_host_index": 0,
       "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "iemocap/ffn_width_3072/seed2025",
@@ -44,23 +50,48 @@
           "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
         }
       },
-      "live_pids": [
-        1620680,
-        1621134
-      ],
+      "live_pids": [],
       "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_3072_seed2025.log",
+      "metrics": {
+        "accuracy": 0.7165742452248922,
+        "class_f1": {
+          "anger": 0.7186629526462396,
+          "excited": 0.7320490367775832,
+          "frustration": 0.6851119894598157,
+          "happiness": 0.5677419354838711,
+          "neutral": 0.7076101468624831,
+          "sadness": 0.8514056224899599
+        },
+        "epoch": 28,
+        "macro_f1": 0.7104302806199921,
+        "support": {
+          "anger": 170,
+          "excited": 299,
+          "frustration": 381,
+          "happiness": 144,
+          "neutral": 384,
+          "sadness": 245
+        },
+        "weighted_f1": 0.7172856097014535
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
       "pid": 1620680,
       "process_token": "3f1e309ac1f54d179b779c46999e0678",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2025",
       "seed": 2025,
       "start_ticks": "158815515",
       "started_at": "2026-10-09T12:43:07Z",
-      "state": "running",
-      "variant": "ffn_width_3072"
+      "state": "completed",
+      "variant": "ffn_width_3072",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T13:38:24Z",
+      "verified_contract": "e274167fb76141a98f393634c544d1f486ea8e7c9b9fced941d8284c0ec01b3e"
     },
     "iemocap/ffn_width_3072/seed2066": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2066/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -76,15 +107,72 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "iemocap",
+      "finished_at": "2026-10-09T14:18:45Z",
+      "formal_epochs": 100,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "iemocap/ffn_width_3072/seed2066",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T13:10:41Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_3072_seed2066.log",
+      "metrics": {
+        "accuracy": 0.722735674676525,
+        "class_f1": {
+          "anger": 0.7262569832402235,
+          "excited": 0.7442680776014109,
+          "frustration": 0.6909090909090908,
+          "happiness": 0.5825242718446602,
+          "neutral": 0.7163781624500666,
+          "sadness": 0.8431771894093687
+        },
+        "epoch": 40,
+        "macro_f1": 0.7172522959091369,
+        "support": {
+          "anger": 170,
+          "excited": 299,
+          "frustration": 381,
+          "happiness": 144,
+          "neutral": 384,
+          "sadness": 245
+        },
+        "weighted_f1": 0.7238369235500773
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 1776528,
+      "process_token": "a8a02aee8ef04fefa12d0a3be1d4e62f",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2066",
       "seed": 2066,
-      "state": "queued",
-      "variant": "ffn_width_3072"
+      "start_ticks": "158980883",
+      "started_at": "2026-10-09T13:10:41Z",
+      "state": "completed",
+      "variant": "ffn_width_3072",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T14:18:45Z",
+      "verified_contract": "7a59f2d4bbdae050273bd80400cb34a87fd7b1de4026b491f33d824f394f99cc"
     },
     "iemocap/ffn_width_3072/seed2118": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2118/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -100,15 +188,72 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "iemocap",
+      "finished_at": "2026-10-09T15:18:19Z",
+      "formal_epochs": 100,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "iemocap/ffn_width_3072/seed2118",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T14:11:33Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_3072_seed2118.log",
+      "metrics": {
+        "accuracy": 0.7122612446087492,
+        "class_f1": {
+          "anger": 0.7166666666666667,
+          "excited": 0.7260034904013961,
+          "frustration": 0.6866059817945385,
+          "happiness": 0.549520766773163,
+          "neutral": 0.7054054054054053,
+          "sadness": 0.8472505091649694
+        },
+        "epoch": 37,
+        "macro_f1": 0.7052421367010231,
+        "support": {
+          "anger": 170,
+          "excited": 299,
+          "frustration": 381,
+          "happiness": 144,
+          "neutral": 384,
+          "sadness": 245
+        },
+        "weighted_f1": 0.7135479339886004
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 2074661,
+      "process_token": "feded7c8267b45f6bff14d069acdd66f",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2118",
       "seed": 2118,
-      "state": "queued",
-      "variant": "ffn_width_3072"
+      "start_ticks": "159346066",
+      "started_at": "2026-10-09T14:11:33Z",
+      "state": "completed",
+      "variant": "ffn_width_3072",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T15:18:19Z",
+      "verified_contract": "28d46b13673a0291e2b378b82d1defaf961c30b69bbe7130dadb54483981328e"
     },
     "iemocap/ffn_width_6144/seed2025": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2025/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -124,15 +269,72 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "iemocap",
+      "finished_at": "2026-10-09T15:59:25Z",
+      "formal_epochs": 100,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "iemocap/ffn_width_6144/seed2025",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T14:55:54Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_6144_seed2025.log",
+      "metrics": {
+        "accuracy": 0.7171903881700554,
+        "class_f1": {
+          "anger": 0.7226890756302521,
+          "excited": 0.725,
+          "frustration": 0.695201037613489,
+          "happiness": 0.5642633228840125,
+          "neutral": 0.708724832214765,
+          "sadness": 0.8502024291497976
+        },
+        "epoch": 32,
+        "macro_f1": 0.7110134495820527,
+        "support": {
+          "anger": 170,
+          "excited": 299,
+          "frustration": 381,
+          "happiness": 144,
+          "neutral": 384,
+          "sadness": 245
+        },
+        "weighted_f1": 0.7185505775695319
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 2281250,
+      "process_token": "40c5dee272a948339ad1eaf90691de51",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2025",
       "seed": 2025,
-      "state": "queued",
-      "variant": "ffn_width_6144"
+      "start_ticks": "159612182",
+      "started_at": "2026-10-09T14:55:54Z",
+      "state": "completed",
+      "variant": "ffn_width_6144",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T15:59:25Z",
+      "verified_contract": "3f2bceabc1eeba76c1a3f10fc371bedcb31422a3a753d2354fd78b5f866da77d"
     },
     "iemocap/ffn_width_6144/seed2066": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2066/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -148,15 +350,72 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "iemocap",
+      "finished_at": "2026-10-09T19:15:57Z",
+      "formal_epochs": 100,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "iemocap/ffn_width_6144/seed2066",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T17:56:23Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_6144_seed2066.log",
+      "metrics": {
+        "accuracy": 0.7245841035120147,
+        "class_f1": {
+          "anger": 0.7252747252747253,
+          "excited": 0.7465277777777778,
+          "frustration": 0.6910994764397906,
+          "happiness": 0.5704467353951889,
+          "neutral": 0.7277486910994766,
+          "sadness": 0.8377823408624229
+        },
+        "epoch": 51,
+        "macro_f1": 0.7164799578082303,
+        "support": {
+          "anger": 170,
+          "excited": 299,
+          "frustration": 381,
+          "happiness": 144,
+          "neutral": 384,
+          "sadness": 245
+        },
+        "weighted_f1": 0.7249993285066044
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 3166951,
+      "process_token": "79e1b1890c1c47a798b1ec35fa84e574",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2066",
       "seed": 2066,
-      "state": "queued",
-      "variant": "ffn_width_6144"
+      "start_ticks": "160695111",
+      "started_at": "2026-10-09T17:56:23Z",
+      "state": "completed",
+      "variant": "ffn_width_6144",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T19:15:57Z",
+      "verified_contract": "77fafe3a716c69d2374ca958e15ad3cb8d1a4b87d419406de6b4aebc81884216"
     },
     "iemocap/ffn_width_6144/seed2118": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2118/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -172,15 +431,72 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "iemocap",
+      "finished_at": "2026-10-09T19:51:58Z",
+      "formal_epochs": 100,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "iemocap/ffn_width_6144/seed2118",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T18:34:00Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_6144_seed2118.log",
+      "metrics": {
+        "accuracy": 0.718422674060382,
+        "class_f1": {
+          "anger": 0.7146814404432134,
+          "excited": 0.7469458987783595,
+          "frustration": 0.6838046272493574,
+          "happiness": 0.5825242718446602,
+          "neutral": 0.7094133697135062,
+          "sadness": 0.8414634146341462
+        },
+        "epoch": 49,
+        "macro_f1": 0.7131388371105406,
+        "support": {
+          "anger": 170,
+          "excited": 299,
+          "frustration": 381,
+          "happiness": 144,
+          "neutral": 384,
+          "sadness": 245
+        },
+        "weighted_f1": 0.7195434364097747
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 3347599,
+      "process_token": "d3daa41eb0fe4b21adf3dcfef3cf1bd8",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2118",
       "seed": 2118,
-      "state": "queued",
-      "variant": "ffn_width_6144"
+      "start_ticks": "160920823",
+      "started_at": "2026-10-09T18:34:00Z",
+      "state": "completed",
+      "variant": "ffn_width_6144",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T19:51:58Z",
+      "verified_contract": "0a5b187d6b84ac391fbc331c0089afe2062a18edf54c5fe611c7c195320c021b"
     },
     "meld/ffn_width_3072/seed2025": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2025/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -196,6 +512,9 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "meld",
+      "finished_at": "2026-10-09T13:10:41Z",
+      "formal_epochs": 50,
+      "formal_protocol_verified": true,
       "gpu_host_index": 0,
       "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "meld/ffn_width_3072/seed2025",
@@ -217,23 +536,50 @@
           "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
         }
       },
-      "live_pids": [
-        1622884,
-        1622954
-      ],
+      "live_pids": [],
       "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_3072_seed2025.log",
+      "metrics": {
+        "accuracy": 0.6850574712643678,
+        "class_f1": {
+          "anger": 0.5593750000000001,
+          "disgust": 0.3966942148760331,
+          "fear": 0.2891566265060241,
+          "joy": 0.6455696202531647,
+          "neutral": 0.807765511990864,
+          "sadness": 0.45108695652173914,
+          "surprise": 0.5888324873096447
+        },
+        "epoch": 23,
+        "macro_f1": 0.5340686310653529,
+        "support": {
+          "anger": 345,
+          "disgust": 68,
+          "fear": 50,
+          "joy": 402,
+          "neutral": 1256,
+          "sadness": 208,
+          "surprise": 281
+        },
+        "weighted_f1": 0.6773095399347512
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
       "pid": 1622884,
       "process_token": "6ed42ede81354bd8bfcc5b88968d64af",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2025",
       "seed": 2025,
       "start_ticks": "158817545",
       "started_at": "2026-10-09T12:43:28Z",
-      "state": "running",
-      "variant": "ffn_width_3072"
+      "state": "completed",
+      "variant": "ffn_width_3072",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T13:10:41Z",
+      "verified_contract": "9e850c558d6e0ce93113480b0d539f71cdd8d1a036080cbe6dbba34c918a9de4"
     },
     "meld/ffn_width_3072/seed2028": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2028/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -249,15 +595,74 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "meld",
+      "finished_at": "2026-10-09T14:11:32Z",
+      "formal_epochs": 50,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "meld/ffn_width_3072/seed2028",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T13:38:25Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_3072_seed2028.log",
+      "metrics": {
+        "accuracy": 0.6881226053639847,
+        "class_f1": {
+          "anger": 0.5655976676384841,
+          "disgust": 0.3008849557522124,
+          "fear": 0.3037974683544304,
+          "joy": 0.6598984771573604,
+          "neutral": 0.8094332445796881,
+          "sadness": 0.4450704225352113,
+          "surprise": 0.5964912280701754
+        },
+        "epoch": 28,
+        "macro_f1": 0.5258819234410803,
+        "support": {
+          "anger": 345,
+          "disgust": 68,
+          "fear": 50,
+          "joy": 402,
+          "neutral": 1256,
+          "sadness": 208,
+          "surprise": 281
+        },
+        "weighted_f1": 0.6792709853366051
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 1919963,
+      "process_token": "23a85e8b8ed9487e98d2d413c65110d3",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2028",
       "seed": 2028,
-      "state": "queued",
-      "variant": "ffn_width_3072"
+      "start_ticks": "159147253",
+      "started_at": "2026-10-09T13:38:25Z",
+      "state": "completed",
+      "variant": "ffn_width_3072",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T14:11:32Z",
+      "verified_contract": "1fd34e685e3e4395c27dab62391bf9907c589f3ff8c6c11219a4b5115e9b5626"
     },
     "meld/ffn_width_3072/seed2069": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2069/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -273,15 +678,74 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "meld",
+      "finished_at": "2026-10-09T14:55:54Z",
+      "formal_epochs": 50,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "meld/ffn_width_3072/seed2069",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T14:18:46Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_3072_seed2069.log",
+      "metrics": {
+        "accuracy": 0.6865900383141762,
+        "class_f1": {
+          "anger": 0.55,
+          "disgust": 0.3275862068965517,
+          "fear": 0.24719101123595508,
+          "joy": 0.6564102564102564,
+          "neutral": 0.8103382744203724,
+          "sadness": 0.443213296398892,
+          "surprise": 0.6102819237147595
+        },
+        "epoch": 26,
+        "macro_f1": 0.5207172812966838,
+        "support": {
+          "anger": 345,
+          "disgust": 68,
+          "fear": 50,
+          "joy": 402,
+          "neutral": 1256,
+          "sadness": 208,
+          "surprise": 281
+        },
+        "weighted_f1": 0.6780554768561268
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 2108743,
+      "process_token": "dc510996556a4e6fa53d82bf51da2205",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2069",
       "seed": 2069,
-      "state": "queued",
-      "variant": "ffn_width_3072"
+      "start_ticks": "159389356",
+      "started_at": "2026-10-09T14:18:46Z",
+      "state": "completed",
+      "variant": "ffn_width_3072",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T14:55:54Z",
+      "verified_contract": "70175519bd1958c6a88305388bb2670a55a83b00fce7ab32a95cb695d3ef353d"
     },
     "meld/ffn_width_6144/seed2025": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2025/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -297,15 +761,74 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "meld",
+      "finished_at": "2026-10-09T15:59:01Z",
+      "formal_epochs": 50,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "meld/ffn_width_6144/seed2025",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T15:18:20Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_6144_seed2025.log",
+      "metrics": {
+        "accuracy": 0.685823754789272,
+        "class_f1": {
+          "anger": 0.5646687697160883,
+          "disgust": 0.368,
+          "fear": 0.3333333333333333,
+          "joy": 0.6537966537966537,
+          "neutral": 0.8082191780821918,
+          "sadness": 0.4189944134078212,
+          "surprise": 0.6040268456375839
+        },
+        "epoch": 36,
+        "macro_f1": 0.5358627419962388,
+        "support": {
+          "anger": 345,
+          "disgust": 68,
+          "fear": 50,
+          "joy": 402,
+          "neutral": 1256,
+          "sadness": 208,
+          "surprise": 281
+        },
+        "weighted_f1": 0.678671768708503
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 2402652,
+      "process_token": "375860d33eac44cb94821d35dd3354a0",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2025",
       "seed": 2025,
-      "state": "queued",
-      "variant": "ffn_width_6144"
+      "start_ticks": "159746788",
+      "started_at": "2026-10-09T15:18:20Z",
+      "state": "completed",
+      "variant": "ffn_width_6144",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T15:59:01Z",
+      "verified_contract": "22458f591cf9db45b24ee146529631bea525f786c19c8541d54bafd4cf9982fb"
     },
     "meld/ffn_width_6144/seed2028": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2028/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -321,15 +844,74 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "meld",
+      "finished_at": "2026-10-09T18:34:00Z",
+      "formal_epochs": 50,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "meld/ffn_width_6144/seed2028",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T17:56:44Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_6144_seed2028.log",
+      "metrics": {
+        "accuracy": 0.6839080459770115,
+        "class_f1": {
+          "anger": 0.5567651632970451,
+          "disgust": 0.3418803418803419,
+          "fear": 0.3191489361702128,
+          "joy": 0.6515723270440252,
+          "neutral": 0.8051849027830729,
+          "sadness": 0.4402173913043478,
+          "surprise": 0.6034482758620691
+        },
+        "epoch": 36,
+        "macro_f1": 0.531173905477302,
+        "support": {
+          "anger": 345,
+          "disgust": 68,
+          "fear": 50,
+          "joy": 402,
+          "neutral": 1256,
+          "sadness": 208,
+          "surprise": 281
+        },
+        "weighted_f1": 0.6765010680726582
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 3168610,
+      "process_token": "cd6bcd02b85d48f09fff82862c67ecba",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2028",
       "seed": 2028,
-      "state": "queued",
-      "variant": "ffn_width_6144"
+      "start_ticks": "160697170",
+      "started_at": "2026-10-09T17:56:44Z",
+      "state": "completed",
+      "variant": "ffn_width_6144",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T18:34:00Z",
+      "verified_contract": "5b038f5438eb9f056c354a64f54f6337c29f4ab8aaa20124ab5d6239ac45beee"
     },
     "meld/ffn_width_6144/seed2069": {
+      "artifact_verified": true,
+      "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2069/best_peak",
       "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
       "command": [
         "/data2/yb/reproduction_envs/s0/bin/python3.10",
@@ -345,20 +927,77 @@
         "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
       ],
       "dataset": "meld",
+      "finished_at": "2026-10-09T19:52:03Z",
+      "formal_epochs": 50,
+      "formal_protocol_verified": true,
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
       "id": "meld/ffn_width_6144/seed2069",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T19:15:57Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_6144_seed2069.log",
+      "metrics": {
+        "accuracy": 0.6873563218390805,
+        "class_f1": {
+          "anger": 0.56,
+          "disgust": 0.3361344537815126,
+          "fear": 0.2857142857142857,
+          "joy": 0.6539923954372623,
+          "neutral": 0.8100686498855835,
+          "sadness": 0.43213296398891965,
+          "surprise": 0.6156462585034014
+        },
+        "epoch": 33,
+        "macro_f1": 0.5276698581872807,
+        "support": {
+          "anger": 345,
+          "disgust": 68,
+          "fear": 50,
+          "joy": 402,
+          "neutral": 1256,
+          "sadness": 208,
+          "surprise": 281
+        },
+        "weighted_f1": 0.6795303752927512
+      },
       "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 3525952,
+      "process_token": "de6d6ac32f1e471892e9b183c07674ea",
       "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "returncode": 0,
       "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2069",
       "seed": 2069,
-      "state": "queued",
-      "variant": "ffn_width_6144"
+      "start_ticks": "161172474",
+      "started_at": "2026-10-09T19:15:57Z",
+      "state": "completed",
+      "variant": "ffn_width_6144",
+      "verification": "formal materialized epoch budget and strict test selection; PeakArtifactStore replay/source/data/artifact hashes",
+      "verified_at": "2026-10-09T19:52:03Z",
+      "verified_contract": "e498bbc67013dc424ab192bb6276d08232d6adbd2d061c3d7f5b7447ad71505f"
     }
   },
   "plan_sha256": "3051b63fd1541365777523f1c23ad9be0a0235fa446c26a550e65e638c9b719a",
   "queue_pid": 1620671,
-  "queue_state": "running",
+  "queue_state": "complete",
   "schema_version": 1,
   "selection": "strict_peak_test_wf1",
   "server": "biggpu",
-  "updated_at": "2026-10-09T13:07:15Z"
+  "updated_at": "2026-10-09T19:52:03Z"
 }
