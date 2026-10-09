@@ -13,3 +13,9 @@ rate 1e-6, classifier/projection learning rate 5e-5, weight decay 0.01,
 The Top-4 ranking uses test labels at the user's request. These checkpoints
 are diagnostic controls and must not be described as validation-selected
 publication results.
+
+After training, `extract_top4.py` reads the ranked checkpoint index, extracts
+history-aware EOS-pooled features for train/dev/test, verifies exact split
+coverage, 1,024-dimensional finite vectors and records checkpoint/feature
+hashes. This deliberately matches the existing downstream feature-export
+semantics even though upstream training uses the final MASK representation.
