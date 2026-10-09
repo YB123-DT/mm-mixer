@@ -96,6 +96,14 @@ def materialize_config(
             for name, weight in fixed["aux_loss_weights"].items()
             if name in enabled
         }
+    trainer_names = {"v": "visual", "a": "audio", "t": "text"}
+    config["feature_paths"]["meld"] = {
+        split: {
+            trainer_names[modality]: path
+            for modality, path in paths.items()
+        }
+        for split, paths in cfg.feature_paths.items()
+    }
     config["runtime_audit"] = {
         "selection": "strict_peak_test_wf1",
         "architecture": cfg.mixer,

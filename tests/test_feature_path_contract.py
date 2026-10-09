@@ -1,4 +1,6 @@
 from pathlib import Path
+from dataclasses import replace
+from unittest.mock import patch
 
 from dataset_runners.iemocap import materialize_legacy_config
 from dataset_runners.meld import materialize_config as materialize_meld_config
@@ -20,7 +22,23 @@ def test_iemocap_declared_and_materialized_features_are_canonical_css():
 
 
 def test_meld_declared_features_match_materialized_runtime_config(tmp_path):
-    cfg = get_config("meld", "no_mixer", 2025)
-    actual = materialize_meld_config(tmp_path, epochs=50, seed=2025, variant="no_mixer")
-    for modality, path in cfg.feature_paths["train"].items():
-        assert actual["runtime_audit"]["feature_paths"]["train"][modality] == path
+    base = get_config("meld", "no_mixer", 2025)
+    cfg = replace(
+        base,
+        feature_paths={
+            split: {
+                modality: str(tmp_path / split / f"{modality}.json")
+                for modality in ("v", "a", "t")
+            }
+            for split in ("train", "dev", "test")
+        },
+    )
+    with patch("dataset_runners.meld.get_config", return_value=cfg):
+        actual = materialize_meld_config(
+            tmp_path, epochs=50, seed=2025, variant="no_mixer"
+        )
+    trainer_names = {"v": "visual", "a": "audio", "t": "text"}
+    for split, declared_paths in cfg.feature_paths.items():
+        for modality, path in declared_paths.items():
+            assert actual["runtime_audit"]["feature_paths"][split][modality] == path
+            assert actual["feature_paths"]["meld"][split][trainer_names[modality]] == path
