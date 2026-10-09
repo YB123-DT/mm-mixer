@@ -1,0 +1,53 @@
+{
+  "helper": 6106825,
+  "checkpoint": 5712070,
+  "helper_only": {
+    "feature_aligners.v_a.temperature": [],
+    "feature_aligners.v_a.align_proj.source.weight": [
+      256,
+      256
+    ],
+    "feature_aligners.v_a.align_proj.source.bias": [
+      256
+    ],
+    "feature_aligners.v_a.align_proj.target.weight": [
+      256,
+      256
+    ],
+    "feature_aligners.v_a.align_proj.target.bias": [
+      256
+    ],
+    "feature_aligners.v_t.temperature": [],
+    "feature_aligners.v_t.align_proj.source.weight": [
+      256,
+      256
+    ],
+    "feature_aligners.v_t.align_proj.source.bias": [
+      256
+    ],
+    "feature_aligners.v_t.align_proj.target.weight": [
+      256,
+      256
+    ],
+    "feature_aligners.v_t.align_proj.target.bias": [
+      256
+    ],
+    "feature_aligners.a_t.temperature": [],
+    "feature_aligners.a_t.align_proj.source.weight": [
+      256,
+      256
+    ],
+    "feature_aligners.a_t.align_proj.source.bias": [
+      256
+    ],
+    "feature_aligners.a_t.align_proj.target.weight": [
+      256,
+      256
+    ],
+    "feature_aligners.a_t.align_proj.target.bias": [
+      256
+    ]
+  },
+  "checkpoint_only": {},
+  "different_shapes": {}
+}

@@ -1,0 +1,70 @@
+{
+  "status": "running",
+  "verified_at": "2026-10-09T08:42:32.216243+00:00",
+  "formal_jobs": 24,
+  "running": 2,
+  "queued": 22,
+  "smoke_runs_passed": 8,
+  "cpu_probes_passed": 10,
+  "tmux_session": "mca_ffn_24runs",
+  "queue_pid": 647399,
+  "queue_process_alive": true,
+  "first_jobs": [
+    {
+      "id": "iemocap/no_mca_no_amm/seed2025",
+      "pid": 647403,
+      "gpu_host_index": 1,
+      "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+      "log": "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/pipeline/logs/iemocap_no_mca_no_amm_seed2025.log",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/runs/iemocap/no_mca_no_amm/seed2025",
+      "started_at": "2026-10-09T08:41:07Z",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "no_mca_no_amm",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/runs"
+      ],
+      "published_configs": [],
+      "configuration_note": "IEMOCAP publishes canonical config with final peak bundle; fixed formal command audited before launch",
+      "epoch_log_tail": [
+        "[fusion] Epoch   1/100 | Train Loss: 2.5544 F1: 0.1723 Acc: 0.2096 | Test Loss: 2.5653 F1: 0.1515 Acc: 0.2193"
+      ]
+    },
+    {
+      "id": "iemocap/no_mca_no_amm/seed2066",
+      "pid": 648596,
+      "gpu_host_index": 1,
+      "gpu_uuid": "GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049",
+      "log": "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/pipeline/logs/iemocap_no_mca_no_amm_seed2066.log",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/runs/iemocap/no_mca_no_amm/seed2066",
+      "started_at": "2026-10-09T08:41:27Z",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "no_mca_no_amm",
+        "--seed",
+        "2066",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_MCA_FFN_20261009/runs"
+      ],
+      "published_configs": [],
+      "configuration_note": "IEMOCAP publishes canonical config with final peak bundle; fixed formal command audited before launch",
+      "epoch_log_tail": [
+        "[fusion] Epoch   1/100 | Train Loss: 2.5734 F1: 0.1375 Acc: 0.1623 | Test Loss: 2.6283 F1: 0.1128 Acc: 0.1824"
+      ]
+    }
+  ],
+  "gpu_state": "1, GPU-56b14af1-00dc-4542-e2d8-5bba1dd39049, 990 MiB, 31505 MiB, 1 %",
+  "estimated_completion": "Not estimated from loading/one-epoch smoke; formal epoch timing not yet sufficient."
+}
