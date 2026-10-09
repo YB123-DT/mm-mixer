@@ -1,0 +1,881 @@
+{
+  "train": {
+    "t": {
+      "path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+      "sha256": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1",
+      "shape": [
+        9989,
+        1024
+      ],
+      "missing_keys": [],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 0,
+      "duplicate_vector_excess": 24,
+      "norm_mean": 31.688295364379883
+    },
+    "a": {
+      "path": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+      "sha256": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+      "shape": [
+        9988,
+        1024
+      ],
+      "missing_keys": [
+        "dia125_utt3"
+      ],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 0,
+      "duplicate_vector_excess": 19,
+      "norm_mean": 2.104564905166626
+    },
+    "v": {
+      "path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json",
+      "sha256": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+      "shape": [
+        9989,
+        342
+      ],
+      "missing_keys": [],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 3407,
+      "duplicate_vector_excess": 3435,
+      "norm_mean": 3.431523084640503
+    }
+  },
+  "dev": {
+    "t": {
+      "path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+      "sha256": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+      "shape": [
+        1109,
+        1024
+      ],
+      "missing_keys": [],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 0,
+      "duplicate_vector_excess": 0,
+      "norm_mean": 31.687620162963867
+    },
+    "a": {
+      "path": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+      "sha256": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+      "shape": [
+        1112,
+        1024
+      ],
+      "missing_keys": [
+        "dia110_utt7"
+      ],
+      "extra_keys": [
+        "dia49_utt4",
+        "dia49_utt5",
+        "dia66_utt10",
+        "dia66_utt9"
+      ],
+      "nonfinite": 0,
+      "zero_rows": 0,
+      "duplicate_vector_excess": 3,
+      "norm_mean": 2.1298835277557373
+    },
+    "v": {
+      "path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json",
+      "sha256": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+      "shape": [
+        1109,
+        342
+      ],
+      "missing_keys": [],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 95,
+      "duplicate_vector_excess": 108,
+      "norm_mean": 4.72939395904541
+    }
+  },
+  "test": {
+    "t": {
+      "path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+      "sha256": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+      "shape": [
+        2610,
+        1024
+      ],
+      "missing_keys": [],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 0,
+      "duplicate_vector_excess": 8,
+      "norm_mean": 31.690324783325195
+    },
+    "a": {
+      "path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+      "sha256": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+      "shape": [
+        2615,
+        1024
+      ],
+      "missing_keys": [],
+      "extra_keys": [
+        "dia108_utt1",
+        "dia108_utt2",
+        "dia93_utt5",
+        "dia93_utt6",
+        "dia93_utt7"
+      ],
+      "nonfinite": 0,
+      "zero_rows": 0,
+      "duplicate_vector_excess": 26,
+      "norm_mean": 2.100818634033203
+    },
+    "v": {
+      "path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json",
+      "sha256": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+      "shape": [
+        2610,
+        342
+      ],
+      "missing_keys": [],
+      "extra_keys": [],
+      "nonfinite": 0,
+      "zero_rows": 258,
+      "duplicate_vector_excess": 273,
+      "norm_mean": 4.701064109802246
+    }
+  },
+  "cross_split_exact_vectors": {
+    "train_dev_t": {
+      "unique_shared_vectors": 1,
+      "pairs": [
+        {
+          "a": "dia4_utt0",
+          "b": "dia61_utt0",
+          "same_utterance": true,
+          "same_label": false
+        }
+      ],
+      "pair_count": 1
+    },
+    "train_dev_a": {
+      "unique_shared_vectors": 0,
+      "pairs": [],
+      "pair_count": 0
+    },
+    "train_dev_v": {
+      "unique_shared_vectors": 598,
+      "pairs": [
+        {
+          "a": "dia44_utt0",
+          "b": "dia44_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia23_utt0",
+          "b": "dia23_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia30_utt4",
+          "b": "dia30_utt4",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia28_utt4",
+          "b": "dia28_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia44_utt1",
+          "b": "dia44_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia110_utt4",
+          "b": "dia110_utt4",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia15_utt0",
+          "b": "dia15_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia40_utt0",
+          "b": "dia40_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia24_utt8",
+          "b": "dia24_utt8",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia40_utt1",
+          "b": "dia40_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia95_utt5",
+          "b": "dia95_utt5",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia44_utt2",
+          "b": "dia44_utt2",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia108_utt6",
+          "b": "dia108_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia97_utt0",
+          "b": "dia97_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia34_utt4",
+          "b": "dia34_utt4",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia47_utt0",
+          "b": "dia47_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia53_utt6",
+          "b": "dia53_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia32_utt10",
+          "b": "dia32_utt10",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia111_utt2",
+          "b": "dia111_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia94_utt9",
+          "b": "dia94_utt9",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia99_utt7",
+          "b": "dia99_utt7",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia112_utt4",
+          "b": "dia112_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia46_utt6",
+          "b": "dia46_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia56_utt3",
+          "b": "dia56_utt3",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia81_utt2",
+          "b": "dia81_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia86_utt0",
+          "b": "dia86_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia15_utt5",
+          "b": "dia15_utt5",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia29_utt9",
+          "b": "dia29_utt9",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia72_utt1",
+          "b": "dia72_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia72_utt1",
+          "b": "dia72_utt2",
+          "same_utterance": false,
+          "same_label": false
+        }
+      ],
+      "pair_count": 324307
+    },
+    "train_test_t": {
+      "unique_shared_vectors": 8,
+      "pairs": [
+        {
+          "a": "dia236_utt0",
+          "b": "dia101_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia792_utt0",
+          "b": "dia125_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia4_utt0",
+          "b": "dia58_utt0",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia922_utt0",
+          "b": "dia22_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia922_utt0",
+          "b": "dia51_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia160_utt0",
+          "b": "dia131_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia462_utt1",
+          "b": "dia58_utt1",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia321_utt0",
+          "b": "dia103_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia321_utt0",
+          "b": "dia245_utt0",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia666_utt0",
+          "b": "dia103_utt0",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia666_utt0",
+          "b": "dia245_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia700_utt0",
+          "b": "dia103_utt0",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia700_utt0",
+          "b": "dia245_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia776_utt0",
+          "b": "dia103_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia776_utt0",
+          "b": "dia245_utt0",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia993_utt0",
+          "b": "dia103_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia993_utt0",
+          "b": "dia245_utt0",
+          "same_utterance": true,
+          "same_label": false
+        },
+        {
+          "a": "dia922_utt1",
+          "b": "dia22_utt1",
+          "same_utterance": true,
+          "same_label": true
+        }
+      ],
+      "pair_count": 18
+    },
+    "train_test_a": {
+      "unique_shared_vectors": 3,
+      "pairs": [
+        {
+          "a": "dia887_utt0",
+          "b": "dia117_utt8",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia12_utt7",
+          "b": "dia85_utt0",
+          "same_utterance": true,
+          "same_label": true
+        },
+        {
+          "a": "dia12_utt8",
+          "b": "dia85_utt1",
+          "same_utterance": false,
+          "same_label": true
+        }
+      ],
+      "pair_count": 3
+    },
+    "train_test_v": {
+      "unique_shared_vectors": 1537,
+      "pairs": [
+        {
+          "a": "dia195_utt3",
+          "b": "dia195_utt3",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia44_utt1",
+          "b": "dia44_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia110_utt4",
+          "b": "dia110_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia40_utt0",
+          "b": "dia40_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia192_utt2",
+          "b": "dia192_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia95_utt5",
+          "b": "dia95_utt5",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia228_utt1",
+          "b": "dia228_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia229_utt3",
+          "b": "dia229_utt3",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia210_utt5",
+          "b": "dia210_utt5",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia156_utt11",
+          "b": "dia156_utt11",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia142_utt0",
+          "b": "dia142_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia111_utt2",
+          "b": "dia111_utt2",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia95_utt12",
+          "b": "dia95_utt12",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia112_utt4",
+          "b": "dia112_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia183_utt2",
+          "b": "dia183_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia242_utt0",
+          "b": "dia242_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia156_utt2",
+          "b": "dia156_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia86_utt0",
+          "b": "dia86_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia121_utt0",
+          "b": "dia121_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia151_utt1",
+          "b": "dia151_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia95_utt17",
+          "b": "dia95_utt17",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia29_utt9",
+          "b": "dia29_utt9",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia177_utt2",
+          "b": "dia177_utt2",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia153_utt2",
+          "b": "dia153_utt2",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia271_utt1",
+          "b": "dia271_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia124_utt4",
+          "b": "dia124_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia25_utt0",
+          "b": "dia25_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia199_utt11",
+          "b": "dia199_utt11",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia131_utt2",
+          "b": "dia131_utt2",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia35_utt3",
+          "b": "dia35_utt3",
+          "same_utterance": false,
+          "same_label": false
+        }
+      ],
+      "pair_count": 880589
+    },
+    "dev_test_t": {
+      "unique_shared_vectors": 1,
+      "pairs": [
+        {
+          "a": "dia61_utt0",
+          "b": "dia58_utt0",
+          "same_utterance": true,
+          "same_label": true
+        }
+      ],
+      "pair_count": 1
+    },
+    "dev_test_a": {
+      "unique_shared_vectors": 0,
+      "pairs": [],
+      "pair_count": 0
+    },
+    "dev_test_v": {
+      "unique_shared_vectors": 597,
+      "pairs": [
+        {
+          "a": "dia44_utt0",
+          "b": "dia44_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia23_utt0",
+          "b": "dia23_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia30_utt4",
+          "b": "dia30_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia28_utt4",
+          "b": "dia28_utt4",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia44_utt1",
+          "b": "dia44_utt1",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia110_utt4",
+          "b": "dia110_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia15_utt0",
+          "b": "dia15_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia40_utt0",
+          "b": "dia40_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia13_utt5",
+          "b": "dia13_utt5",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia40_utt1",
+          "b": "dia40_utt1",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia68_utt4",
+          "b": "dia68_utt4",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia95_utt5",
+          "b": "dia95_utt5",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia44_utt2",
+          "b": "dia44_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia22_utt6",
+          "b": "dia22_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia98_utt2",
+          "b": "dia98_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia108_utt6",
+          "b": "dia108_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia97_utt0",
+          "b": "dia97_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia37_utt6",
+          "b": "dia37_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia34_utt4",
+          "b": "dia34_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia47_utt0",
+          "b": "dia47_utt0",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia53_utt6",
+          "b": "dia53_utt6",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia7_utt4",
+          "b": "dia7_utt4",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia32_utt10",
+          "b": "dia32_utt10",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia111_utt2",
+          "b": "dia111_utt2",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia99_utt7",
+          "b": "dia99_utt7",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia112_utt4",
+          "b": "dia112_utt4",
+          "same_utterance": false,
+          "same_label": false
+        },
+        {
+          "a": "dia46_utt6",
+          "b": "dia46_utt6",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia56_utt3",
+          "b": "dia56_utt3",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia86_utt0",
+          "b": "dia86_utt0",
+          "same_utterance": false,
+          "same_label": true
+        },
+        {
+          "a": "dia15_utt5",
+          "b": "dia15_utt5",
+          "same_utterance": false,
+          "same_label": false
+        }
+      ],
+      "pair_count": 25145
+    }
+  }
+}

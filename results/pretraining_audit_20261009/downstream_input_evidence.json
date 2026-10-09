@@ -1,0 +1,60 @@
+{
+  "source": "results/revision_20261003/efficiency/meld_full_seed2025.json",
+  "source_sha256": "dd774c7052602563a26fb0cc74d81b594e35413138380dfccba8543a94f47480",
+  "dataset": "meld",
+  "variant": "full",
+  "seed": 2025,
+  "skip_pretrain": true,
+  "use_context_encoders": false,
+  "feature_paths": {
+    "meld": {
+      "dev": {
+        "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+        "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json"
+      },
+      "test": {
+        "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+        "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json"
+      },
+      "train": {
+        "audio": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+        "text": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+        "visual": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json"
+      }
+    }
+  },
+  "feature_sources": {
+    "v": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json",
+      "sha256": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+      "manifest_hash_verified": true
+    },
+    "a": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+      "sha256": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+      "manifest_hash_verified": true
+    },
+    "t": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+      "sha256": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+      "manifest_hash_verified": true
+    },
+    "metadata": {
+      "recorded_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_sent_emo.csv",
+      "actual_path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_sent_emo.csv",
+      "sha256": "2d3fdb6586bdcdf172a7197fae9244116b1103efd951db2317e6a67c7042d28e",
+      "manifest_hash_verified": false
+    }
+  },
+  "code_evidence": {
+    "dataset_join": "vendor/meld/multiattn.py:131-192",
+    "skip_encoder_training": "vendor/meld/train_erc.py:1285,1316",
+    "feature_extractors_none": "vendor/meld/train_erc.py:1395-1403",
+    "identity_prepare": "vendor/meld/train_erc.py:236-238"
+  }
+}

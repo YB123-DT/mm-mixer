@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/train_features/text_features.json",
+    "local_sha256": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1",
+    "remote_sha256": "b2436de8a6efdfa7bd15b1ebaa37cd30cdc43e0a0ba4c856ded56ad05ad037e1",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Dataset/Data/train_features/audio_features.json",
+    "local_sha256": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+    "remote_sha256": "f5dbd8133ec12c988b1c0639ef8d682a03fef1903b3e39d63f0062ec3086ce7e",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/train_features/visual_features.json",
+    "local_sha256": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+    "remote_sha256": "787b77e5e0abfd6858c2fc948fd398ff241958117c06da77e081e11af86e4e32",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/dev_features/text_features.json",
+    "local_sha256": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+    "remote_sha256": "492a18b180bb217f44a7f6bde448b901b18dad06b3c8c9364f74f9ddbb61ad23",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Dataset/Data/dev_features/audio_features.json",
+    "local_sha256": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+    "remote_sha256": "c0c4351a7c468f467ffb8f2a65c9b24f3e0c5fee7ea5ffed9414a4b06681e62d",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/dev_features/visual_features.json",
+    "local_sha256": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+    "remote_sha256": "ca14d1d3daea18fe4109fbe263f3cc55eb311b997b2da9911085243b68fc2b85",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/features_roberta_large_ft/test_features/text_features.json",
+    "local_sha256": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+    "remote_sha256": "defcc18c2dde94dffd303a26f3fbf428907342c03aa922bbe36c71e73fc9e018",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Dataset/Data/test_features/audio_features.json",
+    "local_sha256": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+    "remote_sha256": "b007af1f3d468ee3573effe26f2154ef23f00e6d9d72119c9dfbccd47a0ae93e",
+    "equal": true
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/features_denseface/test_features/visual_features.json",
+    "local_sha256": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+    "remote_sha256": "0fd04e15a5ff49d02bbc463073a3e83f8b6c98bf76ef5f9cc52181aa1b815fbe",
+    "equal": true
+  }
+]

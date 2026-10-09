@@ -1,0 +1,17 @@
+{
+  "train": {
+    "direct_global_id_sentence_matches": 9988,
+    "direct_global_id_sentence_mismatches": 1,
+    "global_id_has_no_utterance": 0
+  },
+  "dev": {
+    "direct_global_id_sentence_matches": 0,
+    "direct_global_id_sentence_mismatches": 675,
+    "global_id_has_no_utterance": 434
+  },
+  "test": {
+    "direct_global_id_sentence_matches": 0,
+    "direct_global_id_sentence_mismatches": 1740,
+    "global_id_has_no_utterance": 870
+  }
+}

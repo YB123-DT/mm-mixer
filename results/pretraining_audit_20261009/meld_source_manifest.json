@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/results/roberta_large_ft/best_roberta_text_only.pt",
+    "sha256": "1a03e900fe73b742026680d91aad5219e908f3dbecaf4f282c920ec1bcb95d85",
+    "size_bytes": 1425872957
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/results/roberta_large_ft/metrics.json",
+    "sha256": "49390ff992006dff3b73a6682d7398dfbe8c1d0d101a9f34d2fd2069b8e9bbe6",
+    "size_bytes": 2177
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/results/roberta_large_ft_train.log",
+    "sha256": "319e27007593c9be030a06f34ec1256ce182349540d40841a47ab81095c80d08",
+    "size_bytes": 3040296
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/train_roberta_text_only_meld.py",
+    "sha256": "eba6acc4319f7f797592d451b34e70050587ed4822b08b3992be4546b61868e7",
+    "size_bytes": 18796
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/extract_roberta_features.py",
+    "sha256": "7f2271faa189d325fe1273dcbcc1b92d501af331dbbdabd68d442aa1ffb807b1",
+    "size_bytes": 9712
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Model/extract_denseface_features.py",
+    "sha256": "3ea72f91ab2641136650d4016c9df852a15026f1ce600178bf8a3dd2b8d95e1d",
+    "size_bytes": 5705
+  },
+  {
+    "path": "/data2/yb/multimodalERC/MELD/Dataset/feature_extract.py",
+    "sha256": "5fc5064ff7ebd5980fe6198be455867b51b039c2c950161bf2157ec0426b14b9",
+    "size_bytes": 20142
+  },
+  {
+    "path": "/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/vocab.json",
+    "sha256": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655",
+    "size_bytes": 898823
+  },
+  {
+    "path": "/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/merges.txt",
+    "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+    "size_bytes": 456318
+  },
+  {
+    "path": "/home/yangbin/.cache/huggingface/hub/models--roberta-large/snapshots/722cf37b1afa9454edce342e7895e588b6ff1d59/config.json",
+    "sha256": "82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3",
+    "size_bytes": 482
+  }
+]

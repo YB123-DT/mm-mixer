@@ -1,0 +1,121 @@
+{
+  "direct_global_id_comparison": {
+    "train": {
+      "rows": 9989,
+      "matches_pkl_global_dia_using_splitlocal_id": 9989,
+      "missing_pkl_utt": 0
+    },
+    "dev": {
+      "rows": 1109,
+      "matches_pkl_global_dia_using_splitlocal_id": 675,
+      "missing_pkl_utt": 434
+    },
+    "test": {
+      "rows": 2610,
+      "matches_pkl_global_dia_using_splitlocal_id": 1740,
+      "missing_pkl_utt": 870
+    }
+  },
+  "train_dev": {
+    "shared_keys": 675,
+    "equal_nonzero_vectors": 609,
+    "equal_nonzero_but_different_text": 609,
+    "examples": [
+      {
+        "key": "dia0_utt0",
+        "text_a": "also I was the point person on my company\u0092s transition from the KL-5 to GR-6 system.",
+        "text_b": "Oh my God, he\u0092s lost it. He\u0092s totally lost it.",
+        "label_a": "neutral",
+        "label_b": "sadness",
+        "pkl_global_same_id_sentence": "also I was the point person on my company\u0092s transition from the KL-5 to GR-6 system.",
+        "vector_sha256": "2091c28aec6511b57f1b5b985c2c37a8624c994b8b375312b9b5775f1abda1a3"
+      },
+      {
+        "key": "dia0_utt1",
+        "text_a": "You must\u0092ve had your hands full.",
+        "text_b": "What?",
+        "label_a": "neutral",
+        "label_b": "surprise",
+        "pkl_global_same_id_sentence": "You must\u0092ve had your hands full.",
+        "vector_sha256": "a3b65f945f6ecbbe5c466b03caf3a6945b0e1f3f5946bac700e26efa52495ea0"
+      },
+      {
+        "key": "dia100_utt0",
+        "text_a": "Th-th-that's all it is, a third nipple.",
+        "text_b": "Okay. It\u0092s Emma.",
+        "label_a": "neutral",
+        "label_b": "neutral",
+        "pkl_global_same_id_sentence": "Th-th-that's all it is, a third nipple.",
+        "vector_sha256": "9af6176ac5d5e16269ae13d3941c5cc8263a8c0d923fdaa11f01dc530a462784"
+      }
+    ]
+  },
+  "train_test": {
+    "shared_keys": 1740,
+    "equal_nonzero_vectors": 1548,
+    "equal_nonzero_but_different_text": 1548,
+    "examples": [
+      {
+        "key": "dia0_utt0",
+        "text_a": "also I was the point person on my company\u0092s transition from the KL-5 to GR-6 system.",
+        "text_b": "Why do all you\u0092re coffee mugs have numbers on the bottom?",
+        "label_a": "neutral",
+        "label_b": "surprise",
+        "pkl_global_same_id_sentence": "also I was the point person on my company\u0092s transition from the KL-5 to GR-6 system.",
+        "vector_sha256": "2091c28aec6511b57f1b5b985c2c37a8624c994b8b375312b9b5775f1abda1a3"
+      },
+      {
+        "key": "dia0_utt1",
+        "text_a": "You must\u0092ve had your hands full.",
+        "text_b": "Oh. That\u0092s so Monica can keep track. That way if one on them is missing, she can be like, \u0091Where\u0092s number 27?!\u0092",
+        "label_a": "neutral",
+        "label_b": "anger",
+        "pkl_global_same_id_sentence": "You must\u0092ve had your hands full.",
+        "vector_sha256": "a3b65f945f6ecbbe5c466b03caf3a6945b0e1f3f5946bac700e26efa52495ea0"
+      },
+      {
+        "key": "dia100_utt0",
+        "text_a": "Th-th-that's all it is, a third nipple.",
+        "text_b": "Me taking care of you is no problem, huh?",
+        "label_a": "neutral",
+        "label_b": "neutral",
+        "pkl_global_same_id_sentence": "Th-th-that's all it is, a third nipple.",
+        "vector_sha256": "9af6176ac5d5e16269ae13d3941c5cc8263a8c0d923fdaa11f01dc530a462784"
+      }
+    ]
+  },
+  "dev_test": {
+    "shared_keys": 670,
+    "equal_nonzero_vectors": 606,
+    "equal_nonzero_but_different_text": 606,
+    "examples": [
+      {
+        "key": "dia0_utt0",
+        "text_a": "Oh my God, he\u0092s lost it. He\u0092s totally lost it.",
+        "text_b": "Why do all you\u0092re coffee mugs have numbers on the bottom?",
+        "label_a": "sadness",
+        "label_b": "surprise",
+        "pkl_global_same_id_sentence": "also I was the point person on my company\u0092s transition from the KL-5 to GR-6 system.",
+        "vector_sha256": "2091c28aec6511b57f1b5b985c2c37a8624c994b8b375312b9b5775f1abda1a3"
+      },
+      {
+        "key": "dia0_utt1",
+        "text_a": "What?",
+        "text_b": "Oh. That\u0092s so Monica can keep track. That way if one on them is missing, she can be like, \u0091Where\u0092s number 27?!\u0092",
+        "label_a": "surprise",
+        "label_b": "anger",
+        "pkl_global_same_id_sentence": "You must\u0092ve had your hands full.",
+        "vector_sha256": "a3b65f945f6ecbbe5c466b03caf3a6945b0e1f3f5946bac700e26efa52495ea0"
+      },
+      {
+        "key": "dia100_utt0",
+        "text_a": "Okay. It\u0092s Emma.",
+        "text_b": "Me taking care of you is no problem, huh?",
+        "label_a": "neutral",
+        "label_b": "neutral",
+        "pkl_global_same_id_sentence": "Th-th-that's all it is, a third nipple.",
+        "vector_sha256": "9af6176ac5d5e16269ae13d3941c5cc8263a8c0d923fdaa11f01dc530a462784"
+      }
+    ]
+  }
+}

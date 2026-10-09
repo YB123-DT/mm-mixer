@@ -1,0 +1,98 @@
+{
+  "checkpoint_args": {
+    "meld_csv_dir": "/data2/yb/OpenDataLab___MELD/raw/MELD/MELD.Raw",
+    "model_name": "roberta-large",
+    "output_dir": "results/roberta_large_ft",
+    "batch_size": 4,
+    "grad_accum_steps": 1,
+    "epochs": 10,
+    "lr": 1e-06,
+    "head_lr": 5e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "max_grad_norm": 1.0,
+    "max_length": 511,
+    "pooling": "mask",
+    "class_weight": "none",
+    "label_smoothing": 0.0,
+    "early_stop_patience": 3,
+    "seed": 42,
+    "init_text_encoder_checkpoint": null
+  },
+  "checkpoint_pooling": "mask",
+  "strict_encoder_load": true,
+  "tokenizer_truncation_side": "right",
+  "samples": [
+    {
+      "split": "train",
+      "row": 0,
+      "max_abs_diff": 7.62939453125e-05,
+      "cosine": 1.000000027024584
+    },
+    {
+      "split": "train",
+      "row": 1,
+      "max_abs_diff": 9.775161743164062e-05,
+      "cosine": 1.0000000073080186
+    },
+    {
+      "split": "train",
+      "row": 5,
+      "max_abs_diff": 1.4781951904296875e-05,
+      "cosine": 1.000000054971121
+    },
+    {
+      "split": "dev",
+      "row": 0,
+      "max_abs_diff": 3.5762786865234375e-05,
+      "cosine": 0.9999999561925583
+    },
+    {
+      "split": "dev",
+      "row": 1,
+      "max_abs_diff": 7.599592208862305e-05,
+      "cosine": 1.0000000494954442
+    },
+    {
+      "split": "dev",
+      "row": 5,
+      "max_abs_diff": 9.72747802734375e-05,
+      "cosine": 0.9999999960471707
+    },
+    {
+      "split": "test",
+      "row": 0,
+      "max_abs_diff": 9.393692016601562e-05,
+      "cosine": 1.000000023949715
+    },
+    {
+      "split": "test",
+      "row": 1,
+      "max_abs_diff": 2.4318695068359375e-05,
+      "cosine": 0.9999999749448863
+    },
+    {
+      "split": "test",
+      "row": 5,
+      "max_abs_diff": 9.119510650634766e-06,
+      "cosine": 0.9999999816799191
+    }
+  ],
+  "length_counts": {
+    "train": {
+      "over_511": 1,
+      "total": 9989,
+      "max_length": 516
+    },
+    "dev": {
+      "over_511": 0,
+      "total": 1109,
+      "max_length": 363
+    },
+    "test": {
+      "over_511": 7,
+      "total": 2610,
+      "max_length": 653
+    }
+  }
+}
