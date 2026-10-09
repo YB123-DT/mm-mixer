@@ -1,0 +1,70 @@
+[
+  {
+    "dataset": "iemocap",
+    "variant": "ffn_width_3072",
+    "status": {
+      "checkpoint_sha256": "2d24092e928a88b808d8cf9274a274c45fe0dc5baddf8bbf9e52eace81b96938",
+      "epoch": 1,
+      "fresh_strict_replay_exact": true,
+      "predictions_sha256": "56b182357c770952ac9d67821fecf6b68982b3ac3431bba8bd6788131003dc15",
+      "state": "complete",
+      "weighted_f1": 0.19633591956870336
+    },
+    "smoke_only": true,
+    "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/smoke/iemocap/ffn_width_3072/.peak_bundles/epoch0001-337f035cd66041cba0e63b33e503eeaf",
+    "registered_parameters": 7934018,
+    "buffer_elements": 1536,
+    "artifact_hashes_verified": true
+  },
+  {
+    "dataset": "meld",
+    "variant": "ffn_width_3072",
+    "status": {
+      "checkpoint_sha256": "e95364a07e354ddd939b9ef1532616687109242a70c9f7795ac96ce940593cc5",
+      "epoch": 1,
+      "fresh_strict_replay_exact": true,
+      "predictions_sha256": "7cb4d0dc24a7439d00195b85117d452235b7c8df4a9acd81b82667cb26137009",
+      "state": "complete",
+      "weighted_f1": 0.23024891069548692
+    },
+    "smoke_only": true,
+    "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/smoke/meld/ffn_width_3072/.peak_bundles/epoch0001-77b6240128ca4a5585052ad5a2633395",
+    "registered_parameters": 7288006,
+    "buffer_elements": 0,
+    "artifact_hashes_verified": true
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "ffn_width_6144",
+    "status": {
+      "checkpoint_sha256": "b4ab14d21de5499c6cb0468dc4fca62fade3e06b32eb559fef0877ec2b48ce87",
+      "epoch": 1,
+      "fresh_strict_replay_exact": true,
+      "predictions_sha256": "3e5e0fa507dabc149abb0a1da3820af3e15b64c3f63d341f070d782e97c3bc8a",
+      "state": "complete",
+      "weighted_f1": 0.3598371454917192
+    },
+    "smoke_only": true,
+    "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/smoke/iemocap/ffn_width_6144/.peak_bundles/epoch0001-97287fa7e0d04252ad514c86462386a6",
+    "registered_parameters": 11085890,
+    "buffer_elements": 1536,
+    "artifact_hashes_verified": true
+  },
+  {
+    "dataset": "meld",
+    "variant": "ffn_width_6144",
+    "status": {
+      "checkpoint_sha256": "f3aa5abf3ce37a08842a21d92f985a1a3de0b2279dcf4110bb0091ea1862d077",
+      "epoch": 1,
+      "fresh_strict_replay_exact": true,
+      "predictions_sha256": "6ffb76d8d2bb993cbf144166cdfa5c1f1e70ada68b15d5a6ce38b99df66965e4",
+      "state": "complete",
+      "weighted_f1": 0.3793810532493301
+    },
+    "smoke_only": true,
+    "bundle": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/smoke/meld/ffn_width_6144/.peak_bundles/epoch0001-c5e6ffa63810482fab1cd5612ada27ea",
+    "registered_parameters": 10439878,
+    "buffer_elements": 0,
+    "artifact_hashes_verified": true
+  }
+]

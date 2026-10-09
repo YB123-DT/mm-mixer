@@ -1,0 +1,86 @@
+--- a/mm_mixer_final/structural_ablations.py
++++ b/mm_mixer_final/structural_ablations.py
+@@ -4,6 +4,8 @@
+ 
+ 
+ STRUCTURAL_ABLATION_VARIANTS = (
++    "no_mca_no_amm",
++    "ffn_width_3072", "ffn_width_6144",
+     "no_sequence_mixing",
+     "no_modality_mixing",
+     "no_feature_mixing",
+@@ -17,7 +19,20 @@
+     if variant not in STRUCTURAL_ABLATION_VARIANTS:
+         return model
+ 
++    if variant == "no_mca_no_amm":
++        model.disable_channel_attention()
++        return model
+     blocks = model.transformer_encoder.blocks
++    if variant.startswith("ffn_width_"):
++        hidden = int(variant.rsplit("_", 1)[1])
++        for block in blocks:
++            first, last = block.ffn[0], block.ffn[-1]
++            block.ffn = nn.Sequential(
++                nn.Linear(first.in_features, hidden, bias=first.bias is not None),
++                nn.GELU(),
++                nn.Linear(hidden, last.out_features, bias=last.bias is not None),
++            ).to(device=first.weight.device, dtype=first.weight.dtype)
++        return model
+     if variant == "no_sequence_mixing":
+         for block in blocks:
+             block.use_sub = False
+--- a/mm_mixer_final/config.py
++++ b/mm_mixer_final/config.py
+@@ -155,7 +155,12 @@
+     if variant == "no_feature_and_adaptive_gating":
+         switches["no_feature_gating"] = True
+         switches["no_adaptive_gating"] = True
++    if variant == "no_mca_no_amm":
++        switches["no_mixer"] = True
++        switches["no_cross_attention"] = True
+     mixer = dict(base.mixer)
++    if variant.startswith("ffn_width_"):
++        mixer["ffn"] = int(variant.rsplit("_", 1)[1])
+     if variant == "single_projection_view":
+         mixer.update(tokens=1, subspace_hidden=2)
+     return replace(base, variant=variant, seed=int(seed), switches=switches, mixer=mixer)
+--- a/dataset_runners/iemocap.py
++++ b/dataset_runners/iemocap.py
+@@ -58,7 +58,7 @@
+ 
+ def build_variant_model(variant: str, dropout: float):
+     model = build_factorized_mixer_model("HO_WO_TAV", dropout)
+-    if variant == "no_mixer":
++    if variant in {"no_mixer", "no_mca_no_amm"}:
+         encoder = model.transformer_encoder
+         model.transformer_encoder = IdentityEncoderWithCross(
+             encoder._forward_context, encoder.cross
+@@ -160,7 +160,7 @@
+         variant, float(fixed.get("fusion_dropout", fixed.get("dropout_rate", .15)))
+     )
+     if variant not in {
+-        "no_mixer",
++        "no_mixer", "no_mca_no_amm",
+         "one_mixer_block",
+         "no_sequence_mixing",
+         "no_modality_mixing",
+--- a/dataset_runners/meld.py
++++ b/dataset_runners/meld.py
+@@ -61,6 +61,7 @@
+     **{variant: "M4_PAIR" for variant in MODALITY_VARIANTS},
+     **{variant: "M4_PAIR" for variant in STRUCTURAL_ABLATION_VARIANTS},
+     **{variant: "M4_PAIR" for variant in REVISION_CONTROL_VARIANTS},
++    "no_mca_no_amm": "M4_PAIR_NO_MIXER",
+ }
+ 
+ 
+@@ -191,7 +192,7 @@
+     ):
+         probe = model_module.build_model(CAPACITY_VARIANTS[variant], 0.2)
+         if variant not in {
+-            "no_mixer",
++            "no_mixer", "no_mca_no_amm",
+             "one_mixer_block",
+             "no_sequence_mixing",
+             "no_modality_mixing",

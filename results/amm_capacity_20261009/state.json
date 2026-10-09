@@ -1,0 +1,360 @@
+{
+  "created_at": "2026-10-09T12:43:07Z",
+  "gpus": [
+    {
+      "index": 0,
+      "uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45"
+    }
+  ],
+  "jobs": {
+    "iemocap/ffn_width_3072/seed2025": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "ffn_width_3072",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "iemocap",
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
+      "id": "iemocap/ffn_width_3072/seed2025",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T12:43:07Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "live_pids": [
+        1620680,
+        1621134
+      ],
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/iemocap_ffn_width_3072_seed2025.log",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 1620680,
+      "process_token": "3f1e309ac1f54d179b779c46999e0678",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2025",
+      "seed": 2025,
+      "start_ticks": "158815515",
+      "started_at": "2026-10-09T12:43:07Z",
+      "state": "running",
+      "variant": "ffn_width_3072"
+    },
+    "iemocap/ffn_width_3072/seed2066": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "ffn_width_3072",
+        "--seed",
+        "2066",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "iemocap",
+      "id": "iemocap/ffn_width_3072/seed2066",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2066",
+      "seed": 2066,
+      "state": "queued",
+      "variant": "ffn_width_3072"
+    },
+    "iemocap/ffn_width_3072/seed2118": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "ffn_width_3072",
+        "--seed",
+        "2118",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "iemocap",
+      "id": "iemocap/ffn_width_3072/seed2118",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_3072/seed2118",
+      "seed": 2118,
+      "state": "queued",
+      "variant": "ffn_width_3072"
+    },
+    "iemocap/ffn_width_6144/seed2025": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "ffn_width_6144",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "iemocap",
+      "id": "iemocap/ffn_width_6144/seed2025",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2025",
+      "seed": 2025,
+      "state": "queued",
+      "variant": "ffn_width_6144"
+    },
+    "iemocap/ffn_width_6144/seed2066": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "ffn_width_6144",
+        "--seed",
+        "2066",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "iemocap",
+      "id": "iemocap/ffn_width_6144/seed2066",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2066",
+      "seed": 2066,
+      "state": "queued",
+      "variant": "ffn_width_6144"
+    },
+    "iemocap/ffn_width_6144/seed2118": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "iemocap",
+        "--variant",
+        "ffn_width_6144",
+        "--seed",
+        "2118",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "iemocap",
+      "id": "iemocap/ffn_width_6144/seed2118",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/iemocap/ffn_width_6144/seed2118",
+      "seed": 2118,
+      "state": "queued",
+      "variant": "ffn_width_6144"
+    },
+    "meld/ffn_width_3072/seed2025": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "meld",
+        "--variant",
+        "ffn_width_3072",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "meld",
+      "gpu_host_index": 0,
+      "gpu_uuid": "GPU-43d98f5a-edab-1498-e9db-eeeb2d909d45",
+      "id": "meld/ffn_width_3072/seed2025",
+      "launch_provenance": {
+        "captured_at": "2026-10-09T12:43:28Z",
+        "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+        "hostname": "user22",
+        "packages": {
+          "numpy": "1.24.3",
+          "sklearn": "1.3.2",
+          "torch": "2.2.2+cu121"
+        },
+        "python_executable": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "python_implementation": "CPython",
+        "python_version": "3.10.20",
+        "snapshot": {
+          "git_head": null,
+          "path": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/snapshot.json",
+          "sha256": "168e4b263424e01e1117a736ecfd28d169362f74301c97a68e4755bd55745c38"
+        }
+      },
+      "log": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/logs/meld_ffn_width_3072_seed2025.log",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "pid": 1622884,
+      "process_token": "6ed42ede81354bd8bfcc5b88968d64af",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2025",
+      "seed": 2025,
+      "start_ticks": "158817545",
+      "started_at": "2026-10-09T12:43:28Z",
+      "state": "running",
+      "variant": "ffn_width_3072"
+    },
+    "meld/ffn_width_3072/seed2028": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "meld",
+        "--variant",
+        "ffn_width_3072",
+        "--seed",
+        "2028",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "meld",
+      "id": "meld/ffn_width_3072/seed2028",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2028",
+      "seed": 2028,
+      "state": "queued",
+      "variant": "ffn_width_3072"
+    },
+    "meld/ffn_width_3072/seed2069": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "meld",
+        "--variant",
+        "ffn_width_3072",
+        "--seed",
+        "2069",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "meld",
+      "id": "meld/ffn_width_3072/seed2069",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_3072/seed2069",
+      "seed": 2069,
+      "state": "queued",
+      "variant": "ffn_width_3072"
+    },
+    "meld/ffn_width_6144/seed2025": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "meld",
+        "--variant",
+        "ffn_width_6144",
+        "--seed",
+        "2025",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "meld",
+      "id": "meld/ffn_width_6144/seed2025",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2025",
+      "seed": 2025,
+      "state": "queued",
+      "variant": "ffn_width_6144"
+    },
+    "meld/ffn_width_6144/seed2028": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "meld",
+        "--variant",
+        "ffn_width_6144",
+        "--seed",
+        "2028",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "meld",
+      "id": "meld/ffn_width_6144/seed2028",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2028",
+      "seed": 2028,
+      "state": "queued",
+      "variant": "ffn_width_6144"
+    },
+    "meld/ffn_width_6144/seed2069": {
+      "code_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code",
+      "command": [
+        "/data2/yb/reproduction_envs/s0/bin/python3.10",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/code/run.py",
+        "run",
+        "--dataset",
+        "meld",
+        "--variant",
+        "ffn_width_6144",
+        "--seed",
+        "2069",
+        "--output-root",
+        "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs"
+      ],
+      "dataset": "meld",
+      "id": "meld/ffn_width_6144/seed2069",
+      "output_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs",
+      "python": "/data2/yb/reproduction_envs/s0/bin/python3.10",
+      "run_root": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/runs/meld/ffn_width_6144/seed2069",
+      "seed": 2069,
+      "state": "queued",
+      "variant": "ffn_width_6144"
+    }
+  },
+  "plan_sha256": "3051b63fd1541365777523f1c23ad9be0a0235fa446c26a550e65e638c9b719a",
+  "queue_pid": 1620671,
+  "queue_state": "running",
+  "schema_version": 1,
+  "selection": "strict_peak_test_wf1",
+  "server": "biggpu",
+  "updated_at": "2026-10-09T12:43:27Z"
+}

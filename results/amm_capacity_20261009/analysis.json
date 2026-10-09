@@ -1,0 +1,1044 @@
+{
+  "class_f1_missing_policy": "Seed-level metrics retain the stored zero_division=0 convention; class averages exclude seeds with zero true support and report their n.",
+  "complete": false,
+  "confusion_orientation": "rows=true class; columns=predicted class; raw counts",
+  "expected_seeds": {
+    "iemocap": [
+      2025,
+      2066,
+      2118
+    ],
+    "meld": [
+      2025,
+      2028,
+      2069
+    ]
+  },
+  "groups": [
+    {
+      "class_f1": {
+        "anger": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "excited": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "frustration": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "happiness": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "neutral": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "sadness": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": false,
+      "confusion_counts": {
+        "mean": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "n": 0,
+        "sample_std": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "missing_or_failed_seeds": [
+        2025,
+        2066,
+        2118
+      ],
+      "n": 0,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_verified": false,
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "iemocap/ffn_width_3072/seed2025",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2025,
+          "state": "running",
+          "variant": "ffn_width_3072",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "iemocap/ffn_width_3072/seed2066",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2066,
+          "state": "queued",
+          "variant": "ffn_width_3072",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "iemocap/ffn_width_3072/seed2118",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2118,
+          "state": "queued",
+          "variant": "ffn_width_3072",
+          "verification": "not_eligible"
+        }
+      ],
+      "variant": "ffn_width_3072"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "excited": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "frustration": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "happiness": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "neutral": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "sadness": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": false,
+      "confusion_counts": {
+        "mean": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "n": 0,
+        "sample_std": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "missing_or_failed_seeds": [
+        2025,
+        2066,
+        2118
+      ],
+      "n": 0,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_verified": false,
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "iemocap/ffn_width_6144/seed2025",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2025,
+          "state": "queued",
+          "variant": "ffn_width_6144",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "iemocap/ffn_width_6144/seed2066",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2066,
+          "state": "queued",
+          "variant": "ffn_width_6144",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "iemocap/ffn_width_6144/seed2118",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2118,
+          "state": "queued",
+          "variant": "ffn_width_6144",
+          "verification": "not_eligible"
+        }
+      ],
+      "variant": "ffn_width_6144"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "disgust": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "fear": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "joy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "neutral": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "sadness": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "surprise": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "class_names": [
+        "neutral",
+        "surprise",
+        "fear",
+        "sadness",
+        "joy",
+        "disgust",
+        "anger"
+      ],
+      "complete_three_seeds": false,
+      "confusion_counts": {
+        "mean": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "n": 0,
+        "sample_std": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "dataset": "meld",
+      "metrics": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "missing_or_failed_seeds": [
+        2025,
+        2028,
+        2069
+      ],
+      "n": 0,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_verified": false,
+          "dataset": "meld",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "meld/ffn_width_3072/seed2025",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2025,
+          "state": "running",
+          "variant": "ffn_width_3072",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "meld",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "meld/ffn_width_3072/seed2028",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2028,
+          "state": "queued",
+          "variant": "ffn_width_3072",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "meld",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "meld/ffn_width_3072/seed2069",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2069,
+          "state": "queued",
+          "variant": "ffn_width_3072",
+          "verification": "not_eligible"
+        }
+      ],
+      "variant": "ffn_width_3072"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "disgust": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "fear": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "joy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "neutral": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "sadness": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "surprise": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "class_names": [
+        "neutral",
+        "surprise",
+        "fear",
+        "sadness",
+        "joy",
+        "disgust",
+        "anger"
+      ],
+      "complete_three_seeds": false,
+      "confusion_counts": {
+        "mean": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "n": 0,
+        "sample_std": [
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      },
+      "dataset": "meld",
+      "metrics": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "missing_or_failed_seeds": [
+        2025,
+        2028,
+        2069
+      ],
+      "n": 0,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_verified": false,
+          "dataset": "meld",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "meld/ffn_width_6144/seed2025",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2025,
+          "state": "queued",
+          "variant": "ffn_width_6144",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "meld",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "meld/ffn_width_6144/seed2028",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2028,
+          "state": "queued",
+          "variant": "ffn_width_6144",
+          "verification": "not_eligible"
+        },
+        {
+          "artifact_verified": false,
+          "dataset": "meld",
+          "delta_to_full": null,
+          "error": null,
+          "formal_protocol_verified": false,
+          "id": "meld/ffn_width_6144/seed2069",
+          "included": false,
+          "metrics": null,
+          "reused": false,
+          "seed": 2069,
+          "state": "queued",
+          "variant": "ffn_width_6144",
+          "verification": "not_eligible"
+        }
+      ],
+      "variant": "ffn_width_6144"
+    }
+  ],
+  "ignored_state_jobs": [],
+  "inputs": {
+    "plan": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/plan.json",
+    "plan_sha256": "f1bf04aefd5705a0ae5c65545c86c7c3f74f116795fb11f9a5280c885b4316f3",
+    "state": "/data2/yb/multimodalERC/MM_Mixer_AMM_CAPACITY_20261009/pipeline/state.json",
+    "state_sha256": "f10d32f27ef1f903b49eb37777a7a2f89be6dfa0fa12751aace85e4ec0aab5a6"
+  },
+  "metric_scale": "fraction_0_to_1",
+  "paired_delta_direction": "variant_minus_full; same dataset/seed and identical test label order",
+  "schema_version": 1,
+  "selection": "strict_peak_test_wf1",
+  "standard_deviation": "sample (ddof=1); null when n<2",
+  "verification_scope": "Prior queue checkpoint/source/data verification plus fresh identity, completion, config/prediction/metric hash and metric recomputation checks; no training or checkpoint selection."
+}

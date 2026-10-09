@@ -1,0 +1,38 @@
+{
+  "complete": false,
+  "selection": "strict_peak_test_wf1",
+  "groups": [
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_3072",
+      "n": 0,
+      "complete_three_seeds": false,
+      "paired_seeds": [],
+      "mean_delta_pp": null
+    },
+    {
+      "dataset": "iemocap",
+      "variant": "ffn_width_6144",
+      "n": 0,
+      "complete_three_seeds": false,
+      "paired_seeds": [],
+      "mean_delta_pp": null
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_3072",
+      "n": 0,
+      "complete_three_seeds": false,
+      "paired_seeds": [],
+      "mean_delta_pp": null
+    },
+    {
+      "dataset": "meld",
+      "variant": "ffn_width_6144",
+      "n": 0,
+      "complete_three_seeds": false,
+      "paired_seeds": [],
+      "mean_delta_pp": null
+    }
+  ]
+}

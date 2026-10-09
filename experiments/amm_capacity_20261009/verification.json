@@ -1,0 +1,190 @@
+[
+  {
+    "dataset": "iemocap",
+    "variant": "full",
+    "parameters": 6358082,
+    "state_hash": "38c82522c960ff7b6c5cbaddde781756378df6b9e4bddffeddec11869c8bbb08",
+    "output_hash": "bdd6d31c75ca4495e1c31660683aaa1c88af0db3fe9004a4acbc43256fbc03df",
+    "switches": {
+      "no_mixer": false,
+      "no_pairwise": false,
+      "no_adaptive_gating": false,
+      "no_cross_attention": false,
+      "no_auxiliary_loss": false,
+      "no_mca_no_amm": false,
+      "ffn_width_3072": false,
+      "ffn_width_6144": false,
+      "no_sequence_mixing": false,
+      "no_modality_mixing": false,
+      "no_feature_mixing": false,
+      "one_mixer_block": false,
+      "no_feature_gating": false
+    },
+    "mixer": {
+      "blocks": 2,
+      "tokens": 6,
+      "dim": 256,
+      "ffn": 1536
+    },
+    "tracked_count": 8,
+    "active_updated_count": 8,
+    "gradient_optimizer_update": "passed",
+    "original_bitexact": true
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "ffn_width_3072",
+    "parameters": 7934018,
+    "state_hash": "9853d41f371629cb09578ab4c845e1fccdaedb9b0076b403c889d946d62bbb8a",
+    "output_hash": "967c86e7301ad93897b2d789add6d172944e5b0fcd5c6371faa65ad7f20e7f45",
+    "switches": {
+      "no_mixer": false,
+      "no_pairwise": false,
+      "no_adaptive_gating": false,
+      "no_cross_attention": false,
+      "no_auxiliary_loss": false,
+      "no_mca_no_amm": false,
+      "ffn_width_3072": true,
+      "ffn_width_6144": false,
+      "no_sequence_mixing": false,
+      "no_modality_mixing": false,
+      "no_feature_mixing": false,
+      "one_mixer_block": false,
+      "no_feature_gating": false
+    },
+    "mixer": {
+      "blocks": 2,
+      "tokens": 6,
+      "dim": 256,
+      "ffn": 3072
+    },
+    "tracked_count": 8,
+    "active_updated_count": 8,
+    "gradient_optimizer_update": "passed"
+  },
+  {
+    "dataset": "iemocap",
+    "variant": "ffn_width_6144",
+    "parameters": 11085890,
+    "state_hash": "6762c238b0bbe37dd2c532e34c82f6519d177684b4d4c4d4044ecdfe1294f7be",
+    "output_hash": "3ab2d088bfafd3cd8328269f81c76eef73665dd3040ac85e4899bb577b8559b2",
+    "switches": {
+      "no_mixer": false,
+      "no_pairwise": false,
+      "no_adaptive_gating": false,
+      "no_cross_attention": false,
+      "no_auxiliary_loss": false,
+      "no_mca_no_amm": false,
+      "ffn_width_3072": false,
+      "ffn_width_6144": true,
+      "no_sequence_mixing": false,
+      "no_modality_mixing": false,
+      "no_feature_mixing": false,
+      "one_mixer_block": false,
+      "no_feature_gating": false
+    },
+    "mixer": {
+      "blocks": 2,
+      "tokens": 6,
+      "dim": 256,
+      "ffn": 6144
+    },
+    "tracked_count": 8,
+    "active_updated_count": 8,
+    "gradient_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "full",
+    "parameters": 6106825,
+    "state_hash": "43d09c77e5531a30d7f72936a0d21fe59d041c21baf4aba76c6aaf5853236f33",
+    "output_hash": "5160bde793ef2c7797fe1e139fba30b240ceab5c8dc5189e13e488f17d0ccecb",
+    "switches": {
+      "no_mixer": false,
+      "no_pairwise": false,
+      "no_adaptive_gating": false,
+      "no_cross_attention": false,
+      "no_auxiliary_loss": false,
+      "no_mca_no_amm": false,
+      "ffn_width_3072": false,
+      "ffn_width_6144": false,
+      "no_sequence_mixing": false,
+      "no_modality_mixing": false,
+      "no_feature_mixing": false,
+      "one_mixer_block": false,
+      "no_feature_gating": false
+    },
+    "mixer": {
+      "blocks": 2,
+      "tokens": 6,
+      "dim": 256,
+      "ffn": 1536
+    },
+    "tracked_count": 8,
+    "active_updated_count": 8,
+    "gradient_optimizer_update": "passed",
+    "original_bitexact": true
+  },
+  {
+    "dataset": "meld",
+    "variant": "ffn_width_3072",
+    "parameters": 7682761,
+    "state_hash": "96082331c527cd5f6664945b80197bde0a8fafb2b3ea145dc8e7eae5ea77a055",
+    "output_hash": "bed2a015fa93c98c15b99ec558d4c5c89258296a9777f1ceee4b531df795c69e",
+    "switches": {
+      "no_mixer": false,
+      "no_pairwise": false,
+      "no_adaptive_gating": false,
+      "no_cross_attention": false,
+      "no_auxiliary_loss": false,
+      "no_mca_no_amm": false,
+      "ffn_width_3072": true,
+      "ffn_width_6144": false,
+      "no_sequence_mixing": false,
+      "no_modality_mixing": false,
+      "no_feature_mixing": false,
+      "one_mixer_block": false,
+      "no_feature_gating": false
+    },
+    "mixer": {
+      "blocks": 2,
+      "tokens": 6,
+      "dim": 256,
+      "ffn": 3072
+    },
+    "tracked_count": 8,
+    "active_updated_count": 8,
+    "gradient_optimizer_update": "passed"
+  },
+  {
+    "dataset": "meld",
+    "variant": "ffn_width_6144",
+    "parameters": 10834633,
+    "state_hash": "69573700be398884a3856fea6ba83b6abf8d98c7bb2bc123cd35685e41c65928",
+    "output_hash": "67bb58b710c2ffb8a6463244af005f35be2e1cf1b3c18ff8aed39014e696ef1c",
+    "switches": {
+      "no_mixer": false,
+      "no_pairwise": false,
+      "no_adaptive_gating": false,
+      "no_cross_attention": false,
+      "no_auxiliary_loss": false,
+      "no_mca_no_amm": false,
+      "ffn_width_3072": false,
+      "ffn_width_6144": true,
+      "no_sequence_mixing": false,
+      "no_modality_mixing": false,
+      "no_feature_mixing": false,
+      "one_mixer_block": false,
+      "no_feature_gating": false
+    },
+    "mixer": {
+      "blocks": 2,
+      "tokens": 6,
+      "dim": 256,
+      "ffn": 6144
+    },
+    "tracked_count": 8,
+    "active_updated_count": 8,
+    "gradient_optimizer_update": "passed"
+  }
+]
