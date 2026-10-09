@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, replace
 import hashlib
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -143,6 +144,20 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     if variant not in RUN_VARIANTS:
         raise ValueError(f"unknown variant: {variant}")
     base = _IEMOCAP if dataset == "iemocap" else _MELD
+    text_feature_root = os.environ.get("MM_MIXER_MELD_TEXT_FEATURE_ROOT")
+    if dataset == "meld" and text_feature_root:
+        feature_paths = {
+            split: {
+                **paths,
+                "t": str(
+                    Path(text_feature_root)
+                    / f"{split}_features"
+                    / "text_features.json"
+                ),
+            }
+            for split, paths in base.feature_paths.items()
+        }
+        base = replace(base, feature_paths=feature_paths)
     if seed not in base.seeds:
         raise ValueError(f"{seed} is not a formal seed for {dataset}: {base.seeds}")
     switches = dict(base.switches)
