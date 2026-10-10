@@ -27,6 +27,11 @@ from factorized_mixer.model import (
     build_factorized_mixer_model,
     optimizer_parameter_groups,
 )
+from factorized_mixer.identity_residual import (
+    RESIDUAL_VARIANTS,
+    apply_identity_first_ablation,
+    install_identity_first_residuals,
+)
 from factorized_mixer.runner import MixerRunConfig
 from peer_residual.runner import _formal_module, _labels
 
@@ -58,7 +63,13 @@ from mm_mixer_final.structural_ablations import (
 
 def build_variant_model(variant: str, dropout: float):
     model = build_factorized_mixer_model("HO_WO_TAV", dropout)
-    if variant == "no_mixer":
+    if variant in RESIDUAL_VARIANTS:
+        encoder = model.transformer_encoder
+        model.feature_integrator = model.feature_integrator.base_integrator
+        del encoder.cross
+        install_identity_first_residuals(model, initial_scale=0.1)
+        apply_identity_first_ablation(model, variant, NoAdaptiveFusion())
+    elif variant == "no_mixer":
         encoder = model.transformer_encoder
         model.transformer_encoder = IdentityEncoderWithCross(
             encoder._forward_context, encoder.cross
@@ -75,6 +86,7 @@ def build_variant_model(variant: str, dropout: float):
     elif variant not in {
         "full",
         "no_auxiliary_loss",
+        *RESIDUAL_VARIANTS,
         *MODALITY_VARIANTS,
         *STRUCTURAL_ABLATION_VARIANTS,
         *REVISION_CONTROL_VARIANTS,
@@ -161,6 +173,7 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
     )
     if variant not in {
         "no_mixer",
+        "residual_no_mixer",
         "one_mixer_block",
         "no_sequence_mixing",
         "no_modality_mixing",

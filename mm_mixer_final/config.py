@@ -18,15 +18,15 @@ MELD_AUX_WEIGHT_VARIANTS = {
     "residual_aux025": 0.25,
     "residual_aux010": 0.1,
 }
-MELD_ONLY_VARIANTS = (
+RESIDUAL_VARIANTS = (
     "residual_no_pairwise",
-    *MELD_AUX_WEIGHT_VARIANTS,
     "residual_no_feature_gating",
     "residual_no_adaptive_gating",
     "residual_no_cross_attention",
     "residual_no_mixer",
     "residual_no_feature_and_adaptive_gating",
 )
+MELD_ONLY_VARIANTS = tuple(MELD_AUX_WEIGHT_VARIANTS)
 VARIANTS = (
     "full",
     "no_mixer",
@@ -36,7 +36,7 @@ VARIANTS = (
     "no_auxiliary_loss",
 )
 RUN_VARIANTS = (
-    VARIANTS + MELD_ONLY_VARIANTS + MODALITY_VARIANTS
+    VARIANTS + RESIDUAL_VARIANTS + MELD_ONLY_VARIANTS + MODALITY_VARIANTS
     + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS
 )
 _SWITCHES = (
@@ -196,7 +196,7 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     switches = dict(base.switches)
     if variant in _SWITCHES:
         switches[variant] = True
-    if variant in MELD_ONLY_VARIANTS:
+    if variant in RESIDUAL_VARIANTS:
         switches["no_pairwise"] = True
     residual_switch = {
         "residual_no_feature_gating": "no_feature_gating",
