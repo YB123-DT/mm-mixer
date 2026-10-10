@@ -13,3 +13,17 @@ def test_meld_text_feature_root_override_changes_only_text(monkeypatch, tmp_path
         )
         assert overridden.feature_paths[split]["a"] == baseline.feature_paths[split]["a"]
         assert overridden.feature_paths[split]["v"] == baseline.feature_paths[split]["v"]
+
+
+def test_meld_visual_feature_root_override_changes_only_visual(monkeypatch, tmp_path):
+    monkeypatch.delenv("MM_MIXER_MELD_VISUAL_FEATURE_ROOT", raising=False)
+    baseline = get_config("meld", "full", 2025)
+    monkeypatch.setenv("MM_MIXER_MELD_VISUAL_FEATURE_ROOT", str(tmp_path))
+    overridden = get_config("meld", "full", 2025)
+
+    for split in ("train", "dev", "test"):
+        assert overridden.feature_paths[split]["v"] == str(
+            tmp_path / f"{split}_features" / "visual_features.json"
+        )
+        assert overridden.feature_paths[split]["a"] == baseline.feature_paths[split]["a"]
+        assert overridden.feature_paths[split]["t"] == baseline.feature_paths[split]["t"]

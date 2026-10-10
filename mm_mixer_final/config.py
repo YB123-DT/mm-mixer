@@ -158,6 +158,20 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
             for split, paths in base.feature_paths.items()
         }
         base = replace(base, feature_paths=feature_paths)
+    visual_feature_root = os.environ.get("MM_MIXER_MELD_VISUAL_FEATURE_ROOT")
+    if dataset == "meld" and visual_feature_root:
+        feature_paths = {
+            split: {
+                **paths,
+                "v": str(
+                    Path(visual_feature_root)
+                    / f"{split}_features"
+                    / "visual_features.json"
+                ),
+            }
+            for split, paths in base.feature_paths.items()
+        }
+        base = replace(base, feature_paths=feature_paths)
     if seed not in base.seeds:
         raise ValueError(f"{seed} is not a formal seed for {dataset}: {base.seeds}")
     switches = dict(base.switches)
