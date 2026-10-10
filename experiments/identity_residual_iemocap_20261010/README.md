@@ -5,9 +5,9 @@ Status: formal queue launched at 2026-10-10T12:14:56Z after a successful real-da
 - Server: `biggpu`; physical GPU 6 (`GPU-e4cafb17-818e-216a-b94a-7440063a9153`). Physical GPU 4 is prohibited.
 - Frozen source: commit `72f4df0`.
 - Architecture: ten learnable residual scales, matching the existing MELD residual model: three FG, three AG, three MCA, and one final query-integration scale. AMM retains its own internal residuals. EPIRC is absent.
-- Matrix: Full plus removal of FG, AG, MCA, AMM, and FG+AG; seeds 2025, 2066, and 2118 (18 runs).
+- Matrix: Full plus removal of FG, AG, MCA, AMM, and FG+AG; seeds 2025, 2066, and 2118 (18 runs). The queue permits five concurrent jobs on GPU 6 after checking available memory before every launch.
 - Selection: strict peak test WF1, following the existing paper protocol.
 - Smoke: seed 2025 completed one epoch with exit code 0 and `fresh_strict_replay_exact: true`; the smoke score is excluded from formal results.
 - Remote root: `/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010`.
 
-The persistent queue started in tmux session `mm_residual_iemocap_20261010`. Launch verification observed two Full jobs running concurrently on the whitelisted GPU 6, with 16 jobs queued; seed 2025 had entered epoch 1. `launch_state.json` is the launch-time scheduler snapshot.
+The persistent queue initially started with two-way concurrency in tmux session `mm_residual_iemocap_20261010`; it was then resumed with five-way concurrency at the user's request. `launch_state.json` is the original launch-time scheduler snapshot.

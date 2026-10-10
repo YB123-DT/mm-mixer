@@ -8,7 +8,7 @@ mkdir -p "$TMPDIR" "$ROOT/pipeline"
 cd "$ROOT/code"
 "$PYTHON" launch_revision.py validate --plan "$ROOT/pipeline/plan.json" > "$ROOT/pipeline/validated_commands.json"
 set +e
-"$PYTHON" launch_revision.py run --plan "$ROOT/pipeline/plan.json" --state "$ROOT/pipeline/state.json" --server biggpu --gpu 6:GPU-e4cafb17-818e-216a-b94a-7440063a9153 --per-gpu 2 --min-free-mib 6000 --threads 1 --poll-seconds 30
+"$PYTHON" launch_revision.py run --plan "$ROOT/pipeline/plan.json" --state "$ROOT/pipeline/state.json" --server biggpu --gpu 6:GPU-e4cafb17-818e-216a-b94a-7440063a9153 --per-gpu 5 --min-free-mib 6000 --threads 1 --poll-seconds 30
 QUEUE_EXIT=$?
 set -e
 printf '%s\n' "$QUEUE_EXIT" > "$ROOT/pipeline/queue_exit_code.txt"
