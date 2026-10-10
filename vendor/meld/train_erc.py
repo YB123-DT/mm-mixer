@@ -11,6 +11,8 @@ import copy
 import torch.nn.functional as F
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import LambdaLR
+
+from mm_mixer_final.lr_schedules import warmup_cosine_decay
 from torch.utils.data import DataLoader
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils.class_weight import compute_class_weight
@@ -1602,10 +1604,7 @@ def train_full_pipeline(
     warmup_steps = int(0.2 * t_total)
 
     def lr_lambda(step):
-        if step < warmup_steps:
-            return step / max(1, warmup_steps)
-        progress = (step - warmup_steps) / max(1, t_total - warmup_steps)
-        return 0.5 * (1 + math.cos(math.pi * progress * 2))
+        return warmup_cosine_decay(step, t_total, warmup_steps)
 
     fusion_scheduler = LambdaLR(fusion_optimizer, lr_lambda)
 
