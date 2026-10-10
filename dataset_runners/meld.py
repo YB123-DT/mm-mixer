@@ -55,6 +55,7 @@ CAPACITY_VARIANTS = {
     "full": "M4_PAIR",
     "no_mixer": "M4_PAIR_NO_MIXER",
     "no_pairwise": "M4_NO_PAIR",
+    "residual_no_pairwise": "M4_NO_PAIR_RESIDUAL",
     "no_adaptive_gating": "M4_PAIR_NO_ADAPTIVE",
     "no_cross_attention": "M4_PAIR_NO_CA",
     "no_auxiliary_loss": "M4_PAIR",

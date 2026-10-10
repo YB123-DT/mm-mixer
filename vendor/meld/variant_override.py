@@ -104,6 +104,7 @@ class CandidateHierarchicalAttentionFusion(ORIGINAL_FUSION):
             "M4_PAIR",
             "M4_PAIR_NO_MIXER",
             "M4_NO_PAIR",
+            "M4_NO_PAIR_RESIDUAL",
             "M4_PAIR_NO_ADAPTIVE",
             "M4_PAIR_NO_CA",
         }:

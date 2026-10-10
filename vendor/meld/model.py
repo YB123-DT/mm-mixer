@@ -193,6 +193,88 @@ class ResidualIntegrator(nn.Module):
         return self.base_integrator(pooled) + self.scale * self._channel.consume()
 
 
+class LearnableResidualFeatureGate(nn.Module):
+    """Keep the projected feature as the main path and learn a gated update."""
+
+    def __init__(self, gate, initial_scale=0.1):
+        super().__init__()
+        self.gate = gate
+        self.residual_scale = nn.Parameter(torch.tensor(float(initial_scale)))
+
+    def forward(self, value):
+        return value + self.residual_scale * self.gate(value)
+
+
+class LearnableResidualAdaptiveGate(nn.Module):
+    """Adapt the legacy ``x * gate + 0.1 * x`` site to ``x + a*x*gate``."""
+
+    def __init__(self, gate, dim=256, initial_scale=0.1):
+        super().__init__()
+        self.gate = gate
+        self.dim = int(dim)
+        self.residual_scale = nn.Parameter(torch.tensor(float(initial_scale)))
+
+    def forward(self, combined):
+        gate = self.gate(combined)
+        # The caller adds 0.1*x after multiplying by this value. Returning
+        # 0.9+a*gate therefore makes the complete expression x+a*x*gate.
+        return gate * self.residual_scale + 0.9
+
+
+class LearnableResidualCrossAttention(nn.Module):
+    """Adapt the legacy ``attn + 0.2*q`` site to ``q + a*attn``."""
+
+    def __init__(self, attention, initial_scale=0.1):
+        super().__init__()
+        self.attention = attention
+        self.residual_scale = nn.Parameter(torch.tensor(float(initial_scale)))
+
+    def forward(self, query, key, value, **kwargs):
+        update, weights = self.attention(query, key, value, **kwargs)
+        # The caller contributes the remaining 0.2*q.
+        return 0.8 * query + self.residual_scale * update, weights
+
+
+class LearnableResidualQueryIntegrator(nn.Module):
+    """Use the mean query representation as the main fusion path."""
+
+    def __init__(self, integrator, queries=3, dim=256, initial_scale=0.1):
+        super().__init__()
+        self.integrator = integrator
+        self.queries = int(queries)
+        self.dim = int(dim)
+        self.residual_scale = nn.Parameter(torch.tensor(float(initial_scale)))
+
+    def forward(self, pooled):
+        if pooled.ndim != 2 or pooled.shape[-1] != self.queries * self.dim:
+            raise ValueError(
+                f"expected flattened [{self.queries}, {self.dim}] query features"
+            )
+        main = pooled.reshape(pooled.shape[0], self.queries, self.dim).mean(dim=1)
+        return main + self.residual_scale * self.integrator(pooled)
+
+
+def _install_identity_first_residuals(model, initial_scale=0.1):
+    """Residualize modules that do not already have an identity main path."""
+    for modality in model.modalities:
+        model.feature_selectors[modality] = LearnableResidualFeatureGate(
+            model.feature_selectors[modality], initial_scale
+        )
+        model.gates[modality] = LearnableResidualAdaptiveGate(
+            model.gates[modality], model.fusion_dim, initial_scale
+        )
+        model.cross_attn[modality] = LearnableResidualCrossAttention(
+            model.cross_attn[modality], initial_scale
+        )
+    model.feature_integrator = LearnableResidualQueryIntegrator(
+        model.feature_integrator, queries=3, dim=model.fusion_dim,
+        initial_scale=initial_scale,
+    )
+    model.identity_first_residuals = True
+    model.capacity_variant = "M4_K6_D256_L2_H1536_NO_PAIR_RESIDUAL01"
+    return model
+
+
 def _install_pairwise(model, mixer):
     channel = ResidualChannel()
     if mixer:
@@ -239,6 +321,7 @@ class HierarchicalAttentionFusion(_base.HierarchicalAttentionFusion):
             "M4_PAIR_NO_ADAPTIVE",
             "M4_PAIR_NO_CA",
             "M4_NO_PAIR",
+            "M4_NO_PAIR_RESIDUAL",
             "M4_PAIR_NO_AUX",
         }
         if requested not in controlled:
@@ -273,9 +356,11 @@ class HierarchicalAttentionFusion(_base.HierarchicalAttentionFusion):
                 self.capacity_variant = requested
             elif requested == "M4_PAIR_NO_AUX":
                 self.capacity_variant = requested
-        elif requested == "M4_NO_PAIR":
+        elif requested in {"M4_NO_PAIR", "M4_NO_PAIR_RESIDUAL"}:
             rng_state = torch.random.get_rng_state()
             _install_mixer_only(self)
+            if requested == "M4_NO_PAIR_RESIDUAL":
+                _install_identity_first_residuals(self, initial_scale=0.1)
             torch.random.set_rng_state(rng_state)
         else:
             self.capacity_variant = "S15M_BASELINE_REPLAY"

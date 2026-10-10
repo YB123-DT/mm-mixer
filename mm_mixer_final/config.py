@@ -13,6 +13,7 @@ from .structural_ablations import STRUCTURAL_ABLATION_VARIANTS
 
 
 DATASETS = ("iemocap", "meld")
+MELD_ONLY_VARIANTS = ("residual_no_pairwise",)
 VARIANTS = (
     "full",
     "no_mixer",
@@ -21,7 +22,10 @@ VARIANTS = (
     "no_cross_attention",
     "no_auxiliary_loss",
 )
-RUN_VARIANTS = VARIANTS + MODALITY_VARIANTS + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS
+RUN_VARIANTS = (
+    VARIANTS + MELD_ONLY_VARIANTS + MODALITY_VARIANTS
+    + STRUCTURAL_ABLATION_VARIANTS + REVISION_CONTROL_VARIANTS
+)
 _SWITCHES = (
     "no_mixer",
     "no_pairwise",
@@ -143,6 +147,8 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
         raise ValueError(f"unknown dataset: {dataset}")
     if variant not in RUN_VARIANTS:
         raise ValueError(f"unknown variant: {variant}")
+    if variant in MELD_ONLY_VARIANTS and dataset != "meld":
+        raise ValueError(f"{variant} is only defined for MELD")
     base = _IEMOCAP if dataset == "iemocap" else _MELD
     text_feature_root = os.environ.get("MM_MIXER_MELD_TEXT_FEATURE_ROOT")
     if dataset == "meld" and text_feature_root:
@@ -177,6 +183,8 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     switches = dict(base.switches)
     if variant in _SWITCHES:
         switches[variant] = True
+    if variant == "residual_no_pairwise":
+        switches["no_pairwise"] = True
     if variant in REVISION_CONTROL_VARIANTS:
         switches[variant] = True
     if variant == "amm_mlp_no_aux":
