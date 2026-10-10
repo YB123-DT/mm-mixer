@@ -3342,12 +3342,13 @@ class MultitaskFusionLoss(nn.Module):
         if self.aux_focal is not None:
             weighted_main_loss = weighted_main_loss + self.aux_focal_weight * self.aux_focal(main_logits, targets)
 
-        # The effective historical objective was unit-weighted across tasks.
-        # Encode L_main + L_T + L_A + L_V directly.
+        # Preserve the historical unit-weighted objective when all configured
+        # auxiliary weights are 1.0, while allowing controlled loss-weight
+        # experiments to change the contribution of each auxiliary task.
         total_loss = weighted_main_loss
         for m, logits in aux_logits.items():
             if m in self.aux_weights:
-                total_loss += self.ce_loss(logits, targets)
+                total_loss += self.aux_weights[m] * self.ce_loss(logits, targets)
 
         if contrastive_loss is not None:
             total_loss += self.contrastive_weight * contrastive_loss

@@ -186,3 +186,31 @@ def test_identity_first_auxiliary_weight_candidates_change_only_loss_contract(
     assert config.loss["fixed_task_weights"] == {
         "main": 1.0, "t": auxiliary, "a": auxiliary, "v": auxiliary,
     }
+
+
+def test_multitask_loss_applies_configured_auxiliary_weights():
+    class MeanLoss(torch.nn.Module):
+        def forward(self, logits, targets):
+            del targets
+            return logits.mean()
+
+    criterion = meld_model.MultitaskFusionLoss(
+        main_weight=1.0,
+        aux_weights={"t": 0.5, "a": 0.25, "v": 0.1},
+        normalize_aux_weights=False,
+    )
+    criterion.ce_loss = MeanLoss()
+    targets = torch.tensor([0, 1])
+    main = torch.full((2, 7), 2.0, requires_grad=True)
+    auxiliary = {
+        "t": torch.full((2, 7), 4.0, requires_grad=True),
+        "a": torch.full((2, 7), 8.0, requires_grad=True),
+        "v": torch.full((2, 7), 10.0, requires_grad=True),
+    }
+    loss = criterion(main, auxiliary, targets)
+    assert loss.item() == pytest.approx(2.0 + 0.5 * 4.0 + 0.25 * 8.0 + 0.1 * 10.0)
+    loss.backward()
+    assert main.grad.abs().sum().item() == pytest.approx(1.0)
+    assert auxiliary["t"].grad.abs().sum().item() == pytest.approx(0.5)
+    assert auxiliary["a"].grad.abs().sum().item() == pytest.approx(0.25)
+    assert auxiliary["v"].grad.abs().sum().item() == pytest.approx(0.1)
