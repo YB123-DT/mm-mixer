@@ -38,7 +38,11 @@ from mm_mixer_final.audit import (
     loaded_python_source_hashes,
     source_hashes,
 )
-from mm_mixer_final.config import config_contract_sha256, get_config
+from mm_mixer_final.config import (
+    MELD_AUX_WEIGHT_VARIANTS,
+    config_contract_sha256,
+    get_config,
+)
 from mm_mixer_final.revision_controls import (
     NO_AUXILIARY_LOSS_VARIANTS,
     REVISION_CONTROL_VARIANTS,
@@ -56,6 +60,7 @@ CAPACITY_VARIANTS = {
     "no_mixer": "M4_PAIR_NO_MIXER",
     "no_pairwise": "M4_NO_PAIR",
     "residual_no_pairwise": "M4_NO_PAIR_RESIDUAL",
+    **{variant: "M4_NO_PAIR_RESIDUAL" for variant in MELD_AUX_WEIGHT_VARIANTS},
     "residual_no_feature_gating": "M4_NO_PAIR_RESIDUAL",
     "residual_no_adaptive_gating": "M4_NO_PAIR_RESIDUAL",
     "residual_no_cross_attention": "M4_NO_PAIR_RESIDUAL",
@@ -93,6 +98,11 @@ def materialize_config(
         aux_loss_weights={"t": 1.0, "a": 1.0, "v": 1.0},
         checkpoint_prefix=str((run_dir / "checkpoints" / "full_").resolve()),
     )
+    if variant in MELD_AUX_WEIGHT_VARIANTS:
+        auxiliary = MELD_AUX_WEIGHT_VARIANTS[variant]
+        fixed["aux_loss_weights"] = {
+            "t": auxiliary, "a": auxiliary, "v": auxiliary,
+        }
     if variant in NO_AUXILIARY_LOSS_VARIANTS:
         fixed["aux_loss_weights"] = {}
     elif variant in MODALITY_VARIANTS:

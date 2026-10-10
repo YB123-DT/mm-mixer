@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(MELD))
 
 import model as meld_model
-from mm_mixer_final.config import get_config
+from mm_mixer_final.config import MELD_AUX_WEIGHT_VARIANTS, get_config
 from variant_override import candidate_model_context
 
 
@@ -174,3 +174,15 @@ def test_identity_first_component_ablations_are_isolated_and_trainable(variant):
         parameter.grad is not None and torch.isfinite(parameter.grad).all()
         for parameter in model.classifiers.parameters()
     )
+
+
+@pytest.mark.parametrize("variant,auxiliary", MELD_AUX_WEIGHT_VARIANTS.items())
+def test_identity_first_auxiliary_weight_candidates_change_only_loss_contract(
+    variant, auxiliary
+):
+    config = get_config("meld", variant, 2025)
+    assert config.switches["no_pairwise"] is True
+    assert sum(config.switches.values()) == 1
+    assert config.loss["fixed_task_weights"] == {
+        "main": 1.0, "t": auxiliary, "a": auxiliary, "v": auxiliary,
+    }

@@ -13,8 +13,14 @@ from .structural_ablations import STRUCTURAL_ABLATION_VARIANTS
 
 
 DATASETS = ("iemocap", "meld")
+MELD_AUX_WEIGHT_VARIANTS = {
+    "residual_aux050": 0.5,
+    "residual_aux025": 0.25,
+    "residual_aux010": 0.1,
+}
 MELD_ONLY_VARIANTS = (
     "residual_no_pairwise",
+    *MELD_AUX_WEIGHT_VARIANTS,
     "residual_no_feature_gating",
     "residual_no_adaptive_gating",
     "residual_no_cross_attention",
@@ -203,6 +209,12 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     if variant == "residual_no_feature_and_adaptive_gating":
         switches["no_feature_gating"] = True
         switches["no_adaptive_gating"] = True
+    loss = dict(base.loss)
+    if variant in MELD_AUX_WEIGHT_VARIANTS:
+        auxiliary = MELD_AUX_WEIGHT_VARIANTS[variant]
+        loss["fixed_task_weights"] = {
+            "main": 1.0, "t": auxiliary, "a": auxiliary, "v": auxiliary,
+        }
     if variant in REVISION_CONTROL_VARIANTS:
         switches[variant] = True
     if variant == "amm_mlp_no_aux":
@@ -213,7 +225,10 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     mixer = dict(base.mixer)
     if variant == "single_projection_view":
         mixer.update(tokens=1, subspace_hidden=2)
-    return replace(base, variant=variant, seed=int(seed), switches=switches, mixer=mixer)
+    return replace(
+        base, variant=variant, seed=int(seed), switches=switches,
+        mixer=mixer, loss=loss,
+    )
 
 
 def config_contract_sha256(config: FinalConfig) -> str:
