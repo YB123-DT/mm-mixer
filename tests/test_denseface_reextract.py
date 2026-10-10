@@ -189,6 +189,37 @@ class DenseFaceReextractTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "duplicate keys across feature shards"):
                 merge_split("train", metadata, shard_roots, root / "merged")
 
+    def test_feature_merge_ignores_non_metadata_keys_and_records_them(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            metadata = root / "dev_sent_emo.csv"
+            with metadata.open("w", newline="", encoding="utf-8") as handle:
+                writer = csv.DictWriter(handle, fieldnames=["Dialogue_ID", "Utterance_ID"])
+                writer.writeheader()
+                writer.writerow({"Dialogue_ID": 1, "Utterance_ID": 2})
+            vector = [1.0] * 342
+            shard = root / "shard0"
+            split = shard / "dev_features"
+            split.mkdir(parents=True)
+            features = {"dia1_utt2": vector, "dia9_utt9": vector}
+            (split / "visual_features.json").write_text(
+                json.dumps(features), encoding="utf-8"
+            )
+            with (split / "denseface_progress.jsonl").open("w", encoding="utf-8") as handle:
+                for key in features:
+                    handle.write(
+                        json.dumps({"utterance_id": key, "feature": vector, "status": "ok"})
+                        + "\n"
+                    )
+
+            statistics = merge_split("dev", metadata, [shard], root / "merged")
+            merged = json.loads(
+                (root / "merged/dev_features/visual_features.json").read_text()
+            )
+            self.assertEqual(list(merged), ["dia1_utt2"])
+            self.assertEqual(statistics["ignored_non_metadata_keys"], ["dia9_utt9"])
+            self.assertEqual(statistics["ignored_non_metadata_count"], 1)
+
     def test_statistics_merge_uses_global_sums_and_requires_all_shards(self):
         with tempfile.TemporaryDirectory() as directory:
             paths = []

@@ -100,8 +100,6 @@ def merge_split(
             merged_progress[key] = progress[key]
 
     unexpected = sorted(set(merged_features) - expected)
-    if unexpected:
-        raise ValueError(f"features contain keys absent from {csv_path}: {unexpected[:10]}")
     missing = [key for key in ordered_expected if key not in merged_features]
     zero_vector = [0.0] * DenseFace.feature_dim
     for key in missing:
@@ -137,6 +135,8 @@ def merge_split(
         "split": split,
         "expected_utterances": len(ordered_expected),
         "merged_shard_utterances": len(ordered_expected) - len(missing),
+        "ignored_non_metadata_keys": unexpected,
+        "ignored_non_metadata_count": len(unexpected),
         "missing_keys": missing,
         "missing_count": len(missing),
         "zero_vector_keys": zero_keys,
