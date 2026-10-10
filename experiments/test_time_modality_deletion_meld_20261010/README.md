@@ -27,3 +27,23 @@ interventions on a model trained with all three modalities, so AV/T/A/V are
 not comparable to separately trained modality-specific models. Zero inputs
 also create a distribution shift. The diagnostic supports actual input
 sensitivity, not standalone modality quality or causal attribution.
+
+## Original Full checkpoint comparison
+
+The same intervention was also applied to the original seed-2025 Full model
+before identity-first residuals were added. Its unmodified TAV replay also
+matches exactly.
+
+| Kept modalities | Original Full zero deletion | Residual Full zero deletion | Separately trained modality subset |
+| --- | ---: | ---: | ---: |
+| TAV | 67.88 | 68.20 | — |
+| AV | 26.17 | 27.81 | 48.64 |
+| T | 66.71 | 67.15 | 67.71 |
+| A | 18.46 | 25.17 | 48.38 |
+| V | 33.14 | 25.53 | 32.60 |
+
+The large gap for A is already present before the new residual wrappers. A
+Full model exposed to zeroed modalities is out of distribution and its fusion
+layers were not trained to operate as an A-only or V-only classifier. The
+separately trained subset scores answer a different question and should not be
+mixed with the intervention scores.

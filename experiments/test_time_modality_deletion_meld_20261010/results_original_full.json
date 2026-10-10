@@ -1,0 +1,157 @@
+{
+  "protocol": "single-checkpoint test-time raw-input zero deletion",
+  "checkpoint": "/data2/yb/multimodalERC/MM_Mixer_TestTimeDeletion_20261010/original_full_seed2025/best_peak/best_peak_test_state_dict.pt",
+  "checkpoint_sha256": "0a86d9dca4a6295db5923cc8d35c52e43ff84ea384d4eee4a9eda72696b5a0f4",
+  "config": "/data2/yb/multimodalERC/MM_Mixer_TestTimeDeletion_20261010/original_full_seed2025/config.json",
+  "reference_peak_epoch": 47,
+  "reference_replay_delta": 0.0,
+  "sample_count": 2610,
+  "results": {
+    "tav": {
+      "kept_modalities": [
+        "t",
+        "a",
+        "v"
+      ],
+      "deleted_modalities": [],
+      "weighted_f1": 0.6788359990807896,
+      "macro_f1": 0.5375173564065657,
+      "accuracy": 0.685823754789272,
+      "class_f1": {
+        "neutral": 0.8063902624572081,
+        "surprise": 0.6109215017064846,
+        "fear": 0.3030303030303031,
+        "sadness": 0.4273972602739726,
+        "joy": 0.6470588235294118,
+        "disgust": 0.4,
+        "anger": 0.5678233438485805
+      }
+    },
+    "tv": {
+      "kept_modalities": [
+        "t",
+        "v"
+      ],
+      "deleted_modalities": [
+        "a"
+      ],
+      "weighted_f1": 0.6694626640660286,
+      "macro_f1": 0.5327088509634084,
+      "accuracy": 0.6781609195402298,
+      "class_f1": {
+        "neutral": 0.8028539241457002,
+        "surprise": 0.595959595959596,
+        "fear": 0.33663366336633666,
+        "sadness": 0.40871934604904636,
+        "joy": 0.636245110821382,
+        "disgust": 0.4094488188976378,
+        "anger": 0.5391014975041597
+      }
+    },
+    "ta": {
+      "kept_modalities": [
+        "t",
+        "a"
+      ],
+      "deleted_modalities": [
+        "v"
+      ],
+      "weighted_f1": 0.6742134526805464,
+      "macro_f1": 0.5353296167406537,
+      "accuracy": 0.6796934865900384,
+      "class_f1": {
+        "neutral": 0.8010752688172043,
+        "surprise": 0.6054421768707483,
+        "fear": 0.32653061224489793,
+        "sadness": 0.43665768194070087,
+        "joy": 0.633838383838384,
+        "disgust": 0.37593984962406024,
+        "anger": 0.5678233438485805
+      }
+    },
+    "av": {
+      "kept_modalities": [
+        "a",
+        "v"
+      ],
+      "deleted_modalities": [
+        "t"
+      ],
+      "weighted_f1": 0.26173436500568636,
+      "macro_f1": 0.1697976504251064,
+      "accuracy": 0.3003831417624521,
+      "class_f1": {
+        "neutral": 0.2926533090467517,
+        "surprise": 0.09195402298850576,
+        "fear": 0.0,
+        "sadness": 0.05668016194331984,
+        "joy": 0.35277968428277284,
+        "disgust": 0.0,
+        "anger": 0.3945163747143945
+      }
+    },
+    "t": {
+      "kept_modalities": [
+        "t"
+      ],
+      "deleted_modalities": [
+        "a",
+        "v"
+      ],
+      "weighted_f1": 0.6671425542478966,
+      "macro_f1": 0.5268949228199572,
+      "accuracy": 0.675095785440613,
+      "class_f1": {
+        "neutral": 0.8010610079575596,
+        "surprise": 0.6006600660066007,
+        "fear": 0.3440860215053763,
+        "sadness": 0.418230563002681,
+        "joy": 0.6357786357786357,
+        "disgust": 0.3609022556390977,
+        "anger": 0.5275459098497497
+      }
+    },
+    "a": {
+      "kept_modalities": [
+        "a"
+      ],
+      "deleted_modalities": [
+        "t",
+        "v"
+      ],
+      "weighted_f1": 0.18461339785911668,
+      "macro_f1": 0.1371240429966047,
+      "accuracy": 0.24597701149425288,
+      "class_f1": {
+        "neutral": 0.15738161559888578,
+        "surprise": 0.07142857142857142,
+        "fear": 0.0,
+        "sadness": 0.0398406374501992,
+        "joy": 0.30423418714061684,
+        "disgust": 0.0,
+        "anger": 0.3869832893579595
+      }
+    },
+    "v": {
+      "kept_modalities": [
+        "v"
+      ],
+      "deleted_modalities": [
+        "t",
+        "a"
+      ],
+      "weighted_f1": 0.3313673266009639,
+      "macro_f1": 0.140980424016898,
+      "accuracy": 0.39425287356321836,
+      "class_f1": {
+        "neutral": 0.5560109289617486,
+        "surprise": 0.006920415224913495,
+        "fear": 0.0,
+        "sadness": 0.0,
+        "joy": 0.32136752136752134,
+        "disgust": 0.0,
+        "anger": 0.10256410256410257
+      }
+    }
+  }
+}
