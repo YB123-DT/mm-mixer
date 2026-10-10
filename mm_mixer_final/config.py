@@ -13,7 +13,14 @@ from .structural_ablations import STRUCTURAL_ABLATION_VARIANTS
 
 
 DATASETS = ("iemocap", "meld")
-MELD_ONLY_VARIANTS = ("residual_no_pairwise",)
+MELD_ONLY_VARIANTS = (
+    "residual_no_pairwise",
+    "residual_no_feature_gating",
+    "residual_no_adaptive_gating",
+    "residual_no_cross_attention",
+    "residual_no_mixer",
+    "residual_no_feature_and_adaptive_gating",
+)
 VARIANTS = (
     "full",
     "no_mixer",
@@ -183,8 +190,19 @@ def get_config(dataset: str, variant: str, seed: int) -> FinalConfig:
     switches = dict(base.switches)
     if variant in _SWITCHES:
         switches[variant] = True
-    if variant == "residual_no_pairwise":
+    if variant in MELD_ONLY_VARIANTS:
         switches["no_pairwise"] = True
+    residual_switch = {
+        "residual_no_feature_gating": "no_feature_gating",
+        "residual_no_adaptive_gating": "no_adaptive_gating",
+        "residual_no_cross_attention": "no_cross_attention",
+        "residual_no_mixer": "no_mixer",
+    }.get(variant)
+    if residual_switch is not None:
+        switches[residual_switch] = True
+    if variant == "residual_no_feature_and_adaptive_gating":
+        switches["no_feature_gating"] = True
+        switches["no_adaptive_gating"] = True
     if variant in REVISION_CONTROL_VARIANTS:
         switches[variant] = True
     if variant == "amm_mlp_no_aux":

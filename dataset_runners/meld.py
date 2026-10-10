@@ -56,6 +56,11 @@ CAPACITY_VARIANTS = {
     "no_mixer": "M4_PAIR_NO_MIXER",
     "no_pairwise": "M4_NO_PAIR",
     "residual_no_pairwise": "M4_NO_PAIR_RESIDUAL",
+    "residual_no_feature_gating": "M4_NO_PAIR_RESIDUAL",
+    "residual_no_adaptive_gating": "M4_NO_PAIR_RESIDUAL",
+    "residual_no_cross_attention": "M4_NO_PAIR_RESIDUAL",
+    "residual_no_mixer": "M4_NO_PAIR_RESIDUAL",
+    "residual_no_feature_and_adaptive_gating": "M4_NO_PAIR_RESIDUAL",
     "no_adaptive_gating": "M4_PAIR_NO_ADAPTIVE",
     "no_cross_attention": "M4_PAIR_NO_CA",
     "no_auxiliary_loss": "M4_PAIR",
@@ -201,6 +206,7 @@ def run_variant(output_root: Path, epochs: int, seed: int, variant: str) -> Path
         probe = model_module.build_model(CAPACITY_VARIANTS[variant], 0.2)
         if variant not in {
             "no_mixer",
+            "residual_no_mixer",
             "one_mixer_block",
             "no_sequence_mixing",
             "no_modality_mixing",

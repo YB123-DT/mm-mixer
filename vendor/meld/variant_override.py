@@ -116,6 +116,9 @@ class CandidateHierarchicalAttentionFusion(ORIGINAL_FUSION):
 
             apply_structural_ablation(self, _ACTIVE_STRUCTURAL_VARIANT)
             apply_revision_control(self, _ACTIVE_STRUCTURAL_VARIANT)
+            model_module.apply_identity_first_ablation(
+                self, _ACTIVE_STRUCTURAL_VARIANT
+            )
             if frozenset(_ACTIVE_MODALITIES) != frozenset(("t", "a", "v")):
                 from mm_mixer_final.modalities import install_training_input_mask
 

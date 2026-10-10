@@ -14,6 +14,7 @@ sys.path.insert(0, str(MELD))
 
 import model as meld_model
 from mm_mixer_final.config import get_config
+from variant_override import candidate_model_context
 
 
 class _OnesGate(torch.nn.Module):
@@ -118,3 +119,58 @@ def test_residual_scales_receive_finite_nonzero_gradients():
     assert len(scale_gradients) == 10
     assert all(gradient is not None and torch.isfinite(gradient).all() for gradient in scale_gradients)
     assert all(gradient.abs().sum().item() > 0 for gradient in scale_gradients)
+
+
+@pytest.mark.parametrize(
+    "variant",
+    (
+        "residual_no_feature_gating",
+        "residual_no_adaptive_gating",
+        "residual_no_cross_attention",
+        "residual_no_mixer",
+        "residual_no_feature_and_adaptive_gating",
+    ),
+)
+def test_identity_first_component_ablations_are_isolated_and_trainable(variant):
+    with candidate_model_context("MX_LR1", structural_variant=variant):
+        model = meld_model.build_model("M4_NO_PAIR_RESIDUAL", dropout=0.0)
+
+    feature_removed = variant in {
+        "residual_no_feature_gating",
+        "residual_no_feature_and_adaptive_gating",
+    }
+    adaptive_removed = variant in {
+        "residual_no_adaptive_gating",
+        "residual_no_feature_and_adaptive_gating",
+    }
+    if feature_removed:
+        assert all(isinstance(module, torch.nn.Identity) for module in model.feature_selectors.values())
+    else:
+        assert all(isinstance(module, meld_model.LearnableResidualFeatureGate) for module in model.feature_selectors.values())
+    if adaptive_removed:
+        assert isinstance(model.adaptive_fusion, meld_model.NoAdaptiveFusion)
+        assert all(isinstance(module[0], torch.nn.Identity) for module in model.gates.values())
+    else:
+        assert all(isinstance(module, meld_model.LearnableResidualAdaptiveGate) for module in model.gates.values())
+    if variant == "residual_no_cross_attention":
+        assert model.cross_attn is None
+    else:
+        assert all(isinstance(module, meld_model.LearnableResidualCrossAttention) for module in model.cross_attn.values())
+    if variant == "residual_no_mixer":
+        assert isinstance(model.transformer_encoder, torch.nn.Identity)
+    else:
+        assert isinstance(model.transformer_encoder, meld_model.FactorizedMixerOnlyEncoder)
+
+    features = {
+        "v": torch.randn(3, 342),
+        "a": torch.randn(3, 1024),
+        "t": torch.randn(3, 1024),
+    }
+    output = model(features)
+    logits = output[0] if isinstance(output, tuple) else output
+    assert logits.shape == (3, 7)
+    torch.nn.functional.cross_entropy(logits, torch.tensor([0, 1, 2])).backward()
+    assert all(
+        parameter.grad is not None and torch.isfinite(parameter.grad).all()
+        for parameter in model.classifiers.parameters()
+    )

@@ -275,6 +275,31 @@ def _install_identity_first_residuals(model, initial_scale=0.1):
     return model
 
 
+def apply_identity_first_ablation(model, variant):
+    """Remove one component from the EPIRC-free identity-first mainline."""
+    if variant == "residual_no_feature_gating":
+        model.feature_selectors = nn.ModuleDict(
+            {name: nn.Identity() for name in model.modalities}
+        )
+    elif variant == "residual_no_adaptive_gating":
+        model.adaptive_fusion = NoAdaptiveFusion()
+        model.disable_gates()
+    elif variant == "residual_no_cross_attention":
+        model.cross_attn = None
+    elif variant == "residual_no_mixer":
+        model.transformer_encoder = nn.Identity()
+    elif variant == "residual_no_feature_and_adaptive_gating":
+        model.feature_selectors = nn.ModuleDict(
+            {name: nn.Identity() for name in model.modalities}
+        )
+        model.adaptive_fusion = NoAdaptiveFusion()
+        model.disable_gates()
+    else:
+        return model
+    model.capacity_variant = f"{model.capacity_variant}_{variant.upper()}"
+    return model
+
+
 def _install_pairwise(model, mixer):
     channel = ResidualChannel()
     if mixer:
