@@ -1,0 +1,3038 @@
+{
+  "class_f1_missing_policy": "Seed-level metrics retain the stored zero_division=0 convention; class averages exclude seeds with zero true support and report their n.",
+  "complete": true,
+  "confusion_orientation": "rows=true class; columns=predicted class; raw counts",
+  "expected_seeds": {
+    "iemocap": [
+      2025,
+      2066,
+      2118
+    ],
+    "meld": [
+      2025,
+      2028,
+      2069
+    ]
+  },
+  "groups": [
+    {
+      "class_f1": {
+        "anger": {
+          "mean": 0.7156047377168138,
+          "n": 3,
+          "sample_std": 0.0037051286910886514
+        },
+        "excited": {
+          "mean": 0.7373358681186855,
+          "n": 3,
+          "sample_std": 0.0022378772026088786
+        },
+        "frustration": {
+          "mean": 0.6932924993275243,
+          "n": 3,
+          "sample_std": 0.002346882050349625
+        },
+        "happiness": {
+          "mean": 0.562657657878522,
+          "n": 3,
+          "sample_std": 0.004826170594138193
+        },
+        "neutral": {
+          "mean": 0.713983423594541,
+          "n": 3,
+          "sample_std": 0.007822249413672464
+        },
+        "sadness": {
+          "mean": 0.8455535186541346,
+          "n": 3,
+          "sample_std": 0.0048771042589230455
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": true,
+      "confusion_counts": {
+        "mean": [
+          [
+            86,
+            2.6666666666666665,
+            8.333333333333334,
+            0,
+            46,
+            1
+          ],
+          [
+            4,
+            208,
+            7,
+            1.3333333333333333,
+            0,
+            24.666666666666668
+          ],
+          [
+            13.666666666666666,
+            18.666666666666668,
+            270,
+            11.333333333333334,
+            12.333333333333334,
+            58
+          ],
+          [
+            0,
+            4.666666666666667,
+            6.333333333333333,
+            128.33333333333334,
+            0,
+            30.666666666666668
+          ],
+          [
+            58,
+            3.3333333333333335,
+            23,
+            0,
+            208.66666666666666,
+            6
+          ],
+          [
+            0,
+            9.666666666666666,
+            57.666666666666664,
+            47.666666666666664,
+            0,
+            266
+          ]
+        ],
+        "n": 3,
+        "sample_std": [
+          [
+            2.0,
+            0.5773502691896257,
+            2.309401076758503,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            1.0,
+            0.5773502691896257,
+            0.0,
+            2.0816659994661326
+          ],
+          [
+            1.1547005383792515,
+            1.5275252316519468,
+            2.6457513110645907,
+            1.1547005383792515,
+            0.5773502691896257,
+            2.0
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            1.5275252316519468,
+            1.1547005383792515,
+            0.0,
+            2.309401076758503
+          ],
+          [
+            3.605551275463989,
+            0.5773502691896257,
+            5.291502622129181,
+            0.0,
+            1.1547005383792515,
+            1.0
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            3.0550504633038935,
+            0.5773502691896257,
+            0.0,
+            4.0
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7190388170055453,
+          "n": 3,
+          "sample_std": 0.0010671908857479355
+        },
+        "macro_f1": {
+          "mean": 0.7114046175483703,
+          "n": 3,
+          "sample_std": 0.0007600907760675744
+        },
+        "weighted_f1": {
+          "mean": 0.720033038624896,
+          "n": 3,
+          "sample_std": 0.001088175281105954
+        }
+      },
+      "missing_or_failed_seeds": [],
+      "n": 3,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_sha256": {
+            "config.json": "9ca3ab078392bc14d7bcb539b8567366742544086e61daffc2005519aa9a54c3",
+            "peak_test_metrics.json": "e453b994895d399af348fc21d8d7b5884d1d32b102ac21316b224895596f29f1",
+            "peak_test_predictions.pt": "7539ee979989a2048729ca7eb34669f21f67444f4f043178d81a0c9f0750e8db"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_adaptive_gating/seed2025/.peak_bundles/epoch0053-f4990e0924554b7c837d82f1bd1d2589",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              86,
+              3,
+              7,
+              0,
+              47,
+              1
+            ],
+            [
+              4,
+              209,
+              7,
+              1,
+              0,
+              24
+            ],
+            [
+              13,
+              19,
+              272,
+              12,
+              12,
+              56
+            ],
+            [
+              0,
+              5,
+              8,
+              129,
+              0,
+              28
+            ],
+            [
+              59,
+              3,
+              21,
+              0,
+              210,
+              6
+            ],
+            [
+              0,
+              10,
+              61,
+              48,
+              0,
+              262
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 53,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_adaptive_gating/seed2025",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7196549599507086,
+            "class_f1": {
+              "anger": 0.7166666666666667,
+              "excited": 0.7394366197183099,
+              "frustration": 0.6912928759894459,
+              "happiness": 0.5620915032679739,
+              "neutral": 0.7157894736842105,
+              "sadness": 0.8461538461538461
+            },
+            "macro_f1": 0.7119051642467422,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7205295718139891
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2025,
+          "state": "completed",
+          "variant": "residual_no_adaptive_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "908f752f9878829ada564a01da33cfe4bc0f46dc2529235df8fd70b0de863b5c"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "7bd663a22c8148ff71577ad3905f36cae6374aceb0fcb57d96a50ece1b9a2629",
+            "peak_test_metrics.json": "d37098aed30a923448b0105b02261c6e377624605e749ac446439c2935d44c3e",
+            "peak_test_predictions.pt": "6ee1a8b5532b2685e7917e5d2ff94f2d2cc0dfb8926b799817024f4fc10f4ac5"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_adaptive_gating/seed2066/.peak_bundles/epoch0042-a1f30db0accf46c3aa027a767b1ed385",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              84,
+              2,
+              11,
+              0,
+              46,
+              1
+            ],
+            [
+              4,
+              207,
+              6,
+              1,
+              0,
+              27
+            ],
+            [
+              15,
+              17,
+              267,
+              12,
+              13,
+              60
+            ],
+            [
+              0,
+              4,
+              5,
+              129,
+              0,
+              32
+            ],
+            [
+              54,
+              3,
+              29,
+              0,
+              208,
+              5
+            ],
+            [
+              0,
+              9,
+              55,
+              47,
+              0,
+              270
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 42,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_adaptive_gating/seed2066",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7178065311152187,
+            "class_f1": {
+              "anger": 0.7186629526462396,
+              "excited": 0.7349823321554769,
+              "frustration": 0.6958762886597938,
+              "happiness": 0.558139534883721,
+              "neutral": 0.7054161162483488,
+              "sadness": 0.8501026694045174
+            },
+            "macro_f1": 0.7105299823330163,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7187851638388529
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2066,
+          "state": "completed",
+          "variant": "residual_no_adaptive_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "c0622bda61c2d5128de16dadc8c2041d0b8c0249a7c4ff4883611dcd7310dbaf"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "9a34d0a396a4f9554735a586ee80f1c19e3b15a456d433001a758bf7c56c1a34",
+            "peak_test_metrics.json": "6e71d2b2e9bfa2dfbe3242813b18078817519daee7b1deae76117d5f23a1e7df",
+            "peak_test_predictions.pt": "5c541336b6ef119084e53db2030d685727e24170135a535ac91fbd4868b38c9d"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_adaptive_gating/seed2118/.peak_bundles/epoch0047-34cafddc1008460c88172374fd584d83",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              88,
+              3,
+              7,
+              0,
+              45,
+              1
+            ],
+            [
+              4,
+              208,
+              8,
+              2,
+              0,
+              23
+            ],
+            [
+              13,
+              20,
+              271,
+              10,
+              12,
+              58
+            ],
+            [
+              0,
+              5,
+              6,
+              127,
+              0,
+              32
+            ],
+            [
+              61,
+              4,
+              19,
+              0,
+              208,
+              7
+            ],
+            [
+              0,
+              10,
+              57,
+              48,
+              0,
+              266
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 47,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_adaptive_gating/seed2118",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7196549599507086,
+            "class_f1": {
+              "anger": 0.711484593837535,
+              "excited": 0.7375886524822696,
+              "frustration": 0.6927083333333334,
+              "happiness": 0.5677419354838711,
+              "neutral": 0.7207446808510639,
+              "sadness": 0.8404040404040405
+            },
+            "macro_f1": 0.7117787060653522,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7207843802218458
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2118,
+          "state": "completed",
+          "variant": "residual_no_adaptive_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "66c004c94aa955bcfc20c740633a20ccf5173921ba2ef19b5f2b4b91d22cbcc0"
+        }
+      ],
+      "variant": "residual_no_adaptive_gating"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": 0.710614947125211,
+          "n": 3,
+          "sample_std": 0.0101261320318366
+        },
+        "excited": {
+          "mean": 0.7426807959720527,
+          "n": 3,
+          "sample_std": 0.006791872199938436
+        },
+        "frustration": {
+          "mean": 0.6887866530438783,
+          "n": 3,
+          "sample_std": 0.004793355103426815
+        },
+        "happiness": {
+          "mean": 0.5603438134841184,
+          "n": 3,
+          "sample_std": 0.00902561629427273
+        },
+        "neutral": {
+          "mean": 0.7100367117035769,
+          "n": 3,
+          "sample_std": 0.010495713214618832
+        },
+        "sadness": {
+          "mean": 0.8434020289719667,
+          "n": 3,
+          "sample_std": 0.010225168376122773
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": true,
+      "confusion_counts": {
+        "mean": [
+          [
+            84.33333333333333,
+            2.6666666666666665,
+            8.333333333333334,
+            0,
+            47.666666666666664,
+            1
+          ],
+          [
+            3.6666666666666665,
+            207.33333333333334,
+            7.333333333333333,
+            1.6666666666666667,
+            0,
+            25
+          ],
+          [
+            15,
+            18.666666666666668,
+            267.3333333333333,
+            13.333333333333334,
+            13.333333333333334,
+            56.333333333333336
+          ],
+          [
+            0,
+            4.333333333333333,
+            5.666666666666667,
+            129.66666666666666,
+            0,
+            30.333333333333332
+          ],
+          [
+            54,
+            3,
+            23,
+            0,
+            212.66666666666666,
+            6.333333333333333
+          ],
+          [
+            0,
+            10.666666666666666,
+            57.333333333333336,
+            50.333333333333336,
+            0,
+            262.6666666666667
+          ]
+        ],
+        "n": 3,
+        "sample_std": [
+          [
+            1.5275252316519468,
+            0.5773502691896257,
+            2.516611478423583,
+            0.0,
+            1.5275252316519468,
+            0.0
+          ],
+          [
+            0.5773502691896257,
+            2.516611478423583,
+            1.5275252316519468,
+            0.5773502691896257,
+            0.0,
+            2.6457513110645907
+          ],
+          [
+            1.0,
+            1.1547005383792515,
+            4.932882862316247,
+            2.516611478423583,
+            0.5773502691896257,
+            4.041451884327381
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            1.1547005383792515,
+            0.5773502691896257,
+            0.0,
+            0.5773502691896257
+          ],
+          [
+            1.7320508075688772,
+            0.0,
+            6.244997998398398,
+            0.0,
+            4.041451884327381,
+            1.1547005383792515
+          ],
+          [
+            0.0,
+            1.5275252316519468,
+            3.2145502536643185,
+            3.2145502536643185,
+            0.0,
+            4.725815626252608
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7171903881700554,
+          "n": 3,
+          "sample_std": 0.003747851220146758
+        },
+        "macro_f1": {
+          "mean": 0.709310825050134,
+          "n": 3,
+          "sample_std": 0.0027929504425727035
+        },
+        "weighted_f1": {
+          "mean": 0.7179734549295537,
+          "n": 3,
+          "sample_std": 0.003629338602083233
+        }
+      },
+      "missing_or_failed_seeds": [],
+      "n": 3,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_sha256": {
+            "config.json": "eee819617fb1125e555f9705422e7007919628469d9a22d0341c74fd48d18ba5",
+            "peak_test_metrics.json": "431bdd9ac99f38eae5323753cf03714454350f590e45faf59c67e0b110e71e50",
+            "peak_test_predictions.pt": "15d938c80fcf90763030c0a8b072f24a616ffbce733a778cbec35482ae983ba0"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_cross_attention/seed2025/.peak_bundles/epoch0050-5e6d4e94683d4b80a2f963be4719fb5e",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              83,
+              3,
+              8,
+              0,
+              49,
+              1
+            ],
+            [
+              4,
+              210,
+              7,
+              2,
+              0,
+              22
+            ],
+            [
+              14,
+              18,
+              273,
+              11,
+              14,
+              54
+            ],
+            [
+              0,
+              4,
+              7,
+              129,
+              0,
+              30
+            ],
+            [
+              56,
+              3,
+              18,
+              0,
+              215,
+              7
+            ],
+            [
+              0,
+              11,
+              61,
+              48,
+              0,
+              261
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 50,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_cross_attention/seed2025",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7215033887861984,
+            "class_f1": {
+              "anger": 0.7166666666666667,
+              "excited": 0.7452339688041595,
+              "frustration": 0.6904761904761905,
+              "happiness": 0.5514950166112956,
+              "neutral": 0.7203166226912928,
+              "sadness": 0.8502024291497976
+            },
+            "macro_f1": 0.7123984823999004,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7221479847346821
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2025,
+          "state": "completed",
+          "variant": "residual_no_cross_attention",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "d8cbb876908abfca3d761e93aca09fdc4fb930af16312f622ad1520cfd3070ed"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "2118c1c5d6991669a26d98454f355ec0bd06f995a11c4c81d959ad14affe6e20",
+            "peak_test_metrics.json": "140a9fc7f37b58a21fd9badb5d132c0b590c0c2245334687c11c373f52dfbd02",
+            "peak_test_predictions.pt": "221db9503b209c9b76ff02fd7a9a43ff886805942c2f1bd3a92d3630db7c9687"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_cross_attention/seed2066/.peak_bundles/epoch0041-7fcd4b81e59b44a8a4c482fa6d097533",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              84,
+              2,
+              11,
+              0,
+              46,
+              1
+            ],
+            [
+              4,
+              207,
+              6,
+              1,
+              0,
+              27
+            ],
+            [
+              15,
+              18,
+              264,
+              13,
+              13,
+              61
+            ],
+            [
+              0,
+              4,
+              5,
+              130,
+              0,
+              31
+            ],
+            [
+              53,
+              3,
+              30,
+              0,
+              208,
+              5
+            ],
+            [
+              0,
+              9,
+              55,
+              49,
+              0,
+              268
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 41,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_cross_attention/seed2066",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7153419593345656,
+            "class_f1": {
+              "anger": 0.7162534435261707,
+              "excited": 0.7349823321554769,
+              "frustration": 0.6925064599483205,
+              "happiness": 0.5599999999999999,
+              "neutral": 0.6993377483443708,
+              "sadness": 0.8483606557377049
+            },
+            "macro_f1": 0.7085734399520072,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7162056808220719
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2066,
+          "state": "completed",
+          "variant": "residual_no_cross_attention",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "62b6917eb5f7d375ce51828727340926e50bcc4a809870d07f36c1e889ce7e26"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "d61ac98bb879a6d4a3a877e553b52b571984e7bc474fc012c6f5ee28d87b7e79",
+            "peak_test_metrics.json": "44b6457b4e8f05c74300ffccfa3bc6b3f18b9fe444f1750e795f6fb519330d7f",
+            "peak_test_predictions.pt": "3b33629a32c78dca854aa5e97a2b86e943839d7fe76d0c8f4a510989f6e32554"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_cross_attention/seed2118/.peak_bundles/epoch0053-5f4b3571f4bb44a2b4f08a46ab2b0314",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              86,
+              3,
+              6,
+              0,
+              48,
+              1
+            ],
+            [
+              3,
+              205,
+              9,
+              2,
+              0,
+              26
+            ],
+            [
+              16,
+              20,
+              265,
+              16,
+              13,
+              54
+            ],
+            [
+              0,
+              5,
+              5,
+              130,
+              0,
+              30
+            ],
+            [
+              53,
+              3,
+              21,
+              0,
+              215,
+              7
+            ],
+            [
+              0,
+              12,
+              56,
+              54,
+              0,
+              259
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 53,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_cross_attention/seed2118",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7147258163894024,
+            "class_f1": {
+              "anger": 0.6989247311827956,
+              "excited": 0.7478260869565218,
+              "frustration": 0.683377308707124,
+              "happiness": 0.5695364238410596,
+              "neutral": 0.7104557640750669,
+              "sadness": 0.8316430020283976
+            },
+            "macro_f1": 0.7069605527984942,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7155666992319071
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2118,
+          "state": "completed",
+          "variant": "residual_no_cross_attention",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "73cef6cd3b6ec6e1bf799ba96a0183b53157857be84c34d4e0d61f1e1c8b94c2"
+        }
+      ],
+      "variant": "residual_no_cross_attention"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": 0.714831035247631,
+          "n": 3,
+          "sample_std": 0.005766014016201012
+        },
+        "excited": {
+          "mean": 0.7343461465898826,
+          "n": 3,
+          "sample_std": 0.0034325254865665736
+        },
+        "frustration": {
+          "mean": 0.69274930656957,
+          "n": 3,
+          "sample_std": 0.0037069950649792687
+        },
+        "happiness": {
+          "mean": 0.5621850698070814,
+          "n": 3,
+          "sample_std": 0.011180946061810205
+        },
+        "neutral": {
+          "mean": 0.7153069255506963,
+          "n": 3,
+          "sample_std": 0.00940304180309668
+        },
+        "sadness": {
+          "mean": 0.8428445825970686,
+          "n": 3,
+          "sample_std": 0.004971525352612482
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": true,
+      "confusion_counts": {
+        "mean": [
+          [
+            85.66666666666667,
+            3,
+            8,
+            0,
+            46.333333333333336,
+            1
+          ],
+          [
+            4,
+            207.33333333333334,
+            7.333333333333333,
+            1.3333333333333333,
+            0,
+            25
+          ],
+          [
+            13.333333333333334,
+            18.666666666666668,
+            271.3333333333333,
+            11.666666666666666,
+            12,
+            57
+          ],
+          [
+            0,
+            4.333333333333333,
+            6.333333333333333,
+            128.66666666666666,
+            0,
+            30.666666666666668
+          ],
+          [
+            57.666666666666664,
+            3.6666666666666665,
+            24.333333333333332,
+            0,
+            207.33333333333334,
+            6
+          ],
+          [
+            0,
+            10,
+            57.333333333333336,
+            48.333333333333336,
+            0,
+            265.3333333333333
+          ]
+        ],
+        "n": 3,
+        "sample_std": [
+          [
+            3.7859388972001824,
+            1.0,
+            1.7320508075688772,
+            0.0,
+            3.0550504633038935,
+            0.0
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            1.1547005383792515,
+            0.5773502691896257,
+            0.0,
+            2.0
+          ],
+          [
+            1.5275252316519468,
+            1.5275252316519468,
+            3.7859388972001824,
+            0.5773502691896257,
+            1.0,
+            2.6457513110645907
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            1.5275252316519468,
+            0.5773502691896257,
+            0.0,
+            1.5275252316519468
+          ],
+          [
+            4.618802153517006,
+            1.1547005383792515,
+            5.033222956847166,
+            0.0,
+            2.516611478423583,
+            1.0
+          ],
+          [
+            0.0,
+            0.0,
+            3.2145502536643185,
+            2.0816659994661326,
+            0.0,
+            4.509249752822894
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7182172930786609,
+          "n": 3,
+          "sample_std": 0.0017786514762465377
+        },
+        "macro_f1": {
+          "mean": 0.7103771777269884,
+          "n": 3,
+          "sample_std": 0.0019421016728956813
+        },
+        "weighted_f1": {
+          "mean": 0.7191359777113046,
+          "n": 3,
+          "sample_std": 0.002000813457949181
+        }
+      },
+      "missing_or_failed_seeds": [],
+      "n": 3,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_sha256": {
+            "config.json": "253d8bd2202c73eb823c2a354ed7780206874b6917f61caf780a366c56f2afcd",
+            "peak_test_metrics.json": "8057881ba2ca8f33d7aec14ecfaf873de7e2f1a648b0c627754c04ca8017a6ed",
+            "peak_test_predictions.pt": "2365d5db50d7d899060b1b0f169df71a90e3b9555b5264d10c88bbe8c65be756"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_feature_and_adaptive_gating/seed2025/.peak_bundles/epoch0056-2be5ab66a14143c4ae49a8fd9c085bf7",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              83,
+              4,
+              7,
+              0,
+              49,
+              1
+            ],
+            [
+              4,
+              207,
+              8,
+              1,
+              0,
+              25
+            ],
+            [
+              13,
+              19,
+              274,
+              12,
+              11,
+              55
+            ],
+            [
+              0,
+              4,
+              8,
+              129,
+              0,
+              29
+            ],
+            [
+              55,
+              3,
+              25,
+              0,
+              210,
+              6
+            ],
+            [
+              0,
+              10,
+              61,
+              49,
+              0,
+              261
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 56,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_feature_and_adaptive_gating/seed2025",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7171903881700554,
+            "class_f1": {
+              "anger": 0.7146814404432134,
+              "excited": 0.7381370826010546,
+              "frustration": 0.6886543535620053,
+              "happiness": 0.5551839464882943,
+              "neutral": 0.7144719687092569,
+              "sadness": 0.8414634146341462
+            },
+            "macro_f1": 0.7087653677396618,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7178301923254593
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2025,
+          "state": "completed",
+          "variant": "residual_no_feature_and_adaptive_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "f22f1b2fadf225887b9bf1cc0854ba3ecfff5a53f221332074cacdb9ebbb9c76"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "b920b65acd29c635a852233df72e5b366131e83ffcd51b4ea9e7a565eab989fd",
+            "peak_test_metrics.json": "2c15abe3ea751953b21078c341bf265e665e1b55969ee213509880c84601dee7",
+            "peak_test_predictions.pt": "3db1d7b076b95f5358cd252a75104081dade09b22a0d16fbbcfe9903863ffc0a"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_feature_and_adaptive_gating/seed2066/.peak_bundles/epoch0043-baa7a9fb539c4f4997f9e6c852f029bb",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              84,
+              2,
+              10,
+              0,
+              47,
+              1
+            ],
+            [
+              4,
+              207,
+              6,
+              1,
+              0,
+              27
+            ],
+            [
+              15,
+              17,
+              267,
+              12,
+              13,
+              60
+            ],
+            [
+              0,
+              4,
+              5,
+              129,
+              0,
+              32
+            ],
+            [
+              55,
+              3,
+              29,
+              0,
+              207,
+              5
+            ],
+            [
+              0,
+              10,
+              55,
+              46,
+              0,
+              270
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 43,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_feature_and_adaptive_gating/seed2066",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7171903881700554,
+            "class_f1": {
+              "anger": 0.7206703910614526,
+              "excited": 0.7314487632508833,
+              "frustration": 0.6958762886597938,
+              "happiness": 0.5562913907284769,
+              "neutral": 0.7063492063492064,
+              "sadness": 0.8483606557377049
+            },
+            "macro_f1": 0.709832782631253,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7181382802406507
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2066,
+          "state": "completed",
+          "variant": "residual_no_feature_and_adaptive_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "0e7a93aad90ca16b04f2107779eed23c3642130bda68f60b2560dff58a9cd093"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "5517470a85a0613e2d185dab979ed47a078aa441f0b0d58d7249fe54b53abb4b",
+            "peak_test_metrics.json": "5939fc473de8959f03006d8479ccf1231d838e2feec59f3b8e2d7670b0e4c733",
+            "peak_test_predictions.pt": "9f14a947f73fb9562b5b56cfe35816036612a18556955f48495918ebb513e766"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_feature_and_adaptive_gating/seed2118/.peak_bundles/epoch0046-8fddeeeb8e9d4bfd9a43b119abb24cae",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              90,
+              3,
+              7,
+              0,
+              43,
+              1
+            ],
+            [
+              4,
+              208,
+              8,
+              2,
+              0,
+              23
+            ],
+            [
+              12,
+              20,
+              273,
+              11,
+              12,
+              56
+            ],
+            [
+              0,
+              5,
+              6,
+              128,
+              0,
+              31
+            ],
+            [
+              63,
+              5,
+              19,
+              0,
+              205,
+              7
+            ],
+            [
+              0,
+              10,
+              56,
+              50,
+              0,
+              265
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 46,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_feature_and_adaptive_gating/seed2118",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7202711028958718,
+            "class_f1": {
+              "anger": 0.7091412742382271,
+              "excited": 0.7334525939177101,
+              "frustration": 0.693717277486911,
+              "happiness": 0.5750798722044729,
+              "neutral": 0.7250996015936255,
+              "sadness": 0.8387096774193548
+            },
+            "macro_f1": 0.7125333828100503,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7214394605678036
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2118,
+          "state": "completed",
+          "variant": "residual_no_feature_and_adaptive_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "5a6bce3ecf47067505b48714d1bc0f30269e84ff8018952699d9acafd0fa4125"
+        }
+      ],
+      "variant": "residual_no_feature_and_adaptive_gating"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": 0.7213247041981824,
+          "n": 3,
+          "sample_std": 0.006865905449496345
+        },
+        "excited": {
+          "mean": 0.7350824148395023,
+          "n": 3,
+          "sample_std": 0.006205898695165324
+        },
+        "frustration": {
+          "mean": 0.6953410561329155,
+          "n": 3,
+          "sample_std": 0.006185443004193122
+        },
+        "happiness": {
+          "mean": 0.5592496311462363,
+          "n": 3,
+          "sample_std": 0.005955525526882123
+        },
+        "neutral": {
+          "mean": 0.7136644748781952,
+          "n": 3,
+          "sample_std": 0.008058537050894278
+        },
+        "sadness": {
+          "mean": 0.8459638107047913,
+          "n": 3,
+          "sample_std": 0.004374209908470988
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": true,
+      "confusion_counts": {
+        "mean": [
+          [
+            85.66666666666667,
+            2.6666666666666665,
+            9,
+            0,
+            45.666666666666664,
+            1
+          ],
+          [
+            4,
+            208.66666666666666,
+            7,
+            1.6666666666666667,
+            0,
+            23.666666666666668
+          ],
+          [
+            14,
+            19,
+            270,
+            10.666666666666666,
+            12.666666666666666,
+            57.666666666666664
+          ],
+          [
+            0,
+            4.333333333333333,
+            6,
+            129,
+            0,
+            30.666666666666668
+          ],
+          [
+            58.666666666666664,
+            3.3333333333333335,
+            23,
+            0,
+            207.66666666666666,
+            6.333333333333333
+          ],
+          [
+            0,
+            10.333333333333334,
+            57.666666666666664,
+            46.333333333333336,
+            0,
+            266.6666666666667
+          ]
+        ],
+        "n": 3,
+        "sample_std": [
+          [
+            2.0816659994661326,
+            0.5773502691896257,
+            1.7320508075688772,
+            0.0,
+            1.5275252316519468,
+            0.0
+          ],
+          [
+            0.0,
+            1.1547005383792515,
+            1.0,
+            0.5773502691896257,
+            0.0,
+            2.0816659994661326
+          ],
+          [
+            1.0,
+            1.0,
+            2.6457513110645907,
+            1.5275252316519468,
+            0.5773502691896257,
+            1.5275252316519468
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            1.0,
+            1.7320508075688772,
+            0.0,
+            2.516611478423583
+          ],
+          [
+            3.0550504633038935,
+            0.5773502691896257,
+            6.082762530298219,
+            0.0,
+            3.0550504633038935,
+            1.1547005383792515
+          ],
+          [
+            0.0,
+            1.5275252316519468,
+            2.309401076758503,
+            1.5275252316519468,
+            0.0,
+            3.7859388972001824
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7194495789689874,
+          "n": 3,
+          "sample_std": 0.0023326795423291363
+        },
+        "macro_f1": {
+          "mean": 0.7117710153166372,
+          "n": 3,
+          "sample_std": 0.0018635316168551658
+        },
+        "weighted_f1": {
+          "mean": 0.7203820227962426,
+          "n": 3,
+          "sample_std": 0.0021591349049000907
+        }
+      },
+      "missing_or_failed_seeds": [],
+      "n": 3,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_sha256": {
+            "config.json": "ae1ebb8fade371e122b63d9e48be5b2f31f33e1b0063624c0dede3fbed6572b5",
+            "peak_test_metrics.json": "e178c429f72a22430755f1f7deda14decfd4dd60d7e7e959ca59f9c04ad76c41",
+            "peak_test_predictions.pt": "9a94b74ba1534a79f5604031f31da33435bec159cf448be3f8ba34f7edd685ea"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_feature_gating/seed2025/.peak_bundles/epoch0050-2d5ef8e46f4e499faa484d7ad6efac93",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              85,
+              3,
+              8,
+              0,
+              47,
+              1
+            ],
+            [
+              4,
+              210,
+              7,
+              2,
+              0,
+              22
+            ],
+            [
+              14,
+              19,
+              271,
+              11,
+              13,
+              56
+            ],
+            [
+              0,
+              5,
+              7,
+              130,
+              0,
+              28
+            ],
+            [
+              58,
+              3,
+              20,
+              0,
+              211,
+              7
+            ],
+            [
+              0,
+              12,
+              59,
+              45,
+              0,
+              265
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 50,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_feature_gating/seed2025",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7221195317313617,
+            "class_f1": {
+              "anger": 0.7262569832402235,
+              "excited": 0.7403508771929823,
+              "frustration": 0.6973684210526315,
+              "happiness": 0.5573770491803279,
+              "neutral": 0.716931216931217,
+              "sadness": 0.8450704225352113
+            },
+            "macro_f1": 0.713892495022099,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7228170694745986
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2025,
+          "state": "completed",
+          "variant": "residual_no_feature_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "e3d49836920d732fcf6f7a528c6b0f6a7307185b37220677027f4b1a2f3e4eda"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "e457b869b67c4dd44702cab51396ac0d4c386e69a6b203bad6ba1b22c7ce0b12",
+            "peak_test_metrics.json": "5032ed3c68e37afd9711734ce1844d0f7584fa84e006e63a2554dea2946b3932",
+            "peak_test_predictions.pt": "d9fa9504fe426b0b6192ef2abc99444dc611c9ebe86cff09a9877ba98f437fa7"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_feature_gating/seed2066/.peak_bundles/epoch0041-569b069ff7e14241bdabad7fff9f13cb",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              84,
+              2,
+              11,
+              0,
+              46,
+              1
+            ],
+            [
+              4,
+              208,
+              6,
+              1,
+              0,
+              26
+            ],
+            [
+              15,
+              18,
+              267,
+              12,
+              13,
+              59
+            ],
+            [
+              0,
+              4,
+              5,
+              130,
+              0,
+              31
+            ],
+            [
+              56,
+              3,
+              30,
+              0,
+              205,
+              5
+            ],
+            [
+              0,
+              9,
+              55,
+              46,
+              0,
+              271
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 41,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_feature_gating/seed2066",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7178065311152187,
+            "class_f1": {
+              "anger": 0.724233983286908,
+              "excited": 0.7282415630550622,
+              "frustration": 0.7002583979328166,
+              "happiness": 0.5544554455445545,
+              "neutral": 0.704485488126649,
+              "sadness": 0.8507157464212678
+            },
+            "macro_f1": 0.710398437394543,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7187010619820707
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2066,
+          "state": "completed",
+          "variant": "residual_no_feature_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "a1e1e3614fced7651481f03f0aab7318e6acbbe587bd3cd1118095b14c554b0c"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "3bd66c28f64c528ee7d728d32b284328842a96c6e9618994ab1fbcf6203fe7ef",
+            "peak_test_metrics.json": "51e7c3391b1a543a04c8d2d54e01edaab38888e4225394feda9cf987ef997fbd",
+            "peak_test_predictions.pt": "062c2bf83f3ef8cbf4e0bc1d7977351c6e71593c68ec2b6f2c765314aa1a4cb3"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_feature_gating/seed2118/.peak_bundles/epoch0046-3e25b9f904e942a49fbdd417406ee360",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              88,
+              3,
+              8,
+              0,
+              44,
+              1
+            ],
+            [
+              4,
+              208,
+              8,
+              2,
+              0,
+              23
+            ],
+            [
+              13,
+              20,
+              272,
+              9,
+              12,
+              58
+            ],
+            [
+              0,
+              4,
+              6,
+              127,
+              0,
+              33
+            ],
+            [
+              62,
+              4,
+              19,
+              0,
+              207,
+              7
+            ],
+            [
+              0,
+              10,
+              59,
+              48,
+              0,
+              264
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 46,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_feature_gating/seed2118",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.718422674060382,
+            "class_f1": {
+              "anger": 0.7134831460674157,
+              "excited": 0.7366548042704625,
+              "frustration": 0.6883963494132985,
+              "happiness": 0.5659163987138264,
+              "neutral": 0.7195767195767196,
+              "sadness": 0.8421052631578948
+            },
+            "macro_f1": 0.7110221135332696,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7196279369320586
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2118,
+          "state": "completed",
+          "variant": "residual_no_feature_gating",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "7f79bb5525758976ed46711a4c3a9bc8cb1daba7729e5fe38ed8c936a1c9d8fe"
+        }
+      ],
+      "variant": "residual_no_feature_gating"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": 0.7041524151654416,
+          "n": 3,
+          "sample_std": 0.0053268129271174455
+        },
+        "excited": {
+          "mean": 0.7279159204586451,
+          "n": 3,
+          "sample_std": 0.008298339588138248
+        },
+        "frustration": {
+          "mean": 0.6807240197968675,
+          "n": 3,
+          "sample_std": 0.005700977367131155
+        },
+        "happiness": {
+          "mean": 0.5705465616410668,
+          "n": 3,
+          "sample_std": 0.009520031722517863
+        },
+        "neutral": {
+          "mean": 0.7181195131054541,
+          "n": 3,
+          "sample_std": 0.01004170006503719
+        },
+        "sadness": {
+          "mean": 0.8296034445104241,
+          "n": 3,
+          "sample_std": 0.004800882065490131
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": true,
+      "confusion_counts": {
+        "mean": [
+          [
+            87.66666666666667,
+            3.3333333333333335,
+            6,
+            0,
+            46,
+            1
+          ],
+          [
+            3.6666666666666665,
+            203.66666666666666,
+            9,
+            1.3333333333333333,
+            0,
+            27.333333333333332
+          ],
+          [
+            12.333333333333334,
+            19.333333333333332,
+            271,
+            9.666666666666666,
+            12.666666666666666,
+            59
+          ],
+          [
+            0,
+            4,
+            5.666666666666667,
+            125.33333333333333,
+            0,
+            35
+          ],
+          [
+            59.666666666666664,
+            3.6666666666666665,
+            23.333333333333332,
+            0,
+            204.66666666666666,
+            7.666666666666667
+          ],
+          [
+            0,
+            12,
+            55.666666666666664,
+            49.666666666666664,
+            0,
+            263.6666666666667
+          ]
+        ],
+        "n": 3,
+        "sample_std": [
+          [
+            1.5275252316519468,
+            0.5773502691896257,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.5773502691896257,
+            1.5275252316519468,
+            1.0,
+            0.5773502691896257,
+            0.0,
+            3.2145502536643185
+          ],
+          [
+            1.5275252316519468,
+            0.5773502691896257,
+            7.0,
+            2.0816659994661326,
+            1.5275252316519468,
+            5.5677643628300215
+          ],
+          [
+            0.0,
+            1.0,
+            1.5275252316519468,
+            0.5773502691896257,
+            0.0,
+            2.6457513110645907
+          ],
+          [
+            2.516611478423583,
+            0.5773502691896257,
+            3.5118845842842465,
+            0.0,
+            2.516611478423583,
+            1.5275252316519468
+          ],
+          [
+            0.0,
+            1.0,
+            3.5118845842842465,
+            3.0550504633038935,
+            0.0,
+            6.658328118479393
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7122612446087492,
+          "n": 3,
+          "sample_std": 0.0037478512201467944
+        },
+        "macro_f1": {
+          "mean": 0.7051769791129832,
+          "n": 3,
+          "sample_std": 0.002373563785138518
+        },
+        "weighted_f1": {
+          "mean": 0.7134184005864007,
+          "n": 3,
+          "sample_std": 0.0037751672433841243
+        }
+      },
+      "missing_or_failed_seeds": [],
+      "n": 3,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_sha256": {
+            "config.json": "fd71ec55dba639f1af849d0e6162cf604347bfa1121701bdbd138c51a2a03e9a",
+            "peak_test_metrics.json": "7aa5e93c5db487b389aec8675594edfec5ac50d32c0201d7772b10f82ace9235",
+            "peak_test_predictions.pt": "d30007e5ea7501b5a219c05bc901b9ecea495c116f35df080e5c0d4678cf394a"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_mixer/seed2025/.peak_bundles/epoch0065-6c8dc1657c6f4cd0b806e16a29d5d47b",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              88,
+              3,
+              6,
+              0,
+              46,
+              1
+            ],
+            [
+              3,
+              202,
+              8,
+              1,
+              0,
+              31
+            ],
+            [
+              11,
+              19,
+              264,
+              12,
+              14,
+              64
+            ],
+            [
+              0,
+              3,
+              4,
+              125,
+              0,
+              38
+            ],
+            [
+              57,
+              4,
+              27,
+              0,
+              202,
+              9
+            ],
+            [
+              0,
+              12,
+              52,
+              49,
+              0,
+              268
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 65,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_mixer/seed2025",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7079482439926063,
+            "class_f1": {
+              "anger": 0.700280112044818,
+              "excited": 0.7201426024955437,
+              "frustration": 0.6767676767676768,
+              "happiness": 0.5808580858085809,
+              "neutral": 0.708724832214765,
+              "sadness": 0.8278688524590163
+            },
+            "macro_f1": 0.7024403602984002,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7090822617508539
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2025,
+          "state": "completed",
+          "variant": "residual_no_mixer",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "2b797c85cc21bcb643d45fcd4d7e094527dd0dd28bff8dbf47fee2800bc638b3"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "1b5134c1649972d895650d725c586442edd08bebfec65488f5ca2e11e960fa7d",
+            "peak_test_metrics.json": "cf284855e98053c771ee0af5ef6195e097288c3d21c06dbe484c007363d4957e",
+            "peak_test_predictions.pt": "c09d241773d54320270882b9ebd0d9443165726416ff835d9929b9b4324874b4"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_mixer/seed2066/.peak_bundles/epoch0061-95f2d608398145f0abc2c625a67031cb",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              86,
+              4,
+              6,
+              0,
+              47,
+              1
+            ],
+            [
+              4,
+              205,
+              9,
+              1,
+              0,
+              26
+            ],
+            [
+              12,
+              19,
+              271,
+              9,
+              13,
+              60
+            ],
+            [
+              0,
+              4,
+              7,
+              125,
+              0,
+              34
+            ],
+            [
+              60,
+              3,
+              23,
+              0,
+              205,
+              8
+            ],
+            [
+              0,
+              11,
+              56,
+              47,
+              0,
+              267
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 61,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_mixer/seed2066",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.714109673444239,
+            "class_f1": {
+              "anger": 0.7102272727272727,
+              "excited": 0.7269503546099291,
+              "frustration": 0.6872586872586872,
+              "happiness": 0.5620915032679739,
+              "neutral": 0.716931216931217,
+              "sadness": 0.8350305498981672
+            },
+            "macro_f1": 0.7064149307822077,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7151987681668464
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2066,
+          "state": "completed",
+          "variant": "residual_no_mixer",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "6d4779be1b905e0293fb9627514277709984bba5110a783379105692978b9bac"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "f44a4e3a50bdffe4b9a310129ef75b1a84460ce4000015b227c7aec9a63cddfc",
+            "peak_test_metrics.json": "f28348f57a99ebdf78ea161b087c7b7ec711cb47505925a47477ad6f9cd5385c",
+            "peak_test_predictions.pt": "0a89f75ec375d864d2001e1c23943d54d9b1124d2a92905929f5bcfd2b4766cb"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_mixer/seed2118/.peak_bundles/epoch0062-73ad4d4880224ac587bc22b6cab329d8",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              89,
+              3,
+              6,
+              0,
+              45,
+              1
+            ],
+            [
+              4,
+              204,
+              10,
+              2,
+              0,
+              25
+            ],
+            [
+              14,
+              20,
+              278,
+              8,
+              11,
+              53
+            ],
+            [
+              0,
+              5,
+              6,
+              126,
+              0,
+              33
+            ],
+            [
+              62,
+              4,
+              20,
+              0,
+              207,
+              6
+            ],
+            [
+              0,
+              13,
+              59,
+              53,
+              0,
+              256
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 62,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_mixer/seed2118",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7147258163894024,
+            "class_f1": {
+              "anger": 0.701949860724234,
+              "excited": 0.7366548042704625,
+              "frustration": 0.6781456953642384,
+              "happiness": 0.5686900958466454,
+              "neutral": 0.7287024901703801,
+              "sadness": 0.825910931174089
+            },
+            "macro_f1": 0.7066756462583416,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7159741718415019
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2118,
+          "state": "completed",
+          "variant": "residual_no_mixer",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "d34cfb4969fa8d1088922e8f6b402f699d582d7a13146c514b2498d8ce348923"
+        }
+      ],
+      "variant": "residual_no_mixer"
+    },
+    {
+      "class_f1": {
+        "anger": {
+          "mean": 0.7180072644631875,
+          "n": 3,
+          "sample_std": 0.006098343962574111
+        },
+        "excited": {
+          "mean": 0.7371715038645422,
+          "n": 3,
+          "sample_std": 0.008909064699144006
+        },
+        "frustration": {
+          "mean": 0.6903824741297413,
+          "n": 3,
+          "sample_std": 0.009898189488388115
+        },
+        "happiness": {
+          "mean": 0.5580623515222902,
+          "n": 3,
+          "sample_std": 0.006431759566767384
+        },
+        "neutral": {
+          "mean": 0.7124020889694989,
+          "n": 3,
+          "sample_std": 0.008121893414496173
+        },
+        "sadness": {
+          "mean": 0.8443977033503131,
+          "n": 3,
+          "sample_std": 0.005873301809704021
+        }
+      },
+      "class_names": [
+        "happiness",
+        "sadness",
+        "neutral",
+        "anger",
+        "excited",
+        "frustration"
+      ],
+      "complete_three_seeds": true,
+      "confusion_counts": {
+        "mean": [
+          [
+            85.66666666666667,
+            2.6666666666666665,
+            8.333333333333334,
+            0,
+            46.333333333333336,
+            1
+          ],
+          [
+            3.6666666666666665,
+            208,
+            7.333333333333333,
+            1.6666666666666667,
+            0,
+            24.333333333333332
+          ],
+          [
+            15,
+            19,
+            268.3333333333333,
+            11,
+            12.666666666666666,
+            58
+          ],
+          [
+            0,
+            4.333333333333333,
+            5.333333333333333,
+            129,
+            0,
+            31.333333333333332
+          ],
+          [
+            58.666666666666664,
+            3,
+            22,
+            0,
+            209,
+            6.333333333333333
+          ],
+          [
+            0,
+            10.666666666666666,
+            58,
+            47.666666666666664,
+            0,
+            264.6666666666667
+          ]
+        ],
+        "n": 3,
+        "sample_std": [
+          [
+            1.5275252316519468,
+            0.5773502691896257,
+            2.516611478423583,
+            0.0,
+            0.5773502691896257,
+            0.0
+          ],
+          [
+            0.5773502691896257,
+            2.0,
+            1.5275252316519468,
+            0.5773502691896257,
+            0.0,
+            2.0816659994661326
+          ],
+          [
+            1.0,
+            1.0,
+            2.516611478423583,
+            1.0,
+            0.5773502691896257,
+            1.0
+          ],
+          [
+            0.0,
+            0.5773502691896257,
+            1.5275252316519468,
+            1.0,
+            0.0,
+            3.0550504633038935
+          ],
+          [
+            2.0816659994661326,
+            0.0,
+            6.082762530298219,
+            0.0,
+            4.0,
+            1.1547005383792515
+          ],
+          [
+            0.0,
+            2.0816659994661326,
+            2.6457513110645907,
+            2.516611478423583,
+            0.0,
+            6.3508529610858835
+          ]
+        ]
+      },
+      "dataset": "iemocap",
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7176011501334977,
+          "n": 3,
+          "sample_std": 0.0018823477900825252
+        },
+        "macro_f1": {
+          "mean": 0.7100705643832622,
+          "n": 3,
+          "sample_std": 0.0017705124572256667
+        },
+        "weighted_f1": {
+          "mean": 0.718614944770176,
+          "n": 3,
+          "sample_std": 0.0016509054656637314
+        }
+      },
+      "missing_or_failed_seeds": [],
+      "n": 3,
+      "paired_delta_to_full": {
+        "accuracy": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "macro_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        },
+        "weighted_f1": {
+          "mean": null,
+          "n": 0,
+          "sample_std": null
+        }
+      },
+      "seeds": [
+        {
+          "artifact_sha256": {
+            "config.json": "bab60e07518235b69be86519ed54ce3ea103abf5be7c492a979c83a6a3a00335",
+            "peak_test_metrics.json": "cb495a513e091794d7a2cfd45d6fd36332cf427e0b11e4c131692f06dd335589",
+            "peak_test_predictions.pt": "9ed3db059d382cdb35c18bd3b3f9d644624d15acb65efe42c56988b85cea1719"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_pairwise/seed2025/.peak_bundles/epoch0046-574db851720c4f3fbc977ffd83a4aabe",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              86,
+              3,
+              8,
+              0,
+              46,
+              1
+            ],
+            [
+              4,
+              210,
+              7,
+              2,
+              0,
+              22
+            ],
+            [
+              15,
+              19,
+              268,
+              11,
+              13,
+              58
+            ],
+            [
+              0,
+              5,
+              7,
+              130,
+              0,
+              28
+            ],
+            [
+              58,
+              3,
+              18,
+              0,
+              213,
+              7
+            ],
+            [
+              0,
+              13,
+              59,
+              48,
+              0,
+              261
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 46,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_pairwise/seed2025",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7196549599507086,
+            "class_f1": {
+              "anger": 0.7202216066481995,
+              "excited": 0.7460595446584939,
+              "frustration": 0.6886543535620053,
+              "happiness": 0.5602605863192183,
+              "neutral": 0.7137150466045272,
+              "sadness": 0.8433734939759037
+            },
+            "macro_f1": 0.712047438628058,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7204296944179974
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2025,
+          "state": "completed",
+          "variant": "residual_no_pairwise",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "169a6760e31f769fe3d8da7e673ac8d38b95675ed2ed025c9eecc4cd0328b796"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "e743a0d3170f9fc0fd6dec2ba1d704edfd486ace5e395375f10a89f3d5fb5278",
+            "peak_test_metrics.json": "465ddab103eebbbaf1bcbde81ddc10730844038a0dd9336bffc9f14aa8b79c3c",
+            "peak_test_predictions.pt": "fd6ffd88b24a0d2be8cdad2e9834b643f1be50806846d813d505b74cd8dd9e0f"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_pairwise/seed2066/.peak_bundles/epoch0043-96a2be11833f44048824faa6f770d944",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              84,
+              2,
+              11,
+              0,
+              46,
+              1
+            ],
+            [
+              4,
+              208,
+              6,
+              1,
+              0,
+              26
+            ],
+            [
+              16,
+              18,
+              266,
+              12,
+              13,
+              59
+            ],
+            [
+              0,
+              4,
+              5,
+              129,
+              0,
+              32
+            ],
+            [
+              57,
+              3,
+              29,
+              0,
+              205,
+              5
+            ],
+            [
+              0,
+              9,
+              55,
+              45,
+              0,
+              272
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 43,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_pairwise/seed2066",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7171903881700554,
+            "class_f1": {
+              "anger": 0.7226890756302521,
+              "excited": 0.7282415630550622,
+              "frustration": 0.7010309278350516,
+              "happiness": 0.5508196721311476,
+              "neutral": 0.7037037037037038,
+              "sadness": 0.8507157464212678
+            },
+            "macro_f1": 0.7095334481294141,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7182130416500797
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2066,
+          "state": "completed",
+          "variant": "residual_no_pairwise",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "5ffbe71ace5abca6d96f4d5836e32a850c247afdd74dda7c58fad32221707a72"
+        },
+        {
+          "artifact_sha256": {
+            "config.json": "4972b70902386c7e2e632a61ebec5ffed13b0d96ada0f7d721592fc096d2c287",
+            "peak_test_metrics.json": "0898676b4fba5f658d9604d39471f2d2aa73ea207785d37beac7bb15661604d5",
+            "peak_test_predictions.pt": "67776bcf6888b2a8f397d5b817d7b9d16eee07e5a9dd928d82d06bb73220e9e8"
+          },
+          "artifact_verified": true,
+          "bundle": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/formal/iemocap/residual_no_pairwise/seed2118/.peak_bundles/epoch0053-13c39e70e7984b0593561b4732585efe",
+          "class_names": [
+            "happiness",
+            "sadness",
+            "neutral",
+            "anger",
+            "excited",
+            "frustration"
+          ],
+          "classes_without_true_examples": [],
+          "confusion_counts": [
+            [
+              87,
+              3,
+              6,
+              0,
+              47,
+              1
+            ],
+            [
+              3,
+              206,
+              9,
+              2,
+              0,
+              25
+            ],
+            [
+              14,
+              20,
+              271,
+              10,
+              12,
+              57
+            ],
+            [
+              0,
+              4,
+              4,
+              128,
+              0,
+              34
+            ],
+            [
+              61,
+              3,
+              19,
+              0,
+              209,
+              7
+            ],
+            [
+              0,
+              10,
+              60,
+              50,
+              0,
+              261
+            ]
+          ],
+          "dataset": "iemocap",
+          "delta_to_full": null,
+          "epoch": 53,
+          "error": null,
+          "formal_protocol_verified": true,
+          "id": "iemocap/residual_no_pairwise/seed2118",
+          "included": true,
+          "labels_sha256": "07532c768cc80cf2b1b62c4db7bc8af64820cf4cc3a882042bb27e5744bee188",
+          "metrics": {
+            "accuracy": 0.7159581022797289,
+            "class_f1": {
+              "anger": 0.7111111111111111,
+              "excited": 0.7372134038800705,
+              "frustration": 0.6814621409921671,
+              "happiness": 0.5631067961165047,
+              "neutral": 0.7197875166002656,
+              "sadness": 0.8391038696537678
+            },
+            "macro_f1": 0.7086308063923145,
+            "support": {
+              "anger": 170,
+              "excited": 299,
+              "frustration": 381,
+              "happiness": 144,
+              "neutral": 384,
+              "sadness": 245
+            },
+            "weighted_f1": 0.7172020982424506
+          },
+          "pairing_error": "same-seed verified Full unavailable in this plan",
+          "reused": false,
+          "samples": 1623,
+          "seed": 2118,
+          "state": "completed",
+          "variant": "residual_no_pairwise",
+          "verification": "prediction_metrics_rechecked",
+          "verified_contract": "ced876c2948e9a5bbc643037d32b2e164ca46c8fed3c05faa2663581e28c0b21"
+        }
+      ],
+      "variant": "residual_no_pairwise"
+    }
+  ],
+  "ignored_state_jobs": [],
+  "inputs": {
+    "plan": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/pipeline/plan.json",
+    "plan_sha256": "a1c0853f4b66a71bad1197ac4ead60edd76b097e31f892473f29d13263a1becb",
+    "state": "/data2/yb/multimodalERC/MM_Mixer_ResidualIEMOCAP_20261010/pipeline/state.json",
+    "state_sha256": "c908ce06f98950fea4aee2e55ce42ea4a4b99db4a374d8e7253326446e0a8db9"
+  },
+  "metric_scale": "fraction_0_to_1",
+  "paired_delta_direction": "variant_minus_full; same dataset/seed and identical test label order",
+  "schema_version": 1,
+  "selection": "strict_peak_test_wf1",
+  "standard_deviation": "sample (ddof=1); null when n<2",
+  "verification_scope": "Prior queue checkpoint/source/data verification plus fresh identity, completion, config/prediction/metric hash and metric recomputation checks; no training or checkpoint selection."
+}
